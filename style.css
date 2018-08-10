@@ -32,7 +32,7 @@ section {
       font-size: 1.3em; }
     section .content-wrapper .link-wrapper a {
       display: inline-block;
-      margin: 2em 0; }
+      margin: 2em 8px; }
   section .video-wrapper {
     box-sizing: border-box;
     margin: 0 auto;
@@ -40,6 +40,11 @@ section {
     padding-top: 56.25%;
     position: relative;
     background: #191919; }
+  section img {
+    width: 66%;
+    height: auto;
+    margin: 0 auto;
+    display: block; }
   section iframe {
     position: absolute;
     top: 0;

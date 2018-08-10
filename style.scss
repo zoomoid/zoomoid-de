@@ -48,7 +48,7 @@ section {
     .link-wrapper {
       a {
         display: inline-block;
-        margin: 2em 0;
+        margin: 2em 8px;
       }
     }
   }
@@ -60,6 +60,13 @@ section {
     padding-top: 56.25%;
     position: relative;
     background: lighten($background, 3%);
+  }
+
+  img {
+    width: 66%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
   }
 
   iframe {

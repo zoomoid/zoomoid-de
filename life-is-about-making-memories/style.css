@@ -1,0 +1,2 @@
+.tag-list span::before {
+  content: "#"; }

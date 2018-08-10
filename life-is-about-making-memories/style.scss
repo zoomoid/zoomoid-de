@@ -1,8 +1,64 @@
+$muted: rgba(0,0,0,0.5);
+$link: #ffd600;
+
+main {
+    margin: 120px auto 0;
+    max-width: 768px;
+    width: 90%;
+    min-width: 768px;
+}
+
+img {
+    width: 50%;
+    margin: 0 0 32px;
+    display: block;
+}
+
 .tag-list {
     span {
+        border-radius: 50px;
+        background: #ddd;
+        padding: 3px 8px;
+        color: $muted;
         &::before {
             content: '#';
-            color: rgba(0,0,0,0.5);   
+            padding-right: 4px;
+            color: fade-out($muted, $amount: 0.25);
         }
+    }
+}
+
+b {
+    color: $muted;
+    font-size: 72px;
+    padding-right: 12px;
+    &::after {
+        content: '.'
+    }
+}
+
+main div {
+    display: flex;
+    align-content: flex-start;
+    align-items: baseline;
+    div {
+        display: block;
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2em;
+            margin: 16px 0;
+        }
+        a {
+            display: block;
+            margin: 16px 0;
+            color: $link;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .tag-list {
+            font-family: 'Open Sans', sans-serif;
+        }
+    }
+    b {
+        font-family: 'Montserrat', sans-serif;
     }
 }

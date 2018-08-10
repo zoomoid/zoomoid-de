@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   position: relative;
   height: 100%; }
@@ -40,7 +41,7 @@ section {
     padding-top: 56.25%;
     position: relative;
     background: #191919; }
-  section img {
+  section img:not(.logoö) {
     width: 66%;
     height: auto;
     margin: 0 auto;

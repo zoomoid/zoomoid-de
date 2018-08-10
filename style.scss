@@ -62,7 +62,7 @@ section {
     background: lighten($background, 3%);
   }
 
-  img {
+  img:not(.logoö) {
     width: 66%;
     height: auto;
     margin: 0 auto;

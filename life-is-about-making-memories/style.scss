@@ -1,8 +1,12 @@
 $muted: rgba(0,0,0,0.5);
 $link: #ffd600;
 
+body {
+    background: #111;
+}
+
 main {
-    margin: 120px auto 0;
+    margin: 120px auto 120px;
     max-width: 768px;
     width: 90%;
     min-width: 768px;
@@ -17,36 +21,39 @@ img {
 .tag-list {
     span {
         border-radius: 50px;
-        background: #ddd;
+        background: #333;
         padding: 3px 8px;
-        color: $muted;
+        color: #fff;
+        font-family: 'Roboto Mono', monospace;
         &::before {
             content: '#';
             padding-right: 4px;
-            color: fade-out($muted, $amount: 0.25);
+            color: fade-out(#fff, $amount: 0.5);
         }
     }
 }
 
 b {
-    color: $muted;
-    font-size: 72px;
-    padding-right: 12px;
+    color: #efefef;
+    font-size: 120px;
+    padding-right: 24px;
     &::after {
         content: '.'
     }
+    width: 100px;
 }
 
 main div {
     display: flex;
     align-content: flex-start;
-    align-items: baseline;
+    align-items: flex-end;
     div {
         display: block;
         h3 {
             font-family: 'Montserrat', sans-serif;
             font-size: 2em;
             margin: 16px 0;
+            color: #fff;
         }
         a {
             display: block;

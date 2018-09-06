@@ -8,8 +8,14 @@ gulp.task('sass', function() {
         .pipe(gulp.dest(function(f) {
             return f.base;
         }));
+    gulp.src('*/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest(function(f) {
+            return f.base;
+        }));
 });
 
 gulp.task('default', ['sass'], function() {
     gulp.watch('*.scss', ['sass']);
+    gulp.watch('*/*.scss', ['sass']);
 });

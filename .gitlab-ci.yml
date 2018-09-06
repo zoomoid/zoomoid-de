@@ -5,7 +5,6 @@ stages:
 build:
   image: docker:latest
   stage: build
-  only: master
   script: 
     - echo "$CI_JOB_TOKEN" | docker login registry.git.rwth-aachen.de --username gitlab-ci-token --password-stdin 
     - docker build -t registry.git.rwth-aachen.de/occloxium-webdev/zoomoid.de .
@@ -15,12 +14,10 @@ build:
 
 deploy: 
   stage: deploy
-  only: 
-    - master
   environment:
     name: deployment
     url: https://www.zoomoid.de
-  scripts:
+  script:
     - docker-compose down
     - docker-compose up
   tags:

@@ -19,6 +19,6 @@ deploy:
     url: https://www.zoomoid.de
   script:
     - docker-compose down
-    - docker-compose up
+    - docker-compose up -d
   tags:
     - occloxium-shell

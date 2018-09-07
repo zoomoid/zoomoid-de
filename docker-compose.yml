@@ -2,7 +2,7 @@ version: '2.1'
 
 services:
   zoomoid.de:
-    image: zoomoid.de
+    image: registry.git.rwth-aachen.de/occloxium-webdev/zoomoid.de
     build: .
     ports:
       - 8080:80

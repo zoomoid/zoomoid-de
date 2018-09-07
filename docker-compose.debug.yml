@@ -3,6 +3,8 @@ version: '2.1'
 services:
   zoomoid.de:
     image: zoomoid.de
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - 8080:80

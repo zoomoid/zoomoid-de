@@ -22,7 +22,8 @@ section {
   margin: 0 auto; }
   section .logo {
     height: 320px;
-    display: block; }
+    display: block;
+    margin: 0 auto; }
   section .content-wrapper {
     margin: 0;
     flex-grow: 1;
@@ -101,7 +102,7 @@ h1 {
     .table .column:nth-child(odd) {
       padding-top: 4rem; }
     .table .column > * {
-      /* margin: 2rem 0; } */
+      margin: 2rem 0; }
 
 .player {
   position: relative; }

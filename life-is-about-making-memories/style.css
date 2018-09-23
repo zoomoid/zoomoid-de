@@ -1,33 +1,82 @@
+h1, h2 {
+  font-family: 'Karla', sans-serif;
+  font-size: 4em;
+  margin: 16px 0;
+  color: #000; }
+
+h2 {
+  font-size: 4em;
+  letter-spacing: -4px;
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-color: #ffd600; }
+
 body {
-  background: #111; }
+  background: #fff; }
 
 main {
   margin: 120px auto 120px;
   max-width: 768px;
   width: 90%;
-  min-width: 768px; }
+  max-width: 768px; }
 
-img {
-  width: 50%;
-  margin: 0 0 32px;
-  display: block; }
+.landing {
+  width: 90%;
+  max-width: 768px; }
+  .landing h1 {
+    margin-top: 3em;
+    line-break: loose;
+    word-wrap: normal;
+    word-break: normal;
+    font-size: 6em;
+    letter-spacing: -8px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #ffd600; }
+  .landing img {
+    width: 100%;
+    margin: 100px auto;
+    display: block; }
+  .landing .embedded {
+    padding-bottom: 5em; }
+
+.fab {
+  box-shadow: 0 0 24px #ffd600;
+  position: fixed;
+  z-index: 100;
+  background: #ffd600;
+  border-radius: 50px;
+  outline: none;
+  bottom: 32px;
+  right: 32px;
+  border: none;
+  height: 48px;
+  padding: 0 1em;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  line-height: 48px !important; }
+  .fab i {
+    line-height: 24px; }
+  .fab span {
+    font-family: 'Karla', sans-serif; }
 
 .tag-list span {
   border-radius: 50px;
-  background: #333;
+  background: #efefef;
   padding: 3px 8px;
-  color: #fff;
+  color: #000;
   font-family: 'Roboto Mono', monospace; }
   .tag-list span::before {
     content: '#';
     padding-right: 4px;
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(0, 0, 0, 0.5); }
 
 b {
-  color: #efefef;
+  color: #000;
   font-size: 120px;
   padding-right: 24px;
-  width: 100px; }
+  width: 150px; }
   b::after {
     content: '.'; }
 
@@ -38,10 +87,11 @@ main div {
   main div div {
     display: block; }
     main div div h3 {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Karla', sans-serif;
+      letter-spacing: -2px;
       font-size: 2em;
       margin: 16px 0;
-      color: #fff; }
+      color: #000; }
     main div div a {
       display: block;
       margin: 16px 0;

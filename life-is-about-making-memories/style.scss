@@ -64,6 +64,23 @@ main {
         display: block;
     }
 
+    a {
+        display: block;
+        font-family: 'Karla', sans-serif;
+        font-size: 1.5em;
+        color: $text-color;
+        font-weight: bold;
+        text-decoration-color: $link;
+
+        i {
+            margin-right: 12px;
+        }
+    }
+
+    h2 {
+        margin-top: 1em;
+    }
+    
     .embedded {
         padding-bottom: 5em;
         display: flex;
@@ -77,10 +94,13 @@ main {
                 display: flex;
                 align-items: center;
                 color: $text-color;
-                &:hover, &:active {
+
+                &:hover,
+                &:active {
                     color: $link;
                     transition: all 0.25s ease-in-out;
                 }
+
                 i {
                     font-size: 3em;
                 }

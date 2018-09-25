@@ -47,6 +47,17 @@ main {
     width: 100%;
     margin: 100px auto;
     display: block; }
+  .landing a {
+    display: block;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.5em;
+    color: #000;
+    font-weight: bold;
+    text-decoration-color: #ffd600; }
+    .landing a i {
+      margin-right: 12px; }
+  .landing h2 {
+    margin-top: 1em; }
   .landing .embedded {
     padding-bottom: 5em;
     display: flex;

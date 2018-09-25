@@ -1,8 +1,18 @@
-h1, h2 {
+h1,
+h2 {
   font-family: 'Karla', sans-serif;
   font-size: 4em;
   margin: 16px 0;
   color: #000; }
+
+p {
+  font-family: 'Karla', sans-serif;
+  font-weight: normal;
+  font-size: 1.33em;
+  padding-bottom: 50px; }
+  p b {
+    font-weight: bold;
+    font-family: inherit; }
 
 h2 {
   font-size: 4em;
@@ -33,14 +43,40 @@ main {
     text-align: center;
     text-decoration: underline;
     text-decoration-color: #ffd600; }
-  .landing img {
+  .landing > img {
     width: 100%;
     margin: 100px auto;
     display: block; }
   .landing .embedded {
-    padding-bottom: 5em; }
+    padding-bottom: 5em;
+    display: flex;
+    align-items: center; }
+    .landing .embedded a,
+    .landing .embedded iframe {
+      padding: 0 12px; }
+      .landing .embedded a.soundcloud,
+      .landing .embedded iframe.soundcloud {
+        display: flex;
+        align-items: center;
+        color: #000;
+        text-decoration: none; }
+        .landing .embedded a.soundcloud:hover, .landing .embedded a.soundcloud:active,
+        .landing .embedded iframe.soundcloud:hover,
+        .landing .embedded iframe.soundcloud:active {
+          color: #ffd600;
+          transition: all 0.25s ease-in-out; }
+        .landing .embedded a.soundcloud i,
+        .landing .embedded iframe.soundcloud i {
+          font-size: 3em; }
+        .landing .embedded a.soundcloud b,
+        .landing .embedded iframe.soundcloud b {
+          font-size: 2em;
+          font-family: 'Karla', sans-serif;
+          font-weight: bold;
+          margin-left: 8px;
+          letter-spacing: -3px; }
 
-.fab {
+.fab-button {
   box-shadow: 0 0 24px #ffd600;
   position: fixed;
   z-index: 100;
@@ -56,9 +92,9 @@ main {
   text-align: center;
   text-decoration: none;
   line-height: 48px !important; }
-  .fab i {
+  .fab-button i {
     line-height: 24px; }
-  .fab span {
+  .fab-button span {
     font-family: 'Karla', sans-serif; }
 
 .tag-list span {
@@ -72,32 +108,30 @@ main {
     padding-right: 4px;
     color: rgba(0, 0, 0, 0.5); }
 
-b {
-  color: #000;
-  font-size: 120px;
-  padding-right: 24px;
-  width: 150px; }
-  b::after {
-    content: '.'; }
-
-main div {
+main #tracklist div {
   display: flex;
   align-content: flex-start;
   align-items: flex-end; }
-  main div div {
+  main #tracklist div div {
     display: block; }
-    main div div h3 {
+    main #tracklist div div h3 {
       font-family: 'Karla', sans-serif;
       letter-spacing: -2px;
       font-size: 2em;
       margin: 16px 0;
       color: #000; }
-    main div div a {
+    main #tracklist div div a {
       display: block;
       margin: 16px 0;
       color: #ffd600;
       font-family: 'Open Sans', sans-serif; }
-    main div div .tag-list {
+    main #tracklist div div .tag-list {
       font-family: 'Open Sans', sans-serif; }
-  main div b {
-    font-family: 'Montserrat', sans-serif; }
+  main #tracklist div b {
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    font-size: 120px;
+    padding-right: 24px;
+    width: 150px; }
+    main #tracklist div b::after {
+      content: '.'; }

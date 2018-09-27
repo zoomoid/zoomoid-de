@@ -102,14 +102,14 @@ main {
                 }
 
                 i {
-                    font-size: 3em;
+                    font-size: 1.5em;
                 }
 
                 b {
-                    font-size: 2em;
+                    font-size: 1em;
                     font-family: 'Karla', sans-serif;
                     font-weight: bold;
-                    margin-left: 8px;
+                    margin-left: 4px;
                     letter-spacing: -3px;
                 }
 
@@ -163,45 +163,73 @@ main {
 }
 
 
-main #tracklist div {
-    display: flex;
-    align-content: flex-start;
-    align-items: flex-end;
-
-    div {
+main #tracklist {
+    & > button {
+        border-radius: 50px;
+        outline: none;
+        border: solid 3px $link;
+        background: none;
+        padding: 8px 16px;
         display: block;
-
-        h3 {
-            font-family: 'Karla', sans-serif;
-            letter-spacing: -2px;
-            font-size: 2em;
-            margin: 16px 0;
-            color: $text-color;
+        cursor: pointer;
+        font-family: 'Karla', sans-serif;
+        font-weight: bold;
+        font-size: 1.2em;
+        &:hover, &:active {
+            background: $link;
+            transition: all 0.5s ease;
         }
-
-        a {
+        &.is-toggled {
+            background: $link;
+        }
+    }
+    & > div {
+        display: flex;
+        align-content: flex-start;
+        align-items: flex-end;
+    
+        & > div {
+            flex-grow: 1;
             display: block;
-            margin: 16px 0;
-            color: $link;
-            font-family: 'Open Sans', sans-serif;
+    
+            h3 {
+                font-family: 'Karla', sans-serif;
+                letter-spacing: -2px;
+                font-size: 2em;
+                margin: 16px 0;
+                color: $text-color;
+            }
+    
+            a {
+                display: block;
+                margin: 16px 0;
+                color: $link;
+                font-family: 'Open Sans', sans-serif;
+            }
+    
+            .tag-list {
+                font-family: 'Open Sans', sans-serif;
+                margin-bottom: 1em;
+            }
+    
+            audio {
+                width: 100%;
+                display: block;
+            }
         }
-
-        .tag-list {
-            font-family: 'Open Sans', sans-serif;
+    
+        b {
+            font-family: 'Montserrat', sans-serif;
+            color: $text-color;
+            font-size: 120px;
+            padding-right: 24px;
+    
+            &::after {
+                content: '.'
+            }
+    
+            width: 150px;
         }
+    
     }
-
-    b {
-        font-family: 'Montserrat', sans-serif;
-        color: $text-color;
-        font-size: 120px;
-        padding-right: 24px;
-
-        &::after {
-            content: '.'
-        }
-
-        width: 150px;
-    }
-
-}
+} 

@@ -78,13 +78,13 @@ main {
           transition: all 0.25s ease-in-out; }
         .landing .embedded a.soundcloud i,
         .landing .embedded iframe.soundcloud i {
-          font-size: 3em; }
+          font-size: 1.5em; }
         .landing .embedded a.soundcloud b,
         .landing .embedded iframe.soundcloud b {
-          font-size: 2em;
+          font-size: 1em;
           font-family: 'Karla', sans-serif;
           font-weight: bold;
-          margin-left: 8px;
+          margin-left: 4px;
           letter-spacing: -3px; }
 
 .fab-button {
@@ -119,30 +119,52 @@ main {
     padding-right: 4px;
     color: rgba(0, 0, 0, 0.5); }
 
-main #tracklist div {
+main #tracklist > button {
+  border-radius: 50px;
+  outline: none;
+  border: solid 3px #ffd600;
+  background: none;
+  padding: 8px 16px;
+  display: block;
+  cursor: pointer;
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  font-size: 1.2em; }
+  main #tracklist > button:hover, main #tracklist > button:active {
+    background: #ffd600;
+    transition: all 0.5s ease; }
+  main #tracklist > button.is-toggled {
+    background: #ffd600; }
+
+main #tracklist > div {
   display: flex;
   align-content: flex-start;
   align-items: flex-end; }
-  main #tracklist div div {
+  main #tracklist > div > div {
+    flex-grow: 1;
     display: block; }
-    main #tracklist div div h3 {
+    main #tracklist > div > div h3 {
       font-family: 'Karla', sans-serif;
       letter-spacing: -2px;
       font-size: 2em;
       margin: 16px 0;
       color: #000; }
-    main #tracklist div div a {
+    main #tracklist > div > div a {
       display: block;
       margin: 16px 0;
       color: #ffd600;
       font-family: 'Open Sans', sans-serif; }
-    main #tracklist div div .tag-list {
-      font-family: 'Open Sans', sans-serif; }
-  main #tracklist div b {
+    main #tracklist > div > div .tag-list {
+      font-family: 'Open Sans', sans-serif;
+      margin-bottom: 1em; }
+    main #tracklist > div > div audio {
+      width: 100%;
+      display: block; }
+  main #tracklist > div b {
     font-family: 'Montserrat', sans-serif;
     color: #000;
     font-size: 120px;
     padding-right: 24px;
     width: 150px; }
-    main #tracklist div b::after {
+    main #tracklist > div b::after {
       content: '.'; }

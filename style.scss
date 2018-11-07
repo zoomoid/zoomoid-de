@@ -1,5 +1,9 @@
 $background: #111;
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   position: relative;
   height: 100%;
@@ -26,17 +30,26 @@ footer {
 }
 
 .liamm {
+  display: block;
   box-sizing: border-box;
-  box-shadow: 0 150px 100px 100px #fff;
   background: #fff;
   width: 100%;
 
   @media screen and (max-width: 768px) {
-    padding: 0 5% 0;
+    .cover-wrapper img {
+      width: 100%;
+    }
+    padding: 128px 5% 0;
   }
 
   @media screen and (min-width: 768px) {
-    padding: 0 15% 0;
+    padding: 6em 15% 6em;
+    .content-wrapper {
+      display: flex;
+      article {
+        display: block;
+      }
+    }
   }
 
   p {
@@ -60,14 +73,18 @@ footer {
       }
     }
   }
-
-  margin-bottom: 300px;
   color: #000;
+  .content-wrapper {
+    padding: 0;
+  }
 
   h3 {
     text-decoration: underline;
     text-decoration-color: #ffd600;
     color: #000 !important;
+  }
+  h3, .headline-alt, p {
+    text-shadow: none;
   }
 
   /* z-index: 1; */
@@ -78,7 +95,7 @@ section {
   display: flex;
   align-items: center;
   min-height: 100vh;
-  padding: 0 12.5%;
+  padding: 6em 12.5% 6em;
   margin: 0 auto;
   //background: $background;
 
@@ -88,15 +105,19 @@ section {
     margin: 0 auto;
   }
 
+  h3, .headline-alt, p {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  }
+
+  .headline-alt {
+    display: none;
+  }
+
   .content-wrapper {
     margin: 0;
     flex-grow: 1;
     padding: 0 10%;
     z-index: 1;
-
-    .headline-alt {
-      display: none;
-    }
 
     em {
       display: block;
@@ -181,8 +202,6 @@ section {
 // }
 
 #introduction {
-  
-
   .background {
     video {
       position: fixed;
@@ -266,6 +285,10 @@ h1 {
 @media screen and (max-width: 768px) {
 
   main {
+    //padding-top: 33vh;
+  }
+
+  #introduction {
     padding-top: 33vh;
   }
 
@@ -277,10 +300,13 @@ h1 {
 
   section {
     &:not(:last-child) {
-      margin-bottom: 128px;
+      padding-bottom: 128px;
     }
-
-    width: 100%;
+    &:not(:first-child) {
+      padding-top: 128px;
+    }
+    // width: 100%;
+    // padding-left: 
 
     .content-wrapper {
       padding: 0;
@@ -295,7 +321,7 @@ h1 {
 
       .headline-alt {
         display: block;
-        padding: 10%;
+        padding: 0;
 
         h6 {
           font-size: 1.5rem;
@@ -322,14 +348,14 @@ h1 {
       &>p,
       &>.link-wrapper,
       &>em {
-        padding: 0 10%;
+        padding: 0;
         display: block;
       }
     }
   }
 
   .typography h3 {
-    padding: 0 5%;
+    padding: 0;
     font-size: 2.5rem;
     letter-spacing: -4px;
   }

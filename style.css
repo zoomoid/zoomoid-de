@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; }
+
 html {
   position: relative;
   height: 100%; }
@@ -16,20 +19,25 @@ footer {
   font-family: 'Roboto Mono', monospace; }
 
 .liamm {
+  display: block;
   box-sizing: border-box;
-  box-shadow: 0 150px 100px 100px #fff;
   background: #fff;
   width: 100%;
-  margin-bottom: 300px;
   color: #000;
   /* z-index: 1; */
   position: relative; }
   @media screen and (max-width: 768px) {
     .liamm {
-      padding: 0 5% 0; } }
+      padding: 128px 5% 0; }
+      .liamm .cover-wrapper img {
+        width: 100%; } }
   @media screen and (min-width: 768px) {
     .liamm {
-      padding: 0 15% 0; } }
+      padding: 6em 15% 6em; }
+      .liamm .content-wrapper {
+        display: flex; }
+        .liamm .content-wrapper article {
+          display: block; } }
   .liamm p a {
     text-transform: uppercase;
     display: inline-block;
@@ -42,28 +50,34 @@ footer {
     color: #000000; }
     .liamm p a:hover, .liamm p a:active {
       box-shadow: 0 2px 7px rgba(0, 0, 0, 0.25); }
+  .liamm .content-wrapper {
+    padding: 0; }
   .liamm h3 {
     text-decoration: underline;
     text-decoration-color: #ffd600;
     color: #000 !important; }
+  .liamm h3, .liamm .headline-alt, .liamm p {
+    text-shadow: none; }
 
 section {
   display: flex;
   align-items: center;
   min-height: 100vh;
-  padding: 0 12.5%;
+  padding: 6em 12.5% 6em;
   margin: 0 auto; }
   section .logo {
     height: 320px;
     display: block;
     margin: 0 auto; }
+  section h3, section .headline-alt, section p {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); }
+  section .headline-alt {
+    display: none; }
   section .content-wrapper {
     margin: 0;
     flex-grow: 1;
     padding: 0 10%;
     z-index: 1; }
-    section .content-wrapper .headline-alt {
-      display: none; }
     section .content-wrapper em {
       display: block;
       font-size: 1.3em; }
@@ -161,44 +175,44 @@ h1 {
       color: #ffd600; }
 
 @media screen and (max-width: 768px) {
-  main {
+  #introduction {
     padding-top: 33vh; }
   .liamm h3.alt {
     line-height: 1.2 !important; }
-  section {
-    width: 100%; }
-    section:not(:last-child) {
-      margin-bottom: 128px; }
-    section .content-wrapper {
+  section:not(:last-child) {
+    padding-bottom: 128px; }
+  section:not(:first-child) {
+    padding-top: 128px; }
+  section .content-wrapper {
+    padding: 0; }
+    section .content-wrapper > h3 {
+      display: none; }
+    section .content-wrapper > h1 {
+      font-size: 5rem; }
+    section .content-wrapper .headline-alt {
+      display: block;
       padding: 0; }
-      section .content-wrapper > h3 {
-        display: none; }
-      section .content-wrapper > h1 {
-        font-size: 5rem; }
-      section .content-wrapper .headline-alt {
-        display: block;
-        padding: 10%; }
-        section .content-wrapper .headline-alt h6 {
-          font-size: 1.5rem;
-          color: #ffd600;
-          padding: 0;
-          letter-spacing: -1.5px;
-          font-weight: bold;
-          line-height: 0.5; }
-        section .content-wrapper .headline-alt h3.alt {
-          padding: 1rem 0 0;
-          line-height: 0.66; }
-          section .content-wrapper .headline-alt h3.alt small {
-            color: gray;
-            padding-left: 2px;
-            letter-spacing: -2px;
-            font-size: 0.6em; }
-      section .content-wrapper > p,
-      section .content-wrapper > .link-wrapper,
-      section .content-wrapper > em {
-        padding: 0 10%;
-        display: block; }
+      section .content-wrapper .headline-alt h6 {
+        font-size: 1.5rem;
+        color: #ffd600;
+        padding: 0;
+        letter-spacing: -1.5px;
+        font-weight: bold;
+        line-height: 0.5; }
+      section .content-wrapper .headline-alt h3.alt {
+        padding: 1rem 0 0;
+        line-height: 0.66; }
+        section .content-wrapper .headline-alt h3.alt small {
+          color: gray;
+          padding-left: 2px;
+          letter-spacing: -2px;
+          font-size: 0.6em; }
+    section .content-wrapper > p,
+    section .content-wrapper > .link-wrapper,
+    section .content-wrapper > em {
+      padding: 0;
+      display: block; }
   .typography h3 {
-    padding: 0 5%;
+    padding: 0;
     font-size: 2.5rem;
     letter-spacing: -4px; } }

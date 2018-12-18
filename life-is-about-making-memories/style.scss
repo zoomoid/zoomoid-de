@@ -76,7 +76,10 @@ main {
             margin-right: 12px;
         }
     }
-
+    a.small-subtitle {
+        font-size: 1em;
+        padding-top: 8px;
+    }
     h2 {
         margin-top: 1em;
     }
@@ -85,11 +88,12 @@ main {
         padding-bottom: 5em;
         display: flex;
         align-items: center;
-
+        flex-wrap: wrap;
+        text-align: center;
         a,
         iframe {
-            padding: 0 12px;
-
+            padding: 12px;
+            display: block;
             &.soundcloud {
                 display: flex;
                 align-items: center;
@@ -191,13 +195,14 @@ main #tracklist {
         & > div {
             flex-grow: 1;
             display: block;
-    
+            padding-top: 1em;
             h3 {
                 font-family: 'Karla', sans-serif;
                 letter-spacing: -2px;
                 font-size: 2em;
                 margin: 16px 0;
                 color: $text-color;
+                display: none;
             }
     
             a {
@@ -212,7 +217,7 @@ main #tracklist {
                 margin-bottom: 1em;
             }
     
-            audio {
+            iframe {
                 width: 100%;
                 display: block;
             }
@@ -221,7 +226,8 @@ main #tracklist {
         b {
             font-family: 'Montserrat', sans-serif;
             color: $text-color;
-            font-size: 120px;
+            text-align: right;
+            font-size: 100px;
             padding-right: 24px;
     
             &::after {

@@ -56,15 +56,21 @@ main {
     text-decoration-color: #ffd600; }
     .landing a i {
       margin-right: 12px; }
+  .landing a.small-subtitle {
+    font-size: 1em;
+    padding-top: 8px; }
   .landing h2 {
     margin-top: 1em; }
   .landing .embedded {
     padding-bottom: 5em;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center; }
     .landing .embedded a,
     .landing .embedded iframe {
-      padding: 0 12px; }
+      padding: 12px;
+      display: block; }
       .landing .embedded a.soundcloud,
       .landing .embedded iframe.soundcloud {
         display: flex;
@@ -142,13 +148,15 @@ main #tracklist > div {
   align-items: flex-end; }
   main #tracklist > div > div {
     flex-grow: 1;
-    display: block; }
+    display: block;
+    padding-top: 1em; }
     main #tracklist > div > div h3 {
       font-family: 'Karla', sans-serif;
       letter-spacing: -2px;
       font-size: 2em;
       margin: 16px 0;
-      color: #000; }
+      color: #000;
+      display: none; }
     main #tracklist > div > div a {
       display: block;
       margin: 16px 0;
@@ -157,13 +165,14 @@ main #tracklist > div {
     main #tracklist > div > div .tag-list {
       font-family: 'Open Sans', sans-serif;
       margin-bottom: 1em; }
-    main #tracklist > div > div audio {
+    main #tracklist > div > div iframe {
       width: 100%;
       display: block; }
   main #tracklist > div b {
     font-family: 'Montserrat', sans-serif;
     color: #000;
-    font-size: 120px;
+    text-align: right;
+    font-size: 100px;
     padding-right: 24px;
     width: 150px; }
     main #tracklist > div b::after {

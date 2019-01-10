@@ -1,43 +1,16 @@
 @media screen and (max-width: 426px) {
-    .landing h1 {
-        margin-top: 0;
-        font-size: 400%;
-    }
-
-    .landing .embedded {
-        flex-wrap: wrap;
-
-        a,
-        iframe {
-            flex-grow: 1;
-            width: 100%;
-            display: block;
-            margin: 16px auto;
+    .top-row {
+        font-size: 14px;
+        padding: 2em 1em 1em;
+        height: 30vh;
+        .inner {
+            
         }
     }
-
-    main #tracklist>div>div {
-        margin: 16px 0;
-    }
-
-    main #tracklist>div>div .tag-list {
-        display: flex;
-        flex-wrap: wrap;
-
-        &>* {
-            margin: 4px;
+    .bottom-row {
+        font-size: 16px;
+        .inner {
+            padding: 100px 1em 120px;
         }
-    }
-
-    main #tracklist>div b {
-        display: none;
-    }
-
-    .fab-button {
-        position: static;
-        text-align: center;
-        display: block !important;
-        width: 80%;
-        margin: 0 auto 24px;
     }
 }

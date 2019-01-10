@@ -65,7 +65,7 @@ p {
     
 }
 .bottom-row {
-    height: 80vh;
+    min-height: 80vh;
     background: #000000;
     transform: skewY(-5deg);
     font-size: 20px;
@@ -74,7 +74,7 @@ p {
     font-family: 'Karla', sans-serif;
     margin-bottom: 4em;
     .inner {
-        padding: 100px 3em 0;
+        padding: 100px 3em 120px;
         transform: skewY(5deg);
         max-width: 768px;
         margin: 0 auto;

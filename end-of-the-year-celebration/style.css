@@ -18,7 +18,8 @@ p {
 
 .header {
   background: #ffffff;
-  transform: skewY(-5deg); }
+  transform: skewY(-5deg);
+  padding: 2em 2em 2em; }
   .header .inner {
     padding-top: 2em;
     transform: skewY(5deg);

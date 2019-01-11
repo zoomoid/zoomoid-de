@@ -1,6 +1,9 @@
 @media screen and (max-width: 426px) {
-  .top-row {
+  .header {
     font-size: 14px;
+    padding: 0em 1em 1em; }
+  .top-row {
+    font-size: 20px;
     padding: 2em 1em 1em;
     height: 30vh; }
   .bottom-row {

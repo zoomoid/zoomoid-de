@@ -1,44 +1,51 @@
 .typography {
   color: #ffffff; }
-  .typography h1, .typography h2, .typography h3, .typography h4 {
-    padding: 2em 0;
+  .typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6 {
     color: #ffd600; }
   .typography h1 {
     font-family: 'Karla', sans-serif;
     font-weight: bold;
-    font-size: 6em;
-    letter-spacing: -6px; }
+    font-size: 4em;
+    letter-spacing: -6px;
+    margin: 0; }
   .typography h2 {
     font-family: 'Karla', sans-serif;
     font-weight: bold;
-    font-size: 6em;
-    letter-spacing: -5px; }
+    font-size: 4em;
+    letter-spacing: -5px;
+    margin: 0; }
   .typography h3 {
     font-family: 'Karla', sans-serif;
     font-weight: bold;
-    font-size: 4em;
-    letter-spacing: -4px; }
+    font-size: 3em;
+    letter-spacing: -4px;
+    margin: 0; }
   .typography h4 {
     font-family: 'Karla', sans-serif;
     font-weight: bold;
-    font-size: 4em;
-    letter-spacing: -3px; }
+    font-size: 3em;
+    letter-spacing: -3px;
+    margin: 0; }
   .typography h5 {
     font-family: 'Karla', sans-serif;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 2.5em;
-    letter-spacing: -6px; }
+    letter-spacing: -2px;
+    margin: 0; }
   .typography h6 {
     font-family: 'Karla', sans-serif;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 2em;
-    letter-spacing: -6px; }
+    letter-spacing: -2px;
+    margin: 0; }
   .typography p {
     font-family: 'Karla', sans-serif;
     font-weight: normal;
     font-size: 1.25em;
     letter-spacing: -1px;
-    line-height: 1.5; }
+    margin: 0;
+    line-height: 1.5;
+    word-wrap: normal; }
   .typography code {
     font-family: 'Roboto Mono'; }
   .typography .abstract, .typography blockquote, .typography em {

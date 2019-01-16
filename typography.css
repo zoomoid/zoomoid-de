@@ -1,102 +1,65 @@
 .typography {
-  color: #ffffff;
-}
+  color: #ffffff; }
+  .typography h1, .typography h2, .typography h3, .typography h4 {
+    padding: 2em 0;
+    color: #ffd600; }
+  .typography h1 {
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    font-size: 6em;
+    letter-spacing: -6px; }
+  .typography h2 {
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    font-size: 6em;
+    letter-spacing: -5px; }
+  .typography h3 {
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    font-size: 4em;
+    letter-spacing: -4px; }
+  .typography h4 {
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    font-size: 4em;
+    letter-spacing: -3px; }
+  .typography h5 {
+    font-family: 'Karla', sans-serif;
+    font-weight: normal;
+    font-size: 2.5em;
+    letter-spacing: -6px; }
+  .typography h6 {
+    font-family: 'Karla', sans-serif;
+    font-weight: normal;
+    font-size: 2em;
+    letter-spacing: -6px; }
+  .typography p {
+    font-family: 'Karla', sans-serif;
+    font-weight: normal;
+    font-size: 1.25em;
+    letter-spacing: -1px;
+    line-height: 1.5; }
+  .typography code {
+    font-family: 'Roboto Mono'; }
+  .typography .abstract, .typography blockquote, .typography em {
+    font-family: 'Playfair Display', serif;
+    font-variant: normal;
+    font-style: normal; }
+  .typography a:not(.no-styling) {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: solid 2px transparent; }
+    .typography a:not(.no-styling):hover, .typography a:not(.no-styling):active {
+      border-color: #ffd600; }
 
-.typography h1, .typography h2, .typography h3, .typography h4 {
-  font-family: 'Karla', sans-serif;
-  font-weight: bold;
-}
+@media only screen and (min-width: 768px) {
+  .typography {
+    font-size: 16px; } }
 
-.typography h5, .typography h6 {
-  font-family: 'Karla', sans-serif;
-  font-weight: normal;
-  letter-spacing: -2px;
-}
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .typography {
+    font-size: 14px; } }
 
-.typography p {
-  font-family: 'Karla', sans-serif;
-  font-weight: normal;
-  letter-spacing: -1px;
-  font-size: 1.33em;
-}
-
-.typography .abstract, .typography blockquote, .typography em {
-  font-family: 'Playfair Display', serif;
-  font-variant: normal;
-  font-style: normal;
-}
-/* 
-.typography article {
-  padding: 2rem;
-  width: 80%;
-  margin: 0 auto;
-} */
-
-.typography em {
-  font-size: 1.5em;
-}
-
-.typography p {
-  line-height: 1.5;
-}
-
-.typography h1 {
-  font-size: 6em;
-  letter-spacing: -6px;
-  margin: 0;
-  padding: 2rem 0;
-  color: #ffd600;
-}
-
-.typography h2 {
-  font-size: 5em;
-  letter-spacing: -6px;
-  margin: 0;
-  padding: 2rem 0;
-  color: #ffd600;
-}
-
-.typography h3 {
-  font-size: 4em;
-  letter-spacing: -4px;
-  margin: 0;
-  padding: 2rem 0;
-  color: #ffd600;
-}
-
-.typography h4 {
-  font-size: 3em;
-  letter-spacing: -4px;
-  margin: 0;
-  padding: 2rem 0;
-  color: #ffd600;
-}
-
-.typography h5 {
-  font-size: 2.5em;
-  letter-spacing: -6px;
-  margin: 0;
-  padding: 2rem 0;
-}
-
-.typography h6 {
-  font-size: 2em;
-  letter-spacing: -6px;
-  margin: 0;
-  padding: 2rem 0;
-}
-
-.typography code {
-  font-family: 'Roboto Mono', monospace;
-}
-
-.typography a:not(.no-styling) {
-  /* font-family:  'Roboto Mono', monospace; */
-  color: inherit;
-  text-decoration: none;
-  border-bottom: solid 2px transparent;
-}
-.typography a:not(.no-styling):hover,
-.typography a:not(.no-styling):active {
-  border-color: rgb(255, 214, 0);
-}
+@media only screen and (max-width: 375px) {
+  .typography {
+    font-size: 12px; } }

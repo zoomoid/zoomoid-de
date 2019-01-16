@@ -164,8 +164,9 @@ section {
         padding-top: calc(56.25% + (0.5625 * 2em));
         margin-left: -1em; }
       section .content-wrapper .cover-wrapper img {
-        width: calc(100% + 2em);
-        margin-left: -1em; } }
+        max-width: 360px;
+        display: block;
+        margin: 2em auto 0; } }
 
 @media only screen and (min-width: 376px) and (max-width: 426px) {
   section {
@@ -194,6 +195,9 @@ section {
       section .content-wrapper .video-wrapper {
         width: calc(100% + 2em);
         padding-top: calc(56.25% + (0.5625 * 2em));
+        margin-left: -1em; }
+      section .content-wrapper .cover-wrapper img {
+        width: calc(100% + 2em);
         margin-left: -1em; }
   #datkomm h3.alt {
     font-size: 2.5em; }

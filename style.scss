@@ -215,11 +215,9 @@ section {
       max-width: 768px;
     }
   }
-  #liamm {
-    .cover-wrapper img {
-      max-width: 360px;
-      margin: 0 auto;
-    }
+  .cover-wrapper img {
+    max-width: 360px;
+    margin: 0 auto;
   }
 }
 @media only screen and (min-width: 426px) and (max-width: 768px){

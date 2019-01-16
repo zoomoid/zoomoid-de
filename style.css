@@ -41,6 +41,9 @@ section {
     section .content-wrapper em {
       display: block;
       font-size: 1.3em; }
+    section .content-wrapper .cover-wrapper img {
+      width: calc(100% + 2em);
+      margin-left: -1em; }
     section .content-wrapper .link-wrapper {
       margin: 8px 0; }
       section .content-wrapper .link-wrapper a {
@@ -103,9 +106,6 @@ section {
   background: #fff;
   display: block;
   color: #000; }
-  #liamm .cover-wrapper img {
-    width: calc(100% + 2em);
-    margin-left: -1em; }
   #liamm h3 {
     text-decoration: underline;
     text-decoration-color: #ffd600;
@@ -155,7 +155,18 @@ section {
     max-width: 360px;
     margin: 0 auto; } }
 
-@media only screen and (min-width: 375px) and (max-width: 768px) {
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  section {
+    padding: 3em 3em 3em;
+    align-items: flex-end; }
+    section .content-wrapper {
+      padding: 0 1em; }
+      section .content-wrapper .video-wrapper {
+        width: calc(100% + 2em);
+        padding-top: calc(56.25% + (0.5625 * 2em));
+        margin-left: -1em; } }
+
+@media only screen and (min-width: 376px) and (max-width: 426px) {
   section {
     padding: 3em 0 0;
     align-items: flex-end; }
@@ -166,13 +177,12 @@ section {
         padding-top: calc(56.25% + (0.5625 * 2em));
         margin-left: -1em; } }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 376px) {
   section {
     padding: 3em 0 0;
     align-items: flex-end; }
     section .content-wrapper {
-      padding: 1em 0 0;
-      margin: 0 2em; }
+      padding: 1em 1em 0; }
       section .content-wrapper > h3 {
         display: none; }
       section .content-wrapper > .headline-alt {
@@ -180,4 +190,10 @@ section {
       section .content-wrapper .video-wrapper {
         width: calc(100% + 2em);
         padding-top: calc(56.25% + (0.5625 * 2em));
-        margin-left: -1em; } }
+        margin-left: -1em; }
+  #datkomm h3.alt {
+    font-size: 2.5em; }
+    #datkomm h3.alt small {
+      display: block;
+      font-size: 70%;
+      letter-spacing: -2px; } }

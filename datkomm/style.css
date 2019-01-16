@@ -72,6 +72,8 @@ p {
       margin: 0 auto; }
     .bottom-row .inner .streaming {
       padding: 1em 2em 0; }
+      .bottom-row .inner .streaming iframe {
+        border-radius: 10px; }
     .bottom-row .inner .tabs {
       padding: 1em 2em 0; }
 

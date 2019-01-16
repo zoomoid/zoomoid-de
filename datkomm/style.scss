@@ -97,6 +97,9 @@ p {
 
         .streaming {
             padding: 1em 2em 0;
+            iframe {
+                border-radius: 10px;
+            }
         }
 
         .tabs {

@@ -5,4 +5,4 @@ services:
     image: registry.git.rwth-aachen.de/occloxium-webdev/zoomoid.de
     build: .
     ports:
-      - 8080:80
+      - 8081:80

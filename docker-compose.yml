@@ -9,5 +9,6 @@ services:
       - zoomoid
 
 networks:
-  zoomoid:
-    driver: bridge
+  default:
+    external
+      name: zoomoid

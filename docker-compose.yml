@@ -1,8 +1,13 @@
 version: '2.1'
 
 services:
-  zoomoid.de:
+  zoomoid:
     image: registry.git.rwth-aachen.de/occloxium-webdev/zoomoid.de
-    build: .
     ports:
       - 8081:80
+    networks:
+      - zoomoid
+
+networks:
+  zoomoid:
+    driver: bridge

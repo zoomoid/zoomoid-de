@@ -2,6 +2,7 @@ version: '2.1'
 
 services:
   zoomoid:
+    container_name: zoomoid.de
     image: registry.git.rwth-aachen.de/occloxium-webdev/zoomoid.de
     ports:
       - 8081:80
@@ -10,5 +11,5 @@ services:
 
 networks:
   default:
-    external
+    external:
       name: zoomoid

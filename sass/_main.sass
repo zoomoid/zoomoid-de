@@ -1,0 +1,45 @@
+main
+  display: flex
+  flex-direction: column
+  background: $pink
+  nav
+    background: $pink
+    max-width: 768px
+    margin: 0 auto
+    width: 100%
+    ul
+      margin: 1em auto
+      padding: 0
+      width: 100%
+      display: flex
+      list-style: none outside none
+      li
+        color: $white
+        flex-grow: 1
+        cursor: pointer
+        margin: 0 16px
+        padding: 2px 8px
+        border-style: solid
+        border-width: 3px
+        border-color: transparent
+        border-radius: 1em
+        text-align: center
+        &:hover, &:active, &:focus, &:target, &.is-active
+          border-color: $white
+  .content-wrapper
+    flex-grow: 1
+    background: $background
+    color: $text
+    border-top-left-radius: 25px
+    border-top-right-radius: 25px
+    section
+      margin: 0 auto
+      width: 100%
+      max-width: 768px
+      padding: 0 1em
+      &:not(.is-active)
+        display: none
+      &.enters
+        
+      &.exits
+        

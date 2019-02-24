@@ -1,4 +1,4 @@
-FROM node:lastest AS builder
+FROM node:latest AS builder
 RUN npm install
 RUN npm run build
 

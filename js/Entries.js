@@ -19,7 +19,7 @@ export const Entries = {
     new Entry({
       id: 'life-is-about-making-memories',
       title: 'Life Is About Making Memories',
-      subtitle: 'The 1st Full-stretch album made in 2018',
+      subtitle: 'The 1<sup>st</sup> Full-stretch album made in 2018',
       text: `<b>Life Is About Making Memories</b> is my first full-feature album!
       It is comprised out of 11 songs and there are a lot of different gems
       on there, have a listen and decide for yourself which tracks you like
@@ -47,7 +47,7 @@ export const Entries = {
       id: 'daydream-ep',
       title: 'Daydream EP',
       subtitle: 'First EP in 2019 comprising a lot of different emotions',
-      text: '',
+      text: 'Daydream features 3 tracks from <i>Liquid Drum &amp; Bass</i> to <i>Melodic Techno</i> with multitudes of influences.',
       links: [
         {
           label: 'Listen',
@@ -68,7 +68,10 @@ export const Entries = {
       artists: 'Zoomoid, Simon Kaiser & Dirk Thißen',
       title: 'Datenkommunkation & Sicherheit',
       subtitle: '',
-      text: '<img src="https://cdn.occloxium.com/i/zoomoid/covers/0158d025.png">',
+      text: `Lange wurde gewartet auf die epische Kollaboration, jetzt ist sie da: tanzbar, mitsingbar (ob man den Text kennt/versteht), kontrovers!
+        Möglich gemacht durch <b><a href="https://www.comsys.rwth-aachen.de/team/dirk-thissen/">Dr. Dirk Thißen</a> himself</b>, präsentieren wir euch den ersten von vielen <i>Best Of RWTH Informatik</i>-Songs!
+        <img src="https://cdn.occloxium.com/i/zoomoid/covers/0158d025.png">
+      `,
       links: [
         {
           label: 'Listen',
@@ -87,7 +90,7 @@ export const Entries = {
       id: 'interstellar',
       title: 'Interstellar',
       subtitle: '',
-      text: '',
+      text: 'Electronic hommage to one of the greatest movies with the greatest soundtrack of this century',
       links: [
         {
           label: 'Listen',

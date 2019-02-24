@@ -9,7 +9,7 @@ export const Template = function(schema){
   /**
    * 1st handle all links
    */
-  const links = (schema.links.length > 0 
+  let links = (schema.links.length > 0 
     ? schema.links.map((v) => {
         return `
           <a href="${v.url}">${v.label}</a>
@@ -22,7 +22,7 @@ export const Template = function(schema){
   /**
    * 2nd handle all videos
    */
-  const videos = (schema.video.length > 0 
+  let videos = (schema.video.length > 0 
     ? schema.video.map((v) => {
         /** 
          * Sanitize video links
@@ -33,7 +33,7 @@ export const Template = function(schema){
           ? v.url.replace('https://www.youtube.com/watch?v=', 'https://www.youtube.com/embed/') /** plain youtube link to embed */
             
           : v.url); /** already embedding link */
-        return (v.length > 0 
+        return (video_url.length > 0 
           ? `  
             <iframe 
               src="${video_url}?rel=0&amp;showinfo=0" 
@@ -49,23 +49,38 @@ export const Template = function(schema){
     : ''
   );
   /**
+   * We dont want video containers to be present if there are no videos:
+   */
+  videos = (videos.length > 0
+    ? `<div class="video">
+      ${videos}
+    </div>`
+    : ''
+  );
+  /**
+   * Same goes with links
+   */
+  links = (links.length > 0
+    ? `<div class="links">
+      ${links}
+    </div>`
+    : ''
+  );
+  /**
    * Lastly produce final entry html representation
    */
   return `
-    <article id="${schema.id}">
-      <h1>
+    <article id="${schema.id}" class="track">
+      <h1 class="title">
         <span class="artist">${schema.artists}</span>
-        <span class="title">${schema.title}</span></h1>
-      <h2>${schema.subtitle}</h2>
-      <p>
+        <span class="title">${schema.title}</span>
+      </h1>
+      <h2 class="subtitle">${schema.subtitle}</h2>
+      <p class="text">
         ${schema.text}
       </p>
-      <div class="links">
-        ${links}
-      </div>
-      <div class="video">
-        ${videos}
-      </div>
+      ${links}
+      ${videos}
     </article>
   `;
 };

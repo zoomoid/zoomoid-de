@@ -1,5 +1,6 @@
 FROM node:latest AS builder
 WORKDIR .
+COPY . .
 RUN npm install
 RUN npm run build
 

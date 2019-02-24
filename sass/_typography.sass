@@ -1,0 +1,28 @@
+.typography 
+  color: $text
+  h1, h2, h3, h4, h5, h6
+    color: $theme--primary
+  h1 
+    +font(5em, bold)
+  h2 
+    +font(4em, bold)
+  h3 
+    +font(3em, bold)
+  h4 
+    +font(3em, bold)
+  h5 
+    +font(2em, bold)
+  h6 
+    +font(2em, bold)
+  p, li 
+    +font(1.25em, normal, -1px)
+    line-height: 1.5
+    word-wrap: normal
+  
+  code
+    font-family: 'Roboto Mono'
+  
+  .abstract, blockquote, em 
+    font-family: 'Playfair Display', serif
+    font-variant: normal
+    font-style: normal

@@ -1,0 +1,22 @@
+=font($size, $weight, $spacing: 0pt)
+  font-family: 'Karla', sans-serif
+  font-weight: $weight
+  +font-size($size)
+  letter-spacing: $spacing
+  margin: 0
+
+=sm
+  @media (max-width: #{$mobile-l-width - 1}) 
+    @content
+
+=md
+  @media (min-width: #{$mobile-l-width}) and (max-width: #{$tablet-width - 1})
+    @content
+
+=lg
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1})
+    @content
+
+=xl
+  @media (min-width: #{$desktop-width})
+    @content

@@ -1,0 +1,28 @@
+@import "../node_modules/rfs/sass"
+
+@import "colors"
+@import "variables"
+
+@import "normalize"
+@import "mixins"
+
+@import "typography"
+
+@import "header"
+@import "footer"
+@import "main"
+@import "privacy"
+
+html 
+  position: relative
+  height: 100%
+  width: 100%
+body
+  position: absolute
+  min-width: 100%
+  min-height: 100%
+  background: $background
+  display: flex
+  flex-direction: column
+  main
+    flex-grow: 1

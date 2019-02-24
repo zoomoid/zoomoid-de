@@ -1,4 +1,5 @@
 FROM node:latest AS builder
+WORKDIR .
 RUN npm install
 RUN npm run build
 

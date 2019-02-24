@@ -1,4 +1,4 @@
-import {Entry} from './Schema';
+const Entry = require('./Schema');
 
 /**
  * JS file containing a listing of all entries regarding
@@ -14,7 +14,7 @@ import {Entry} from './Schema';
  * webpage (docker+nginx container), there is currently no infrastructure for
  * serving this data to a potential web client
  */
-export const Entries = {
+module.exports = {
   Albums: [
     new Entry({
       id: 'life-is-about-making-memories',

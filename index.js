@@ -6,7 +6,7 @@ const morgan = require('morgan');
 // app.use(cors());
 
 app.use(morgan());
-app.get('/', express.static('/client'));
+app.use(express.static('./client/'));
 
 app.get('/api/albums', (req, res) => {
   const html = (Entries.Albums.length > 0 

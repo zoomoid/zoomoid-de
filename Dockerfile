@@ -3,7 +3,7 @@ FROM node:latest
 # install server dependencies
 WORKDIR /
 # copy package files
-COPY package*.json 
+COPY package*.json .
 RUN npm install --quiet
 
 # install client dependencies

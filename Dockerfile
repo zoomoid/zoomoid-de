@@ -1,12 +1,13 @@
-FROM node:latest AS builder
-WORKDIR .
-COPY . .
-RUN npm install
-RUN npm run build
-COPY ./dist/ .
+FROM node:latest
 
-FROM nginx:latest
-LABEL Name=zoomoid.de Version=1.0.0
-WORKDIR .
-COPY --from=builder . .
-COPY . /usr/share/nginx/html
+# copy all source files to container
+COPY . .
+
+# install client dependencies
+WORKDIR ./client/
+RUN npm install --quiet
+# build client
+RUN npm run build
+# install server dependencies
+WORKDIR ./
+RUN npm install --quiet

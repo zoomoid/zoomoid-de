@@ -1,5 +1,4 @@
-// import {AJAX} from './js/AJAX';
-import {Entries} from './js/Entries';
+import {AJAX} from './js/AJAX';
 
 (() => {
   const el_albums = document.querySelector('#albums');
@@ -22,15 +21,11 @@ import {Entries} from './js/Entries';
       container.classList.add('is-active');
     });
   });
-  const data_albums = Entries.Albums;
-  const data_singles = Entries.Singles;
-  // const data_more = [];
-
-  data_albums.forEach((a) => {
-    el_albums.insertAdjacentHTML('beforeend', a.toString());
+  AJAX.get('/api/albums').then((res) => {
+    el_albums.insertAdjacentHTML('beforeend', res.responseText);
   });
-  data_singles.forEach((a) => {
-    el_singles.insertAdjacentHTML('beforeend', a.toString());
+  AJAX.get('/api/singles').then((res) => {
+    el_singles.insertAdjacentHTML('beforeend', res.responseText);
   });
 
   document.querySelectorAll('nav li')[0].classList.add('is-active');

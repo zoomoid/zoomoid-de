@@ -11,3 +11,5 @@ RUN npm run build
 # install server dependencies
 WORKDIR ./
 RUN npm install --quiet
+# run server
+CMD ['npm', 'start']

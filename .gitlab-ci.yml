@@ -40,7 +40,7 @@ deploy:
     - occloxium-shell
 
 deploy-dev: 
-  only: 
+  except: 
     - master
   stage: deploy
   environment:

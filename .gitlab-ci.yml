@@ -9,7 +9,7 @@ build:
   stage: build
   script: 
     - echo "$CI_JOB_TOKEN" | docker login registry.git.rwth-aachen.de --username gitlab-ci-token --password-stdin 
-    - docker build -t registry.git.rwth-aachen.de/occloxium-webdev/zoomoid.de .
+    - docker build -t registry.git.rwth-aachen.de/occloxium-webdev/zoomoid.de/stable .
     - docker push registry.git.rwth-aachen.de/occloxium-webdev/zoomoid.de/stable:latest
   tags: 
     - occloxium-docker
@@ -21,7 +21,7 @@ build-dev:
   stage: build
   script: 
     - echo "$CI_JOB_TOKEN" | docker login registry.git.rwth-aachen.de --username gitlab-ci-token --password-stdin 
-    - docker build -t registry.git.rwth-aachen.de/occloxium-webdev/zoomoid.de .
+    - docker build -t registry.git.rwth-aachen.de/occloxium-webdev/zoomoid.de/experimental .
     - docker push registry.git.rwth-aachen.de/occloxium-webdev/zoomoid.de/experimental:latest
   tags: 
     - occloxium-docker

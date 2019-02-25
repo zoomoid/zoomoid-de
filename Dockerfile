@@ -21,7 +21,7 @@ RUN npm ci
 COPY index.js .
 COPY /api /api
 # copy from client builder
-COPY --from=builder / /client
+COPY --from=client-builder / /client
 
 # start server
 CMD ["npm", "start"]

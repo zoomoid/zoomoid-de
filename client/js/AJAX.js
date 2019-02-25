@@ -3,9 +3,8 @@ export class AJAX {
    * Uses HTTP get to issue a XHR request and returns a promise which resolves
    * on success and rejects otherwise with the respective response object
    * @param {string} url request url
-   * @param {*} options request options
    */
-  static get(url, options){
+  static get(url){
     return new Promise((resolve, reject) => {
       let req = new XMLHttpRequest();
       req.open('GET', url, true);
@@ -18,13 +17,9 @@ export class AJAX {
         reject(req);
       };
       req.send();
-    }).then((data) => {
-      console.info(`HTTP GET was successful from ${data.responseUrl} with data ${data.responseText}`);
-    }).catch((data) => {
-      console.warn(`HTTP GET FAILED from ${data.responseUrl} with data ${data.responseText}`);
     });
   }
-  static post(url, data, options){
+  static post(url, data){
     return new Promise((resolve, reject) => {
       /** NOT YET IMPLEMENTED due to brevity */
     });

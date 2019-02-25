@@ -5,7 +5,7 @@
  * @param {{id: string, title: string, subtitle: string, text: string, artists:
  * string, links:[{label: string,url: string}],video:[{url: string}] }} schema 
  */
-export const Template = function(schema){
+module.exports = function(schema){
   /**
    * 1st handle all links
    */

@@ -3,6 +3,7 @@ const autoprefixer = require('autoprefixer');
 module.exports = {
   entry: ['./sass/app.sass', './app.js'],
   output: {
+    path: __dirname,
     filename: 'bundle.js',
   },
   module: {
@@ -33,11 +34,13 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015'],
-          plugins: ['transform-object-assign']
-        },
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
       }
     ],
   },

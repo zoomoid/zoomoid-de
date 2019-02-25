@@ -20,7 +20,7 @@ app.get('/api/singles', (req, res) => {
   }, '');
   res.send(html);
 });
-
-app.listen('80', () => {
-  console.log('http server started on port 80');
+const port = 3000;
+app.listen(port, () => {
+  console.log('http server started on port ' + port);
 });

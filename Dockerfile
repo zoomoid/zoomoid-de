@@ -1,15 +1,24 @@
 FROM node:latest
 
-# copy all source files to container
-COPY . .
+# install server dependencies
+WORKDIR /
+# copy package files
+COPY package*.json 
+RUN npm install --quiet
 
 # install client dependencies
-WORKDIR ./client/
+WORKDIR /client
+COPY /client/package*.json .
 RUN npm install --quiet
+
+# bundle all files
+WORKDIR /
+COPY . .
+
 # build client
+WORKDIR /client
 RUN npm run build
-# install server dependencies
-WORKDIR ./
-RUN npm install --quiet
+
 # run server
-CMD ['npm', 'start']
+WORKDIR /
+CMD ["npm", "start"]

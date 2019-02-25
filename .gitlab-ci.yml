@@ -47,7 +47,7 @@ deploy-dev:
     name: deployment
     url: https://staging.zoomoid.de
   script:
-    - docker-compose down
-    - docker-compose up -d
+    - docker-compose -f staging.yml down
+    - docker-compose -f staging.yml up -d
   tags:
     - occloxium-shell

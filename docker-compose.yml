@@ -1,10 +1,10 @@
-version: '2.1'
+version: '3'
 
 services:
   zoomoid:
     command: npm start
     container_name: zoomoid.de
-    image: registry.git.rwth-aachen.de/occloxium-webdev/zoomoid.de
+    image: registry.git.rwth-aachen.de/occloxium-webdev/zoomoid.de/stable:latest
     ports:
       - 8081:80
     restart: always

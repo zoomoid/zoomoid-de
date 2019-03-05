@@ -87,9 +87,14 @@ main
         display: block
     .links
       padding: 2em 0
+      display: flex
+      +sm
+        display: block
       a 
+        display: block
         padding: 0.5em 2em
-        margin: 0 1em
+        margin: 1em 1em 0
+        text-align: center
         text-decoration: none
         transition: background-color $transition-time $transition-curve, color $transition-time $transition-curve, border-color $transition-time $transition-curve
         background: $theme--primary

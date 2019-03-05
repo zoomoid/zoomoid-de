@@ -32,8 +32,11 @@ main
         border-color: transparent
         border-radius: 1em
         text-align: center
-        &:hover, &:active, &:focus, &:target, &.is-active
+        &:hover, &:active, &:focus
           border-color: $white
+        &:target, &.is-active
+          background: $theme--accent
+          border-color: $theme--accent
   .content-wrapper
     flex-grow: 1
     background: $theme--primary
@@ -102,8 +105,8 @@ main
         color: $white
         border: solid 2px $white
         &:hover, &:active
-          border-color: $theme--primary-dark
-          background-color: $theme--primary-dark
+          border-color: $theme--accent
+          background-color: $theme--accent
 
     .video
       box-sizing: border-box

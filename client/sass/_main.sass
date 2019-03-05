@@ -36,8 +36,8 @@ main
           border-color: $white
   .content-wrapper
     flex-grow: 1
-    background: $background
-    color: $text
+    background: $grey
+    color: $white
     border-top-left-radius: 25px
     border-top-right-radius: 25px
     section
@@ -56,7 +56,7 @@ main
     &:not(:last-child)::after
       height: 4px
       padding-top: 2px
-      background: $theme--primary
+      background: $theme--accent
       border-radius: 1em
       width: 66%
       margin: 1em auto 0
@@ -64,7 +64,6 @@ main
       display: block
     h1.title
       +font-size(2em)
-      color: $theme--primary
       span.title
         +font-size(1em)
       span.artist
@@ -77,8 +76,9 @@ main
             content: ''
     h2.subtitle
       +font-size(1.5em)
-      color: $theme--primary
     .text
+      a
+        color: inherit
       *
         max-width: 100%
       img
@@ -91,14 +91,15 @@ main
         padding: 0.5em 2em
         margin: 0 1em
         text-decoration: none
-        transition: background-color $transition-time $transition-curve, color $transition-time $transition-curve
+        transition: background-color $transition-time $transition-curve, color $transition-time $transition-curve, border-color $transition-time $transition-curve
         background: $theme--primary
         border-radius: 2em
         color: $white
         border: solid 2px $theme--primary
         &:hover, &:active
+          border-color: $background
           background-color: $background
-          color: $text
+          color: $theme--primary
     .video
       box-sizing: border-box
       margin: 0 auto
@@ -126,13 +127,12 @@ main
 #more 
   h1
     +font-size(2em)
-    color: $theme
   .contact--mail 
     +font-size(1.2em) 
     display: block
     text-align: center
-    color: $theme--primary
-    text-decoration-color: $theme--primary
+    color: $text
+    text-decoration-color: $text
   .references
     li
       list-style: none outside none

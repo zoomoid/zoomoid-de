@@ -107,6 +107,146 @@ module.exports = {
         }
       ]
     }),
+    new Entry({
+      id: 'bloodrush',
+      title: 'Blood Rush',
+      subtitle: '',
+      text: 'My baby attempt to Drum &amp; Bass. Sufficient to say: No one wanted to sign it. Nevertheless, a few people digged it!',
+      links: [
+        {
+          label: 'Listen',
+          url: 'https://distrokid.com/hyperfollow/zoomoid/dv91'
+        },
+        {
+          label: 'Download',
+          url: 'https://soundcloud.com/zoomoid/blood-rush-original-mix'
+        }
+      ],
+      video: [
+        {
+          url: 'https://www.youtube.com/embed/qRuEaTvd_SM'
+        }
+      ]
+    }),
+    new Entry({
+      id: 'wildworld',
+      title: 'Wild World',
+      subtitle: '',
+      text: 'Animal Crossing was there for me when I needed it the most. This is what I gave back!',
+      links: [
+        {
+          label: 'Listen',
+          url: 'https://distrokid.com/hyperfollow/zoomoid/dv9V'
+        },
+        {
+          label: 'Download',
+          url: 'https://soundcloud.com/zoomoid/wild-world-original-mix'
+        }
+      ],
+      video: [
+        {
+          url: 'https://www.youtube.com/embed/YgF_L0b-Fe8'
+        }
+      ]
+    }),
+    new Entry({
+      id: 'lucid',
+      title: 'Lucid (Original Mix)',
+      subtitle: '',
+      text: 'A little harder this time!',
+      links: [
+        {
+          label: 'Listen',
+          url: 'https://distrokid.com/hyperfollow/zoomoid/egj4'
+        },
+        {
+          label: 'Download',
+          url: 'https://soundcloud.com/zoomoid/lucid-original-mix'
+        }
+      ],
+      video: [
+        {
+          url: 'https://www.youtube.com/embed/FNOJa_xOq0U'
+        }
+      ]
+    }),
+    new Entry({
+      id: 'atomicspark',
+      title: 'Atomic Spark (Original Mix)',
+      subtitle: '',
+      text: 'Let the journey of Techno for Zoomoid begin!',
+      links: [
+        {
+          label: 'Listen',
+          url: 'https://distrokid.com/hyperfollow/zoomoid/dAAh'
+        },
+        {
+          label: 'Download',
+          url: 'https://soundcloud.com/zoomoid/atomic-spark-original-mix'
+        }
+      ],
+      video: [
+        {
+          url: 'https://www.youtube.com/embed/kUHx6uQ4TPw'
+        }
+      ]
+    }),
+    new Entry({
+      id: 'memories',
+      artists: 'David Guetta',
+      title: 'Memories (zoomoid Remix)',
+      subtitle: '',
+      text: 'This was my remix debut!',
+      links: [
+        {
+          label: 'Listen',
+          url: 'https://soundcloud.com/zoomoid/memories-zoomoid-remix'
+        },
+      ],
+      video: [
+        {
+          url: 'https://www.youtube.com/embed/yUcnqvwN5AQ'
+        }
+      ]
+    }),
+    new Entry({
+      id: 'higherthanclouds',
+      title: 'Higher Than Clouds (Original Mix)',
+      subtitle: 'OG Zoomoid - Progressive House all the way',
+      text: 'This was my remix debut!',
+      links: [
+        {
+          label: 'Listen &amp; Download',
+          url: 'https://soundcloud.com/zoomoid/higher-than-clouds-original-mix'
+        },
+      ],
+      video: [
+        {
+          url: 'https://www.youtube.com/embed/Eu3elgNkdZI'
+        }
+      ]
+    }),
+    new Entry({
+      id: 'intospace',
+      title: 'Into Space (Original Mix)',
+      subtitle: '',
+      text: '',
+      links: [
+        {
+          label: 'Listen',
+          url: 'https://distrokid.com/hyperfollow/zoomoid/dAAr'
+        },
+        {
+          label: 'Download',
+          url: 'https://soundcloud.com/zoomoid/into-space-original-mix'
+        }
+      ],
+      video: [
+        {
+          url: 'https://www.youtube.com/embed/AHje2WKLTz4'
+        }
+      ]
+    })
   ]
 };
   

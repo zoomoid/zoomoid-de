@@ -19,7 +19,6 @@ COPY package*.json ./
 RUN npm ci
 # copy server files
 COPY index.js .
-COPY /api /api
 # copy from client builder
 COPY --from=client-builder / /client
 

@@ -1,8 +1,9 @@
 .typography 
   color: $text
-  h1, h2, h3, h4, h5, h6
-    color: $text
+
   h1 
+    +sm
+      +font(2.5em, bold)
     +font(5em, bold)
   h2 
     +font(4em, bold)
@@ -15,10 +16,11 @@
   h6 
     +font(2em, bold)
   p, li 
-    +font(1.25em, normal, -1px)
-    line-height: 1.5
+    +font(1.25em, normal)
+    line-height: 2
     word-wrap: normal
-  
+  nav
+    +font(1em, normal, 0px)
   code
     font-family: 'Roboto Mono'
   

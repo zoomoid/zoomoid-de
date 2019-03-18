@@ -1,0 +1,145 @@
+div.title
+  
+  text-align: center
+  background-image: url('https://cdn.occloxium.com/i/zoomoid/press/cover-page.png')
+  background-size: cover
+  background-attachment: fixed
+  background-position: center center
+  position: relative
+  h1
+    padding: 2em 0
+    z-index: 11
+    position: relative
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    min-width: 100%
+    min-height: 100%
+    background-color: transparentize($theme--primary, 0.5)
+    z-index: 10
+main
+  nav
+    li
+      list-style: none outside none
+      a
+        color: inherit
+        &:active, &:hover
+          color: $theme--accent
+  padding: 2em 2em
+  max-width: 768px
+  margin: 0 auto
+  section > h1
+    padding: 1em 0
+    text-align: center
+article.track
+  +font(1em, normal)
+  
+  padding: 1em 0
+  &::after
+    height: 4px
+    padding-top: 2px
+    background: $theme--accent
+    border-radius: 1em
+    width: 66%
+    margin: 1em auto 0
+    content: ' '
+    display: block
+  h1.title
+    +font-size(2em)
+    text-transform: none
+    span.title
+      +font-size(1em)
+    span.artist
+      +font-size(0.8em)
+      &::after
+        content: ' \2013'
+      +sm
+        display: block
+        &::after
+          content: ''
+  h2.subtitle
+    +font-size(1.5em)
+    text-transform: none
+  .text
+    text-transform: none
+    a
+      color: inherit
+    *
+      max-width: 100%
+    img
+      max-width: 50%
+      margin: 1em auto
+      display: block
+  .links
+    padding: 2em 0
+    display: flex
+    +sm
+      display: block
+    a 
+      display: block
+      padding: 0.5em 2em
+      margin: 1em 1em 0
+      text-align: center
+      text-decoration: none
+      transition: background-color $transition-time $transition-curve, border-color $transition-time $transition-curve
+      background: $theme--primary
+      border-radius: 2em
+      color: $white
+      border: solid 2px $white
+      &:hover, &:active
+        border-color: $theme--accent
+        background-color: $theme--accent
+
+  .video
+    box-sizing: border-box
+    margin: 0 auto
+    width: 100%
+    padding-top: 56.25%
+    position: relative
+    background: transparent
+    &::before
+      content: 'Waiting for YouTube...'
+      top: 50%
+      left: 50%
+      position: absolute
+      display: block
+      transform: translate(-50%, -50%)
+      font-family: 'Karla', sans-serif
+      font-weight: normal
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      width: 100%
+      height: 100%
+
+.nav-fab
+  position: fixed
+  width: 48px
+  height: 48px
+  right: 24px
+  bottom: 24px
+  color: $theme--primary-contrast
+  border-radius: 100px
+  background: $theme--accent
+  box-shadow: 0 0 15px transparentize($theme--accent, 0.5)
+  text-decoration: none
+  i
+    color: inherit
+    font-size: 24px
+    line-height: 2
+    display: block
+    text-align: center
+
+.missing-content
+  text-transform: none
+  font-weight: 0.66em
+  width: 66%
+  margin: 0 auto
+  text-align: center
+  line-height: 1
+  color: transparentize($theme--primary-contrast, 0.5)

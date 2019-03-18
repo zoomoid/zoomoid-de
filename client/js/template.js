@@ -5,7 +5,7 @@
  * @param {{id: string, title: string, subtitle: string, text: string, artists:
  * string, links:[{label: string,url: string}],video:[{url: string}] }} schema 
  */
-module.exports = function(schema){
+export const Template = function (schema){
   /**
    * 1st handle all links
    */
@@ -70,7 +70,7 @@ module.exports = function(schema){
    * Lastly produce final entry html representation
    */
   return `
-    <article id="${schema.id}" class="track animatable js-trigger-anim">
+    <article id="${schema.id}" class="track js-trigger-anim animatable">
       <h1 class="title">
         <span class="artist">${schema.artists}</span>
         <span class="title">${schema.title}</span>

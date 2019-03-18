@@ -1,4 +1,4 @@
-const Entry = require('./Schema');
+import {Entry} from './schema';
 
 /**
  * JS file containing a listing of all entries regarding
@@ -11,10 +11,10 @@ const Entry = require('./Schema');
  * for a javascript file.
  * 
  * These CAN be served from a REST API but since this is yet a static
- * webpage (docker+nginx container), there is currently no infrastructure for
+ * webpage (docker + nginx container), there is currently no infrastructure for
  * serving this data to a potential web client
  */
-module.exports = {
+export const Data = {
   Albums: [
     new Entry({
       id: 'life-is-about-making-memories',

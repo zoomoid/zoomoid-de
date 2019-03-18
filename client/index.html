@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="typography">
+<html class="typography frontpage">
 
 <head>
   <meta charset="UTF-8">
@@ -25,10 +25,28 @@
 </head>
 
 <body>
-  <header>
-    <section id="introduction">
+  <nav class="is-collapsed is-hidden">
+    <a href="#nav" class="collapse-button"><i class="fas fa-bars"></i></a>
+    <ul class="is-hidden">
+      <li for="intro">
+        <a href="#intro">Start</a>
+      </li>
+      <li for="work">
+        <a href="#work">Work</a>
+      </li>
+      <li for="merchandise">
+        <a href="#merchandise">Merchandise</a>
+      </li>
+      <li for="contact">
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <section id="intro"
+      style="background-image: url('https://cdn.occloxium.com/i/zoomoid/press/zoomoid_banner_large.jpg')">
       <div class="content-wrapper">
-        <img class="logo" src="https://cdn.occloxium.com/i/zoomoid/zoomoid-logo-ai-white.png">
+        <img class="logo" src="https://cdn.occloxium.com/i/zoomoid/logos/strip_100.png">
         <p>
           Zoomoid is an electronic music project by Alexander Bartolomey, attempting a genre-diverse
           creation of touching electronic music.
@@ -38,25 +56,45 @@
           taking influences from House, Techno, Drum&amp;Bass as well as
           Hip-Hop.
         </p>
+        <nav class="in-page">
+          <ul>
+            <li for="intro">
+              <a href="#intro">Start</a>
+            </li>
+            <li for="work">
+              <a href="#work">Work</a>
+            </li>
+            <li for="merchandise">
+              <a href="#merchandise">Merchandise</a>
+            </li>
+            <li for="contact">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </section>
-  </header>
-  <main>
-    <nav class="">
-      <ul>
-        <li for="albums">Albums</li>
-        <li for="singles-eps">Singles &amp; EPs</li>
-        <li for="more">More</li>
-      </ul>
-    </nav>
-    <div class="content-wrapper">
-      <section id="albums">
-
-      </section>
-      <section id="singles-eps">
-
-      </section>
-      <section id="more">
+    <section id="work" style="background-image: url('https://cdn.occloxium.com/i/zoomoid/press/cover-page.png')">
+      <div class="content-wrapper">
+        <h1>Work</h1>
+        <p>I'm constantly working on new music, these days probably Techno or
+          Drum & Bass. My discography can be found here: <a href="/work/">Zoomoid's
+            Discography</a></p>
+        <br>
+        <p>If you'd like to collaborate with me, remix a track or else, feel
+          free to <a href="#contact">contact me</a>, I'd love to work with you!</p>
+      </div>
+    </section>
+    <section id="merchandise" style="background-image: url('https://cdn.occloxium.com/i/zoomoid/press/sticker.jpg')">
+      <div class="content-wrapper">
+        <h1>Merchandise</h1>
+        <p>No plans on merchandise yet, though there exist a few stickers, which you
+          can aquire by meeting me in person and asking for one. Provided I've got
+          some with me, you will definitely leave with one as well.</p>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="content-wrapper">
         <h1>
           Contact
         </h1>
@@ -100,49 +138,45 @@
             </li>
           </div>
         </p>
-      </section>
-    </div>
-  </main>
-  <footer>
-    <div class="inner">
-      <div class="content-wrapper">
-        <div class="references">
-          <li>
-            <a href="https://open.spotify.com/artist/6RRD9ulVsLuDIqFzuFvSL8?si=a8mm8a2RTaO1Zo6SyfwZVQ">
-              <i class="fab fa-spotify"></i>
-              <span>Spotify</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://instagram.com/zoomoid">
-              <i class="fab fa-instagram"></i>
-              <span>Instagram</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/channel/UCg0yVDwpB9QphFbsGnV-8tQ/">
-              <i class="fab fa-youtube"></i>
-              <span>YouTube</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://soundcloud.com/zoomoid">
-              <i class="fab fa-soundcloud"></i>
-              <span>SoundCloud</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/occloxium">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-          </li>
-        </div>
-        <a class="anchor--privacy" href="/privacy">Impressum, Datenschutzbestimmung & Cookie-Richtlinien</a>
       </div>
-    </div>
+    </section>
+    <footer>
+      <div class="references">
+        <li>
+          <a href="https://open.spotify.com/artist/6RRD9ulVsLuDIqFzuFvSL8?si=a8mm8a2RTaO1Zo6SyfwZVQ">
+            <i class="fab fa-spotify"></i>
+            <span>Spotify</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/zoomoid">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UCg0yVDwpB9QphFbsGnV-8tQ/">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://soundcloud.com/zoomoid">
+            <i class="fab fa-soundcloud"></i>
+            <span>SoundCloud</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/occloxium">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+        </li>
+      </div>
+      <a class="anchor--privacy" href="/privacy">Impressum, Datenschutzbestimmung & Cookie-Richtlinien</a>
     </footer>
-  </footer>
+  </main>
+
   <script src="bundle.js" async></script>
 </body>
 

@@ -1,33 +1,76 @@
-import {AJAX} from './js/AJAX';
+// import {AJAX} from './js/AJAX';
+import './node_modules/waypoints/lib/noframework.waypoints';
+
+const waypoints = [];
 
 (() => {
-  const el_albums = document.querySelector('#albums');
-  const el_singles = document.querySelector('#singles-eps');
+  // const el_albums = document.querySelector('#albums');
+  // const el_singles = document.querySelector('#singles-eps');
   // const el_more = document.querySelector('#more');
 
-  document.querySelectorAll('nav li').forEach((li) => {
-    li.addEventListener('click', (e) => {
-      document.querySelectorAll('nav li.is-active').forEach((el) => {
-        el.classList.remove('is-active');
-      });
-      e.target.classList.add('is-active');
-  
-      document.querySelectorAll('main .content-wrapper section').forEach((el) => {
-        el.classList.add('is-hidden');
-      });
-      const target = document.querySelector('nav li.is-active').attributes.getNamedItem('for').value;
-      const container = document.querySelector('#' + target);
-      container.classList.remove('is-hidden');
-      container.classList.add('is-active');
+  document.querySelectorAll('.animatable').forEach((el) => {
+    let waypoint = new Waypoint({
+      element: el,
+      handler: function(){
+        el.classList.add('anim--appear');
+      }
     });
-  });
-  AJAX.get('/api/albums').then((res) => {
-    el_albums.insertAdjacentHTML('beforeend', res.responseText);
-  });
-  AJAX.get('/api/singles').then((res) => {
-    el_singles.insertAdjacentHTML('beforeend', res.responseText);
+    waypoints.push(waypoint);
   });
 
-  document.querySelectorAll('nav li')[0].classList.add('is-active');
-  document.querySelectorAll('main .content-wrapper section')[0].classList.add('is-active');
+  document.querySelectorAll('nav.in-page').forEach((el) => {
+    let fixed_nav = document.querySelector('nav:not(.in-page)');
+    let waypoint = new Waypoint({
+      element: el,
+      offset: -200,
+      handler: function(direction){
+        if(direction == 'down')
+          fixed_nav.classList.remove('is-hidden');
+        else
+          fixed_nav.classList.add('is-hidden');
+      }
+    });
+    waypoints.push(waypoint);
+  });
+  let removeActiveNavItem = () => {
+    document.querySelectorAll('nav ul li.is-active').forEach((e) => {
+      e.classList.remove('is-active');
+    });
+  };
+  document.querySelectorAll('section').forEach((el) => {
+    let handler = function(){
+      removeActiveNavItem();
+      let nav_item = document.querySelector(`nav:not(.in-page) ul li[for=${el.id}]`);
+      nav_item.classList.add('is-active');
+    };
+    let waypoint;
+    if(el.id == 'intro'){
+      waypoint = new Waypoint({
+        element: el,
+        offset: -16,
+        handler: handler
+      });
+    } else {
+      waypoint = new Waypoint({
+        element: el,
+        offset: 0,
+        handler: handler
+      });
+    }
+    
+    waypoints.push(waypoint);
+  });
+  let collapse_button = document.querySelector('.collapse-button');
+  let ul = document.querySelector('nav:not(.in-page) ul');
+  let nav = document.querySelector('nav:not(.in-page)');
+  collapse_button.addEventListener('click', () => {
+    if(ul.classList.contains('is-hidden')){
+      ul.classList.remove('is-hidden');
+      nav.classList.remove('is-collapsed');
+    }
+    else {
+      ul.classList.add('is-hidden');
+      nav.classList.add('is-collapsed');
+    }
+  });
 })();

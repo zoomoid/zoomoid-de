@@ -1,4 +1,4 @@
-const Template = require('./Template');
+import {Template} from './template';
 
 /**
  * Entry class for modelling data for zoomoid.de front page
@@ -9,7 +9,7 @@ const Template = require('./Template');
  * @param {{id: string, title: string, subtitle: string, text: string, artists:
  * string, links:[{label: string,url: string}],video:[{url: string}] }} p 
  */
-module.exports = function(p){
+export const Entry = function(p){
   this.__checkLinks = (l) => {
     if(Array.isArray(l)){
       l.forEach((link) => {

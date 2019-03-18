@@ -10,19 +10,24 @@
 
 @import "header"
 @import "footer"
-@import "main"
-@import "privacy"
+
+@import "animations"
 
 html 
   position: relative
   height: 100%
   width: 100%
 body
-  position: absolute
-  min-width: 100%
-  min-height: 100%
+  width: 100%
+  height: 100%
   background: $background
   display: flex
   flex-direction: column
   main
     flex-grow: 1
+.frontpage
+  @import "main"
+.subpage-work
+  @import "work"
+.subpage-privacy
+  @import "privacy"

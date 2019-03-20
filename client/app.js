@@ -11,7 +11,7 @@ const waypoints = [];
   document.querySelectorAll('.animatable').forEach((el) => {
     let waypoint = new Waypoint({
       element: el,
-      handler: function(){
+      handler: function () {
         el.classList.add('anim--appear');
       }
     });
@@ -23,8 +23,8 @@ const waypoints = [];
     let waypoint = new Waypoint({
       element: el,
       offset: -200,
-      handler: function(direction){
-        if(direction == 'down')
+      handler: function (direction) {
+        if (direction == 'down')
           fixed_nav.classList.remove('is-hidden');
         else
           fixed_nav.classList.add('is-hidden');
@@ -38,13 +38,13 @@ const waypoints = [];
     });
   };
   document.querySelectorAll('section').forEach((el) => {
-    let handler = function(){
+    let handler = function () {
       removeActiveNavItem();
       let nav_item = document.querySelector(`nav:not(.in-page) ul li[for=${el.id}]`);
       nav_item.classList.add('is-active');
     };
     let waypoint;
-    if(el.id == 'intro'){
+    if (el.id == 'intro') {
       waypoint = new Waypoint({
         element: el,
         offset: -16,
@@ -57,14 +57,14 @@ const waypoints = [];
         handler: handler
       });
     }
-    
+
     waypoints.push(waypoint);
   });
   let collapse_button = document.querySelector('.collapse-button');
   let ul = document.querySelector('nav:not(.in-page) ul');
   let nav = document.querySelector('nav:not(.in-page)');
   collapse_button.addEventListener('click', () => {
-    if(ul.classList.contains('is-hidden')){
+    if (ul.classList.contains('is-hidden')) {
       ul.classList.remove('is-hidden');
       nav.classList.remove('is-collapsed');
     }
@@ -72,5 +72,11 @@ const waypoints = [];
       ul.classList.add('is-hidden');
       nav.classList.add('is-collapsed');
     }
+  });
+  document.querySelectorAll('nav:not(.in-page) li a').forEach((e) => {
+    e.addEventListener('click', () => {
+      ul.classList.add('is-hidden');
+      nav.classList.add('is-collapsed');
+    });
   });
 })();

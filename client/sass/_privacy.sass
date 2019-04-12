@@ -1,35 +1,23 @@
 body
-  
   background: $theme--primary
   .logo
     width: 250px
     margin: 250px auto 0
     display: block
 main
-  
   p
     text-transform: none !important
-  max-width: 800px
+  max-width: $tablet-width
   padding: 2em 4%
   margin: 0 auto
   background: $theme--primary
   h1
     +font-size(3em)
-.fab
-  cursor: pointer
-  box-shadow: 0 0 15px transparentize($theme--accent, 0.5)
-  position: fixed
-  z-index: 300
-  background: $theme--accent
-  color: $white
-  outline: none
-  bottom: 32px  
-  right: 32px
-  border: none
-  height: 48px
-  width: 48px
+
+.back
+  display: block
   text-align: center
-  border-radius: 48px
-  line-height: 48px !important
-  i 
-    line-height: 24px
+  +font-size(1.5em)
+  padding: 1em 0
+  i
+    padding-right: 16px

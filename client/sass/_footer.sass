@@ -1,39 +1,24 @@
-@import "colors"
-@import "typography"
-@import "mixins"
-
 footer
   +font(1em, normal, 0px)
-  background: darken($theme--primary, 20%)
   padding: 1em 2em
-  color: $white
+  color: $text
+  padding: 180px 12px 0
   a 
-    +sm
-      &.anchor--privacy
-        +font-size(0.8em)
     color: inherit
     text-decoration: none
     transition: color $transition-time $transition-curve
     &:hover,
     &:active 
       color: $theme--accent
-  .content-wrapper
-    max-width: 768px
-    width: 100%
-    padding: 0 12px
-    margin: 0 auto
-    
+
   .references
+    display: flex
+    flex-wrap: wrap
     li
+      padding: 0 1em
       list-style: none outside none
     span 
       margin-left: 8px
-    +sm
-      display: flex
-      li
-        flex-grow: 1
-      span
-        display: none
-    +lg
-      li
-        display: block
+      display: none
+  .privacy
+    +font-size(0.8em)

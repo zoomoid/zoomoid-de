@@ -11,8 +11,6 @@
 @import "header"
 @import "footer"
 
-@import "animations"
-
 html 
   position: relative
   height: 100%
@@ -25,9 +23,14 @@ body
   flex-direction: column
   main
     flex-grow: 1
-.frontpage
-  @import "main"
-.subpage-work
-  @import "work"
+
+@import 'main'
+
 .subpage-privacy
-  @import "privacy"
+  @import 'privacy'
+
+.subpage-liamm
+  @import 'liamm'
+
+.subpage-datkomm
+  @import 'datkomm'

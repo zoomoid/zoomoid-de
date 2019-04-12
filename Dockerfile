@@ -10,17 +10,10 @@ COPY /client .
 RUN npm run build
 
 # build server
-FROM node:latest
+FROM nginx:alpine
 # install server dependencies
 WORKDIR /
-# copy package files
-COPY package*.json ./
-# install dependencies for server
-RUN npm ci
-# copy server files
-COPY index.js .
+# copy static files
+COPY /client/ /usr/share/nginx/html
 # copy from client builder
-COPY --from=client-builder / /client
-
-# start server
-CMD ["npm", "start"]
+COPY --from=client-builder bundle.* /usr/share/nginx/html/

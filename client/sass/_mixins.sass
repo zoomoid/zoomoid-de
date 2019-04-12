@@ -1,11 +1,10 @@
 =font($size, $weight, $spacing: 0pt)
-  font-family: 'Karla', sans-serif
+  font-family: 'Noto Serif', serif
   font-weight: $weight
   +font-size($size)
-  letter-spacing: $spacing
-  text-transform: uppercase
+  margin-bottom: $spacing
   line-height: 1
-  margin: 0
+  // text-transform: uppercase
 
 =sm
   @media (max-width: #{$mobile-l-width - 1}) 

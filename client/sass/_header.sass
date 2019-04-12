@@ -3,7 +3,7 @@ nav
     max-width: $tablet-width
     margin: 0 auto
     +sm
-      display: block
+      display: none
     display: flex
     list-style: none outside none
     padding: 0
@@ -11,14 +11,23 @@ nav
       text-align: center
       flex-grow: 1
       padding: 1em
+      +sm
+        padding: 0 1em
   .collapse-button
+    padding: 1em 0
+    text-align: center
     +sm
       display: block
+      margin: 0 auto
     display: none
+  &:target
+    +sm
+      ul
+        display: block
 
 header
   background: $theme--primary
-  padding-top: 180px
+  padding-top: 48px
   padding-bottom: 2em
   max-width: $tablet-width
   width: 90%

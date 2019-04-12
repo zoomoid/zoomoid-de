@@ -5,7 +5,7 @@ services:
     container_name: zoomoid.de
     image: registry.git.rwth-aachen.de/occloxium-webdev/zoomoid.de/stable:latest
     ports:
-      - "8081:3000"
+      - "8081:80"
     restart: always
 
 networks:

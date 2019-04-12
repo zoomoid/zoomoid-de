@@ -1,0 +1,71 @@
+main 
+  margin: 2em auto 0
+  max-width: $tablet-width
+  width: 90%
+
+h1,h3,h5
+  margin: 0
+
+h3
+  font-size: 1em
+h1
+  font-size: 2em
+  line-height: 1
+h5
+  font-size: 1.25em
+
+.embedded
+  display: flex
+  flex-wrap: wrap
+  padding: 1em 0
+  a
+    flex-grow: 1
+    padding: 0 1em
+    display: flex
+    align-items: center
+    text-decoration: none
+    i
+      font-size: 48px
+    b
+      padding-left: 8px
+
+.tag-list 
+  padding: 1em 0
+  span 
+    border-radius: 50px
+    background: lighten($theme--primary-light, 25)
+    padding: 3px 8px
+    color: $text
+    font-family: 'Roboto Mono', monospace
+
+    &::before 
+      content: '#'
+      padding-right: 4px
+      color: fade-out($text, $amount: 0.5)
+
+.container
+  b
+    display: none
+  iframe
+    width: 100%
+
+.cover 
+  width: 100%
+  margin: 2em 0
+  display: block
+
+.download 
+  padding: 1em 0
+  a
+    +font-size(1.2em)
+    display: block
+    &.small-subtitle
+      +font-size(0.8em)
+
+.back
+  display: block
+  text-align: center
+  +font-size(1.5em)
+  padding: 1em 0
+  i
+    padding-right: 16px

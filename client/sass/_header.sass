@@ -1,18 +1,29 @@
+nav
+  ul
+    max-width: $tablet-width
+    margin: 0 auto
+    +sm
+      display: block
+    display: flex
+    list-style: none outside none
+    padding: 0
+    li 
+      text-align: center
+      flex-grow: 1
+      padding: 1em
+  .collapse-button
+    +sm
+      display: block
+    display: none
+
 header
-  background: $theme--primary-dark
-  min-height: 100% 
-  .content-wrapper
-    color: $white
+  background: $theme--primary
+  padding-top: 180px
+  padding-bottom: 2em
+  max-width: $tablet-width
+  width: 90%
+  margin: 0 auto
+  img
     display: block
     margin: 0 auto
-    max-width: 768px
-    width: 100%
-    padding: 6em 12px 0  
-    img
-      position: relative
-      max-height: 120px
-      margin: 0 auto
-      display: block
-    p
-      +md
-        padding: 0 2em
+    width: 66%

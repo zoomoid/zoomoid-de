@@ -1,161 +1,20 @@
-nav
-  &.in-page
-    max-width: 768px
-    margin: 0 auto
-    width: 100%
-    +sm
-      display: none
-    +md
-      padding: 0 2em
-    +lg
-      width: 80%
-    ul
-      list-style: none outside none
-      margin: 1em auto
-      padding: 0
-      width: 100%
-      display: flex
-      li
-        a 
-          color: inherit
-          text-decoration: none
-        &:active, &:hover, &.is-active
-          color: $theme--accent
-        color: $theme--primary-contrast
-        background-color: transparentize($theme--primary, 0.5)
-        flex-grow: 1
-        cursor: pointer
-        margin: 0 16px
-        padding: 8px 8px
-        text-align: center
-  &:not(.in-page)
-    z-index: 100
-    max-width: none
-    position: fixed
-    width: 100vw
-    top: 0
-    left: 0
-    background-color: transparentize($theme--primary, 0.5)
-    padding: 0 12px
-    &.is-hidden
-      +sm
-        display: block
-      display: none
-    &:not(.is-collapsed)
-      background-color: $theme--primary !important
-    .is-collapsed 
-      background-color: transparentize($theme--primary, 0.5) !important
-    +sm
-      ul.is-hidden
-        max-height: 0
-        overflow-y: hidden
-        li
-          margin-top: -32px
-          opacity: 0
-      .collapse-button
-        display: block
-    ul
-      max-width: 768px
-      margin: 0 auto
-      transition: max-height $transition-time $transition-curve
-      max-height: 100vh
-      overflow-y: visible
-      display: flex
-      padding-left: 0
-      +sm
-        display: block
-      list-style: none outside none
-      li
-        background: none
-        transition: opacity $slide-up-time $transition-curve, margin-top $transition-time $transition-curve
-        opacity: 1
-        margin-left: 0
-        a 
-          display: block
-          color: inherit
-          text-decoration: none
-        &:active, &:hover, &.is-active
-          color: $theme--accent
-        color: $theme--primary-contrast
-        flex-grow: 1
-        cursor: pointer
-        margin: 0 16px
-        padding: 8px 8px
-        text-align: center
-  .collapse-button
-    display: none
-    color: $theme--primary-text
-    text-align: center
-    padding: 16px 16px
-
 main
-  min-height: 100%
-  width: 100%
-  display: flex
-  flex-direction: column
-  background: $theme--primary-dark
-  
+  background: $theme--primary
+  max-width: $tablet-width
+  width: 90%
+  margin: 0 auto
   section
     position: relative
-    &::before
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
-      min-width: 100%
-      min-height: 100%
-      background-color: transparentize($theme--primary, 0.67)
-      z-index: 10
-    background-size: cover
-    background-position: center top
-    background-repeat: no-repeat
-    background-attachment: fixed
-    min-width: 100%
-    min-height: 100%
-    flex-grow: 1
-    display: flex
-    align-items: center
-    .content-wrapper
-      z-index: 11
-      padding: 0 1em
-      max-width: 768px
-      margin: 0 auto
-      color: $theme--primary-contrast
-      +sm
-        padding: 0 2em 0
-      // border-top-left-radius: 25px
-      // border-top-right-radius: 25px
-      
-#intro 
-  img
-    display: block
-    padding-top: 3em
-    margin: 0 auto
-    width: 50%
+    padding-top: 4em 
 
-#work
-  background-attachment: scroll
-  &::before
-    content: ''
-    position: absolute
-    top: 0
-    left: 0
-    min-width: 100%
-    min-height: 100%
-    background-color: transparentize($theme--primary, 0.2)
-  a
-    color: inherit
-    &:active, &:hover
-      color: $theme--accent
+a
+  color: inherit
+  &:active, &:hover
+    color: $theme--accent
+
 #contact 
-  
-  p
-    text-transform: none
-  h1
-    +font-size(2em)
   .contact--mail 
     +font-size(1em) 
-    display: block
     color: $text
     text-decoration-color: $text
     &:active, &:hover
@@ -164,16 +23,153 @@ main
   .references
     li
       list-style: none outside none
-      line-height: 3
-      +font-size(1.2em)
+      line-height: 2
+      +font-size(1em)
       a
         display: block
         margin: 0 auto
-        color: $white
+        color: $text
         &:active, &:hover
           color: $theme--accent
         text-decoration: none
         i
           padding-right: 12px
       
-      
+.catalogue
+  padding: 1em 0
+  .entry
+    .header
+      padding-bottom: 1em
+      display: flex
+      align-items: center
+      i
+        padding-right: 8px
+      a
+        padding-right: 16px
+        +font-size(1.2em)
+      span
+        flex-grow: 1
+        font-size: 0.5
+        line-height: 1
+        border-bottom: solid 1px $text
+        &::before
+          content: ''
+    .body
+      display: none
+      padding: 0 1em 1em
+    .collapser
+      display: none  
+    &:target
+      .collapser 
+        display: block
+        position: fixed
+        width: 48px
+        height: 48px
+        right: 24px
+        bottom: 24px
+        z-index: 1000
+        color: $theme--primary-contrast
+        border-radius: 100px
+        background: $theme--accent
+        box-shadow: 0 0 15px transparentize($theme--accent, 0.5)
+        text-decoration: none
+        i
+          color: inherit
+          font-size: 24px
+          line-height: 2
+          display: block
+          text-align: center
+      .body
+        display: block
+
+.track
+  +font(1em, normal)
+  
+  
+  &:not(:last-child)
+    padding: 0 0 1em
+    &::after
+      height: 1px
+      padding-top: 0
+      background: $theme--primary-text
+      border-radius: 1em
+      width: 66%
+      margin: 1em auto 0
+      content: ' '
+      display: block
+  h1.title
+    margin: 0
+    +font-size(2em)
+    text-transform: none
+    span.title
+      +font-size(1em)
+    span.artist
+      +font-size(0.8em)
+      &::after
+        content: ' \2013'
+      +sm
+        display: block
+        &::after
+          content: ''
+  h2.subtitle
+    +font-size(1.5em)
+    text-transform: none
+  .text
+    text-transform: none
+    a
+      color: inherit
+    *
+      max-width: 100%
+    img
+      max-width: 50%
+      margin: 1em auto
+      display: block
+  .links
+    padding: 2em 0
+    display: flex
+    +sm
+      display: block
+    a 
+      display: block
+      padding: 0.5em 2em
+      margin: 0 1em
+      text-align: center
+      text-decoration: none
+      transition: background-color $transition-time $transition-curve, border-color $transition-time $transition-curve
+      background: $theme--primary
+      border-radius: 2em
+      color: $text
+      border: solid 2px $theme--accent
+      &:hover, &:active
+        color: $white
+        border-color: $theme--accent
+        background-color: $theme--accent
+
+  .video
+    box-sizing: border-box
+    margin: 0 auto
+    width: 100%
+    padding-top: 56.25%
+    position: relative
+    background: transparent
+    &::before
+      content: 'Waiting for YouTube...'
+      top: 50%
+      left: 50%
+      position: absolute
+      display: block
+      transform: translate(-50%, -50%)
+      font-family: 'Karla', sans-serif
+      font-weight: normal
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      width: 100%
+      height: 100%
+
+#misc
+  p
+    +font-size(0.8em)

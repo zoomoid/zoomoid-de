@@ -1,7 +1,7 @@
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
-  entry: ['./sass/app.sass', './app.js'],
+  entry: ['./sass/app.sass',],
   output: {
     path: __dirname,
     filename: 'bundle.js',
@@ -32,16 +32,6 @@ module.exports = {
           }
         ],
       },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      }
     ],
   },
 };

@@ -61,7 +61,7 @@ h5
 .back
   display: block
   text-align: center
-  +font-size(1.5em)
+  +font-size(1em)
   padding: 1em 0
   i
     padding-right: 16px
@@ -72,3 +72,27 @@ audio
 .centered
   +font-size(2em)
   text-align: center
+#covers
+  .inner
+    margin: 2em auto 0
+    max-width: $tablet-width
+    width: 90%
+.cover-list
+  +sm
+    display: flex
+    overflow-x: scroll
+    max-width: none
+    width: auto
+    margin: 2em 0
+  display: block
+  max-width: $tablet-width
+  width: 90%
+  margin: 0 auto
+  .cover-list__image
+    +sm
+      width: 96vw
+      max-width: $tablet-width
+      max-height: $tablet-width
+      height: 96vw
+      margin: 0 2vw
+    width: 100%

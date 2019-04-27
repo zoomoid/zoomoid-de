@@ -48,6 +48,8 @@ a
   padding: 0
   .tab
     display: flex
+    +sm
+      display: block
     .header
       flex-grow: 1
       align-items: center
@@ -57,10 +59,16 @@ a
         display: block
         line-height: 2
         text-align: center
+        +sm
+          display: inline
+          text-align: left
       a
         text-align: center
         display: block
         text-decoration: none
+        +sm
+          display: inline
+          text-align: left
   .entry
     .body
       display: none
@@ -126,6 +134,7 @@ a
   h2.subtitle
     +font-size(1em)
     text-transform: none
+    line-height: 1.5
   .text
     text-transform: none
     a

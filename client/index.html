@@ -11,7 +11,8 @@
   Germany since 2015">
   <meta name="keywords" content="zoomoid,music,electronic music">
 
-  <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Roboto+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400|Work+Sans:600" rel="stylesheet">
+  <link rel="canonical" href="https://www.zoomoid.de/">
   <link rel="canonical" href="https://www.zoomoid.de/">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link href="bundle.css?t=05" rel="stylesheet">
@@ -25,39 +26,62 @@
 </head>
 
 <body>
-  <nav id="nav" class="is-collapsed">
-    <a href="#nav" class="collapse-button"><i class="fas fa-bars"></i></a>
-    <ul>
-      <li for="intro">
-        <a href="#intro">Intro</a>
-      </li>
-      <li for="work">
-        <a href="#work">Work</a>
-      </li>
-      <li for="merchandise">
-        <a href="#merchandise">Merchandise</a>
-      </li>
-      <li for="contact">
-        <a href="#contact">Contact</a>
-      </li>
-    </ul>
-  </nav>
-  <header id="intro">
-    <img class="logo" src="https://cdn.occloxium.com/i/zoomoid/logo.png">
-    <p>
-      Zoomoid is a young, aspiring artist from Aachen, Germany, who draws his
-      inspiration from a variety of music to create songs he thinks are worth
-      listening to even if he would personally never admit that. He makes music
-      to escape the computer science he's studying whenever he can and allows
-      himself to. Combining vast theoretical knowledge and a good portion of
-      practical intuition, he always strives to experiment with new things and
-      ways to create new music. To stop himself from settling down on a
-      specific genre, he challenges himself over and over to try something
-      different, explaining the vast style changes in his discography, taking
-      influences from House, Techno, Drum&amp;Bass as well as Hip-Hop.
-    </p>
-  </header>
   <main>
+    <header id="intro" style="background-image: url(./img/background_intro.svg)">
+      <nav id="nav" class="is-collapsed">
+        <a href="#nav" class="collapse-button"><i class="fas fa-bars"></i></a>
+        <ul>
+          <li class="icon">
+            <a href="/">
+              <img class="logo" src="https://cdn.occloxium.com/i/zoomoid/logo.png">
+            </a>
+          </li>
+          <li class="spacer">
+
+          </li>
+          <li for="work">
+            <a href="#work">Work</a>
+          </li>
+          <li for="merchandise">
+            <a href="#merchandise">Merchandise</a>
+          </li>
+          <li for="contact">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <img class="body" alt="picture of zoomoid" src="img/zoomoid_body.png">
+      <div class="text">
+        <h1>About Me</h1>
+        <p>
+          Zoomoid is a young, aspiring artist from Aachen, Germany, who draws his
+          inspiration from a variety of music to create songs he thinks are worth
+          listening to even if he would personally never admit that. He makes music
+          to escape the computer science he's studying whenever he can and allows
+          himself to. Combining vast theoretical knowledge and a good portion of
+          practical intuition, he always strives to experiment with new things and
+          ways to create new music. To stop himself from settling down on a
+          specific genre, he challenges himself over and over to try something
+          different, explaining the vast style changes in his discography, taking
+          influences from House, Techno, Drum&amp;Bass as well as Hip-Hop.
+        </p>
+      </div>
+    </header>
+    <section class="only-mobile">
+      <h1>About Me</h1>
+      <p>
+        Zoomoid is a young, aspiring artist from Aachen, Germany, who draws his
+        inspiration from a variety of music to create songs he thinks are worth
+        listening to even if he would personally never admit that. He makes music
+        to escape the computer science he's studying whenever he can and allows
+        himself to. Combining vast theoretical knowledge and a good portion of
+        practical intuition, he always strives to experiment with new things and
+        ways to create new music. To stop himself from settling down on a
+        specific genre, he challenges himself over and over to try something
+        different, explaining the vast style changes in his discography, taking
+        influences from House, Techno, Drum&amp;Bass as well as Hip-Hop.
+      </p>
+    </section>
     <section id="work">
       <h1>Work &amp; Discography</h1>
       <p>Zoomoids current discography and other work.</p>
@@ -85,10 +109,10 @@
         <div class="entry" id="albums">
           <div class="body">
             <article id="life-is-about-making-memories" class="track">
-              <h1 class="title">
+              <h4 class="title">
                 <span class="artist">zoomoid</span>
                 <span class="title">Life Is About Making Memories</span>
-              </h1>
+              </h4>
               <!-- <h2 class="subtitle">The 1<sup>st</sup> Full-stretch album made in 2018</h2> -->
               <p class="text">
                 <b>Life Is About Making Memories</b> is my first full-feature album!
@@ -115,11 +139,11 @@
         <div class="entry" id="singles">
           <div class="body">
             <article id="daydream-ep" class="track">
-              <h1 class="title">
+              <h4 class="title">
                 <span class="artist">zoomoid</span>
                 <span class="title">Daydream EP</span>
-              </h1>
-              <h2 class="subtitle">First EP in 2019 comprising a lot of different emotions</h2>
+              </h4>
+              <h5 class="subtitle">First EP in 2019 comprising a lot of different emotions</h5>
               <p class="text">
                 Daydream features 3 tracks from <i>Liquid Drum &amp; Bass</i> to <i>Melodic Techno</i> with multitudes
                 of
@@ -139,10 +163,10 @@
             </article>
 
             <article id="datenkommunikation-und-sicherheit" class="track">
-              <h1 class="title">
+              <h4 class="title">
                 <span class="artist">Zoomoid, Simon Kaiser & Dirk Thißen</span>
                 <span class="title">Dat&shy;en&shy;kom&shy;mu&shy;ni&shy;ka&shy;tion & Sicherheit</span>
-              </h1>
+              </h4>
               <h2 class="subtitle"></h2>
               <p class="text">
                 Lange wurde gewartet auf die epische Kollaboration, jetzt ist sie da: tanzbar, mitsingbar (ob man den
@@ -160,10 +184,10 @@
             </article>
 
             <article id="interstellar" class="track">
-              <h1 class="title">
+              <h4 class="title">
                 <span class="artist">zoomoid</span>
                 <span class="title">Interstellar</span>
-              </h1>
+              </h4>
               <h2 class="subtitle"></h2>
               <p class="text">
                 Electronic hommage to one of the greatest movies with the greatest soundtrack of this century
@@ -180,10 +204,10 @@
             </article>
 
             <article id="bloodrush" class="track">
-              <h1 class="title">
+              <h4 class="title">
                 <span class="artist">zoomoid</span>
                 <span class="title">Blood Rush</span>
-              </h1>
+              </h4>
               <h2 class="subtitle"></h2>
               <p class="text">
                 My baby attempt to Drum &amp; Bass. Sufficient to say: No one wanted to sign it. Nevertheless, a few
@@ -202,10 +226,10 @@
             </article>
 
             <article id="wildworld" class="track">
-              <h1 class="title">
+              <h4 class="title">
                 <span class="artist">zoomoid</span>
                 <span class="title">Wild World</span>
-              </h1>
+              </h4>
               <h2 class="subtitle"></h2>
               <p class="text">
                 Animal Crossing was there for me when I needed it the most. This is what I gave back!
@@ -222,10 +246,10 @@
             </article>
 
             <article id="lucid" class="track">
-              <h1 class="title">
+              <h4 class="title">
                 <span class="artist">zoomoid</span>
                 <span class="title">Lucid (Original Mix)</span>
-              </h1>
+              </h4>
               <h2 class="subtitle"></h2>
               <p class="text">
                 A little harder this time!
@@ -242,10 +266,10 @@
             </article>
 
             <article id="atomicspark" class="track">
-              <h1 class="title">
+              <h4 class="title">
                 <span class="artist">zoomoid</span>
                 <span class="title">Atomic Spark (Original Mix)</span>
-              </h1>
+              </h4>
               <h2 class="subtitle"></h2>
               <p class="text">
                 Let the journey of Techno for Zoomoid begin!
@@ -262,10 +286,10 @@
             </article>
 
             <article id="memories" class="track">
-              <h1 class="title">
+              <h4 class="title">
                 <span class="artist">David Guetta</span>
                 <span class="title">Memories (zoomoid Remix)</span>
-              </h1>
+              </h4>
               <h2 class="subtitle"></h2>
               <p class="text">
                 This was my remix debut!
@@ -281,11 +305,11 @@
             </article>
 
             <article id="higherthanclouds" class="track">
-              <h1 class="title">
+              <h4 class="title">
                 <span class="artist">zoomoid</span>
                 <span class="title">Higher Than Clouds (Original Mix)</span>
-              </h1>
-              <h2 class="subtitle">OG Zoomoid - Progressive House all the way</h2>
+              </h4>
+              <h5 class="subtitle">OG Zoomoid - Progressive House all the way</h5>
               <p class="text">
                 This was my remix debut!
               </p>
@@ -300,10 +324,10 @@
             </article>
 
             <article id="intospace" class="track">
-              <h1 class="title">
+              <h4 class="title">
                 <span class="artist">zoomoid</span>
                 <span class="title">Into Space (Original Mix)</span>
-              </h1>
+              </h4>
               <h2 class="subtitle"></h2>
               <p class="text">
               </p>
@@ -341,12 +365,12 @@
       <p>If you'd like to collaborate with me, remix a track or else, feel
         free to <a href="#contact">contact me</a>, I'd love to work with you!</p>
     </section>
-    <section id="merchandise">
+    <!-- <section id="merchandise">
       <h1>Merchandise</h1>
       <p>No plans on merchandise yet, though there exist a few stickers, which you
         can aquire by meeting me in person and asking for one. Provided I've got
         some with me, you will definitely leave with one as well.</p>
-    </section>
+    </section> -->
     <section id="contact">
       <h1>
         Contact

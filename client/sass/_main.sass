@@ -1,11 +1,14 @@
 main
   background: $theme--primary
-  max-width: $tablet-width
-  width: 90%
   margin: 0 auto
   section
+    max-width: $tablet-width
     position: relative
+    margin: 0 auto
+    & > * 
+      padding: 0 5%
     // padding-top: 4em 
+
 
 .logo
   width: 250px
@@ -46,11 +49,14 @@ a
       
 .catalogue
   padding: 0
+  background: $may-2
   .tab
     display: flex
     +sm
       display: block
     .header
+      padding: 1em
+      background-color: $may-1
       flex-grow: 1
       align-items: center
       &:active, &:hover
@@ -116,7 +122,7 @@ a
       margin: 1em auto 0
       content: ' '
       display: block
-  h1.title
+  h4.title
     margin: 0
     text-transform: none
     +font-size(1em)
@@ -131,8 +137,9 @@ a
       font-weight: normal
       display: block
       
-  h2.subtitle
+  h5.subtitle
     +font-size(1em)
+    margin-top: 0
     text-transform: none
     line-height: 1.5
   .text

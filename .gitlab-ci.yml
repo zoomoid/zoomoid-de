@@ -31,7 +31,7 @@ deploy:
     - master
   stage: deploy
   environment:
-    name: deployment
+    name: Live
     url: https://www.zoomoid.de
   script:
     - docker-compose down
@@ -44,7 +44,7 @@ deploy-dev:
     - master
   stage: deploy
   environment:
-    name: deployment
+    name: Development
     url: https://staging.zoomoid.de
   script:
     - docker-compose -f staging.yml down

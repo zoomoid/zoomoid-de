@@ -18,20 +18,37 @@ main
 
 h1,h3,h5
   margin: 0
-
+  text-align: center
 h3
-  font-size: 1em
-h1
   font-size: 2em
+h1
+  font-size: 3em
   line-height: 1
 h5
   font-size: 1.25em
+h4
+  font-size: 1.5em
+.flex-container
+  +sm
+    display: block
+  display: flex
+  & > div
+    flex-grow: 1
 
-
-.download, .streaming, .tabs
+.download, .tabs
   padding: 1em 0
   h1
     margin-bottom: 1em
+
+.download 
+  padding: 1em 0
+  .link
+    padding: 1em 0 0
+    a
+      +font-size(1em)
+      display: block
+      &.small-subtitle
+        +font-size(0.8em)
 
 .download
   audio
@@ -39,10 +56,23 @@ h5
     width: 100%
   span
     +font-size(1em)
-
 .streaming
+  padding-right: 24px
+.buying
+  +sm
+    text-align: left
+    padding-left: 0
+  text-align: right
+  padding-left: 24px
+  
+.streaming, .buying
   .provider
-    padding: 1em 0 
+    +font-size(1.5em)
+    display: block
+    padding: 1em 0 0
+    text-decoration: none
+    &:hover, &:active
+      text-decoration: underline
     a
       padding-bottom: 1em
       display: flex
@@ -50,8 +80,6 @@ h5
       text-decoration: none
       i
         font-size: 48px
-      b
-        padding-left: 8px
 
 .tabs
   a
@@ -76,7 +104,7 @@ audio
   .inner
     margin: 2em auto 0
     max-width: $tablet-width
-    width: 90%
+    width: 100%
 .cover-list
   +sm
     display: flex
@@ -90,9 +118,12 @@ audio
   margin: 0 auto
   .cover-list__image
     +sm
-      width: 96vw
+      width: 90vw
       max-width: $tablet-width
       max-height: $tablet-width
-      height: 96vw
-      margin: 0 2vw
+      height: 90vw
+      margin-right: 5vw
     width: 100%
+
+ol
+  padding-left: 0

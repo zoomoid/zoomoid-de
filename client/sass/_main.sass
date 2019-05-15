@@ -1,12 +1,14 @@
 main
   background: $theme--primary
   margin: 0 auto
+  height: 100%
   section
     max-width: $tablet-width
     position: relative
     margin: 0 auto
-    & > * 
-      padding: 0 5%
+    padding: 0 5%
+    // & > * 
+    //   
     // padding-top: 4em 
 
 
@@ -49,13 +51,20 @@ a
       
 .catalogue
   padding: 0
-  background: $may-2
+  background: $may-1
   .tab
+    &::after
+      content: ''
+      width: 70%
+      margin: 1em 0 0
+      display: block
+      border-bottom: solid 1px $may-4
     display: flex
     +sm
       display: block
     .header
-      padding: 1em 5% 0
+      
+      padding: 1em 0 0
       background-color: $may-1
       flex-grow: 1
       align-items: center
@@ -78,7 +87,7 @@ a
   .entry
     .body
       display: none
-      padding: 1em
+      padding: 1em 0
     .collapser
       display: none  
     &:target
@@ -134,7 +143,7 @@ a
       display: block
     span.artist
       +font-size(1em)
-      font-weight: normal
+      font-weight: bold
       display: block
       
   h5.subtitle
@@ -157,6 +166,8 @@ a
     display: flex
     +sm
       display: block
+      width: 70%
+      margin: 0 auto
     a 
       display: block
       padding: 0.5em 2em
@@ -164,10 +175,10 @@ a
       text-align: center
       text-decoration: none
       transition: background-color $transition-time $transition-curve, border-color $transition-time $transition-curve
-      background: $theme--primary
+      background: $may-2
       border-radius: 2em
       color: $text
-      border: solid 2px $theme--accent
+      border: solid 2px $may-2
       &:hover, &:active
         color: $black
         border-color: $theme--accent

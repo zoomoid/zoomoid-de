@@ -1,30 +1,5 @@
-<!DOCTYPE html>
-<html class="typography subpage-eigenraeume">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>zoomoid</title>
-  <meta name="author" content="Alexander Bartolomey">
-  <meta name="description" content="zoomoid">
-  <meta name="keywords" content="zoomoid,music,electronic music,edm,spotify">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400|Work+Sans:600" rel="stylesheet">
-
-  <link rel="canonical" href="https://www.zoomoid.de/">
-  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-  <link href="/bundle.css?t=05" rel="stylesheet">
-  <meta charset="UTF-8">
-  <link rel="shortcut icon" href="/img/icon_512x512.png">
-  <link rel="icon" type="image/png" href="/img/icon_512x512.png" sizes="512x512">
-  <meta name="theme-color" content="#1f2134">
-  <link rel="apple-touch-icon" sizes="512x512" href="/img/icon_512x512.png">
-  <meta name="msapplication-TileColor" content="#1f2134">
-  <meta name="msapplication-TileImage" content="/img/icon_512x512.png">
-</head>
-
-<body>
-  <main>
+<template>
+  <div class="wrapper">
     <h3>Zoomoid</h3>
     <h1>Eigenräume</h1>
     <img class="cover" src="https://cdn.occloxium.com/i/zoomoid/covers/eigenräume/mixed.png">
@@ -200,9 +175,9 @@
     <a href="/" class="back">
       <i class="fas fa-chevron-left"></i>Back
     </a>
-  </main>
+  </div>
+</template>
+
+<style lang="scss" scoped>
   
-
-</body>
-
-</html>
+</style>

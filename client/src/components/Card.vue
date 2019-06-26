@@ -19,8 +19,8 @@
 a
   text-decoration: none
 .card
-  +typography($white, $may-1)
-  background: $background
+  +typography($white, $white)
+  background: darken(desaturate($july-1, 20%), 10%)
   padding: 0 0 1em
   border-radius: 24px
   max-width: 480px
@@ -49,7 +49,7 @@ a
     &.artist
       +font-size(1.5em)
       font-weight: 800
-      color: $may-4
+      color: $white
       word-break: break-all
       +title
     &.date
@@ -61,7 +61,7 @@ a
 
 <script>
 export default {
-  name: "Card",
+  name: 'Card',
   props: {
     entry: Object
   }

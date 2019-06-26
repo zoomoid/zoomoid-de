@@ -28,7 +28,10 @@
 @import '@/assets/app.sass'
 
 nav
-  +typography($white, $may-5)
+  h1
+    margin: 0 16px 0 16px
+    +font-size(1em)
+  +typography($white, $white)
   width: 100%
   top: 0
   left: 0

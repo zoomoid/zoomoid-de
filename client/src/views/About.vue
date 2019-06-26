@@ -64,7 +64,10 @@
 
 .grid 
   display: flex
-
+  +sm
+    display: block
+  +md
+    display: block
 .wrapper
   margin: 0 auto
   width: 80%
@@ -75,7 +78,7 @@
   +typography($white, $white)
   border-top-left-radius: $radius
   border-top-right-radius: $radius
-  background: $may-2
+  background: desaturate(darken($july-1, 15%), 60%)
   h1
     +font-size(5em)
   img

@@ -43,6 +43,7 @@ export default {
 <template>
   <div id="work">
     <div class="center-wrapper">
+      <img class="logo" src="https://cdn.occloxium.com/i/zoomoid/logo.png">
       <h1>Work</h1>
       <p>
         Zoomoids past work and discography
@@ -60,12 +61,15 @@ $radius: 32px
 #work
   border-top-left-radius: $radius
   border-top-right-radius: $radius
-  background: $may-4
+  background: desaturate(darken($july-1, 15%), 60%)
   flex-grow: 1
   // height: 100vh
   padding: 2em
   +typography($white, $white)
+  .logo
+    width: 240px
   h1
+    margin-top: 0
     +font-size(5em)
   .center-wrapper
     max-width: 1200px
@@ -78,7 +82,9 @@ $radius: 32px
     +sm
       grid-template-columns: 1fr
     +md
-      grid-template-columns: 1fr
+      grid-template-columns: 1fr 1fr
+    +lg
+      grid-template-columns: 1fr 1fr
     grid-template-columns: 1fr 1fr 1fr
     grid-column-gap: 2em
     grid-row-gap: 2em

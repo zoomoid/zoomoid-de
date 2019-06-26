@@ -23,18 +23,16 @@ body
     min-height: 100%
     display: flex
     flex-direction: column
-    background: darken($background, 3%)
+  background: desaturate(darken($july-1, 20%), 60%)
+
 
 .backdrop
-  background: darken($background, 3%)
+  background: desaturate(darken($july-1, 20%), 60%)
 .foreground
   box-shadow: 0 -2px 4px rgba(0,0,0,0.2)
   border-top-left-radius: $radius
   border-top-right-radius: $radius
-  background-size: cover
-  background-position: center center
-  background-attachment: fixed 
-  background-image: url(./assets/background_intro.svg)
+  background: $july-4
 </style>
 
 <script>

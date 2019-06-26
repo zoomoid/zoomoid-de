@@ -39,12 +39,14 @@
 <style lang="sass" scoped>
 @import '../assets/app'
 .wrapper
-  +typography($white, $may-5)
+  +typography($white, $white)
 
 #intro
   position: relative
   height: 100vh
   width: 100%
+  background: desaturate(darken($july-1, 15%), 60%)
+  +rounded
   .body
     position: absolute
     bottom: 0
@@ -66,7 +68,7 @@
     top: 32%
 
 .only-mobile
-  background: $may-1
+  background: $july-4
   padding: 0 5%
   padding: 2em
   display: none

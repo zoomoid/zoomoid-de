@@ -41,11 +41,11 @@
 <style lang="sass" scoped>
 footer
   @import '../assets/app'
-  // box-shadow: 0 -2px 5px rgba(0,0,0,0.5)
+  box-shadow: 0 -1px 2px rgba(0,0,0,0.54)
   +font(1em, normal, 0px)
   padding: 1em 12px
   color: $text
-  background: $may-2
+  background: desaturate(darken($july-1, 25%), 60%)
   a 
     color: inherit
     text-decoration: none

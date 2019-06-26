@@ -12,8 +12,7 @@ RUN npm run build
 # build server
 FROM nginx:alpine
 # install server dependencies
-WORKDIR /
-# copy static files
-COPY /client/ /usr/share/nginx/html
+RUN mkdir /app
 # copy from client builder
-COPY --from=client-builder bundle.* /usr/share/nginx/html/
+COPY --from=client-builder /dist /app
+COPY nginx.conf /etc/nginx/

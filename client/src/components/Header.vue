@@ -68,7 +68,7 @@
     top: 32%
 
 .only-mobile
-  background: $july-4
+  background: desaturate(darken($july-1, 20%), 60%)
   padding: 0 5%
   padding: 2em
   display: none

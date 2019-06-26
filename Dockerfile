@@ -3,7 +3,7 @@ FROM node:latest as client-builder
 # copy package-lock.json (mainly) and package.json
 COPY /client .
 # npm ci for better performance in dependency resolution
-RUN npm ci
+RUN npm install
 # bundle client
 COPY /client .
 # build with webpack

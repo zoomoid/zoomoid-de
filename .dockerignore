@@ -10,9 +10,4 @@ README.md
 LICENSE
 .vscode
 webpack.config.js
-client/.browserlistrc
-client/.eslintrc.js
 client/.editorconfig
-package-lock.json
-package.json
-app.js

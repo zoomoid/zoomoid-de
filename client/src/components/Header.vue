@@ -45,10 +45,6 @@
   position: relative
   height: 100vh
   width: 100%
-  background-size: cover
-  background-position: center center
-  background-attachment: scroll 
-  background-image: url(../assets/background_intro.svg)
   .body
     position: absolute
     bottom: 0
@@ -67,7 +63,7 @@
     z-index: 10
     left: 50%
     width: 40%
-    top: 40%
+    top: 32%
 
 .only-mobile
   background: $may-1

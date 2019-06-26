@@ -1,51 +1,60 @@
 <template>
   <div id="about">
     <div class="wrapper">
-      <h1>Contact</h1>
-      <img src="@/assets/zoomoid_profile.jpg" alt="portrait of zoomoid">
-      <p>
-        Either for booking, collaboration, or other issues, contact me via
-        e-mail at
-        <a class="contact--mail" href="mailto:alex@zoomoid.de">alex@zoomoid.de</a>.
-      </p>
-      <p>
-        Other than that, here are a few ways to contact me in a more specific
-        and rather passive domain:
-      </p>
-      <ul class="references">
-        <li>
-          <a
-            href="https://open.spotify.com/artist/6RRD9ulVsLuDIqFzuFvSL8?si=a8mm8a2RTaO1Zo6SyfwZVQ"
-          >
-            <i class="fab fa-spotify"></i>
-            <span>Spotify</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://instagram.com/zoomoid">
-            <i class="fab fa-instagram"></i>
-            <span>Instagram</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/channel/UCg0yVDwpB9QphFbsGnV-8tQ/">
-            <i class="fab fa-youtube"></i>
-            <span>YouTube</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://soundcloud.com/zoomoid">
-            <i class="fab fa-soundcloud"></i>
-            <span>SoundCloud</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/occloxium">
-            <i class="fab fa-github"></i>
-            <span>GitHub</span>
-          </a>
-        </li>
-      </ul>
+      <div class="grid">
+        <div class="block">
+          <img src="@/assets/zoomoid_profile.jpg" alt="portrait of zoomoid">
+        </div>
+        <div class="block">
+          <h1>Contact</h1>
+          <p>
+            For booking, collaboration, or other issues, contact me via
+            e-mail at
+            <a
+              class="contact--mail"
+              href="mailto:alex@zoomoid.de"
+            >alex@zoomoid.de</a>.
+          </p>
+          <p>
+            Other than that, here are a few ways to contact me in a more specific
+            and rather passive domain:
+          </p>
+          <ul class="references">
+            <li>
+              <a
+                href="https://open.spotify.com/artist/6RRD9ulVsLuDIqFzuFvSL8?si=a8mm8a2RTaO1Zo6SyfwZVQ"
+              >
+                <i class="fab fa-spotify"></i>
+                <span>Spotify</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/zoomoid">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCg0yVDwpB9QphFbsGnV-8tQ/">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://soundcloud.com/zoomoid">
+                <i class="fab fa-soundcloud"></i>
+                <span>SoundCloud</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/occloxium">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -53,24 +62,28 @@
 <style lang="sass" scoped>
 @import '@/assets/app.sass'
 
-.wrapper
-  max-width: 500px
-  margin: 0 auto
+.grid 
+  display: flex
 
+.wrapper
+  margin: 0 auto
+  width: 80%
+  max-width: 1200px
 #about
-  padding: 128px 2em 0
-  +typography($white, $may-5)
   min-height: 100vh
-  flex-grow: 1
-  background-size: cover
-  background-position: center center
-  background-attachment: fixed 
-  background-image: url(../assets/background_intro.svg)
+  padding: 128px 2em 0
+  +typography($white, $white)
+  border-top-left-radius: $radius
+  border-top-right-radius: $radius
+  background: $may-2
+  h1
+    +font-size(5em)
   img
-    max-width: 320px
-    max-height: 320px
-    border-radius: 320px
-    box-shadow: 0 1px 6px rgba(0,0,0,0.5)
+    max-width: 480px
+    max-height: 480px
+    width: 80%
+    border-radius: 360px
+    box-shadow: 0 1px 2px rgba(0,0,0,0.5)
     display: block
     margin: 2em auto
   .contact--mail 

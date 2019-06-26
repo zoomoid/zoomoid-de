@@ -45,7 +45,7 @@
   position: relative
   height: 100vh
   width: 100%
-  background: desaturate(darken($july-1, 15%), 60%)
+  background: desaturate(darken($july-1, 20%), 60%)
   +rounded
   .body
     position: absolute

@@ -23,7 +23,7 @@ body
     min-height: 100%
     display: flex
     flex-direction: column
-  background: desaturate(darken($july-1, 20%), 60%)
+    background: desaturate(darken($july-1, 20%), 60%)
 
 
 .backdrop

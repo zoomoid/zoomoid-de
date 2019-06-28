@@ -2,10 +2,8 @@
   <div id="about">
     <div class="wrapper">
       <div class="grid">
-        <div class="block">
-          <img src="@/assets/zoomoid_profile.jpg" alt="portrait of zoomoid">
-        </div>
-        <div class="block">
+        <Banner/>
+        <div class="text">
           <h1>Contact</h1>
           <p>
             For booking, collaboration, or other issues, contact me via
@@ -62,40 +60,36 @@
 <style lang="sass" scoped>
 @import '@/assets/app.sass'
 
-.grid 
-  display: flex
-  +sm
-    display: block
-  +md
-    display: block
-.wrapper
-  margin: 0 auto
-  width: 80%
-  max-width: 1200px
+// .wrapper
+//   margin: 0 auto
+//   width: 80%
+//   max-width: 1200px
 #about
   min-height: 100vh
-  padding: 128px 2em 0
+  // padding: 128px 2em 0
   +typography($white, $white)
   border-top-left-radius: $radius
   border-top-right-radius: $radius
-  background: desaturate(darken($july-1, 15%), 60%)
+  // background: desaturate(darken($july-1, 15%), 60%)
+  .text
+    padding: 0 3em 2em
   h1
     +font-size(5em)
-  img
-    max-width: 480px
-    max-height: 480px
-    width: 80%
-    border-radius: 360px
-    box-shadow: 0 1px 2px rgba(0,0,0,0.5)
-    display: block
-    margin: 2em auto
+  // img
+  //   max-width: 480px
+  //   max-height: 480px
+  //   width: 80%
+  //   border-radius: 360px
+  //   box-shadow: 0 1px 2px rgba(0,0,0,0.5)
+  //   display: block
+  //   margin: 2em auto
   .contact--mail 
     +font-size(1em) 
     color: $text
-    text-decoration-color: $text
+    text-decoration-color: $white
     &:active, &:hover
-      color: $theme--accent
-      text-decoration-color: $theme--accent
+      color: $white
+      text-decoration-color: $white
   .references
     padding-left: 0
     li
@@ -117,3 +111,12 @@
           text-align: leftul
 
 </style>
+
+<script>
+import Banner from '@/components/Banner.vue'
+export default {
+  components: {
+    Banner
+  }
+}
+</script>

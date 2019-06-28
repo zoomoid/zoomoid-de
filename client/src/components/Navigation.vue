@@ -1,7 +1,7 @@
 <template>
   <nav id="nav">
     <button v-on:click="show = !show" class="collapse-button">
-      <i class="fas fa-bars"></i>
+      <i class="material-icons">menu</i>
     </button>
     <transition name="slide">
       <ul v-if="show">
@@ -17,7 +17,7 @@
           <router-link to="/work">Work</router-link>
         </li>
         <li for="contact" v-on:click="show = false">
-          <router-link to="/about">About</router-link>
+          <router-link to="/about">About &amp; Contact</router-link>
         </li>
       </ul>
     </transition>

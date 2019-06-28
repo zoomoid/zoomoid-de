@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <header id="intro">
-      <img class="body" alt="picture of zoomoid" src="../assets/zoomoid_body.png">
+      <Banner/>
       <div class="text">
         <h1>About Me</h1>
         <p>
@@ -18,7 +18,7 @@
         </p>
       </div>
     </header>
-    <section class="only-mobile">
+    <!-- <section class="only-mobile">
       <h1>About Me</h1>
       <p>
         Zoomoid is a young, aspiring artist from Aachen, Germany, who draws his
@@ -32,7 +32,7 @@
         different, explaining the vast style changes in his discography, taking
         influences from House, Techno, Drum&amp;Bass as well as Hip-Hop.
       </p>
-    </section>
+    </section> -->
   </div>
 </template>
 
@@ -43,35 +43,30 @@
 
 #intro
   position: relative
-  height: 100vh
+  min-height: 100vh
   width: 100%
   background: desaturate(darken($july-1, 20%), 60%)
   +rounded
-  .body
-    position: absolute
-    bottom: 0
-    margin-left: 10%
-    +sm
-      margin-left: 0
-    +md
-      margin-left: 0
-    height: auto
-    max-height: 80vh
-    max-width: 100%
   .text
-    position: absolute
-    @media (max-width: 1400px)
-      display: none
+    // @media (max-width: 1400px)
+    //   display: none
     z-index: 10
-    left: 50%
-    width: 40%
-    top: 32%
+    padding: 0 3em 3em
 
-.only-mobile
-  background: desaturate(darken($july-1, 20%), 60%)
-  padding: 0 5%
-  padding: 2em
-  display: none
-  @media (max-width: 1400px)
-      display: block
+// .only-mobile
+//   background: desaturate(darken($july-1, 20%), 60%)
+//   padding: 0 5%
+//   padding: 2em
+//   display: none
+//   @media (max-width: 1400px)
+//       display: block
 </style>
+
+<script>
+import Banner from '@/components/Banner.vue';
+export default {
+  components: {
+    Banner
+  }
+}
+</script>

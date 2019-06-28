@@ -13,7 +13,7 @@
 
 <style lang="sass">
 @import '@/assets/app.sass'
-$background: $may-1
+// $background: $may-1
 $radius: 32px
 body
   height: 100vh
@@ -32,7 +32,6 @@ body
   box-shadow: 0 -2px 4px rgba(0,0,0,0.2)
   border-top-left-radius: $radius
   border-top-right-radius: $radius
-  background: $july-4
 </style>
 
 <script>

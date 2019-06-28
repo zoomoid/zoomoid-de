@@ -6,7 +6,7 @@
       </div>
       <div class="labels">
         <span class="no">Release {{entry.id}}</span>
-        <span class="artist">{{entry.artist}}</span>
+        <span class="artist" v-html="entry.artist"></span>
         <span class="title" v-html="entry.title"></span>
         <span class="date">{{entry.date}}</span>
       </div>
@@ -39,7 +39,6 @@ a
     &.no
       +font-size(0.8em)
       font-weight: 400
-      display: block
       padding-bottom: 1em
     &.title
       +font-size(2.25em)
@@ -50,7 +49,6 @@ a
       +font-size(1.5em)
       font-weight: 800
       color: $white
-      word-break: break-all
       +title
     &.date
       +font-size(0.8em)

@@ -21,18 +21,26 @@ export default {
         {
           contentID: 'liamm',
           artist: 'zoomoid',
-          title: 'Life Is About Making Memories',
+          title: 'Life Is A&shy;bout Ma&shy;king Me&shy;mo&shy;ries',
           coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/liamm/cover.png',
           date: '22.09.2018',
           id: 'A01'
         },
         {
-          contentID: '',
+          contentID: 'datkom',
           artist: 'zoomoid, Simon Kaiser, Dirk Thißen',
           title: 'Datenkom&shy;mu&shy;ni&shy;ka&shy;tion & Sicherheit',
           coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/datkomm/cover.png',
           date: '14.02.2019',
           id: 'S06'
+        },
+        {
+          contentID: 'interstellar',
+          artist: 'zoomoid',
+          title: 'Interstellar',
+          coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/interstellar/cover.png',
+          date: '22.07.2018',
+          id: 'S05'
         }
       ]
     }

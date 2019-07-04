@@ -1,5 +1,5 @@
 <template>
-  <a v-bind:href="entry.contentID">
+  <router-link v-bind:to="entry.contentID">
     <div class="card">
       <div class="cover">
         <img v-bind:src="entry.coverUrl" alt="cover art for release">
@@ -11,13 +11,14 @@
         <span class="date">{{entry.date}}</span>
       </div>
     </div>
-  </a>
+  </router-link>
 </template>
 
 <style lang="sass" scoped>
 @import '@/assets/app.sass'
 a
   text-decoration: none
+  display: flex
 .card
   +typography($white, $white)
   background: lighten($black, 10%)
@@ -25,13 +26,15 @@ a
   border-radius: 24px
   max-width: 480px
   margin: 0 auto
+  display: flex
+  flex-direction: column
   .cover
     img
       border-radius: 24px
       width: 100%
   .labels
+    flex-grow: 1
     padding: 0.5em 1em 0
-    margin: 0 auto
     padding-bottom: 8px
   span
     display: block

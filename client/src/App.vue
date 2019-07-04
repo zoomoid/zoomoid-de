@@ -19,6 +19,7 @@
 $primary-background: $prime-background
 $backlayer: lighten($grey, 40%)
 body
+  +typography($white,$white)
   height: 100vh
   width: 100%
   // position: absolute

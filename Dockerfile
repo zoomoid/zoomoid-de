@@ -15,4 +15,7 @@ FROM nginx:alpine
 RUN mkdir /app
 # copy from client builder
 COPY --from=client-builder /dist /app
+
+RUN ls /app
+
 COPY nginx.conf /etc/nginx/

@@ -45,13 +45,17 @@
   position: relative
   min-height: 100vh
   width: 100%
-  background: desaturate(darken($july-1, 20%), 60%)
   +rounded
   .text
+    h1
+      +sm
+      +font-size(4em)
     // @media (max-width: 1400px)
     //   display: none
     z-index: 10
     padding: 0 3em 3em
+    +sm
+      padding: 0 1em 1em
 
 // .only-mobile
 //   background: desaturate(darken($july-1, 20%), 60%)

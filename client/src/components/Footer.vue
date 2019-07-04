@@ -45,7 +45,6 @@ footer
   +font(1em, normal, 0px)
   padding: 1em 12px
   color: $text
-  background: desaturate(darken($july-1, 25%), 60%)
   a 
     color: inherit
     text-decoration: none

@@ -69,13 +69,15 @@ $radius: 32px
 #work
   border-top-left-radius: $radius
   border-top-right-radius: $radius
-  background: desaturate(darken($july-1, 15%), 60%)
   flex-grow: 1
   // height: 100vh
   padding: 2em
+  +sm
+    padding: 1em
   +typography($white, $white)
   .logo
     width: 240px
+    text-align: center
   h1
     margin-top: 0
     +font-size(5em)
@@ -90,7 +92,7 @@ $radius: 32px
     +sm
       grid-template-columns: 1fr
     +md
-      grid-template-columns: 1fr 1fr
+      grid-template-columns: 1fr
     +lg
       grid-template-columns: 1fr 1fr
     grid-template-columns: 1fr 1fr 1fr

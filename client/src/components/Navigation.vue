@@ -28,6 +28,9 @@
 @import '@/assets/app.sass'
 
 nav
+  max-width: $max-width
+  width: 100%
+  margin: 0 auto
   h1
     margin: 0 16px 0 16px
     +font-size(1em)

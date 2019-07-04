@@ -75,6 +75,8 @@
     padding: 0 3em 2em
   h1
     +font-size(5em)
+    +sm
+      +font-size(4em)
   // img
   //   max-width: 480px
   //   max-height: 480px

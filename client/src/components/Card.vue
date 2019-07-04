@@ -20,7 +20,7 @@ a
   text-decoration: none
 .card
   +typography($white, $white)
-  background: darken(desaturate($july-1, 20%), 10%)
+  background: lighten($black, 10%)
   padding: 0 0 1em
   border-radius: 24px
   max-width: 480px

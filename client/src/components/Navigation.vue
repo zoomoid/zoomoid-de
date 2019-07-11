@@ -26,9 +26,9 @@
     <div class="desktop">
       <ul>
         <li class="icon">
-          <a href="/">
+          <router-link to="/">
             <img class="logo" src="@/assets/icon_512x512.png">
-          </a>
+          </router-link>
         </li>
         <li for="intro" v-on:click="show = false">
           <router-link to="/">Intro</router-link>
@@ -52,7 +52,7 @@ nav
     .logo
       padding-top: 16px
       max-width: 32px
-    ul 
+    ul
       align-items: flex-end
       li
         margin: 0 4em 0 0
@@ -100,13 +100,13 @@ nav
     padding-left: 24px
     flex-grow: 1
     margin-top: 12px
-    // padding: 1em 5em 0 2em 
+    // padding: 1em 5em 0 2em
     // display: flex
     list-style: none outside none
     transform: scaleY(1)
     position: relative
     transform-origin: center top
-    li  
+    li
       +lg
         display: flex
         padding: 0 1em 0
@@ -141,7 +141,7 @@ nav
     color: black
     cursor: pointer
 
-.slide-enter-active, .slide-leave-active 
+.slide-enter-active, .slide-leave-active
   transition: all 0.1s ease-in-out
 
 .slide-enter, .slide-leave-to

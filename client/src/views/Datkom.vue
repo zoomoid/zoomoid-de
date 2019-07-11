@@ -5,11 +5,13 @@
       <span class="separator"></span>
       <router-link
         to="/datkom"
-      >Dat&shy;en&shy;kom&shy;mu&shy;ni&shy;ka&shy;ti&shy;on &amp; Sich&shy;er&shy;heit</router-link>
+      >Dat&shy;en&shy;kom&shy;mu&shy;ni&shy;ka&shy;ti&shy;on &amp; Sicherheit</router-link>
     </header>
     <article>
-      <h3>Zoomoid, Simon Kaiser, Dirk Thißen</h3>
-      <h1>Dat&shy;en&shy;kom&shy;mu&shy;ni&shy;ka&shy;ti&shy;on &amp; Sich&shy;er&shy;heit</h1>
+      <div class="title">
+        <h3>Zoomoid, Simon Kaiser, Dirk Thißen</h3>
+        <h1>Dat&shy;en&shy;kom&shy;mu&shy;ni&shy;ka&shy;ti&shy;on &amp; Sicherheit</h1>
+      </div>
       <section class="cover">
         <img src="https://cdn.occloxium.com/i/zoomoid/covers/datkomm/cover.png" />
       </section>
@@ -99,22 +101,26 @@
 @import '@/assets/app.sass'
 .breadcrumps
   padding: 1em 2em
+  +font-size(0.8em)
   .separator::before
     content: '/'
     margin: 0 4px
 
 article
   padding: 0 2em 1em
-  h1
-    margin: 0 0 1em
-  h3
-    font-size: 2em
-    margin: 1em 0 0
-    font-weight: 500
+  .title
+    padding: 0 1em
+    h1
+      margin: 0 0 1em
+      +font-size(3em)
+    h3
+      font-size: 2em
+      margin: 1em 0 0
+      font-weight: 500
 .cover
   img
     width: 80%
-    max-width: 768px
+    max-width: 550px
     margin: 0 auto
     display: block
 
@@ -171,10 +177,11 @@ article
 export default {
   data: function() {
     return {
-      blockEmbedded: !this.$cookies.isKey('allowThirdPartyContent') ||
+      blockEmbedded:
+        !this.$cookies.isKey('allowThirdPartyContent') ||
         this.$cookies.get('allowThirdPartyContent') === 'false'
     };
-  },
+  }
 };
 </script>
 

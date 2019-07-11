@@ -44,12 +44,12 @@ a
       font-weight: 400
       padding-bottom: 1em
     &.title
-      +font-size(2.25em)
+      +font-size(2em)
       font-weight: 800
       +title
       line-height: 1
     &.artist
-      +font-size(1.5em)
+      +font-size(1em)
       font-weight: 800
       color: $white
       +title
@@ -57,7 +57,7 @@ a
       +font-size(0.8em)
       font-weight: 400
       padding-top: 1em
-        
+
 </style>
 
 <script>

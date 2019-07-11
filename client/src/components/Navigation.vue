@@ -152,7 +152,7 @@ nav
 
 <script>
 export default {
-  name: "Navigation",
+  name: 'Navigation',
   data: function() {
     return {
       show: false

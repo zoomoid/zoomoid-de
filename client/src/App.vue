@@ -1,5 +1,6 @@
 <template>
   <main id="app">
+    <CookieBanner/>
     <div class="backdrop">
       <Navigation/>
     </div>
@@ -17,9 +18,9 @@
 // $background: $may-1
 
 $primary-background: $prime-background
-$backlayer: lighten($grey, 40%)
+$backlayer: lighten($grey, 78%)
 body
-  +typography($white,$white)
+  +typography($white, $white)
   height: 100vh
   width: 100%
   // position: absolute
@@ -54,12 +55,14 @@ body
 <script>
 import Footer from '@/components/Footer.vue';
 import Navigation from '@/components/Navigation.vue';
+import CookieBanner from '@/components/CookieBanner.vue'
 
 export default {
   name: 'App',
   components: {
     Footer,
-    Navigation
+    Navigation,
+    CookieBanner,
   }
 };
 </script>

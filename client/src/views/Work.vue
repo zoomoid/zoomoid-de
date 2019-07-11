@@ -51,7 +51,7 @@ export default {
 <template>
   <div id="work">
     <div class="center-wrapper">
-      <img class="logo" src="https://cdn.occloxium.com/i/zoomoid/logo.png">
+      <img class="logo" src="https://cdn.occloxium.com/i/zoomoid/logos/logo.png">
       <h1>Work</h1>
       <p>
         Zoomoids past work and discography

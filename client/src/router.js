@@ -4,6 +4,7 @@ import Intro from './views/Intro.vue'
 import Work from './views/Work.vue'
 import About from './views/About.vue'
 import Datkom from './views/Datkom.vue'
+import Privacy from './views/Privacy.vue'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/datkom',
       name: 'datkom',
       component: Datkom
+    },
+    {
+      path: '/privacy',
+      name: 'privacy',
+      component: Privacy
     }
   ]
 })

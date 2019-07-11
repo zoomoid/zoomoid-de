@@ -21,7 +21,7 @@ a
   display: flex
 .card
   +typography($white, $white)
-  background: lighten($black, 10%)
+  background: rgba(0,0,0,1)
   padding: 0 0 1em
   border-radius: 24px
   max-width: 480px

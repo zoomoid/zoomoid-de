@@ -1,15 +1,35 @@
 <template>
   <nav id="nav">
-    <button v-on:click="show = !show" class="collapse-button">
-      <i class="material-icons">menu</i>
-    </button>
-    <transition name="slide">
-      <ul v-if="show">
-        <!-- <li class="icon">
+    <div class="mobile">
+      <button v-on:click="show = !show" class="collapse-button">
+        <i class="material-icons">menu</i>
+      </button>
+      <transition name="slide">
+        <ul v-if="show">
+          <!-- <li class="icon">
           <a href="/">
             <img class="logo" src="https://cdn.occloxium.com/i/zoomoid/logo.png">
           </a>
-        </li> -->
+          </li>-->
+          <li for="intro" v-on:click="show = false">
+            <router-link to="/">Intro</router-link>
+          </li>
+          <li for="work" v-on:click="show = false">
+            <router-link to="/work">Work</router-link>
+          </li>
+          <li for="contact" v-on:click="show = false">
+            <router-link to="/about">About &amp; Contact</router-link>
+          </li>
+        </ul>
+      </transition>
+    </div>
+    <div class="desktop">
+      <ul>
+        <li class="icon">
+          <a href="/">
+            <img class="logo" src="@/assets/icon_512x512.png">
+          </a>
+        </li>
         <li for="intro" v-on:click="show = false">
           <router-link to="/">Intro</router-link>
         </li>
@@ -20,7 +40,7 @@
           <router-link to="/about">About &amp; Contact</router-link>
         </li>
       </ul>
-    </transition>
+    </div>
   </nav>
 </template>
 
@@ -28,13 +48,44 @@
 @import '@/assets/app.sass'
 
 nav
+  .desktop
+    .logo
+      padding-top: 16px
+      max-width: 32px
+    ul 
+      align-items: flex-end
+      li
+        margin: 0 4em 0 0
+        padding: 0
+  .mobile
+    align-items: flex-start
+  +sm
+    .desktop
+      display: none
+    .mobile
+      display: flex
+  +md
+    .desktop
+      display: none
+    .mobile
+      display: flex
+  +lg
+    .desktop
+      display: block
+    .mobile
+      display: none
+  +xl
+    .desktop
+      display: block
+    .mobile
+      display: none
   max-width: $max-width
   width: 100%
   margin: 0 auto
   h1
     margin: 0 16px 0 16px
-    +font-size(1em)
-  +typography($white, $white)
+    +font-size(20px)
+  +typography($black, $black)
   width: 100%
   top: 0
   left: 0
@@ -42,8 +93,13 @@ nav
   display: flex
   align-items: flex-start
   ul
+    +lg
+      display: flex
+    +xl
+      display: flex
     padding-left: 24px
     flex-grow: 1
+    margin-top: 12px
     // padding: 1em 5em 0 2em 
     // display: flex
     list-style: none outside none
@@ -51,13 +107,14 @@ nav
     position: relative
     transform-origin: center top
     li  
-      vertical-align: top
       +lg
         display: flex
         padding: 0 1em 0
       padding: 0 0em 16px
       a
-        font-size: 18px
+        font-size: 20px
+        text-transform: uppercase
+        letter-spacing: 2px
         font-weight: 600
         text-decoration: none
         border-bottom: solid 2px
@@ -65,7 +122,6 @@ nav
         &:active, &:hover
           text-decoration: none
           border-color: $may-5
-          color: $may-6
       &.icon
         flex-grow: 0
         +sm
@@ -82,7 +138,7 @@ nav
     background: none
     outline: none
     border: none
-    color: #ffffff
+    color: black
     cursor: pointer
 
 .slide-enter-active, .slide-leave-active 
@@ -96,11 +152,11 @@ nav
 
 <script>
 export default {
-  name: 'Navigation',
-  data: function(){
+  name: "Navigation",
+  data: function() {
     return {
       show: false
-    }
+    };
   }
 };
 </script>

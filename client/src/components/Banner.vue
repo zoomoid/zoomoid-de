@@ -18,7 +18,7 @@
       left: 0
       bottom: 0
       right: 0
-      background: linear-gradient(rgba(0,0,0,0), rgba(20,0,40,0.9))
+      background: linear-gradient(rgba(0,0,0,0), rgba(20,20,20,0.9))
       content: ''
       z-index: 20
     img

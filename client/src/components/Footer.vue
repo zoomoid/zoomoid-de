@@ -31,8 +31,8 @@
           <span>GitHub</span>
         </a>
       </li>
-      <li>
-        <a class="privacy" href="/privacy">Privacy &amp; Data Protection</a>
+      <li class="privacy">
+        <router-link to="/privacy">Privacy &amp; Data Protection</router-link>
       </li>
     </div>
   </footer>
@@ -56,6 +56,7 @@ footer
   .references
     display: flex
     flex-wrap: wrap
+    align-items: center
     li
       padding: 0 1em
       list-style: none outside none

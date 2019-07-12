@@ -141,7 +141,6 @@ article
     width: 50%
     margin: 0 auto
     display: block
-    font-family: sans-serif
     text-align: center
 </style>
 

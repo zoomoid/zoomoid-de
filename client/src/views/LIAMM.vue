@@ -80,229 +80,232 @@
             >(Alternatively as FLAC)</a>
           </div>
           <div class="tracklist">
-            <div class="container" id="intro">
-              <b>1</b>
-              <div>
-                <h3>intro.</h3>
-                <div class="tag-list">
-                  <span>Instrumental</span>
-                  <span>Ambience</span>
-                </div>
-                <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is
+            <div class="blocked" v-if="blockEmbedded"></div>
+            <div v-if="!blockEmbedded">
+              <div class="container" id="intro">
+                <b>1</b>
+                <div>
+                  <h3>intro.</h3>
+                  <div class="tag-list">
+                    <span>Instrumental</span>
+                    <span>Ambience</span>
+                  </div>
+                  <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is
                     About Making Memories/intro.mp3" controls="true"></audio>
-                -->
-                <iframe
-                  src="https://open.spotify.com/embed/track/2T7HmnQcJbOa6ZaSXTQkW0"
-                  width="640"
-                  height="80"
-                  frameborder="0"
-                  allowtransparency="true"
-                  allow="encrypted-media"
-                ></iframe>
-              </div>
-            </div>
-            <div class="container" id="albuquerque">
-              <b>2</b>
-              <div>
-                <h3>albuquerque.</h3>
-                <div class="tag-list">
-                  <span>Hip-Hop</span>
-                  <span>LoFi</span>
+                  -->
+                  <iframe
+                    src="https://open.spotify.com/embed/track/2T7HmnQcJbOa6ZaSXTQkW0"
+                    width="100%"
+                    height="80"
+                    frameborder="0"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                  ></iframe>
                 </div>
-                <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is About Making Memories/albuquerque.mp3"
-                controls="true"></audio>-->
-                <iframe
-                  src="https://open.spotify.com/embed/track/0T7PGyauVbTW8B7QoCpI8P"
-                  width="640"
-                  height="80"
-                  frameborder="0"
-                  allowtransparency="true"
-                  allow="encrypted-media"
-                ></iframe>
               </div>
-            </div>
-            <div class="container" id="summer">
-              <b>3</b>
-              <div>
-                <h3>summer.</h3>
-                <div class="tag-list">
-                  <span>Hip-Hop</span>
-                  <span>LoFi</span>
+              <div class="container" id="albuquerque">
+                <b>2</b>
+                <div>
+                  <h3>albuquerque.</h3>
+                  <div class="tag-list">
+                    <span>Hip-Hop</span>
+                    <span>LoFi</span>
+                  </div>
+                  <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is About Making Memories/albuquerque.mp3"
+                  controls="true"></audio>-->
+                  <iframe
+                    src="https://open.spotify.com/embed/track/0T7PGyauVbTW8B7QoCpI8P"
+                    width="100%"
+                    height="80"
+                    frameborder="0"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                  ></iframe>
                 </div>
-                <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is
+              </div>
+              <div class="container" id="summer">
+                <b>3</b>
+                <div>
+                  <h3>summer.</h3>
+                  <div class="tag-list">
+                    <span>Hip-Hop</span>
+                    <span>LoFi</span>
+                  </div>
+                  <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is
                     About Making Memories/summer.mp3" controls="true"></audio>
-                -->
-                <iframe
-                  src="https://open.spotify.com/embed/track/0lWcWInjMdhheFewRgR8k0"
-                  width="640"
-                  height="80"
-                  frameborder="0"
-                  allowtransparency="true"
-                  allow="encrypted-media"
-                ></iframe>
-              </div>
-            </div>
-            <div class="container" id="linebeck">
-              <b>4</b>
-              <div>
-                <h3>linebeck.</h3>
-                <div class="tag-list">
-                  <span>Hip-Hop</span>
-                  <span>LoFi</span>
+                  -->
+                  <iframe
+                    src="https://open.spotify.com/embed/track/0lWcWInjMdhheFewRgR8k0"
+                    width="100%"
+                    height="80"
+                    frameborder="0"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                  ></iframe>
                 </div>
-                <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is About Making Memories/linebeck.mp3"
-                controls="true"></audio>-->
-                <iframe
-                  src="https://open.spotify.com/embed/track/3kolwtmNdFml5raJJFe54g"
-                  width="640"
-                  height="80"
-                  frameborder="0"
-                  allowtransparency="true"
-                  allow="encrypted-media"
-                ></iframe>
               </div>
-            </div>
-            <div class="container" id="utopia">
-              <b>5</b>
-              <div>
-                <h3>utopia.</h3>
-                <div class="tag-list">
-                  <span>Electronic</span>
-                  <span>Analogue</span>
+              <div class="container" id="linebeck">
+                <b>4</b>
+                <div>
+                  <h3>linebeck.</h3>
+                  <div class="tag-list">
+                    <span>Hip-Hop</span>
+                    <span>LoFi</span>
+                  </div>
+                  <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is About Making Memories/linebeck.mp3"
+                  controls="true"></audio>-->
+                  <iframe
+                    src="https://open.spotify.com/embed/track/3kolwtmNdFml5raJJFe54g"
+                    width="100%"
+                    height="80"
+                    frameborder="0"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                  ></iframe>
                 </div>
-                <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is
+              </div>
+              <div class="container" id="utopia">
+                <b>5</b>
+                <div>
+                  <h3>utopia.</h3>
+                  <div class="tag-list">
+                    <span>Electronic</span>
+                    <span>Analogue</span>
+                  </div>
+                  <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is
                     About Making Memories/utopia.mp3" controls="true"></audio>
-                -->
-                <iframe
-                  src="https://open.spotify.com/embed/track/1xziVkyWqNfjhTOf1jlD2X"
-                  width="640"
-                  height="80"
-                  frameborder="0"
-                  allowtransparency="true"
-                  allow="encrypted-media"
-                ></iframe>
-              </div>
-            </div>
-            <div class="container" id="lalaland">
-              <b>6</b>
-              <div>
-                <h3>i wished for a happy ending.</h3>
-                <div class="tag-list">
-                  <span>Hip-Hop</span>
-                  <span>LoFi</span>
+                  -->
+                  <iframe
+                    src="https://open.spotify.com/embed/track/1xziVkyWqNfjhTOf1jlD2X"
+                    width="100%"
+                    height="80"
+                    frameborder="0"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                  ></iframe>
                 </div>
-                <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is About Making Memories/i wished for a happy ending.mp3"
-                controls="true"></audio>-->
-                <iframe
-                  src="https://open.spotify.com/embed/track/0TQ402uLv6nIILuXadiyHS"
-                  width="640"
-                  height="80"
-                  frameborder="0"
-                  allowtransparency="true"
-                  allow="encrypted-media"
-                ></iframe>
               </div>
-            </div>
-            <div class="container" id="dovahkiin">
-              <b>7</b>
-              <div>
-                <h3>dovahkiin.</h3>
-                <div class="tag-list">
-                  <span>Drum&amp;Bass</span>
-                  <span>Liquid</span>
+              <div class="container" id="lalaland">
+                <b>6</b>
+                <div>
+                  <h3>i wished for a happy ending.</h3>
+                  <div class="tag-list">
+                    <span>Hip-Hop</span>
+                    <span>LoFi</span>
+                  </div>
+                  <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is About Making Memories/i wished for a happy ending.mp3"
+                  controls="true"></audio>-->
+                  <iframe
+                    src="https://open.spotify.com/embed/track/0TQ402uLv6nIILuXadiyHS"
+                    width="100%"
+                    height="80"
+                    frameborder="0"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                  ></iframe>
                 </div>
-                <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is About Making Memories/dovahkiin.mp3"
-                controls="true"></audio>-->
-                <iframe
-                  src="https://open.spotify.com/embed/track/0SA9nKqkcynQA3RDgxIbpc"
-                  width="640"
-                  height="80"
-                  frameborder="0"
-                  allowtransparency="true"
-                  allow="encrypted-media"
-                ></iframe>
               </div>
-            </div>
-            <div class="container" id="wildworld">
-              <b>8</b>
-              <div>
-                <h3>wild wold (vip mix).</h3>
-                <div class="tag-list">
-                  <span>House</span>
-                  <span>Tech-House</span>
+              <div class="container" id="dovahkiin">
+                <b>7</b>
+                <div>
+                  <h3>dovahkiin.</h3>
+                  <div class="tag-list">
+                    <span>Drum&amp;Bass</span>
+                    <span>Liquid</span>
+                  </div>
+                  <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is About Making Memories/dovahkiin.mp3"
+                  controls="true"></audio>-->
+                  <iframe
+                    src="https://open.spotify.com/embed/track/0SA9nKqkcynQA3RDgxIbpc"
+                    width="100%"
+                    height="80"
+                    frameborder="0"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                  ></iframe>
                 </div>
-                <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is About Making Memories/wild world (vip mix).mp3"
-                controls="true"></audio>-->
-                <iframe
-                  src="https://open.spotify.com/embed/track/5oqGg74rbzunebLip6TRDb"
-                  width="640"
-                  height="80"
-                  frameborder="0"
-                  allowtransparency="true"
-                  allow="encrypted-media"
-                ></iframe>
               </div>
-            </div>
-            <div class="container" id="metro">
-              <b>9</b>
-              <div>
-                <h3>metro.</h3>
-                <div class="tag-list">
-                  <span>Techno</span>
+              <div class="container" id="wildworld">
+                <b>8</b>
+                <div>
+                  <h3>wild wold (vip mix).</h3>
+                  <div class="tag-list">
+                    <span>House</span>
+                    <span>Tech-House</span>
+                  </div>
+                  <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is About Making Memories/wild world (vip mix).mp3"
+                  controls="true"></audio>-->
+                  <iframe
+                    src="https://open.spotify.com/embed/track/5oqGg74rbzunebLip6TRDb"
+                    width="100%"
+                    height="80"
+                    frameborder="0"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                  ></iframe>
                 </div>
-                <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is
+              </div>
+              <div class="container" id="metro">
+                <b>9</b>
+                <div>
+                  <h3>metro.</h3>
+                  <div class="tag-list">
+                    <span>Techno</span>
+                  </div>
+                  <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is
                     About Making Memories/metro.mp3" controls="true"></audio>
-                -->
-                <iframe
-                  src="https://open.spotify.com/embed/track/7d3JrAOMuvUidGpcndP0wb"
-                  width="640"
-                  height="80"
-                  frameborder="0"
-                  allowtransparency="true"
-                  allow="encrypted-media"
-                ></iframe>
-              </div>
-            </div>
-            <div class="container" id="winter">
-              <b>10</b>
-              <div>
-                <h3>winter.</h3>
-                <div class="tag-list">
-                  <span>Drum&amp;Bass</span>
-                  <span>Liquid</span>
+                  -->
+                  <iframe
+                    src="https://open.spotify.com/embed/track/7d3JrAOMuvUidGpcndP0wb"
+                    width="100%"
+                    height="80"
+                    frameborder="0"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                  ></iframe>
                 </div>
-                <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is
+              </div>
+              <div class="container" id="winter">
+                <b>10</b>
+                <div>
+                  <h3>winter.</h3>
+                  <div class="tag-list">
+                    <span>Drum&amp;Bass</span>
+                    <span>Liquid</span>
+                  </div>
+                  <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is
                     About Making Memories/winter.mp3" controls="true"></audio>
-                -->
-                <iframe
-                  src="https://open.spotify.com/embed/track/4xjRle5icdlZTrLV8ahA9E"
-                  width="640"
-                  height="80"
-                  frameborder="0"
-                  allowtransparency="true"
-                  allow="encrypted-media"
-                ></iframe>
-              </div>
-            </div>
-            <div class="container" id="outro">
-              <b>11</b>
-              <div>
-                <h3>outro.</h3>
-                <div class="tag-list">
-                  <span>Instrumental</span>
-                  <span>Ambience</span>
+                  -->
+                  <iframe
+                    src="https://open.spotify.com/embed/track/4xjRle5icdlZTrLV8ahA9E"
+                    width="100%"
+                    height="80"
+                    frameborder="0"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                  ></iframe>
                 </div>
-                <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is
+              </div>
+              <div class="container" id="outro">
+                <b>11</b>
+                <div>
+                  <h3>outro.</h3>
+                  <div class="tag-list">
+                    <span>Instrumental</span>
+                    <span>Ambience</span>
+                  </div>
+                  <!-- <audio src="https://cdn.occloxium.com/a/zoomoid/Life Is
                     About Making Memories/outro.mp3" controls="true"></audio>
-                -->
-                <iframe
-                  src="https://open.spotify.com/embed/track/5uUF1ftTDe29hHg9HAv6eA"
-                  width="640"
-                  height="80"
-                  frameborder="0"
-                  allowtransparency="true"
-                  allow="encrypted-media"
-                ></iframe>
+                  -->
+                  <iframe
+                    src="https://open.spotify.com/embed/track/5uUF1ftTDe29hHg9HAv6eA"
+                    width="100%"
+                    height="80"
+                    frameborder="0"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>
@@ -351,7 +354,6 @@ article
     width: 50%
     margin: 0 auto
     display: block
-    font-family: sans-serif
     text-align: center
 
 .tracklist
@@ -417,8 +419,8 @@ export default {
   data: function() {
     return {
       blockEmbedded:
-        !this.$cookies.isKey('allowThirdPartyContent') ||
-        this.$cookies.get('allowThirdPartyContent') === 'false'
+        !this.$cookies.isKey("allowThirdPartyContent") ||
+        this.$cookies.get("allowThirdPartyContent") === "false"
     };
   }
 };

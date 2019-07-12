@@ -177,10 +177,11 @@ article
     width: 50%
     margin: 0 auto
     display: block
-    font-family: sans-serif
     text-align: center
 
 .tracklist
+  margin: 0
+  padding: 0
   li
     padding: 0 0 24px
   audio

@@ -50,6 +50,7 @@
 nav
   .desktop
     padding-top: 16px
+    padding-left: 16px
     .logo
       // padding-top: 16px
       max-width: 32px

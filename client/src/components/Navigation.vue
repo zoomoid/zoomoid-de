@@ -49,11 +49,12 @@
 
 nav
   .desktop
+    padding-top: 16px
     .logo
-      padding-top: 16px
+      // padding-top: 16px
       max-width: 32px
     ul
-      align-items: flex-end
+      align-items: center
       li
         margin: 0 4em 0 0
         padding: 0
@@ -112,6 +113,7 @@ nav
         padding: 0 1em 0
       padding: 0 0em 16px
       a
+        line-height: 1
         font-size: 20px
         text-transform: uppercase
         letter-spacing: 2px

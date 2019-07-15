@@ -419,8 +419,8 @@ export default {
   data: function() {
     return {
       blockEmbedded:
-        !this.$cookies.isKey("allowThirdPartyContent") ||
-        this.$cookies.get("allowThirdPartyContent") === "false"
+        !this.$cookies.isKey('allowThirdPartyContent') ||
+        this.$cookies.get('allowThirdPartyContent') === 'false'
     };
   }
 };

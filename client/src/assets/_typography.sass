@@ -1,0 +1,37 @@
+// Color-dynamic typesetting
+=typography($_text: $text, $_headings: $text)
+  color: $_text
+  +font(20px, normal, $_text)
+  .fas
+    font-family: Font Awesome\ 5 Free
+  .fab
+    font-family: Font Awesome\ 5 Brands
+  h1 
+    +heading(2em, $_headings, 8px)
+    letter-spacing: -2px
+  h2 
+    +heading(2em, $_headings, 4px,)
+    letter-spacing: -2px
+  h3 
+    +heading(2em, $_headings, 2px)
+    letter-spacing: -2px
+  h4 
+    +heading(2em, $_headings)
+  h5 
+    +heading(2em, $_headings)
+  h6 
+    +heading(2em, $_headings)
+  nav
+    +font(1em, normal, 0px, $_text)
+  p, li 
+    line-height: 2
+    word-wrap: normal
+  a
+    color: inherit
+  code
+    font-family: 'Roboto Mono'
+  .abstract, blockquote, em 
+    font-family: 'Poppins', sans-serif
+    font-variant: normal
+    font-style: normal
+    font-weight: 300

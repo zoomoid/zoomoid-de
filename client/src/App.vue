@@ -5,7 +5,9 @@
       <Navigation/>
     </div>
     <div class="foreground">
-      <router-view/>
+      <Intro/>
+      <Work/>
+      <About/>
     </div>
     <div class="footer">
       <Footer/>
@@ -18,7 +20,10 @@
 // $background: $may-1
 
 $primary-background: $prime-background
-$backlayer: lighten($grey, 78%)
+$backlayer: white
+
+*
+  outline: none
 body
   +typography($white, $white)
   height: 100vh
@@ -34,14 +39,13 @@ body
   background: $backlayer
 .foreground
   box-shadow: 0 -2px 4px rgba(0,0,0,0.2)
-  border-top-left-radius: $radius
-  border-top-right-radius: $radius
-  background: $primary-background
-  max-width: $max-width
+  background: $backlayer
+  color: black
+  // max-width: $max-width
   margin: 0 auto
   width: 100%
 .footer
-  max-width: $max-width
+  // max-width: $max-width
   margin: 0 auto
   width: 100%
   background: $primary-background
@@ -55,7 +59,10 @@ body
 <script>
 import Footer from '@/components/Footer.vue';
 import Navigation from '@/components/Navigation.vue';
-import CookieBanner from '@/components/CookieBanner.vue'
+import CookieBanner from '@/components/CookieBanner.vue';
+import Work from '@/views/Work.vue';
+import Intro from '@/views/Intro.vue';
+import About from '@/views/About.vue';
 
 export default {
   name: 'App',
@@ -63,6 +70,9 @@ export default {
     Footer,
     Navigation,
     CookieBanner,
+    Work,
+    Intro,
+    About,
   }
 };
 </script>

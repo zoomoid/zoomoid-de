@@ -51,7 +51,7 @@ export default {
 <template>
   <div id="work">
     <div class="center-wrapper">
-      <img class="logo" src="https://cdn.occloxium.com/i/zoomoid/logos/logo.png">
+      <!-- <img class="logo" src="https://cdn.occloxium.com/i/zoomoid/logos/logo.png"> -->
       <h1>Work</h1>
       <p>
         Zoomoids past work and discography
@@ -67,14 +67,14 @@ export default {
 @import '@/assets/app.sass'
 $radius: 32px
 #work
-  border-top-left-radius: $radius
-  border-top-right-radius: $radius
   flex-grow: 1
   // height: 100vh
   padding: 2em
+  max-width: $max-width
+  margin: 0 auto
   +sm
     padding: 1em
-  +typography($white, $white)
+  +typography(black, black)
   .logo
     width: 240px
     text-align: center
@@ -94,8 +94,8 @@ $radius: 32px
     +md
       grid-template-columns: 1fr
     +lg
-      grid-template-columns: 1fr 1fr
-    grid-template-columns: 1fr 1fr 1fr
+      grid-template-columns: 1fr
+    grid-template-columns: 1fr
     grid-column-gap: 2em
     grid-row-gap: 2em
 

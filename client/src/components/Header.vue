@@ -1,7 +1,8 @@
 <template>
   <div class="wrapper">
+    <Banner/>
     <header id="intro">
-      <Banner/>
+      
       <div class="text">
         <h1>About Me</h1>
         <p>
@@ -39,13 +40,13 @@
 <style lang="sass" scoped>
 @import '../assets/app'
 .wrapper
-  +typography($white, $white)
-
+  +typography($black, $black)
+.wrapper
+  width: 100%
 #intro
   position: relative
-  min-height: 100vh
-  width: 100%
-  +rounded
+  max-width: $max-width
+  margin: 0 auto
   .text
     h1
       +sm
@@ -56,14 +57,6 @@
     padding: 0 3em 3em
     +sm
       padding: 0 1em 1em
-
-// .only-mobile
-//   background: desaturate(darken($july-1, 20%), 60%)
-//   padding: 0 5%
-//   padding: 2em
-//   display: none
-//   @media (max-width: 1400px)
-//       display: block
 </style>
 
 <script>

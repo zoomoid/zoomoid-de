@@ -16,6 +16,4 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-#intro
-  min-height: 100%
 </style>

@@ -2,7 +2,7 @@
   <div id="about">
     <div class="wrapper">
       <div class="grid">
-        <Banner/>
+        <!-- <Banner/> -->
         <div class="text">
           <h1>Contact</h1>
           <p>
@@ -60,38 +60,20 @@
 <style lang="sass" scoped>
 @import '@/assets/app.sass'
 
-// .wrapper
-//   margin: 0 auto
-//   width: 80%
-//   max-width: 1200px
 #about
   min-height: 100vh
-  // padding: 128px 2em 0
-  +typography($white, $white)
-  border-top-left-radius: $radius
-  border-top-right-radius: $radius
-  // background: desaturate(darken($july-1, 15%), 60%)
+  max-width: $max-width
+  margin: 0 auto
+  +typography(black, black)
   .text
     padding: 0 3em 2em
   h1
     +font-size(5em)
     +sm
       +font-size(4em)
-  // img
-  //   max-width: 480px
-  //   max-height: 480px
-  //   width: 80%
-  //   border-radius: 360px
-  //   box-shadow: 0 1px 2px rgba(0,0,0,0.5)
-  //   display: block
-  //   margin: 2em auto
   .contact--mail 
     +font-size(1em) 
-    color: $text
-    text-decoration-color: $white
-    &:active, &:hover
-      color: $white
-      text-decoration-color: $white
+    color: black
   .references
     padding-left: 0
     li
@@ -101,7 +83,7 @@
       a
         display: block
         margin: 0 auto
-        color: $text
+        color: black
         &:active, &:hover
           color: $theme--accent
         text-decoration: none
@@ -110,7 +92,7 @@
           width: 2em
           margin-right: 8px
         span
-          text-align: leftul
+          text-align: left
 
 </style>
 

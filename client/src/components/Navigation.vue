@@ -115,9 +115,7 @@ nav
       padding: 0 0em 16px
       a
         line-height: 1
-        font-size: 20px
-        text-transform: uppercase
-        letter-spacing: 2px
+        font-size: 24px
         font-weight: 600
         text-decoration: none
         border-bottom: solid 2px

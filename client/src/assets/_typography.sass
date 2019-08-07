@@ -1,20 +1,25 @@
-// Color-dynamic typesetting
+@import url('https://rsms.me/inter/inter.css');
+html 
+  font-family: 'Inter', sans-serif
+@supports (font-variation-settings: normal)
+  html
+    font-family: 'Inter var', sans-serif
+
+  
+  // Color-dynamic typesetting
 =typography($_text: $text, $_headings: $text)
   color: $_text
-  +font(22px, black, bold, $_text)
+  +font(16pt, black, bold, $_text)
   .fas
     font-family: Font Awesome\ 5 Free
   .fab
     font-family: Font Awesome\ 5 Brands
   h1 
     +heading(2em, $_headings, 8px)
-    letter-spacing: -2px
   h2 
     +heading(2em, $_headings, 4px,)
-    letter-spacing: -2px
   h3 
     +heading(2em, $_headings, 2px)
-    letter-spacing: -2px
   h4 
     +heading(2em, $_headings)
   h5 
@@ -31,7 +36,7 @@
   code
     font-family: 'Roboto Mono'
   .abstract, blockquote, em 
-    font-family: 'Poppins', sans-serif
+    font-family: 'Inter', sans-serif
     font-variant: normal
     font-style: normal
     font-weight: 300

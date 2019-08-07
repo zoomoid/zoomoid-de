@@ -1,7 +1,6 @@
+node_modules
 npm-debug.log
 Dockerfile*
-**/node_modules
-**/dist
 docker-compose*
 .dockerignore
 .git
@@ -9,5 +8,4 @@ docker-compose*
 README.md
 LICENSE
 .vscode
-webpack.config.js
-client/.editorconfig
+**/node_modules

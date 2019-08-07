@@ -1,21 +1,18 @@
-# build client
-FROM node:latest as client-builder
+# 1st stage build client
+FROM node:latest as builder
 # copy package-lock.json (mainly) and package.json
-COPY /client .
+COPY /client/package*.json ./
+
 # npm ci for better performance in dependency resolution
-RUN npm install
+RUN npm ci
 # bundle client
-COPY /client .
+COPY /client /
 # build with webpack
 RUN npm run build
 
-# build server
+# 2nd stage: lightweight alpine container
 FROM nginx:alpine
-# install server dependencies
-RUN mkdir /app
-# copy from client builder
-COPY --from=client-builder /dist /app
 
-RUN ls /app
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-COPY nginx.conf /etc/nginx/
+COPY --from=builder /dist /usr/share/nginx/html/

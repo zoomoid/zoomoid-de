@@ -36,6 +36,13 @@ a
       border-radius: 8px
       width: 100%
       max-width: 180px
+  +sm
+    display: block
+    .cover
+      margin: 0 auto
+      max-width: none
+      img
+        max-width: none
   .labels
     padding: 0.5em 1em 0
     padding-bottom: 8px

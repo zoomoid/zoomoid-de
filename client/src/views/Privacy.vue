@@ -1,7 +1,8 @@
 <template>
-  <article>
+  <div>
+    <Navigation/>
     <section id="header">
-      <img src="@/assets/icon_512x512.png" alt="zoomoid logo" />
+      
       <h1>Privacy &amp; Data Protection</h1>
       <p>
         We strongly value your privacy and freedom. We therefore do not store
@@ -99,15 +100,13 @@
         </div>
       </form>
     </section>
-  </article>
+    <Footer/>
+  </div>
 </template>
 
 
 <style lang="sass" scoped>
 @import '@/assets/app.sass'
-
-article
-  padding: 0 2em
 
 #header
   img
@@ -115,6 +114,9 @@ article
     max-width: 360px
     margin: 2em auto 0
     display: block
+
+section 
+  padding: 0 2em
 
 #consent
   h3
@@ -131,7 +133,13 @@ article
 </style>
 
 <script>
+import Navigation from '@/components/Navigation.vue'
+import Footer from '@/components/Footer'
 export default {
+  components: {
+    Navigation,
+    Footer,
+  },
   data: function() {
     return {
       cookies:

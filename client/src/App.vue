@@ -15,7 +15,7 @@ $backlayer: white
 *
   outline: none
 body
-  +typography($white, $white)
+  +typography
   height: 100vh
   width: 100%
   // position: absolute

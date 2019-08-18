@@ -1,10 +1,11 @@
 <template>
-  <div class="">
+  <div>
     <div class="backdrop">
       <Navigation/>
     </div>
+    <Banner/>
     <div class="foreground">
-      <Header/>
+      <Intro/>
       <Work/>
       <About/>
     </div>
@@ -15,20 +16,21 @@
 </template>
 
 <script>
-import Header from '@/components/Header'
+import Intro from '@/views/Intro.vue'
 import Work from '@/views/Work.vue';
 import About from '@/views/About.vue';
 import Footer from '@/components/Footer.vue';
 import Navigation from '@/components/Navigation.vue';
-
+import Banner from '@/components/Banner.vue'
 export default {
-  name: 'intro',
+  name: 'MainView',
   components: {
-    Header,
+    Intro,
     Footer,
     Navigation,
     Work,
     About,
+    Banner,
   }
 }
 </script>
@@ -43,21 +45,10 @@ $backlayer: white
 .backdrop
   background: $backlayer
 .foreground
-  box-shadow: 0 -2px 4px rgba(0,0,0,0.2)
-  background: $backlayer
-  color: black
-  // max-width: $max-width
+  padding: 0 2em
+  +sm
+    padding: 0 1em
   margin: 0 auto
   width: 100%
-.footer
-  // max-width: $max-width
-  margin: 0 auto
-  width: 100%
-  background: $primary-background
-  & > footer
-    box-shadow: 0 -2px 4px rgba(0,0,0,0.2)
-    border-top-left-radius: $radius
-    border-top-right-radius: $radius
-    background: darken($primary-background, 5%)
 
 </style>

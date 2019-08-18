@@ -39,10 +39,12 @@
 </template>
 
 <style lang="sass" scoped>
+@import '../assets/app'
+ 
 footer
-  @import '../assets/app'
+  background: black
   box-shadow: 0 -1px 2px rgba(0,0,0,0.54)
-  +font(1em, normal, 0px)
+  +font
   padding: 1em 12px
   color: $text
   a 
@@ -64,5 +66,6 @@ footer
       margin-left: 8px
       display: none
   .privacy
-    +font-size(0.8em)
+    a
+      font-size: 0.8em !important
 </style>

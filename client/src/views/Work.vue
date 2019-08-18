@@ -68,19 +68,15 @@ export default {
 $radius: 32px
 #work
   flex-grow: 1
-  // height: 100vh
-  padding: 2em
   max-width: $max-width
   margin: 0 auto
-  +sm
-    padding: 1em
   +typography(black, black)
   .logo
     width: 240px
     text-align: center
   h1
     margin-top: 0
-    +font-size(5em)
+    +font-size(4em)
   .center-wrapper
     max-width: 1200px
     margin: 0 auto 2em

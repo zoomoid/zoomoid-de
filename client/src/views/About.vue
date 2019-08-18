@@ -61,14 +61,10 @@
 @import '@/assets/app.sass'
 
 #about
-  min-height: 100vh
   max-width: $max-width
-  margin: 0 auto
-  +typography(black, black)
-  .text
-    padding: 0 3em 2em
+  margin: 0 auto 4em
   h1
-    +font-size(5em)
+    +font-size(4em)
     +sm
       +font-size(4em)
   .contact--mail 

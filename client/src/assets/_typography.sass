@@ -1,39 +1,23 @@
-@import url('https://rsms.me/inter/inter.css');
-html 
-  font-family: 'Inter', sans-serif
-@supports (font-variation-settings: normal)
-  html
-    font-family: 'Inter var', sans-serif
+@import url('https://rsms.me/inter/inter.css')
 
-  
-  // Color-dynamic typesetting
-=typography($_text: $text, $_headings: $text)
+=typography($_text: black, $_headings: black)
   color: $_text
-  +font(14pt, black, bold, $_text)
-  .fas
-    font-family: Font Awesome\ 5 Free
-  .fab
-    font-family: Font Awesome\ 5 Brands
   h1 
     +heading(2em, $_headings, 8px)
   h2 
-    +heading(2em, $_headings, 4px,)
+    +heading(2em, $_headings, 4px)
   h3 
     +heading(2em, $_headings, 2px)
-  h4 
-    +heading(2em, $_headings)
-  h5 
-    +heading(2em, $_headings)
-  h6 
-    +heading(2em, $_headings)
   nav
-    +font(1em, normal, 0px, $_text)
+    +font
   p, li 
     word-wrap: normal
   a
     color: inherit
   code
     font-family: 'Roboto Mono'
+  p, a, label
+    +font
   .abstract, blockquote, em 
     font-family: 'Inter', sans-serif
     font-variant: normal

@@ -9,7 +9,7 @@ html
   // Color-dynamic typesetting
 =typography($_text: $text, $_headings: $text)
   color: $_text
-  +font(16pt, black, bold, $_text)
+  +font(14pt, black, bold, $_text)
   .fas
     font-family: Font Awesome\ 5 Free
   .fab
@@ -29,7 +29,6 @@ html
   nav
     +font(1em, normal, 0px, $_text)
   p, li 
-    line-height: 2
     word-wrap: normal
   a
     color: inherit

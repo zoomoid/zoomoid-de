@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Intro from './views/Intro.vue'
+import Main from './views/Main.vue'
 import Work from './views/Work.vue'
 import About from './views/About.vue'
 import Datkom from './views/Datkom.vue'
@@ -14,8 +14,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'intro',
-      component: Intro
+      name: 'main',
+      component: Main
     },{
       path: '/work',
       name: 'work',

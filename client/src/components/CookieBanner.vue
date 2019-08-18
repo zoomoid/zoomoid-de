@@ -53,6 +53,7 @@ export default {
   align-items: stretch
   max-width: $max-width
   margin: 0 auto
+  color: white
   span
     text-align: justify
     flex-grow: 0

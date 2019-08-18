@@ -87,7 +87,6 @@ nav
   h1
     margin: 0 16px 0 16px
     +font-size(20px)
-  +typography($black, $black)
   width: 100%
   top: 0
   left: 0
@@ -114,8 +113,10 @@ nav
         padding: 0 1em 0
       padding: 0 0em 16px
       a
+        font-family: 'Inter', sans-serif
+        letter-spacing: 1px
+        text-transform: uppercase
         line-height: 1
-        font-size: 24px
         font-weight: 600
         text-decoration: none
         border-bottom: solid 2px

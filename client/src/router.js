@@ -41,7 +41,7 @@ export default new Router({
         },
       ]
     },{
-      path: 'privacy',
+      path: '/privacy',
       name: 'Privacy',
       component: Privacy
     }

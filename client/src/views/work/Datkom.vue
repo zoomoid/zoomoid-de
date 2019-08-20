@@ -94,9 +94,7 @@
 @import '@/assets/app.sass'
 
 article
-  padding: 0 2em 1em
   .title
-    padding: 0 1em
     h1
       margin: 0 0 1em
       +font-size(3em)
@@ -119,8 +117,8 @@ article
   +md
     grid-template-columns: 1fr
   +lg
-    grid-template-columns: 1fr 1fr
-  grid-template-columns: 1fr 1fr
+    grid-template-columns: 1fr
+  grid-template-columns: 1fr
 
 .download
   margin-bottom: 1em

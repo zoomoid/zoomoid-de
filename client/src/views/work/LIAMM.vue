@@ -314,9 +314,7 @@
 @import '@/assets/app.sass'
 
 article
-  padding: 0 2em 1em
   .title
-    padding: 0 1em
     h1
       margin: 0 0 1em
       +font-size(3em)
@@ -374,23 +372,28 @@ article
 
 
 .container
+  padding-bottom: 1em
   display: flex
   align-items: baseline
+  div
+    flex-grow: 1
   b
+    font-family: 'Inter Var', sans-serif;
+    font-weight: 800
     width: 1em
-    +font-size(3em)
-    margin-right: 16px
+    +font-size(2em)
+    margin-right: 24px
     &::after
       content: '.'
   h3
     margin-top: 0
-    +font-size(3em)
+    +font-size(2em)
   .tag-list
     padding-bottom: 8px
     span
       margin: 0 4px 8px
       +font-size(0.8em)
-      color: rgba(255,255,255,0.5)
+      color: white
       background: black
       border-radius: 48px
       padding: 2px 8px
@@ -401,6 +404,8 @@ article
         background: rgba(15,15,15,1)
       &::before
         content: '# '
+  iframe
+    width: 100%
 </style>
 
 <script>

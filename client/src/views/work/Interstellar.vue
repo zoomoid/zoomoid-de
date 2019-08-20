@@ -66,9 +66,7 @@
 @import '@/assets/app.sass'
 
 article
-  padding: 0 2em 1em
   .title
-    padding: 0 1em
     h1
       margin: 0 0 1em
       +font-size(3em)

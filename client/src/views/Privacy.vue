@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Navigation/>
     <section id="header">
       
       <h1>Privacy &amp; Data Protection</h1>
@@ -121,7 +120,6 @@ section
 #consent
   h3
     font-size: 2em
-    letter-spacing: 0.5px
   form
     padding: 1em 0
     div 
@@ -133,11 +131,9 @@ section
 </style>
 
 <script>
-import Navigation from '@/components/Navigation.vue'
 import Footer from '@/components/Footer'
 export default {
   components: {
-    Navigation,
     Footer,
   },
   data: function() {

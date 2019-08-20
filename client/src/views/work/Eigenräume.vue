@@ -32,11 +32,9 @@
               href="https://open.spotify.com/album/3YaUvYAudEXEuCJzoONcgE?si=7w0dBX6pRNukrQrLDVh5ZA"
               class="provider"
             >
-              <i class="fab fa-spotify"></i>
               <b>Spotify</b>
             </a>
             <a href="https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888" class="provider">
-              <i class="fab fa-apple"></i>
               <b>Apple Music</b>
             </a>
             <a href="https://www.deezer.com/de/album/95294192" class="provider">
@@ -46,11 +44,9 @@
           <div class="buying">
             <h2>Buy!</h2>
             <a href="https://www.amazon.de/Eigenr%C3%A4ume-Zoomoid/dp/B07R92N45D/" class="provider">
-              <i class="fab fa-amazon"></i>
               <b>Amazon Music</b>
             </a>
             <a href="https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888" class="provider">
-              <i class="fab fa-itunes"></i>
               <b>iTunes</b>
             </a>
           </div>
@@ -60,7 +56,6 @@
 
           <div class="link">
             <a href="https://cdn.occloxium.com/a/zoomoid/eigenraeume.zip">
-              <i class="fas fa-file-archive"></i>
               Get the complete Standard Edition as MP3
             </a>
             <a
@@ -137,9 +132,7 @@
 @import '@/assets/app.sass'
 
 article
-  padding: 0 2em 1em
   .title
-    padding: 0 1em
     h1
       margin: 0 0 1em
       +font-size(3em)
@@ -184,11 +177,13 @@ article
   display: block
   padding: 16px 16px 0
   +font-size(1.5em)
+  b
+    font-weight: normal
   i
     margin-right: 16px
 .link
   a
-    text-decoration: none
+    text-decoration: underline
   +font-size(1.5em)
   padding: 16px 16px 0
   .small-subtitle

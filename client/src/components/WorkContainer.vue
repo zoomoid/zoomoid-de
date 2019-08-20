@@ -27,8 +27,7 @@ export default {
   padding-top: 1em
   a
     font-weight: 600
-    text-decoration: none
-    border-bottom: solid 1px black 
+    text-decoration: underline
 .wrapper
   max-width: 1024px
   margin: 0 auto

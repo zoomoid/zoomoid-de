@@ -1,39 +1,52 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import MainView from './views/MainView.vue'
-import Datkom from './views/Datkom.vue'
-import Privacy from './views/Privacy.vue'
-import Interstellar from './views/Interstellar.vue'
-import Eigenräume from './views/Eigenräume.vue'
-import LIAMM from './views/LIAMM.vue'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Datkom from '@/views/work/Datkom.vue';
+import Eigenräume from '@/views/work/Eigenräume.vue';
+import Interstellar from '@/views/work/Interstellar.vue';
+import LIAMM from '@/views/work/LIAMM.vue';
+import MainView from './views/MainView.vue';
+import Privacy from './views/Privacy.vue';
+import WorkContainer from '@/components/WorkContainer';
+
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
       name: 'MainView',
       component: MainView
     },{
-      path: '/datkom',
-      name: 'datkom',
-      component: Datkom
+      path: '/work',
+      name: 'Work',
+      component: WorkContainer,
+      children: [
+        {
+          path: 'datkom',
+          name: 'Datenkommunikation und Sicherheit',
+          component: Datkom
+        },{
+          path: 'interstellar',
+          name: 'Interstellar',
+          component: Interstellar
+        },{
+          path: 'eigenräume',
+          name: 'Eigenräume',
+          component: Eigenräume
+        },{
+          path: 'liamm',
+          name: 'Life Is About Making Memories',
+          component: LIAMM
+        },
+      ]
     },{
-      path: '/interstellar',
-      name: 'interstellar',
-      component: Interstellar
-    },{
-      path: '/eigenräume',
-      name: 'eigenräume',
-      component: Eigenräume
-    },{
-      path: '/liamm',
-      name: 'liamm',
-      component: LIAMM
-    },{
-      path: '/privacy',
-      name: 'privacy',
+      path: 'privacy',
+      name: 'Privacy',
       component: Privacy
     }
-  ]
+  ],
+  scrollBehavior () {
+    return { x: 0, y: 0 }
+  },
 })

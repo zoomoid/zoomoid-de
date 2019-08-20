@@ -1,6 +1,7 @@
 <template>
   <main id="app">
     <CookieBanner/>
+    <Navigation/>
     <router-view></router-view>
   </main>
 </template>
@@ -28,11 +29,13 @@ body
 
 <script>
 import CookieBanner from '@/components/CookieBanner.vue';
+import Navigation from '@/components/Navigation.vue';
 
 export default {
   name: 'App',
   components: {
     CookieBanner,
+    Navigation,
   }
 };
 </script>

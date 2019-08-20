@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="backdrop">
+    <!-- <div class="backdrop">
       <Navigation/>
-    </div>
+    </div> -->
     <Banner/>
     <div class="foreground">
       <Intro/>
@@ -20,14 +20,14 @@ import Intro from '@/views/Intro.vue'
 import Work from '@/views/Work.vue';
 import About from '@/views/About.vue';
 import Footer from '@/components/Footer.vue';
-import Navigation from '@/components/Navigation.vue';
+// import Navigation from '@/components/Navigation.vue';
 import Banner from '@/components/Banner.vue'
 export default {
   name: 'MainView',
   components: {
     Intro,
     Footer,
-    Navigation,
+    // Navigation,
     Work,
     About,
     Banner,

@@ -1,10 +1,5 @@
 <template>
   <div class="single">
-    <header class="breadcrumps">
-      <router-link to="/work">Work</router-link>
-      <span class="separator"></span>
-      <router-link to="/interstellar">zoomoid - Interstellar</router-link>
-    </header>
     <article>
       <div class="title">
         <h3>zoomoid</h3>
@@ -69,12 +64,6 @@
 
 <style lang="sass" scoped>
 @import '@/assets/app.sass'
-.breadcrumps
-  padding: 1em 2em
-  +font-size(0.8em)
-  .separator::before
-    content: '/'
-    margin: 0 4px
 
 article
   padding: 0 2em 1em

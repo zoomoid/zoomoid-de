@@ -1,5 +1,5 @@
 <template>
-  <router-link v-bind:to="entry.contentID">
+  <router-link v-bind:to="link">
     <div class="card">
       <div class="cover">
         <img v-bind:src="entry.coverUrl" alt="cover art for release">
@@ -75,6 +75,11 @@ export default {
   name: 'Card',
   props: {
     entry: Object
+  },
+  computed: {
+    link: function(){
+      return 'work/' + this.entry.contentID;
+    }
   }
 };
 </script>

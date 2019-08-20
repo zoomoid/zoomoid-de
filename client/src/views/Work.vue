@@ -3,7 +3,7 @@
 import Card from '@/components/Card.vue'
 
 export default {
-  name: 'work',
+  name: 'Work',
   components: {
     Card,
   },
@@ -58,8 +58,7 @@ export default {
       </p>
     </div>
     <div class="grid">
-      <Card v-for="item in entries" v-bind:key="item.contentID" v-bind:entry="item"
-      />
+      <Card v-for="item in entries" v-bind:key="item.contentID" v-bind:entry="item"/>
     </div>
   </div>
 </template>

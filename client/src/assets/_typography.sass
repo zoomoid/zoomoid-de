@@ -1,6 +1,10 @@
 @import url('https://rsms.me/inter/inter.css')
 
 =typography($_text: black, $_headings: black)
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 16pt
+  & > *
+    font-family: inherit
   color: $_text
   h1 
     +heading(2em, $_headings, 8px)
@@ -19,7 +23,7 @@
   p, a, label
     +font
   .abstract, blockquote, em 
-    font-family: 'Inter', sans-serif
+    font-family: 'Lexend Deca', sans-serif
     font-variant: normal
     font-style: normal
     font-weight: 300

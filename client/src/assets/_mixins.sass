@@ -1,24 +1,25 @@
-=font($size, $color: $text, $weight: 600, $spacing: 0pt)
-  font-family: 'DM Sans', sans-serif
-  +font-size($size)
+=font
+  font-family: 'Lexend Deca', serif
+  font-size: 16pt
   line-height: 1.5
-  color: $color
-  // text-transform: uppercase
-  letter-spacing: 1px
+  font-weight: 200
+  color: black
+  letter-spacing: -0.04em
 
-=heading($size, $color: $text, $spacing: 0pt, $condense: 0pt)
-  font-family: 'DM Sans', sans-serif
-  font-weight: 700
-  +font-size($size * 2)
+=heading($size, $color: black, $spacing: 0pt)
+  font-family: 'Inter Var', sans-serif
+  font-weight: bold
+  font-size: 36pt
   margin-bottom: $spacing
+  letter-spacing: -0.04em
   line-height: 1
   color: $color
   // text-transform: uppercase
 
 =title
-  font-family: 'Muli', sans-serif
+  font-family: 'Inter', sans-serif
 =body
-  font-family: 'DM Sans', sans-serif
+  font-family: 'Lexend Deca', sans-serif
 =rounded
   border-top-left-radius: $radius
   border-top-right-radius: $radius

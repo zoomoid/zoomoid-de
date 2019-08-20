@@ -3,31 +3,31 @@
     <div class="references">
       <li>
         <a href="https://open.spotify.com/artist/6RRD9ulVsLuDIqFzuFvSL8?si=a8mm8a2RTaO1Zo6SyfwZVQ">
-          <i class="fab fa-spotify"></i>
+          <i class="icon-spotify"></i>
           <span>Spotify</span>
         </a>
       </li>
       <li>
         <a href="https://instagram.com/zoomoid">
-          <i class="fab fa-instagram"></i>
+          <i class="icon-instagram"></i>
           <span>Instagram</span>
         </a>
       </li>
       <li>
         <a href="https://www.youtube.com/channel/UCg0yVDwpB9QphFbsGnV-8tQ/">
-          <i class="fab fa-youtube"></i>
+          <i class="icon-youtube"></i>
           <span>YouTube</span>
         </a>
       </li>
       <li>
         <a href="https://soundcloud.com/zoomoid">
-          <i class="fab fa-soundcloud"></i>
+          <i class="icon-soundcloud2"></i>
           <span>SoundCloud</span>
         </a>
       </li>
       <li>
         <a href="https://github.com/occloxium">
-          <i class="fab fa-github"></i>
+          <i class="icon-github"></i>
           <span>GitHub</span>
         </a>
       </li>
@@ -39,10 +39,12 @@
 </template>
 
 <style lang="sass" scoped>
+@import '../assets/app'
+ 
 footer
-  @import '../assets/app'
+  background: black
   box-shadow: 0 -1px 2px rgba(0,0,0,0.54)
-  +font(1em, normal, 0px)
+  +font
   padding: 1em 12px
   color: $text
   a 
@@ -64,5 +66,6 @@ footer
       margin-left: 8px
       display: none
   .privacy
-    +font-size(0.8em)
+    a
+      font-size: 0.8em !important
 </style>

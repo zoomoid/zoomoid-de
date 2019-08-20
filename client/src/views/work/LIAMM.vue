@@ -1,10 +1,5 @@
 <template>
   <div class="single">
-    <header class="breadcrumps">
-      <router-link to="/work">Work</router-link>
-      <span class="separator"></span>
-      <router-link to="/liamm">zoomoid - Life Is About Making Memories</router-link>
-    </header>
     <article>
       <div class="title">
         <h3>zoomoid</h3>
@@ -80,7 +75,7 @@
             >(Alternatively as FLAC)</a>
           </div>
           <div class="tracklist">
-            <div class="blocked" v-if="blockEmbedded"></div>
+            <Block v-if="blockEmbedded"/>
             <div v-if="!blockEmbedded">
               <div class="container" id="intro">
                 <b>1</b>
@@ -317,17 +312,9 @@
 
 <style lang="sass" scoped>
 @import '@/assets/app.sass'
-.breadcrumps
-  padding: 1em 2em
-  +font-size(0.8em)
-  .separator::before
-    content: '/'
-    margin: 0 4px
 
 article
-  padding: 0 2em 1em
   .title
-    padding: 0 1em
     h1
       margin: 0 0 1em
       +font-size(3em)
@@ -341,20 +328,6 @@ article
     max-width: 550px
     margin: 0 auto
     display: block
-
-.blocked
-  height: 150px
-  width: 100%
-  background: rgba(12,12,12,1)
-  display: flex
-  align-items: center
-  border-radius: 12px
-  &::after
-    content: 'Third-party content blocked. You can enable it in the privacy settings.'
-    width: 50%
-    margin: 0 auto
-    display: block
-    text-align: center
 
 .tracklist
   padding: 2em 0 0
@@ -385,23 +358,28 @@ article
 
 
 .container
+  padding-bottom: 1em
   display: flex
   align-items: baseline
+  div
+    flex-grow: 1
   b
+    font-family: 'Inter Var', sans-serif;
+    font-weight: 800
     width: 1em
-    +font-size(3em)
-    margin-right: 16px
+    +font-size(2em)
+    margin-right: 24px
     &::after
       content: '.'
   h3
     margin-top: 0
-    +font-size(3em)
+    +font-size(2em)
   .tag-list
     padding-bottom: 8px
     span
       margin: 0 4px 8px
       +font-size(0.8em)
-      color: rgba(255,255,255,0.5)
+      color: white
       background: black
       border-radius: 48px
       padding: 2px 8px
@@ -412,10 +390,17 @@ article
         background: rgba(15,15,15,1)
       &::before
         content: '# '
+  iframe
+    width: 100%
 </style>
 
 <script>
+import Block from '@/components/Block';
+
 export default {
+  components: {
+    Block
+  },
   data: function() {
     return {
       blockEmbedded:

@@ -3,7 +3,7 @@
 import Card from '@/components/Card.vue'
 
 export default {
-  name: 'work',
+  name: 'Work',
   components: {
     Card,
   },
@@ -51,15 +51,14 @@ export default {
 <template>
   <div id="work">
     <div class="center-wrapper">
-      <img class="logo" src="https://cdn.occloxium.com/i/zoomoid/logos/logo.png">
+      <!-- <img class="logo" src="https://cdn.occloxium.com/i/zoomoid/logos/logo.png"> -->
       <h1>Work</h1>
       <p>
         Zoomoids past work and discography
       </p>
     </div>
     <div class="grid">
-      <Card v-for="item in entries" v-bind:key="item.contentID" v-bind:entry="item"
-      />
+      <Card v-for="item in entries" v-bind:key="item.contentID" v-bind:entry="item"/>
     </div>
   </div>
 </template>
@@ -67,20 +66,16 @@ export default {
 @import '@/assets/app.sass'
 $radius: 32px
 #work
-  border-top-left-radius: $radius
-  border-top-right-radius: $radius
   flex-grow: 1
-  // height: 100vh
-  padding: 2em
-  +sm
-    padding: 1em
-  +typography($white, $white)
+  max-width: $max-width
+  margin: 0 auto
+  +typography(black, black)
   .logo
     width: 240px
     text-align: center
   h1
     margin-top: 0
-    +font-size(5em)
+    +font-size(4em)
   .center-wrapper
     max-width: 1200px
     margin: 0 auto 2em
@@ -94,8 +89,8 @@ $radius: 32px
     +md
       grid-template-columns: 1fr
     +lg
-      grid-template-columns: 1fr 1fr
-    grid-template-columns: 1fr 1fr 1fr
+      grid-template-columns: 1fr
+    grid-template-columns: 1fr
     grid-column-gap: 2em
     grid-row-gap: 2em
 

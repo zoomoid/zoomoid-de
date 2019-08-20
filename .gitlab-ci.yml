@@ -35,7 +35,7 @@ deploy:
     url: https://www.zoomoid.de
   script:
     - docker-compose down
-    - docker-compose up -d
+    - docker-compose up --detach
   tags:
     - occloxium-shell
 
@@ -47,7 +47,7 @@ deploy-dev:
     name: Development
     url: https://staging.zoomoid.de
   script:
-    - docker-compose -f staging.yml down
-    - docker-compose -f staging.yml up -d
+    - docker-compose down
+    - docker-compose up --detach
   tags:
     - occloxium-shell

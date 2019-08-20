@@ -1,12 +1,5 @@
 <template>
   <div class="single">
-    <header class="breadcrumps">
-      <router-link to="/work">Work</router-link>
-      <span class="separator"></span>
-      <router-link
-        to="/datkom"
-      >Dat&shy;en&shy;kom&shy;mu&shy;ni&shy;ka&shy;ti&shy;on &amp; Sicherheit</router-link>
-    </header>
     <article>
       <div class="title">
         <h3>Zoomoid, Simon Kaiser, Dirk Thißen</h3>
@@ -41,7 +34,7 @@
         <section class="streaming">
           <h1>Streaming</h1>
           <div class="provider">
-            <div class="blocked" v-if="blockEmbedded"></div>
+            <Block v-if="blockEmbedded"/>
             <div v-if="!blockEmbedded">
               <a href="#" class="soundcloud">
                 <i class="fab fa-spotify"></i>
@@ -58,7 +51,7 @@
             </div>
           </div>
           <div class="provider">
-            <div class="blocked" v-if="blockEmbedded"></div>
+            <Block v-if="blockEmbedded"/>
             <div v-if="!blockEmbedded">
               <a href="#" class="soundcloud">
                 <i class="fab fa-soundcloud"></i>
@@ -75,7 +68,7 @@
             </div>
           </div>
           <div class="provider">
-            <div class="blocked" v-if="blockEmbedded"></div>
+            <Block v-if="blockEmbedded"/>
             <div v-if="!blockEmbedded">
               <a href="#" class="apple-music">
                 <i class="fab fa-apple"></i>
@@ -99,17 +92,9 @@
 
 <style lang="sass" scoped>
 @import '@/assets/app.sass'
-.breadcrumps
-  padding: 1em 2em
-  +font-size(0.8em)
-  .separator::before
-    content: '/'
-    margin: 0 4px
 
 article
-  padding: 0 2em 1em
   .title
-    padding: 0 1em
     h1
       margin: 0 0 1em
       +font-size(3em)
@@ -132,8 +117,8 @@ article
   +md
     grid-template-columns: 1fr
   +lg
-    grid-template-columns: 1fr 1fr
-  grid-template-columns: 1fr 1fr
+    grid-template-columns: 1fr
+  grid-template-columns: 1fr
 
 .download
   margin-bottom: 1em
@@ -157,23 +142,15 @@ article
         font-size: 48px
       b
         padding-left: 8px
-.blocked
-  height: 150px
-  width: 100%
-  background: rgba(12,12,12,1)
-  display: flex
-  align-items: center
-  border-radius: 12px
-  &::after
-    content: 'Third-party content blocked. You can enable it in the privacy settings.'
-    width: 50%
-    margin: 0 auto
-    display: block
-    text-align: center
 </style>
 
 <script>
+import Block from '@/components/Block';
+
 export default {
+  components: {
+    Block
+  },
   data: function() {
     return {
       blockEmbedded:

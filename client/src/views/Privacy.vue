@@ -1,7 +1,7 @@
 <template>
-  <article>
+  <div>
     <section id="header">
-      <img src="@/assets/icon_512x512.png" alt="zoomoid logo" />
+      
       <h1>Privacy &amp; Data Protection</h1>
       <p>
         We strongly value your privacy and freedom. We therefore do not store
@@ -99,15 +99,13 @@
         </div>
       </form>
     </section>
-  </article>
+    <Footer/>
+  </div>
 </template>
 
 
 <style lang="sass" scoped>
 @import '@/assets/app.sass'
-
-article
-  padding: 0 2em
 
 #header
   img
@@ -116,10 +114,12 @@ article
     margin: 2em auto 0
     display: block
 
+section 
+  padding: 0 2em
+
 #consent
   h3
     font-size: 2em
-    letter-spacing: 0.5px
   form
     padding: 1em 0
     div 
@@ -131,7 +131,11 @@ article
 </style>
 
 <script>
+import Footer from '@/components/Footer'
 export default {
+  components: {
+    Footer,
+  },
   data: function() {
     return {
       cookies:

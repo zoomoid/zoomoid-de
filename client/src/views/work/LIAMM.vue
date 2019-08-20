@@ -75,7 +75,7 @@
             >(Alternatively as FLAC)</a>
           </div>
           <div class="tracklist">
-            <div class="blocked" v-if="blockEmbedded"></div>
+            <Block v-if="blockEmbedded"/>
             <div v-if="!blockEmbedded">
               <div class="container" id="intro">
                 <b>1</b>
@@ -329,20 +329,6 @@ article
     margin: 0 auto
     display: block
 
-.blocked
-  height: 150px
-  width: 100%
-  background: rgba(12,12,12,1)
-  display: flex
-  align-items: center
-  border-radius: 12px
-  &::after
-    content: 'Third-party content blocked. You can enable it in the privacy settings.'
-    width: 50%
-    margin: 0 auto
-    display: block
-    text-align: center
-
 .tracklist
   padding: 2em 0 0
   li
@@ -409,7 +395,12 @@ article
 </style>
 
 <script>
+import Block from '@/components/Block';
+
 export default {
+  components: {
+    Block
+  },
   data: function() {
     return {
       blockEmbedded:

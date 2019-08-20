@@ -34,7 +34,7 @@
         <section class="streaming">
           <h1>Streaming</h1>
           <div class="provider">
-            <div class="blocked" v-if="blockEmbedded"></div>
+            <Block v-if="blockEmbedded"/>
             <div v-if="!blockEmbedded">
               <a href="#" class="soundcloud">
                 <i class="fab fa-spotify"></i>
@@ -51,7 +51,7 @@
             </div>
           </div>
           <div class="provider">
-            <div class="blocked" v-if="blockEmbedded"></div>
+            <Block v-if="blockEmbedded"/>
             <div v-if="!blockEmbedded">
               <a href="#" class="soundcloud">
                 <i class="fab fa-soundcloud"></i>
@@ -68,7 +68,7 @@
             </div>
           </div>
           <div class="provider">
-            <div class="blocked" v-if="blockEmbedded"></div>
+            <Block v-if="blockEmbedded"/>
             <div v-if="!blockEmbedded">
               <a href="#" class="apple-music">
                 <i class="fab fa-apple"></i>
@@ -142,23 +142,15 @@ article
         font-size: 48px
       b
         padding-left: 8px
-.blocked
-  height: 150px
-  width: 100%
-  background: rgba(12,12,12,1)
-  display: flex
-  align-items: center
-  border-radius: 12px
-  &::after
-    content: 'Third-party content blocked. You can enable it in the privacy settings.'
-    width: 50%
-    margin: 0 auto
-    display: block
-    text-align: center
 </style>
 
 <script>
+import Block from '@/components/Block';
+
 export default {
+  components: {
+    Block
+  },
   data: function() {
     return {
       blockEmbedded:

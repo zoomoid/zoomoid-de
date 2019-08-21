@@ -21,7 +21,7 @@ export default {
         {
           contentID: 'liamm',
           artist: 'zoomoid',
-          title: 'Life Is A&shy;bout Ma&shy;king Me&shy;mo&shy;ries',
+          title: 'Life Is About Making Memories',
           coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/liamm/cover.png',
           date: '22.09.2018',
           id: 'A01'

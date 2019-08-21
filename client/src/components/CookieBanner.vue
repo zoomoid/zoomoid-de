@@ -1,11 +1,11 @@
 <template>
   <div v-if="!cookiesExist() && !hidden" class="wrapper">
     <div class="banner">
-      <span>
+      <span class="text">
         By accepting our cookie usage, you agree to store your settings regarding
         third-party content on this website as a cookie on your machine.
       </span>
-      <div>
+      <div class="actions">
         <button v-on:click="accept()">Accept</button>
         <router-link to="/privacy">More information</router-link>
       </div>
@@ -51,20 +51,20 @@ export default {
   align-items: stretch
   margin: 0 auto
   color: white
-
-  div
-    margin-left: 12px
+  max-width: 768px
+  .text
     flex-grow: 1
+  .actions
+    margin-left: 12px
+    // flex-grow: 1
     button
-      width: 100%
       background: white
       color: black
-      border: solid 2px white
+      border: none
       outline: none
       border-radius: 4px
-      letter-spacing: 2px
-      min-width: 150px
-      padding: 4px 32px
+      letter-spacing: 1px
+      padding: 2px 32px
       display: block
       text-transform: uppercase
       font-weight: bold

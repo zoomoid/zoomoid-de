@@ -25,41 +25,59 @@
           <br />However, I want everybody to enjoy it equally, hence I provide it for download
           for free here.
         </p>
-        <div class="flex-container">
+        <div id="external">
           <div class="streaming">
             <h2>Stream!</h2>
-            <a
-              href="https://open.spotify.com/album/3YaUvYAudEXEuCJzoONcgE?si=7w0dBX6pRNukrQrLDVh5ZA"
-              class="provider"
-            >
-              <b>Spotify</b>
-            </a>
-            <a href="https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888" class="provider">
-              <b>Apple Music</b>
-            </a>
-            <a href="https://www.deezer.com/de/album/95294192" class="provider">
-              <b>Deezer</b>
-            </a>
+            <div class="flex flex-container flex-direction--row">
+              <a
+                href="https://open.spotify.com/album/3YaUvYAudEXEuCJzoONcgE?si=7w0dBX6pRNukrQrLDVh5ZA"
+                class="provider"
+              >
+                <b>Spotify</b>
+              </a>
+              <a
+                class="provider" 
+                href="https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888"
+              >
+                <b>Apple Music</b>
+              </a>
+              <a
+                class="provider" 
+                href="https://www.deezer.com/de/album/95294192"
+              >
+                <b>Deezer</b>
+              </a>
+            </div>
           </div>
           <div class="buying">
             <h2>Buy!</h2>
-            <a href="https://www.amazon.de/Eigenr%C3%A4ume-Zoomoid/dp/B07R92N45D/" class="provider">
-              <b>Amazon Music</b>
-            </a>
-            <a href="https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888" class="provider">
-              <b>iTunes</b>
-            </a>
+            <div class="flex flex-container flex-direction--row">
+              <a
+                class="provider" 
+                href="https://www.amazon.de/Eigenr%C3%A4ume-Zoomoid/dp/B07R92N45D/"
+              >
+                <b>Amazon Music</b>
+              </a>
+              <a
+                class="provider" 
+                href="https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888"
+              >
+                <b>iTunes</b>
+              </a>
+            </div>
           </div>
         </div>
         <div class="download">
           <h2>Listen &amp; Download</h2>
-
-          <div class="link">
-            <a href="https://cdn.occloxium.com/a/zoomoid/eigenraeume.zip">
+          <div class="flex flex-container flex-direction--column">
+            <a
+              class="provider" 
+              href="https://cdn.occloxium.com/a/zoomoid/eigenraeume.zip"
+            >
               Get the complete Standard Edition as MP3
             </a>
             <a
-              class="small-subtitle"
+              class="provider small"
               href="https://cdn.occloxium.com/a/zoomoid/eigenraeume.flac.zip"
             >(Alternatively as FLAC)</a>
           </div>
@@ -156,26 +174,56 @@ article
     width: 100%
     display: block
 .muted
-  color: rgba(255,255,255,0.5)
+  opacity: 0.5
 .centered
   text-align: center
+
+.flex.flex-container
+  display: flex
+  border-radius: 4px
+  &.flex-direction
+    &--row
+      flex-direction: row
+    &--column
+      flex-direction: column
+  & > *
+    flex-grow: 1
+    text-align: center
+    border-radius: 8px
+  &.flex-direction--row
+    & > *:not(:first-child)
+      padding-left: 1em
+      border-top-left-radius: 0px
+      border-bottom-left-radius: 0px
+    & > *:not(:last-child)
+      padding-right: 1em 
+      border-top-right-radius: 0px
+      border-bottom-right-radius: 0px
+  &.flex-direction--column
+    & > *:not(:first-child)
+      padding-left: 1em
+      border-top-left-radius: 0px
+      border-top-right-radius: 0px
+    & > *:not(:last-child)
+      padding-right: 1em 
+      border-bottom-left-radius: 0px
+      border-bottom-right-radius: 0px
 .provider
   display: block
-  padding: 16px 16px 0
-  +font-size(1.5em)
-  b
-    font-weight: normal
+  color: white
+  background: black
+  transition: all 0.1s ease
+  &:active, &:hover
+    background: white
+    color: black
+  padding: 1em 0 1em
+  & *
+    color: inherit
   i
     margin-right: 16px
-.link
-  a
-    text-decoration: underline
-  +font-size(1.5em)
-  padding: 16px 16px 0
-  .small-subtitle
-    color: rgba(255,255,255,0.5)
+  &.small
     +font-size(0.7em)
-    display: block
+
 </style>
 
 <script>

@@ -67,8 +67,8 @@
     +font-size(4em)
     +sm
       +font-size(4em)
-  .contact--mail 
-    +font-size(1em) 
+  .contact--mail
+    +font-size(1em)
     color: black
   .references
     padding-left: 0
@@ -81,7 +81,7 @@
         margin: 0 auto
         color: black
         &:active, &:hover
-          color: $theme--accent
+          color: $blue
         text-decoration: none
         i
           text-align: right

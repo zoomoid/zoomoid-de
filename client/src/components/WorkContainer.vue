@@ -4,7 +4,7 @@
       <div class="breadcrump">
         <router-link to="/"><i class="icon-home"></i></router-link>
         <span class="spacer">→</span>
-        <router-link to="$route.name">{{$route.name}}</router-link>
+        <router-link v-bind:to="$route.path">{{$route.name}}</router-link>
       </div>
       <router-view></router-view>
     </div>
@@ -24,13 +24,16 @@ export default {
   padding: 0 8px
 
 .breadcrump
-  padding-top: 1em
+  padding: 1em 2em 1em
+  box-shadow: 0 2px 2px rgba(0,0,0,0.1)
+  font-size: 12pt
+  *
+    font-size: inherit
   a
     font-weight: 600
     text-decoration: underline
 .wrapper
-  padding: 0 2em 1em
-  max-width: 1024px
+
   margin: 0 auto
 
 </style>

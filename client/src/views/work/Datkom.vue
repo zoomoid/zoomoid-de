@@ -91,57 +91,8 @@
 </template>
 
 <style lang="sass" scoped>
-@import '@/assets/app.sass'
-
-article
-  .title
-    h1
-      margin: 0 0 1em
-      +font-size(3em)
-    h3
-      font-size: 2em
-      margin: 1em 0 0
-      font-weight: 500
-.cover
-  img
-    width: 80%
-    max-width: 550px
-    margin: 0 auto
-    display: block
-
-.grid
-  display: grid
-  grid-column-gap: 2em
-  +sm
-    grid-template-columns: 1fr
-  +md
-    grid-template-columns: 1fr
-  +lg
-    grid-template-columns: 1fr
-  grid-template-columns: 1fr
-
-.download
-  margin-bottom: 1em
-  h1
-    margin: 0 auto 12px
-  audio
-    display: block
-    width: 100%
-.streaming
-  // margin: 0 auto
-  h1
-    margin: 0
-  .provider
-    padding-top: 1em
-    a
-      padding-bottom: 1em
-      display: flex
-      align-items: center
-      text-decoration: none
-      i
-        font-size: 48px
-      b
-        padding-left: 8px
+@import '@/assets/single.sass'
++single
 </style>
 
 <script>

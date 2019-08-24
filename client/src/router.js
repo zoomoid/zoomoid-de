@@ -1,12 +1,16 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Datkom from '@/views/work/Datkom.vue';
-import Eigenräume from '@/views/work/Eigenräume.vue';
-import Interstellar from '@/views/work/Interstellar.vue';
-import LIAMM from '@/views/work/LIAMM.vue';
 import MainView from './views/MainView.vue';
 import Privacy from './views/Privacy.vue';
 import WorkContainer from '@/components/WorkContainer';
+import {
+  Datkom,
+  Eigenräume,
+  Interstellar,
+  LIAMM,
+  EigenräumeExtendedEdition,
+  AtomicSpark
+} from '@/views/work/index.js';
 
 Vue.use(Router)
 
@@ -38,7 +42,15 @@ export default new Router({
           path: 'liamm',
           name: 'Life Is About Making Memories',
           component: LIAMM
-        },
+        },{
+          path: 'eigenräume-extended-edition',
+          name: 'Eigenräume (Extended Edition)',
+          component: EigenräumeExtendedEdition
+        },{
+          path: 'atomic-spark',
+          name: 'Atomic Spark (Single)',
+          component: AtomicSpark
+        }
       ]
     },{
       path: '/privacy',

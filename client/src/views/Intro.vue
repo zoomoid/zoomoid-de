@@ -62,6 +62,8 @@
   .text
     h1
       +font-size(6em)
+      +sm
+        +font-size(4em)
     p
       text-align: justify
     z-index: 10

@@ -74,7 +74,7 @@
     padding-left: 0
     li
       list-style: none outside none
-      line-height: 2
+      padding: 0.5em 0
       +font-size(1em)
       a
         display: block
@@ -89,6 +89,7 @@
           margin-right: 8px
         span
           text-align: left
+          padding-left: 0.5em
 
 </style>
 

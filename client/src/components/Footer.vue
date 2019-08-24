@@ -40,20 +40,20 @@
 
 <style lang="sass" scoped>
 @import '../assets/app'
- 
+
 footer
   background: black
   box-shadow: 0 -1px 2px rgba(0,0,0,0.54)
   +font
   padding: 1em 12px
   color: $text
-  a 
+  a
     color: inherit
     text-decoration: none
     transition: color $transition-time $transition-curve
     &:hover,
-    &:active 
-      color: $theme--accent
+    &:active
+      color: $blue
 
   .references
     display: flex
@@ -62,7 +62,7 @@ footer
     li
       padding: 0 1em
       list-style: none outside none
-    span 
+    span
       margin-left: 8px
       display: none
   .privacy

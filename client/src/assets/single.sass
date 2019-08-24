@@ -1,0 +1,91 @@
+@import 'app.sass'
+
+=single
+  article
+    padding: 0 2em 1em
+    & > *
+      max-width: 1024px
+    *
+      color: inherit
+    p
+      line-height: 1.5
+      text-align: justify
+    .title
+      h1
+        margin: 0 0 1em
+        +font-size(3em)
+      h3
+        font-size: 2em
+        margin: 0 0 0
+        padding-top: 1em
+        font-weight: 500
+  .cover
+    img
+      width: 80%
+      max-width: 550px
+      margin: 0 auto
+      display: block
+
+  .tracklist
+    margin: 0
+    padding: 0
+    li
+      padding: 0 0 24px
+    audio
+      width: 100%
+      display: block
+  .muted
+    opacity: 0.5
+  .centered
+    text-align: center
+
+  .flex.flex-container
+    display: flex
+    border-radius: 4px
+    &.flex-direction
+      &--row
+        flex-direction: row
+      &--column
+        flex-direction: column
+    & > *
+      flex-grow: 1
+      text-align: center
+      border-radius: 8px
+    &.flex-direction--row
+      & > *:not(:first-child)
+        padding-left: 1em
+        border-top-left-radius: 0px
+        border-bottom-left-radius: 0px
+      & > *:not(:last-child)
+        padding-right: 1em 
+        border-top-right-radius: 0px
+        border-bottom-right-radius: 0px
+    &.flex-direction--column
+      & > *:not(:first-child)
+        padding-left: 1em
+        border-top-left-radius: 0px
+        border-top-right-radius: 0px
+      & > *:not(:last-child)
+        padding-right: 1em 
+        border-bottom-left-radius: 0px
+        border-bottom-right-radius: 0px
+  .provider
+    display: block
+    &:not(.embedded)
+      color: white
+      background: black
+      transition: all 0.1s ease
+      &:active, &:hover
+        background: white
+        color: black
+    padding: 1em 0 1em
+    & *
+      color: inherit
+    i
+      margin-right: 16px
+    &.small
+      +font-size(0.7em)
+  .download
+    audio
+      display: block
+      width: 100%

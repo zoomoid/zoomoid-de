@@ -36,13 +36,13 @@
                 <b>Spotify</b>
               </a>
               <a
-                class="provider" 
+                class="provider"
                 href="https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888"
               >
                 <b>Apple Music</b>
               </a>
               <a
-                class="provider" 
+                class="provider"
                 href="https://www.deezer.com/de/album/95294192"
               >
                 <b>Deezer</b>
@@ -53,13 +53,13 @@
             <h2>Buy!</h2>
             <div class="flex flex-container flex-direction--row">
               <a
-                class="provider" 
+                class="provider"
                 href="https://www.amazon.de/Eigenr%C3%A4ume-Zoomoid/dp/B07R92N45D/"
               >
                 <b>Amazon Music</b>
               </a>
               <a
-                class="provider" 
+                class="provider"
                 href="https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888"
               >
                 <b>iTunes</b>
@@ -71,7 +71,7 @@
           <h2>Listen &amp; Download</h2>
           <div class="flex flex-container flex-direction--column">
             <a
-              class="provider" 
+              class="provider"
               href="https://cdn.occloxium.com/a/zoomoid/eigenraeume.zip"
             >
               Get the complete Standard Edition as MP3
@@ -147,83 +147,8 @@
 </template>
 
 <style lang="sass" scoped>
-@import '@/assets/app.sass'
-
-article
-  .title
-    h1
-      margin: 0 0 1em
-      +font-size(3em)
-    h3
-      font-size: 2em
-      margin: 1em 0 0
-      font-weight: 500
-.cover
-  img
-    width: 80%
-    max-width: 550px
-    margin: 0 auto
-    display: block
-
-.tracklist
-  margin: 0
-  padding: 0
-  li
-    padding: 0 0 24px
-  audio
-    width: 100%
-    display: block
-.muted
-  opacity: 0.5
-.centered
-  text-align: center
-
-.flex.flex-container
-  display: flex
-  border-radius: 4px
-  &.flex-direction
-    &--row
-      flex-direction: row
-    &--column
-      flex-direction: column
-  & > *
-    flex-grow: 1
-    text-align: center
-    border-radius: 8px
-  &.flex-direction--row
-    & > *:not(:first-child)
-      padding-left: 1em
-      border-top-left-radius: 0px
-      border-bottom-left-radius: 0px
-    & > *:not(:last-child)
-      padding-right: 1em 
-      border-top-right-radius: 0px
-      border-bottom-right-radius: 0px
-  &.flex-direction--column
-    & > *:not(:first-child)
-      padding-left: 1em
-      border-top-left-radius: 0px
-      border-top-right-radius: 0px
-    & > *:not(:last-child)
-      padding-right: 1em 
-      border-bottom-left-radius: 0px
-      border-bottom-right-radius: 0px
-.provider
-  display: block
-  color: white
-  background: black
-  transition: all 0.1s ease
-  &:active, &:hover
-    background: white
-    color: black
-  padding: 1em 0 1em
-  & *
-    color: inherit
-  i
-    margin-right: 16px
-  &.small
-    +font-size(0.7em)
-
+@import '@/assets/single.sass'
++single
 </style>
 
 <script>

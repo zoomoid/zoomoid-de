@@ -11,6 +11,14 @@ export default {
     return {
       entries: [
         {
+          contentID: 'eigenräume-extended-edition',
+          artist: 'zoomoid',
+          title: 'Eigenräume (Extended Edition)',
+          coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/eigenr%C3%A4ume/extended.png',
+          date: '24.08.2019',
+          id: 'A03'
+        },
+        {
           contentID: 'eigenräume',
           artist: 'zoomoid',
           title: 'Eigenräume',
@@ -41,6 +49,14 @@ export default {
           coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/interstellar/cover.png',
           date: '22.07.2018',
           id: 'S05'
+        },
+        {
+          contentID: 'atomic-spark',
+          artist: 'zoomoid',
+          title: 'Atomic Spark (Single)',
+          coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/atomic-spark/cover.png',
+          date: '22.09.2017',
+          id: 'S04'
         }
       ]
     }

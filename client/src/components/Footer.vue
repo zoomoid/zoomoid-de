@@ -53,7 +53,7 @@ footer
     transition: color $transition-time $transition-curve
     &:hover,
     &:active
-      color: $blue
+      +fade
 
   .references
     display: flex

@@ -3,17 +3,17 @@
   font-size: 16pt
   line-height: 1.5
   font-weight: 200
-  color: black
+  color: white
   letter-spacing: -0.04em
 
-=heading($size, $color: black, $spacing: 0pt)
+=heading($size, $color: white, $spacing: 0pt)
   font-family: 'Inter Var', sans-serif
   font-weight: bold
   font-size: 36pt
   margin-bottom: $spacing
   letter-spacing: -0.04em
   line-height: 1
-  color: $color
+  color: white
   // text-transform: uppercase
 
 =title
@@ -38,3 +38,40 @@
 =xl
   @media (min-width: #{$desktop-width})
     @content
+
+=fade
+  background: -webkit-linear-gradient(-45deg,$orange,$pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: white;
+=fade2
+  background: -webkit-linear-gradient(45deg, $teal, $blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: white;
+
+=link
+  padding: 4px 8px
+  overflow-x: hidden
+  position: relative
+  transition-delay: 0.4s
+  transition: color 0.1s linear
+  color: white
+  &::after
+    transition: width 0.5s cubic-bezier(1, 0, 0, 1)
+    content: ''
+    width: 0%
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    // transform: translateX(-100%)
+    background: white
+    z-index: -1
+  &:hover, &:active
+    color: black
+    transition: color 0.1s linear
+    &::after
+      width: 100%
+      transition: width 0.15s cubic-bezier(1, 0, 0, 1)

@@ -64,12 +64,12 @@
   max-width: $max-width
   margin: 0 auto 4em
   h1
+    +fade
     +font-size(4em)
     +sm
       +font-size(4em)
   .contact--mail
     +font-size(1em)
-    color: black
   .references
     padding-left: 0
     li
@@ -77,11 +77,8 @@
       padding: 0.5em 0
       +font-size(1em)
       a
-        display: block
         margin: 0 auto
-        color: black
-        &:active, &:hover
-          color: $blue
+        +link
         text-decoration: none
         i
           text-align: right

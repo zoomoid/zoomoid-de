@@ -65,8 +65,8 @@
           <h2>Listen &amp; Download</h2>
 
           <div class="flex flex-container flex-direction--column">
-            <a 
-              class="provider" 
+            <a
+              class="provider"
               href="https://cdn.occloxium.com/a/zoomoid/liamm.zip"
             >
               Get the complete Standard Edition as MP3
@@ -313,24 +313,9 @@
 </template>
 
 <style lang="sass" scoped>
-@import '@/assets/app.sass'
+@import '@/assets/single.sass'
 
-article
-  .title
-    h1
-      margin: 0 0 1em
-      +font-size(3em)
-    h3
-      font-size: 2em
-      margin: 1em 0 0
-      font-weight: 500
-.cover
-  img
-    width: 80%
-    max-width: 550px
-    margin: 0 auto
-    display: block
-
++single
 .tracklist
   padding: 2em 0 0
   li
@@ -361,7 +346,7 @@ article
       border-top-left-radius: 0px
       border-bottom-left-radius: 0px
     & > *:not(:last-child)
-      padding-right: 1em 
+      padding-right: 1em
       border-top-right-radius: 0px
       border-bottom-right-radius: 0px
   &.flex-direction--column
@@ -370,7 +355,7 @@ article
       border-top-left-radius: 0px
       border-top-right-radius: 0px
     & > *:not(:last-child)
-      padding-right: 1em 
+      padding-right: 1em
       border-bottom-left-radius: 0px
       border-bottom-right-radius: 0px
 .provider

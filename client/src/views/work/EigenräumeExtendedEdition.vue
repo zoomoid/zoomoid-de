@@ -49,26 +49,29 @@
         <div id="external">
           <div class="streaming">
             <h2>Stream!</h2>
-            <p class="muted centered">Coming soon!</p>
+            <p class="muted">Coming soon!</p>
           </div>
           <div class="buying">
             <h2>Buy!</h2>
-            <p class="muted centered">Coming soon!</p>
+            <div>
+              <li>
+                <a class="provider" href="https://zoomoid.bandcamp.com/">Bandcamp</a>
+              </li>
+              <p class="muted">More coming soon!</p>
+            </div>
           </div>
         </div>
         <div class="download">
           <h2>Listen &amp; Download</h2>
-          <div class="flex flex-container flex-direction--column">
-            <a
-              class="provider"
-              href="https://cdn.occloxium.com/a/zoomoid/eigenraeume-extended-edition.zip"
-            >
-              Get the complete Extended Edition as MP3
-            </a>
-            <a
-              class="provider small"
-              href="https://cdn.occloxium.com/a/zoomoid/eigenraeume-extended-edition.flac.zip"
-            >(Alternatively as FLAC)</a>
+          <div>
+            <li>
+              <a class="provider" href="https://cdn.occloxium.com/a/zoomoid/eigenraeume-extended-edition.zip">
+                Get the complete Extended Edition as MP3
+              </a>
+            </li>
+            <li>
+              <a class="provider small" href="https://cdn.occloxium.com/a/zoomoid/eigenraeume-extended-edition.flac.zip">(Alternatively as FLAC)</a>
+            </li>
           </div>
           <h4>Standard Edition</h4>
           <ol class="tracklist">
@@ -187,8 +190,4 @@ export default {
 <style lang="sass" scoped>
 @import '@/assets/single.sass'
 +single
-
-article
-  background: #0c0c0c
-  color: white
 </style>

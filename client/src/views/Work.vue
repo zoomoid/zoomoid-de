@@ -90,6 +90,7 @@ $radius: 32px
     width: 240px
     text-align: center
   h1
+    +fade
     margin-top: 0
     +font-size(4em)
   .center-wrapper

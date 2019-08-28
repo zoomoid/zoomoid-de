@@ -16,7 +16,9 @@
       h1
         margin: 0 0 1em
         +font-size(3em)
+        +fade
       h3
+        +fade
         font-size: 2em
         margin: 0 0 0
         padding-top: 1em
@@ -40,7 +42,8 @@
     opacity: 0.5
   .centered
     text-align: center
-
+  h2
+    +fade2
   .flex.flex-container
     display: flex
     border-radius: 4px
@@ -71,22 +74,14 @@
         padding-right: 1em 
         border-bottom-left-radius: 0px
         border-bottom-right-radius: 0px
-  .provider
-    display: block
-    &:not(.embedded)
-      color: white
-      background: black
-      transition: all 0.1s ease
-      &:active, &:hover
-        background: white
-        color: black
-    padding: 1em 0 1em
-    & *
-      color: inherit
-    i
-      margin-right: 16px
-    &.small
-      +font-size(0.7em)
+  li
+    list-style: none outside none
+    margin: 8px 0
+    a:not(.embedded)
+      +link
+      text-decoration: none
+      &.small
+        +font-size(70%)
   .download
     audio
       display: block

@@ -61,6 +61,7 @@
   margin-bottom: 6em
   .text
     h1
+      +fade
       +font-size(6em)
       +sm
         +font-size(4em)
@@ -78,7 +79,7 @@
         i
           font-size: 2em
           &:hover, &:active
-            color: $blue
+            +fade
         span
           display: none
 </style>

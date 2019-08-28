@@ -1,9 +1,10 @@
-=typography($_text: black, $_headings: black)
+=typography($_text: white, $_headings: white)
   font-family: 'Lexend Deca', sans-serif;
+  color: $_text
   font-size: 16pt
   & > *
+    color: inherit
     font-family: inherit
-  color: $_text
   h1 
     +heading(2em, $_headings, 8px)
   h2 
@@ -14,8 +15,6 @@
     +font
   p, li 
     word-wrap: normal
-  a
-    color: inherit
   code
     font-family: 'Roboto Mono'
   p, a, label, button

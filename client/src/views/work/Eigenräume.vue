@@ -6,7 +6,7 @@
         <h1>Eigenräume</h1>
       </div>
       <section class="cover">
-        <img src="https://cdn.occloxium.com/i/zoomoid/covers/eigenräume/mixed.png" />
+        <img src="https://cdn.occloxium.com/i/zoomoid/covers/eigenräume/standard.png" />
       </section>
 
       <p>
@@ -28,58 +28,52 @@
         <div id="external">
           <div class="streaming">
             <h2>Stream!</h2>
-            <div class="flex flex-container flex-direction--row">
-              <a
-                href="https://open.spotify.com/album/3YaUvYAudEXEuCJzoONcgE?si=7w0dBX6pRNukrQrLDVh5ZA"
-                class="provider"
-              >
-                <b>Spotify</b>
-              </a>
-              <a
-                class="provider"
-                href="https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888"
-              >
-                <b>Apple Music</b>
-              </a>
-              <a
-                class="provider"
-                href="https://www.deezer.com/de/album/95294192"
-              >
-                <b>Deezer</b>
-              </a>
+            <div>
+              <li>
+                <a href="https://open.spotify.com/album/3YaUvYAudEXEuCJzoONcgE?si=7w0dBX6pRNukrQrLDVh5ZA" class="provider">
+                  <b>Spotify</b>
+                </a>
+              </li>
+              <li>
+                <a class="provider" href="https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888">
+                  <b>Apple Music</b>
+                </a>
+              </li>
+              <li>
+                <a class="provider" href="https://www.deezer.com/de/album/95294192">
+                  <b>Deezer</b>
+                </a>
+              </li>
             </div>
           </div>
           <div class="buying">
             <h2>Buy!</h2>
-            <div class="flex flex-container flex-direction--row">
-              <a
-                class="provider"
-                href="https://www.amazon.de/Eigenr%C3%A4ume-Zoomoid/dp/B07R92N45D/"
-              >
-                <b>Amazon Music</b>
-              </a>
-              <a
-                class="provider"
-                href="https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888"
-              >
-                <b>iTunes</b>
-              </a>
+            <div>
+              <li>
+                  <a class="provider" href="https://www.amazon.de/Eigenr%C3%A4ume-Zoomoid/dp/B07R92N45D/">
+                    <b>Amazon Music</b>
+                  </a>
+              </li>
+              <li>
+                <a class="provider" href="https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888">
+                  <b>iTunes</b>
+                </a>
+              </li>
             </div>
           </div>
         </div>
         <div class="download">
           <h2>Listen &amp; Download</h2>
-          <div class="flex flex-container flex-direction--column">
-            <a
-              class="provider"
-              href="https://cdn.occloxium.com/a/zoomoid/eigenraeume.zip"
-            >
-              Get the complete Standard Edition as MP3
-            </a>
-            <a
-              class="provider small"
-              href="https://cdn.occloxium.com/a/zoomoid/eigenraeume.flac.zip"
-            >(Alternatively as FLAC)</a>
+          <div>
+            <li>
+              <a class="provider" href="https://cdn.occloxium.com/a/zoomoid/eigenraeume.zip">Get the complete Standard Edition as MP3</a>
+            </li>
+            <li>
+              <a
+                class="provider small"
+                href="https://cdn.occloxium.com/a/zoomoid/eigenraeume.flac.zip"
+              >(Alternatively as FLAC)</a>
+            </li>
           </div>
           <h4>Standard Edition</h4>
           <ol class="tracklist">
@@ -139,7 +133,9 @@
             </li>
           </ol>
           <h4>Extended Edition</h4>
-          <p class="muted centered">Coming soon!</p>
+          <div class="centered">
+            <router-link to="/work/eigenräume-extended-edition">Eigenräume (Extended Edition)</router-link>
+          </div>
         </div>
       </div>
     </article>

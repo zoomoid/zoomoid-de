@@ -4,6 +4,7 @@ export default {
   props: {
     anchor: String,
     name: String,
+    icon: String
   },
   data: function(){
     return {toggled: false};
@@ -12,17 +13,13 @@ export default {
 </script>
 
 <template>
-
-    <a
-      @mouseenter="toggled = true"
-      @mouseleave="toggled = false"
-    >
+    <a @mouseenter="toggled = true" @mouseleave="toggled = false" :href="anchor">
       <transition name="slide">
         <div v-if="toggled"></div>
       </transition>
+      <i v-if="icon" :class="icon"></i>
       <b>{{this.name}}</b>
     </a>
-
 </template>
 
 
@@ -41,6 +38,8 @@ a
   font-size: 1em
   &.small
     font-size: 50%
+  i
+    margin-right: 1em
   div
     overflow: hidden hidden
     width: 100%

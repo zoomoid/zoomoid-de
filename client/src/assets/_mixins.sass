@@ -1,19 +1,21 @@
+$text-color: black
+  
 =font
-  font-family: 'Lexend Deca', serif
-  font-size: 16pt
+  font-family: 'Matter', serif
+  font-size: 1em
   line-height: 1.5
-  font-weight: 200
-  color: white
+  font-weight: 600
+  color: $text-color
   letter-spacing: -0.04em
 
-=heading($size, $color: white, $spacing: 0pt)
+=heading
   font-family: 'Inter Var', sans-serif
   font-weight: bold
-  font-size: 36pt
-  margin-bottom: $spacing
+  font-size: 4em
+  margin-bottom: 0
   letter-spacing: -0.04em
   line-height: 1
-  color: white
+  color: $text-color
   // text-transform: uppercase
 
 =title
@@ -44,33 +46,36 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-color: white;
+  padding-bottom: 8px
 =fade2
   background: -webkit-linear-gradient(45deg, $teal, $blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-color: white;
-
+  padding-bottom: 8px
 =link
   padding: 4px 8px
-  overflow-x: hidden
+  overflow: hidden hidden
   position: relative
   transition-delay: 0.4s
   transition: color 0.1s linear
-  color: white
+  color: $text-color
+  display: inline-block
   &::after
+    overflow: hidden hidden
     transition: width 0.5s cubic-bezier(1, 0, 0, 1)
     content: ''
-    width: 0%
+    width: 100%
     position: absolute
     top: 0
     left: 0
     right: 0
     bottom: 0
-    // transform: translateX(-100%)
-    background: white
+    transform: translateX(-100%)
+    background: $text-color
     z-index: -1
   &:hover, &:active
-    color: black
+    color: invert($text-color)
     transition: color 0.1s linear
     &::after
       width: 100%

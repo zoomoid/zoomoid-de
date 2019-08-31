@@ -65,9 +65,9 @@
   margin: 0 auto 4em
   h1
     +fade
-    +font-size(4em)
-    +sm
-      +font-size(4em)
+    // +font-size(4em)
+    // +sm
+      // +font-size(4em)
   .contact--mail
     +font-size(1em)
   .references

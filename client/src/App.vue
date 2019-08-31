@@ -11,8 +11,8 @@
 // $background: $may-1
 
 $primary-background: $prime-background
-$backlayer: rgba(15,15,15,1)
-
+// $backlayer: rgba(15,15,15,1)
+$backlayer: #ffffff
 *
   outline: none
 body

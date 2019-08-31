@@ -51,6 +51,7 @@ footer
     color: inherit
     text-decoration: none
     transition: color $transition-time $transition-curve
+    letter-spacing: 0px
     &:hover,
     &:active
       +fade

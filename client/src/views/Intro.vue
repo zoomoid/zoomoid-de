@@ -62,9 +62,9 @@
   .text
     h1
       +fade
-      +font-size(6em)
-      +sm
-        +font-size(4em)
+      // +font-size(6em)
+      // +sm
+        // +font-size(4em)
     p
       text-align: justify
     z-index: 10
@@ -77,6 +77,7 @@
       a
         text-decoration: none
         i
+          letter-spacing: 0px
           font-size: 2em
           &:hover, &:active
             +fade

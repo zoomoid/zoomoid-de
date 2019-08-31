@@ -78,8 +78,9 @@
     list-style: none outside none
     margin: 8px 0
     a:not(.embedded)
-      +link
+      // +link
       text-decoration: none
+      /*** @deprecated use SlideAnchor Component **/
       &.small
         +font-size(70%)
   .download

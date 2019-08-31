@@ -55,7 +55,7 @@
             <h2>Buy!</h2>
             <div>
               <li>
-                <a class="provider" href="https://zoomoid.bandcamp.com/">Bandcamp</a>
+               <SlideAnchor :name="'Bandcamp'" :anchor="'https://zoomoid.bandcamp.com'"/>
               </li>
               <p class="muted">More coming soon!</p>
             </div>
@@ -65,12 +65,10 @@
           <h2>Listen &amp; Download</h2>
           <div>
             <li>
-              <a class="provider" href="https://cdn.occloxium.com/a/zoomoid/eigenraeume-extended-edition.zip">
-                Get the complete Extended Edition as MP3
-              </a>
+              <SlideAnchor :name="'Get the complete Extended Edition as MP3'" :anchor="'https://cdn.occloxium.com/a/zoomoid/eigenraeume-extended-edition.zip'"/>
             </li>
             <li>
-              <a class="provider small" href="https://cdn.occloxium.com/a/zoomoid/eigenraeume-extended-edition.flac.zip">(Alternatively as FLAC)</a>
+              <SlideAnchor class="small" :name="'(Alternatively as FLAC)'" :anchor="'https://cdn.occloxium.com/a/zoomoid/eigenraeume-extended-edition.flac.zip'"/>
             </li>
           </div>
           <h4>Standard Edition</h4>
@@ -182,8 +180,13 @@
 </template>
 
 <script>
+import SlideAnchor from "@/components/SlideAnchor";
+
 export default {
-  name: 'EigenräumeExtendedEdition'
+  name: 'EigenräumeExtendedEdition',
+  components: {
+    SlideAnchor
+  }
 }
 </script>
 

@@ -112,7 +112,8 @@
           </ol>
           <h4>Extended Edition</h4>
           <div class="centered">
-            <router-link to="/work/eigenräume-extended-edition">Eigenräume (Extended Edition)</router-link>
+            <SlideAnchor :anchor="'/work/eigenräume-extended-edition'"
+            :name="'Eigenräume (Extended Edition)'"/>
           </div>
         </div>
       </div>

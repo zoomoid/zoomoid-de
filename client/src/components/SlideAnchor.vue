@@ -9,11 +9,22 @@ export default {
   data: function(){
     return {toggled: false};
   },
+  methods: {
+    followLink(){
+      setTimeout(() => {
+        this.toggled = false;
+      }, 150)
+      setTimeout(() => {
+        location.href = this.anchor;
+      }, 1000);
+    }
+  }
 }
 </script>
 
 <template>
-    <a @mouseenter="toggled = true" @mouseleave="toggled = false" :href="anchor">
+    <a @mouseenter="toggled = true" @mouseleave="toggled = false"
+    @click.prevent="followLink()" :href="anchor">
       <transition name="slide">
         <div v-if="toggled"></div>
       </transition>
@@ -27,6 +38,7 @@ export default {
 <style lang="sass" scoped>
 @import '@/assets/app.sass'
 a
+  user-select: none
   padding: 4px 8px
   overflow: hidden hidden
   position: relative
@@ -50,7 +62,7 @@ a
     bottom: 0
     background: $text-color
     z-index: -1
-  &:hover, &:active
+  &:hover
     color: invert($text-color)
     // transition-delay: 0.4s
     transition: color 0.1s linear

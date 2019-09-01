@@ -341,7 +341,7 @@
 
 <script>
 import Block from '@/components/Block';
-import SlideAnchor from "@/components/SlideAnchor";
+import SlideAnchor from '@/components/SlideAnchor';
 
 export default {
   components: {

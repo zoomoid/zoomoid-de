@@ -3,6 +3,8 @@
 =single
   article
     padding: 0 2em 1em
+    +sm
+      padding: 0 1em 1em
     & > *
       max-width: 1024px
       margin-left: auto
@@ -32,8 +34,10 @@
 
   .tracklist
     margin: 0
+    margin-left: 1em
     padding: 0
     li
+      list-style: decimal
       padding: 0 0 24px
     audio
       width: 100%

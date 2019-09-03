@@ -46,7 +46,7 @@
           <span class="label">6<sup>th</sup> Generation</span>
         </div>
         <p>The 3<sup>rd</sup> Generation stickers actually never made it to the print.</p>
-        <p>If you want any remaining stickers</p>
+        <p>The remaining stickers can be obtained by asking nicely!</p>
       </div>
     </div>
   </div>

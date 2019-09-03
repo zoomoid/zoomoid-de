@@ -31,7 +31,9 @@ export default {
     accept: function() {
       this.$cookies.set('allowCookies', 'true', '30d');
       this.$cookies.set('allowThirdPartyContent', 'true', '30d');
-      this.hidden = true
+      this.hidden = true;
+      this.$root.$blocked = false;
+      location.reload();
     }
   }
 };

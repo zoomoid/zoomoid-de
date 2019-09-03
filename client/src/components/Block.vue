@@ -12,7 +12,8 @@ export default {
     accept: function() {
       this.$cookies.set('allowCookies', 'true', '30d');
       this.$cookies.set('allowThirdPartyContent', 'true', '30d');
-      this.hidden = true
+      this.$root.$block = false;
+      location.reload();
     }
   }
 }
@@ -41,6 +42,7 @@ export default {
     padding: 0.25em 1em
     margin-left: 0.5em
     text-transform: uppercase
+    cursor: pointer
   a
     color: white
 </style>

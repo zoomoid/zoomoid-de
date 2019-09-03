@@ -51,8 +51,8 @@
             </li>
           </div>
           <div class="tracklist">
-            <Block v-if="blockEmbedded"/>
-            <div v-if="!blockEmbedded">
+            <Block v-if="this.$root.$blocked"/>
+            <div v-if="!this.$root.$blocked">
               <div class="container" id="intro">
                 <b>1</b>
                 <div>
@@ -344,6 +344,7 @@ import Block from '@/components/Block';
 import SlideAnchor from '@/components/SlideAnchor';
 
 export default {
+  name: 'LIAMM',
   components: {
     Block,
     SlideAnchor
@@ -374,10 +375,7 @@ export default {
           link: 'https://itunes.apple.com/de/album/life-is-about-making-memories/1437311634'
         }
       ],
-      blockEmbedded:
-        !this.$cookies.isKey('allowThirdPartyContent') ||
-        this.$cookies.get('allowThirdPartyContent') === 'false'
     };
-  }
+  },
 };
 </script>

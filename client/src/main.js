@@ -8,8 +8,14 @@ VueCookies.config('30d')
 
 Vue.config.productionTip = true
 
-new Vue({
+let vm = new Vue({
   router,
+  data: {
+    blocked: true
+  },
+  created: function(){
+    this.$blocked = !this.$cookies.isKey('allowThirdPartyContent') || !this.$cookies.get('allowThirdPartyContent') === 'true'
+  },
   render: h => h(App)
-}).$mount('#app')
-
+})
+vm.$mount('#app');

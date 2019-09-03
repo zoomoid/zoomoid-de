@@ -54,13 +54,11 @@
 </template>
 
 <script>
-import SlideAnchor from '@/components/SlideAnchor'
 import Breadcrump from '@/components/Breadcrump'
 
 export default {
   name: 'Merchandise',
   components: {
-    SlideAnchor,
     Breadcrump,
   }
 }

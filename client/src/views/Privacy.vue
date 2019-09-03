@@ -1,7 +1,7 @@
 <template>
   <div>
+    <Breadcrump></Breadcrump>
     <section id="header">
-      
       <h1>Privacy &amp; Data Protection</h1>
       <p>
         We strongly value your privacy and freedom. We therefore do not store
@@ -114,7 +114,7 @@
     margin: 2em auto 0
     display: block
 
-section 
+section
   padding: 0 2em
 
 #consent
@@ -122,7 +122,7 @@ section
     font-size: 2em
   form
     padding: 1em 0
-    div 
+    div
       display: flex
       align-items: center
       padding: 0.5em 0
@@ -132,9 +132,11 @@ section
 
 <script>
 import Footer from '@/components/Footer'
+import Breadcrump from '@/components/Breadcrump'
 export default {
   components: {
     Footer,
+    Breadcrump
   },
   data: function() {
     return {

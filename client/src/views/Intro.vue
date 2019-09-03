@@ -61,11 +61,10 @@
   margin-bottom: 6em
   .text
     h1
-      +font-size(6em)
-      +sm
-        +font-size(4em)
-    p
-      text-align: justify
+      +fade
+      // +font-size(6em)
+      // +sm
+        // +font-size(4em)
     z-index: 10
   .references
     display: flex
@@ -76,9 +75,10 @@
       a
         text-decoration: none
         i
+          letter-spacing: 0px
           font-size: 2em
           &:hover, &:active
-            color: $blue
+            +fade
         span
           display: none
 </style>

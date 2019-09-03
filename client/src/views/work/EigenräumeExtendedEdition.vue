@@ -49,129 +49,30 @@
         <div id="external">
           <div class="streaming">
             <h2>Stream!</h2>
-            <p class="muted centered">Coming soon!</p>
+            <p class="muted">Coming soon!</p>
           </div>
           <div class="buying">
             <h2>Buy!</h2>
-            <p class="muted centered">Coming soon!</p>
+            <div>
+              <li>
+               <SlideAnchor :name="'Bandcamp'" :anchor="'https://zoomoid.bandcamp.com'"/>
+              </li>
+              <p class="muted">More coming soon!</p>
+            </div>
           </div>
         </div>
         <div class="download">
           <h2>Listen &amp; Download</h2>
-          <div class="flex flex-container flex-direction--column">
-            <a
-              class="provider"
-              href="https://cdn.occloxium.com/a/zoomoid/eigenraeume-extended-edition.zip"
-            >
-              Get the complete Extended Edition as MP3
-            </a>
-            <a
-              class="provider small"
-              href="https://cdn.occloxium.com/a/zoomoid/eigenraeume-extended-edition.flac.zip"
-            >(Alternatively as FLAC)</a>
+          <div>
+            <li>
+              <SlideAnchor :name="'Get the complete Extended Edition as MP3'" :anchor="'https://cdn.occloxium.com/a/zoomoid/eigenraeume-extended-edition.zip'"/>
+            </li>
+            <li>
+              <SlideAnchor class="small" :name="'(Alternatively as FLAC)'" :anchor="'https://cdn.occloxium.com/a/zoomoid/eigenraeume-extended-edition.flac.zip'"/>
+            </li>
           </div>
-          <h4>Standard Edition</h4>
-          <ol class="tracklist">
-            <li>
-              <span>Zoomoid - Symphonic Dreams (Intro)</span>
-              <audio controls>
-                <source
-                  src="https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/01_Symphonic%20Dreams%20(Intro).mp3"
-                  type="audio/mpeg"
-                />
-              </audio>
-            </li>
-            <li>
-              <span>Zoomoid - Stockholm (Concept)</span>
-              <audio controls>
-                <source
-                  src="https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/02_Stockholm%20(Concept).mp3"
-                  type="audio/mpeg"
-                />
-              </audio>
-            </li>
-            <li>
-              <span>Zoomoid - Großstadt (Concept)</span>
-              <audio controls>
-                <source
-                  src="https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/03_Großstadt%20(Concept).mp3"
-                  type="audio/mpeg"
-                />
-              </audio>
-            </li>
-            <li>
-              <span>Zoomoid - Schöneberg At Night (Concept)</span>
-              <audio controls>
-                <source
-                  src="https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/04_Schöneberg%20At%20Night%20(Concept).mp3"
-                  type="audio/mpeg"
-                />
-              </audio>
-            </li>
-            <li>
-              <span>Zoomoid - Höllental (Concept)</span>
-              <audio controls>
-                <source
-                  src="https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/05_Höllental%20(Concept).mp3"
-                  type="audio/mpeg"
-                />
-              </audio>
-            </li>
-            <li>
-              <span>Zoomoid - Heimat (Concept)</span>
-              <audio controls>
-                <source
-                  src="https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/06_Heimat%20(Concept).mp3"
-                  type="audio/mpeg"
-                />
-              </audio>
-            </li>
-            <li>
-              <span>Zoomoid - Blaues Land (Concept)</span>
-              <audio controls>
-                <source
-                  src="https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/07_Blaues%20Land%20(Concept).mp3"
-                  type="audio/mpeg"
-                />
-              </audio>
-            </li>
-            <li>
-              <span>Zoomoid - Congruence (Bonus)</span>
-              <audio controls>
-                <source
-                  src="https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/08_Congruence%20(Bonus).mp3"
-                  type="audio/mpeg"
-                />
-              </audio>
-            </li>
-            <li>
-              <span>Zoomoid - Valletta (Bonus)</span>
-              <audio controls>
-                <source
-                  src="https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/09_Valletta%20(Bonus).mp3"
-                  type="audio/mpeg"
-                />
-              </audio>
-            </li>
-            <li>
-              <span>Zoomoid - Outer Space (Bonus)</span>
-              <audio controls>
-                <source
-                src="https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/10_Outer%20Space%20(Bonus).mp3"
-                  type="audio/mpeg"
-                />
-              </audio>
-            </li>
-            <li>
-              <span>Zoomoid - Adieu (Outro)</span>
-              <audio controls>
-                <source
-                  src="https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/11_Adieu%20(Outro).mp3"
-                  type="audio/mpeg"
-                />
-              </audio>
-            </li>
-          </ol>
+          <h4>Extended Edition</h4>
+          <AudioPlayer class="tracklist" :audio="tracks" :artist="'Zoomoid'"></AudioPlayer>
         </div>
       </div>
     </article>
@@ -179,16 +80,59 @@
 </template>
 
 <script>
+import SlideAnchor from '@/components/SlideAnchor';
+import AudioPlayer from '@/components/AudioPlayer';
+
 export default {
-  name: 'EigenräumeExtendedEdition'
+  name: 'EigenräumeExtendedEdition',
+  data: function(){
+    return {
+      tracks: [
+        {
+          title: 'Symphonic Dreams (Intro)',
+          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/01_Symphonic%20Dreams%20(Intro).mp3'
+        },{
+          title: 'Stockholm (Concept)',
+          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/02_Stockholm%20(Concept).mp3'
+        },{
+          title: 'Großstadt (Concept)',
+          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/03_Großstadt%20(Concept).mp3'
+        },{
+          title: 'Schöneberg At Night (Concept)',
+          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/04_Schöneberg%20At%20Night%20(Concept).mp3'
+        },{
+          title: 'Höllental (Concept)',
+          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/05_Höllental%20(Concept).mp3'
+        },{
+          title: 'Heimat (Concept)',
+          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/06_Heimat%20(Concept).mp3'
+        },{
+          title: 'Blaues Land (Concept)',
+          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/07_Blaues%20Land%20(Concept).mp3'
+        },{
+          title: 'Congruence (Bonus)',
+          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/08_Congruence%20(Bonus).mp3'
+        },{
+          title: 'Valletta (Bonus)',
+          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/09_Valletta%20(Bonus).mp3'
+        },{
+          title: 'Outer Space (Bonus)',
+          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/10_Outer%20Space%20(Bonus).mp3'
+        },{
+          title: 'Adieu (Outro)',
+          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/11_Adieu%20(Outro).mp3'
+        },
+      ]
+    }
+  },
+  components: {
+    SlideAnchor,
+    AudioPlayer
+  }
 }
 </script>
 
 <style lang="sass" scoped>
 @import '@/assets/single.sass'
 +single
-
-article
-  background: #0c0c0c
-  color: white
 </style>

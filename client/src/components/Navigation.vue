@@ -14,6 +14,7 @@ nav
   padding-bottom: 8px
   padding-left: 32px
   padding-right: 16px
+  background: white
   .logo
     // padding-top: 16px
     max-width: 32px

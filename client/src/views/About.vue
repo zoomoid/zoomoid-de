@@ -19,36 +19,24 @@
           </p>
           <ul class="references">
             <li>
-              <a
-                href="https://open.spotify.com/artist/6RRD9ulVsLuDIqFzuFvSL8?si=a8mm8a2RTaO1Zo6SyfwZVQ"
-              >
-                <i class="icon-spotify"></i>
-                <span>Spotify</span>
-              </a>
+              <SlideAnchor :anchor="'https://open.spotify.com/artist/6RRD9ulVsLuDIqFzuFvSL8?si=a8mm8a2RTaO1Zo6SyfwZVQ'"
+              :icon="'icon-spotify'" :name="'Spotify'"/>
             </li>
             <li>
-              <a href="https://instagram.com/zoomoid">
-                <i class="icon-instagram"></i>
-                <span>Instagram</span>
-              </a>
+              <SlideAnchor :anchor="'https://instagram.com/zoomoid'"
+              :icon="'icon-instagram'" :name="'Instagram'"/>
             </li>
             <li>
-              <a href="https://www.youtube.com/channel/UCg0yVDwpB9QphFbsGnV-8tQ/">
-                <i class="icon-youtube"></i>
-                <span>YouTube</span>
-              </a>
+              <SlideAnchor :anchor="'https://www.youtube.com/channel/UCg0yVDwpB9QphFbsGnV-8tQ/'"
+              :icon="'icon-youtube'" :name="'YouTube'"/>
             </li>
             <li>
-              <a href="https://soundcloud.com/zoomoid">
-                <i class="icon-soundcloud2"></i>
-                <span>SoundCloud</span>
-              </a>
+              <SlideAnchor :anchor="'https://soundcloud.com/zoomoid'"
+              :icon="'icon-soundcloud2'" :name="'SoundCloud'"/>
             </li>
             <li>
-              <a href="https://github.com/occloxium">
-                <i class="icon-github"></i>
-                <span>GitHub</span>
-              </a>
+              <SlideAnchor :anchor="'https://github.com/occloxium'"
+              :icon="'icon-github'" :name="'GitHub'"/>
             </li>
           </ul>
         </div>
@@ -64,12 +52,12 @@
   max-width: $max-width
   margin: 0 auto 4em
   h1
-    +font-size(4em)
-    +sm
-      +font-size(4em)
+    +fade
+    // +font-size(4em)
+    // +sm
+      // +font-size(4em)
   .contact--mail
     +font-size(1em)
-    color: black
   .references
     padding-left: 0
     li
@@ -77,11 +65,7 @@
       padding: 0.5em 0
       +font-size(1em)
       a
-        display: block
         margin: 0 auto
-        color: black
-        &:active, &:hover
-          color: $blue
         text-decoration: none
         i
           text-align: right
@@ -94,8 +78,11 @@
 </style>
 
 <script>
+import SlideAnchor from '@/components/SlideAnchor'
+
 export default {
   components: {
+    SlideAnchor
   }
 }
 </script>

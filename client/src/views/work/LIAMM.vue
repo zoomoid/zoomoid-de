@@ -25,56 +25,30 @@
         <div id="external">
           <div class="streaming">
             <h2>Stream!</h2>
-            <div class="flex flex-container flex-direction--row">
-              <a
-                href="https://open.spotify.com/album/2zF1wOwINENOR1fTGLqBEF?si=SCmmA64xS8qJas-lAOnTpg"
-                class="provider"
-              >
-                <b>Spotify</b>
-              </a>
-              <a
-                href="https://music.apple.com/de/album/life-is-about-making-memories/1437311634"
-                class="provider"
-              >
-                <b>Apple Music</b>
-              </a>
-              <a href="https://www.deezer.com/de/album/74066782" class="provider">
-                <b>Deezer</b>
-              </a>
+            <div>
+              <li v-for="item in this.streaming" :key="item.name">
+                <SlideAnchor :anchor="item.link" :name="item.name"/>
+              </li>
             </div>
           </div>
           <div class="buying">
             <h2>Buy!</h2>
-            <div class="flex flex-container flex-direction--row">
-              <a
-                href="https://www.amazon.de/Life-About-Making-Memories-Zoomoid/dp/B07HNMR3L9/"
-                class="provider"
-              >
-                <b>Amazon Music</b>
-              </a>
-              <a
-                href="https://itunes.apple.com/de/album/life-is-about-making-memories/1437311634"
-                class="provider"
-              >
-                <b>iTunes</b>
-              </a>
+            <div>
+              <li v-for="item in this.buying" v-bind:key="item.name">
+                <SlideAnchor :anchor="item.link" :name="item.name"/>
+              </li>
             </div>
           </div>
         </div>
         <div class="download">
           <h2>Listen &amp; Download</h2>
-
-          <div class="flex flex-container flex-direction--column">
-            <a 
-              class="provider" 
-              href="https://cdn.occloxium.com/a/zoomoid/liamm.zip"
-            >
-              Get the complete Standard Edition as MP3
-            </a>
-            <a
-              class="provider small"
-              href="https://cdn.occloxium.com/a/zoomoid/liamm.flac.zip"
-            >(Alternatively as FLAC)</a>
+          <div>
+            <li>
+              <SlideAnchor :anchor="'https://cdn.occloxium.com/a/zoomoid/liamm.zip'" :name="'Get the complete Standard Edition as MP3'"/>
+            </li>
+            <li>
+              <SlideAnchor class="small" :anchor="'https://cdn.occloxium.com/a/zoomoid/liamm.flac.zip'" :name="'(Alternatively as FLAC)'"/>
+            </li>
           </div>
           <div class="tracklist">
             <Block v-if="blockEmbedded"/>
@@ -313,24 +287,9 @@
 </template>
 
 <style lang="sass" scoped>
-@import '@/assets/app.sass'
+@import '@/assets/single.sass'
 
-article
-  .title
-    h1
-      margin: 0 0 1em
-      +font-size(3em)
-    h3
-      font-size: 2em
-      margin: 1em 0 0
-      font-weight: 500
-.cover
-  img
-    width: 80%
-    max-width: 550px
-    margin: 0 auto
-    display: block
-
++single
 .tracklist
   padding: 2em 0 0
   li
@@ -342,53 +301,6 @@ article
   color: rgba(255,255,255,0.5)
 .centered
   text-align: center
-
-.flex.flex-container
-  display: flex
-  border-radius: 4px
-  &.flex-direction
-    &--row
-      flex-direction: row
-    &--column
-      flex-direction: column
-  & > *
-    flex-grow: 1
-    text-align: center
-    border-radius: 8px
-  &.flex-direction--row
-    & > *:not(:first-child)
-      padding-left: 1em
-      border-top-left-radius: 0px
-      border-bottom-left-radius: 0px
-    & > *:not(:last-child)
-      padding-right: 1em 
-      border-top-right-radius: 0px
-      border-bottom-right-radius: 0px
-  &.flex-direction--column
-    & > *:not(:first-child)
-      padding-left: 1em
-      border-top-left-radius: 0px
-      border-top-right-radius: 0px
-    & > *:not(:last-child)
-      padding-right: 1em 
-      border-bottom-left-radius: 0px
-      border-bottom-right-radius: 0px
-.provider
-  display: block
-  color: white
-  background: black
-  transition: all 0.1s ease
-  &:active, &:hover
-    background: white
-    color: black
-  padding: 1em 0 1em
-  & *
-    color: inherit
-  i
-    margin-right: 16px
-  &.small
-    +font-size(0.7em)
-
 
 .container
   padding-bottom: 1em
@@ -429,13 +341,39 @@ article
 
 <script>
 import Block from '@/components/Block';
+import SlideAnchor from '@/components/SlideAnchor';
 
 export default {
   components: {
-    Block
+    Block,
+    SlideAnchor
   },
   data: function() {
     return {
+      streaming: [
+        {
+          name: 'Spotify',
+          link: 'https://open.spotify.com/album/2zF1wOwINENOR1fTGLqBEF?si=SCmmA64xS8qJas-lAOnTpg'
+        },
+        {
+          name: 'Apple Music',
+          link: 'https://music.apple.com/de/album/life-is-about-making-memories/1437311634'
+        },
+        {
+          name: 'Deezer',
+          link: 'https://www.deezer.com/de/album/74066782'
+        }
+      ],
+      buying: [
+        {
+          name: 'Amazon Music',
+          link: 'https://www.amazon.de/Life-About-Making-Memories-Zoomoid/dp/B07HNMR3L9/'
+        },
+        {
+          name: 'iTunes',
+          link: 'https://itunes.apple.com/de/album/life-is-about-making-memories/1437311634'
+        }
+      ],
       blockEmbedded:
         !this.$cookies.isKey('allowThirdPartyContent') ||
         this.$cookies.get('allowThirdPartyContent') === 'false'

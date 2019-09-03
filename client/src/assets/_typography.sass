@@ -1,27 +1,22 @@
-=typography($_text: black, $_headings: black)
-  font-family: 'Lexend Deca', sans-serif;
-  font-size: 16pt
+=typography
+  font-family: $font-family
+  color: $text-color
+  font-size: 20pt
   & > *
+    color: inherit
     font-family: inherit
-  color: $_text
-  h1 
-    +heading(2em, $_headings, 8px)
-  h2 
-    +heading(2em, $_headings, 4px)
-  h3 
-    +heading(2em, $_headings, 2px)
+  h1, h2, h3, h4, h5, h6
+    +heading
   nav
     +font
-  p, li 
+  p, li
     word-wrap: normal
-  a
-    color: inherit
   code
-    font-family: 'Roboto Mono'
+    font-family: monospace
   p, a, label, button
     +font
   .abstract, blockquote, em 
-    font-family: 'Lexend Deca', sans-serif
+    font-family: $font-family
     font-variant: normal
     font-style: normal
     font-weight: 300

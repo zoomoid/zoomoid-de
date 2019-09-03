@@ -11,6 +11,7 @@ import {
   EigenräumeExtendedEdition,
   AtomicSpark
 } from '@/views/work/index.js';
+import Merchandise from '@/views/Merchandise';
 
 Vue.use(Router)
 
@@ -56,6 +57,11 @@ export default new Router({
       path: '/privacy',
       name: 'Privacy',
       component: Privacy
+    },{
+      path: '/merch',
+      name: 'Merchandise',
+      alias: '/merchandise',
+      component: Merchandise
     }
   ],
   scrollBehavior () {

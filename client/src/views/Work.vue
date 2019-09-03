@@ -85,13 +85,13 @@ $radius: 32px
   flex-grow: 1
   max-width: $max-width
   margin: 0 auto
-  +typography(black, black)
   .logo
     width: 240px
     text-align: center
   h1
+    +fade
     margin-top: 0
-    +font-size(4em)
+    // +font-size(4em)
   .center-wrapper
     max-width: 1200px
     margin: 0 auto 2em

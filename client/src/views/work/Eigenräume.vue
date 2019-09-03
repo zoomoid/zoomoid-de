@@ -6,7 +6,7 @@
         <h1>Eigenräume</h1>
       </div>
       <section class="cover">
-        <img src="https://cdn.occloxium.com/i/zoomoid/covers/eigenräume/mixed.png" />
+        <img src="https://cdn.occloxium.com/i/zoomoid/covers/eigenräume/standard.png" />
       </section>
 
       <p>
@@ -28,58 +28,30 @@
         <div id="external">
           <div class="streaming">
             <h2>Stream!</h2>
-            <div class="flex flex-container flex-direction--row">
-              <a
-                href="https://open.spotify.com/album/3YaUvYAudEXEuCJzoONcgE?si=7w0dBX6pRNukrQrLDVh5ZA"
-                class="provider"
-              >
-                <b>Spotify</b>
-              </a>
-              <a
-                class="provider"
-                href="https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888"
-              >
-                <b>Apple Music</b>
-              </a>
-              <a
-                class="provider"
-                href="https://www.deezer.com/de/album/95294192"
-              >
-                <b>Deezer</b>
-              </a>
+            <div>
+              <li v-for="item in this.streaming" :key="item.name">
+                <SlideAnchor :anchor="item.link" :name="item.name"/>
+              </li>
             </div>
           </div>
           <div class="buying">
             <h2>Buy!</h2>
-            <div class="flex flex-container flex-direction--row">
-              <a
-                class="provider"
-                href="https://www.amazon.de/Eigenr%C3%A4ume-Zoomoid/dp/B07R92N45D/"
-              >
-                <b>Amazon Music</b>
-              </a>
-              <a
-                class="provider"
-                href="https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888"
-              >
-                <b>iTunes</b>
-              </a>
+            <div>
+              <li v-for="item in this.buying" v-bind:key="item.name">
+                <SlideAnchor :anchor="item.link" :name="item.name"/>
+              </li>
             </div>
           </div>
         </div>
         <div class="download">
           <h2>Listen &amp; Download</h2>
-          <div class="flex flex-container flex-direction--column">
-            <a
-              class="provider"
-              href="https://cdn.occloxium.com/a/zoomoid/eigenraeume.zip"
-            >
-              Get the complete Standard Edition as MP3
-            </a>
-            <a
-              class="provider small"
-              href="https://cdn.occloxium.com/a/zoomoid/eigenraeume.flac.zip"
-            >(Alternatively as FLAC)</a>
+          <div>
+            <li>
+              <SlideAnchor :anchor="'https://cdn.occloxium.com/a/zoomoid/eigenraeume.zip'" :name="'Get the complete Standard Edition as MP3'"/>
+            </li>
+            <li>
+              <SlideAnchor class="small" :anchor="'https://cdn.occloxium.com/a/zoomoid/eigenraeume.flac.zip'" :name="'(Alternatively as FLAC)'"/>
+            </li>
           </div>
           <h4>Standard Edition</h4>
           <ol class="tracklist">
@@ -139,7 +111,10 @@
             </li>
           </ol>
           <h4>Extended Edition</h4>
-          <p class="muted centered">Coming soon!</p>
+          <div class="centered">
+            <SlideAnchor :anchor="'/work/eigenräume-extended-edition'"
+            :name="'Eigenräume (Extended Edition)'"/>
+          </div>
         </div>
       </div>
     </article>
@@ -152,9 +127,38 @@
 </style>
 
 <script>
+import SlideAnchor from '@/components/SlideAnchor';
+
 export default {
+  components: {
+    SlideAnchor
+  },
   data: function() {
     return {
+      streaming: [
+        {
+          name: 'Spotify',
+          link: 'https://open.spotify.com/album/3YaUvYAudEXEuCJzoONcgE'
+        },
+        {
+          name: 'Apple Music',
+          link: 'https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888'
+        },
+        {
+          name: 'Deezer',
+          link: 'https://www.deezer.com/de/album/95294192'
+        }
+      ],
+      buying: [
+        {
+          name: 'Amazon Music',
+          link: 'https://www.amazon.de/Eigenr%C3%A4ume-Zoomoid/dp/B07R92N45D/'
+        },
+        {
+          name: 'iTunes',
+          link: 'https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888'
+        }
+      ],
       blockEmbedded:
         !this.$cookies.isKey('allowThirdPartyContent') ||
         this.$cookies.get('allowThirdPartyContent') === 'false'

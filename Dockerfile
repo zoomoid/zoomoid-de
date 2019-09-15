@@ -4,11 +4,11 @@ FROM node:latest as builder
 COPY /client/package*.json ./
 
 # npm ci for better performance in dependency resolution
-RUN npm ci
+RUN yarn install
 # bundle client
 COPY /client /
 # build with webpack
-RUN npm run build
+RUN yarn run build
 
 # 2nd stage: lightweight alpine container
 FROM nginx:alpine

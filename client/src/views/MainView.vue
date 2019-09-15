@@ -3,14 +3,15 @@
     <!-- <div class="backdrop">
       <Navigation/>
     </div> -->
-    <Banner/>
+    <Banner></Banner>
     <div class="foreground">
-      <Intro/>
-      <Work/>
-      <About/>
+      <Intro></Intro>
+      <Work></Work>
+      <MerchBanner></MerchBanner>
+      <About></About>
     </div>
     <div class="footer">
-      <Footer/>
+      <Footer></Footer>
     </div>
   </div>
 </template>
@@ -19,9 +20,10 @@
 import Intro from '@/views/Intro.vue'
 import Work from '@/views/Work.vue';
 import About from '@/views/About.vue';
-import Footer from '@/components/Footer.vue';
+
+import {Banner, MerchBanner, Footer} from '@/components/';
 // import Navigation from '@/components/Navigation.vue';
-import Banner from '@/components/Banner.vue'
+
 export default {
   name: 'MainView',
   components: {
@@ -31,6 +33,7 @@ export default {
     Work,
     About,
     Banner,
+    MerchBanner
   }
 }
 </script>

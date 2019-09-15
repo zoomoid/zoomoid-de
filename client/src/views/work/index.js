@@ -1,15 +1,15 @@
-import LIAMM from './LIAMM.vue';
-import Datkom from './Datkom.vue';
-import EigenräumeExtendedEdition from './EigenräumeExtendedEdition.vue';
-import Eigenräume from './Eigenräume.vue';
-import Interstellar from './Interstellar.vue';
-import AtomicSpark from './AtomicSpark.vue';
+import LIAMM from './LIAMM';
+import Datkom from './Datkom';
+import EigenräumeExtendedEdition from './EigenräumeExtendedEdition';
+import Eigenräume from './Eigenräume';
+import Interstellar from './Interstellar';
+import AtomicSpark from './AtomicSpark';
 
 export {
-  LIAMM as LIAMM,
-  Datkom as Datkom,
-  EigenräumeExtendedEdition as EigenräumeExtendedEdition,
-  Eigenräume as Eigenräume,
-  AtomicSpark as AtomicSpark,
-  Interstellar as Interstellar,
+  LIAMM,
+  Datkom,
+  EigenräumeExtendedEdition,
+  Eigenräume,
+  AtomicSpark,
+  Interstellar,
 };

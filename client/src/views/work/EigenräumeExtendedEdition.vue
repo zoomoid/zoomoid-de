@@ -49,15 +49,18 @@
         <div id="external">
           <div class="streaming">
             <h2>Stream!</h2>
-            <p class="muted">Coming soon!</p>
+            <div>
+              <li v-for="item in this.streaming" :key="item.name">
+                <SlideAnchor :anchor="item.link" :name="item.name"/>
+              </li>
+            </div>
           </div>
           <div class="buying">
             <h2>Buy!</h2>
             <div>
-              <li>
-               <SlideAnchor :name="'Bandcamp'" :anchor="'https://zoomoid.bandcamp.com'"/>
+              <li v-for="item in this.buying" v-bind:key="item.name">
+                <SlideAnchor :anchor="item.link" :name="item.name"/>
               </li>
-              <p class="muted">More coming soon!</p>
             </div>
           </div>
         </div>
@@ -87,6 +90,34 @@ export default {
   name: 'EigenräumeExtendedEdition',
   data: function(){
     return {
+      streaming: [
+        {
+          name: 'Spotify',
+          link: 'https://open.spotify.com/album/1N5yphubnUoyuk4hg8cP5n'
+        },
+        {
+          name: 'Apple Music',
+          link: 'https://music.apple.com/de/album/eigenr%C3%A4ume-extended-edition/1478203701'
+        },
+        {
+          name: 'Tidal',
+          link: 'https://tidal.com/browse/album/116540603'
+        }
+      ],
+      buying: [
+        {
+          name: 'Bandcamp',
+          link: 'https://zoomoid.bandcamp.com/'
+        },
+        {
+          name: 'iTunes',
+          link: 'https://music.apple.com/de/album/eigenr%C3%A4ume-extended-edition/1478203701?app=itunes'
+        },
+        {
+          name: 'Amazon Music',
+          link: 'https://www.amazon.de/Eigenräume-Extended-Zoomoid/dp/B07X13DDBD'
+        }
+      ],
       tracks: [
         {
           title: 'Symphonic Dreams (Intro)',

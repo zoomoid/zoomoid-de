@@ -9,7 +9,8 @@ import {
   Interstellar,
   LIAMM,
   EigenräumeExtendedEdition,
-  AtomicSpark
+  AtomicSpark,
+  PermanentlyMoving
 } from '@/views/work/index.js';
 import Merchandise from '@/views/Merchandise';
 
@@ -51,6 +52,10 @@ export default new Router({
           path: 'atomic-spark',
           name: 'Atomic Spark (Single)',
           component: AtomicSpark
+        },{
+          path: '301',
+          name: '301 Permanently Moving',
+          component: PermanentlyMoving
         }
       ]
     },{

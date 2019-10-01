@@ -4,7 +4,7 @@ import EigenräumeExtendedEdition from './EigenräumeExtendedEdition';
 import Eigenräume from './Eigenräume';
 import Interstellar from './Interstellar';
 import AtomicSpark from './AtomicSpark';
-
+import PermanentlyMoving from './PermanentlyMoving';
 export {
   LIAMM,
   Datkom,
@@ -12,4 +12,5 @@ export {
   Eigenräume,
   AtomicSpark,
   Interstellar,
+  PermanentlyMoving
 };

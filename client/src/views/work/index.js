@@ -5,6 +5,7 @@ import Eigenräume from './Eigenräume';
 import Interstellar from './Interstellar';
 import AtomicSpark from './AtomicSpark';
 import PermanentlyMoving from './PermanentlyMoving';
+import PublicTransportation from './PublicTransportation';
 export {
   LIAMM,
   Datkom,
@@ -12,5 +13,6 @@ export {
   Eigenräume,
   AtomicSpark,
   Interstellar,
-  PermanentlyMoving
+  PermanentlyMoving,
+  PublicTransportation
 };

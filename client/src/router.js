@@ -10,7 +10,8 @@ import {
   LIAMM,
   EigenräumeExtendedEdition,
   AtomicSpark,
-  PermanentlyMoving
+  PermanentlyMoving,
+  PublicTransportation
 } from '@/views/work/index.js';
 import Merchandise from '@/views/Merchandise';
 
@@ -37,7 +38,7 @@ export default new Router({
           name: 'Interstellar',
           component: Interstellar
         },{
-          path: 'eigenräume',
+          path: 'eigenräume-standard-edition',
           name: 'Eigenräume',
           component: Eigenräume
         },{
@@ -46,6 +47,7 @@ export default new Router({
           component: LIAMM
         },{
           path: 'eigenräume-extended-edition',
+          alias: ['/eigenraeume', '/eigenräume'],
           name: 'Eigenräume (Extended Edition)',
           component: EigenräumeExtendedEdition
         },{
@@ -54,8 +56,14 @@ export default new Router({
           component: AtomicSpark
         },{
           path: '301',
+          alias: '/301',
           name: '301 Permanently Moving',
           component: PermanentlyMoving
+        },{
+          path: 'public-transportation',
+          alias: '/public-transportation',
+          name: 'Public Transportation EP',
+          component: PublicTransportation
         }
       ]
     },{

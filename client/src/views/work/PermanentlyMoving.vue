@@ -32,37 +32,18 @@
 </style>
 
 <script>
-import SlideAnchor from '@/components/SlideAnchor';
 
 export default {
   components: {
-    SlideAnchor
+
   },
   data: function() {
     return {
       streaming: [
-        {
-          name: 'Spotify',
-          link: 'https://open.spotify.com/album/3YaUvYAudEXEuCJzoONcgE'
-        },
-        {
-          name: 'Apple Music',
-          link: 'https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888'
-        },
-        {
-          name: 'Deezer',
-          link: 'https://www.deezer.com/de/album/95294192'
-        }
+
       ],
       buying: [
-        {
-          name: 'Amazon Music',
-          link: 'https://www.amazon.de/Eigenr%C3%A4ume-Zoomoid/dp/B07R92N45D/'
-        },
-        {
-          name: 'iTunes',
-          link: 'https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888'
-        }
+
       ],
       blockEmbedded:
         !this.$cookies.isKey('allowThirdPartyContent') ||

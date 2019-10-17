@@ -19,7 +19,7 @@ export default {
           id: 'A03'
         },
         {
-          contentID: 'eigenräume',
+          contentID: 'eigenräume-standard-edition',
           artist: 'zoomoid',
           title: 'Eigenräume',
           coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/eigenr%C3%A4ume/standard.png',

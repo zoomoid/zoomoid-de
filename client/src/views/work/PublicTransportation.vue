@@ -10,8 +10,8 @@
       </section>
       <p>
         The <b>Public Transportation</b> EP is a concept LoFi HipHop/Electronic/Ambient immersive
-        listening experience composed to accompany a train ride through NRW. It's currently 5 tracks heavy
-        and not quite done yet. However, here you can listen to what is done yet!
+        listening experience composed to accompany a train ride on a few stops in NRW. It officially
+        releases on 1st of November, 2019! However, here you can listen to it here already!
       </p>
       <div class="download">
         <h2>Listen &amp; Download</h2>
@@ -47,6 +47,13 @@
         <audio controls>
           <source
             src="https://cdn.occloxium.com/a/zoomoid/public-transportation/05_melancholic%20meditation.mp3"
+            type="audio/mpeg"
+          />
+        </audio>
+        <span>Zoomoid - Delay</span>
+        <audio controls>
+          <source
+            src="https://cdn.occloxium.com/a/zoomoid/public-transportation/06_delay.mp3"
             type="audio/mpeg"
           />
         </audio>

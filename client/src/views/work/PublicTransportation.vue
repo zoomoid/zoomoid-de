@@ -11,7 +11,7 @@
       <p>
         The <b>Public Transportation</b> EP is a concept LoFi HipHop/Electronic/Ambient immersive
         listening experience composed to accompany a train ride on a few stops in NRW. It officially
-        releases on 1st of November, 2019! However, here you can listen to it here already!
+        releases on 1st of November, 2019! However, you can listen to it here already!
       </p>
       <div class="download">
         <h2>Listen &amp; Download</h2>

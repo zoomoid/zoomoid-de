@@ -11,6 +11,22 @@ export default {
     return {
       entries: [
         {
+          contentID: '301',
+          artist: 'zoomoid',
+          title: '301 Permanently Moving',
+          coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/301/standard.png',
+          date: '22.11.2019',
+          id: 'A05'
+        },
+        {
+          contentID: 'public-transportation',
+          artist: 'zoomoid',
+          title: 'Public Transportation',
+          coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/public-transportation/standard.png',
+          date: '01.11.2019',
+          id: 'A04'
+        },
+        {
           contentID: 'eigenräume-extended-edition',
           artist: 'zoomoid',
           title: 'Eigenräume (Extended Edition)',

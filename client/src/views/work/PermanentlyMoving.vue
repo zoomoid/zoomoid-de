@@ -10,14 +10,28 @@
       </section>
       <p>
         <b>301 Permanently Moving</b> is a 2-track Techno EP scheduled to release in
-        November 2019. The first track, <b>Imagine</b> is now available for download here!
+        November 2019.
       </p>
       <div class="download">
         <h2>Listen &amp; Download</h2>
-        <span>Zoomoid - Imagine</span>
+        <span>Zoomoid - Monarch</span>
         <audio controls>
           <source
-            src="https://cdn.occloxium.com/a/zoomoid/301/02_Imagine.mp3"
+            src="https://cdn.occloxium.com/a/zoomoid/301/01_Monarch.mp3"
+            type="audio/mpeg"
+          />
+        </audio>
+        <span>Zoomoid - Doppler</span>
+        <audio controls>
+          <source
+            src="https://cdn.occloxium.com/a/zoomoid/301/02_Doppler.mp3"
+            type="audio/mpeg"
+          />
+        </audio>
+        <span><small>Bonus:</small> Zoomoid - Outer Space (Club Mix)</span>
+        <audio controls>
+          <source
+            src="https://cdn.occloxium.com/a/zoomoid/301/03_Outer%20Space%20(Club%20Mix).mp3"
             type="audio/mpeg"
           />
         </audio>

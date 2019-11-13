@@ -30,9 +30,9 @@ deploy:
   only: 
     - master
   stage: deploy
-  environment:
-    name: Live
-    url: https://www.zoomoid.de
+  # environment:
+  #   name: Live
+  #   url: https://www.zoomoid.de
   script:
     - docker-compose down
     - docker-compose up --detach
@@ -43,9 +43,9 @@ deploy-dev:
   except: 
     - master
   stage: deploy
-  environment:
-    name: Development
-    url: https://staging.zoomoid.de
+  # environment:
+  #   name: Development
+  #   url: https://staging.zoomoid.de
   script:
     - docker-compose down
     - docker-compose up --detach

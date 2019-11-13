@@ -2,6 +2,33 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: web
+  name: zoomoid-de
+spec:
+  selector:
+    matchLabels:
+      app: zoomoid-de
+  template:
+    metadata:
+      labels:
+        app: zoomoid-de
+    spec:
+      containers:
+      - name: zoomoid-de
+        image: registry.git.rwth-aachen.de/occloxium-webdev/zoomoid.de/stable:latest
+        imagePullPolicy: Always
+        resources: 
+          limits:
+            memory: "128Mi"
+            cpu: "250m"
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: gitlab
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: web
   name: staging-zoomoid-de
 spec:
   selector:
@@ -14,7 +41,7 @@ spec:
     spec:
       containers:
       - name: staging-zoomoid-de
-        image: registry.git.rwth-aachen.de/occloxium-webdev/zoomoid.de/experimental:latest
+        image: registry.git.rwth-aachen.de/occloxium-webdev/zoomoid.de/nightly:latest
         imagePullPolicy: Always
         resources: 
           limits:
@@ -24,6 +51,18 @@ spec:
         - containerPort: 80
       imagePullSecrets:
       - name: gitlab
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: web
+  name: zoomoid-de
+spec:
+  selector:
+    app: zoomoid-de
+  ports:
+  - port: 9000
+    targetPort: 80
 ---
 apiVersion: v1
 kind: Service
@@ -44,13 +83,13 @@ metadata:
   namespace: web
   annotations:
     kubernetes.io/ingress.class: "nginx"
-    cert-manager.io/issuer: "letsencrypt-prod"
+    cert-manager.io/issuer: "letsencrypt-staging"
 spec:
   tls:
   - hosts:
     - staging.zoomoid.de
     - staging.zoomo.id
-    secretName: zoomoid-de-tls
+    secretName: staging-zoomoid-de-tls
   rules:
   - host: staging.zoomo.id
     http:
@@ -66,6 +105,22 @@ spec:
         backend:
           serviceName: staging-zoomoid-de
           servicePort: 80
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: zoomoid-de
+  namespace: web
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/issuer: "letsencrypt-prod"
+spec:
+  tls:
+  - hosts:
+    - zoomoid.de
+    - zoomo.id
+    secretName: zoomoid-de-tls
+  rules:
   - host: zoomoid.de
     http:
       paths:

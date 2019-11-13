@@ -66,3 +66,18 @@ spec:
         backend:
           serviceName: staging-zoomoid-de
           servicePort: 80
+  - host: zoomoid.de
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: zoomoid-de
+          servicePort: 80
+  - host: zoomo.id
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: zoomoid-de
+          servicePort: 80
+---

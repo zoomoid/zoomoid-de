@@ -135,4 +135,3 @@ spec:
         backend:
           serviceName: zoomoid-de
           servicePort: 80
----

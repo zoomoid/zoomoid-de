@@ -34,7 +34,7 @@ bootup-staging:
   stage: bootup-staging
   image: registry.git.rwth-aachen.de/zoomoid/docker-kubectl:1.15.5
   script:
-    - ./create-patches --service "staging-zoomoid-de" --hosts "['staging.zoomo.id','staging.zoomoid.de']"
+    - ./create-patches.sh --service "staging-zoomoid-de" --hosts "['staging.zoomo.id','staging.zoomoid.de']"
     - k $NAMESPACE patch ingress --patch "$(cat ./remove-staging.patch.json)"
   tags:
     - kube
@@ -56,7 +56,7 @@ takedown-staging:
     name: staging
     url: https://staging.zoomo.id
   script:
-    - ./create-patches --service "staging-zoomoid-de" --hosts "['staging.zoomo.id','staging.zoomoid.de']"
+    - ./create-patches.sh --service "staging-zoomoid-de" --hosts "['staging.zoomo.id','staging.zoomoid.de']"
     - k $NAMESPACE patch ingress --patch "$(cat ./remove-staging.patch.json)"
   tags:
     - kube

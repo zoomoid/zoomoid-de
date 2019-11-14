@@ -11,7 +11,7 @@ variables:
 
 build-staging:
   image: docker:latest
-  stage: build
+  stage: build-staging
   script: 
     - echo "$CI_JOB_TOKEN" | docker login registry.git.rwth-aachen.de --username gitlab-ci-token --password-stdin 
     - docker build -t $CI_REGISTRY_IMAGE/nightly:$CI_COMMIT_SHORT_SHA .
@@ -21,7 +21,7 @@ build-staging:
 
 build-prod:
   image: docker:latest
-  stage: build
+  stage: build-prod
   when: manual
   script: 
     - echo "$CI_JOB_TOKEN" | docker login registry.git.rwth-aachen.de --username gitlab-ci-token --password-stdin 

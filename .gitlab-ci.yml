@@ -9,16 +9,13 @@ stages:
 variables:
   NAMESPACE: "-n web"
 
-before_script:
-  - ./docker-entrypoint.sh
-
 build-staging:
   image: docker:latest
   stage: build-staging
   script: 
-    - echo "$CI_JOB_TOKEN" | docker login registry.git.rwth-aachen.de --username gitlab-ci-token --password-stdin 
-    - docker build -t $CI_REGISTRY_IMAGE/nightly:$CI_COMMIT_SHORT_SHA .
-    - docker push $CI_REGISTRY_IMAGE/nightly:$CI_COMMIT_SHORT_SHA
+  - echo "$CI_JOB_TOKEN" | docker login registry.git.rwth-aachen.de --username gitlab-ci-token --password-stdin 
+  - docker build -t $CI_REGISTRY_IMAGE/nightly:$CI_COMMIT_SHORT_SHA .
+  - docker push $CI_REGISTRY_IMAGE/nightly:$CI_COMMIT_SHORT_SHA
   tags: 
     - occloxium-docker
 
@@ -27,46 +24,55 @@ build-prod:
   stage: build-prod
   when: manual
   script: 
-    - echo "$CI_JOB_TOKEN" | docker login registry.git.rwth-aachen.de --username gitlab-ci-token --password-stdin 
-    - docker build -t $CI_REGISTRY_IMAGE/stable .
-    - docker push $CI_REGISTRY_IMAGE/stable:latest
+  - echo "$CI_JOB_TOKEN" | docker login registry.git.rwth-aachen.de --username gitlab-ci-token --password-stdin 
+  - docker build -t $CI_REGISTRY_IMAGE/stable .
+  - docker push $CI_REGISTRY_IMAGE/stable:latest
   tags: 
-    - occloxium-docker
+  - occloxium-docker
+
+create-patches:
+  stage: build-staging
+  extends: .kubectl
+  scripts:
+  - sh ./create-patches.sh --service 'staging-zoomoid-de' --hosts '["staging.zoomo.id","staging.zoomoid.de"]'
+  artifacts:
+    paths:
+    - ./remove-staging.patch.json
+    - ./add-staging.patch.json
+
 
 bootup-staging:
   stage: bootup-staging
-  image: registry.git.rwth-aachen.de/zoomoid/docker-kubectl:1.15.5
+  extends: .kubectl
+  dependencies:
+  - create-patches
   script:
-    - sh ./create-patches.sh --service 'staging-zoomoid-de' --hosts '["staging.zoomo.id","staging.zoomoid.de"]'
-    - k $NAMESPACE patch ingress --patch "$(cat ./remove-staging.patch.json)"
-  tags:
-    - kube
+  - k patch ingress --patch "$(cat ./remove-staging.patch.json)"
 
 deploy-staging:
   stage: deploy-staging
-  image: registry.git.rwth-aachen.de/zoomoid/docker-kubectl:1.15.5
+  extends: .kubectl
   environment:
     name: staging
     url: https://staging.zoomo.id
   script:
-    - k $NAMESPACE set image deployment/staging-zoomoid-de staging-zoomoid-de=$CI_REGISTRY_IMAGE/nightly:$CI_COMMIT_SHORT_SHA
-    - k $NAMESPACE rollout status deployment/staging-zoomoid-de
+  - k set image deployment/staging-zoomoid-de staging-zoomoid-de=$CI_REGISTRY_IMAGE/nightly:$CI_COMMIT_SHORT_SHA
+  - k rollout status deployment/staging-zoomoid-de
 
 takedown-staging:
   stage: takedown-staging
-  image: registry.git.rwth-aachen.de/zoomoid/docker-kubectl:1.15.5
+  extends: .kubectl
+  dependencies:
+  - create-patches
   environment:
     name: staging
     url: https://staging.zoomo.id
   script:
-    - sh ./create-patches.sh --service "staging-zoomoid-de" --hosts "['staging.zoomo.id','staging.zoomoid.de']"
-    - k $NAMESPACE patch ingress --patch "$(cat ./remove-staging.patch.json)"
-  tags:
-    - kube
+  - k patch ingress --patch "$(cat ./remove-staging.patch.json)"
 
 deploy-production:
   stage: deploy-prod
-  image: registry.git.rwth-aachen.de/zoomoid/docker-kubectl:1.15.5
+  extends: .kubectl
   when: manual  
   variables:
     restart_deployment: "kubectl rollout restart -n web deployment"
@@ -75,5 +81,12 @@ deploy-production:
   environment:
     name: production
     url: https://zoomo.id
+
+.kubectl:
+  image:
+  - name: registry.git.rwth-aachen.de/zoomoid/docker-kubectl:1.15.5
+  - entrypoint: './docker-entrypoint.sh'
+  before_script:
+  - alias k="kubectl --kubeconfig /admin.conf $NAMESPACE"
   tags:
-    - kube
+  - kube

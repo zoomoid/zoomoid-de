@@ -1,5 +1,6 @@
 stages:
   - build-staging
+  - create-patches
   - bootup-staging
   - deploy-staging
   - takedown-staging
@@ -31,7 +32,7 @@ build-prod:
   - occloxium-docker
 
 create-patches:
-  stage: build-staging
+  stage: create-patches
   extends: .kubectl
   scripts:
   - sh ./create-patches.sh --service 'staging-zoomoid-de' --hosts '["staging.zoomo.id","staging.zoomoid.de"]'

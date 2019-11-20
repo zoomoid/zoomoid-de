@@ -1,6 +1,5 @@
 stages:
   - build-staging
-  - create-patches
   - bootup-staging
   - deploy-staging
   - takedown-staging
@@ -18,6 +17,8 @@ stages:
 
 variables:
   NAMESPACE: "-n web"
+  SERVICE: 'staging-zoomoid-de'
+  HOSTS: '["staging.zoomo.id","staging.zoomoid.de"]'
 
 build-staging:
   image: docker:latest
@@ -43,14 +44,9 @@ build-prod:
 create-patches:
   stage: build-staging
   extends: .kubectl
-  variables:
-    SERVICE: 'staging-zoomoid-de'
-    HOSTS: '["staging.zoomo.id","staging.zoomoid.de"]'
   script:
     - python3 /create-patches.sh --service $SERVICE --hosts $HOSTS
     - cp /**.patch.json ./
-    - pwd
-    - ls .
   artifacts:
     paths:
       - ./remove-staging.patch.json
@@ -60,7 +56,8 @@ bootup-staging:
   stage: bootup-staging
   extends: .kubectl
   script:
-    - k patch ingress staging-zoomoid-de --patch "$(cat ./add-staging.patch.json)"
+    - k get deployments
+    - k patch ingress/$SERVICE --patch ./add-staging.patch.json
 
 deploy-staging:
   stage: deploy-staging
@@ -69,8 +66,8 @@ deploy-staging:
     name: staging
     url: https://staging.zoomo.id
   script:
-    - k set image deployment/staging-zoomoid-de staging-zoomoid-de=$CI_REGISTRY_IMAGE/nightly:$CI_COMMIT_SHORT_SHA
-    - k rollout status deployment/staging-zoomoid-de
+    - k set image deployment/$SERVICE $SERVICE=$CI_REGISTRY_IMAGE/nightly:$CI_COMMIT_SHORT_SHA
+    - k rollout status deployment/$SERVICE
 
 takedown-staging:
   stage: takedown-staging
@@ -79,7 +76,8 @@ takedown-staging:
     name: staging
     url: https://staging.zoomo.id
   script:
-    - k patch ingress staging-zoomoid-de --patch "$(cat ./remove-staging.patch.json)"
+    - k get deployments
+    - k patch ingress/$SERVICE --patch ./remove-staging.patch.json
 
 deploy-production:
   stage: deploy-prod

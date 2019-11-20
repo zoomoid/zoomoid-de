@@ -57,7 +57,7 @@ bootup-staging:
   extends: .kubectl
   script:
     - k get deployments
-    - k patch ingress/$SERVICE --patch ./add-staging.patch.json
+    - k patch ingress/$SERVICE --patch "$(cat ./add-staging.patch.json)"
 
 deploy-staging:
   stage: deploy-staging
@@ -77,7 +77,7 @@ takedown-staging:
     url: https://staging.zoomo.id
   script:
     - k get deployments
-    - k patch ingress/$SERVICE --patch ./remove-staging.patch.json
+    - k patch ingress/$SERVICE --patch "$(cat ./remove-staging.patch.json)"
 
 deploy-production:
   stage: deploy-prod

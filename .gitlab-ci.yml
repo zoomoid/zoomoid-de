@@ -47,7 +47,7 @@ create-patches:
     SERVICE: 'staging-zoomoid-de'
     HOSTS: '["staging.zoomo.id","staging.zoomoid.de"]'
   script:
-    - /create-patches.sh --service $SERVICE --hosts $HOSTS
+    - python3 /create-patches.sh --service $SERVICE --hosts $HOSTS
   artifacts:
     paths:
       - /remove-staging.patch.json

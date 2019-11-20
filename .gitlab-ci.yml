@@ -58,10 +58,8 @@ takedown-staging:
   environment:
     name: staging
     url: https://staging.zoomo.id
-
-  
   script:
-    - ./create-patches.sh --service "staging-zoomoid-de" --hosts "['staging.zoomo.id','staging.zoomoid.de']"
+    - sh ./create-patches.sh --service "staging-zoomoid-de" --hosts "['staging.zoomo.id','staging.zoomoid.de']"
     - k $NAMESPACE patch ingress --patch "$(cat ./remove-staging.patch.json)"
   tags:
     - kube

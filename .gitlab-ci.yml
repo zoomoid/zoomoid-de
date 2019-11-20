@@ -48,13 +48,13 @@ create-patches:
     HOSTS: '["staging.zoomo.id","staging.zoomoid.de"]'
   script:
     - python3 /create-patches.sh --service $SERVICE --hosts $HOSTS
-    - cat /add-staging.patch.json
-    - cat /add-staging.patch.json
-    - ls /
+    - cp /**.patch.json ./
+    - pwd
+    - ls .
   artifacts:
     paths:
-      - /remove-staging.patch.json
-      - /add-staging.patch.json
+      - ./remove-staging.patch.json
+      - ./add-staging.patch.json
 
 bootup-staging:
   stage: bootup-staging

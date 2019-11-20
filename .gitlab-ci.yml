@@ -12,7 +12,7 @@ stages:
     name: registry.git.rwth-aachen.de/zoomoid/docker-kubectl:latest
     entrypoint: ['/docker-entrypoint.sh']
   before_script:
-    - ls /
+    - echo $kube_config | base64 -d > /admin.conf
   tags:
     - kube
 

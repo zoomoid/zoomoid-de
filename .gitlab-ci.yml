@@ -72,12 +72,13 @@ deploy-staging:
 takedown-staging:
   stage: takedown-staging
   extends: .kubectl
+  when: manual
   environment:
     name: staging
     url: https://staging.zoomo.id
   script:
     - k get deployments
-    - k patch ingress $SERVICE --patch "$(cat ./remove-staging.patch.json)"
+    - kubectl --kubeconfig /admin.conf -n web patch ingress/$SERVICE "$(cat ./remove-staging.patch.json)"
 
 deploy-production:
   stage: deploy-prod

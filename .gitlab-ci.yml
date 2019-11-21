@@ -78,7 +78,7 @@ takedown-staging:
     url: https://staging.zoomo.id
   script:
     - k get deployments
-    - kubectl --kubeconfig /admin.conf -n web patch ingress/$SERVICE "$(cat ./remove-staging.patch.json)"
+    - kubectl --kubeconfig /admin.conf -n web patch ingress/$SERVICE --patch "$(cat ./remove-staging.patch.json)"
 
 deploy-production:
   stage: deploy-prod

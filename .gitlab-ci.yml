@@ -16,7 +16,7 @@ stages:
     - kube
 
 variables:
-  NAMESPACE: "web"
+  NAMESPACE: "-n web"
   SERVICE: 'staging-zoomoid-de'
   HOSTS: '["staging.zoomo.id","staging.zoomoid.de"]'
 
@@ -57,7 +57,7 @@ bootup-staging:
   extends: .kubectl
   script:
     - k get ingress
-    - kubectl --kubeconfig /admin.conf -n $NAMESPACE patch ingress/$SERVICE --patch "$(cat ./add-staging.patch.json)"
+    - kubectl --kubeconfig /admin.conf -n web patch ingress/$SERVICE --patch "$(cat ./add-staging.patch.json)"
 
 deploy-staging:
   stage: deploy-staging

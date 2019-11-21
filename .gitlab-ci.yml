@@ -56,8 +56,8 @@ bootup-staging:
   stage: bootup-staging
   extends: .kubectl
   script:
-    - k get deployments
-    - kubectl --kubeconfig /admin.conf patch ingress $SERVICE --patch "$(cat ./add-staging.patch.json)"
+    - k get ingress
+    - kubectl --kubeconfig /admin.conf patch ingress/$SERVICE --patch "$(cat ./add-staging.patch.json)"
 
 deploy-staging:
   stage: deploy-staging

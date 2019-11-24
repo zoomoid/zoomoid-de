@@ -9,8 +9,8 @@
         <img src="https://cdn.occloxium.com/i/zoomoid/covers/301/standard.png" />
       </section>
       <p>
-        <b>301 Permanently Moving</b> is a X-track Techno EP scheduled to release in
-        November 2019.
+        <b>301 Permanently Moving</b> is a 4-track Techno EP scheduled to release on 14th of
+        December, 2019.
       </p>
       <div class="download">
         <h2>Listen &amp; Download</h2>

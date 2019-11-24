@@ -44,9 +44,8 @@ export default {
 
 .wrapper
   width: 100%
-  background: black
+  background: $backlayer
 .banner
-  background: black
   display: flex
   padding: 8px
   font-size: 11pt

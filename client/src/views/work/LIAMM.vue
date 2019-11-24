@@ -17,8 +17,7 @@
       <div class="download">
         <p>
           I would appreciate you listening to Life Is About Making Memories on Spotify, Apple Music,
-          Deezer and so on and love you across the stars for actually buying my
-          music. You supporting me means the absolute world to me!
+          Deezer and so on. You supporting me means the absolute world to me!
           <br />However, I want everybody to enjoy it equally, hence I provide it for download
           for free here.
         </p>
@@ -309,7 +308,7 @@
   div
     flex-grow: 1
   b
-    font-family: 'Inter Var', sans-serif;
+    font-family: 'Inter Var', sans-serif
     font-weight: 800
     width: 1em
     +font-size(2em)

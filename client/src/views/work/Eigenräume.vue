@@ -20,8 +20,7 @@
       <div class="download">
         <p>
           I would appreciate you listening to Eigenräume on Spotify, Apple Music,
-          Deezer and so on and love you across the stars for actually buying my
-          music. You supporting me means the absolute world to me!
+          Deezer and so on. You supporting me means the absolute world to me!
           <br />However, I want everybody to enjoy it equally, hence I provide it for download
           for free here.
         </p>

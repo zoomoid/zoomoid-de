@@ -31,14 +31,14 @@
         <span>Zoomoid - Elektron</span>
         <audio controls>
           <source
-            src="https://cdn.occloxium.com/a/zoomoid/301/04_Elektron.mp3"
+            src="https://cdn.occloxium.com/a/zoomoid/301/03_Elektron.mp3"
             type="audio/mpeg"
           />
         </audio>
         <span><small>Bonus:</small> Zoomoid - Outer Space (Rework)</span>
         <audio controls>
           <source
-            src="https://cdn.occloxium.com/a/zoomoid/301/03_Outer%20Space%20(Rework).mp3"
+            src="https://cdn.occloxium.com/a/zoomoid/301/04_Outer%20Space%20(Rework).mp3"
             type="audio/mpeg"
           />
         </audio>

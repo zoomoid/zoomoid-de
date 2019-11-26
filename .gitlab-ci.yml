@@ -83,7 +83,6 @@ takedown-staging:
 
 deploy-production:
   stage: deploy-prod
-  when: manual
   dependencies:
     - build-prod
     - takedown-staging

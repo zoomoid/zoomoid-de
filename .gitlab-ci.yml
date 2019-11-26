@@ -19,6 +19,8 @@ variables:
   HOSTS: '["staging.zoomo.id","staging.zoomoid.de"]'
 
 build-staging:
+  except:
+    - master
   image: docker:latest
   stage: build
   script: 
@@ -52,6 +54,8 @@ create-patches:
       - ./add-staging.patch.json
 
 bootup-staging:
+  except:
+    - master
   stage: bootup-staging
   extends: .kubectl
   script:
@@ -59,6 +63,8 @@ bootup-staging:
     - kubectl --kubeconfig /admin.conf -n web patch ingress/$SERVICE --patch "$(cat ./add-staging.patch.json)"
 
 deploy-staging:
+  except:
+    - master
   stage: deploy-staging
   extends: .kubectl
   environment:
@@ -69,6 +75,8 @@ deploy-staging:
     - k rollout status deployment/$SERVICE
 
 takedown-staging:
+  only:
+    - master
   stage: deploy-prod
   extends: .kubectl
   when: manual
@@ -80,6 +88,8 @@ takedown-staging:
     - kubectl --kubeconfig /admin.conf -n web patch ingress/$SERVICE --patch "$(cat ./remove-staging.patch.json)"
 
 deploy-production:
+  only:
+    - master
   stage: deploy-prod
   when: manual
   extends: .kubectl

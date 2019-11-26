@@ -2,8 +2,6 @@ stages:
   - build
   - bootup-staging
   - deploy-staging
-  - takedown-staging
-  - build-prod
   - deploy-prod
 
 .kubectl:
@@ -71,7 +69,7 @@ deploy-staging:
     - k rollout status deployment/$SERVICE
 
 takedown-staging:
-  stage: takedown-staging
+  stage: deploy-prod
   extends: .kubectl
   when: manual
   environment:
@@ -83,7 +81,7 @@ takedown-staging:
 
 deploy-production:
   stage: deploy-prod
-  needs: ['build-prod', 'takedown-staging']
+  when: manual
   extends: .kubectl
   script: 
     - k rollout restart deployment/zoomoid-de

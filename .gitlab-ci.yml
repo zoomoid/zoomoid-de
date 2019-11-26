@@ -1,5 +1,5 @@
 stages:
-  - build-staging
+  - build
   - bootup-staging
   - deploy-staging
   - takedown-staging
@@ -22,7 +22,7 @@ variables:
 
 build-staging:
   image: docker:latest
-  stage: build-staging
+  stage: build
   script: 
     - echo "$CI_JOB_TOKEN" | docker login registry.git.rwth-aachen.de --username gitlab-ci-token --password-stdin 
     - docker build -t $CI_REGISTRY_IMAGE/nightly:$CI_COMMIT_SHORT_SHA .
@@ -34,7 +34,7 @@ build-staging:
 
 build-prod:
   image: docker:latest
-  stage: build-prod
+  stage: build
   script: 
     - echo "$CI_JOB_TOKEN" | docker login registry.git.rwth-aachen.de --username gitlab-ci-token --password-stdin 
     - docker build -t $CI_REGISTRY_IMAGE/stable .
@@ -43,7 +43,7 @@ build-prod:
     - occloxium-docker
 
 create-patches:
-  stage: build-staging
+  stage: build
   extends: .kubectl
   script:
     - python3 /create-patches.sh --service $SERVICE --hosts $HOSTS
@@ -83,6 +83,10 @@ takedown-staging:
 
 deploy-production:
   stage: deploy-prod
+  when: manual
+  dependencies:
+    - build-prod
+    - takedown-staging
   extends: .kubectl
   script: 
     - k rollout restart deployment/zoomoid-de

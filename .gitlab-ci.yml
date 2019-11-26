@@ -83,9 +83,7 @@ takedown-staging:
 
 deploy-production:
   stage: deploy-prod
-  dependencies:
-    - build-prod
-    - takedown-staging
+  needs: ['build-prod', 'takedown-staging']
   extends: .kubectl
   script: 
     - k rollout restart deployment/zoomoid-de

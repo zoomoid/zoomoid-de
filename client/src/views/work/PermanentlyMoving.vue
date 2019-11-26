@@ -6,11 +6,11 @@
         <h1>301 Permanently Moving</h1>
       </div>
       <section class="cover">
-        <img src="https://cdn.occloxium.com/i/zoomoid/covers/301/standard.png" />
+        <img src="https://cdn.occloxium.com/i/zoomoid/covers/301/standard.jpg" />
       </section>
       <p>
-        <b>301 Permanently Moving</b> is a 2-track Techno EP scheduled to release in
-        November 2019.
+        <b>301 Permanently Moving</b> is a 4-track Techno EP scheduled to release on 14th of
+        December, 2019.
       </p>
       <div class="download">
         <h2>Listen &amp; Download</h2>
@@ -28,10 +28,17 @@
             type="audio/mpeg"
           />
         </audio>
-        <span><small>Bonus:</small> Zoomoid - Outer Space (Club Mix)</span>
+        <span>Zoomoid - Elektron</span>
         <audio controls>
           <source
-            src="https://cdn.occloxium.com/a/zoomoid/301/03_Outer%20Space%20(Club%20Mix).mp3"
+            src="https://cdn.occloxium.com/a/zoomoid/301/03_Elektron.mp3"
+            type="audio/mpeg"
+          />
+        </audio>
+        <span><small>Bonus:</small> Zoomoid - Outer Space (Rework)</span>
+        <audio controls>
+          <source
+            src="https://cdn.occloxium.com/a/zoomoid/301/04_Outer%20Space%20(Rework).mp3"
             type="audio/mpeg"
           />
         </audio>

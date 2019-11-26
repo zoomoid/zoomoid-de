@@ -14,8 +14,8 @@ export default {
           contentID: '301',
           artist: 'zoomoid',
           title: '301 Permanently Moving',
-          coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/301/standard.png',
-          date: '22.11.2019',
+          coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/301/standard.jpg',
+          date: '14.12.2019',
           id: 'A05'
         },
         {

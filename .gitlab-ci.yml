@@ -79,7 +79,6 @@ takedown-staging:
     - master
   stage: deploy-prod
   extends: .kubectl
-  when: manual
   environment:
     name: staging
     url: https://staging.zoomo.id
@@ -91,7 +90,6 @@ deploy-production:
   only:
     - master
   stage: deploy-prod
-  when: manual
   extends: .kubectl
   script: 
     - k rollout restart deployment/zoomoid-de

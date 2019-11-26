@@ -41,8 +41,7 @@
       <div class="download">
         <p>
           I would appreciate you listening to the album on Spotify, Apple Music,
-          Deezer and others, and also love you across the stars (get that reference?) for actually buying my
-          music. You supporting me means the absolute world to me!
+          Deezer and others. You supporting me means the absolute world to me!
           <br />However, I want everybody to enjoy it equally, hence I provide it for download
           for free here.
         </p>

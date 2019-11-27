@@ -3,13 +3,13 @@
     <article>
       <div class="title">
         <h3>zoomoid</h3>
-        <h1>301 Permanently Moving</h1>
+        <h1>301 Moved Permanently</h1>
       </div>
       <section class="cover">
         <img src="https://cdn.occloxium.com/i/zoomoid/covers/301/standard.jpg" />
       </section>
       <p>
-        <b>301 Permanently Moving</b> is a 4-track Techno EP scheduled to release on 14th of
+        <b>301 Moved Permanently</b> is a 4-track Techno EP scheduled to release on 14th of
         December, 2019.
       </p>
       <div class="download">

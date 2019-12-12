@@ -1,7 +1,8 @@
 <template>
   <main id="app">
     <CookieBanner />
-    <Navigation />
+    <FirstSection></FirstSection>
+    <!-- <Navigation /> -->
     <router-view></router-view>
   </main>
 </template>
@@ -16,12 +17,12 @@ $primary-background: $prime-background
   outline: none
 body
   +typography
-  height: 100vh
-  width: 100%
+  // height: 100vh
+  // width: 100%
   // position: absolute
   background: $backlayer
   main
-    min-height: 100%
+    // min-height: 100%
     display: flex
     flex-direction: column
 </style>
@@ -29,10 +30,11 @@ body
 <script>
 import CookieBanner from "@/components/CookieBanner.vue";
 import Navigation from "@/components/Navigation.vue";
-
+import FirstSection from "@/components/front-page/FirstSection.vue"
 export default {
   name: "App",
   components: {
+    FirstSection,
     CookieBanner,
     Navigation
   }

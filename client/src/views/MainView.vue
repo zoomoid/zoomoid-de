@@ -43,7 +43,7 @@ export default {
 // $background: $may-1
 
 $primary-background: $prime-background
-$backlayer: white
+$backlayer: rgba(8,8,8,1)
 
 .backdrop
   background: $backlayer

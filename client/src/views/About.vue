@@ -20,23 +20,23 @@
           <ul class="references">
             <li>
               <SlideAnchor :anchor="'https://open.spotify.com/artist/6RRD9ulVsLuDIqFzuFvSL8?si=a8mm8a2RTaO1Zo6SyfwZVQ'"
-              :icon="'icon-spotify'" :name="'Spotify'"/>
+              :icon="'fab fa-spotify'" :name="'Spotify'"/>
             </li>
             <li>
               <SlideAnchor :anchor="'https://instagram.com/zoomoid'"
-              :icon="'icon-instagram'" :name="'Instagram'"/>
+              :icon="'fab fa-instagram'" :name="'Instagram'"/>
             </li>
             <li>
               <SlideAnchor :anchor="'https://www.youtube.com/channel/UCg0yVDwpB9QphFbsGnV-8tQ/'"
-              :icon="'icon-youtube'" :name="'YouTube'"/>
+              :icon="'fab fa-youtube'" :name="'YouTube'"/>
             </li>
             <li>
               <SlideAnchor :anchor="'https://soundcloud.com/zoomoid'"
-              :icon="'icon-soundcloud2'" :name="'SoundCloud'"/>
+              :icon="'fab fa-soundcloud'" :name="'SoundCloud'"/>
             </li>
             <li>
               <SlideAnchor :anchor="'https://github.com/occloxium'"
-              :icon="'icon-github'" :name="'GitHub'"/>
+              :icon="'fab fa-github'" :name="'GitHub'"/>
             </li>
           </ul>
         </div>

@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import StreamingPlatforms from '@/components/front-page/StreamingPlatforms.vue'
+import StreamingPlatforms from '@/components/StreamingPlatforms.vue'
 export default {
   components: {
     StreamingPlatforms
@@ -55,7 +55,7 @@ div#frontmatter
     height: 100%
     background-attachment: fixed
     width: 100%
-    background: url(../../assets/301_background.jpg) rgba(8,8,8,1)
+    background: url(../assets/301_background.jpg) rgba(8,8,8,1)
     background-size: cover
     background-position: center center
     filter: grayscale(1) contrast(1.2) brightness(0.15)

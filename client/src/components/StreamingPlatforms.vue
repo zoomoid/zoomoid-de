@@ -9,7 +9,7 @@
       :icon="'fab fa-apple'" :name="'Apple Music'"/>
     </li>
     <li>
-      <SlideAnchor :anchor="'https://www.youtube.com/channel/UC62BLKKSvDsJ1_-VQ9XCRLw'"
+      <SlideAnchor :anchor="'https://zoomoid.bandcamp.com/'"
       :icon="'fab fa-bandcamp'" :name="'Bandcamp'"/>
     </li>
     <li>

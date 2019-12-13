@@ -3,6 +3,7 @@
     <!-- <div class="backdrop">
       <Navigation/>
     </div> -->
+    <Splashscreen></Splashscreen>
     <Banner></Banner>
     <div class="foreground">
       <Intro></Intro>
@@ -20,13 +21,14 @@
 import Intro from '@/views/Intro.vue'
 import Work from '@/views/Work.vue';
 import About from '@/views/About.vue';
-
+import Splashscreen from '@/components/Splashscreen.vue';
 import {Banner, MerchBanner, Footer} from '@/components/';
 // import Navigation from '@/components/Navigation.vue';
 
 export default {
   name: 'MainView',
   components: {
+    Splashscreen,
     Intro,
     Footer,
     // Navigation,

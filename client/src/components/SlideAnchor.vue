@@ -48,6 +48,9 @@ a
   display: inline-block
   cursor: pointer
   font-size: 1em
+  b, i
+    position: relative
+    z-index: 10
   &.small
     font-size: 50%
   i
@@ -61,7 +64,7 @@ a
     right: 0
     bottom: 0
     background: $text-color
-    z-index: -1
+    z-index: 9
   &:hover
     color: invert($text-color)
     // transition-delay: 0.4s

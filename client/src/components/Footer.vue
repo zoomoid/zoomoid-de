@@ -3,31 +3,31 @@
     <div class="references">
       <li>
         <a href="https://open.spotify.com/artist/6RRD9ulVsLuDIqFzuFvSL8?si=a8mm8a2RTaO1Zo6SyfwZVQ">
-          <i class="icon-spotify"></i>
+          <i class="fab fa-spotify"></i>
           <span>Spotify</span>
         </a>
       </li>
       <li>
         <a href="https://instagram.com/zoomoid">
-          <i class="icon-instagram"></i>
+          <i class="fab fa-instagram"></i>
           <span>Instagram</span>
         </a>
       </li>
       <li>
         <a href="https://www.youtube.com/channel/UCg0yVDwpB9QphFbsGnV-8tQ/">
-          <i class="icon-youtube"></i>
+          <i class="fab fa-youtube"></i>
           <span>YouTube</span>
         </a>
       </li>
       <li>
         <a href="https://soundcloud.com/zoomoid">
-          <i class="icon-soundcloud2"></i>
+          <i class="fab fa-soundcloud"></i>
           <span>SoundCloud</span>
         </a>
       </li>
       <li>
         <a href="https://github.com/occloxium">
-          <i class="icon-github"></i>
+          <i class="fab fa-github"></i>
           <span>GitHub</span>
         </a>
       </li>

@@ -3,7 +3,7 @@
     <!-- <div class="backdrop">
       <Navigation/>
     </div> -->
-    <Splashscreen></Splashscreen>
+    <!-- <Splashscreen></Splashscreen> -->
     <Banner></Banner>
     <div class="foreground">
       <Intro></Intro>

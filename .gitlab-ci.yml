@@ -12,7 +12,7 @@ stages:
   before_script:
     - echo $kube_config | base64 -d > /admin.conf
   tags:
-    - kube
+    - kubernetes
 
 variables:
   NAMESPACE: "-n web"

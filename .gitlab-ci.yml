@@ -10,8 +10,8 @@ stages:
     name: registry.git.rwth-aachen.de/zoomoid/docker-kubectl:latest
     entrypoint: ['/docker-entrypoint.sh']
   before_script:
-    - echo $kube_config | base64 -d > /root/.kube/runner
-    - export KUBECONFIG="$KUBECONFIG:/root/.kube/runner"
+    - echo $kube_config | base64 -d > /root/runner
+    - export KUBECONFIG="$KUBECONFIG:/root/runner"
     - kubectl config view
     - kubectl config use-context runner@kubernetes
   tags:

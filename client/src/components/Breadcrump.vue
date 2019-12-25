@@ -1,6 +1,6 @@
 <template>
   <div class="breadcrump">
-    <router-link to="/"><i class="icon-home"></i></router-link>
+    <router-link to="/"><i class="fas fa-home"></i></router-link>
     <span class="spacer">→</span>
     <router-link v-bind:to="$route.path">{{$route.name}}</router-link>
   </div>

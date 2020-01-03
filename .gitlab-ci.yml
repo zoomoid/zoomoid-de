@@ -34,7 +34,7 @@ build-staging:
     - docker tag $CI_REGISTRY_IMAGE/nightly:$CI_COMMIT_SHORT_SHA $CI_REGISTRY_IMAGE/nightly:latest
     - docker push $CI_REGISTRY_IMAGE/nightly:latest
   tags: 
-    - occloxium-docker
+    - kubernetes
 
 build-prod:
   image: docker:latest
@@ -44,7 +44,7 @@ build-prod:
     - docker build -t $CI_REGISTRY_IMAGE/stable .
     - docker push $CI_REGISTRY_IMAGE/stable:latest
   tags: 
-    - occloxium-docker
+    - kubernetes
 
 create-patches:
   stage: build
@@ -63,7 +63,7 @@ bootup-staging:
   stage: bootup-staging
   extends: .kubectl
   script:
-    - kubectl -n web patch ingress/$SERVICE --patch "$(cat ./add-staging.patch.json)"
+    - kubectl patch ingress/$SERVICE --patch "$(cat ./add-staging.patch.json)"
 
 deploy-staging:
   except:
@@ -87,7 +87,7 @@ takedown-staging:
     name: staging
     url: https://staging.zoomo.id
   script:
-    - kubectl -n web patch ingress/$SERVICE --patch "$(cat ./remove-staging.patch.json)"
+    - kubectl patch ingress/$SERVICE --patch "$(cat ./remove-staging.patch.json)"
 
 
 auto-takedown-staging:
@@ -99,7 +99,7 @@ auto-takedown-staging:
     name: staging
     url: https://staging.zoomo.id
   script:
-    - kubectl -n web patch ingress/$SERVICE --patch "$(cat ./remove-staging.patch.json)"
+    - kubectl patch ingress/$SERVICE --patch "$(cat ./remove-staging.patch.json)"
 
 deploy-production:
   only:

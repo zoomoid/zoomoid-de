@@ -89,7 +89,6 @@ takedown-staging:
   script:
     - kubectl patch ingress/$SERVICE --patch "$(cat ./remove-staging.patch.json)"
 
-
 auto-takedown-staging:
   only:
     - master

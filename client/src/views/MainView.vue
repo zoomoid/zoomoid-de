@@ -8,7 +8,7 @@
     <div class="foreground">
       <Intro></Intro>
       <Work></Work>
-      <MerchBanner></MerchBanner>
+      <!-- <MerchBanner></MerchBanner> -->
       <About></About>
     </div>
     <div class="footer">
@@ -22,7 +22,7 @@ import Intro from '@/views/Intro.vue'
 import Work from '@/views/Work.vue';
 import About from '@/views/About.vue';
 import Splashscreen from '@/components/Splashscreen.vue';
-import {Banner, MerchBanner, Footer} from '@/components/';
+import {Banner, Footer} from '@/components/';
 // import Navigation from '@/components/Navigation.vue';
 
 export default {
@@ -35,7 +35,7 @@ export default {
     Work,
     About,
     Banner,
-    MerchBanner
+    // MerchBanner
   }
 }
 </script>

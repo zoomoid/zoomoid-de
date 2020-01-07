@@ -63,7 +63,7 @@ bootup-staging:
   stage: bootup-staging
   extends: .kubectl
   script:
-    - kubectl -n web patch ingress/$SERVICE --patch "$(cat ./add-staging.patch.json)"
+    - kubectl patch ingress/$SERVICE --patch "$(cat ./add-staging.patch.json)"
 
 deploy-staging:
   except:
@@ -87,8 +87,7 @@ takedown-staging:
     name: staging
     url: https://staging.zoomo.id
   script:
-    - kubectl -n web patch ingress/$SERVICE --patch "$(cat ./remove-staging.patch.json)"
-
+    - kubectl patch ingress/$SERVICE --patch "$(cat ./remove-staging.patch.json)"
 
 auto-takedown-staging:
   only:
@@ -99,7 +98,7 @@ auto-takedown-staging:
     name: staging
     url: https://staging.zoomo.id
   script:
-    - kubectl -n web patch ingress/$SERVICE --patch "$(cat ./remove-staging.patch.json)"
+    - kubectl patch ingress/$SERVICE --patch "$(cat ./remove-staging.patch.json)"
 
 deploy-production:
   only:

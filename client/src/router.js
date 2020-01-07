@@ -70,12 +70,13 @@ export default new Router({
       path: '/privacy',
       name: 'Privacy',
       component: Privacy
-    },{
-      path: '/merch',
-      name: 'Merchandise',
-      alias: '/merchandise',
-      component: Merchandise
-    }
+    },
+    // {
+    //   path: '/merch',
+    //   name: 'Merchandise',
+    //   alias: '/merchandise',
+    //   component: Merchandise
+    // }
   ],
   scrollBehavior () {
     return { x: 0, y: 0 }

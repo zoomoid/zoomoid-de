@@ -45,9 +45,12 @@ a
   transition-delay: 0.4s
   transition: color 0.1s linear
   color: $text-color
-  display: inline-block
+  display: block
   cursor: pointer
   font-size: 1em
+  +font-bootstrap
+  b
+    font-weight: 800
   b, i
     position: relative
     z-index: 10

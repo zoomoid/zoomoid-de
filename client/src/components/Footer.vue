@@ -25,12 +25,6 @@
           <span>SoundCloud</span>
         </a>
       </li>
-      <li>
-        <a href="https://github.com/occloxium">
-          <i class="fab fa-github"></i>
-          <span>GitHub</span>
-        </a>
-      </li>
       <li class="privacy">
         <router-link to="/privacy">Privacy &amp; Data Protection</router-link>
       </li>
@@ -68,5 +62,6 @@ footer
       display: none
   .privacy
     a
+      font-weight: 600
       font-size: 0.8em !important
 </style>

@@ -53,20 +53,21 @@ a
     line-height: 1.2
     &.no
       +font-size(0.8em)
-      font-weight: 200
+      font-weight: 600
       // padding-bottom: 1em
     &.title
-      +font-size(2em)
+      font-size: 1.5em
+      text-transform: uppercase
       font-weight: 800
       +title
       line-height: 1
     &.artist
       +font-size(1em)
-      font-weight: 800
+      font-weight: 500
       +title
     &.date
       +font-size(0.8em)
-      font-weight: 200
+      font-weight: 800
       padding-top: 1em
 
 </style>

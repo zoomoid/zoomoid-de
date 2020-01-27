@@ -9,7 +9,7 @@ export default {
   },
   data: function() {
     return {
-      entries: [
+      new_arrivals: [
         {
           contentID: '301',
           artist: 'zoomoid',
@@ -18,6 +18,9 @@ export default {
           date: '13.12.2019',
           id: 'A05'
         },
+
+      ],
+      releases2019: [
         {
           contentID: 'public-transportation',
           artist: 'zoomoid',
@@ -83,15 +86,16 @@ export default {
 <template>
   <div id="work">
     <div class="center-wrapper">
-      <!-- <img class="logo" src="https://cdn.occloxium.com/i/zoomoid/logos/logo.png"> -->
-      <h1>Work</h1>
-      <p>
-        Zoomoids past work and discography
-      </p>
     </div>
-    <div class="grid">
-      <Card v-for="item in entries" v-bind:key="item.contentID" v-bind:entry="item"/>
+    <div class="grid" id="#new-arrivals">
+      <img class="logo" src="@/assets/new_arrivals.svg">
+      <Card v-for="item in new_arrivals" v-bind:key="item.contentID" v-bind:entry="item"/>
     </div>
+    <div class="grid" id="#2019">
+      <img class="logo" src="@/assets/2019.svg">
+      <Card v-for="item in releases2019" v-bind:key="item.contentID" v-bind:entry="item"/>
+    </div>
+
   </div>
 </template>
 <style lang="sass" scoped>
@@ -101,9 +105,12 @@ $radius: 32px
   flex-grow: 1
   max-width: $max-width
   margin: 0 auto
+  padding-left: 2em
   .logo
-    width: 240px
+    width: 100%
     text-align: center
+    padding-top: 2em
+    padding-bottom: 2em
   h1
     +fade
     margin-top: 0

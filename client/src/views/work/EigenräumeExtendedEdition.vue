@@ -10,7 +10,7 @@
       </section>
 
       <p>
-        The original <router-link to="/work/eigenräume">Eigenräume</router-link>
+        The original <router-link to="/work/eigenräume-standard-edition">Eigenräume</router-link>
         was planned to be a proper concept album when I started working on it way back in
         January 2019. Every track would blend seamlessly and the whole album
         would tell a story of places I really felt were special to me.

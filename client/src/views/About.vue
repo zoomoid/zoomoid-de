@@ -34,10 +34,6 @@
               <SlideAnchor :anchor="'https://soundcloud.com/zoomoid'"
               :icon="'fab fa-soundcloud'" :name="'SoundCloud'"/>
             </li>
-            <li>
-              <SlideAnchor :anchor="'https://github.com/occloxium'"
-              :icon="'fab fa-github'" :name="'GitHub'"/>
-            </li>
           </ul>
         </div>
       </div>
@@ -51,11 +47,14 @@
 #about
   max-width: $max-width
   margin: 0 auto 4em
+  padding-left: 2em
+  +font-bootstrap
+  p
+    font-weight: 600
+    a
+      font-weight: 700
   h1
     +fade
-    // +font-size(4em)
-    // +sm
-      // +font-size(4em)
   .contact--mail
     +font-size(1em)
   .references

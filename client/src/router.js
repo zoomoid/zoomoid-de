@@ -13,7 +13,6 @@ import {
   PermanentlyMoving,
   PublicTransportation
 } from '@/views/work/index.js';
-import Merchandise from '@/views/Merchandise';
 
 Vue.use(Router)
 
@@ -71,12 +70,6 @@ export default new Router({
       name: 'Privacy',
       component: Privacy
     },
-    // {
-    //   path: '/merch',
-    //   name: 'Merchandise',
-    //   alias: '/merchandise',
-    //   component: Merchandise
-    // }
   ],
   scrollBehavior () {
     return { x: 0, y: 0 }

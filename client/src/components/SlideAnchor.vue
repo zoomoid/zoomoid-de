@@ -69,7 +69,7 @@ a
     background: $text-color
     z-index: 9
   &:hover
-    color: invert($text-color)
+    color: invert(darken($text-color, 10%))
     // transition-delay: 0.4s
     transition: color 0.1s linear
 .slide-enter

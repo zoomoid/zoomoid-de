@@ -53,30 +53,30 @@ export default {
           date: '22.09.2018',
           id: 'A01'
         },
-        {
-          contentID: 'datkom',
-          artist: 'zoomoid, Simon Kaiser, Dirk Thißen',
-          title: 'Datenkom&shy;mu&shy;ni&shy;ka&shy;tion & Sicherheit',
-          coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/datkomm/cover.png',
-          date: '14.02.2019',
-          id: 'S06'
-        },
-        {
-          contentID: 'interstellar',
-          artist: 'zoomoid',
-          title: 'Interstellar',
-          coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/interstellar/cover.png',
-          date: '22.07.2018',
-          id: 'S05'
-        },
-        {
-          contentID: 'atomic-spark',
-          artist: 'zoomoid',
-          title: 'Atomic Spark (Single)',
-          coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/atomic-spark/cover.png',
-          date: '22.09.2017',
-          id: 'S04'
-        }
+        // {
+        //   contentID: 'datkom',
+        //   artist: 'zoomoid, Simon Kaiser, Dirk Thißen',
+        //   title: 'Datenkom&shy;mu&shy;ni&shy;ka&shy;tion & Sicherheit',
+        //   coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/datkomm/cover.png',
+        //   date: '14.02.2019',
+        //   id: 'S06'
+        // },
+        // {
+        //   contentID: 'interstellar',
+        //   artist: 'zoomoid',
+        //   title: 'Interstellar',
+        //   coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/interstellar/cover.png',
+        //   date: '22.07.2018',
+        //   id: 'S05'
+        // },
+        // {
+        //   contentID: 'atomic-spark',
+        //   artist: 'zoomoid',
+        //   title: 'Atomic Spark (Single)',
+        //   coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/atomic-spark/cover.png',
+        //   date: '22.09.2017',
+        //   id: 'S04'
+        // }
       ]
     }
   }

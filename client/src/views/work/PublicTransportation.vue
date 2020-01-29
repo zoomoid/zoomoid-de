@@ -3,7 +3,7 @@
     <article>
       <div class="title">
         <h3>zoomoid</h3>
-        <h1>Public Transportation EP</h1>
+        <h1>Public Trans&shy;por&shy;ta&shy;tion EP</h1>
       </div>
       <section class="cover">
         <img src="https://cdn.occloxium.com/i/zoomoid/covers/public-transportation/standard.png" />
@@ -15,48 +15,7 @@
       </p>
       <div class="download">
         <h2>Listen &amp; Download</h2>
-        <span>Zoomoid - Stargazing</span>
-        <audio controls>
-          <source
-            src="https://cdn.occloxium.com/a/zoomoid/public-transportation/01_stargazing.mp3"
-            type="audio/mpeg"
-          />
-        </audio>
-        <span>Zoomoid - Downhill</span>
-        <audio controls>
-          <source
-            src="https://cdn.occloxium.com/a/zoomoid/public-transportation/02_downhill.mp3"
-            type="audio/mpeg"
-          />
-        </audio>
-        <span>Zoomoid - Say It</span>
-        <audio controls>
-          <source
-            src="https://cdn.occloxium.com/a/zoomoid/public-transportation/03_say%20it.mp3"
-            type="audio/mpeg"
-          />
-        </audio>
-        <span>Zoomoid - Volksgarten</span>
-        <audio controls>
-          <source
-            src="https://cdn.occloxium.com/a/zoomoid/public-transportation/04_volksgarten.mp3"
-            type="audio/mpeg"
-          />
-        </audio>
-        <span>Zoomoid - Melancholic Meditation</span>
-        <audio controls>
-          <source
-            src="https://cdn.occloxium.com/a/zoomoid/public-transportation/05_melancholic%20meditation.mp3"
-            type="audio/mpeg"
-          />
-        </audio>
-        <span>Zoomoid - Delay</span>
-        <audio controls>
-          <source
-            src="https://cdn.occloxium.com/a/zoomoid/public-transportation/06_delay.mp3"
-            type="audio/mpeg"
-          />
-        </audio>
+        <AudioManager class="players" :queue="this.queue"></AudioManager>
       </div>
     </article>
   </div>
@@ -68,10 +27,11 @@
 </style>
 
 <script>
+import AudioManager from '@/components/AudioManager.vue';
 
 export default {
   components: {
-
+    AudioManager,
   },
   data: function() {
     return {
@@ -80,6 +40,44 @@ export default {
       ],
       buying: [
 
+      ],
+      queue: [
+        {
+          id: 1,
+          name: 'Stargazing',
+          url: 'https://cdn.occloxium.com/a/zoomoid/public-transportation/01_stargazing.mp3',
+          tags: ['Dormagen'],
+        },
+        {
+          id: 2,
+          name: 'Downhill',
+          url: 'https://cdn.occloxium.com/a/zoomoid/public-transportation/02_downhill.mp3',
+          tags: ['Köln Hbf'],
+        },
+        {
+          id: 3,
+          name: 'Say It',
+          url: 'https://cdn.occloxium.com/a/zoomoid/public-transportation/03_say%20it.mp3',
+          tags: ['Aachen Rothe-Erde'],
+        },
+        {
+          id: 4,
+          name: 'Volksgarten',
+          url: 'https://cdn.occloxium.com/a/zoomoid/public-transportation/04_volksgarten.mp3',
+          tags: ['Düsseldorf Hbf'],
+        },
+        {
+          id: 5,
+          name: 'Me&shy;lan&shy;cho&shy;lic Me&shy;di&shy;ta&shy;tion',
+          url: 'https://cdn.occloxium.com/a/zoomoid/public-transportation/05_melancholic%20meditation.mp3',
+          tags: ['Aachen West'],
+        },
+        {
+          id: 6,
+          name: 'Delay',
+          url: 'https://cdn.occloxium.com/a/zoomoid/public-transportation/06_delay.mp3',
+          tags: ['Aachen West'],
+        }
       ],
       blockEmbedded:
         !this.$cookies.isKey('allowThirdPartyContent') ||

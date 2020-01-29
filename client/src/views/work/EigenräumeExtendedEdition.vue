@@ -10,7 +10,7 @@
       </section>
 
       <p>
-        The original <router-link to="/work/eigenräume">Eigenräume</router-link>
+        The original <router-link to="/work/eigenräume-standard-edition">Eigenräume</router-link>
         was planned to be a proper concept album when I started working on it way back in
         January 2019. Every track would blend seamlessly and the whole album
         would tell a story of places I really felt were special to me.
@@ -74,7 +74,7 @@
             </li>
           </div>
           <h4>Extended Edition</h4>
-          <AudioPlayer class="tracklist" :audio="tracks" :artist="'Zoomoid'"></AudioPlayer>
+          <AudioManager class="players" :queue="queue"></AudioManager>
         </div>
       </div>
     </article>
@@ -82,8 +82,8 @@
 </template>
 
 <script>
-import SlideAnchor from '@/components/SlideAnchor';
-import AudioPlayer from '@/components/AudioPlayer';
+import SlideAnchor from '@/components/SlideAnchor.vue';
+import AudioManager from '@/components/AudioManager.vue';
 
 export default {
   name: 'EigenräumeExtendedEdition',
@@ -117,47 +117,69 @@ export default {
           link: 'https://www.amazon.de/Eigenräume-Extended-Zoomoid/dp/B07X13DDBD'
         }
       ],
-      tracks: [
+      queue: [
         {
-          title: 'Symphonic Dreams (Intro)',
-          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/01_Symphonic%20Dreams%20(Intro).mp3'
+          id: 1,
+          name: 'Symphonic Dreams (Intro)',
+          url: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/01_Symphonic%20Dreams%20(Intro).mp3',
+          tags: [],
         },{
-          title: 'Stockholm (Concept)',
-          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/02_Stockholm%20(Concept).mp3'
+          id: 2,
+          name: 'Stockholm (Concept)',
+          url: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/02_Stockholm%20(Concept).mp3',
+          tags: [],
         },{
-          title: 'Großstadt (Concept)',
-          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/03_Großstadt%20(Concept).mp3'
+          id: 3,
+          name: 'Großstadt (Concept)',
+          url: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/03_Großstadt%20(Concept).mp3',
+          tags: [],
         },{
-          title: 'Schöneberg At Night (Concept)',
-          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/04_Schöneberg%20At%20Night%20(Concept).mp3'
+          id: 4,
+          name: 'Schöneberg At Night (Concept)',
+          url: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/04_Schöneberg%20At%20Night%20(Concept).mp3',
+          tags: [],
         },{
-          title: 'Höllental (Concept)',
-          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/05_Höllental%20(Concept).mp3'
+          id: 5,
+          name: 'Höllental (Concept)',
+          url: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/05_Höllental%20(Concept).mp3',
+          tags: [],
         },{
-          title: 'Heimat (Concept)',
-          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/06_Heimat%20(Concept).mp3'
+          id: 6,
+          name: 'Heimat (Concept)',
+          url: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/06_Heimat%20(Concept).mp3',
+          tags: [],
         },{
-          title: 'Blaues Land (Concept)',
-          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/07_Blaues%20Land%20(Concept).mp3'
+          id: 7,
+          name: 'Blaues Land (Concept)',
+          url: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/07_Blaues%20Land%20(Concept).mp3',
+          tags: [],
         },{
-          title: 'Congruence (Bonus)',
-          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/08_Congruence%20(Bonus).mp3'
+          id: 8,
+          name: 'Congruence (Bonus)',
+          url: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/08_Congruence%20(Bonus).mp3',
+          tags: [],
         },{
-          title: 'Valletta (Bonus)',
-          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/09_Valletta%20(Bonus).mp3'
+          id: 9,
+          name: 'Valletta (Bonus)',
+          url: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/09_Valletta%20(Bonus).mp3',
+          tags: [],
         },{
-          title: 'Outer Space (Bonus)',
-          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/10_Outer%20Space%20(Bonus).mp3'
+          id: 10,
+          name: 'Outer Space (Bonus)',
+          url: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/10_Outer%20Space%20(Bonus).mp3',
+          tags: [],
         },{
-          title: 'Adieu (Outro)',
-          src: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/11_Adieu%20(Outro).mp3'
+          id: 11,
+          name: 'Adieu (Outro)',
+          url: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/11_Adieu%20(Outro).mp3',
+          tags: [],
         },
       ]
     }
   },
   components: {
     SlideAnchor,
-    AudioPlayer
+    AudioManager
   }
 }
 </script>

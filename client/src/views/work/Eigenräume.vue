@@ -53,62 +53,7 @@
             </li>
           </div>
           <h4>Standard Edition</h4>
-          <ol class="tracklist">
-            <li>
-              <span>Zoomoid - Stockholm</span>
-              <audio controls>
-                <source
-                  src="https://cdn.occloxium.com/a/zoomoid/eigenräume/standard/Stockholm.mp3"
-                  type="audio/mpeg"
-                />
-              </audio>
-            </li>
-            <li>
-              <span>Zoomoid - Großstadt</span>
-              <audio controls>
-                <source
-                  src="https://cdn.occloxium.com/a/zoomoid/eigenräume/standard/Großstadt.mp3"
-                  type="audio/mpeg"
-                />
-              </audio>
-            </li>
-            <li>
-              <span>Zoomoid - Schöneberg At Night</span>
-              <audio controls>
-                <source
-                  src="https://cdn.occloxium.com/a/zoomoid/eigenräume/standard/Schöneberg%20At%20Night.mp3"
-                  type="audio/mpeg"
-                />
-              </audio>
-            </li>
-            <li>
-              <span>Zoomoid - Höllental</span>
-              <audio controls>
-                <source
-                  src="https://cdn.occloxium.com/a/zoomoid/eigenräume/standard/Höllental.mp3"
-                  type="audio/mpeg"
-                />
-              </audio>
-            </li>
-            <li>
-              <span>Zoomoid - Heimat</span>
-              <audio controls>
-                <source
-                  src="https://cdn.occloxium.com/a/zoomoid/eigenräume/standard/Heimat.mp3"
-                  type="audio/mpeg"
-                />
-              </audio>
-            </li>
-            <li>
-              <span>Zoomoid - Blaues Land</span>
-              <audio controls>
-                <source
-                  src="https://cdn.occloxium.com/a/zoomoid/eigenräume/standard/Blaues%20Land.mp3"
-                  type="audio/mpeg"
-                />
-              </audio>
-            </li>
-          </ol>
+          <AudioManager :queue="queue"></AudioManager>
           <h4>Extended Edition</h4>
           <div class="centered">
             <SlideAnchor :anchor="'/work/eigenräume-extended-edition'"
@@ -127,10 +72,12 @@
 
 <script>
 import SlideAnchor from '@/components/SlideAnchor';
+import AudioManager from '@/components/AudioManager.vue';
 
 export default {
   components: {
-    SlideAnchor
+    SlideAnchor,
+    AudioManager
   },
   data: function() {
     return {
@@ -157,6 +104,39 @@ export default {
           name: 'iTunes',
           link: 'https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888'
         }
+      ],
+      queue: [
+        {
+          id: 1,
+          url: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/standard/Stockholm.mp3',
+          name: 'Stockholm',
+          tags: [],
+        },{
+          id: 2,
+          url: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/standard/Großstadt.mp3',
+          name: 'Großstadt',
+          tags: [],
+        },{
+          id: 3,
+          url: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/standard/Schöneberg%20At%20Night.mp3',
+          name: 'Schöneberg At Night',
+          tags: [],
+        },{
+          id: 4,
+          url: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/standard/Höllental.mp3',
+          name: 'Höllental',
+          tags: [],
+        },{
+          id: 5,
+          url: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/standard/Heimat.mp3',
+          name: 'Heimat',
+          tags: [],
+        },{
+          id: 6,
+          url: 'https://cdn.occloxium.com/a/zoomoid/eigenräume/standard/Blaues%20Land.mp3',
+          name: 'Blaues Land',
+          tags: [],
+        },
       ],
       blockEmbedded:
         !this.$cookies.isKey('allowThirdPartyContent') ||

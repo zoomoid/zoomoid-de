@@ -55,6 +55,7 @@
       font-weight: 700
   h1
     +fade
+    display: inline-block
   .contact--mail
     +font-size(1em)
   .references

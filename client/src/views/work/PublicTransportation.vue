@@ -76,7 +76,7 @@ export default {
           id: 6,
           name: 'Delay',
           url: 'https://cdn.occloxium.com/a/zoomoid/public-transportation/06_delay.mp3',
-          tags: ['Aachen West'],
+          tags: [],
         }
       ],
       blockEmbedded:

@@ -4,6 +4,8 @@ import CookieBanner from './CookieBanner';
 import Footer from './Footer';
 import SlideAnchor from './SlideAnchor';
 import WorkContainer from './WorkContainer';
+import AudioManager from './AudioManager';
+import AudioPlayer from './AudioPlayer';
 
 export {
   Block,
@@ -12,4 +14,6 @@ export {
   Footer,
   SlideAnchor,
   WorkContainer,
+  AudioPlayer,
+  AudioManager,
 };

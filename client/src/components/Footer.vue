@@ -41,7 +41,7 @@ footer
   +font
   padding: 1em 12px
   color: $text
-  a
+  a, a > i
     color: inherit
     text-decoration: none
     transition: color $transition-time $transition-curve

@@ -35,8 +35,9 @@
         </i>
       </div>
       <div class="playback-time-wrapper">
-        <div @click="setPosition" class="playback-time-bar">
+        <div class="playback-time-bar">
           <div v-bind:style="progressStyle" class="playback-time-indicator"></div>
+          <div class="playback-time-scrobble-bar" @click="setPosition"></div>
         </div>
       </div>
       <div class="playback-time-marks">
@@ -123,6 +124,7 @@ export default {
       const pos = tag.getBoundingClientRect();
       const seekPos = (e.clientX - pos.left) / pos.width;
       const { seekable } = this.audio;
+      console.log(pos.width, pos.left, e.clientX, seekPos);
       let seekTarget = this.audio.duration * seekPos;
       if (seekable.start(0) > seekTarget) {
         seekTarget = seekable.start(0);
@@ -374,6 +376,18 @@ $loading-fade: linear-gradient(135deg,
         width: 100%;
         cursor: pointer;
         font-size: 14px;
+        z-index: 0;
+        .playback-time-scrobble-bar {
+          background: transparent;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+        }
         .playback-time-indicator {
           background: $zoomoid-fade;
           border-radius: 4px;
@@ -381,7 +395,8 @@ $loading-fade: linear-gradient(135deg,
           top: 0;
           left: 0;
           bottom: 0;
-          transition: width .5s ease;
+          z-index: 1;
+          transition: width .2s ease;
         }
       }
     }

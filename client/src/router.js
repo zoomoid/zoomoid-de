@@ -4,12 +4,9 @@ import MainView from './views/MainView.vue';
 import Privacy from './views/Privacy.vue';
 import WorkContainer from '@/components/WorkContainer';
 import {
-  Datkom,
   Eigenräume,
-  Interstellar,
   LIAMM,
   EigenräumeExtendedEdition,
-  AtomicSpark,
   PermanentlyMoving,
   PublicTransportation
 } from '@/views/work/index.js';
@@ -29,14 +26,6 @@ export default new Router({
       component: WorkContainer,
       children: [
         {
-          path: 'datkom',
-          name: 'Datenkommunikation und Sicherheit',
-          component: Datkom
-        },{
-          path: 'interstellar',
-          name: 'Interstellar',
-          component: Interstellar
-        },{
           path: 'eigenräume-standard-edition',
           name: 'Eigenräume',
           component: Eigenräume
@@ -49,10 +38,6 @@ export default new Router({
           alias: ['/eigenraeume', '/eigenräume'],
           name: 'Eigenräume (Extended Edition)',
           component: EigenräumeExtendedEdition
-        },{
-          path: 'atomic-spark',
-          name: 'Atomic Spark (Single)',
-          component: AtomicSpark
         },{
           path: '301',
           alias: '/301',

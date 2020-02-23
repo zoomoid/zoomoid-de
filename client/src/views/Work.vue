@@ -11,6 +11,16 @@ export default {
     return {
       new_arrivals: [
         {
+          contentID: 'schwerelos-zoomoid-remix',
+          artist: 'Diode Eins',
+          title: 'Schwerelos (Zoomoid Remix)',
+          coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/schwerelos-zoomoid-remix/cover.png',
+          date: '10.01.2020',
+          id: 'S01'
+        },
+      ],
+      releases2019: [
+        {
           contentID: '301',
           artist: 'zoomoid',
           title: '301 Moved Permanently',
@@ -18,9 +28,6 @@ export default {
           date: '13.12.2019',
           id: 'A05'
         },
-
-      ],
-      releases2019: [
         {
           contentID: 'public-transportation',
           artist: 'zoomoid',
@@ -53,30 +60,6 @@ export default {
           date: '22.09.2018',
           id: 'A01'
         },
-        // {
-        //   contentID: 'datkom',
-        //   artist: 'zoomoid, Simon Kaiser, Dirk Thißen',
-        //   title: 'Datenkom&shy;mu&shy;ni&shy;ka&shy;tion & Sicherheit',
-        //   coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/datkomm/cover.png',
-        //   date: '14.02.2019',
-        //   id: 'S06'
-        // },
-        // {
-        //   contentID: 'interstellar',
-        //   artist: 'zoomoid',
-        //   title: 'Interstellar',
-        //   coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/interstellar/cover.png',
-        //   date: '22.07.2018',
-        //   id: 'S05'
-        // },
-        // {
-        //   contentID: 'atomic-spark',
-        //   artist: 'zoomoid',
-        //   title: 'Atomic Spark (Single)',
-        //   coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/atomic-spark/cover.png',
-        //   date: '22.09.2017',
-        //   id: 'S04'
-        // }
       ]
     }
   }
@@ -95,7 +78,6 @@ export default {
       <img class="logo" src="@/assets/2019.svg">
       <Card v-for="item in releases2019" v-bind:key="item.contentID" v-bind:entry="item"/>
     </div>
-
   </div>
 </template>
 <style lang="sass" scoped>

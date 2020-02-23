@@ -48,7 +48,6 @@
   max-width: $max-width
   margin: 0 auto 4em
   padding-left: 2em
-  +font-bootstrap
   p
     font-weight: 600
     a

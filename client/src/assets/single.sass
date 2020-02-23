@@ -1,9 +1,128 @@
-@import 'app.sass'
+@use "colors"
+@use "variables"
+@use "mixins"
+@use "../../node_modules/rfs/sass" as rfs
+@use "sass:map"
 
-=single
+@keyframes slide-in
+  0%
+    transform: translateX(-100%)
+  100%
+    transform: translateX(0%)
+
+@keyframes slide-out
+  0%
+    transform: translateX(0%)
+  100%
+    transform: translateX(100%)
+
+@mixin breadcrump-light
+  // Light-themed single page
+  $tcolor: map.get(variables.$light-theme, "text-color")
+  $bcolor: map.get(variables.$light-theme, "background-color")
+  $acolor: map.get(variables.$light-theme, "accent-color")
+  @include __breadcrump($tcolor, $bcolor, $acolor)
+
+@mixin breadcrump-dark
+  // Dark-themed single page
+  $tcolor: map.get(variables.$dark-theme, "text-color")
+  $bcolor: map.get(variables.$dark-theme, "background-color")
+  $acolor: map.get(variables.$dark-theme, "accent-color")
+  @include __breadcrump($tcolor, $bcolor, $acolor)
+
+@mixin __breadcrump($tcolor, $bcolor, $acolor)
+  .breadcrump
+    background-color: $bcolor
+    color: $tcolor
+
+@mixin slide-anchor-light
+  // Light-themed single page
+  $tcolor: map.get(variables.$light-theme, "text-color")
+  $bcolor: map.get(variables.$light-theme, "background-color")
+  $acolor: map.get(variables.$light-theme, "background-color")
+  @include __slide-anchor($tcolor, $bcolor, $acolor)
+
+@mixin slide-anchor-dark
+  // Dark-themed single page
+  $tcolor: map.get(variables.$dark-theme, "text-color")
+  $bcolor: map.get(variables.$dark-theme, "background-color")
+  $acolor: map.get(variables.$dark-theme, "accent-color")
+  @include __slide-anchor($tcolor, $bcolor, $acolor)
+
+@mixin __slide-anchor($tcolor, $bcolor, $acolor)
+  .slide-anchor
+    user-select: none
+    padding: 4px 8px
+    overflow: hidden hidden
+    position: relative
+    transition-delay: 0.4s
+    transition: color 0.1s linear
+    color: $tcolor
+    display: block
+    cursor: pointer
+    text-decoration: none
+    &:hover, &:active
+      color: $acolor
+      transition: color 0.1s linear
+    b.text
+      font-size: 1em
+      font-weight: 800
+      &.small
+        font-size: 0.66em
+        font-weight: 600
+    b.text, 
+    i.icon
+      position: relative
+      z-index: 1
+    i.icon
+      margin-right: 1em
+    div.block
+      overflow: hidden hidden
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: $tcolor
+      z-index: 0
+      &.slide-enter
+        transform: translateX(-100%)
+      &.slide-leave
+        transform: translateX(0%)
+      &.slide-enter-active
+        animation: slide-in .15s cubic-bezier(1, 0, 0, 1)
+      &.slide-leave-active
+        animation: slide-out .25s cubic-bezier(1, 0, 0, 1)
+      &.slide-enter-to
+        transform: translateX(0%)
+      &.slide-leave-to
+        transform: translateX(-100%)
+
+@mixin single
+  @include single-light
+
+@mixin single-light
+  // Light-themed single page
+  $tcolor: map.get(variables.$light-theme, "text-color")
+  $bcolor: map.get(variables.$light-theme, "background-color")
+  $acolor: map.get(variables.$light-theme, "accent-color")
+  @include __single($tcolor, $bcolor, $acolor)
+
+@mixin single-dark
+  // Dark-themed single page
+  $tcolor: map.get(variables.$dark-theme, "text-color")
+  $bcolor: map.get(variables.$dark-theme, "background-color")
+  $acolor: map.get(variables.$dark-theme, "accent-color")
+  @include __single($tcolor, $bcolor, $acolor)
+
+@mixin __single($tcolor, $bcolor, $acolor)
   article
+    background-color: $bcolor
+    color: $tcolor
     padding: 0 2em 1em
-    +sm
+    @include mixins.sm
       padding: 0 1em 1em
     & > *
       max-width: 1024px
@@ -11,21 +130,33 @@
       margin-right: auto
     *
       color: inherit
-    p
-      line-height: 1.5
-      font-weight: 500
-      // text-align: justify
+    .content
+      p
+        line-height: 1.5
+        font-weight: 500
+      a 
+        font-weight: 300
+        background: $acolor
+        color: $tcolor
+        border-radius: 6px
+        padding: 4px 8px
+        text-decoration: none
+        transition: color 0.1s ease, background 0.1s ease
+        &:hover, &:active 
+          background: $bcolor
+          color: $tcolor
+
     .title
       h1
         margin: 0 0 1em
-        +font-size(3em)
-        // +fade
+        @include rfs.font-size(2.5em)
+        color: $acolor
       h3
-        // +fade
-        +font-size(1.5em)
+        @include rfs.font-size(1.5em)
         margin: 0 0 0
         padding-top: 1em
-        font-weight: 100
+        font-weight: 300
+        color: $acolor
   .cover
     img
       width: 80%
@@ -48,8 +179,8 @@
   .centered
     text-align: center
   h2
-    // +fade
-    +font-size(2em)
+    @include rfs.font-size(2em)
+    color: $acolor
   .flex.flex-container
     display: flex
     border-radius: 4px
@@ -88,7 +219,7 @@
       text-decoration: none
       /*** @deprecated use SlideAnchor Component **/
       &.small
-        +font-size(70%)
+        @include rfs.font-size(70%)
   .download
     audio
       display: block

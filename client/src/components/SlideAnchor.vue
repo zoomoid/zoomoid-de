@@ -4,7 +4,18 @@ export default {
   props: {
     anchor: String,
     name: String,
-    icon: String
+    icon: {
+      type: String,
+      default: '',
+    },
+    small: {
+      type: Boolean,
+      default: false,
+    },
+    theme: {
+      type: String,
+      default: 'light'
+    }
   },
   data: function(){
     return {toggled: false};
@@ -23,77 +34,29 @@ export default {
 </script>
 
 <template>
-    <a @mouseenter="toggled = true" @mouseleave="toggled = false"
-    @click.prevent="followLink()" :href="anchor">
+  <div v-bind:class="[theme]">
+    <a
+      class="slide-anchor"
+      @mouseenter="toggled = true"
+      @mouseleave="toggled = false"
+      @click.prevent="followLink()"
+      :href="anchor"
+    >
       <transition name="slide">
-        <div v-if="toggled"></div>
+        <div class="block" v-if="toggled"></div>
       </transition>
-      <i v-if="icon" :class="icon"></i>
-      <b>{{this.name}}</b>
+      <i class="icon" v-if="icon" :class="icon"></i>
+      <b :class="[this.small ? 'text small' : 'text']">{{this.name}}</b>
     </a>
+
+  </div>
 </template>
 
-
-
 <style lang="sass" scoped>
-@import '@/assets/app.sass'
-a
-  user-select: none
-  padding: 4px 8px
-  overflow: hidden hidden
-  position: relative
-  transition-delay: 0.4s
-  transition: color 0.1s linear
-  color: $text-color
-  display: block
-  cursor: pointer
-  font-size: 1em
-  +font-bootstrap
-  b
-    font-weight: 800
-  b, i
-    position: relative
-    z-index: 10
-  &.small
-    font-size: 50%
-  i
-    margin-right: 1em
-  div
-    overflow: hidden hidden
-    width: 100%
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    background: $text-color
-    z-index: 9
-  &:hover
-    color: invert(darken($text-color, 10%))
-    // transition-delay: 0.4s
-    transition: color 0.1s linear
-.slide-enter
-  transform: translateX(-100%)
-.slide-leave
-  transform: translateX(0%)
-.slide-enter-active
-  animation: slide-in .15s cubic-bezier(1, 0, 0, 1)
-.slide-leave-active
-  animation: slide-out .35s cubic-bezier(1, 0, 0, 1)
-.slide-enter-to
-  transform: translateX(0%)
-.slide-leave-to
-  transform: translateX(-100%)
-@keyframes slide-in
-  0%
-    transform: translateX(-100%)
-  100%
-    transform: translateX(0%)
+@use "@/assets/single.sass" as style
 
-@keyframes slide-out
-  0%
-    transform: translateX(0%)
-  100%
-    transform: translateX(100%)
-
+.dark
+  @include style.slide-anchor-dark
+.light
+  @include style.slide-anchor-light
 </style>

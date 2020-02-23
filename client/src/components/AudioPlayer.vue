@@ -339,7 +339,7 @@ $loading-fade: linear-gradient(135deg,
         cursor: pointer;
         &:hover, &:active {
           border-radius: 32px;
-          background: rgb(196,196,196);
+          background: transparentize($text-color, 0.92);
         }
       }
     }
@@ -357,9 +357,9 @@ $loading-fade: linear-gradient(135deg,
       }
       &:hover, &:active {
         &.paused {
-          background: rgb(196,196,196);
+          background: transparentize($text-color, 0.92);
         }
-        background: $yellow;
+        background: transparentize($text-color, 0.92);
         border-radius: 32px;
       }
     }
@@ -369,7 +369,7 @@ $loading-fade: linear-gradient(135deg,
         background: transparent;
         position: relative;
         display: block;
-        background: rgb(196,196,196);
+        background: transparentize($text-color, 0.8);
         height: 8px;
         border-radius: 4px;
         width: 100%;
@@ -429,7 +429,7 @@ $loading-fade: linear-gradient(135deg,
         text-align: center;
       }
       &:hover, &:active, .muted {
-        background: rgb(196,196,196);
+        background: transparentize($text-color, 0.92);
         border-radius: 32px;
       }
     }
@@ -444,10 +444,10 @@ $loading-fade: linear-gradient(135deg,
         text-align: center;
       }
       a:link, a:visited {
-        color: $text-color;
+        color: inherit;
       }
       &:hover, &:active, .muted {
-        background: rgb(196,196,196);
+        background: transparentize($text-color, 0.92);
         border-radius: 32px;
       }
     }

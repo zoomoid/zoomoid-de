@@ -44,7 +44,7 @@ export default {
 
 .wrapper
   width: 100%
-  background: invert($primary-background)
+  background: invert($background-color)
 .banner
   display: flex
   padding: 8px
@@ -53,7 +53,6 @@ export default {
   margin: 0 auto
   color: white
   max-width: 768px
-  +font-bootstrap
   font-weight: 600
   .text
     flex-grow: 1

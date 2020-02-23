@@ -13,15 +13,18 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@use "../assets/variables"
+
 .breadcrump
   padding: 1em 2em 1em
   box-shadow: 0 2px 2px rgba(0,0,0,0.1)
   font-size: 12pt
   .spacer
-    font-family: 'Inter Var', sans-serif;
+    font-family: variables.$font-family
     font-weight: bold
     padding: 0 8px
   *
+    color: inherit
     font-size: inherit
   a
     font-weight: 800

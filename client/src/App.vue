@@ -12,7 +12,7 @@
   outline: none
 body
   +typography
-  background: $primary-background
+  background: $background-color
   main
     display: flex
     flex-direction: column

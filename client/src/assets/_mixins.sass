@@ -1,32 +1,35 @@
-=rounded
-  border-top-left-radius: $radius
-  border-top-right-radius: $radius
+@use "variables"
+@use "colors"
+
+@mixin rounded
+  border-top-left-radius: variables.$radius
+  border-top-right-radius: variables.$radius
   
-=sm
-  @media (max-width: #{$tablet-width - 1})
+@mixin sm
+  @media (max-width: #{variables.$tablet-width - 1})
     @content
 
-=md
-  @media (min-width: #{$mobile-l-width}) and (max-width: #{$tablet-width - 1})
+@mixin md
+  @media (min-width: #{variables.$mobile-l-width}) and (max-width: #{variables.$tablet-width - 1})
     @content
 
-=lg
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1})
+@mixin lg
+  @media (min-width: #{variables.$tablet-width}) and (max-width: #{variables.$desktop-width - 1})
     @content
 
-=xl
-  @media (min-width: #{$desktop-width})
+@mixin xl
+  @media (min-width: #{variables.$desktop-width})
     @content
 
-=fade
-  background: $zoomoid-fade
+@mixin fade
+  background: colors.$zoomoid-fade
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
-  background-color: white
+  background-color: colors.$white
   padding-bottom: 8px
-=fade2
-  background: -webkit-linear-gradient(45deg, $teal, $blue)
+@mixin fade2
+  background: -webkit-linear-gradient(45deg, colors.$teal, colors.$blue)
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
-  background-color: white
+  background-color: colors.$white
   padding-bottom: 8px

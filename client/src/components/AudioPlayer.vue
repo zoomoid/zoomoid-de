@@ -124,7 +124,6 @@ export default {
       const pos = tag.getBoundingClientRect();
       const seekPos = (e.clientX - pos.left) / pos.width;
       const { seekable } = this.audio;
-      console.log(pos.width, pos.left, e.clientX, seekPos);
       let seekTarget = this.audio.duration * seekPos;
       if (seekable.start(0) > seekTarget) {
         seekTarget = seekable.start(0);
@@ -340,7 +339,7 @@ $loading-fade: linear-gradient(135deg,
         cursor: pointer;
         &:hover, &:active {
           border-radius: 32px;
-          background: rgb(196,196,196);
+          background: transparentize($text-color, 0.92);
         }
       }
     }
@@ -358,9 +357,9 @@ $loading-fade: linear-gradient(135deg,
       }
       &:hover, &:active {
         &.paused {
-          background: rgb(196,196,196);
+          background: transparentize($text-color, 0.92);
         }
-        background: $yellow;
+        background: transparentize($text-color, 0.92);
         border-radius: 32px;
       }
     }
@@ -370,7 +369,7 @@ $loading-fade: linear-gradient(135deg,
         background: transparent;
         position: relative;
         display: block;
-        background: rgb(196,196,196);
+        background: transparentize($text-color, 0.8);
         height: 8px;
         border-radius: 4px;
         width: 100%;
@@ -430,7 +429,7 @@ $loading-fade: linear-gradient(135deg,
         text-align: center;
       }
       &:hover, &:active, .muted {
-        background: rgb(196,196,196);
+        background: transparentize($text-color, 0.92);
         border-radius: 32px;
       }
     }
@@ -445,10 +444,10 @@ $loading-fade: linear-gradient(135deg,
         text-align: center;
       }
       a:link, a:visited {
-        color: $text-color;
+        color: inherit;
       }
       &:hover, &:active, .muted {
-        background: rgb(196,196,196);
+        background: transparentize($text-color, 0.92);
         border-radius: 32px;
       }
     }

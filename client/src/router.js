@@ -8,7 +8,8 @@ import {
   LIAMM,
   EigenräumeExtendedEdition,
   PermanentlyMoving,
-  PublicTransportation
+  PublicTransportation,
+  SchwerelosRemix
 } from '@/views/work/index.js';
 
 Vue.use(Router)
@@ -48,7 +49,12 @@ export default new Router({
           alias: '/public-transportation',
           name: 'Public Transportation EP',
           component: PublicTransportation
-        }
+        },{
+          path: 'schwerelos-zoomoid-remix',
+          alias: '/schwerelos-remix',
+          name: 'Schwerelos - Zoomoid Remix',
+          component: SchwerelosRemix,
+        },
       ]
     },{
       path: '/privacy',

@@ -40,7 +40,7 @@ footer
   box-shadow: 0 -1px 2px rgba(0,0,0,0.54)
   +font
   padding: 1em 12px
-  color: $text-color
+  color: $background-color
   a, a > i
     color: inherit
     text-decoration: none

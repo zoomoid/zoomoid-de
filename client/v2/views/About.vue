@@ -42,7 +42,7 @@
 </template>
 
 <style lang="sass" scoped>
-@import '@/assets/app.sass'
+@import '@/scss/app.sass'
 
 #about
   max-width: $max-width

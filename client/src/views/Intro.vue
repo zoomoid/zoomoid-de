@@ -3,16 +3,6 @@
     <div id="intro">
       <img v-bind:class="[initial ? 'initial logo' : 'logo']" src="@/assets/logo.svg"
       alt="zoomoid logo">
-      <!-- <div class="text">
-        <p>
-          Zoomoid is a young, aspiring artist from Aachen, Germany, who draws his
-          inspiration from a variety of music to create songs he thinks are worth
-          listening to even if he would personally never admit that. Combining
-          vast theoretical knowledge and a good portion of practical intuition,
-          he always strives to experiment with new things and ways to compose
-          new music.
-        </p>
-      </div> -->
     </div>
     <div class="references">
       <li>
@@ -67,8 +57,8 @@
         transform-origin: center center
         position: static
         transform: rotate(0deg)
-        width: 80%
-        padding-top: 4em
+        width: 50%
+        padding-top: 8em
     .text
       h1
         +fade

@@ -244,7 +244,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/app.sass';
+// @import '@/assets/app.sass';
 
 @keyframes loading {
   0% {
@@ -313,8 +313,8 @@ $loading-fade: linear-gradient(135deg,
       display: block;
       .tag {
         display: block;
-        background: $black;
-        color: $white;
+        background: black;
+        color: white;
         border-radius: 4px;
         padding: 4px 8px;
         line-height: 1;
@@ -339,7 +339,7 @@ $loading-fade: linear-gradient(135deg,
         cursor: pointer;
         &:hover, &:active {
           border-radius: 32px;
-          background: transparentize($text-color, 0.92);
+          background: transparentize(black, 0.92);
         }
       }
     }
@@ -357,9 +357,9 @@ $loading-fade: linear-gradient(135deg,
       }
       &:hover, &:active {
         &.paused {
-          background: transparentize($text-color, 0.92);
+          background: transparentize(black, 0.92);
         }
-        background: transparentize($text-color, 0.92);
+        background: transparentize(black, 0.92);
         border-radius: 32px;
       }
     }
@@ -369,7 +369,7 @@ $loading-fade: linear-gradient(135deg,
         background: transparent;
         position: relative;
         display: block;
-        background: transparentize($text-color, 0.8);
+        background: transparentize(black, 0.8);
         height: 8px;
         border-radius: 4px;
         width: 100%;
@@ -388,7 +388,7 @@ $loading-fade: linear-gradient(135deg,
           z-index: 2;
         }
         .playback-time-indicator {
-          background: $zoomoid-fade;
+          background: none;
           border-radius: 4px;
           position: absolute;
           top: 0;

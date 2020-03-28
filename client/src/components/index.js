@@ -1,7 +1,13 @@
-import AudioManager from './AudioManager';
-import AudioPlayer from './AudioPlayer';
+// import AudioManager from './AudioManager';
+// import AudioPlayer from './AudioPlayer';
+import Header from './Header';
+import Footer from './Footer';
+import HomeBanner from './HomeBanner';
 
 export {
-  AudioPlayer,
-  AudioManager,
+  Header,
+  Footer,
+  HomeBanner,
+  // AudioPlayer,
+  // AudioManager,
 };

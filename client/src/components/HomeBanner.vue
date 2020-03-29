@@ -2,9 +2,9 @@
   <section class="wrapper home-banner">
     <img src="@/assets/the-moon-teaser.png" alt="The Moon Cover Art">
     <div class="description">
-      <h2>Zoomoid</h2>
-      <h1>The Moon</h1>
-      <p>Coming soon on selected streaming services</p>
+      <h2>Upcoming</h2>
+      <h1>Zoomoid - The Moon</h1>
+      <p>Coming soon to selected streaming services!</p>
     </div>
   </section>
 </template>
@@ -41,9 +41,11 @@ export default {
   }
   h2 {
     margin: 0;
-    font-size: 1.5em;
-    font-weight: 500;
-    letter-spacing: -1pt;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 2pt;
+    color: #ffd600;
+    text-transform: uppercase;
   }
   h1 {
     margin: 0;

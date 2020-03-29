@@ -1,14 +1,14 @@
 # 1st stage build client
-FROM node:latest as builder
+FROM node:13.12.0 as builder
 # copy package-lock.json (mainly) and package.json
-COPY /client/package*.json ./
+COPY /frontend/package*.json ./
 
 # npm ci for better performance in dependency resolution
-RUN yarn install
+RUN npm ci
 # bundle client
-COPY /client /
+COPY /frontend /
 # build with webpack
-RUN yarn run build
+RUN npm run build
 
 # 2nd stage: lightweight alpine container
 FROM nginx:alpine

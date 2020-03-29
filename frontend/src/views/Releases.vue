@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>Discography</h1>
+    <div class="h1">Discography</div>
     <div class="flex-grid">
       <div class="release" v-for="(release, index) in releases" v-bind:key="release.id">
         <transition name="fadeCover">
@@ -24,6 +24,9 @@
 export default {
   name: 'Releases',
   data: () => ({
+    // Irgendwann mal ein solides Backend hier dran klemmen,
+    // um CMS-like Funktionalitäten zu bauen, sollte diese App
+    // für anderes deployed werden
     releases: [
       {
         id: 'schwerelos-zoomoid-remix',
@@ -80,12 +83,9 @@ export default {
 section {
   padding-bottom: 4em;
 }
-h1 {
-  text-align: center;
-  font-weight: 300;
-  font-size: 2em;
-  margin: 3em 0;
-}
+
+@include mixins.headline;
+
 .flex-grid {
   display: grid;
   margin: 0 auto;
@@ -109,6 +109,8 @@ h1 {
       text-align: center;
       margin: 0.5em 0 0;
       font-size: 1em;
+            font-weight: 300;
+
     }
     .artist {
       margin: 0;

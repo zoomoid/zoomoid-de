@@ -6,7 +6,15 @@
 
 <script>
 export default {
-  name: 'News'
+  name: 'News',
+  data: () => ({
+    entries: [
+      {
+        id: '2020/shades-of-yellow-release',
+        title: 'Releasing in times of Quarantine and COVID-19',
+      }
+    ]
+  }),
 }
 </script>
 

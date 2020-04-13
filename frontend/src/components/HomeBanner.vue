@@ -1,6 +1,6 @@
 <template>
   <section class="wrapper home-banner">
-    <img src="@/assets/the-moon-teaser.png" alt="The Moon Cover Art">
+    <img src="@/assets/the-moon-teaser.jpg" alt="The Moon Cover Art">
     <div class="description">
       <h2>Upcoming</h2>
       <h1>Zoomoid - The Moon</h1>

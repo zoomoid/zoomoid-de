@@ -52,15 +52,7 @@
                 <SlideAnchor
                   :anchor="'https://cdn.occloxium.com/a/zoomoid/liamm.zip'"
                   :theme="theme"
-                  :name="'Get the complete Standard Edition as MP3'"
-                />
-              </li>
-              <li>
-                <SlideAnchor
-                  :small="true"
-                  :theme="theme"
-                  :anchor="'https://cdn.occloxium.com/a/zoomoid/liamm.flac.zip'"
-                  :name="'(Alternatively as FLAC)'"
+                  :name="'Download the complete album as MP3'"
                 />
               </li>
             </div>

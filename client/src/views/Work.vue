@@ -11,6 +11,14 @@ export default {
     return {
       new_arrivals: [
         {
+          contentID: 'shades-of-yellow',
+          artist: 'Zoomoid',
+          title: 'Shades Of Yellow',
+          coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/shades-of-yellow/cover.png',
+          date: '01.05.2020',
+          id: 'S02'
+        },
+        {
           contentID: 'schwerelos-zoomoid-remix',
           artist: 'Diode Eins',
           title: 'Schwerelos (Zoomoid Remix)',

@@ -32,7 +32,7 @@
           <p>
             However, with the idea to produce two parallel releases also came the
             necessity to design two different album artworks. The second version of
-            the "Eigenräume" album cover looks a lot more industrial, monochrome
+            the "eigenraeume" album cover looks a lot more industrial, monochrome
             than the black, but also colorful first version. Both share roughly the
             same motive, except for the rings in the center.
           </p>
@@ -40,7 +40,7 @@
             After some time, I picked up those tracks again, with fresh ideas to
             polish them to something better than the first released version. On top
             of that, I began some new tracks that fitted with the original versions,
-            so I added them as a bonus! Overall, the six original "Eigenräume"
+            so I added them as a bonus! Overall, the six original "eigenraeume"
             tracks all got some touch-ups, fill-ups and some additional layers,
             three more tracks were appended and I framed them with beautiful
             instrumental intros and outros.
@@ -79,16 +79,8 @@
               <li>
                 <SlideAnchor
                   :theme="theme"
-                  :name="'Get the complete Extended Edition as MP3'"
+                  :name="'Download the complete Extended Edition as MP3'"
                   :anchor="'https://cdn.occloxium.com/a/zoomoid/eigenraeume-extended-edition.zip'"
-                />
-              </li>
-              <li>
-                <SlideAnchor
-                  :theme="theme"
-                  :small="true"
-                  :name="'(Alternatively as FLAC)'"
-                  :anchor="'https://cdn.occloxium.com/a/zoomoid/eigenraeume-extended-edition.flac.zip'"
                 />
               </li>
             </div>
@@ -107,7 +99,7 @@ import AudioManager from '@/components/AudioManager.vue';
 import Breadcrump from '@/components/Breadcrump';
 
 export default {
-  name: 'EigenräumeExtendedEdition',
+  name: 'eigenraeumeExtendedEdition',
   data: function() {
     return {
       theme: 'dark',
@@ -139,7 +131,7 @@ export default {
         {
           name: 'Amazon Music',
           link:
-            'https://www.amazon.de/Eigenräume-Extended-Zoomoid/dp/B07X13DDBD'
+            'https://www.amazon.de/eigenraeume-Extended-Zoomoid/dp/B07X13DDBD'
         }
       ],
       queue: [
@@ -147,77 +139,77 @@ export default {
           id: 1,
           name: 'Symphonic Dreams (Intro)',
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/01_Symphonic%20Dreams%20(Intro).mp3',
+            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/01_Symphonic%20Dreams%20(Intro).mp3',
           tags: []
         },
         {
           id: 2,
           name: 'Stockholm (Concept)',
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/02_Stockholm%20(Concept).mp3',
+            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/02_Stockholm%20(Concept).mp3',
           tags: []
         },
         {
           id: 3,
           name: 'Großstadt (Concept)',
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/03_Großstadt%20(Concept).mp3',
+            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/03_Großstadt%20(Concept).mp3',
           tags: []
         },
         {
           id: 4,
           name: 'Schöneberg At Night (Concept)',
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/04_Schöneberg%20At%20Night%20(Concept).mp3',
+            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/04_Schöneberg%20At%20Night%20(Concept).mp3',
           tags: []
         },
         {
           id: 5,
           name: 'Höllental (Concept)',
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/05_Höllental%20(Concept).mp3',
+            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/05_Höllental%20(Concept).mp3',
           tags: []
         },
         {
           id: 6,
           name: 'Heimat (Concept)',
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/06_Heimat%20(Concept).mp3',
+            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/06_Heimat%20(Concept).mp3',
           tags: []
         },
         {
           id: 7,
           name: 'Blaues Land (Concept)',
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/07_Blaues%20Land%20(Concept).mp3',
+            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/07_Blaues%20Land%20(Concept).mp3',
           tags: []
         },
         {
           id: 8,
           name: 'Congruence (Bonus)',
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/08_Congruence%20(Bonus).mp3',
+            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/08_Congruence%20(Bonus).mp3',
           tags: []
         },
         {
           id: 9,
           name: 'Valletta (Bonus)',
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/09_Valletta%20(Bonus).mp3',
+            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/09_Valletta%20(Bonus).mp3',
           tags: []
         },
         {
           id: 10,
           name: 'Outer Space (Bonus)',
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/10_Outer%20Space%20(Bonus).mp3',
+            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/10_Outer%20Space%20(Bonus).mp3',
           tags: []
         },
         {
           id: 11,
           name: 'Adieu (Outro)',
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenräume/extended/11_Adieu%20(Outro).mp3',
+            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/11_Adieu%20(Outro).mp3',
           tags: []
         }
       ]

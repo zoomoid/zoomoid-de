@@ -52,14 +52,7 @@
               <li>
                 <SlideAnchor
                   :anchor="'https://cdn.occloxium.com/a/zoomoid/eigenraeume.zip'"
-                  :name="'Get the complete Standard Edition as MP3'"
-                />
-              </li>
-              <li>
-                <SlideAnchor
-                  :small="true"
-                  :anchor="'https://cdn.occloxium.com/a/zoomoid/eigenraeume.flac.zip'"
-                  :name="'(Alternatively as FLAC)'"
+                  :name="'Download the complete Standard Edition as MP3'"
                 />
               </li>
             </div>
@@ -125,42 +118,42 @@ export default {
         {
           id: 1,
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenräume/standard/Stockholm.mp3',
+            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/standard/Stockholm.mp3',
           name: 'Stockholm',
           tags: []
         },
         {
           id: 2,
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenräume/standard/Großstadt.mp3',
+            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/standard/Großstadt.mp3',
           name: 'Großstadt',
           tags: []
         },
         {
           id: 3,
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenräume/standard/Schöneberg%20At%20Night.mp3',
+            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/standard/Schöneberg%20At%20Night.mp3',
           name: 'Schöneberg At Night',
           tags: []
         },
         {
           id: 4,
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenräume/standard/Höllental.mp3',
+            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/standard/Höllental.mp3',
           name: 'Höllental',
           tags: []
         },
         {
           id: 5,
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenräume/standard/Heimat.mp3',
+            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/standard/Heimat.mp3',
           name: 'Heimat',
           tags: []
         },
         {
           id: 6,
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenräume/standard/Blaues%20Land.mp3',
+            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/standard/Blaues%20Land.mp3',
           name: 'Blaues Land',
           tags: []
         }

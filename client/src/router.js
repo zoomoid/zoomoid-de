@@ -9,7 +9,8 @@ import {
   EigenräumeExtendedEdition,
   PermanentlyMoving,
   PublicTransportation,
-  SchwerelosRemix
+  SchwerelosRemix,
+  ShadesOfYellow
 } from '@/views/work/index.js';
 
 Vue.use(Router)
@@ -26,6 +27,11 @@ export default new Router({
       name: 'Work',
       component: WorkContainer,
       children: [
+        {
+          path: 'shades-of-yellow',
+          name: 'Shades of Yellow',
+          component: ShadesOfYellow
+        },
         {
           path: 'eigenräume-standard-edition',
           name: 'Eigenräume',

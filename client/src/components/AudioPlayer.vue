@@ -63,8 +63,7 @@
     </div>
     <audio
       :src="file"
-      ref="audiofile"
-      preload="auto">
+      ref="audiofile">
     </audio>
   </div>
 </template>
@@ -174,8 +173,6 @@ export default {
     },
     handleLoaded() {
       if (this.audio.readyState >= 2) {
-        if (this.autoPlay) this.play();
-        this.loaded = true;
         this.totalDuration = parseInt(this.audio.duration, 10);
       } else {
         throw new Error('Failed to load sound file');
@@ -189,8 +186,6 @@ export default {
     },
     handlePlayPause(e) {
       if (e.type === 'pause' && this.playing === false) {
-        // this.progressStyle = 'width:0%;';
-        // this.currentTime = '00:00';
         this.paused = true;
       }
     },
@@ -232,6 +227,7 @@ export default {
   },
   mounted() {
     this.audio = this.getAudio();
+    this.loaded = true;
     this.init();
   },
   beforeDestroy() {
@@ -310,13 +306,14 @@ $loading-fade: linear-gradient(135deg,
     }
     .tags {
       padding-left: 8px;
-      display: block;
+      display: flex;
       .tag {
         display: block;
         background: $black;
         color: $white;
         border-radius: 4px;
         padding: 4px 8px;
+        margin: 0 2px;
         line-height: 1;
         font-weight: 700;
         font-size: 10pt;

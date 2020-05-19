@@ -10,8 +10,8 @@
             e-mail at
             <a
               class="contact--mail"
-              href="mailto:alex@zoomoid.de"
-            >alex@zoomoid.de</a>.
+              href="mailto:occloxium@gmail.com"
+            >occloxium@gmail.com</a>.
           </p>
           <p>
             Other than that, here are a few ways to contact me in a more specific

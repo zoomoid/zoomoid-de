@@ -4,6 +4,7 @@ import Eigenräume from './Eigenräume';
 import PermanentlyMoving from './PermanentlyMoving';
 import PublicTransportation from './PublicTransportation';
 import SchwerelosRemix from './SchwerelosRemix';
+import ShadesOfYellow from './ShadesOfYellow';
 
 export {
   LIAMM,
@@ -11,5 +12,6 @@ export {
   Eigenräume,
   PermanentlyMoving,
   PublicTransportation,
-  SchwerelosRemix
+  SchwerelosRemix,
+  ShadesOfYellow
 };

@@ -11,5 +11,5 @@ export {
   MainView,
   Merchandise,
   Privacy,
-  Work
+  Work,
 }

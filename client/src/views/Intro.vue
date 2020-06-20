@@ -122,7 +122,7 @@ export default {
   },
   data: function(){
     return {
-      showNav: true,
+      showNav: false,
       scrolled: 0
     }
   },

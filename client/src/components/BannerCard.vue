@@ -55,11 +55,11 @@ export default {
       margin: 0
       text-transform: uppercase
       font-weight: 800
-      +rfs.font-size(2.5em)
+      +rfs.font-size(2em)
       margin-bottom: 0.33em
     h2
       margin: 0
-      +rfs.font-size(1.75em)
+      +rfs.font-size(1.5em)
     span
       font-size: 1em
       font-weight: 500

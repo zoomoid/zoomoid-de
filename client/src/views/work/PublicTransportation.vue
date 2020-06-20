@@ -1,61 +1,45 @@
 <template>
-  <div class="wrapper">
-    <Breadcrump></Breadcrump>
-    <div class="single">
-      <article>
-        <div class="title">
-          <h3>zoomoid</h3>
-          <h1>Public Trans&shy;por&shy;ta&shy;tion EP</h1>
+  <PageTemplate light accent="#0091EA"
+    cover="https://cdn.occloxium.com/i/zoomoid/covers/public-transportation/standard.png" artist="Zoomoid"
+    title="Public Transportation EP">
+    <section class="content">
+      <p>
+        The
+        <b>Public Transportation</b> EP is a concept LoFi HipHop/Electronic/Ambient immersive
+        listening experience composed to accompany a train ride on a few stops in Northrhine-Westfalia.
+      </p>
+    </section>
+    <div class="external">
+      <div class="streaming">
+        <h2>Stream!</h2>
+        <div>
+          <li v-for="item in streaming" :key="item.name">
+            <SlideAnchor light :anchor="item.link" :name="item.name" />
+          </li>
         </div>
-        <section class="cover">
-          <img src="https://cdn.occloxium.com/i/zoomoid/covers/public-transportation/standard.png" />
-        </section>
-        <section class="content">
-          <p>
-            The
-            <b>Public Transportation</b> EP is a concept LoFi HipHop/Electronic/Ambient immersive
-            listening experience composed to accompany a train ride on a few stops in Northrhine-Westfalia.
-          </p>
-        </section>
-        <div class="external">
-          <div class="streaming">
-            <h2>Stream!</h2>
-            <div>
-              <li v-for="item in streaming" :key="item.name">
-                <SlideAnchor :theme="theme" :anchor="item.link" :name="item.name" />
-              </li>
-            </div>
-          </div>
-        </div>
-        <div class="download">
-          <h2>Listen &amp; Download</h2>
-          <AudioManager class="players" :queue="this.queue"></AudioManager>
-        </div>
-
-      </article>
+      </div>
     </div>
-  </div>
+    <div class="download">
+      <h2>Listen &amp; Download</h2>
+      <AudioManager class="players" :queue="this.queue"></AudioManager>
+    </div>
+  </PageTemplate>
 </template>
 
-<style lang="sass" scoped>
-@import '@/assets/single.sass'
-+single
-</style>
 
 <script>
 import AudioManager from '@/components/AudioManager.vue';
-import Breadcrump from '@/components/Breadcrump';
+import PageTemplate from '@/components/PageTemplate';
 import SlideAnchor from '@/components/SlideAnchor';
 
 export default {
   components: {
     AudioManager,
-    Breadcrump,
+    PageTemplate,
     SlideAnchor
   },
   data: function() {
     return {
-      theme: 'light',
       streaming: [
         {
           name: 'Spotify',

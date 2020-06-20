@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Breadcrump></Breadcrump>
+    <Breadcrumb></Breadcrumb>
     <section id="header">
       <h1>Privacy &amp; Data Protection</h1>
       <p>
@@ -132,11 +132,11 @@ section
 
 <script>
 import Footer from '@/components/Footer'
-import Breadcrump from '@/components/Breadcrump'
+import Breadcrumb from '@/components/Breadcrumb'
 export default {
   components: {
     Footer,
-    Breadcrump
+    Breadcrumb
   },
   data: function() {
     return {

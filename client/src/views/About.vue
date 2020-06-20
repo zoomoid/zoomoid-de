@@ -42,27 +42,33 @@
 </template>
 
 <style lang="sass" scoped>
-@import '@/assets/app.sass'
+@use '../assets/variables'
+@use '../assets/typography'
+@use '../assets/mixins'
+@use '../../node_modules/rfs/sass' as rfs
 
 #about
-  max-width: $max-width
-  margin: 0 auto 4em
-  padding-left: 2em
+  max-width: variables.$max-width
+  margin: 0 auto
+  padding-bottom: 4em
+  +mixins.sm
+    padding: 0 1em 4em
   p
+    +rfs.font-size(0.8em)
     font-weight: 600
     a
       font-weight: 700
   h1
-    +fade
+    +mixins.fade
     display: inline-block
   .contact--mail
-    +font-size(1em)
+
   .references
     padding-left: 0
     li
       list-style: none outside none
       padding: 0.5em 0
-      +font-size(1em)
+      +rfs.font-size(1em)
       a
         margin: 0 auto
         text-decoration: none

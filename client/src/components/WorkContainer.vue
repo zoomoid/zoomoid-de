@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="wrapper">
-      <!-- <Breadcrump/> -->
+      <!-- <Breadcrumb/> -->
       <router-view></router-view>
     </div>
   </div>

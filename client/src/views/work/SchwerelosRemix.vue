@@ -1,61 +1,44 @@
 <template>
-  <div class="wrapper">
-    <Breadcrump></Breadcrump>
-    <div class="single" id="schwerelos">
-      <article>
-        <div class="title">
-          <h3>Diode Eins</h3>
-          <h1>Schwerelos - Zoomoid Remix</h1>
+  <PageTemplate dark cover="https://cdn.occloxium.com/i/zoomoid/covers/schwerelos-zoomoid-remix/cover.png"
+  artist="Diode Eins" title="Schwerelos - Zoomoid Remix">
+    <section class="content">
+      <p>
+        In 2019, I asked the fellow DJs and producers of
+        <a href="https://soundcloud.com/diodeeins" target="_blank">Diode Eins</a> if I could remix a track of theirs.
+        We settled on their track "Schwerelos", which then got a makeover from me.
+        They are rising stars to be, give them every bit of love for Techno you got!
+      </p>
+    </section>
+    <div class="external">
+      <div class="streaming">
+        <h2>Stream!</h2>
+        <div>
+          <li v-for="item in streaming" :key="item.name">
+            <SlideAnchor dark :anchor="item.link" :name="item.name" />
+          </li>
         </div>
-        <section class="cover">
-          <img src="https://cdn.occloxium.com/i/zoomoid/covers/schwerelos-zoomoid-remix/cover.png" />
-        </section>
-        <section class="content">
-          <p>
-            In 2019, I asked the fellow DJs and producers of
-            <a href="https://soundcloud.com/diodeeins" target="_blank">Diode Eins</a> if I could remix a track of theirs.
-            We settled on their track "Schwerelos", which then got a makeover from me.
-            They are rising stars to be, give them every bit of love for Techno you got!
-          </p>
-        </section>
-        <div class="external">
-          <div class="streaming">
-            <h2>Stream!</h2>
-            <div>
-              <li v-for="item in streaming" :key="item.name">
-                <SlideAnchor :theme="theme" :anchor="item.link" :name="item.name" />
-              </li>
-            </div>
-            <iframe
-              src="https://open.spotify.com/embed/track/1UsussokjrnR2Sgpskrdzz"
-              width="100%"
-              height="80"
-              frameborder="0"
-              allowtransparency="true"
-              allow="encrypted-media"
-            ></iframe>
-          </div>
-        </div>
-      </article>
+        <iframe
+          src="https://open.spotify.com/embed/track/1UsussokjrnR2Sgpskrdzz"
+          width="100%"
+          height="80"
+          frameborder="0"
+          allowtransparency="true"
+          allow="encrypted-media"
+        ></iframe>
+      </div>
     </div>
-  </div>
+  </PageTemplate>
 </template>
 
-<style lang="sass" scoped>
-@use "@/assets/single.sass" as style
-
-@include style.breadcrump-dark
-@include style.single-dark
-</style>
 
 <script>
 import SlideAnchor from '@/components/SlideAnchor.vue';
-import Breadcrump from '@/components/Breadcrump'
+import PageTemplate from '@/components/PageTemplate.vue';
 
 export default {
   components: {
     SlideAnchor,
-    Breadcrump,
+    PageTemplate,
   },
   data: function() {
     return {

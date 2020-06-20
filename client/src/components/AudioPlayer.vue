@@ -11,14 +11,14 @@
       </div>
     </div>
     <div class="player">
-      <div class="skip">
+      <!-- <div class="skip">
         <i @click="skipToBeginning" class="material-icons-sharp">
           skip_previous
         </i>
         <i @click="skipToEnd" class="material-icons-sharp">
           skip_next
         </i>
-      </div>
+      </div> -->
       <div class="play-state">
         <i @click="pause" v-if="playing && !paused && !finished" class="material-icons-sharp">
           pause
@@ -45,14 +45,14 @@
         <span class="playback-time-separator"></span>
         <span class="playback-time-total">{{duration}}</span>
       </div>
-      <div class="volume-control">
+      <!-- <div class="volume-control">
         <i v-if="!this.isMuted" @click="mute" class="material-icons-sharp">
           volume_up
         </i>
         <i v-if="this.isMuted" @click="mute" class="material-icons-sharp muted">
           volume_off
         </i>
-      </div>
+      </div> -->
       <div class="download">
         <a :href="file" target="_blank">
           <i class="material-icons-sharp">
@@ -366,7 +366,7 @@ $loading-fade: linear-gradient(135deg,
         background: transparent;
         position: relative;
         display: block;
-        background: transparentize($text-color, 0.8);
+        background: transparentize(#1a1a1a, 0.8);
         height: 8px;
         border-radius: 4px;
         width: 100%;
@@ -398,7 +398,6 @@ $loading-fade: linear-gradient(135deg,
     }
     .playback-time-marks {
       padding-left: 8px;
-      width: 3.5em;
       text-align: right;
       span {
         font-weight: 500;

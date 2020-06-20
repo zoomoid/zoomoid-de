@@ -1,55 +1,39 @@
 <template>
-  <div class="wrapper">
-    <Breadcrump></Breadcrump>
-    <div class="single">
-      <article>
-        <div class="title">
-          <h3>zoomoid</h3>
-          <h1>Shades of Yellow</h1>
-        </div>
-        <section class="cover">
-          <img src="https://cdn.occloxium.com/i/zoomoid/covers/shades-of-yellow/cover.png" />
-        </section>
-        <section class="content">
-          <p>
-            The
-            <b>Shades of Yellow</b> EP combines several feelings from the last months. Do I need to say more?
-          </p>
-        </section>
-        <div class="external">
-          <div class="streaming">
-            <h2>Stream!</h2>
-            <div>
-              <li v-for="item in streaming" :key="item.name">
-                <SlideAnchor :theme="theme" :anchor="item.link" :name="item.name" />
-              </li>
-            </div>
-          </div>
-        </div>
-        <div class="download">
-          <h2>Listen &amp; Download</h2>
-          <AudioManager class="players" :queue="this.queue"></AudioManager>
-        </div>
 
-      </article>
+  <PageTemplate dark accent="#ffce00"
+  cover="https://cdn.occloxium.com/i/zoomoid/covers/shades-of-yellow/cover.png" artist="Zoomoid" title="Shades of Yellow">
+    <section class="content">
+      <p>
+        The
+        <b>Shades of Yellow</b> EP combines several feelings from the last months. Do I need to say more?
+      </p>
+    </section>
+    <div class="external">
+      <div class="streaming">
+        <h2>Stream!</h2>
+        <div>
+          <li v-for="item in streaming" :key="item.name">
+            <SlideAnchor dark :anchor="item.link" :name="item.name" />
+          </li>
+        </div>
+      </div>
     </div>
-  </div>
+    <div class="download">
+      <h2>Listen &amp; Download</h2>
+      <AudioManager class="players" :queue="this.queue"></AudioManager>
+    </div>
+  </PageTemplate>
 </template>
-
-<style lang="sass" scoped>
-@import '@/assets/single.sass'
-+single
-</style>
 
 <script>
 import AudioManager from '@/components/AudioManager.vue';
-import Breadcrump from '@/components/Breadcrump';
+import PageTemplate from '@/components/PageTemplate';
 import SlideAnchor from '@/components/SlideAnchor';
 
 export default {
   components: {
     AudioManager,
-    Breadcrump,
+    PageTemplate,
     SlideAnchor
   },
   data: function() {

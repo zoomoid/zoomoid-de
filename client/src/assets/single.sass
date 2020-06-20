@@ -16,22 +16,22 @@
   100%
     transform: translateX(100%)
 
-@mixin breadcrump-light
+@mixin breadcrumb-light
   // Light-themed single page
   $tcolor: map.get(variables.$light-theme, "text-color")
   $bcolor: map.get(variables.$light-theme, "background-color")
   $acolor: map.get(variables.$light-theme, "accent-color")
-  @include __breadcrump($tcolor, $bcolor, $acolor)
+  @include __breadcrumb($tcolor, $bcolor, $acolor)
 
-@mixin breadcrump-dark
+@mixin breadcrumb-dark
   // Dark-themed single page
   $tcolor: map.get(variables.$dark-theme, "text-color")
   $bcolor: map.get(variables.$dark-theme, "background-color")
   $acolor: map.get(variables.$dark-theme, "accent-color")
-  @include __breadcrump($tcolor, $bcolor, $acolor)
+  @include __breadcrumb($tcolor, $bcolor, $acolor)
 
-@mixin __breadcrump($tcolor, $bcolor, $acolor)
-  .breadcrump
+@mixin __breadcrumb($tcolor, $bcolor, $acolor)
+  .breadcrumb
     background-color: $bcolor
     color: $tcolor
 

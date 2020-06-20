@@ -1,84 +1,62 @@
 <template>
-  <div class="wrapper">
-    <Breadcrump></Breadcrump>
-    <div class="single">
-      <article>
-        <div class="title">
-          <h3>zoomoid</h3>
-          <h1>Life Is About Making Memories</h1>
-        </div>
-        <section class="cover">
-          <img src="https://cdn.occloxium.com/i/zoomoid/covers/liamm/cover.png" />
-        </section>
-
-        <section class="content">
-          <p>
-            <b>Life Is About Making Memories</b> is my first full-feature album! It is comprised of 11 songs
-            and there are a lot of different gems on there, have a listen and decide for yourself which tracks you like
-            the most. If you do, tell me about it on social media like Instagram or SoundCloud and tell your friends!
-          </p>
-        </section>
-        <div class="download">
-          <p>
-            I would appreciate you listening to Life Is About Making Memories on Spotify, Apple Music,
-            Deezer and so on. You supporting me means the absolute world to me!
-            <br />However, I want everybody to enjoy it equally, hence I provide it for download
-            for free here.
-          </p>
-          <div id="external">
-            <div class="streaming">
-              <h2>Stream!</h2>
-              <div>
-                <li v-for="item in this.streaming" :key="item.name">
-                  <SlideAnchor
-                  :theme="theme" :anchor="item.link" :name="item.name" />
-                </li>
-              </div>
-            </div>
-            <div class="buying">
-              <h2>Buy!</h2>
-              <div>
-                <li v-for="item in this.buying" v-bind:key="item.name">
-                  <SlideAnchor
-                  :theme="theme" :anchor="item.link" :name="item.name" />
-                </li>
-              </div>
-            </div>
-          </div>
-          <div class="download">
-            <h2>Listen &amp; Download</h2>
-            <div>
-              <li>
-                <SlideAnchor
-                  :anchor="'https://cdn.occloxium.com/a/zoomoid/liamm.zip'"
-                  :theme="theme"
-                  :name="'Download the complete album as MP3'"
-                />
-              </li>
-            </div>
+  <PageTemplate dark accent="#ffffff" cover="https://cdn.occloxium.com/i/zoomoid/covers/liamm/cover.png"
+  artist="Zoomoid" title="Life Is About Making Memories">
+    <section class="content">
+      <p>
+        <b>Life Is About Making Memories</b> is my first full-feature album! It is comprised of 11 songs
+        and there are a lot of different gems on there, have a listen and decide for yourself which tracks you like
+        the most. If you do, tell me about it on social media like Instagram or SoundCloud and tell your friends!
+      </p>
+    </section>
+    <div class="download">
+      <p>
+        I would appreciate you listening to Life Is About Making Memories on Spotify, Apple Music,
+        Deezer and so on. You supporting me means the absolute world to me!
+        <br />However, I want everybody to enjoy it equally, hence I provide it for download
+        for free here.
+      </p>
+      <div id="external">
+        <div class="streaming">
+          <h2>Stream!</h2>
+          <div>
+            <li v-for="item in this.streaming" :key="item.name">
+              <SlideAnchor :anchor="item.link" :name="item.name" />
+            </li>
           </div>
         </div>
-      </article>
+        <div class="buying">
+          <h2>Buy!</h2>
+          <div>
+            <li v-for="item in this.buying" v-bind:key="item.name">
+              <SlideAnchor :anchor="item.link" :name="item.name" />
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="download">
+        <h2>Listen &amp; Download</h2>
+        <div>
+          <li>
+            <SlideAnchor
+              :anchor="'https://cdn.occloxium.com/a/zoomoid/liamm.zip'"
+              :name="'Download the complete album as MP3'"
+            />
+          </li>
+        </div>
+      </div>
     </div>
-  </div>
+  </PageTemplate>
 </template>
-
-<style lang="sass" scoped>
-@use "@/assets/single.sass" as style
-
-@include style.breadcrump-dark
-@include style.single-dark
-</style>
 
 <script>
 import SlideAnchor from '@/components/SlideAnchor';
-import Breadcrump from '@/components/Breadcrump'
+import PageTemplate from '@/components/PageTemplate'
 
 export default {
   name: 'LIAMM',
   components: {
     SlideAnchor,
-    Breadcrump,
+    PageTemplate,
   },
   data: function() {
     return {

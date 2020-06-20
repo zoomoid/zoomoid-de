@@ -1,5 +1,4 @@
 <script>
-// @ is an alias to /src
 import Card from '@/components/Card.vue'
 
 export default {
@@ -76,8 +75,6 @@ export default {
 
 <template>
   <div id="work">
-    <div class="center-wrapper">
-    </div>
     <div class="grid" id="#new-arrivals">
       <img class="logo" src="@/assets/new_arrivals.svg">
       <Card v-for="item in new_arrivals" v-bind:key="item.contentID" v-bind:entry="item"/>
@@ -89,38 +86,32 @@ export default {
   </div>
 </template>
 <style lang="sass" scoped>
-@import '@/assets/app.sass'
+@use '../assets/mixins.sass'
+@use '../assets/variables.sass'
+
 $radius: 32px
 #work
   flex-grow: 1
-  max-width: $max-width
+  +mixins.sm
+    max-width: none
+    padding: 0 12px
+  max-width: 66%
   margin: 0 auto
-  padding-left: 2em
+  // padding-left: 2em
+  background: #eee
   .logo
-    width: 100%
-    text-align: center
-    padding-top: 2em
-    padding-bottom: 2em
+    max-width: variables.$max-width
+    width: 75%
+    display: block
+    margin: 2em auto
+    +mixins.sm
+      width: 90%
   h1
-    +fade
+    +mixins.fade
     margin-top: 0
-    // +font-size(4em)
   .center-wrapper
-    max-width: 1200px
     margin: 0 auto 2em
-
   .grid
-    max-width: 1200px
     margin: 0 auto
-    display: grid
-    +sm
-      grid-template-columns: 1fr
-    +md
-      grid-template-columns: 1fr
-    +lg
-      grid-template-columns: 1fr
-    grid-template-columns: 1fr
-    grid-column-gap: 2em
-    grid-row-gap: 2em
 
 </style>

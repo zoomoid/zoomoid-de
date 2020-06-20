@@ -16,7 +16,6 @@ import Intro from '@/views/Intro.vue'
 import Work from '@/views/Work.vue';
 import About from '@/views/About.vue';
 import {Footer} from '@/components/';
-// import Navigation from '@/components/Navigation.vue';
 
 export default {
   name: 'MainView',
@@ -32,12 +31,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import '@/assets/app.sass'
-
 .foreground
-  padding: 0 2em
-  +sm
-    padding: 0 1em
+  background-color: #eeeeee
   margin: 0 auto
   width: 100%
 

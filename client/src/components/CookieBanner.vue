@@ -40,11 +40,11 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import '@/assets/app.sass'
+@use '../assets/variables'
 
 .wrapper
   width: 100%
-  background: invert($background-color)
+  background: invert(variables.$background-color)
 .banner
   display: flex
   padding: 8px

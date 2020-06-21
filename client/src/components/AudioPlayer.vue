@@ -4,11 +4,11 @@
       <div class="title" v-html="name">
 
       </div>
-      <div class="tags" v-if="tags.length > 0">
+      <!-- <div class="tags" v-if="tags.length > 0">
         <span class="tag" v-for="tag in tags" v-bind:key="tag">
           {{tag}}
         </span>
-      </div>
+      </div> -->
     </div>
     <div class="player">
       <!-- <div class="skip">
@@ -37,6 +37,7 @@
       <div class="playback-time-wrapper">
         <div class="playback-time-bar">
           <div v-bind:style="progressStyle" class="playback-time-indicator"></div>
+          <div draggable="true" :class="[this.currentTime != '00:00' ? 'playing playback-time-playhead' : 'playback-time-playhead']" :style="headStyle"></div>
           <div class="playback-time-scrobble-bar" @click="setPosition"></div>
         </div>
       </div>
@@ -118,9 +119,11 @@ export default {
   },
   methods: {
     setPosition: function name(e) {
-      const tag = e.target;
-
-      const pos = tag.getBoundingClientRect();
+      let pos = e.target.getBoundingClientRect();
+      if (e.target.nextSibling) {
+        // In case we dragged the playhead
+        pos = e.target.nextSibling.getBoundingClientRect();
+      }
       const seekPos = (e.clientX - pos.left) / pos.width;
       const { seekable } = this.audio;
       let seekTarget = this.audio.duration * seekPos;
@@ -182,6 +185,7 @@ export default {
       const currTime = parseInt(this.audio.currentTime, 10);
       const percentage = (currTime / this.totalDuration) * 100;
       this.progressStyle = `width:${percentage}%;`;
+      this.headStyle = `left:${percentage}%`;
       this.currentTime = convertTimeHHMMSS(currTime);
     },
     handlePlayPause(e) {
@@ -218,6 +222,7 @@ export default {
       totalDuration: 0,
       volumeValue: baseVolumeValue,
       progressStyle: '',
+      headStyle: '',
     };
   },
   computed: {
@@ -240,7 +245,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/app.sass';
+// @import '@/assets/app.sass';
+@use '../assets/mixins';
+@use '../assets/variables';
+@use '../assets/colors';
+@use '../../node_modules/rfs/sass' as rfs;
 
 @keyframes loading {
   0% {
@@ -290,7 +299,7 @@ $loading-fade: linear-gradient(135deg,
     }
   }
   padding: 0;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   .title-wrapper {
     display: flex;
     align-items: center;
@@ -309,8 +318,8 @@ $loading-fade: linear-gradient(135deg,
       display: flex;
       .tag {
         display: block;
-        background: $black;
-        color: $white;
+        background: colors.$black;
+        color: colors.$white;
         border-radius: 4px;
         padding: 4px 8px;
         margin: 0 2px;
@@ -336,7 +345,7 @@ $loading-fade: linear-gradient(135deg,
         cursor: pointer;
         &:hover, &:active {
           border-radius: 32px;
-          background: transparentize($text-color, 0.92);
+          background: transparentize(variables.$text-color, 0.92);
         }
       }
     }
@@ -354,14 +363,15 @@ $loading-fade: linear-gradient(135deg,
       }
       &:hover, &:active {
         &.paused {
-          background: transparentize($text-color, 0.92);
+          background: transparentize(variables.$text-color, 0.92);
         }
-        background: transparentize($text-color, 0.92);
+        background: transparentize(variables.$text-color, 0.92);
         border-radius: 32px;
       }
     }
     .playback-time-wrapper {
       flex-grow: 1;
+      padding-right: 16px;
       .playback-time-bar {
         background: transparent;
         position: relative;
@@ -385,14 +395,29 @@ $loading-fade: linear-gradient(135deg,
           z-index: 2;
         }
         .playback-time-indicator {
-          background: $zoomoid-fade;
+          background: var(--accent);
           border-radius: 4px;
           position: absolute;
           top: 0;
           left: 0;
           bottom: 0;
           z-index: 1;
-          transition: width .2s ease;
+          transition: width 0.5s ease-in-out;
+        }
+        .playback-time-playhead {
+          &.playing {
+            display: block;
+          }
+          display: none;
+          background: var(--accent);
+          border-radius: 16px;
+          height: 16px;
+          width: 16px;
+          position: absolute;
+          transform: translateY(-4px) translateX(-8px);
+          box-shadow: 0 0 4px rgba(0,0,0,1);
+          z-index: 10;
+          transition: left 0.5s ease-in-out;
         }
       }
     }
@@ -404,7 +429,7 @@ $loading-fade: linear-gradient(135deg,
         display: inline-block;
         vertical-align: middle;
         line-height: 2rem;
-        @include font-size(0.8rem);
+        @include rfs.font-size(0.8rem);
         text-align: center;
         &.playback-time-separator::after {
           padding-left: 0.5ex;
@@ -425,7 +450,7 @@ $loading-fade: linear-gradient(135deg,
         text-align: center;
       }
       &:hover, &:active, .muted {
-        background: transparentize($text-color, 0.92);
+        background: transparentize(variables.$text-color, 0.92);
         border-radius: 32px;
       }
     }
@@ -443,7 +468,7 @@ $loading-fade: linear-gradient(135deg,
         color: inherit;
       }
       &:hover, &:active, .muted {
-        background: transparentize($text-color, 0.92);
+        background: transparentize(variables.$text-color, 0.92);
         border-radius: 32px;
       }
     }

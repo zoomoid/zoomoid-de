@@ -57,7 +57,7 @@ export default {
       return this.dark ? 'dark' : 'light';
     },
     colorScheme(){
-      return `--text: ${this.theme == 'dark' ? '#ffffff' : '#0a0a0'}; --background: ${this.theme == 'dark' ? '#0a0a0a' : '#ffffff'}; --accent: ${this.accent}`;
+      return `--text: ${this.theme == 'dark' ? '#ffffff' : '#0a0a0a'}; --background: ${this.theme == 'dark' ? '#0a0a0a' : '#ffffff'}; --accent: ${this.accent}`;
     }
   }
 }
@@ -102,16 +102,8 @@ export default {
         line-height: 1.5
         font-weight: 500
       a
-        font-weight: 300
-        background: var(--accent)
-        color: var(--text)
-        border-radius: 6px
-        padding: 4px 8px
-        text-decoration: none
-        transition: color 0.1s ease, background 0.1s ease
-        &:hover, &:active
-          background: var(--background)
-          color: var(--text)
+        color: var(--accent)
+        text-decoration: underline
     .title
       h1
         margin: 0 0 1em

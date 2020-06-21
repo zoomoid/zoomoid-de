@@ -25,11 +25,11 @@
       alt="zoomoid logo">
     </div>
     <References></References>
-    <BannerCard url="./sehnsucht-banner.jpg">
+    <!-- <BannerCard url="./sehnsucht-banner.jpg">
       <h2>Zoomoid</h2>
       <h1>Sehnsucht</h1>
       <span>Coming in Q4 2020</span>
-    </BannerCard>
+    </BannerCard> -->
   </div>
 </template>
 
@@ -113,11 +113,11 @@
 </style>
 
 <script>
-import BannerCard from '@/components/BannerCard.vue'
+// import BannerCard from '@/components/BannerCard.vue'
 import References from '@/components/References.vue'
 export default {
   components: {
-    BannerCard,
+    // BannerCard,
     References,
   },
   data: function(){

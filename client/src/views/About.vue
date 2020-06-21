@@ -10,12 +10,8 @@
             e-mail at
             <a
               class="contact--mail"
-              href="mailto:occloxium@gmail.com"
-            >occloxium@gmail.com</a>.
-          </p>
-          <p>
-            Other than that, here are a few ways to contact me in a more specific
-            and rather passive domain:
+              href="mailto:alex@zoomoid.de"
+            >alex@zoomoid.de</a>.
           </p>
           <ul class="references">
             <li>
@@ -61,8 +57,6 @@
   h1
     +mixins.fade
     display: inline-block
-  .contact--mail
-
   .references
     padding-left: 0
     li

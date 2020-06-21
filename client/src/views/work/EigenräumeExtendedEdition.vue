@@ -22,7 +22,7 @@
       <p>
         However, with the idea to produce two parallel releases also came the
         necessity to design two different album artworks. The second version of
-        the "eigenraeume" album cover looks a lot more industrial, monochrome
+        the "Eigenräume" album cover looks a lot more industrial, monochrome
         than the black, but also colorful first version. Both share roughly the
         same motive, except for the rings in the center.
       </p>
@@ -30,7 +30,7 @@
         After some time, I picked up those tracks again, with fresh ideas to
         polish them to something better than the first released version. On top
         of that, I began some new tracks that fitted with the original versions,
-        so I added them as a bonus! Overall, the six original "eigenraeume"
+        so I added them as a bonus! Overall, the six original "Eigenräume"
         tracks all got some touch-ups, fill-ups and some additional layers,
         three more tracks were appended and I framed them with beautiful
         instrumental intros and outros.

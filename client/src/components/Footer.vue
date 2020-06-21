@@ -33,23 +33,22 @@
 </template>
 
 <style lang="sass" scoped>
-@import '../assets/app'
-
+@use '../assets/variables'
+@use '../assets/mixins'
 footer
   background: black
   box-shadow: 0 -1px 2px rgba(0,0,0,0.54)
-  +font
+  // +mixins.font
   padding: 1em 12px
-  color: $background-color
+  color: variables.$background-color
   a, a > i
     color: inherit
     text-decoration: none
-    transition: color $transition-time $transition-curve
+    transition: color variables.$transition-time variables.$transition-curve
     letter-spacing: 0px
     &:hover,
     &:active
-      +fade
-
+      +mixins.fade
   .references
     display: flex
     flex-wrap: wrap

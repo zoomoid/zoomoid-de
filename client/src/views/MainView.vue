@@ -22,10 +22,13 @@ export default {
   components: {
     Intro,
     Footer,
-    // Navigation,
     Work,
     About,
-    // MerchBanner
+  },
+  mounted(){
+    if(!this.$cookies.isKey('hideVoyagerHeroPage')){
+      this.$router.push({path: '/voyager'});
+    }
   }
 }
 </script>

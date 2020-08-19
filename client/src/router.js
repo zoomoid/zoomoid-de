@@ -12,6 +12,7 @@ import {
   SchwerelosRemix,
   ShadesOfYellow
 } from '@/views/work/index.js';
+import Voyager from './views/Voyager.vue';
 
 Vue.use(Router)
 
@@ -66,7 +67,11 @@ export default new Router({
       path: '/privacy',
       name: 'Privacy',
       component: Privacy
-    },
+    },{
+      path: '/voyager',
+      name: 'Voyager',
+      component: Voyager,
+    }
   ],
   scrollBehavior () {
     return { x: 0, y: 0 }

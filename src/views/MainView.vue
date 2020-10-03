@@ -12,13 +12,13 @@
 </template>
 
 <script>
-import Intro from '@/views/Intro.vue'
-import Work from '@/views/Work.vue';
-import About from '@/views/About.vue';
-import {Footer} from '@/components/';
+import Intro from "@/views/Intro.vue"
+import Work from "@/views/Work.vue";
+import About from "@/views/About.vue";
+import {Footer} from "@/components/";
 
 export default {
-  name: 'MainView',
+  name: "MainView",
   components: {
     Intro,
     Footer,
@@ -26,8 +26,8 @@ export default {
     About,
   },
   mounted(){
-    if(!this.$cookies.isKey('hideVoyagerHeroPage')){
-      this.$router.push({path: '/voyager'});
+    if(!this.$cookies.isKey("hideVoyagerHeroPage")){
+      this.$router.push({path: "/voyager"});
     }
   }
 }

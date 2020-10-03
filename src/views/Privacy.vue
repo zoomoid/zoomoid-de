@@ -131,8 +131,8 @@ section
 </style>
 
 <script>
-import Footer from '@/components/Footer'
-import Breadcrumb from '@/components/Breadcrumb'
+import Footer from "@/components/Footer"
+import Breadcrumb from "@/components/Breadcrumb"
 export default {
   components: {
     Footer,
@@ -141,11 +141,11 @@ export default {
   data: function() {
     return {
       cookies:
-        this.$cookies.isKey('allowCookies') &&
-        this.$cookies.get('allowCookies') === 'true',
+        this.$cookies.isKey("allowCookies") &&
+        this.$cookies.get("allowCookies") === "true",
       thirdParty:
-        this.$cookies.isKey('allowThirdPartyContent') &&
-        this.$cookies.get('allowThirdPartyContent') === 'true'
+        this.$cookies.isKey("allowThirdPartyContent") &&
+        this.$cookies.get("allowThirdPartyContent") === "true"
     };
   },
   methods: {
@@ -154,24 +154,24 @@ export default {
       return true;
     },
     addCookie: function(id, value) {
-      this.$cookies.set(id, value, '30d');
+      this.$cookies.set(id, value, "30d");
       return true;
     },
     removeAllCookies: function() {
-      this.removeCookie('allowCookies');
-      this.removeCookie('allowThirdPartyContent');
+      this.removeCookie("allowCookies");
+      this.removeCookie("allowThirdPartyContent");
       this.cookies = false;
       this.thirdParty = false;
     },
     allowThirdPartyContent: function() {
-      this.addCookie('allowThirdPartyContent', 'true');
-      this.addCookie('allowCookies', 'true');
+      this.addCookie("allowThirdPartyContent", "true");
+      this.addCookie("allowCookies", "true");
       this.cookies = true;
       this.thirdParty = true;
     },
     declineThirdPartyContent: function() {
-      this.addCookie('allowThirdPartyContent', 'false');
-      this.addCookie('allowCookies', 'true');
+      this.addCookie("allowThirdPartyContent", "false");
+      this.addCookie("allowCookies", "true");
       this.cookies = true;
       this.thirdParty = false;
     }

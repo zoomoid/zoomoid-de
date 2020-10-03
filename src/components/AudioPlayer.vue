@@ -74,11 +74,11 @@ export const baseVolumeValue = 10;
 
 export const convertTimeHHMMSS = (val) => {
   const hhmmss = new Date(val * 1000).toISOString().substr(11, 8);
-  return (hhmmss.indexOf('00:') === 0) ? hhmmss.substr(3) : hhmmss;
+  return (hhmmss.indexOf("00:") === 0) ? hhmmss.substr(3) : hhmmss;
 };
 
 export default {
-  name: 'AudioPlayer',
+  name: "AudioPlayer",
   props: {
     name: {
       type: String,
@@ -113,7 +113,7 @@ export default {
     playStateOverrideBy() {
       if (this.playStateOverrideBy !== this.id || this.playStateOverrideBy === -1) {
         this.pause();
-        this.$emit('paused');
+        this.$emit("paused");
       }
     },
   },
@@ -135,7 +135,7 @@ export default {
       this.audio.currentTime = seekTarget;
     },
     stop() {
-      this.$emit('paused');
+      this.$emit("paused");
       this.playing = false;
       this.paused = true;
       this.finished = true;
@@ -143,14 +143,14 @@ export default {
       this.audio.currentTime = 0;
     },
     play() {
-      this.$emit('playing', this.id);
+      this.$emit("playing", this.id);
       this.finished = false;
       this.playing = true;
       this.paused = false;
       this.audio.play();
     },
     pause() {
-      this.$emit('paused');
+      this.$emit("paused");
       this.playing = false;
       this.paused = true;
       this.finished = false;
@@ -178,7 +178,7 @@ export default {
       if (this.audio.readyState >= 2) {
         this.totalDuration = parseInt(this.audio.duration, 10);
       } else {
-        throw new Error('Failed to load sound file');
+        throw new Error("Failed to load sound file");
       }
     },
     handlePlayingUI() {
@@ -189,25 +189,25 @@ export default {
       this.currentTime = convertTimeHHMMSS(currTime);
     },
     handlePlayPause(e) {
-      if (e.type === 'pause' && this.playing === false) {
+      if (e.type === "pause" && this.playing === false) {
         this.paused = true;
       }
     },
     handleFinished() {
-      this.$emit('finished');
+      this.$emit("finished");
       this.playing = false;
       this.paused = false;
       this.finished = true;
     },
     init() {
-      this.audio.addEventListener('timeupdate', this.handlePlayingUI);
-      this.audio.addEventListener('loadeddata', this.handleLoaded);
-      this.audio.addEventListener('pause', this.handlePlayPause);
-      this.audio.addEventListener('play', this.handlePlayPause);
-      this.audio.addEventListener('ended', this.handleFinished);
+      this.audio.addEventListener("timeupdate", this.handlePlayingUI);
+      this.audio.addEventListener("loadeddata", this.handleLoaded);
+      this.audio.addEventListener("pause", this.handlePlayPause);
+      this.audio.addEventListener("play", this.handlePlayPause);
+      this.audio.addEventListener("ended", this.handleFinished);
     },
     getAudio() {
-      return this.$el.querySelectorAll('audio')[0];
+      return this.$el.querySelectorAll("audio")[0];
     },
   },
   data() {
@@ -217,17 +217,17 @@ export default {
       finished: false,
       isMuted: false,
       loaded: false,
-      currentTime: '00:00',
+      currentTime: "00:00",
       audio: undefined,
       totalDuration: 0,
       volumeValue: baseVolumeValue,
-      progressStyle: '',
-      headStyle: '',
+      progressStyle: "",
+      headStyle: "",
     };
   },
   computed: {
     duration() {
-      return this.audio ? convertTimeHHMMSS(this.totalDuration) : '';
+      return this.audio ? convertTimeHHMMSS(this.totalDuration) : "";
     },
   },
   mounted() {
@@ -236,10 +236,10 @@ export default {
     this.init();
   },
   beforeDestroy() {
-    this.audio.removeEventListener('timeupdate', this.handlePlayingUI);
-    this.audio.removeEventListener('loadeddata', this.handleLoaded);
-    this.audio.removeEventListener('pause', this.handlePlayPause);
-    this.audio.removeEventListener('play', this.handlePlayPause);
+    this.audio.removeEventListener("timeupdate", this.handlePlayingUI);
+    this.audio.removeEventListener("loadeddata", this.handleLoaded);
+    this.audio.removeEventListener("pause", this.handlePlayPause);
+    this.audio.removeEventListener("play", this.handlePlayPause);
   },
 };
 </script>

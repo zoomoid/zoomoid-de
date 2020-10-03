@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'CookieBanner',
+  name: "CookieBanner",
   data: function(){
     return {
       hidden: false
@@ -24,13 +24,13 @@ export default {
   methods: {
     cookiesExist: function() {
       return (
-        this.$cookies.isKey('allowCookies') &&
-        this.$cookies.isKey('allowThirdPartyContent')
+        this.$cookies.isKey("allowCookies") &&
+        this.$cookies.isKey("allowThirdPartyContent")
       );
     },
     accept: function() {
-      this.$cookies.set('allowCookies', 'true', '30d');
-      this.$cookies.set('allowThirdPartyContent', 'true', '30d');
+      this.$cookies.set("allowCookies", "true", "30d");
+      this.$cookies.set("allowThirdPartyContent", "true", "30d");
       this.hidden = true;
       this.$root.$blocked = false;
       location.reload();

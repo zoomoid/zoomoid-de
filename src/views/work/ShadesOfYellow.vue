@@ -26,9 +26,9 @@
 </template>
 
 <script>
-import AudioManager from '@/components/AudioManager.vue';
-import PageTemplate from '@/components/PageTemplate';
-import SlideAnchor from '@/components/SlideAnchor';
+import AudioManager from "@/components/AudioManager.vue";
+import PageTemplate from "@/components/PageTemplate";
+import SlideAnchor from "@/components/SlideAnchor";
 
 export default {
   components: {
@@ -38,45 +38,45 @@ export default {
   },
   data: function() {
     return {
-      theme: 'light',
+      theme: "light",
       streaming: [
         {
-          name: 'Spotify',
-          link: 'https://open.spotify.com/album/2I2D60pkjobXBi4vPfxLBh'
+          name: "Spotify",
+          link: "https://open.spotify.com/album/2I2D60pkjobXBi4vPfxLBh"
         },
         {
-          name: 'Apple Music',
+          name: "Apple Music",
           link:
-            'https://music.apple.com/de/album/shades-of-yellow-single/1510331967'
+            "https://music.apple.com/de/album/shades-of-yellow-single/1510331967"
         }
       ],
       buying: [],
       queue: [
         {
           id: 1,
-          name: 'Shades of Yellow',
+          name: "Shades of Yellow",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/shades-of-yellow/Shades%20of%20Yellow.mp3',
-          tags: ['House', '120bpm']
+            "https://cdn.occloxium.com/a/zoomoid/shades-of-yellow/Shades%20of%20Yellow.mp3",
+          tags: ["House", "120bpm"]
         },
         {
           id: 2,
-          name: 'Malhereux en Amour',
+          name: "Malhereux en Amour",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/shades-of-yellow/Malheureux%20en%20Amour.mp3',
-          tags: ['Electronic', '90bpm']
+            "https://cdn.occloxium.com/a/zoomoid/shades-of-yellow/Malheureux%20en%20Amour.mp3",
+          tags: ["Electronic", "90bpm"]
         },
         {
           id: 3,
-          name: 'Dreams From Far Away',
+          name: "Dreams From Far Away",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/shades-of-yellow/Dreams%20from%20Far%20Away.mp3',
-          tags: ['Drum\'n\'Bass', '174bpm']
+            "https://cdn.occloxium.com/a/zoomoid/shades-of-yellow/Dreams%20from%20Far%20Away.mp3",
+          tags: ["Drum'n'Bass", "174bpm"]
         },
       ],
       blockEmbedded:
-        !this.$cookies.isKey('allowThirdPartyContent') ||
-        this.$cookies.get('allowThirdPartyContent') === 'false'
+        !this.$cookies.isKey("allowThirdPartyContent") ||
+        this.$cookies.get("allowThirdPartyContent") === "false"
     };
   }
 };

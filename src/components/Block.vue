@@ -7,11 +7,11 @@
 
 <script>
 export default {
-  name: 'Block',
+  name: "Block",
   methods: {
     accept: function() {
-      this.$cookies.set('allowCookies', 'true', '30d');
-      this.$cookies.set('allowThirdPartyContent', 'true', '30d');
+      this.$cookies.set("allowCookies", "true", "30d");
+      this.$cookies.set("allowThirdPartyContent", "true", "30d");
       this.$root.$block = false;
       location.reload();
     }

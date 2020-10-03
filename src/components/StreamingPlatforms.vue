@@ -24,10 +24,10 @@
 </template>
 
 <script>
-import SlideAnchor from '@/components/SlideAnchor.vue'
+import SlideAnchor from "@/components/SlideAnchor.vue"
 
 export default {
-  name: 'StreamingPlatforms',
+  name: "StreamingPlatforms",
   components: {
     SlideAnchor
   }

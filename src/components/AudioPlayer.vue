@@ -402,7 +402,7 @@ $loading-fade: linear-gradient(135deg,
           left: 0;
           bottom: 0;
           z-index: 1;
-          transition: width 0.5s ease-in-out;
+          transition: width 0.1s ease-in-out;
         }
         .playback-time-playhead {
           &.playing {
@@ -417,7 +417,7 @@ $loading-fade: linear-gradient(135deg,
           transform: translateY(-4px) translateX(-8px);
           box-shadow: 0 0 4px rgba(0,0,0,1);
           z-index: 10;
-          transition: left 0.5s ease-in-out;
+          transition: left 0.1s ease-in-out;
         }
       }
     }

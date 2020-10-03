@@ -6,16 +6,17 @@ export default {
   components: {
     Card,
   },
-  data: function() {
+  data() {
     return {
-      new_arrivals: [
+      releases: [
         {
           contentID: 'shades-of-yellow',
           artist: 'Zoomoid',
           title: 'Shades Of Yellow',
           coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/shades-of-yellow/cover.png',
           date: '01.05.2020',
-          id: 'S02'
+          id: 'S02',
+          accent: '#dbb100',
         },
         {
           contentID: 'schwerelos-zoomoid-remix',
@@ -23,17 +24,17 @@ export default {
           title: 'Schwerelos (Zoomoid Remix)',
           coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/schwerelos-zoomoid-remix/cover.png',
           date: '10.01.2020',
-          id: 'S01'
+          id: 'S01',
+          accent: '#0c0000',
         },
-      ],
-      releases2019: [
         {
           contentID: '301',
           artist: 'zoomoid',
           title: '301 Moved Permanently',
           coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/301/standard.jpg',
           date: '13.12.2019',
-          id: 'A05'
+          id: 'A05',
+          accent: '#030000',
         },
         {
           contentID: 'public-transportation',
@@ -41,7 +42,8 @@ export default {
           title: 'Public Transportation',
           coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/public-transportation/standard.png',
           date: '01.11.2019',
-          id: 'A04'
+          id: 'A04',
+          accent: '#165091',
         },
         {
           contentID: 'eigenräume-extended-edition',
@@ -49,7 +51,8 @@ export default {
           title: 'Eigenräume (Extended Edition)',
           coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/eigenr%C3%A4ume/extended.png',
           date: '24.08.2019',
-          id: 'A03'
+          id: 'A03',
+          accent: '#ea0000',
         },
         {
           contentID: 'eigenräume-standard-edition',
@@ -57,7 +60,8 @@ export default {
           title: 'Eigenräume',
           coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/eigenr%C3%A4ume/standard.png',
           date: '15.05.2019',
-          id: 'A02'
+          id: 'A02',
+          accent: '#151515',
         },
         {
           contentID: 'liamm',
@@ -65,7 +69,8 @@ export default {
           title: 'Life Is About Making Memories',
           coverUrl: 'https://cdn.occloxium.com/i/zoomoid/covers/liamm/cover.png',
           date: '22.09.2018',
-          id: 'A01'
+          id: 'A01',
+          accent: '#000000',
         },
       ]
     }
@@ -75,13 +80,13 @@ export default {
 
 <template>
   <div id="work">
-    <div class="grid" id="#new-arrivals">
-      <img class="logo" src="@/assets/new_arrivals.svg">
-      <Card v-for="item in new_arrivals" v-bind:key="item.contentID" v-bind:entry="item"/>
-    </div>
-    <div class="grid" id="#2019">
-      <img class="logo" src="@/assets/2019.svg">
-      <Card v-for="item in releases2019" v-bind:key="item.contentID" v-bind:entry="item"/>
+    <h1>Discography</h1>
+    <div class="grid">
+      <Card v-for="(item, index) in releases"
+        :key="item.contentID"
+        :accent="item.accent"
+        :accented="index % 2 === 0"
+        :entry="item"/>
     </div>
   </div>
 </template>
@@ -94,11 +99,7 @@ $radius: 32px
   flex-grow: 1
   +mixins.sm
     max-width: none
-    padding: 0 12px
-  max-width: 66%
   margin: 0 auto
-  // padding-left: 2em
-  background: #eee
   .logo
     max-width: variables.$max-width
     width: 75%
@@ -108,7 +109,8 @@ $radius: 32px
       width: 90%
   h1
     +mixins.fade
-    margin-top: 0
+    text-align: center
+    font-size: 2em
   .center-wrapper
     margin: 0 auto 2em
   .grid

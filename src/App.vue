@@ -12,7 +12,6 @@
   outline: none
 body
   +typography
-  background: $background-color
   main
     display: flex
     flex-direction: column

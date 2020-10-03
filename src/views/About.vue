@@ -2,16 +2,14 @@
   <div id="about">
     <div class="wrapper">
       <div class="grid">
-        <!-- <Banner/> -->
-        <div class="text">
           <h1>Contact</h1>
           <p>
             For booking, collaboration, or other issues, contact me via
             e-mail at
             <a
               class="contact--mail"
-              href="mailto:alex@zoomoid.de"
-            >alex@zoomoid.de</a>.
+              href="mailto:occloxium@gmail.com"
+            >occloxium@gmail.com</a>.
           </p>
           <ul class="references">
             <li>
@@ -31,7 +29,6 @@
               :icon="'fab fa-soundcloud'" :name="'SoundCloud'"/>
             </li>
           </ul>
-        </div>
       </div>
     </div>
   </div>
@@ -46,7 +43,7 @@
 #about
   max-width: variables.$max-width
   margin: 0 auto
-  padding-bottom: 4em
+  padding: 1em 1em 4em
   +mixins.sm
     padding: 0 1em 4em
   p
@@ -56,7 +53,8 @@
       font-weight: 700
   h1
     +mixins.fade
-    display: inline-block
+    font-size: 2em
+    text-align: center
   .references
     padding-left: 0
     li

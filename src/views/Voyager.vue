@@ -242,21 +242,20 @@ export default {
     & > div
       // transform: translate(-200%, -100%)
       position: absolute
-      width: 1000px
-      height: 1000px
+      width: 1500px
+      height: 1500px
+      margin-left: -750px
+      margin-top: -750px
       opacity: 0.5
       background: radial-gradient(closest-side at center, var(--color) 0, rgba(0,0,0,0))
       &.animate-var-
         &1
-          opacity: 0.8
           animation: move-var-1 60s ease infinite alternate running
         &2
           animation: move-var-2 30s ease infinite normal running
         &3
-          opacity: 0.56
-          animation: move-var-3 50s ease infinite reverse running
+          animation: move-var-3 20s ease infinite reverse running
         &4
-          opacity: 0.66
           animation: move-var-1 40s ease infinite alternate running
         &5
           animation: move-var-3 45s ease infinite normal running

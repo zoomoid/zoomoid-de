@@ -18,9 +18,9 @@ body
 </style>
 
 <script>
-import CookieBanner from '@/components/CookieBanner.vue';
+import CookieBanner from "@/components/CookieBanner.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
     CookieBanner,
   }

@@ -28,9 +28,9 @@
 
 
 <script>
-import AudioManager from '@/components/AudioManager.vue';
-import PageTemplate from '@/components/PageTemplate';
-import SlideAnchor from '@/components/SlideAnchor';
+import AudioManager from "@/components/AudioManager.vue";
+import PageTemplate from "@/components/PageTemplate";
+import SlideAnchor from "@/components/SlideAnchor";
 
 export default {
   components: {
@@ -42,63 +42,63 @@ export default {
     return {
       streaming: [
         {
-          name: 'Spotify',
-          link: 'https://open.spotify.com/album/7r0wQNMWcf2vno7O2trwQt'
+          name: "Spotify",
+          link: "https://open.spotify.com/album/7r0wQNMWcf2vno7O2trwQt"
         },
         {
-          name: 'Apple Music',
+          name: "Apple Music",
           link:
-            'https://music.apple.com/de/album/public-transportation-ep/1484512656'
+            "https://music.apple.com/de/album/public-transportation-ep/1484512656"
         }
       ],
       buying: [],
       queue: [
         {
           id: 1,
-          name: 'Stargazing',
+          name: "Stargazing",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/public-transportation/01_stargazing.mp3',
-          tags: ['Dormagen']
+            "https://cdn.occloxium.com/a/zoomoid/public-transportation/01_stargazing.mp3",
+          tags: ["Dormagen"]
         },
         {
           id: 2,
-          name: 'Downhill',
+          name: "Downhill",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/public-transportation/02_downhill.mp3',
-          tags: ['Köln Hbf']
+            "https://cdn.occloxium.com/a/zoomoid/public-transportation/02_downhill.mp3",
+          tags: ["Köln Hbf"]
         },
         {
           id: 3,
-          name: 'Say It',
+          name: "Say It",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/public-transportation/03_say%20it.mp3',
-          tags: ['Aachen Rothe-Erde']
+            "https://cdn.occloxium.com/a/zoomoid/public-transportation/03_say%20it.mp3",
+          tags: ["Aachen Rothe-Erde"]
         },
         {
           id: 4,
-          name: 'Volksgarten',
+          name: "Volksgarten",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/public-transportation/04_volksgarten.mp3',
-          tags: ['Düsseldorf Hbf']
+            "https://cdn.occloxium.com/a/zoomoid/public-transportation/04_volksgarten.mp3",
+          tags: ["Düsseldorf Hbf"]
         },
         {
           id: 5,
-          name: 'Me&shy;lan&shy;cho&shy;lic Me&shy;di&shy;ta&shy;tion',
+          name: "Me&shy;lan&shy;cho&shy;lic Me&shy;di&shy;ta&shy;tion",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/public-transportation/05_melancholic%20meditation.mp3',
-          tags: ['Aachen West']
+            "https://cdn.occloxium.com/a/zoomoid/public-transportation/05_melancholic%20meditation.mp3",
+          tags: ["Aachen West"]
         },
         {
           id: 6,
-          name: 'Delay',
+          name: "Delay",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/public-transportation/06_delay.mp3',
+            "https://cdn.occloxium.com/a/zoomoid/public-transportation/06_delay.mp3",
           tags: []
         }
       ],
       blockEmbedded:
-        !this.$cookies.isKey('allowThirdPartyContent') ||
-        this.$cookies.get('allowThirdPartyContent') === 'false'
+        !this.$cookies.isKey("allowThirdPartyContent") ||
+        this.$cookies.get("allowThirdPartyContent") === "false"
     };
   }
 };

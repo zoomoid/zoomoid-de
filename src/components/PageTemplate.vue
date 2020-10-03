@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import Breadcrumb from './Breadcrumb.vue';
+import Breadcrumb from "./Breadcrumb.vue";
 
 export default {
   components: {
@@ -46,7 +46,7 @@ export default {
     },
     accent: {
       type: String,
-      default: '#f58b44',
+      default: "#f58b44",
     }
   },
   computed: {
@@ -54,10 +54,10 @@ export default {
       return `background-color: ${this.accent}`;
     },
     theme(){
-      return this.dark ? 'dark' : 'light';
+      return this.dark ? "dark" : "light";
     },
     colorScheme(){
-      return `--text: ${this.theme == 'dark' ? '#ffffff' : '#0a0a0a'}; --background: ${this.theme == 'dark' ? '#0a0a0a' : '#ffffff'}; --accent: ${this.accent}`;
+      return `--text: ${this.theme == "dark" ? "#ffffff" : "#0a0a0a"}; --background: ${this.theme == "dark" ? "#0a0a0a" : "#ffffff"}; --accent: ${this.accent}`;
     }
   }
 }

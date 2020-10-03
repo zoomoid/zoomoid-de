@@ -1,12 +1,12 @@
 <script>
 export default {
-  name: 'SlideAnchor',
+  name: "SlideAnchor",
   props: {
     anchor: String,
     name: String,
     icon: {
       type: String,
-      default: '',
+      default: "",
     },
     small: {
       type: Boolean,

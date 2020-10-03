@@ -60,9 +60,9 @@
 </template>
 
 <script>
-import SlideAnchor from '@/components/SlideAnchor';
-import AudioManager from '@/components/AudioManager.vue';
-import PageTemplate from '@/components/PageTemplate'
+import SlideAnchor from "@/components/SlideAnchor";
+import AudioManager from "@/components/AudioManager.vue";
+import PageTemplate from "@/components/PageTemplate"
 
 export default {
   components: {
@@ -74,75 +74,75 @@ export default {
     return {
       streaming: [
         {
-          name: 'Spotify',
-          link: 'https://open.spotify.com/album/3YaUvYAudEXEuCJzoONcgE'
+          name: "Spotify",
+          link: "https://open.spotify.com/album/3YaUvYAudEXEuCJzoONcgE"
         },
         {
-          name: 'Apple Music',
-          link: 'https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888'
+          name: "Apple Music",
+          link: "https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888"
         },
         {
-          name: 'Deezer',
-          link: 'https://www.deezer.com/de/album/95294192'
+          name: "Deezer",
+          link: "https://www.deezer.com/de/album/95294192"
         }
       ],
       buying: [
         {
-          name: 'Amazon Music',
-          link: 'https://www.amazon.de/Eigenr%C3%A4ume-Zoomoid/dp/B07R92N45D/'
+          name: "Amazon Music",
+          link: "https://www.amazon.de/Eigenr%C3%A4ume-Zoomoid/dp/B07R92N45D/"
         },
         {
-          name: 'iTunes',
-          link: 'https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888'
+          name: "iTunes",
+          link: "https://itunes.apple.com/de/album/eigenr%C3%A4ume/1462054888"
         }
       ],
       queue: [
         {
           id: 1,
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/standard/Stockholm.mp3',
-          name: 'Stockholm',
+            "https://cdn.occloxium.com/a/zoomoid/eigenraeume/standard/Stockholm.mp3",
+          name: "Stockholm",
           tags: []
         },
         {
           id: 2,
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/standard/Großstadt.mp3',
-          name: 'Großstadt',
+            "https://cdn.occloxium.com/a/zoomoid/eigenraeume/standard/Großstadt.mp3",
+          name: "Großstadt",
           tags: []
         },
         {
           id: 3,
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/standard/Schöneberg%20At%20Night.mp3',
-          name: 'Schöneberg At Night',
+            "https://cdn.occloxium.com/a/zoomoid/eigenraeume/standard/Schöneberg%20At%20Night.mp3",
+          name: "Schöneberg At Night",
           tags: []
         },
         {
           id: 4,
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/standard/Höllental.mp3',
-          name: 'Höllental',
+            "https://cdn.occloxium.com/a/zoomoid/eigenraeume/standard/Höllental.mp3",
+          name: "Höllental",
           tags: []
         },
         {
           id: 5,
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/standard/Heimat.mp3',
-          name: 'Heimat',
+            "https://cdn.occloxium.com/a/zoomoid/eigenraeume/standard/Heimat.mp3",
+          name: "Heimat",
           tags: []
         },
         {
           id: 6,
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/standard/Blaues%20Land.mp3',
-          name: 'Blaues Land',
+            "https://cdn.occloxium.com/a/zoomoid/eigenraeume/standard/Blaues%20Land.mp3",
+          name: "Blaues Land",
           tags: []
         }
       ],
       blockEmbedded:
-        !this.$cookies.isKey('allowThirdPartyContent') ||
-        this.$cookies.get('allowThirdPartyContent') === 'false'
+        !this.$cookies.isKey("allowThirdPartyContent") ||
+        this.$cookies.get("allowThirdPartyContent") === "false"
     };
   }
 };

@@ -49,44 +49,44 @@
 </template>
 
 <script>
-import SlideAnchor from '@/components/SlideAnchor';
-import PageTemplate from '@/components/PageTemplate'
+import SlideAnchor from "@/components/SlideAnchor";
+import PageTemplate from "@/components/PageTemplate"
 
 export default {
-  name: 'LIAMM',
+  name: "LIAMM",
   components: {
     SlideAnchor,
     PageTemplate,
   },
   data: function() {
     return {
-      theme: 'dark',
+      theme: "dark",
       streaming: [
         {
-          name: 'Spotify',
+          name: "Spotify",
           link:
-            'https://open.spotify.com/album/2zF1wOwINENOR1fTGLqBEF?si=SCmmA64xS8qJas-lAOnTpg'
+            "https://open.spotify.com/album/2zF1wOwINENOR1fTGLqBEF?si=SCmmA64xS8qJas-lAOnTpg"
         },
         {
-          name: 'Apple Music',
+          name: "Apple Music",
           link:
-            'https://music.apple.com/de/album/life-is-about-making-memories/1437311634'
+            "https://music.apple.com/de/album/life-is-about-making-memories/1437311634"
         },
         {
-          name: 'Deezer',
-          link: 'https://www.deezer.com/de/album/74066782'
+          name: "Deezer",
+          link: "https://www.deezer.com/de/album/74066782"
         }
       ],
       buying: [
         {
-          name: 'Amazon Music',
+          name: "Amazon Music",
           link:
-            'https://www.amazon.de/Life-About-Making-Memories-Zoomoid/dp/B07HNMR3L9/'
+            "https://www.amazon.de/Life-About-Making-Memories-Zoomoid/dp/B07HNMR3L9/"
         },
         {
-          name: 'iTunes',
+          name: "iTunes",
           link:
-            'https://itunes.apple.com/de/album/life-is-about-making-memories/1437311634'
+            "https://itunes.apple.com/de/album/life-is-about-making-memories/1437311634"
         }
       ]
     };

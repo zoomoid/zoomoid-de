@@ -10,7 +10,7 @@
 <script>
 
 export default {
-  name: 'WorkContainer',
+  name: "WorkContainer",
   components: {
   }
 }

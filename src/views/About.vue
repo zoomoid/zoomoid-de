@@ -75,7 +75,7 @@
 </style>
 
 <script>
-import SlideAnchor from '@/components/SlideAnchor'
+import SlideAnchor from "@/components/SlideAnchor"
 
 export default {
   components: {

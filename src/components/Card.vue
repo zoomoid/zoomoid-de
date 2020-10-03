@@ -98,7 +98,7 @@ a
 
 <script>
 export default {
-  name: 'Card',
+  name: "Card",
   props: {
     entry: Object,
     accent: String,
@@ -106,7 +106,7 @@ export default {
   },
   computed: {
     link: function(){
-      return 'work/' + this.entry.contentID;
+      return "work/" + this.entry.contentID;
     }
   }
 };

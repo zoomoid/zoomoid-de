@@ -26,9 +26,9 @@
 </template>
 
 <script>
-import SlideAnchor from '@/components/SlideAnchor.vue';
-import AudioManager from '@/components/AudioManager.vue';
-import PageTemplate from '@/components/PageTemplate';
+import SlideAnchor from "@/components/SlideAnchor.vue";
+import AudioManager from "@/components/AudioManager.vue";
+import PageTemplate from "@/components/PageTemplate";
 
 export default {
   components: {
@@ -40,46 +40,46 @@ export default {
     return {
       streaming: [
         {
-          name: 'Spotify',
-          link: 'https://open.spotify.com/album/4gr5rmKZn5pkFISvITsHrI'
+          name: "Spotify",
+          link: "https://open.spotify.com/album/4gr5rmKZn5pkFISvITsHrI"
         },
         {
-          name: 'Apple Music',
+          name: "Apple Music",
           link:
-            'https://music.apple.com/us/album/301-moved-permanently/1489867904'
+            "https://music.apple.com/us/album/301-moved-permanently/1489867904"
         }
       ],
       buying: [],
       queue: [
         {
           id: 1,
-          name: 'Monarch',
-          url: 'https://cdn.occloxium.com/a/zoomoid/301/01_Monarch.mp3',
+          name: "Monarch",
+          url: "https://cdn.occloxium.com/a/zoomoid/301/01_Monarch.mp3",
           tags: []
         },
         {
           id: 2,
-          name: 'Doppler',
-          url: 'https://cdn.occloxium.com/a/zoomoid/301/02_Doppler.mp3',
+          name: "Doppler",
+          url: "https://cdn.occloxium.com/a/zoomoid/301/02_Doppler.mp3",
           tags: []
         },
         {
           id: 3,
-          name: 'Elektron',
-          url: 'https://cdn.occloxium.com/a/zoomoid/301/03_Elektron.mp3',
+          name: "Elektron",
+          url: "https://cdn.occloxium.com/a/zoomoid/301/03_Elektron.mp3",
           tags: []
         },
         {
           id: 4,
-          name: 'Outer Space (Rework)',
+          name: "Outer Space (Rework)",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/301/04_Outer%20Space%20(Rework).mp3',
+            "https://cdn.occloxium.com/a/zoomoid/301/04_Outer%20Space%20(Rework).mp3",
           tags: []
         }
       ],
       blockEmbedded:
-        !this.$cookies.isKey('allowThirdPartyContent') ||
-        this.$cookies.get('allowThirdPartyContent') === 'false'
+        !this.$cookies.isKey("allowThirdPartyContent") ||
+        this.$cookies.get("allowThirdPartyContent") === "false"
     };
   }
 };

@@ -32,8 +32,8 @@
 
 
 <script>
-import SlideAnchor from '@/components/SlideAnchor.vue';
-import PageTemplate from '@/components/PageTemplate.vue';
+import SlideAnchor from "@/components/SlideAnchor.vue";
+import PageTemplate from "@/components/PageTemplate.vue";
 
 export default {
   components: {
@@ -42,23 +42,23 @@ export default {
   },
   data: function() {
     return {
-      theme: 'dark',
+      theme: "dark",
       streaming: [
         {
-          name: 'Spotify',
-          link: 'https://open.spotify.com/track/1UsussokjrnR2Sgpskrdzz'
+          name: "Spotify",
+          link: "https://open.spotify.com/track/1UsussokjrnR2Sgpskrdzz"
         },
         {
-          name: 'Apple Music',
+          name: "Apple Music",
           link:
-            'https://music.apple.com/us/album/schwerelos-zoomoid-remix-single/1493720052'
+            "https://music.apple.com/us/album/schwerelos-zoomoid-remix-single/1493720052"
         }
       ],
       buying: [],
       queue: [],
       blockEmbedded:
-        !this.$cookies.isKey('allowThirdPartyContent') ||
-        this.$cookies.get('allowThirdPartyContent') === 'false'
+        !this.$cookies.isKey("allowThirdPartyContent") ||
+        this.$cookies.get("allowThirdPartyContent") === "false"
     };
   }
 };

@@ -45,37 +45,37 @@ export default {
         {
           x: 200,
           y: 100,
-          color: '#202D3F',
+          color: "#202D3F",
         },
         {
           x: 100,
           y: 250,
-          color: '#0E4E2E',
+          color: "#0E4E2E",
         },
         {
           x: 50,
           y: 200,
-          color: '#081525',
+          color: "#081525",
         },
         {
           x: 200,
           y: 100,
-          color: '#AE0917',
+          color: "#AE0917",
         },
         {
           x: 500,
           y: 0,
-          color: '#113366',
+          color: "#113366",
         },
         {
           x: 100,
           y: 200,
-          color: '#205020',
+          color: "#205020",
         },
         {
           x: 0,
           y: 20,
-          color: '#3245CD',
+          color: "#3245CD",
         },
       ],
       muted: true,
@@ -94,8 +94,8 @@ export default {
       }
     },
     hideVoyagerPage(){
-      this.$cookies.set('hideVoyagerHeroPage','true','3d');
-      this.$router.push({path: '/'});
+      this.$cookies.set("hideVoyagerHeroPage","true","3d");
+      this.$router.push({path: "/"});
     },
   }
 };

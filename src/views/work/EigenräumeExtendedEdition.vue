@@ -79,122 +79,122 @@
 </template>
 
 <script>
-import SlideAnchor from '@/components/SlideAnchor.vue';
-import AudioManager from '@/components/AudioManager.vue';
-import PageTemplate from '@/components/PageTemplate';
+import SlideAnchor from "@/components/SlideAnchor.vue";
+import AudioManager from "@/components/AudioManager.vue";
+import PageTemplate from "@/components/PageTemplate";
 
 export default {
-  name: 'eigenraeumeExtendedEdition',
+  name: "eigenraeumeExtendedEdition",
   data: function() {
     return {
-      theme: 'dark',
+      theme: "dark",
       streaming: [
         {
-          name: 'Spotify',
-          link: 'https://open.spotify.com/album/1N5yphubnUoyuk4hg8cP5n'
+          name: "Spotify",
+          link: "https://open.spotify.com/album/1N5yphubnUoyuk4hg8cP5n"
         },
         {
-          name: 'Apple Music',
+          name: "Apple Music",
           link:
-            'https://music.apple.com/de/album/eigenr%C3%A4ume-extended-edition/1478203701'
+            "https://music.apple.com/de/album/eigenr%C3%A4ume-extended-edition/1478203701"
         },
         {
-          name: 'Tidal',
-          link: 'https://tidal.com/browse/album/116540603'
+          name: "Tidal",
+          link: "https://tidal.com/browse/album/116540603"
         }
       ],
       buying: [
         {
-          name: 'Bandcamp',
-          link: 'https://zoomoid.bandcamp.com/'
+          name: "Bandcamp",
+          link: "https://zoomoid.bandcamp.com/"
         },
         {
-          name: 'iTunes',
+          name: "iTunes",
           link:
-            'https://music.apple.com/de/album/eigenr%C3%A4ume-extended-edition/1478203701?app=itunes'
+            "https://music.apple.com/de/album/eigenr%C3%A4ume-extended-edition/1478203701?app=itunes"
         },
         {
-          name: 'Amazon Music',
+          name: "Amazon Music",
           link:
-            'https://www.amazon.de/eigenraeume-Extended-Zoomoid/dp/B07X13DDBD'
+            "https://www.amazon.de/eigenraeume-Extended-Zoomoid/dp/B07X13DDBD"
         }
       ],
       queue: [
         {
           id: 1,
-          name: 'Symphonic Dreams (Intro)',
+          name: "Symphonic Dreams (Intro)",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/01_Symphonic%20Dreams%20(Intro).mp3',
+            "https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/01_Symphonic%20Dreams%20(Intro).mp3",
           tags: []
         },
         {
           id: 2,
-          name: 'Stockholm (Concept)',
+          name: "Stockholm (Concept)",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/02_Stockholm%20(Concept).mp3',
+            "https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/02_Stockholm%20(Concept).mp3",
           tags: []
         },
         {
           id: 3,
-          name: 'Großstadt (Concept)',
+          name: "Großstadt (Concept)",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/03_Großstadt%20(Concept).mp3',
+            "https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/03_Großstadt%20(Concept).mp3",
           tags: []
         },
         {
           id: 4,
-          name: 'Schöneberg At Night (Concept)',
+          name: "Schöneberg At Night (Concept)",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/04_Schöneberg%20At%20Night%20(Concept).mp3',
+            "https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/04_Schöneberg%20At%20Night%20(Concept).mp3",
           tags: []
         },
         {
           id: 5,
-          name: 'Höllental (Concept)',
+          name: "Höllental (Concept)",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/05_Höllental%20(Concept).mp3',
+            "https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/05_Höllental%20(Concept).mp3",
           tags: []
         },
         {
           id: 6,
-          name: 'Heimat (Concept)',
+          name: "Heimat (Concept)",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/06_Heimat%20(Concept).mp3',
+            "https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/06_Heimat%20(Concept).mp3",
           tags: []
         },
         {
           id: 7,
-          name: 'Blaues Land (Concept)',
+          name: "Blaues Land (Concept)",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/07_Blaues%20Land%20(Concept).mp3',
+            "https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/07_Blaues%20Land%20(Concept).mp3",
           tags: []
         },
         {
           id: 8,
-          name: 'Congruence (Bonus)',
+          name: "Congruence (Bonus)",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/08_Congruence%20(Bonus).mp3',
+            "https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/08_Congruence%20(Bonus).mp3",
           tags: []
         },
         {
           id: 9,
-          name: 'Valletta (Bonus)',
+          name: "Valletta (Bonus)",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/09_Valletta%20(Bonus).mp3',
+            "https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/09_Valletta%20(Bonus).mp3",
           tags: []
         },
         {
           id: 10,
-          name: 'Outer Space (Bonus)',
+          name: "Outer Space (Bonus)",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/10_Outer%20Space%20(Bonus).mp3',
+            "https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/10_Outer%20Space%20(Bonus).mp3",
           tags: []
         },
         {
           id: 11,
-          name: 'Adieu (Outro)',
+          name: "Adieu (Outro)",
           url:
-            'https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/11_Adieu%20(Outro).mp3',
+            "https://cdn.occloxium.com/a/zoomoid/eigenraeume/extended/11_Adieu%20(Outro).mp3",
           tags: []
         }
       ]

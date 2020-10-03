@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'Breadcrumb',
+  name: "Breadcrumb",
   props: {
     dark: {
       type: Boolean,
@@ -16,7 +16,7 @@ export default {
     },
     accent: {
       type: String,
-      default: '#f58b44',
+      default: "#f58b44",
     }
   },
   computed: {

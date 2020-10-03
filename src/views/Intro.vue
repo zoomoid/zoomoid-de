@@ -24,7 +24,7 @@
       <img class="logo" src="@/assets/logo.svg"
       alt="zoomoid logo">
     </div>
-    <References></References>
+    <!-- <References></References> -->
     <!-- <BannerCard url="./sehnsucht-banner.jpg">
       <h2>Zoomoid</h2>
       <h1>Sehnsucht</h1>
@@ -41,7 +41,6 @@
   min-height: 100vh
   display: flex
   flex-direction: column
-  background: #eee
   #intro
     flex-grow: 1
     .logo
@@ -113,13 +112,7 @@
 </style>
 
 <script>
-// import BannerCard from '@/components/BannerCard.vue'
-import References from '@/components/References.vue'
 export default {
-  components: {
-    // BannerCard,
-    References,
-  },
   data: function(){
     return {
       showNav: false,

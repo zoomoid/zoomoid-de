@@ -35,7 +35,6 @@ export default {
 
 <style lang="sass" scoped>
 .foreground
-  background-color: #eeeeee
   margin: 0 auto
   width: 100%
 

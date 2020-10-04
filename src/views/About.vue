@@ -35,42 +35,6 @@
 </template>
 
 <style lang="sass" scoped>
-@use '../assets/variables'
-@use '../assets/typography'
-@use '../assets/mixins'
-@use '../../node_modules/rfs/sass' as rfs
-
-#about
-  max-width: variables.$max-width
-  margin: 0 auto
-  padding: 1em 1em 4em
-  +mixins.sm
-    padding: 0 1em 4em
-  p
-    +rfs.font-size(0.8em)
-    font-weight: 600
-    a
-      font-weight: 700
-  h1
-    +mixins.fade
-    font-size: 2em
-    text-align: center
-  .references
-    padding-left: 0
-    li
-      list-style: none outside none
-      padding: 0.5em 0
-      +rfs.font-size(1em)
-      a
-        margin: 0 auto
-        text-decoration: none
-        i
-          text-align: right
-          width: 2em
-          margin-right: 8px
-        span
-          text-align: left
-          padding-left: 0.5em
 
 </style>
 

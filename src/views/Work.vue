@@ -90,30 +90,7 @@ export default {
     </div>
   </div>
 </template>
-<style lang="sass" scoped>
-@use '../assets/mixins.sass'
-@use '../assets/variables.sass'
 
-$radius: 32px
-#work
-  flex-grow: 1
-  +mixins.sm
-    max-width: none
-  margin: 0 auto
-  .logo
-    max-width: variables.$max-width
-    width: 75%
-    display: block
-    margin: 2em auto
-    +mixins.sm
-      width: 90%
-  h1
-    +mixins.fade
-    text-align: center
-    font-size: 2em
-  .center-wrapper
-    margin: 0 auto 2em
-  .grid
-    margin: 0 auto
+<style lang="sass" scoped>
 
 </style>

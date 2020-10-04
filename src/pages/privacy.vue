@@ -1,6 +1,11 @@
 <template>
-  <div>
-    <Breadcrumb></Breadcrumb>
+  <div class="container px-4 py-12 mt-12 max-w-4xl mx-auto">
+    <div class="">
+      <router-link to="/">
+        <i class="fa fa-arrow-left"></i>
+        <span class="font-bold ml-2">Back</span>
+      </router-link>
+    </div>
     <section id="header">
       <h1>Privacy &amp; Data Protection</h1>
       <p>
@@ -10,12 +15,12 @@
       </p>
       <p>
         However, as we embed third-party content into our site, third-party
-        providers may store user data on their servers generated on our site.
-        We therefore have to give you, the user, the ability to block
-        third-party content on our site. While it should not impact experience,
-        since most of the music is embedded as source audio anyway and links to
-        streaming platforms are available for users of such platforms, it may
-        result in some elements missing on the website.
+        providers may store user data on their servers generated on our site. We
+        therefore have to give you, the user, the ability to block third-party
+        content on our site. While it should not impact experience, since most
+        of the music is embedded as source audio anyway and links to streaming
+        platforms are available for users of such platforms, it may result in
+        some elements missing on the website.
       </p>
     </section>
     <section id="consent">
@@ -24,8 +29,8 @@
         We use cookies solely to store your settings for external, third-party
         content on our site. No data regarding your behaviour is collected or
         sent to any server.
-        <br />By accepting, you consent to storing a cookie that contains your choice
-        regarding third-party content and embedded content.
+        <br />By accepting, you consent to storing a cookie that contains your
+        choice regarding third-party content and embedded content.
       </p>
       <form id="cookie">
         <div>
@@ -37,7 +42,9 @@
             v-model="cookies"
             name="cookie-consent"
           />
-          <label for="cookies-accept">Yes, I want to store my settings in a cookie from zoomoid.de</label>
+          <label for="cookies-accept"
+            >Yes, I want to store my settings in a cookie from zoomoid.de</label
+          >
         </div>
         <div>
           <input
@@ -48,7 +55,9 @@
             v-model="cookies"
             name="cookie-consent"
           />
-          <label for="cookies-decline">No, I decline any cookies from zoomoid.de</label>
+          <label for="cookies-decline"
+            >No, I decline any cookies from zoomoid.de</label
+          >
         </div>
       </form>
       <h3>Third-Party Content Consent</h3>
@@ -80,8 +89,8 @@
             v-on:click="allowThirdPartyContent()"
           />
           <label for="thirdParty-accept">
-            Yes, I want to see third-party content
-            on zoomoid.de and store cookies by these providers
+            Yes, I want to see third-party content on zoomoid.de and store
+            cookies by these providers
           </label>
         </div>
         <div>
@@ -93,89 +102,65 @@
             value="false"
             v-model="thirdParty"
           />
-          <label
-            for="thirdParty-decline"
-          >No, I decline from seeing any third-party content on zoomoid.de</label>
+          <label for="thirdParty-decline"
+            >No, I decline from seeing any third-party content on
+            zoomoid.de</label
+          >
         </div>
       </form>
     </section>
-    <Footer/>
   </div>
 </template>
 
-
-<style lang="sass" scoped>
-@import '@/assets/app.sass'
-
-#header
-  img
-    width: 50%
-    max-width: 360px
-    margin: 2em auto 0
-    display: block
-
-section
-  padding: 0 2em
-
-#consent
-  h3
-    font-size: 2em
-  form
-    padding: 1em 0
-    div
-      display: flex
-      align-items: center
-      padding: 0.5em 0
-      input
-        margin-right: 16px
-</style>
-
 <script>
-import Footer from "@/components/Footer"
-import Breadcrumb from "@/components/Breadcrumb"
 export default {
-  components: {
-    Footer,
-    Breadcrumb
-  },
-  data: function() {
+  components: {},
+  data: function () {
     return {
       cookies:
         this.$cookies.isKey("allowCookies") &&
         this.$cookies.get("allowCookies") === "true",
       thirdParty:
         this.$cookies.isKey("allowThirdPartyContent") &&
-        this.$cookies.get("allowThirdPartyContent") === "true"
+        this.$cookies.get("allowThirdPartyContent") === "true",
     };
   },
   methods: {
-    removeCookie: function(id) {
+    removeCookie: function (id) {
       this.$cookies.remove(id);
       return true;
     },
-    addCookie: function(id, value) {
+    addCookie: function (id, value) {
       this.$cookies.set(id, value, "30d");
       return true;
     },
-    removeAllCookies: function() {
+    removeAllCookies: function () {
       this.removeCookie("allowCookies");
       this.removeCookie("allowThirdPartyContent");
       this.cookies = false;
       this.thirdParty = false;
     },
-    allowThirdPartyContent: function() {
+    allowThirdPartyContent: function () {
       this.addCookie("allowThirdPartyContent", "true");
       this.addCookie("allowCookies", "true");
       this.cookies = true;
       this.thirdParty = true;
     },
-    declineThirdPartyContent: function() {
+    declineThirdPartyContent: function () {
       this.addCookie("allowThirdPartyContent", "false");
       this.addCookie("allowCookies", "true");
       this.cookies = true;
       this.thirdParty = false;
-    }
-  }
+    },
+  },
 };
 </script>
 
+<style lang="sass" scoped>
+section
+  form
+    div
+      @apply py-2
+      label
+        @apply ml-2
+</style>

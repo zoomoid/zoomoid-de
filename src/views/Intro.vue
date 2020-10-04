@@ -33,84 +33,6 @@
   </div>
 </template>
 
-<style lang="sass" scoped>
-@use '../assets/mixins'
-
-.wrapper
-  width: 100%
-  min-height: 100vh
-  display: flex
-  flex-direction: column
-  #intro
-    flex-grow: 1
-    .logo
-      display: block
-      margin: 4em auto
-      width: 50%
-      max-width: 450px
-      padding: 30vh 0
-    .nav
-      position: fixed
-      top: 0
-      left: 0
-      right: 0
-      width: 100%
-      background: #ffffff
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2)
-      padding: 1em 3em
-      display: flex
-      z-index: 1000
-      +mixins.sm
-        padding: 0.5em
-      &__logo
-        height: 32px
-        +mixins.sm
-          flex-grow: 1
-        box-sizing: border-box
-      &__spacer
-        flex-grow: 1
-        +mixins.sm
-          display: none
-      &__social
-        +mixins.sm
-          display: none
-        display: flex
-        a
-          margin: 0 8px
-          i
-            padding-bottom: 8px
-            &:hover, &:active
-              +mixins.fade
-    .text
-      h1
-        +mixins.fade
-      z-index: 10
-
-@keyframes slide-in
-  from
-    transform: translateY(-100%)
-  to
-    transform: translateY(0%)
-
-@keyframes slide-out
-  from
-    transform: translateY(0%)
-  to
-    transform: translateY(-100%)
-
-.slide-enter-active
-  animation: slide-in 0.5s ease
-
-.slide-enter-to
-  transform: translateY(0%)
-
-.slide-leave-active
-  animation: slide-out 0.5s ease
-
-.slide-leave-to
-  transform: translateY(-100)
-</style>
-
 <script>
 export default {
   data: function(){
@@ -137,3 +59,6 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" scoped>
+</style>

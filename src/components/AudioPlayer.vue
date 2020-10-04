@@ -245,12 +245,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// @import '@/assets/app.sass';
-@use '../assets/mixins';
-@use '../assets/variables';
-@use '../assets/colors';
-@use '../../node_modules/rfs/sass' as rfs;
-
 @keyframes loading {
   0% {
     background-position-x: 0%
@@ -318,8 +312,8 @@ $loading-fade: linear-gradient(135deg,
       display: flex;
       .tag {
         display: block;
-        background: colors.$black;
-        color: colors.$white;
+        background: black;
+        color: white;
         border-radius: 4px;
         padding: 4px 8px;
         margin: 0 2px;
@@ -345,7 +339,6 @@ $loading-fade: linear-gradient(135deg,
         cursor: pointer;
         &:hover, &:active {
           border-radius: 32px;
-          background: transparentize(variables.$text-color, 0.92);
         }
       }
     }
@@ -362,10 +355,6 @@ $loading-fade: linear-gradient(135deg,
         text-align: center;
       }
       &:hover, &:active {
-        &.paused {
-          background: transparentize(variables.$text-color, 0.92);
-        }
-        background: transparentize(variables.$text-color, 0.92);
         border-radius: 32px;
       }
     }
@@ -429,7 +418,6 @@ $loading-fade: linear-gradient(135deg,
         display: inline-block;
         vertical-align: middle;
         line-height: 2rem;
-        @include rfs.font-size(0.8rem);
         text-align: center;
         &.playback-time-separator::after {
           padding-left: 0.5ex;
@@ -450,7 +438,6 @@ $loading-fade: linear-gradient(135deg,
         text-align: center;
       }
       &:hover, &:active, .muted {
-        background: transparentize(variables.$text-color, 0.92);
         border-radius: 32px;
       }
     }
@@ -468,7 +455,6 @@ $loading-fade: linear-gradient(135deg,
         color: inherit;
       }
       &:hover, &:active, .muted {
-        background: transparentize(variables.$text-color, 0.92);
         border-radius: 32px;
       }
     }

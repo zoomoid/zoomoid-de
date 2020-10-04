@@ -248,6 +248,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        "aktiv-grotesk",
         "system-ui",
         "-apple-system",
         "BlinkMacSystemFont",

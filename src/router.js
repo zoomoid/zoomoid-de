@@ -1,8 +1,11 @@
 import Vue from "vue";
 import Router from "vue-router";
-import MainView from "./views/MainView.vue";
-import Privacy from "./views/Privacy.vue";
-import WorkContainer from "@/components/WorkContainer";
+
+import Home from "./pages/home.vue";
+import Work from "./pages/work.vue";
+import Privacy from "./pages/privacy.vue";
+import NotFound from "./pages/404.vue";
+
 import {
   Eigenräume,
   LIAMM,
@@ -10,70 +13,77 @@ import {
   PermanentlyMoving,
   PublicTransportation,
   SchwerelosRemix,
-  ShadesOfYellow
+  ShadesOfYellow,
 } from "@/views/work/index.js";
-import Voyager from "./views/Voyager.vue";
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   mode: "history",
   routes: [
     {
       path: "/",
-      name: "MainView",
-      component: MainView
-    },{
+      name: "Home",
+      component: Home,
+    },
+    {
       path: "/work",
       name: "Work",
-      component: WorkContainer,
+      component: Work,
       children: [
         {
           path: "shades-of-yellow",
           name: "Shades of Yellow",
-          component: ShadesOfYellow
+          component: ShadesOfYellow,
         },
         {
           path: "eigenräume-standard-edition",
           name: "Eigenräume",
-          component: Eigenräume
-        },{
+          component: Eigenräume,
+        },
+        {
           path: "liamm",
           name: "Life Is About Making Memories",
-          component: LIAMM
-        },{
+          component: LIAMM,
+        },
+        {
           path: "eigenräume-extended-edition",
           alias: ["/eigenraeume", "/eigenräume"],
           name: "Eigenräume (Extended Edition)",
-          component: EigenräumeExtendedEdition
-        },{
+          component: EigenräumeExtendedEdition,
+        },
+        {
           path: "301",
           alias: "/301",
           name: "301 Permanently Moving",
-          component: PermanentlyMoving
-        },{
+          component: PermanentlyMoving,
+        },
+        {
           path: "public-transportation",
           alias: "/public-transportation",
           name: "Public Transportation EP",
-          component: PublicTransportation
-        },{
+          component: PublicTransportation,
+        },
+        {
           path: "schwerelos-zoomoid-remix",
           alias: "/schwerelos-remix",
           name: "Schwerelos - Zoomoid Remix",
           component: SchwerelosRemix,
         },
-      ]
-    },{
+      ],
+    },
+    {
       path: "/privacy",
       name: "Privacy",
-      component: Privacy
-    },{
-      path: "/voyager",
-      name: "Voyager",
-      component: Voyager,
-    }
+      component: Privacy,
+    },
+    {
+      path: "*",
+      name: "Error",
+      component: NotFound,
+    },
   ],
-  scrollBehavior () {
-    return { x: 0, y: 0 }
-  },
-})
+  // scrollBehavior() {
+  //   return { x: 0, y: 0 };
+  // },
+});

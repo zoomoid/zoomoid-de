@@ -34,8 +34,5 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.foreground
-  margin: 0 auto
-  width: 100%
 
 </style>

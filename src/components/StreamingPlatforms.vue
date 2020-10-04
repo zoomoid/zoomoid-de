@@ -35,21 +35,5 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import '@/assets/app.sass'
-.references
-  padding-left: 0
-  li
-    list-style: none outside none
-    padding: 0.5em 0
-    +font-size(1em)
-    a
-      margin: 0 auto
-      text-decoration: none
-      i
-        text-align: right
-        width: 2em
-        margin-right: 8px
-      span
-        text-align: left
-        padding-left: 0.5em
+
 </style>

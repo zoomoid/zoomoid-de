@@ -3,14 +3,14 @@ FROM node:latest as builder
 # copy package-lock.json (mainly) and package.json
 WORKDIR /app
 
-COPY package*.json .
+COPY package*.json ./
 
 # npm ci for better performance in dependency resolution
-RUN yarn install
+RUN npm ci
 # bundle client
 COPY . .
 # build with webpack
-RUN yarn run build
+RUN npm run build
 
 # 2nd stage: lightweight alpine container
 FROM nginx:alpine

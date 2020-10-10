@@ -14,7 +14,7 @@
         >
           <template #text>
             <h3
-              class="text-base mb-0 font-medium tracking-wider text-white uppercase"
+              class="text-base mb-0 font-medium tracking-wider uppercase"
             >
               {{ r.artist }}
             </h3>

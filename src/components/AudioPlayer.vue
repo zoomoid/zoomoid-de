@@ -299,6 +299,7 @@ $loading-fade: linear-gradient(135deg,
     align-items: center;
     flex-wrap: nowrap;
     padding-bottom: 8px;
+    width: 100%;
     .title {
       i {
         font-style: normal;
@@ -327,6 +328,7 @@ $loading-fade: linear-gradient(135deg,
     }
   }
   .player {
+    width: 100%;
     display: flex;
     align-items: center;
     .skip {

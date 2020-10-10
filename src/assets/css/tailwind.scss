@@ -32,7 +32,7 @@ h3 {
 
 .fade-is-hidden {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(100px);
 }
 
 .fade-is-visible {
@@ -42,14 +42,14 @@ h3 {
 
 .btn {
   @apply my-4;
-  @apply rounded-full;
-  @apply text-white;
+  // @apply rounded-full;
+  @apply text-black;
   @apply py-4;
   @apply px-6;
   @apply uppercase;
   @apply font-bold;
   @apply inline-block;
-  @apply bg-gray-900;
+  @apply bg-white;
   @apply shadow-md;
   transition: all 0.4s ease;
   &:hover, &:active {

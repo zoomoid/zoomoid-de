@@ -4,7 +4,7 @@ const aosOptions = {
   threshold: 0,
   once: true,
   timingFunction: "ease",
-  duration: "1s",
+  duration: "0.33s",
   delay: 0,
 };
 

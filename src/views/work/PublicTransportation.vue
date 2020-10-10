@@ -1,45 +1,46 @@
 <template>
-  <PageTemplate light accent="#0091EA"
-    cover="https://cdn.occloxium.com/i/zoomoid/covers/public-transportation/standard.png" artist="Zoomoid"
-    title="Public Transportation EP">
-    <section class="content">
-      <p>
-        The
-        <b>Public Transportation</b> EP is a concept LoFi HipHop/Electronic/Ambient immersive
-        listening experience composed to accompany a train ride on a few stops in Northrhine-Westfalia.
-      </p>
-    </section>
-    <div class="external">
-      <div class="streaming">
-        <h2>Stream!</h2>
-        <div>
-          <li v-for="item in streaming" :key="item.name">
-            <SlideAnchor light :anchor="item.link" :name="item.name" />
-          </li>
-        </div>
-      </div>
-    </div>
-    <div class="download">
-      <h2>Listen &amp; Download</h2>
-      <AudioManager class="players" :queue="this.queue"></AudioManager>
-    </div>
-  </PageTemplate>
+  <work-page :queue="queue">
+    <template #title>
+      <h2 v-html="artist">{{ artist }}</h2>
+      <h1 v-html="title">{{ title }}</h1>
+    </template>
+    <template #content>
+      <article v-html="content"></article>
+    </template>
+    <template #cover>
+      <img :src="cover" />
+    </template>
+    <template #links>
+      <h2>Streaming!</h2>
+      <ul>
+        <li v-for="item in streaming" :key="item.name">
+          <a :href="item.link">
+            {{ item.name }}
+          </a>
+        </li>
+      </ul>
+    </template>
+  </work-page>
 </template>
 
 
 <script>
-import AudioManager from "@/components/AudioManager.vue";
-import PageTemplate from "@/components/PageTemplate";
-import SlideAnchor from "@/components/SlideAnchor";
+import WorkPage from "@/components/WorkPage.vue";
 
 export default {
   components: {
-    AudioManager,
-    PageTemplate,
-    SlideAnchor
+    WorkPage,
   },
   data: function() {
     return {
+      title: "Public Tran&shy;spor&shy;ta&shy;tion EP",
+      artist: "Zoomoid",
+      cover: "https://cdn.occloxium.com/i/zoomoid/covers/public-transportation/standard.png",
+      content: `<p>
+        The
+        <b>Public Transportation</b> EP is a concept LoFi HipHop/Electronic/Ambient immersive
+        listening experience composed to accompany a train ride on a few stops in Northrhine-Westfalia.
+      </p>`,
       streaming: [
         {
           name: "Spotify",
@@ -51,7 +52,6 @@ export default {
             "https://music.apple.com/de/album/public-transportation-ep/1484512656"
         }
       ],
-      buying: [],
       queue: [
         {
           id: 1,
@@ -96,9 +96,6 @@ export default {
           tags: []
         }
       ],
-      blockEmbedded:
-        !this.$cookies.isKey("allowThirdPartyContent") ||
-        this.$cookies.get("allowThirdPartyContent") === "false"
     };
   }
 };

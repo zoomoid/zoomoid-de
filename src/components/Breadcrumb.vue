@@ -1,14 +1,29 @@
 <template>
-  <div>
-    <router-link to="/">
-      <i class="fa fa-arrow-left"></i>
-      <span class="font-bold ml-2">Back</span>
+  <div class="py-4">
+    <router-link :to="to">
+      <i :class="['fa', `fa-arrow-${direction}`]"></i>
+      <span class="font-bold ml-2">
+        <slot>
+          Back
+        </slot>
+      </span>
     </router-link>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    to: {
+      type: String,
+      default: "/",
+    },
+    direction: {
+      type: String,
+      default: "left",
+    },
+  },
+};
 </script>
 
 <style lang="sass" scoped>

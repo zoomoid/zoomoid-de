@@ -1,7 +1,7 @@
 <template>
   <router-link :to="to" class="flex flex-col">
     <div
-      class="release-card p-4 rounded-lg flex-grow"
+      class="release-card p-4 rounded-xl flex-grow"
       :style="{
         '--background': color ? color : 'white',
       }"
@@ -51,10 +51,15 @@ export default {
 
 <style lang="sass" scoped>
 .release-card
-  transition: all 0.2s ease
+  transition: border 0.2s ease
+  box-sizing: border-box
+  @apply border-transparent
+  @apply border-2
+  @apply border-solid
   .cover
     @apply rounded-lg
-    @apply bg-gray-900
+    @apply bg-black
   &:hover, &:active
-    box-shadow: 0 10px 15px -3px var(--background), 0 4px 6px -2px var(--background)
+    // box-shadow: 0 10px 15px -3px var(--background), 0 4px 6px -2px var(--background)
+    @apply border-white
 </style>

@@ -3,6 +3,7 @@ import Router from "vue-router";
 
 import Home from "./pages/home.vue";
 import Work from "./pages/work.vue";
+import Discography from "./components/Discography.vue";
 import Privacy from "./pages/privacy.vue";
 import NotFound from "./pages/404.vue";
 
@@ -31,6 +32,11 @@ export default new Router({
       name: "Work",
       component: Work,
       children: [
+        {
+          path: "",
+          name: "Discography",
+          component: Discography,
+        },
         {
           path: "shades-of-yellow",
           name: "Shades of Yellow",
@@ -83,7 +89,7 @@ export default new Router({
       component: NotFound,
     },
   ],
-  // scrollBehavior() {
-  //   return { x: 0, y: 0 };
-  // },
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  },
 });

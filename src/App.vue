@@ -1,5 +1,5 @@
 <template>
-  <main id="app" class="bg-black text-white min-h-screen flex flex-col">
+  <main id="app" class="bg-white text-black min-h-screen flex flex-col">
     <transition :name="transitionName" mode="out-in">
       <router-view class="view flex-grow"></router-view>
     </transition>

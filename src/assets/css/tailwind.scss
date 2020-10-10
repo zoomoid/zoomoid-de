@@ -43,13 +43,13 @@ h3 {
 .btn {
   @apply my-4;
   // @apply rounded-full;
-  @apply text-black;
+  @apply bg-black;
   @apply py-4;
   @apply px-6;
   @apply uppercase;
   @apply font-bold;
   @apply inline-block;
-  @apply bg-white;
+  @apply text-white;
   @apply shadow-md;
   transition: all 0.4s ease;
   &:hover, &:active {

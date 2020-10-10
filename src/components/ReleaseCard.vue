@@ -1,7 +1,7 @@
 <template>
   <router-link :to="to" class="flex flex-col">
     <div
-      class="release-card p-4 rounded-xl flex-grow"
+      class="release-card flex-grow"
       :style="{
         '--background': color ? color : 'white',
       }"
@@ -10,12 +10,12 @@
         <img
           @load="loaded = true"
           :class="[loaded ? 'opacity-100' : 'opacity-0']"
-          class="rounded-lg transition-opacity duration-300 ease-in"
+          class="transition-opacity duration-300 ease-in"
           :src="src"
           :alt="alt"
         />
       </div>
-      <div class="text">
+      <div class="text p-2">
         <slot name="text"></slot>
       </div>
     </div>
@@ -51,15 +51,10 @@ export default {
 
 <style lang="sass" scoped>
 .release-card
-  transition: border 0.2s ease
-  box-sizing: border-box
-  @apply border-transparent
-  @apply border-2
-  @apply border-solid
+  transition: all 0.2s ease
   .cover
     @apply rounded-lg
     @apply bg-black
   &:hover, &:active
-    // box-shadow: 0 10px 15px -3px var(--background), 0 4px 6px -2px var(--background)
-    @apply border-white
+    box-shadow: 0 10px 15px -3px var(--background), 0 4px 6px -2px var(--background)
 </style>

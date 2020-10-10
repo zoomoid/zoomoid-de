@@ -80,12 +80,12 @@ export default {
       @apply transition
       @apply duration-100
       @apply ease-in-out
-      @apply bg-white
-      @apply text-black
+      @apply text-white
+      @apply bg-black
       @apply text-center
       @apply cursor-pointer
       &:active, &:hover
-        @apply bg-yellow-400
+        @apply bg-yellow-500
     a
       @apply px-2
       @apply py-4

@@ -1,66 +1,48 @@
 <template>
-  <PageTemplate dark accent="#ffffff" cover="https://cdn.occloxium.com/i/zoomoid/covers/liamm/cover.png"
-  artist="Zoomoid" title="Life Is About Making Memories">
-    <section class="content">
-      <p>
-        <b>Life Is About Making Memories</b> is my first full-feature album! It is comprised of 11 songs
-        and there are a lot of different gems on there, have a listen and decide for yourself which tracks you like
-        the most. If you do, tell me about it on social media like Instagram or SoundCloud and tell your friends!
-      </p>
-    </section>
-    <div class="download">
-      <p>
-        I would appreciate you listening to Life Is About Making Memories on Spotify, Apple Music,
-        Deezer and so on. You supporting me means the absolute world to me!
-        <br />However, I want everybody to enjoy it equally, hence I provide it for download
-        for free here.
-      </p>
-      <div id="external">
-        <div class="streaming">
-          <h2>Stream!</h2>
-          <div>
-            <li v-for="item in this.streaming" :key="item.name">
-              <SlideAnchor :anchor="item.link" :name="item.name" />
-            </li>
-          </div>
-        </div>
-        <div class="buying">
-          <h2>Buy!</h2>
-          <div>
-            <li v-for="item in this.buying" v-bind:key="item.name">
-              <SlideAnchor :anchor="item.link" :name="item.name" />
-            </li>
-          </div>
-        </div>
-      </div>
-      <div class="download">
-        <h2>Listen &amp; Download</h2>
-        <div>
-          <li>
-            <SlideAnchor
-              :anchor="'https://cdn.occloxium.com/a/zoomoid/liamm.zip'"
-              :name="'Download the complete album as MP3'"
-            />
-          </li>
-        </div>
-      </div>
-    </div>
-  </PageTemplate>
+  <work-page :queue="queue">
+    <template #title>
+      <h2 v-html="artist">{{ artist }}</h2>
+      <h1 v-html="title">{{ title }}</h1>
+    </template>
+    <template #content>
+      <article v-html="content"></article>
+    </template>
+    <template #cover>
+      <img :src="cover" />
+    </template>
+    <template #links>
+      <h2>Streaming!</h2>
+      <ul>
+        <li v-for="item in streaming" :key="item.name">
+          <a :href="item.link">
+            {{ item.name }}
+          </a>
+        </li>
+      </ul>
+    </template>
+  </work-page>
 </template>
 
+
 <script>
-import SlideAnchor from "@/components/SlideAnchor";
-import PageTemplate from "@/components/PageTemplate"
+import WorkPage from "@/components/WorkPage.vue";
 
 export default {
-  name: "LIAMM",
   components: {
-    SlideAnchor,
-    PageTemplate,
+    WorkPage,
   },
   data: function() {
     return {
-      theme: "dark",
+      content: `<p><b>Life Is About Making Memories</b> is my first full-feature album! It is comprised of 11 songs
+        and there are a lot of different gems on there, have a listen and decide for yourself which tracks you like
+        the most. If you do, tell me about it on social media like Instagram or SoundCloud and tell your friends!
+        I would appreciate you listening to Life Is About Making Memories on Spotify, Apple Music,
+        Deezer and so on. You supporting me means the absolute world to me!
+        However, I want everybody to enjoy it equally, hence I provide it for download
+        for free here.</p>`,
+      artist: "Zoomoid",
+      title: "Life Is About Making Memories",
+      cover: "https://cdn.occloxium.com/i/zoomoid/covers/liamm/cover.png",
       streaming: [
         {
           name: "Spotify",
@@ -75,9 +57,7 @@ export default {
         {
           name: "Deezer",
           link: "https://www.deezer.com/de/album/74066782"
-        }
-      ],
-      buying: [
+        },
         {
           name: "Amazon Music",
           link:

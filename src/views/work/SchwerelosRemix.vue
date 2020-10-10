@@ -1,48 +1,47 @@
 <template>
-  <PageTemplate dark cover="https://cdn.occloxium.com/i/zoomoid/covers/schwerelos-zoomoid-remix/cover.png"
-  artist="Diode Eins" title="Schwerelos - Zoomoid Remix">
-    <section class="content">
-      <p>
-        In 2019, I asked the fellow DJs and producers of
-        <a href="https://soundcloud.com/diodeeins" target="_blank">Diode Eins</a> if I could remix a track of theirs.
-        We settled on their track "Schwerelos", which then got a makeover from me.
-        They are rising stars to be, give them every bit of love for Techno you got!
-      </p>
-    </section>
-    <div class="external">
-      <div class="streaming">
-        <h2>Stream!</h2>
-        <div>
-          <li v-for="item in streaming" :key="item.name">
-            <SlideAnchor dark :anchor="item.link" :name="item.name" />
-          </li>
-        </div>
-        <iframe
-          src="https://open.spotify.com/embed/track/1UsussokjrnR2Sgpskrdzz"
-          width="100%"
-          height="80"
-          frameborder="0"
-          allowtransparency="true"
-          allow="encrypted-media"
-        ></iframe>
-      </div>
-    </div>
-  </PageTemplate>
+  <work-page :queue="queue">
+    <template #title>
+      <h2>{{ artist }}</h2>
+      <h1>{{ title }}</h1>
+    </template>
+    <template #content>
+      <article v-html="content"></article>
+    </template>
+    <template #cover>
+      <img :src="cover" />
+    </template>
+    <template #links>
+      <h2>Streaming!</h2>
+      <ul>
+        <li v-for="item in streaming" :key="item.name">
+          <a :href="item.link">
+            {{ item.name }}
+          </a>
+        </li>
+      </ul>
+    </template>
+  </work-page>
 </template>
 
 
 <script>
-import SlideAnchor from "@/components/SlideAnchor.vue";
-import PageTemplate from "@/components/PageTemplate.vue";
+import WorkPage from "@/components/WorkPage.vue";
 
 export default {
   components: {
-    SlideAnchor,
-    PageTemplate,
+    WorkPage,
   },
   data: function() {
     return {
-      theme: "dark",
+      artist: "Diode Eins",
+      title: "Schwerelos - Zoomoid Remix",
+      content: `<p>
+        In 2019, I asked the fellow DJs and producers of
+        <a href="https://soundcloud.com/diodeeins" target="_blank">Diode Eins</a> if I could remix a track of theirs.
+        We settled on their track "Schwerelos", which then got a makeover from me.
+        They are rising stars to be, give them every bit of love for Techno you got!
+      </p>`,
+      cover: "https://cdn.occloxium.com/i/zoomoid/covers/schwerelos-zoomoid-remix/cover.png",
       streaming: [
         {
           name: "Spotify",
@@ -56,9 +55,6 @@ export default {
       ],
       buying: [],
       queue: [],
-      blockEmbedded:
-        !this.$cookies.isKey("allowThirdPartyContent") ||
-        this.$cookies.get("allowThirdPartyContent") === "false"
     };
   }
 };

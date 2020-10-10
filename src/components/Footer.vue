@@ -1,19 +1,19 @@
 <template>
-  <footer class="bg-gray-900 text-white">
-    <div class="sm:flex container mx-auto">
-      <div class="socials">
+  <footer class="bg-black text-white">
+    <div class="grid grid-cols-2 sm:flex container mx-auto">
+      <div class="internals">
+        <h5>Links</h5>
+        <li v-for="i in internals" :key="i.label">
+          <router-link :to="i.url">{{ i.label }}</router-link>
+        </li>
+      </div>
+      <div class="socials text-right sm:text-left">
         <h5>Social Media</h5>
         <li v-for="s in socials" :key="s.label">
           <a :href="s.url">
             <i :class="[s.icon.prefix, s.icon.key]"></i>
             <span>{{ s.label }}</span>
           </a>
-        </li>
-      </div>
-      <div class="internals">
-        <h5>Links</h5>
-        <li v-for="i in internals" :key="i.label">
-          <router-link :to="i.url">{{ i.label }}</router-link>
         </li>
       </div>
     </div>
@@ -38,8 +38,8 @@ export default {
         url: "https://music.apple.com/de/artist/zoomoid/1390354057",
         icon: {
           prefix: "fab",
-          key: "fa-apple"
-        }
+          key: "fa-apple",
+        },
       },
       {
         label: "Soundcloud",
@@ -57,7 +57,6 @@ export default {
           key: "fa-instagram",
         },
       },
-
     ],
     internals: [
       {
@@ -83,6 +82,7 @@ export default {
 
 <style lang="sass" scoped>
 footer
+  border-top: solid 2px white
   @apply p-6
 h5
   @apply mb-1

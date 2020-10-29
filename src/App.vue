@@ -10,14 +10,14 @@
 <style lang="scss">
 .slide-left-enter, .slide-right-leave-active {
   opacity: 0;
-  transform: translate(100px, 0);
+  transform: translate(50vw, 0);
 }
 .slide-left-leave-active, .slide-right-enter {
   opacity: 0;
-  transform: translate(-100px, 0);
+  transform: translate(-50vw, 0);
 }
 .view {
-  transition: all .15s cubic-bezier(.55,0,.1,1);
+  transition: all .2s cubic-bezier(.55,0,.1,1);
 }
 #app {
   overflow: hidden;

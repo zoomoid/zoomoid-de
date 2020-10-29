@@ -2,17 +2,13 @@
   <div class="flex flex-col justify-center">
     <div class="max-w-6xl mx-auto pt-16 pb-24 px-8 leading-tight">
       <p
-        class="text-4xl lg:text-6xl lg:font-bold lg:tracking-normal tracking-tight"
+        class="text-4xl md:text-6xl font-semibold lg:tracking-normal"
       >
-        <img
-          class="inline-block h-12 md:h-20 align-bottom"
-          src="@/assets/logo.svg"
-          alt="zoomoid"
-        />
+        <span class="px-2 bg-black text-white font-bold">zoomoid</span>
         is an aspiring artist from Aachen, Germany. Most of the time he's making
         Techno &mdash; with some exceptions. He's currently planning the release of his 2020 Album <i>Voyager</i>.
       </p>
-      <p class="lg:text-4xl lg:font-normal">
+      <p class="md:text-4xl text-2xl font-semibold">
         For booking, collaboration, or other concerns, contact him via e-mail at
         <a class="contact--mail" href="mailto:occloxium@gmail.com"
           >occloxium@gmail.com</a

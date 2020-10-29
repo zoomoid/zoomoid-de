@@ -89,6 +89,7 @@ h5
 li
   @apply list-none
   @apply opacity-50
+  @apply font-medium
   &:hover, &:active
     @apply opacity-100
   i

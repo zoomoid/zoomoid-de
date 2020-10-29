@@ -4,9 +4,8 @@
       <h1 class="text-6xl leading-none mt-6 tracking-tight">Zoomoid's Discography</h1>
       <div class="grid md:grid-cols-3 xl:grid-cols-4 gap-2 grid-cols-1 py-8">
         <release-card
-          v-for="(r, i) in releases"
+          v-for="(r) in releases"
           :key="r.contentID"
-          v-aos-fade-once="{delay: 0.05 * i}"
           :src="r.coverUrl"
           :alt="r.contentID"
           :color="`${r.accent}2d`"
@@ -14,11 +13,11 @@
         >
           <template #text>
             <h3
-              class="text-base mb-0 font-medium tracking-wider uppercase"
+              class="text-base mb-0 font-medium uppercase"
             >
               {{ r.artist }}
             </h3>
-            <h2 class="mt-0 tracking-tight leading-tight">
+            <h2 class="mt-0 leading-tight">
               {{ r.title }}
             </h2>
           </template>

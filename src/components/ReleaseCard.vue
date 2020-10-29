@@ -55,6 +55,8 @@ export default {
   .cover
     @apply rounded-lg
     @apply bg-black
+    img
+      @apply rounded-xl
   &:hover, &:active
     box-shadow: 0 10px 15px -3px var(--background), 0 4px 6px -2px var(--background)
 </style>

@@ -50,15 +50,15 @@ export default {
   .title
     h2
       @apply text-opacity-50
-      @apply text-2xl
+      @apply text-xl
       @apply font-bold
       @apply my-0
       @apply leading-none
-      @apply uppercase
-      @apply tracking-widest
+      // @apply uppercase
+      @apply tracking-normal
     h1
       @apply my-4
-      @apply text-6xl
+      @apply text-4xl
       @apply font-bold
       @apply leading-none
       // @apply break-all
@@ -70,6 +70,7 @@ export default {
       @apply rounded-xl
   .content
     @apply text-xl
+    @apply font-medium
   .links
     @apply list-none
     ul

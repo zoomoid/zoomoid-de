@@ -1,11 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-import Home from "./pages/home.vue";
-import Work from "./pages/work.vue";
+import { Work, Home, NotFound, Privacy, Contact } from "./views/";
 import Discography from "./components/Discography.vue";
-import Privacy from "./pages/privacy.vue";
-import NotFound from "./pages/404.vue";
 
 import {
   Eigenräume,
@@ -15,7 +12,7 @@ import {
   PublicTransportation,
   SchwerelosRemix,
   ShadesOfYellow,
-} from "@/views/work/index.js";
+} from "./views/work/index.js";
 
 Vue.use(Router);
 
@@ -82,6 +79,11 @@ export default new Router({
       path: "/privacy",
       name: "Privacy",
       component: Privacy,
+    },
+    {
+      path: "/contact",
+      name: "Contact",
+      component: Contact,
     },
     {
       path: "*",

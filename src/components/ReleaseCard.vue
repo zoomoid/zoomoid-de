@@ -11,7 +11,7 @@
           @load="loaded = true"
           :class="[loaded ? 'opacity-100' : 'opacity-0']"
           class="transition-opacity duration-300 ease-in"
-          :src="src"
+          :src="cover"
           :alt="alt"
         />
       </div>
@@ -46,6 +46,11 @@ export default {
   data: () => ({
     loaded: false,
   }),
+  computed: {
+    cover() {
+      return require("@/assets/img/" + this.src);
+    },
+  },
 };
 </script>
 
@@ -57,6 +62,6 @@ export default {
     @apply bg-black
     img
       @apply rounded-xl
-  &:hover, &:active
-    box-shadow: 0 10px 15px -3px var(--background), 0 4px 6px -2px var(--background)
+      &:hover, &:active
+        box-shadow: 0 10px 15px -3px var(--background), 0 4px 6px -2px var(--background)
 </style>

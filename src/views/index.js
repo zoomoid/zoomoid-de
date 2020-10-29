@@ -1,13 +1,7 @@
-import About from "./About";
-import Intro from "./Intro";
-import MainView from "./MainView";
-import Merchandise from "./Merchandise";
-import Work from "./Work";
+import Work from "./work.vue";
+import Privacy from "./privacy.vue";
+import NotFound from "./404.vue";
+import Home from "./home.vue";
+import Contact from "./contact.vue";
 
-export {
-  About,
-  Intro,
-  MainView,
-  Merchandise,
-  Work,
-}
+export { Work, Privacy, NotFound, Home, Contact };

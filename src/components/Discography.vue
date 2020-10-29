@@ -43,7 +43,7 @@ export default {
         artist: "Zoomoid",
         title: "Shades Of Yellow",
         coverUrl:
-          "https://cdn.occloxium.com/i/zoomoid/covers/shades-of-yellow/cover.png",
+          "shades-of-yellow.jpg",
         date: "01.05.2020",
         id: "S02",
         accent: "#dbb100",
@@ -53,7 +53,7 @@ export default {
         artist: "Diode Eins",
         title: "Schwerelos (Zoomoid Remix)",
         coverUrl:
-          "https://cdn.occloxium.com/i/zoomoid/covers/schwerelos-zoomoid-remix/cover.png",
+          "schwerelos-zoomoid-remix.jpg",
         date: "10.01.2020",
         id: "S01",
         accent: "#0c0000",
@@ -62,7 +62,7 @@ export default {
         contentID: "301",
         artist: "zoomoid",
         title: "301 Moved Permanently",
-        coverUrl: "https://cdn.occloxium.com/i/zoomoid/covers/301/standard.jpg",
+        coverUrl: "301-moved-permanently.jpg",
         date: "13.12.2019",
         id: "A05",
         accent: "#030000",
@@ -72,7 +72,7 @@ export default {
         artist: "zoomoid",
         title: "Public Transportation",
         coverUrl:
-          "https://cdn.occloxium.com/i/zoomoid/covers/public-transportation/standard.png",
+          "public-transportation.jpg",
         date: "01.11.2019",
         id: "A04",
         accent: "#165091",
@@ -82,7 +82,7 @@ export default {
         artist: "zoomoid",
         title: "Eigenräume (Extended Edition)",
         coverUrl:
-          "https://cdn.occloxium.com/i/zoomoid/covers/eigenr%C3%A4ume/extended.png",
+          "eigenraeume-extended-edition.jpg",
         date: "24.08.2019",
         id: "A03",
         accent: "#ea0000",
@@ -92,7 +92,7 @@ export default {
         artist: "zoomoid",
         title: "Eigenräume",
         coverUrl:
-          "https://cdn.occloxium.com/i/zoomoid/covers/eigenr%C3%A4ume/standard.png",
+          "eigenraeume-standard-edition.jpg",
         date: "15.05.2019",
         id: "A02",
         accent: "#151515",
@@ -101,7 +101,7 @@ export default {
         contentID: "liamm",
         artist: "zoomoid",
         title: "Life Is About Making Memories",
-        coverUrl: "https://cdn.occloxium.com/i/zoomoid/covers/liamm/cover.png",
+        coverUrl: "life-is-about-making-memories.jpg",
         date: "22.09.2018",
         id: "A01",
         accent: "#000000",

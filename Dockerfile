@@ -6,11 +6,11 @@ WORKDIR /app
 COPY package*.json ./
 
 # npm ci for better performance in dependency resolution
-RUN npm ci
+RUN npm install
 # bundle client
 COPY . .
 # build with webpack
-RUN npm run build
+RUN yarn build
 
 # 2nd stage: lightweight alpine container
 FROM nginx:alpine

@@ -1,0 +1,67 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+html {
+  @apply text-gray-900
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold;
+  @apply my-4;
+}
+
+h1 {
+  @apply text-5xl;
+}
+
+h2 {
+  @apply text-4xl;
+}
+
+h3 {
+  @apply text-3xl;
+}
+
+.fade-is-hidden {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.fade-is-visible {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.btn {
+  @apply my-4;
+  // @apply rounded-full;
+  @apply bg-black;
+  @apply py-4;
+  @apply px-6;
+  @apply uppercase;
+  @apply font-bold;
+  @apply inline-block;
+  @apply text-white;
+  @apply shadow-md;
+  transition: all 0.4s ease;
+  &:hover, &:active {
+    @apply shadow-lg;
+    i {
+      @apply transform;
+    }
+  }
+  span {
+    @apply mr-2;
+  }
+  i, span {
+    transition: all 0.4s ease;
+  }
+}

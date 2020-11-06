@@ -1,48 +1,37 @@
 <template>
-  <div :style="accentTextColor" :class="[dark ? 'dark' : 'light']">
-    <router-link to="/"><i class="fas fa-home"></i></router-link>
-    <span class="spacer">→</span>
-    <router-link v-bind:to="$route.path">{{$route.name}}</router-link>
+  <div class="py-4">
+    <router-link :to="to">
+      <i :class="['fa', `fa-arrow-${direction}`]"></i>
+      <span class="font-bold ml-2">
+        <slot>
+          Back
+        </slot>
+      </span>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Breadcrumb',
   props: {
-    dark: {
-      type: Boolean,
-      default: false,
-    },
-    accent: {
+    to: {
       type: String,
-      default: '#f58b44',
-    }
-  },
-  computed: {
-    accentTextColor(){
-      return `color: ${this.accent}`;
+      default: "/",
     },
-  }
-}
+    direction: {
+      type: String,
+      default: "left",
+    },
+  },
+};
 </script>
 
 <style lang="sass" scoped>
-@use "../assets/variables"
-
-div
-  padding: 1em 2em 1em
-  box-shadow: 0 2px 2px rgba(0,0,0,0.1)
-  font-size: 1em
-  .spacer
-    font-family: variables.$sans
-    font-weight: bold
-    padding: 0 8px
-  *
-    color: inherit
-    font-size: inherit
-  a
-    font-weight: 800
-    text-decoration: none
-
+a
+  &:hover, &:active
+    i
+      @apply transform
+      @apply -translate-x-1
+  i
+    transition: transform 0.4s ease
 </style>

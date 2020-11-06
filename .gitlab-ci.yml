@@ -10,9 +10,8 @@ stages:
     name: registry.git.rwth-aachen.de/zoomoid/docker-kubectl:latest
     entrypoint: ['/docker-entrypoint.sh']
   before_script:
-    - echo $kube_config | base64 -d > /root/runner
-    - export KUBECONFIG="$KUBECONFIG:/root/runner"
-    - kubectl config view
+    - echo $kube_config | base64 -d > runner.conf
+    - export KUBECONFIG="$KUBECONFIG:$(pwd)/runner.conf"
     - kubectl config use-context runner@kubernetes
   tags:
     - kubernetes
@@ -46,24 +45,14 @@ build-prod:
   tags: 
     - kubernetes
 
-create-patches:
-  stage: build
-  extends: .kubectl
-  script:
-    - python3 /create-patches.sh --service $SERVICE --hosts $HOSTS
-    - cp /**.patch.json ./
-  artifacts:
-    paths:
-      - ./remove-staging.patch.json
-      - ./add-staging.patch.json
-
 bootup-staging:
   except:
     - master
   stage: bootup-staging
   extends: .kubectl
   script:
-    - kubectl patch ingress/$SERVICE --patch "$(cat ./add-staging.patch.json)"
+    - cat $BOOTUP_STAGING | tee ingress.json
+    - kubectl apply -f ingress.json
 
 deploy-staging:
   except:
@@ -87,7 +76,8 @@ takedown-staging:
     name: staging
     url: https://staging.zoomo.id
   script:
-    - kubectl patch ingress/$SERVICE --patch "$(cat ./remove-staging.patch.json)"
+    - cat $TAKEDOWN_STAGING | tee ingress.json
+    - kubectl apply -f ingress.json
 
 auto-takedown-staging:
   only:
@@ -98,7 +88,8 @@ auto-takedown-staging:
     name: staging
     url: https://staging.zoomo.id
   script:
-    - kubectl patch ingress/$SERVICE --patch "$(cat ./remove-staging.patch.json)"
+    - cat $TAKEDOWN_STAGING | tee ingress.json
+    - kubectl apply -f ingress.json
 
 deploy-production:
   only:

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="my-4">
     <div v-for="player in this.queue" v-bind:key="player.id">
       <AudioPlayer
         :id="player.id"
@@ -14,13 +14,11 @@
 </template>
 
 <style scoped>
-div {
-  margin: 1em 0;
-}
+
 </style>
 
 <script>
-import AudioPlayer from '@/components/AudioPlayer';
+import AudioPlayer from "@/components/AudioPlayer";
 
 export default {
   components: {

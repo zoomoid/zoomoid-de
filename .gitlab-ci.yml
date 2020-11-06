@@ -51,7 +51,7 @@ bootup-staging:
   stage: bootup-staging
   extends: .kubectl
   script:
-    - echo $BOOTUP_STAGING | tee ingress.json
+    - cat $BOOTUP_STAGING | tee ingress.json
     - kubectl apply -f ingress.json
 
 deploy-staging:
@@ -76,7 +76,7 @@ takedown-staging:
     name: staging
     url: https://staging.zoomo.id
   script:
-    - echo $TAKEDOWN_STAGING | tee ingress.json
+    - cat $TAKEDOWN_STAGING | tee ingress.json
     - kubectl apply -f ingress.json
 
 auto-takedown-staging:
@@ -88,7 +88,7 @@ auto-takedown-staging:
     name: staging
     url: https://staging.zoomo.id
   script:
-    - echo $TAKEDOWN_STAGING | tee ingress.json
+    - cat $TAKEDOWN_STAGING | tee ingress.json
     - kubectl apply -f ingress.json
 
 deploy-production:

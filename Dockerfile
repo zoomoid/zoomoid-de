@@ -1,14 +1,16 @@
 # 1st stage build client
-FROM node:latest as builder
+FROM node:lts as builder
 # copy package-lock.json (mainly) and package.json
-COPY /client/package*.json ./
+WORKDIR /app
+
+COPY package*.json ./
 
 # npm ci for better performance in dependency resolution
-RUN yarn install
+RUN npm install
 # bundle client
-COPY /client /
+COPY . .
 # build with webpack
-RUN yarn run build
+RUN yarn build
 
 # 2nd stage: lightweight alpine container
 FROM nginx:alpine
@@ -17,4 +19,4 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 RUN nginx -t
 
-COPY --from=builder /dist /usr/share/nginx/html/
+COPY --from=builder /app/dist /usr/share/nginx/html/

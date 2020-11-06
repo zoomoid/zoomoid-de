@@ -1,8 +1,9 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import MainView from './views/MainView.vue';
-import Privacy from './views/Privacy.vue';
-import WorkContainer from '@/components/WorkContainer';
+import Vue from "vue";
+import Router from "vue-router";
+
+import { Work, Home, NotFound, Privacy, Contact } from "./views/";
+import Discography from "./components/Discography.vue";
+
 import {
   Eigenräume,
   LIAMM,
@@ -10,70 +11,87 @@ import {
   PermanentlyMoving,
   PublicTransportation,
   SchwerelosRemix,
-  ShadesOfYellow
-} from '@/views/work/index.js';
-import Voyager from './views/Voyager.vue';
+  ShadesOfYellow,
+} from "./views/work/index.js";
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  mode: "history",
   routes: [
     {
-      path: '/',
-      name: 'MainView',
-      component: MainView
-    },{
-      path: '/work',
-      name: 'Work',
-      component: WorkContainer,
+      path: "/",
+      name: "Home",
+      component: Home,
+    },
+    {
+      path: "/work",
+      name: "Work",
+      component: Work,
       children: [
         {
-          path: 'shades-of-yellow',
-          name: 'Shades of Yellow',
-          component: ShadesOfYellow
+          path: "",
+          name: "Discography",
+          component: Discography,
         },
         {
-          path: 'eigenräume-standard-edition',
-          name: 'Eigenräume',
-          component: Eigenräume
-        },{
-          path: 'liamm',
-          name: 'Life Is About Making Memories',
-          component: LIAMM
-        },{
-          path: 'eigenräume-extended-edition',
-          alias: ['/eigenraeume', '/eigenräume'],
-          name: 'Eigenräume (Extended Edition)',
-          component: EigenräumeExtendedEdition
-        },{
-          path: '301',
-          alias: '/301',
-          name: '301 Permanently Moving',
-          component: PermanentlyMoving
-        },{
-          path: 'public-transportation',
-          alias: '/public-transportation',
-          name: 'Public Transportation EP',
-          component: PublicTransportation
-        },{
-          path: 'schwerelos-zoomoid-remix',
-          alias: '/schwerelos-remix',
-          name: 'Schwerelos - Zoomoid Remix',
+          path: "shades-of-yellow",
+          name: "Shades of Yellow",
+          component: ShadesOfYellow,
+        },
+        {
+          path: "eigenräume-standard-edition",
+          name: "Eigenräume",
+          component: Eigenräume,
+        },
+        {
+          path: "liamm",
+          name: "Life Is About Making Memories",
+          component: LIAMM,
+        },
+        {
+          path: "eigenräume-extended-edition",
+          alias: ["/eigenraeume", "/eigenräume"],
+          name: "Eigenräume (Extended Edition)",
+          component: EigenräumeExtendedEdition,
+        },
+        {
+          path: "301",
+          alias: "/301",
+          name: "301 Permanently Moving",
+          component: PermanentlyMoving,
+        },
+        {
+          path: "public-transportation",
+          alias: "/public-transportation",
+          name: "Public Transportation EP",
+          component: PublicTransportation,
+        },
+        {
+          path: "schwerelos-zoomoid-remix",
+          alias: "/schwerelos-remix",
+          name: "Schwerelos - Zoomoid Remix",
           component: SchwerelosRemix,
         },
-      ]
-    },{
-      path: '/privacy',
-      name: 'Privacy',
-      component: Privacy
-    },{
-      path: '/voyager',
-      name: 'Voyager',
-      component: Voyager,
-    }
+      ],
+    },
+    {
+      path: "/privacy",
+      name: "Privacy",
+      component: Privacy,
+    },
+    {
+      path: "/contact",
+      name: "Contact",
+      component: Contact,
+    },
+    {
+      path: "*",
+      name: "Error",
+      component: NotFound,
+    },
   ],
-  scrollBehavior () {
-    return { x: 0, y: 0 }
+  scrollBehavior() {
+    return { x: 0, y: 0 };
   },
-})
+});

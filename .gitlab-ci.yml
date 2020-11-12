@@ -7,13 +7,19 @@ stages:
 
 .kubectl:
   image:
-    name: registry.git.rwth-aachen.de/zoomoid/docker-kubectl:latest
+    name: registry.git.rwth-aachen.de/zoomoid/docker-kubectl:1.19.3
     entrypoint: ['/docker-entrypoint.sh']
   before_script:
-    - echo $kube_config | base64 -d > runner.conf
-    - export KUBECONFIG="$KUBECONFIG:$(pwd)/runner.conf"
-    - kubectl config use-context runner@kubernetes
+    - kubectl config use-context runner/web
   tags:
+    - kubernetes
+
+.build:
+  image: gcr.io/kaniko-project/executor:debug
+  stage: build
+  before_script:
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+  tags: 
     - kubernetes
 
 variables:
@@ -24,24 +30,15 @@ variables:
 build-staging:
   except:
     - master
-  image: docker:latest
-  stage: build
+  extends: .build
   script: 
-    - echo "$CI_JOB_TOKEN" | docker login registry.git.rwth-aachen.de --username gitlab-ci-token --password-stdin 
-    - docker build -t $CI_REGISTRY_IMAGE/nightly:$CI_COMMIT_SHORT_SHA .
-    - docker push $CI_REGISTRY_IMAGE/nightly:$CI_COMMIT_SHORT_SHA
-    - docker tag $CI_REGISTRY_IMAGE/nightly:$CI_COMMIT_SHORT_SHA $CI_REGISTRY_IMAGE/nightly:latest
-    - docker push $CI_REGISTRY_IMAGE/nightly:latest
-  tags: 
-    - kubernetes
+    - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile Dockerfile --target zoomoid-de --destination $CI_REGISTRY_IMAGE/dev:$CI_COMMIT_SHORT_SHA
 
 build-prod:
   image: docker:latest
   stage: build
-  script: 
-    - echo "$CI_JOB_TOKEN" | docker login registry.git.rwth-aachen.de --username gitlab-ci-token --password-stdin 
-    - docker build -t $CI_REGISTRY_IMAGE/stable .
-    - docker push $CI_REGISTRY_IMAGE/stable:latest
+  script:
+    - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile Dockerfile --target zoomoid-de --destination $CI_REGISTRY_IMAGE/stable:latest
   tags: 
     - kubernetes
 
@@ -61,10 +58,9 @@ deploy-staging:
   extends: .kubectl
   environment:
     name: staging
-    url: https://staging.zoomo.id
+    url: https://staging.zoomoid.de
   script:
-    - kubectl set image deployment/$SERVICE $SERVICE=$CI_REGISTRY_IMAGE/nightly:$CI_COMMIT_SHORT_SHA
-    - kubectl rollout status deployment/$SERVICE
+    - kubectl rollout restart deployment/zoomoid-de
 
 takedown-staging:
   except:
@@ -74,7 +70,7 @@ takedown-staging:
   extends: .kubectl
   environment:
     name: staging
-    url: https://staging.zoomo.id
+    url: https://staging.zoomoid.de
   script:
     - cat $TAKEDOWN_STAGING | tee ingress.json
     - kubectl apply -f ingress.json
@@ -86,7 +82,7 @@ auto-takedown-staging:
   extends: .kubectl
   environment:
     name: staging
-    url: https://staging.zoomo.id
+    url: https://staging.zoomoid.de
   script:
     - cat $TAKEDOWN_STAGING | tee ingress.json
     - kubectl apply -f ingress.json
@@ -100,4 +96,4 @@ deploy-production:
     - kubectl rollout restart deployment/zoomoid-de
   environment:
     name: production
-    url: https://zoomo.id
+    url: https://zoomoid.de

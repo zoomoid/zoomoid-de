@@ -35,8 +35,11 @@ build-staging:
     - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile Dockerfile --target zoomoid-de --destination $CI_REGISTRY_IMAGE/dev:$CI_COMMIT_SHORT_SHA
 
 build-prod:
-  image: docker:latest
-  stage: build
+  only:
+  - master
+  - merge_requests
+  - tags
+  extends: .build
   script:
     - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile Dockerfile --target zoomoid-de --destination $CI_REGISTRY_IMAGE/stable:latest
   tags: 

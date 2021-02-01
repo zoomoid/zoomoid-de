@@ -261,9 +261,9 @@
     "@types/braces" "*"
 
 "@vitejs/plugin-vue@^1.1.2":
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-1.1.3.tgz#94c3822d3c2425ca240b86437b8a8c92f29e22b1"
-  integrity sha512-RjqnMVIGoo+4dyjm8/5sAHkcbPNhFuFyQWO8OeaJMq6HBGqULHphf6J2UvnEi8TOmjfSFHJl1mzls3DtBvvz9w==
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-1.1.4.tgz#1dd388519b75439b7733601b55238ca691864796"
+  integrity sha512-cUDILd++9jdhdjpuhgJofQqOabOKe+kTWTE2HQY2PBHEUO2fgwTurLE0cJg9UcIo1x4lHfsp+59S9TBCHgTZkw==
 
 "@vue/compiler-core@3.0.5", "@vue/compiler-core@^3.0.0", "@vue/compiler-core@^3.0.1", "@vue/compiler-core@^3.0.2":
   version "3.0.5"
@@ -563,15 +563,15 @@ braces@^3.0.1, braces@~3.0.2:
     fill-range "^7.0.1"
 
 browserslist@^4.16.1:
-  version "4.16.1"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.16.1.tgz#bf757a2da376b3447b800a16f0f1c96358138766"
-  integrity sha512-UXhDrwqsNcpTYJBTZsbGATDxZbiVDsx6UjpmRUmtnP10pr8wAYr5LgFoEFw9ixriQH2mv/NX2SfGzE/o8GndLA==
+  version "4.16.3"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.16.3.tgz#340aa46940d7db878748567c5dea24a48ddf3717"
+  integrity sha512-vIyhWmIkULaq04Gt93txdh+j02yX/JzlyhLYbV3YQCn/zvES3JnY7TifHHvvr1w5hTDluNKMkV05cs4vy8Q7sw==
   dependencies:
-    caniuse-lite "^1.0.30001173"
+    caniuse-lite "^1.0.30001181"
     colorette "^1.2.1"
-    electron-to-chromium "^1.3.634"
+    electron-to-chromium "^1.3.649"
     escalade "^3.1.1"
-    node-releases "^1.1.69"
+    node-releases "^1.1.70"
 
 bytes@^3.0.0:
   version "3.1.0"
@@ -583,7 +583,7 @@ camelcase-css@^2.0.1:
   resolved "https://registry.yarnpkg.com/camelcase-css/-/camelcase-css-2.0.1.tgz#ee978f6947914cc30c6b44741b6ed1df7f043fd5"
   integrity sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==
 
-caniuse-lite@^1.0.30001173, caniuse-lite@^1.0.30001181:
+caniuse-lite@^1.0.30001181:
   version "1.0.30001181"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001181.tgz#4f0e5184e1ea7c3bf2727e735cbe7ca9a451d673"
   integrity sha512-m5ul/ARCX50JB8BSNM+oiPmQrR5UmngaQ3QThTTp5HcIIQGP/nPBs82BYLE+tigzm3VW+F4BJIhUyaVtEweelQ==
@@ -754,7 +754,7 @@ didyoumean@^1.2.1:
   resolved "https://registry.yarnpkg.com/didyoumean/-/didyoumean-1.2.1.tgz#e92edfdada6537d484d73c0172fd1eba0c4976ff"
   integrity sha1-6S7f2tplN9SE1zwBcv0eugxJdv8=
 
-electron-to-chromium@^1.3.634:
+electron-to-chromium@^1.3.649:
   version "1.3.649"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.649.tgz#3aa8be052d4d268ede45d8e98d0cd60ffefad607"
   integrity sha512-ojGDupQ3UMkvPWcTICe4JYe17+o9OLiFMPoduoR72Zp2ILt1mRVeqnxBEd6s/ptekrnsFU+0A4lStfBe/wyG/A==
@@ -770,9 +770,9 @@ emojis-list@^3.0.0:
   integrity sha512-/kyM18EfinwXZbno9FyUGeFh87KC8HRQBQGildHZbEuRyWFOmv1U10o9BBp8XVZDVNNuQKyIGIu5ZYAAXJ0V2Q==
 
 esbuild@^0.8.34:
-  version "0.8.36"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.8.36.tgz#f5b7c61473721c7d53ffe7c88708e25f3b6182f3"
-  integrity sha512-kcUQB61Tf8rLJ3mOwP2ruWi/iFufaQcEs4No+JA6e7W2kMOtFExOsbyeFpEF6zNacwk2RF5fYUz5jfZwgn/SJg==
+  version "0.8.39"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.8.39.tgz#18b84a3d56173c55ee8f45bc6c7b5374b0a98ecb"
+  integrity sha512-/do5H74a5ChyeKRWfkDh3EpICXpsz6dWTtFFbotb7BlIHvWqnRrZYDb8IBubOHdEtKzuiksilRO19aBtp3/HHQ==
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -1020,9 +1020,9 @@ json5@^1.0.1:
     minimist "^1.2.0"
 
 json5@^2.1.3:
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/json5/-/json5-2.1.3.tgz#c9b0f7fa9233bfe5807fe66fcf3a5617ed597d43"
-  integrity sha512-KXPvOm8K9IJKFM0bmdn8QXh7udDh1g/giieX0NLCaMnb4hEiVFqnop2ImTXCc5e0/oHz3LTqmHGtExn5hfMkOA==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.0.tgz#2dfefe720c6ba525d9ebd909950f0515316c89a3"
+  integrity sha512-f+8cldu7X/y7RAJurMEJmdoKXGB/X550w2Nr3tTbezL6RwEE/iMcm+tZnXeoZtKuOq6ft8+CqzEkrIgx1fPoQA==
   dependencies:
     minimist "^1.2.5"
 
@@ -1148,7 +1148,7 @@ node-emoji@^1.8.1:
   dependencies:
     lodash.toarray "^4.4.0"
 
-node-releases@^1.1.69:
+node-releases@^1.1.70:
   version "1.1.70"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.70.tgz#66e0ed0273aa65666d7fe78febe7634875426a08"
   integrity sha512-Slf2s69+2/uAD79pVVQo8uSiC34+g8GWY8UH2Qtqv34ZfhYrxpYpfzs9Js9d6O0mbDmALuxaTlplnBTnSELcrw==
@@ -1398,11 +1398,11 @@ reusify@^1.0.4:
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
 rollup@^2.35.1:
-  version "2.38.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.38.1.tgz#ecea0f7ce6ef2c1f023fdb79524eb7aeb670ea79"
-  integrity sha512-q07T6vU/V1kqM8rGRRyCgEvIQcIAXoKIE5CpkYAlHhfiWM1Iuh4dIPWpIbqFngCK6lwAB2aYHiUVhIbSWHQWhw==
+  version "2.38.3"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.38.3.tgz#2a0b6cc6eab1da4431aab875a31a401fa2988c10"
+  integrity sha512-FVx/XzR2DtCozKNDBjHJCHIgkC12rNg/ruAeoYWjLeeKfSKgwhh+lDLDhuCkuRG/fsup8py8dKBTlHdvUFX32A==
   optionalDependencies:
-    fsevents "~2.1.2"
+    fsevents "~2.3.1"
 
 run-parallel@^1.1.9:
   version "1.1.10"
@@ -1568,9 +1568,9 @@ uuid@^8.3.2:
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
 
 vite@^2.0.0-beta.50:
-  version "2.0.0-beta.58"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-2.0.0-beta.58.tgz#c67939a9bbc892e4314f065dc4b7537fac66ee40"
-  integrity sha512-zMoUL4plXNrfQJn8vQCcaYlK7wmNO9WFO2keBb8b44FZWlSP4NPRm6rUQPp1gmDMEflOO8HFycXfrZ29VxDf/g==
+  version "2.0.0-beta.60"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-2.0.0-beta.60.tgz#160d69968f29d05e0a4a22a6cc690d997fd793ea"
+  integrity sha512-B3qaJrSp0pbgjv2ROA7/0KRgJFs+QhH43OTo6Hau/dGopKotZFuE04FBRCjJ3+h0ePEH4DUG7+e2tUUgkywb0A==
   dependencies:
     esbuild "^0.8.34"
     postcss "^8.2.1"

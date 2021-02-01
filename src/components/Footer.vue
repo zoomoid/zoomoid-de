@@ -1,27 +1,30 @@
 <template>
   <footer class="bg-black text-white">
     <div class="grid grid-cols-2 sm:flex container mx-auto">
-      <div class="internals">
+      <!-- <div class="internals">
         <h5>Links</h5>
         <li v-for="i in internals" :key="i.label">
           <router-link :to="i.url">{{ i.label }}</router-link>
         </li>
-      </div>
-      <div class="socials text-right sm:text-left">
-        <h5>Social Media</h5>
-        <li v-for="s in socials" :key="s.label">
-          <a :href="s.url">
-            <i :class="[s.icon.prefix, s.icon.key]"></i>
-            <span>{{ s.label }}</span>
-          </a>
-        </li>
+      </div> -->
+      <div class="socials md:flex">
+        <h5>Social Media:</h5>
+        <div class="md:divide-x-2 divide-white">
+          <li v-for="s in socials" :key="s.label" class="md:inline-block md:px-2">
+            <a :href="s.url">
+              <i :class="[s.icon.prefix, s.icon.key]"></i>
+              <span>{{ s.label }}</span>
+            </a>
+          </li>
+        </div>
       </div>
     </div>
   </footer>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+export default defineComponent({
   name: "Footer",
   data: () => ({
     socials: [
@@ -59,30 +62,29 @@ export default {
       },
     ],
     internals: [
-      {
-        label: "Home",
-        url: "/",
-      },
-      {
-        label: "Work",
-        url: "/work",
-      },
-      {
-        label: "Contact",
-        url: "/contact",
-      },
-      {
-        label: "Privacy & Data Protection",
-        url: "/privacy",
-      },
+      // {
+      //   label: "Home",
+      //   url: "/",
+      // },
+      // {
+      //   label: "Work",
+      //   url: "/work",
+      // },
+      // {
+      //   label: "Contact",
+      //   url: "/contact",
+      // },
+      // {
+      //   label: "Privacy & Data Protection",
+      //   url: "/privacy",
+      // },
     ],
   }),
-};
+});
 </script>
 
 <style lang="sass" scoped>
 footer
-  border-top: solid 2px white
   @apply p-6
 h5
   @apply mb-1
@@ -93,10 +95,10 @@ li
   &:hover, &:active
     @apply opacity-100
   i
-    @apply mr-2
+    @apply mr-1
     @apply w-5
     @apply text-center
-.container
-  div
-    @apply mx-4
+// .container
+//   div
+//     @apply mx-4
 </style>

@@ -1,44 +1,89 @@
 <template>
-  <div class="flex flex-col justify-center">
-    <div class="max-w-6xl mx-auto pt-16 pb-24 px-8 leading-tight">
-      <p
-        class="text-4xl md:text-6xl font-semibold lg:tracking-normal"
-      >
-        <span class="px-2 bg-black text-white font-bold">zoomoid</span>
-        is an aspiring artist from Aachen, Germany. Most of the time he's making
-        Techno &mdash; with some exceptions. He's currently planning the release of his 2020 Album <i>Voyager</i>.
+  <div class="hero">
+    <div class="hero__inner">
+      <h1 class="font-utopian-two-color uppercase text-7xl md:text-8xl">
+        zoomoid
+      </h1>
+      <p>A young, aspiring artist and producer, based in Aachen, Germany.</p>
+      <p>
+        He's currently making electronic music with a concept and a heartbeat.
       </p>
-      <p class="md:text-4xl text-2xl font-semibold">
-        For booking, collaboration, or other concerns, contact him via e-mail at
-        <a class="contact--mail" href="mailto:occloxium@gmail.com"
-          >occloxium@gmail.com</a
-        >.
-      </p>
-      <router-link to="/work" class="btn">
-        <span>Discover the discography</span>
-        <i class="fa fa-arrow-right"></i>
-      </router-link>
+      <div class="platforms">
+        <a
+          v-for="platform in platforms"
+          :key="platform.label"
+          class="platform"
+          :href="platform.href"
+        >
+          <i class="platform__icon" :class="[platform.icon.prefix, platform.icon.key]"></i>
+          <span class="platform__label">{{platform.label}}</span>
+        </a>
+      </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {};
+<script lang="ts">
+import { defineComponent } from "vue";
+export default defineComponent({
+  name: "Hero",
+  data: () => ({
+    platforms: [
+      {
+        label: "Spotify",
+        href: "https://open.spotify.com/artist/6RRD9ulVsLuDIqFzuFvSL8",
+        icon: {
+          prefix: "fab",
+          key: "fa-spotify",
+        },
+      },
+      {
+        label: "Apple Music",
+        href: "https://music.apple.com/de/artist/zoomoid/1390354057",
+        icon: {
+          prefix: "fab",
+          key: "fa-apple",
+        },
+      },
+      {
+        label: "Bandcamp",
+        href: "https://zoomoid.bandcamp.com/",
+        icon: {
+          prefix: "fab",
+          key: "fa-bandcamp",
+        },
+      },
+    ],
+  }),
+});
 </script>
 
 <style lang="sass" scoped>
+.hero
+  @apply flex flex-col justify-center flex-grow container mx-auto px-8
+  &__inner
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    @apply bg-gradient-to-br from-rose-600 to-lightBlue-500
 p
-  // @apply text-2xl
-  // @apply font-normal
-  @apply mt-8
-  a
-    @apply underline
-.btn
+  @apply text-2xl md:text-4xl font-semibold
+.link
+  @apply text-2xl uppercase tracking-wide font-semibold
+  @apply inline-block my-4 py-2 px-4 items-center flex-grow-0
+  @apply bg-white hover:bg-trueGray-200 transition-colors duration-200 text-black rounded-lg
+  i
+    @apply transition-transform duration-500
   &:hover, &:active
-    @apply shadow-lg
     i
-      @apply transform
-      @apply translate-x-1
-  span
-    @apply mr-2
+      @apply transform translate-x-1
+.platforms
+  @apply flex justify-around mt-16
+  .platform
+    @apply hover:text-white
+    &:hover, &:active
+      -webkit-text-fill-color: initial
+    &__icon
+      @apply text-6xl
+    &__label
+      @apply block md:hidden
 </style>

@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .font-utopian-one-bw {
+    font-family: utopian, sans-serif;
+    font-weight: 100;
+  }
+  .font-utopian-one-color {
+    font-family: utopian, sans-serif;
+    font-weight: 200;
+  }
+  .font-utopian-two-bw {
+    font-family: utopian, sans-serif;
+    font-weight: 300;
+  }
+  .font-utopian-two-color {
+    font-family: utopian, sans-serif;
+    font-weight: 400;
+  }
+}
+
+@layer components {
+  .button {
+    @apply my-4 py-4 px-6;
+    @apply uppercase font-bold;
+    @apply inline-block;
+    @apply text-white bg-black;
+    @apply shadow-md;
+    @apply transition-all duration-300;
+    @apply hover:shadow-lg;
+  }
+  .button span {
+    @apply mr-2;
+  }
+  .button span, .button i {
+    @apply transition-all duration-300;
+  }
+}

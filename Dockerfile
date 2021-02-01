@@ -1,5 +1,5 @@
 # 1st stage build client
-FROM node:lts as builder
+FROM node:lts AS builder
 # copy package-lock.json (mainly) and package.json
 WORKDIR /app
 
@@ -13,7 +13,7 @@ COPY . .
 RUN yarn build
 
 # 2nd stage: lightweight alpine container
-FROM nginx:alpine
+FROM nginx:alpine AS zoomoid-de
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 

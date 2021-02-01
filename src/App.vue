@@ -1,5 +1,5 @@
 <template>
-  <main id="app" class="bg-white text-black min-h-screen flex flex-col">
+  <main id="app" class="min-h-screen flex flex-col">
     <transition :name="transitionName" mode="out-in">
       <router-view class="view flex-grow"></router-view>
     </transition>
@@ -7,27 +7,11 @@
   </main>
 </template>
 
-<style lang="scss">
-.slide-left-enter, .slide-right-leave-active {
-  opacity: 0;
-  transform: translate(50vw, 0);
-}
-.slide-left-leave-active, .slide-right-enter {
-  opacity: 0;
-  transform: translate(-50vw, 0);
-}
-.view {
-  transition: all .2s cubic-bezier(.55,0,.1,1);
-}
-#app {
-  overflow: hidden;
-}
-</style>
-
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import Footer from "./components/Footer.vue";
 
-export default {
+export default defineComponent({
   name: "App",
   components: {
     Footer,
@@ -37,10 +21,37 @@ export default {
   }),
   watch: {
     $route(to, from) {
-      const toDepth = to.path.split("/").filter(s => s.length !== 0).length;
-      const fromDepth = from.path.split("/").filter(s => s.length !== 0).length;
+      const toDepth = to.path.split("/").filter((s: string) => s.length !== 0).length;
+      const fromDepth = from.path.split("/").filter((s: string) => s.length !== 0)
+        .length;
       this.transitionName = toDepth < fromDepth ? "slide-right" : "slide-left";
     },
   },
-};
+});
 </script>
+
+<style>
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate(50vw, 0);
+}
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  transform: translate(-50vw, 0);
+}
+.view {
+  transition: all 0.2s cubic-bezier(0.55, 0, 0.1, 1);
+  @apply flex;
+  @apply flex-col;
+  @apply bg-gradient-to-b;
+  @apply from-trueGray-800;
+  @apply to-black;
+}
+#app {
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+</style>

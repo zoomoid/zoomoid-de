@@ -8,7 +8,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: "/",
     component: Home,
-    name: Home,
+    name: "Home",
   },
 ];
 

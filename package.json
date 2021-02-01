@@ -1,6 +1,6 @@
 {
   "name": "zoomoid-de",
-  "version": "0.0.0",
+  "version": "4.0.1",
   "scripts": {
     "dev": "vite",
     "build": "vuedx-typecheck . && vite build",

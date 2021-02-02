@@ -1,7 +1,7 @@
 <template>
   <div class="hero">
     <div class="hero__inner">
-      <h1 class="font-utopian-two-color uppercase text-7xl md:text-8xl">
+      <h1 class="font-utopian-one-bw">
         zoomoid
       </h1>
       <p>A young, aspiring artist and producer, based in Aachen, Germany.</p>
@@ -64,9 +64,12 @@ export default defineComponent({
   &__inner
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
-    @apply bg-gradient-to-br from-rose-600 to-lightBlue-500
+    @apply bg-gradient-to-br from-pink-500 to-orange-600
+
+h1
+  @apply uppercase text-5xl md:text-8xl
 p
-  @apply text-2xl md:text-4xl font-semibold
+  @apply text-lg md:text-4xl font-semibold
 .link
   @apply text-2xl uppercase tracking-wide font-semibold
   @apply inline-block my-4 py-2 px-4 items-center flex-grow-0
@@ -77,13 +80,13 @@ p
     i
       @apply transform translate-x-1
 .platforms
-  @apply flex justify-around mt-16
+  @apply flex justify-around md:mt-16 mt-8
   .platform
     @apply hover:text-white
     &:hover, &:active
       -webkit-text-fill-color: initial
     &__icon
-      @apply text-6xl
+      @apply md:text-6xl text-4xl
     &__label
-      @apply block md:hidden
+      @apply hidden
 </style>

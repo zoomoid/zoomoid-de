@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col justify-center h-full flex-grow">
     <div class="hero gap-8 flex-grow-0 flex-shrink">
-      <img class="logo" src="/white_vertical.png" alt="Zoomoid">
+      <img class="logo" src="/white_vertical.png" alt="Zoomoid" />
       <div class="hero__inner">
         <p>A young, aspiring artist and producer, based in Aachen, Germany.</p>
         <p>
@@ -12,7 +12,7 @@
             v-for="platform in platforms"
             :key="platform.label"
             class="platform"
-            :href="platform.href"
+            :href="platform.url"
           >
             <i
               class="platform__icon"
@@ -34,7 +34,7 @@ export default defineComponent({
     platforms: [
       {
         label: "Spotify",
-        href: "https://open.spotify.com/artist/6RRD9ulVsLuDIqFzuFvSL8",
+        url: "https://open.spotify.com/artist/6RRD9ulVsLuDIqFzuFvSL8",
         icon: {
           prefix: "fab",
           key: "fa-spotify",
@@ -42,7 +42,7 @@ export default defineComponent({
       },
       {
         label: "Apple Music",
-        href: "https://music.apple.com/de/artist/zoomoid/1390354057",
+        url: "https://music.apple.com/de/artist/zoomoid/1390354057",
         icon: {
           prefix: "fab",
           key: "fa-apple",
@@ -50,7 +50,7 @@ export default defineComponent({
       },
       {
         label: "Bandcamp",
-        href: "https://zoomoid.bandcamp.com/",
+        url: "https://zoomoid.bandcamp.com/",
         icon: {
           prefix: "fab",
           key: "fa-bandcamp",
@@ -58,7 +58,7 @@ export default defineComponent({
       },
       {
         label: "Soundcloud",
-        href: "https://soundcloud.com/zoomoid",
+        url: "https://soundcloud.com/zoomoid",
         icon: {
           prefix: "fab",
           key: "fa-soundcloud",
@@ -66,12 +66,20 @@ export default defineComponent({
       },
       {
         label: "Instagram",
-        href: "https://instagram.com/zoomoid",
+        url: "https://instagram.com/zoomoid",
         icon: {
           prefix: "fab",
           key: "fa-instagram",
         },
-      }
+      },
+      {
+        label: "YouTube Music",
+        url: "https://music.youtube.com/channel/UC62BLKKSvDsJ1_-VQ9XCRLw",
+        icon: {
+          prefix: "fab",
+          key: "fa-youtube",
+        },
+      },
     ],
   }),
 });

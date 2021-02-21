@@ -60,6 +60,14 @@ export default defineComponent({
           key: "fa-instagram",
         },
       },
+      {
+        label: "YouTube Music",
+        url: "https://music.youtube.com/channel/UC62BLKKSvDsJ1_-VQ9XCRLw",
+        icon: {
+          prefix: "fab",
+          key: "fa-youtube",
+        },
+      },
     ],
     internals: [
       // {

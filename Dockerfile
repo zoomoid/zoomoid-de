@@ -4,12 +4,11 @@ FROM node:lts AS builder
 WORKDIR /app
 
 COPY package*.json ./
+COPY yarn.lock ./
+RUN yarn install
 
-# npm ci for better performance in dependency resolution
-RUN npm install
 # bundle client
 COPY . .
-# build with webpack
 RUN yarn build
 
 # 2nd stage: lightweight alpine container

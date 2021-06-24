@@ -1,15 +1,15 @@
 <template>
   <div class="flex flex-col justify-center h-full flex-grow">
     <div class="hero gap-8 flex-grow-0 flex-shrink">
-      <img class="logo" src="/white_vertical.png" alt="Zoomoid" />
+      <img class="logo" src="/white.png" alt="Zoomoid" />
       <div class="hero__inner">
-        <p>A young, aspiring artist and producer, based in Aachen, Germany.</p>
+        <p>Zoomoid is a young, aspiring artist and producer, based in Aachen, Germany.</p>
         <p>
-          He's currently making electronic music with a concept and a heartbeat.
+          He's making electronic music with a concept and a heartbeat.
         </p>
         <div class="platforms">
           <a
-            v-for="platform in platforms"
+            v-for="(platform) in platforms"
             :key="platform.label"
             class="platform"
             :href="platform.url"
@@ -31,6 +31,13 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "Hero",
   data: () => ({
+    colors: [
+      'text-purple-zoomoid',
+      'text-red-zoomoid',
+      'text-orange-zoomoid',
+      'text-green-zoomoid',
+      'text-blue-zoomoid'
+    ],
     platforms: [
       {
         label: "Spotify",
@@ -85,33 +92,38 @@ export default defineComponent({
 });
 </script>
 
-<style lang="sass" scoped>
-.hero
-  @apply flex justify-center container max-w-screen-md mx-auto px-8
-  @apply text-white text-opacity-90 h-auto
-h1
-  @apply text-5xl md:text-8xl font-semibold
-p
-  @apply text-2xl md:text-4xl font-semibold
-.logo
-  @apply h-64
-.link
-  @apply text-2xl uppercase tracking-wide font-semibold
-  @apply inline-block my-4 py-2 px-4 items-center flex-grow-0
-  @apply text-white hover:text-opacity-50 transition-opacity duration-200 text-black rounded-lg
-  i
-    @apply transition-transform duration-500
-  &:hover, &:active
-    i
-      @apply transform translate-x-1
-.platforms
-  @apply flex justify-around mt-8
-  .platform
-    @apply hover:text-white
-    &:hover, &:active
-      -webkit-text-fill-color: initial
-    &__icon
-      @apply md:text-6xl text-4xl
-    &__label
-      @apply hidden
+<style lang="postcss" scoped>
+.hero {
+  @apply flex justify-center container max-w-screen-md mx-auto px-8;
+  @apply h-auto;
+}
+h1 {
+  @apply text-5xl md:text-8xl font-semibold;
+}
+p {
+  @apply text-2xl md:text-4xl font-semibold;
+}
+.logo {
+  @apply h-64;
+}
+.link {
+  @apply text-2xl uppercase tracking-wide font-semibold;
+  @apply inline-block my-4 py-2 px-4 items-center flex-grow-0;
+  @apply hover:text-opacity-50 transition-opacity duration-200 rounded-lg;
+}
+.platforms {
+  @apply flex justify-around mt-8;
+  .platform {
+    @apply text-white text-opacity-50 hover:text-opacity-100;
+    &:hover, &:active {
+      -webkit-text-fill-color: initial;
+    }
+    &__icon {
+      @apply md:text-6xl text-4xl;
+    }
+    &__label {
+      @apply hidden;
+    }
+  }
+}
 </style>

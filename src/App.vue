@@ -1,8 +1,10 @@
 <template>
-  <main id="app" class="min-h-screen flex flex-col">
-    <transition :name="transitionName" mode="out-in">
-      <router-view class="view flex-grow"></router-view>
-    </transition>
+  <main id="app">
+    <router-view class="view bg-zoomoid-gradient" v-slot="{ Component }">
+      <transition :name="transitionName" mode="out-in">
+        <component :is="Component"></component>
+      </transition>
+    </router-view>
     <Footer></Footer>
   </main>
 </template>
@@ -21,16 +23,19 @@ export default defineComponent({
   }),
   watch: {
     $route(to, from) {
-      const toDepth = to.path.split("/").filter((s: string) => s.length !== 0).length;
-      const fromDepth = from.path.split("/").filter((s: string) => s.length !== 0)
-        .length;
+      const toDepth = to.path
+        .split("/")
+        .filter((s: string) => s.length !== 0).length;
+      const fromDepth = from.path
+        .split("/")
+        .filter((s: string) => s.length !== 0).length;
       this.transitionName = toDepth < fromDepth ? "slide-right" : "slide-left";
     },
   },
 });
 </script>
 
-<style>
+<style lang="postcss">
 .slide-left-enter,
 .slide-right-leave-active {
   opacity: 0;
@@ -43,13 +48,11 @@ export default defineComponent({
 }
 .view {
   transition: all 0.2s cubic-bezier(0.55, 0, 0.1, 1);
-  @apply flex;
-  @apply flex-col;
-  @apply bg-gradient-to-b;
-  @apply from-trueGray-800;
-  @apply to-black;
+  @apply flex flex-col flex-grow;
+  @apply text-white;
 }
 #app {
+  @apply min-h-screen flex flex-col;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -1,16 +1,14 @@
 <template>
-  <footer class="bg-black text-white">
+  <footer>
     <div class="grid grid-cols-2 sm:flex container mx-auto">
-      <!-- <div class="internals">
-        <h5>Links</h5>
-        <li v-for="i in internals" :key="i.label">
-          <router-link :to="i.url">{{ i.label }}</router-link>
-        </li>
-      </div> -->
       <div class="socials md:flex">
         <h5>Social Media:</h5>
-        <div class="md:divide-x-2 divide-white">
-          <li v-for="s in socials" :key="s.label" class="md:inline-block md:px-2">
+        <div class="md:divide-x divide-white">
+          <li
+            v-for="s in socials"
+            :key="s.label"
+            class="md:inline-block md:px-2"
+          >
             <a :href="s.url">
               <i :class="[s.icon.prefix, s.icon.key]"></i>
               <span>{{ s.label }}</span>
@@ -69,44 +67,26 @@ export default defineComponent({
         },
       },
     ],
-    internals: [
-      // {
-      //   label: "Home",
-      //   url: "/",
-      // },
-      // {
-      //   label: "Work",
-      //   url: "/work",
-      // },
-      // {
-      //   label: "Contact",
-      //   url: "/contact",
-      // },
-      // {
-      //   label: "Privacy & Data Protection",
-      //   url: "/privacy",
-      // },
-    ],
+    internals: [],
   }),
 });
 </script>
 
-<style lang="sass" scoped>
-footer
-  @apply p-6
-h5
-  @apply mb-1
-li
-  @apply list-none
-  @apply opacity-50
-  @apply font-medium
-  &:hover, &:active
-    @apply opacity-100
-  i
-    @apply mr-1
-    @apply w-5
-    @apply text-center
-// .container
-//   div
-//     @apply mx-4
+<style lang="postcss" scoped>
+footer {
+  @apply p-6 absolute bottom-0 text-white;
+}
+h5 {
+  @apply mb-1;
+}
+li {
+  @apply list-none opacity-50 font-medium;
+  &:hover,
+  &:active {
+    @apply opacity-100;
+  }
+  i {
+    @apply mr-1 w-5 text-center;
+  }
+}
 </style>

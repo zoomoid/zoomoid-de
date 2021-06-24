@@ -1,40 +1,22 @@
 @tailwind base;
-@tailwind components;
 @tailwind utilities;
+@tailwind components;
+@tailwind variants;
 
 @layer utilities {
-  .font-utopian-one-bw {
-    font-family: utopian, sans-serif;
-    font-weight: 100;
-  }
-  .font-utopian-one-color {
-    font-family: utopian, sans-serif;
-    font-weight: 200;
-  }
-  .font-utopian-two-bw {
-    font-family: utopian, sans-serif;
-    font-weight: 300;
-  }
-  .font-utopian-two-color {
-    font-family: utopian, sans-serif;
-    font-weight: 400;
-  }
-}
-
-@layer components {
-  .button {
-    @apply my-4 py-4 px-6;
-    @apply uppercase font-bold;
-    @apply inline-block;
-    @apply text-white bg-black;
-    @apply shadow-md;
-    @apply transition-all duration-300;
-    @apply hover:shadow-lg;
-  }
-  .button span {
-    @apply mr-2;
-  }
-  .button span, .button i {
-    @apply transition-all duration-300;
+  .bg-zoomoid-gradient {
+    background: linear-gradient(
+      35deg,
+      #62388e,
+      #62388e 19.9999%,
+      #ff0000 20%,
+      #ff0000 39.9999%,
+      #ffae0d 40%,
+      #ffae0d 59.9999%,
+      #85ff0d 60%,
+      #85ff0d 79.9999%,
+      #00d8ff 80%,
+      #00d8ff
+    );
   }
 }

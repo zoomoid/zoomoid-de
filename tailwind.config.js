@@ -1,55 +1,29 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   purge: [
-    './public/**/*.html',
-     './src/**/*.{js,jsx,ts,tsx,vue}',
+    "./components/**/*.{vue,js}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./nuxt.config.{js,ts}",
   ],
-  mode: 'jit',
   darkMode: false, // or 'media' or 'class'
+  mode: "jit",
   theme: {
     extend: {
       colors: {
-        purple: {
-          zoomoid: '#62388e',
-        },
-        red: {
-          zoomoid: '#ff0000',
-        },
-        orange: {
-          zoomoid: '#ffae0d',
-        },
-        green: {
-          zoomoid: '#85ff0d',
-        },
-        blue: {
-          zoomoid: '#00d8ff'
-        },
-        yellow: {
-          zoomoid: '#e5b400'
-        }
+        ...colors,
       },
       fontFamily: {
-        sans: [
-          "neue-haas-grotesk-display",
-          "ui-sans-serif",
-          "system-ui",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          '"Segoe UI"',
-          "Roboto",
-          '"Helvetica Neue"',
-          "Arial",
-          '"Noto Sans"',
-          "sans-serif",
-          '"Apple Color Emoji"',
-          '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"',
-          '"Noto Color Emoji"',
-        ],
-      }
+        sans: ['"basiersquare"'],
+        serif: ['"novela"'],
+        helvetica: ['"neue-haas-grotesk-display"']
+      },
     },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};

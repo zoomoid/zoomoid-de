@@ -166,90 +166,94 @@
           v-for="r in releases"
           :id="r.anchor"
           :key="r.title"
-          class="md:flex justify-end py-[6.6vmax] px-[4vw]"
+          class=""
           :class="r.theme"
         >
-          <div
-            class="
-              md:grid
-              grid-cols-12
-              md:gap-y-4
-              items-start
-              lg:w-[75%]
-              xl:max-w-[1800px]
-              px-4
-              md:px-0
-            "
-          >
-            <span class="col-span-2 my-2">{{ r.date }}</span>
-            <h1
-              class="
-                col-span-10
-                font-semibold
-                leading-none
-                text-5xl
-                sm:text-6xl
-                lg:text-7xl
-                xl:text-8xl
-                font-sans
-              "
-              v-html="r.title"
-            ></h1>
-            <div class="col-span-2"></div>
-            <div class="col-span-10 relative">
-              <img
-                class="lg:max-w-xl max-w-sm md:my-0 my-4 w-full"
-                :src="r.cover.url"
-                :alt="'Cover of ' + r.title"
-              />
-            </div>
+          <div class="xl:max-w-[1800px] py-[6.6vmax] px-[4vw] mx-auto md:flex justify-end w-full">
             <div
               class="
-                col-span-2
-                my-4
-                md:my-0
-                text-2xl
-                md:text-normal
-                font-sans
-                md:font-serif
+                md:grid
+                grid-cols-12
+                md:gap-y-4
+                items-start
+                px-4
+                md:px-0
+                lg:w-[75%]
               "
             >
-              About
-            </div>
-            <div class="col-span-10">
-              <p
+              <span class="col-span-2 my-2">{{ r.date }}</span>
+              <h1
                 class="
-                  text-xl
-                  sm:text-2xl
-                  leading-normal
-                  xl:max-w-screen-md
+                  col-span-10
+                  font-semibold
+                  leading-none
+                  text-5xl
+                  sm:text-6xl
+                  lg:text-7xl
+                  xl:text-8xl
+                  font-sans
+                "
+
+                v-html="r.title"
+              ></h1>
+              <div class="col-span-2"></div>
+              <div class="col-span-10 relative">
+                <img
+                  class="lg:max-w-xl max-w-sm md:my-0 my-4 w-full"
+                  :src="r.cover.url"
+                  :alt="'Cover of ' + r.title"
+                />
+              </div>
+              <div
+                class="
+                  col-span-2
+                  my-4
+                  md:my-0
+                  text-2xl
+                  md:text-normal
+                  font-sans
+                  md:font-serif
                 "
               >
-                {{ r.about }}
-              </p>
-            </div>
-            <div
-              class="
-                col-span-2
-                my-4
-                md:my-0
-                text-2xl
-                md:text-normal
-                font-sans
-                md:font-serif
-              "
-            >
-              Listen
-            </div>
-            <div class="col-span-10 md:flex gap-4">
-              <a
-                v-for="l in r.listen"
-                :key="l.title"
-                :href="l.url"
-                target="_blank"
-                class="block text-xl my-4 md:my-0 font-semibold hover:underline"
-                >{{ l.title }}</a
+                About
+              </div>
+              <div class="col-span-10">
+                <p
+                  class="text-xl sm:text-2xl leading-normal xl:max-w-screen-md"
+                >
+                  {{ r.about }}
+                </p>
+              </div>
+              <div
+                class="
+                  col-span-2
+                  my-4
+                  md:my-0
+                  text-2xl
+                  md:text-normal
+                  font-sans
+                  md:font-serif
+                "
               >
+                Listen
+              </div>
+              <div class="col-span-10 md:flex gap-4">
+                <a
+                  v-for="l in r.listen"
+                  :key="l.title"
+                  :href="l.url"
+                  target="_blank"
+                  class="
+                    block
+                    text-xl
+                    my-4
+                    md:my-0
+                    font-semibold
+                    hover:underline
+                  "
+                  >{{ l.title }}</a
+                >
+              </div>
             </div>
           </div>
         </article>

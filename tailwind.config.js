@@ -20,6 +20,9 @@ module.exports = {
         serif: ['"novela"'],
         helvetica: ['"neue-haas-grotesk-display"']
       },
+      fontSize: {
+        '10xl': "10rem",
+      }
     },
   },
   variants: {

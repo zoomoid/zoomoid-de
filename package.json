@@ -1,25 +1,16 @@
 {
-  "name": "zoomoid-de",
-  "version": "4.0.1",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
-  },
-  "dependencies": {
-    "vue": "^3.0.5",
-    "vue-router": "^4.0.3"
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.2.3",
-    "@vue/compiler-sfc": "^3.0.5",
-    "autoprefixer": "^10.2.6",
-    "postcss": "^8.3.5",
-    "postcss-nested": "^5.0.5",
-    "tailwindcss": "^2.2.4",
-    "typescript": "^4.3.2",
-    "vite": "^2.3.8",
-    "vue-tsc": "^0.0.24"
+    "nuxt3": "latest"
   },
-  "license": "MIT"
+  "dependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19"
+  }
 }

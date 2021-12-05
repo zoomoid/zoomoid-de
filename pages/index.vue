@@ -80,7 +80,7 @@
         </h1>
       </section>
       <section class="py-[6.6vmax] px-[4vw] xl:max-w-[1800px] mx-auto">
-        <article class="flex justify-end mb-24" id="about">
+        <article id="about" class="flex justify-end mb-24">
           <div class="lg:w-[75%]">
             <div class="md:grid grid-cols-12 px-4 md:px-0">
               <div class="col-span-2">
@@ -107,7 +107,7 @@
             </div>
           </div>
         </article>
-        <article class="flex justify-end" id="work">
+        <article id="work" class="flex justify-end">
           <div class="lg:w-[75%]">
             <div class="md:grid grid-cols-12 px-4 md:px-0">
               <div class="col-span-2">
@@ -163,11 +163,11 @@
       </section>
       <section class="">
         <article
-          class="md:flex justify-end py-[6.6vmax] px-[4vw]"
           v-for="r in releases"
-          :key="r.title"
-          :class="r.theme"
           :id="r.anchor"
+          :key="r.title"
+          class="md:flex justify-end py-[6.6vmax] px-[4vw]"
+          :class="r.theme"
         >
           <div
             class="
@@ -255,7 +255,7 @@
         </article>
       </section>
       <section class="py-[6.6vmax] px-[4vw] xl:max-w-[1800px] mx-auto">
-        <article class="flex justify-end mb-24" id="about">
+        <article id="about" class="flex justify-end mb-24">
           <div class="lg:w-[75%]">
             <div class="md:grid grid-cols-12 px-4 md:px-0">
               <div class="col-span-2">
@@ -353,7 +353,7 @@
             </div>
           </div>
           <div class="col-span-3 md:mt-0 mt-4">
-            <div class="" v-for="s in socials" :key="s.title">
+            <div v-for="s in socials" :key="s.title" class="">
               <a :href="s.url" target="_blank">{{ s.title }}</a>
             </div>
           </div>
@@ -366,7 +366,6 @@
 <script lang="ts">
 export default {
   name: 'Index',
-  methods: {},
   data() {
     return {
       showNav: false,
@@ -661,6 +660,7 @@ export default {
       ],
     }
   },
+  methods: {},
 }
 </script>
 

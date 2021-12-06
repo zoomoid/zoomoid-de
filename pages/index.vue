@@ -369,7 +369,7 @@
 
 <script lang="ts">
 export default {
-  name: 'Index',
+  name: 'IndexPage',
   data() {
     return {
       showNav: false,

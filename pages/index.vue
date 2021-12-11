@@ -169,7 +169,17 @@
           class=""
           :class="r.theme"
         >
-          <div class="xl:max-w-[1800px] py-[6.6vmax] px-[4vw] mx-auto md:flex justify-end w-full">
+          <div
+            class="
+              xl:max-w-[1800px]
+              py-[6.6vmax]
+              px-[4vw]
+              mx-auto
+              md:flex
+              justify-end
+              w-full
+            "
+          >
             <div
               class="
                 md:grid
@@ -193,7 +203,6 @@
                   xl:text-8xl
                   font-sans
                 "
-
                 v-html="r.title"
               ></h1>
               <div class="col-span-2"></div>
@@ -225,6 +234,7 @@
                 </p>
               </div>
               <div
+                v-if="r.listen"
                 class="
                   col-span-2
                   my-4
@@ -638,6 +648,16 @@ export default {
               url: 'https://soundcloud.com/zoomoid/sets/sehnsucht-2',
             },
           ],
+        },
+        {
+          theme: ['text-white', 'bg-[#0a0f12]'],
+          title: 'Im Schatten Der Nacht',
+          cover: {
+            url: '/img/im_schatten_der_nacht.jpg',
+          },
+          anchor: 'im-schatten-der-nacht',
+          date: 'Dec 17, 2021',
+          about: `“Im Schatten Der Nacht” is a small driving Techno EP that comes to live when leaving the club early in the morning and heading home while still buzzing from the night before.`,
         },
       ],
       socials: [

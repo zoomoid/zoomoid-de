@@ -6,27 +6,26 @@ export default {
   head: {
     title: 'zoomoid.de',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: []
+    link: [],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    "./assets/css/tailwind.css",
-    "./assets/fonts/basier/font.css",
-    "./assets/fonts/novela/font.css",
+    './assets/css/tailwind.css',
+    './assets/fonts/basier/font.css',
+    './assets/fonts/novela/font.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: false,
@@ -35,21 +34,18 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    '@nuxtjs/tailwindcss'
+    '@nuxt/postcss8',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
+  modules: [],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: {
-      postcssOptions: {
-        plugins: {
-          tailwindcss: {},
-          autoprefixer: {},
-        },
+      plugins: {
+        'tailwindcss': {},
+        'autoprefixer': {},
       },
     },
   },

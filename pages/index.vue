@@ -658,6 +658,28 @@ export default {
           anchor: 'im-schatten-der-nacht',
           date: 'Dec 17, 2021',
           about: `“Im Schatten Der Nacht” is a small driving Techno EP that comes to live when leaving the club early in the morning and heading home while still buzzing from the night before.`,
+          listen: [
+            {
+              title: 'Spotify',
+              url: 'https://open.spotify.com/album/7f4KBtXh4qiKwaItN8Gsfa'
+            },
+            {
+              title: 'Apple Music',
+              url: 'https://music.apple.com/de/album/im-schatten-der-nacht-single/1598757541',
+            },
+            {
+              title: 'YouTube Music',
+              url: 'https://music.youtube.com/playlist?list=OLAK5uy_lOu4um5kTsOIgAbx2awbQAElVVlqdQqmg'
+            },
+            {
+              title: 'Bandcamp',
+              url: 'https://zoomoid.bandcamp.com/album/im-schatten-der-nacht',
+            },
+            {
+              title: 'SoundCloud',
+              url: 'https://soundcloud.com/zoomoid/sets/im-schatten-der-nacht'
+            }
+          ]
         },
       ],
       socials: [

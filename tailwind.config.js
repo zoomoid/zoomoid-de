@@ -1,17 +1,14 @@
 module.exports = {
   content: [
-    "./components/**/*.{vue,js}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./styles/globals.css",
   ],
   theme: {
     extend: {
       fontFamily: {
         sans: ['"basiersquare"'],
-        serif: ['"novela"'],
-        helvetica: ['"neue-haas-grotesk-display"']
+        serif: ['"Novela"'],
       },
       fontSize: {
         '10xl': "10rem",
@@ -22,4 +19,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-};
+}

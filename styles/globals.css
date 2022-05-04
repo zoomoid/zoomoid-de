@@ -1,0 +1,55 @@
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons+Sharp);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-orange-600 font-serif;
+  }
+  a {
+    color: inherit;
+    @apply hover:underline;
+  }
+}
+
+.slide-enter-active,
+.slide-exit-active {
+  transition: transform 200s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide-enter-active,
+  .slide-exit-active {
+    transition-property: none;
+  }
+}
+
+.slide-enter {
+  transform: translateX(120%);
+}
+
+.slide-enter-active {
+  transform: translateX(0%);
+}
+
+.slide-enter-done {
+  transform: translateX(0%);
+}
+
+.slide-exit {
+  transform: translateX(0%);
+}
+
+.slide-exit-active {
+  transform: translateX(120%);
+}

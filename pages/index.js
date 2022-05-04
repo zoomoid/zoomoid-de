@@ -348,13 +348,14 @@ export default function Home() {
               <Image
                 layout="responsive"
                 src="/img/banner.jpg"
+                alt="Zoomoid at a busstop gazing into the night"
                 width={2500}
                 height={1095}
               ></Image>
             </div>
             <h1 className="text-5xl sm:text-5xl md:text-7xl lg:text-7xl xl:text-7xl font-semibold  font-sans">
               Zoomoid is a young, aspiring artist and producer, based in Aachen,
-              Germany. He's making electronic music with a concept and a
+              Germany. He&apos;s making electronic music with a concept and a
               heartbeat.
             </h1>
           </div>
@@ -376,10 +377,10 @@ export default function Home() {
                 </div>
                 <div className="col-span-7 text-xl sm:text-2xl leading-normal">
                   <p className="">
-                    I've been tinkering around with electronic music for almost
+                    I&apos;ve been tinkering around with electronic music for almost
                     a decade now. My experiments with different styles lead to
                     the genres I like today and such have in turn inspired new
-                    creations. Over the past years, I've learned that I want my
+                    creations. Over the past years, I&apos;ve learned that I want my
                     music to be organic and harmonic, and that my instrument of
                     choice is a synthesizer.
                   </p>
@@ -405,7 +406,7 @@ export default function Home() {
                   <p className="mb-4">
                     The first large release of Zoomoid landed in September 2018,
                     with more quickly succeeding the album “Life Is About Making
-                    Memories".
+                    Memories”.
                   </p>
                   <p className="mb-4">
                     In 2019, Zoomoid released his concept album “Eigenräume”,
@@ -424,7 +425,7 @@ export default function Home() {
                     music. Some say that this was the time, his talent to tell a
                     story with his music came present. Later that year, he
                     released “Voyager”, a tribute to his love for space and
-                    mankind's venture into the unknown. The 10-track album tells
+                    mankind&apos;s venture into the unknown. The 10-track album tells
                     a story of leaving earth and the tracks unfold into a
                     mixture of driving Techno and beautifully crafted melodies
                     and harmonies.

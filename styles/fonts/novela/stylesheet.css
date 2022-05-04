@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "novela";
+  font-family: "Novela";
   src: url("novela-regular-webfont.eot");
   src: url("novela-regular-webfont.eot?#iefix") format("embedded-opentype"),
     url("novela-regular-webfont.woff2") format("woff2"),
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-  font-family: "novela";
+  font-family: "Novela";
   src: url("novela-regularitalic-webfont.eot");
   src: url("novela-regularitalic-webfont.eot?#iefix")
       format("embedded-opentype"),

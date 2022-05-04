@@ -1,39 +1,24 @@
 {
   "name": "zoomoid-de",
-  "version": "2021.12.5",
-  "private": false,
-  "license": "MIT",
-  "author": {
-    "name": "Alexander Bartolomey",
-    "email": "occloxium@gmail.com",
-    "url": "https://github.com/zoomoid"
-  },
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "yarn lint:js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "core-js": "^3.21.1",
-    "nuxt": "^2.15.7"
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-transition-group": "^4.4.2"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.17.0",
-    "@nuxt/postcss8": "^1.1.3",
-    "@nuxt/types": "^2.15.7",
-    "@nuxt/typescript-build": "^2.1.0",
-    "@nuxtjs/eslint-config-typescript": "^8.0.0",
-    "@nuxtjs/eslint-module": "^3.0.2",
-    "autoprefixer": "^10.4.4",
-    "eslint": "^8.11.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-nuxt": "^3.2.0",
-    "eslint-plugin-vue": "^8.5.0",
-    "postcss": "^8.4.12",
-    "prettier": "^2.3.2",
-    "tailwindcss": "^3"
+    "autoprefixer": "^10.4.7",
+    "eslint": "8.14.0",
+    "eslint-config-next": "12.1.6",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24"
   }
 }

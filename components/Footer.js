@@ -3,7 +3,7 @@ export default function Footer(props) {
 
   const socialElements = socials.map((s) => (
     <div key={s.title}>
-      <a href={s.url} target="_blank">
+      <a href={s.url} target="_blank" rel="noreferrer">
         {s.title}
       </a>
     </div>
@@ -26,7 +26,7 @@ export default function Footer(props) {
               <p className="text-sm">
                 Made with NextJS, TailwindCSS, and coffee on a cold day
               </p>
-              <p className="text-sm">Inspired by Squarespace's Suhama</p>
+              <p className="text-sm">Inspired by Squarespace&apos;s Suhama</p>
             </div>
           </div>
           <div className="col-span-3 md:mt-0 mt-4">{socialElements}</div>

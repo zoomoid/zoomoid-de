@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
@@ -5,7 +6,7 @@ export default function Header(props) {
   const [showNav, setShowNav] = useState(false);
   const desktopNav = props.nav.map((action) => (
     <div key={action.title}>
-      <a href={action.url} target="_blank">
+      <a href={action.url} target="_blank" rel="noreferrer">
         {action.title}
       </a>
     </div>
@@ -13,18 +14,17 @@ export default function Header(props) {
 
   const mobileNav = props.nav.map((action) => (
     <div key={action.title} className="px-4 text-center text-2xl my-4">
-      <a href={action.url} target="_blank">
+      <a href={action.url} target="_blank" rel="noreferrer">
         {action.title}
       </a>
     </div>
   ));
-  const wrapper = React.createRef();
 
   return (
     <header className="text-white px-[4vw] py-[3vw]">
       <div className="flex items-center px-4 md:px-0">
         <div className="font-semibold text-3xl tracking font-sans">
-          <a href="/">Zoomoid</a>
+          <Link href="/">Zoomoid</Link>
         </div>
         <div className="flex-grow flex justify-end">
           <nav className="flex-wrap gap-4 tracking-wide hidden md:flex">

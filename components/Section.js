@@ -8,6 +8,7 @@ export default function Section(props) {
       key={l.title}
       href={l.url}
       target="_blank"
+      rel="noreferrer"
       className="block text-xl my-4 md:my-0 font-semibold hover:underline"
     >
       {l.title}

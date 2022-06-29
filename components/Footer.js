@@ -1,5 +1,17 @@
-export default function Footer(props) {
-  const socials = props.socials;
+import useSWR from "swr";
+
+const fetcher = (url) => fetch(url).then((res) => res.json());
+
+export default function Footer() {
+  const { data, error } = useSWR("/api/socials", fetcher);
+  if (error) {
+    return <></>;
+  }
+  if (!data) {
+    return <></>;
+  }
+
+  const socials = data.socials;
 
   const socialElements = socials.map((s) => (
     <div key={s.title}>

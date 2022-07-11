@@ -16,7 +16,7 @@ export default function Section(props) {
   ));
 
   return (
-    <article id={release.id} className={release.theme.join(" ")}>
+    <article id={release.id} className="bg-neutral-100 text-black">
       <div className="xl:max-w-[1800px] py-[6.6vmax] px-[4vw] mx-auto md:flex justify-end w-full">
         <div className="md:grid grid-cols-12 md:gap-y-4 items-start px-4 md:px-0 lg:w-[75%]">
           <span className="col-span-2 my-2">{release.date}</span>

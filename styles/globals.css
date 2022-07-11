@@ -14,11 +14,18 @@
     box-sizing: border-box;
   }
   body {
-    @apply bg-orange-600 font-serif;
+    @apply bg-neutral-100 text-black font-serif;
   }
   a {
     color: inherit;
     @apply hover:underline;
+  }
+}
+
+@layer utilities {
+  .container {
+    width: 93.33333%;
+    margin: 0 auto;
   }
 }
 
@@ -53,3 +60,5 @@
 .slide-exit-active {
   transform: translateX(120%);
 }
+
+

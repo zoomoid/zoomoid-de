@@ -10,9 +10,6 @@ module.exports = {
         sans: ['"basiersquare"'],
         serif: ['"Novela"'],
       },
-      fontSize: {
-        '10xl': "10rem",
-      }
     },
   },
   variants: {

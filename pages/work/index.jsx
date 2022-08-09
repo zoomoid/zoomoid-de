@@ -55,7 +55,7 @@ function Covers() {
     <div className="hero overflow-hidden absolute p-36 h-full w-full">
       <style jsx global>{`
         .cover-image {
-          width: min(50vw, 250px);
+          width: min(50vw, 360px);
           isolation: isolate;
           position: absolute;
           transform: translate3d(-50%, -50%, 0);
@@ -93,14 +93,14 @@ function Covers() {
               <Image
                 className="cover-image--inner"
                 src={url}
-                width={250}
-                height={250}
+                width={360}
+                height={360}
               ></Image>
               <Image
                 className="cover-image--blurred"
                 src={url}
-                width={250}
-                height={250}
+                width={360}
+                height={360}
               ></Image>
             </div>
           );
@@ -117,7 +117,9 @@ function Hero() {
       <div className="container max-w-screen-2xl pt-24 pb-8 flex">
         <div className="flex-grow flex flex-col justify-end relative z-[45]">
           <div className="flex items-center justify-center flex-col h-full">
-            <Image src={banner} className="w-64"></Image>
+            <div className="p-24 rounded-xl backdrop-blur-lg border border-neutral-700 border-opacity-20">
+              <Image src={banner} className="w-64"></Image>
+            </div>
           </div>
           <h1 className="text-white text-5xl mb-8">Music with a heartbeat.</h1>
           <div className="px-4 py-2 mb-24 font-sans text-xl flex-grow text-white">

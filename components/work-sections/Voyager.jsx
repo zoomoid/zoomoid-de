@@ -3,7 +3,7 @@ import voyager_cover from "public/img/covers/voyager.jpg";
 import andromeda from "public/waveforms/voyager/Andromeda.svg";
 import blindflug from "public/waveforms/voyager/Blindflug.svg";
 import hale_bopp from "public/waveforms/voyager/Hale-Bopp.svg";
-import icarus from "public/waveforms/voyager/icarus.svg";
+import icarus from "public/waveforms/voyager/Icarus.svg";
 import io from "public/waveforms/voyager/Io.svg";
 import mars from "public/waveforms/voyager/Mars.svg";
 import new_horizons from "public/waveforms/voyager/New Horizons.svg";

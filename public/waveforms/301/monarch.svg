@@ -1,6 +1,6 @@
 <svg 
   baseProfile="tiny"
-  preserveAspectRatio="true"
+  preserveAspectRatio="keep"
   version="1.2"
   viewBox="0 0 2400 150"
   height="100%" width="100%"

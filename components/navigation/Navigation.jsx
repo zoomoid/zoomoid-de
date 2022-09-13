@@ -8,14 +8,14 @@ function DesktopNavigation(props) {
   const nav = props.navigation;
 
   return (
-    <header
+    <div
       className={
         props.className +
         " " +
-        "max-w-screen-2xl container py-2 hidden md:flex absolute top-0 left-0 right-0 z-50"
+        "fixed top-0 left-0 right-0 z-50 backdrop-filter backdrop-blur-md border-b border-white border-opacity-10 transition-colors"
       }
     >
-      <div className="flex flex-grow items-center px-4 md:px-0">
+      <div className="max-w-screen-2xl container py-2 hidden md:flex flex-grow items-center px-4 md:px-0">
         <div className="font-semibold text-2xl tracking font-sans">
           <Link href="/">Zoomoid</Link>
         </div>
@@ -27,15 +27,13 @@ function DesktopNavigation(props) {
               className="font-sans font-semibold text-sm uppercase"
             >
               <Link href={action.url} passHref={true}>
-                <a rel="noreferrer">
-                  {action.title}
-                </a>
+                <a rel="noreferrer">{action.title}</a>
               </Link>
             </div>
           ))}
         </nav>
       </div>
-    </header>
+    </div>
   );
 }
 
@@ -43,20 +41,20 @@ function MobileNavigation(props) {
   const nav = props.navigation;
   const mobileNav = nav.map((action) => (
     <div key={action.title} className="font-sans mb-2">
-      <a href={action.url} target="_blank" rel="noreferrer">
-        {action.title}
-      </a>
+      <Link href={action.url} passHref={true}>
+        <a rel="noreferrer">{action.title}</a>
+      </Link>
     </div>
   ));
 
   const [showNav, setShowNav] = useState(false);
 
   return (
-    <header
+    <div
       className={
         props.className +
         " " +
-        "container max-w-screen-2xl py-2 md:hidden absolute top-0 left-0 right-0 z-50"
+        "container max-w-screen-2xl py-2 md:hidden absolute top-0 left-0 right-0 z-50 transition-colors"
       }
     >
       <div className="flex items-center">
@@ -98,7 +96,7 @@ function MobileNavigation(props) {
           </div>
         </div>
       )}
-    </header>
+    </div>
   );
 }
 
@@ -114,7 +112,7 @@ export default function Navigation(props) {
   if (!data) return <header></header>;
 
   return (
-    <>
+    <header className="">
       <DesktopNavigation
         className={props.className}
         navigation={data}
@@ -124,6 +122,6 @@ export default function Navigation(props) {
         background={props.background}
         navigation={data}
       ></MobileNavigation>
-    </>
+    </header>
   );
 }

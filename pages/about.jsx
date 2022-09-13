@@ -9,7 +9,7 @@ export default function About() {
     <Layout theme={{ text: "text-black", bg: "bg-white" }}>
       <div className="max-w-screen-2xl container">
         <section className="mt-24 md:mt-64 mb-8 md:grid grid-cols-2">
-          <p className="text-3xl">
+          <p className="text-3xl font-serif">
             Zoomoid is a young, aspiring artist and producer, based in Aachen,
             Germany. He&apos;s making electronic music with a concept and a
             heartbeat.
@@ -28,7 +28,7 @@ export default function About() {
       </section>
       <div className="max-w-screen-2xl container">
         <section id="about" className="text-xl md:grid grid-cols-2 mt-8">
-          <p className="leading-normal">
+          <p className="leading-normal font-serif">
             I&apos;ve been tinkering around with electronic music for almost a
             decade now. My experiments with different styles lead to the genres
             I like today and such have in turn inspired new creations. Over the
@@ -38,8 +38,8 @@ export default function About() {
         </section>
         <Timeline></Timeline>
         <section className="md:grid grid-cols-2 mt-16 mb-8 border-t border-neutral-300 border-opacity-50 pt-8 ">
-          <p className="text-2xl mb-8">Work</p>
-          <div className="text-lg md:text-xl leading-normal">
+          <p className="text-2xl mb-8 font-serif">Work</p>
+          <div className="text-lg md:text-xl leading-normal font-serif">
             <p className="mb-4">
               The first large release of Zoomoid landed in September 2018, with
               more quickly succeeding the album “Life Is About Making Memories”.

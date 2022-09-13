@@ -45,7 +45,7 @@ function TimelineElements() {
       <Link key={title} href={url}>
         <div className="mb-8 font-sans">
           <h5 className="cursor-pointer">{title}</h5>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 text-xs md:text-normal">
             <time className="cursor-pointer text-opacity-50 text-black">
               {date}
             </time>
@@ -53,7 +53,7 @@ function TimelineElements() {
             <div className="">
               {topics.map((t) => (
                 <Link key={t} href={`/work?filter=${encodeURIComponent(t)}`}>
-                  <span className="cursor-pointer  text-opacity-50 text-black hover:text-opacity-100 after:content-[',_'] last:after:content-[]">
+                  <span className="cursor-pointer text-opacity-50 text-black hover:text-opacity-100 after:content-[',_'] last:after:content-[]">
                     {t}
                   </span>
                 </Link>
@@ -71,7 +71,7 @@ function TimelineElements() {
 export default function Timeline() {
   return (
     <section className="md:grid grid-cols-2 mt-16 mb-8 pt-8">
-      <p className="text-2xl mb-8">Timeline</p>
+      <p className="text-2xl mb-8 font-serif">Timeline</p>
       <div className="leading-normal">
         <TimelineElements></TimelineElements>
         <div className="text-black hover:text-opacity-60 text-xs sm:text-sm py-2 inline-block mt-4 font-sans font-medium tracking-wide uppercase cursor-pointer">

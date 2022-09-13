@@ -4,6 +4,7 @@ import Head from "next/head";
 
 export default function Layout(props) {
   const theme = props.theme ?? { text: "text-white", bg: "bg-black" };
+
   return (
     <>
       {props.head ?? (
@@ -15,7 +16,9 @@ export default function Layout(props) {
         </Head>
       )}
       <Navigation className={theme.text} background={theme.bg}></Navigation>
-      <main className={"min-h-screen" + props.className}>{props.children}</main>
+      <main className={"min-h-screen " + (props.className ?? "")}>
+        {props.children}
+      </main>
       <Footer></Footer>
     </>
   );

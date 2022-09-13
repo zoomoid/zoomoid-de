@@ -14,7 +14,7 @@
     box-sizing: border-box;
   }
   body {
-    @apply bg-neutral-100 text-black font-serif;
+    @apply bg-neutral-100 text-black;
   }
   a {
     color: inherit;

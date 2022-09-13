@@ -57,7 +57,7 @@ export default function Sehnsucht() {
           </p>
         </div>
         <div className="">
-          <Image src={moved_permanently_cover}></Image>
+          <Image src={moved_permanently_cover} alt=""></Image>
         </div>
         <div className="col-span-2 w-full">
           <ol className="list-decimal">
@@ -78,6 +78,7 @@ export default function Sehnsucht() {
                   <Image
                     className="w-full max-w-xl py-2 invert"
                     src={track.waveform}
+                    alt=""
                   ></Image>
                 </li>
               );

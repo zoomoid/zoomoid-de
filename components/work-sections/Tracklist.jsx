@@ -13,6 +13,7 @@ function Track({ track, style }) {
         className={"w-full max-w-xl py-2"}
         style={style}
         src={track.waveform}
+        alt=""
       ></Image>
     </li>
   );
@@ -22,7 +23,7 @@ export default function Tracklist({ tracks, className, style }) {
   return (
     <ol className={"list-decimal" + " " + className}>
       {tracks.map((t) => {
-        return <Track key={t.title} style={style} track={t}></Track>;
+        return <Track key={t.title} style={style} track={t} alt=""></Track>;
       })}
     </ol>
   );

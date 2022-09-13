@@ -11,12 +11,12 @@ import schoeneberg_at_night from "public/waveforms/eigenraeume-extended-edition/
 import stockholm from "public/waveforms/eigenraeume-extended-edition/stockholm (concept).svg";
 import symphonic_dreams from "public/waveforms/eigenraeume-extended-edition/symphonic dreams (intro).svg";
 import valletta from "public/waveforms/eigenraeume-extended-edition/valletta (bonus).svg";
-import intersection from "./intersections";
+import useIntersection from "./intersections";
 
 export default function EigenraeumeExtended(props) {
   const navigationThemeUpdate = props.onScrollOver ?? ((_) => ({}));
 
-  const [box, effect] = intersection(navigationThemeUpdate, {
+  const [box, effect] = useIntersection(navigationThemeUpdate, {
     text: "text-neutral-900",
     bg: "bg-black",
   });
@@ -94,7 +94,7 @@ export default function EigenraeumeExtended(props) {
             Eigenräume (Extended Edition)
           </h2>
           <p className="text-lg md:text-2xl leading-normal">
-            “Eigenräume (Extended Edition)” is 2019's main Zoomoid release, with
+            “Eigenräume (Extended Edition)” is 2019&apos;s main Zoomoid release, with
             11 tracks (again), intro and outro, and seamless blending of tracks
             (at least on the first 7 tracks)! It also features 3 tracks that
             were written after the original concept album was created, but
@@ -103,7 +103,7 @@ export default function EigenraeumeExtended(props) {
           </p>
         </div>
         <div className="">
-          <Image src={eigenraeume_extended_cover}></Image>
+          <Image src={eigenraeume_extended_cover} alt=""></Image>
         </div>
         <div className="col-span-2 w-full">
           <ol className="list-decimal">
@@ -124,6 +124,7 @@ export default function EigenraeumeExtended(props) {
                   <Image
                     className={"w-full max-w-xl py-2"}
                     src={track.waveform}
+                    alt=""
                   ></Image>
                 </li>
               );

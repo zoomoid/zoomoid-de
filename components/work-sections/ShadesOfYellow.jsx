@@ -2,12 +2,12 @@ import Image from "next/future/image";
 import shades_of_yellow_cover from "public/img/covers/shades_of_yellow.jpg";
 import malheureux_en_amour from "public/waveforms/shades-of-yellow/malheureux_en_amour.svg";
 import shades_of_yellow from "public/waveforms/shades-of-yellow/shades_of_yellow.svg";
-import intersection from "./intersections";
+import useIntersection from "./intersections";
 
 export default function Sehnsucht(props) {
   const navigationThemeUpdate = props.onScrollOver ?? ((_) => ({}));
 
-  const [box, effect] = intersection(navigationThemeUpdate, {
+  const [box, effect] = useIntersection(navigationThemeUpdate, {
     text: "text-neutral-900",
     bg: "bg-black",
   });
@@ -49,14 +49,14 @@ export default function Sehnsucht(props) {
           </h2>
           <p className="text-lg md:text-2xl leading-normal">
             “Shades Of Yellow” is an emotional ode to the relationship I have
-            with the color Yellow and the closest thing I've come to writing a
+            with the color Yellow and the closest thing I&apos;ve come to writing a
             love song. Both tracks move me in a very special way, and there are
             many many memories attached to them. I know some other people do as
             well and I hope, you can, too.
           </p>
         </div>
         <div className="">
-          <Image src={shades_of_yellow_cover}></Image>
+          <Image src={shades_of_yellow_cover} alt=""></Image>
         </div>
         <div className="col-span-2 w-full">
           <ol className="list-decimal">
@@ -77,6 +77,7 @@ export default function Sehnsucht(props) {
                   <Image
                     className="w-full max-w-xl py-2"
                     src={track.waveform}
+                    alt=""
                   ></Image>
                 </li>
               );

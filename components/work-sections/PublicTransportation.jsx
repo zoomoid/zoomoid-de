@@ -69,14 +69,14 @@ export default function Sehnsucht() {
             make an EP from numberous impressions saved from years of using
             public transport almost every weekend. The idea got burried in a
             notebook for a year until I picked it up and sketched a trip on my
-            usual train route through some cities in NRW. It's real, it's
-            honest, it's got sharp edges and it's certainly different to my
-            other work in that year. Yet, it's a favourite of a lot of people
+            usual train route through some cities in NRW. It&apos;s real, it&apos;s
+            honest, it&apos;s got sharp edges and it&apos;s certainly different to my
+            other work in that year. Yet, it&apos;s a favourite of a lot of people
             for exactly that reason.” — Zoomoid
           </p>
         </div>
         <div className="">
-          <Image src={public_transportation_cover}></Image>
+          <Image src={public_transportation_cover} alt=""></Image>
         </div>
         <div className="col-span-2 w-full">
           <ol className="list-decimal">
@@ -97,6 +97,7 @@ export default function Sehnsucht() {
                   <Image
                     className="w-full max-w-xl py-2 invert"
                     src={track.waveform}
+                    alt=""
                   ></Image>
                 </li>
               );

@@ -67,6 +67,7 @@ function Covers() {
                   src={url}
                   width={360}
                   height={360}
+                  alt=""
                 ></Image>
                 {/* <Image
                 className="cover-image--blurred"
@@ -90,7 +91,7 @@ function Hero() {
         <div className="flex-grow flex flex-col justify-end relative z-[45]">
           <div className="flex items-center justify-center flex-col h-full">
             <div className="md:py-24 md:px-48 py-8 px-16 backdrop-blur-lg border border-neutral-500 border-opacity-10">
-              <Image src={banner} className="md:w-64 w-32"></Image>
+              <Image alt="" src={banner} className="md:w-64 w-32"></Image>
             </div>
           </div>
           <h1 className="text-white text-3xl font-bold md:font-normal md:text-5xl mb-8">Music with a heartbeat.</h1>

@@ -60,7 +60,7 @@ export default function Eigenraeume() {
           </p>
         </div>
         <div className="">
-          <Image src={eigenraeume_standard_cover}></Image>
+          <Image src={eigenraeume_standard_cover} alt=""></Image>
         </div>
         <div className="col-span-2 w-full">
           <ol className="list-decimal">
@@ -81,6 +81,7 @@ export default function Eigenraeume() {
                   <Image
                     className="w-full max-w-xl py-2 invert"
                     src={track.waveform}
+                    alt=""
                   ></Image>
                 </li>
               );

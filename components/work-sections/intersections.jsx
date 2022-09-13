@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export default function intersection(callback, withTheme) {
+export default function useIntersection(callback, withTheme) {
   const containerRef = useRef(null);
 
   const options = {
@@ -15,7 +15,7 @@ export default function intersection(callback, withTheme) {
     else callback();
   };
 
-  const effect = function () {
+  const useIntersectionObserver = function () {
     useEffect(() => {
       const observer = new IntersectionObserver(cb, {
         ...options,
@@ -35,5 +35,5 @@ export default function intersection(callback, withTheme) {
     ></div>
   );
 
-  return [box, effect];
+  return [box, useIntersectionObserver];
 }

@@ -3,7 +3,6 @@ import im_schatten_der_nacht_cover from "public/img/covers/im_schatten_der_nacht
 import im_schatten_der_nacht from "public/waveforms/im-schatten-der-nacht/im-schatten-der-nacht.svg";
 import morgendaemmerung from "public/waveforms/im-schatten-der-nacht/morgendaemmerung.svg";
 import schemen from "public/waveforms/im-schatten-der-nacht/schemen.svg";
-import Tracklist from "./Tracklist";
 
 export default function ImSchattenDerNacht() {
   const tracks = [
@@ -50,7 +49,7 @@ export default function ImSchattenDerNacht() {
           </p>
         </div>
         <div className="">
-          <Image src={im_schatten_der_nacht_cover}></Image>
+          <Image src={im_schatten_der_nacht_cover} alt=""></Image>
         </div>
         <div className="col-span-2 w-full">
           <ol className="list-decimal">
@@ -71,6 +70,7 @@ export default function ImSchattenDerNacht() {
                   <Image
                     className="w-full max-w-xl py-2 invert"
                     src={track.waveform}
+                    alt=""
                   ></Image>
                 </li>
               );

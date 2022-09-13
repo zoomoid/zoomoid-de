@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="uppercase font-sans font-semibold text-2xl mb-8 cursor-pointer">
           <Link href="/" passHref={true}>
             <a>
-              <Image src={img} className="w-40"></Image>
+              <Image src={img} className="w-40" alt=""></Image>
             </a>
           </Link>
         </div>

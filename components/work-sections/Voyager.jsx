@@ -91,7 +91,7 @@ export default function LifeIsAboutMakingMemories() {
           </p>
         </div>
         <div className="relative z-0 mix-blend-screen">
-            <Image className="" src={voyager_cover}></Image>
+            <Image className="" src={voyager_cover} alt=""></Image>
           </div>
         <div className="col-span-2 w-full">
           <ol className="list-decimal">
@@ -112,6 +112,7 @@ export default function LifeIsAboutMakingMemories() {
                   <Image
                     className="w-full max-w-xl py-2 invert"
                     src={track.waveform}
+                    alt=""
                   ></Image>
                 </li>
               );

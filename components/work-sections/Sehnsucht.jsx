@@ -5,12 +5,12 @@ import tueren from "public/waveforms/sehnsucht/Türen.svg";
 import was_ist from "public/waveforms/sehnsucht/Was Ist.svg";
 import malheureux_en_amour from "public/waveforms/sehnsucht/Malheureux en Amour (Acoustic Version).svg";
 import was_bleibt from "public/waveforms/sehnsucht/Was Bleibt.svg";
-import intersection from "./intersections";
+import useIntersection from "./intersections";
 
 export default function Sehnsucht(props) {
   const navigationThemeUpdate = props.onScrollOver ?? ((_) => ({}));
 
-  const [box, effect] = intersection(navigationThemeUpdate, {
+  const [box, effect] = useIntersection(navigationThemeUpdate, {
     text: "text-neutral-900",
     bg: "bg-black",
   });
@@ -69,12 +69,12 @@ export default function Sehnsucht(props) {
             “Sehnsucht” is a a 5-track acoustic instrumental album, featuring
             intimate instruments and a huge load of emotions. I wrote those
             tracks with the emotion of missing out and wishing for old times and
-            new times at the same time, trying to express what I've been feeling
+            new times at the same time, trying to express what I&apos;ve been feeling
             for the last months. I love them all very dearly.
           </p>
         </div>
         <div className="">
-          <Image src={sehnsucht_cover}></Image>
+          <Image src={sehnsucht_cover} alt=""></Image>
         </div>
         <div className="col-span-2 w-full">
           <ol className="list-decimal">
@@ -95,6 +95,7 @@ export default function Sehnsucht(props) {
                   <Image
                     className="w-full max-w-xl py-2"
                     src={track.waveform}
+                    alt=""
                   ></Image>
                 </li>
               );

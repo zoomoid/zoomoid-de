@@ -23,7 +23,7 @@ export default function About() {
             boxShadow: "0 0 25px rgba(0 0 0 / 20%)",
           }}
         >
-          <Image className="" src={zoomoid}></Image>
+          <Image alt="" className="" src={zoomoid}></Image>
         </div>
       </section>
       <div className="max-w-screen-2xl container">

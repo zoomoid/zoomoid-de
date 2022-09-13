@@ -80,7 +80,7 @@ export default function LifeIsAboutMakingMemories() {
       className="bg-neutral-900 text-neutral-200 py-8 md:py-32 relative overflow-hidden"
     >
       <div className="absolute right-0 transform -translate-x-20 -rotate-45 scale-[3] opacity-5">
-        <Image className="invert" src={liamm_banner_vectorized}></Image>
+        <Image className="invert" src={liamm_banner_vectorized} alt=""></Image>
       </div>
       <div className="container max-w-screen-2xl lg:grid grid-cols-2 gap-16 justify-items-center">
         <div>
@@ -99,7 +99,7 @@ export default function LifeIsAboutMakingMemories() {
         <div>
           <div className="">
             {/* <span className="block my-4 font-sans uppercase">Cover Image</span> */}
-            <Image className="mix-blend-screen" src={liamm}></Image>
+            <Image className="mix-blend-screen" src={liamm} alt=""></Image>
           </div>
         </div>
         <div className="col-span-2 w-full">
@@ -121,6 +121,7 @@ export default function LifeIsAboutMakingMemories() {
                   <Image
                     className="w-full max-w-xl py-2 invert"
                     src={track.waveform}
+                    alt=""
                   ></Image>
                 </li>
               );

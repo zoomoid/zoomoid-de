@@ -2,7 +2,7 @@ import Layout from "components/layout/Layout";
 import Timeline from "components/Timeline";
 import Image from "next/future/image";
 import Link from "next/link";
-import zoomoid from "public/img/zoomoid.jpg";
+import zoomoid from "public/img/zoomoid.jpeg";
 
 export default function About() {
   return (
@@ -23,7 +23,7 @@ export default function About() {
             boxShadow: "0 0 25px rgba(0 0 0 / 20%)",
           }}
         >
-          <Image alt="" className="" src={zoomoid}></Image>
+          <Image alt="" className="" placeholder="blur" src={zoomoid}></Image>
         </div>
       </section>
       <div className="max-w-screen-2xl container">

@@ -1,5 +1,5 @@
 import Image from "next/future/image";
-import shades_of_yellow_cover from "public/img/covers/shades_of_yellow.jpg";
+import shades_of_yellow_cover from "public/img/covers/shades_of_yellow.jpeg";
 import malheureux_en_amour from "public/waveforms/shades-of-yellow/malheureux_en_amour.svg";
 import shades_of_yellow from "public/waveforms/shades-of-yellow/shades_of_yellow.svg";
 import useIntersection from "./intersections";
@@ -38,7 +38,7 @@ export default function Sehnsucht(props) {
         <div
           className="absolute top-0 left-0 bottom-0 right-0 w-full h-full bg-cover z-0 saturate-[0.25] blur-md"
           style={{
-            backgroundImage: "url(/img/im-schatten-der-nacht-bg.jpg)",
+            backgroundImage: "url(/img/im-schatten-der-nacht-bg.jpeg)",
           }}
         ></div> */}
       </div>
@@ -56,7 +56,7 @@ export default function Sehnsucht(props) {
           </p>
         </div>
         <div className="">
-          <Image src={shades_of_yellow_cover} alt=""></Image>
+          <Image src={shades_of_yellow_cover} placeholder="blur" alt=""></Image>
         </div>
         <div className="col-span-2 w-full">
           <ol className="list-decimal">

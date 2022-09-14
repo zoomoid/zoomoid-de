@@ -1,5 +1,5 @@
 import Image from "next/future/image";
-import voyager_cover from "public/img/covers/voyager.jpg";
+import voyager_cover from "public/img/covers/voyager.jpeg";
 import andromeda from "public/waveforms/voyager/Andromeda.svg";
 import blindflug from "public/waveforms/voyager/Blindflug.svg";
 import hale_bopp from "public/waveforms/voyager/Hale-Bopp.svg";
@@ -75,7 +75,7 @@ export default function LifeIsAboutMakingMemories() {
         <div
           className="absolute top-0 left-0 bottom-0 right-0 w-full h-full bg-cover saturate-[0.25] z-10 blur-md"
           style={{
-            backgroundImage: "url(/img/voyager-bg.jpg)",
+            backgroundImage: "url(/img/voyager-bg.jpeg)",
           }}
         ></div>
       </div>
@@ -91,7 +91,7 @@ export default function LifeIsAboutMakingMemories() {
           </p>
         </div>
         <div className="relative z-0 mix-blend-screen">
-            <Image className="" src={voyager_cover} alt=""></Image>
+            <Image className="" src={voyager_cover} placeholder="blur" alt=""></Image>
           </div>
         <div className="col-span-2 w-full">
           <ol className="list-decimal">

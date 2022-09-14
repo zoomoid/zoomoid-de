@@ -4,7 +4,7 @@ export const releases = [
     title: "Life Is About Making Memories",
     _title: "Life Is About Making Memories",
     cover: {
-      url: "/img/covers/liamm.jpg",
+      url: "/img/covers/liamm.jpeg",
     },
     anchor: "life-is-about-making-memories",
     date: "September 22, 2018",
@@ -34,7 +34,7 @@ export const releases = [
     title: "Eigenräume",
     _title: "Eigenräume",
     cover: {
-      url: "/img/covers/eigenräume_pre.jpg",
+      url: "/img/covers/eigenräume_pre.jpeg",
     },
     anchor: "eigenräume-standard-edition",
     date: "May 14, 2019",
@@ -60,7 +60,7 @@ export const releases = [
     title: "Eigenräume (Extended Edition)",
     _title: "Eigenräume (Extended Edition)",
     cover: {
-      url: "/img/covers/eigenräume.jpg",
+      url: "/img/covers/eigenräume.jpeg",
     },
     anchor: "eigenräume-extended-edition",
     date: "September 09, 2019",
@@ -94,7 +94,7 @@ export const releases = [
     title: "Public Transpor&shy;tation EP",
     _title: "Public Transportation EP",
     cover: {
-      url: "/img/covers/public_transportation.jpg",
+      url: "/img/covers/public_transportation.jpeg",
     },
     anchor: "public-transportation",
     date: "November 1, 2019",
@@ -135,7 +135,7 @@ export const releases = [
     title: "301 Permanently Moving",
     _title: "301 Permanently Moving",
     cover: {
-      url: "/img/covers/301.jpg",
+      url: "/img/covers/301.jpeg",
     },
     anchor: "301-permanently-moving",
     date: "December 13, 2019",
@@ -165,7 +165,7 @@ export const releases = [
     title: "Shades Of Yellow",
     _title: "Shades Of Yellow",
     cover: {
-      url: "/img/covers/shades_of_yellow.jpg",
+      url: "/img/covers/shades_of_yellow.jpeg",
     },
     anchor: "shades-of-yellow",
     date: "May 1, 2020",
@@ -195,7 +195,7 @@ export const releases = [
     title: "Voyager",
     _title: "Voyager",
     cover: {
-      url: "/img/covers/voyager.jpg",
+      url: "/img/covers/voyager.jpeg",
     },
     anchor: "voyager",
     date: "October 30, 2020",
@@ -228,7 +228,7 @@ export const releases = [
     theme: ["text-white", "bg-green-600"],
     title: "Sehnsucht",
     cover: {
-      url: "/img/covers/sehnsucht.jpg",
+      url: "/img/covers/sehnsucht.jpeg",
     },
     _title: "Sehnsucht",
     anchor: "sehnsucht",
@@ -263,7 +263,7 @@ export const releases = [
     title: "Im Schatten Der Nacht",
     _title: "Im Schatten Der Nacht",
     cover: {
-      url: "/img/covers/im_schatten_der_nacht.jpg",
+      url: "/img/covers/im_schatten_der_nacht.jpeg",
     },
     anchor: "im-schatten-der-nacht",
     date: "December 17, 2021",

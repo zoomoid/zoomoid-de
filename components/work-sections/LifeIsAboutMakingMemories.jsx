@@ -1,5 +1,5 @@
 import Image from "next/future/image";
-import liamm from "public/img/covers/liamm.jpg";
+import liamm from "public/img/covers/liamm.jpeg";
 import liamm_banner_vectorized from "public/img/assets/liamm-banner-vectorized.svg";
 
 import albuquerque from "public/waveforms/life-is-about-making-memories/albuquerque.svg";
@@ -99,7 +99,7 @@ export default function LifeIsAboutMakingMemories() {
         <div>
           <div className="">
             {/* <span className="block my-4 font-sans uppercase">Cover Image</span> */}
-            <Image className="mix-blend-screen" src={liamm} alt=""></Image>
+            <Image className="mix-blend-screen" src={liamm} placeholder="blur" alt=""></Image>
           </div>
         </div>
         <div className="col-span-2 w-full">

@@ -1,5 +1,5 @@
 import Image from "next/future/image";
-import eigenraeume_standard_cover from "public/img/covers/eigenräume_pre.jpg";
+import eigenraeume_standard_cover from "public/img/covers/eigenräume_pre.jpeg";
 import stockholm from "public/waveforms/eigenraeume/stockholm.svg";
 import grossstadt from "public/waveforms/eigenraeume/grossstadt.svg";
 import schoeneberg_at_night from "public/waveforms/eigenraeume/schoeneberg at night.svg";
@@ -60,7 +60,7 @@ export default function Eigenraeume() {
           </p>
         </div>
         <div className="">
-          <Image src={eigenraeume_standard_cover} alt=""></Image>
+          <Image src={eigenraeume_standard_cover} placeholder="blur" alt=""></Image>
         </div>
         <div className="col-span-2 w-full">
           <ol className="list-decimal">

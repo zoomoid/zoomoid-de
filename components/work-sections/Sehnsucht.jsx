@@ -1,5 +1,5 @@
 import Image from "next/future/image";
-import sehnsucht_cover from "public/img/covers/sehnsucht.jpg";
+import sehnsucht_cover from "public/img/covers/sehnsucht.jpeg";
 import was_war from "public/waveforms/sehnsucht/Was War.svg";
 import tueren from "public/waveforms/sehnsucht/Türen.svg";
 import was_ist from "public/waveforms/sehnsucht/Was Ist.svg";
@@ -56,7 +56,7 @@ export default function Sehnsucht(props) {
         <div
           className="absolute top-0 left-0 bottom-0 right-0 w-full h-full bg-cover z-0 saturate-[0.25] blur-md"
           style={{
-            backgroundImage: "url(/img/im-schatten-der-nacht-bg.jpg)",
+            backgroundImage: "url(/img/im-schatten-der-nacht-bg.jpeg)",
           }}
         ></div> */}
       </div>
@@ -74,7 +74,7 @@ export default function Sehnsucht(props) {
           </p>
         </div>
         <div className="">
-          <Image src={sehnsucht_cover} alt=""></Image>
+          <Image src={sehnsucht_cover} placeholder="blur" alt=""></Image>
         </div>
         <div className="col-span-2 w-full">
           <ol className="list-decimal">

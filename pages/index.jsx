@@ -1,7 +1,7 @@
 import Layout from "components/layout/Layout";
 import Image from "next/future/image";
 import Link from "next/link";
-import banner_root from "public/img/banner_root.jpg";
+import banner_root from "public/img/banner_root.jpeg";
 
 function Hero(props) {
   return (
@@ -13,6 +13,7 @@ function Hero(props) {
             className="absolute z-10 h-full object-cover"
             src={banner_root}
             alt="Zoomoid at a busstop gazing into the night"
+            placeholder="blur"
           ></Image>
         </div>
         <div className="z-10 text-white container max-w-screen-2xl pb-24">

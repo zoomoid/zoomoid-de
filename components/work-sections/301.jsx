@@ -1,5 +1,5 @@
 import Image from "next/future/image";
-import moved_permanently_cover from "public/img/covers/301.jpg";
+import moved_permanently_cover from "public/img/covers/301.jpeg";
 import monarch from "public/waveforms/301/monarch.svg";
 import doppler from "public/waveforms/301/doppler.svg";
 import elektron from "public/waveforms/301/elektron.svg";
@@ -39,7 +39,7 @@ export default function Sehnsucht() {
         <div
           className="absolute top-0 left-0 bottom-0 right-0 w-full h-full bg-cover z-0 saturate-[0.25] blur-md"
           style={{
-            backgroundImage: "url(/img/im-schatten-der-nacht-bg.jpg)",
+            backgroundImage: "url(/img/im-schatten-der-nacht-bg.jpeg)",
           }}
         ></div> */}
       </div>
@@ -57,7 +57,7 @@ export default function Sehnsucht() {
           </p>
         </div>
         <div className="">
-          <Image src={moved_permanently_cover} alt=""></Image>
+          <Image src={moved_permanently_cover} placeholder="blur" alt=""></Image>
         </div>
         <div className="col-span-2 w-full">
           <ol className="list-decimal">

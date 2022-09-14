@@ -1,5 +1,5 @@
 import Image from "next/future/image";
-import eigenraeume_extended_cover from "public/img/covers/eigenräume.jpg";
+import eigenraeume_extended_cover from "public/img/covers/eigenräume.jpeg";
 import adieu from "public/waveforms/eigenraeume-extended-edition/adieu (outro).svg";
 import blaues_land from "public/waveforms/eigenraeume-extended-edition/blaues land (concept).svg";
 import congruence from "public/waveforms/eigenraeume-extended-edition/congruence (bonus).svg";
@@ -103,7 +103,7 @@ export default function EigenraeumeExtended(props) {
           </p>
         </div>
         <div className="">
-          <Image src={eigenraeume_extended_cover} alt=""></Image>
+          <Image src={eigenraeume_extended_cover} placeholder="blur" alt=""></Image>
         </div>
         <div className="col-span-2 w-full">
           <ol className="list-decimal">

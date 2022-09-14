@@ -1,5 +1,5 @@
 import Image from "next/future/image";
-import public_transportation_cover from "public/img/covers/public_transportation.jpg";
+import public_transportation_cover from "public/img/covers/public_transportation.jpeg";
 import stargazing from "public/waveforms/public-transportation/01_stargazing.svg";
 import downhill from "public/waveforms/public-transportation/02_downhill.svg";
 import say_it from "public/waveforms/public-transportation/03_say it.svg";
@@ -51,7 +51,7 @@ export default function Sehnsucht() {
         <div
           className="absolute top-0 left-0 bottom-0 right-0 w-full h-full bg-cover z-0 saturate-[0.25] blur-md"
           style={{
-            backgroundImage: "url(/img/im-schatten-der-nacht-bg.jpg)",
+            backgroundImage: "url(/img/im-schatten-der-nacht-bg.jpeg)",
           }}
         ></div> */}
       </div>
@@ -76,7 +76,7 @@ export default function Sehnsucht() {
           </p>
         </div>
         <div className="">
-          <Image src={public_transportation_cover} alt=""></Image>
+          <Image src={public_transportation_cover} placeholder="blur" alt=""></Image>
         </div>
         <div className="col-span-2 w-full">
           <ol className="list-decimal">

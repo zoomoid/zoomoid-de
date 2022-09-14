@@ -1,5 +1,5 @@
 import Image from "next/future/image";
-import im_schatten_der_nacht_cover from "public/img/covers/im_schatten_der_nacht.jpg";
+import im_schatten_der_nacht_cover from "public/img/covers/im_schatten_der_nacht.jpeg";
 import im_schatten_der_nacht from "public/waveforms/im-schatten-der-nacht/im-schatten-der-nacht.svg";
 import morgendaemmerung from "public/waveforms/im-schatten-der-nacht/morgendaemmerung.svg";
 import schemen from "public/waveforms/im-schatten-der-nacht/schemen.svg";
@@ -33,7 +33,7 @@ export default function ImSchattenDerNacht() {
         <div
           className="absolute top-0 left-0 bottom-0 right-0 w-full h-full bg-cover z-0 saturate-[0.25] blur-md"
           style={{
-            backgroundImage: "url(/img/im-schatten-der-nacht-bg.jpg)",
+            backgroundImage: "url(/img/im-schatten-der-nacht-bg.jpeg)",
           }}
         ></div>
       </div>
@@ -49,7 +49,7 @@ export default function ImSchattenDerNacht() {
           </p>
         </div>
         <div className="">
-          <Image src={im_schatten_der_nacht_cover} alt=""></Image>
+          <Image src={im_schatten_der_nacht_cover} placeholder="blur" alt=""></Image>
         </div>
         <div className="col-span-2 w-full">
           <ol className="list-decimal">

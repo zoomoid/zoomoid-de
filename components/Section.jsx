@@ -34,6 +34,7 @@ export default function Section(props) {
                 alt={"Cover of " + release.title}
                 width={1500}
                 height={1500}
+                placeholder="blur"
               ></Image>
             </div>
           </div>

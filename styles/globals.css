@@ -1,4 +1,7 @@
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons+Sharp);
+@import url("./fonts/basier/stylesheet.css");
+@import url("./fonts/material-icons/stylesheet.css");
+@import url("./fonts/novela/stylesheet.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

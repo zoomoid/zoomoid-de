@@ -1,12 +1,8 @@
 import Link from "next/link";
 import { useState } from "react";
-import useSWR from "swr";
-
-const fetcher = (url) => fetch(url).then((res) => res.json());
 
 function DesktopNavigation(props) {
   const nav = props.navigation;
-
   return (
     <div
       className={
@@ -101,15 +97,33 @@ function MobileNavigation(props) {
 }
 
 export default function Navigation(props) {
-  const { data, error } = useSWR("/api/navigation", fetcher);
+  // const { data, error } = useSWR("/api/navigation", fetcher);
 
-  if (error)
-    return (
-      <header>
-        <></>
-      </header>
-    );
-  if (!data) return <header></header>;
+  // if (error)
+  //   return (
+  //     <header>
+  //       <></>
+  //     </header>
+  //   );
+  // if (!data) return <header></header>;
+
+  const data = [
+    {
+      title: "Work",
+      url: "/work",
+      external: false,
+    },
+    {
+      title: "Blog",
+      url: "https://zoomoid.dev/blog",
+      external: true,
+    },
+    {
+      title: "About",
+      url: "/about",
+      external: false,
+    },
+  ]
 
   return (
     <header className="">

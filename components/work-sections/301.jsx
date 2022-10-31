@@ -4,6 +4,7 @@ import monarch from "public/waveforms/301/monarch.svg";
 import doppler from "public/waveforms/301/doppler.svg";
 import elektron from "public/waveforms/301/elektron.svg";
 import outer_space_rework from "public/waveforms/301/outer_space_rework.svg";
+import Track from "components/interactive/Track";
 
 export default function Sehnsucht() {
   const tracks = [
@@ -57,30 +58,22 @@ export default function Sehnsucht() {
           </p>
         </div>
         <div className="">
-          <Image src={moved_permanently_cover} placeholder="blur" alt=""></Image>
+          <Image
+            src={moved_permanently_cover}
+            placeholder="blur"
+            alt=""
+          ></Image>
         </div>
         <div className="col-span-2 w-full">
           <ol className="list-decimal">
             {tracks.map((track) => {
               return (
-                <li
+                <Track
                   key={track.title}
-                  className="py-2 list-none md:flex items-center"
-                >
-                  <div className="flex items-center md:justify-end flex-grow">
-                    <span className="text-neutral-200 text-opacity-80 pr-2 text-xs md:text-normal">
-                      {track.artist}
-                    </span>
-                    <span className="text-sm md:text-lg font-bold md:text-right pr-4">
-                      {track.title}
-                    </span>
-                  </div>
-                  <Image
-                    className="w-full max-w-xl py-2 invert"
-                    src={track.waveform}
-                    alt=""
-                  ></Image>
-                </li>
+                  textColor={"text-neutral-200"}
+                  waveformEffect="invert"
+                  track={track}
+                ></Track>
               );
             })}
           </ol>

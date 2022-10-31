@@ -6,6 +6,7 @@ import schoeneberg_at_night from "public/waveforms/eigenraeume/schoeneberg at ni
 import hoellental from "public/waveforms/eigenraeume/hoellental.svg";
 import heimat from "public/waveforms/eigenraeume/heimat.svg";
 import blaues_land from "public/waveforms/eigenraeume/blaues land.svg";
+import Track from "components/interactive/Track";
 
 export default function Eigenraeume() {
   const tracks = [
@@ -60,30 +61,22 @@ export default function Eigenraeume() {
           </p>
         </div>
         <div className="">
-          <Image src={eigenraeume_standard_cover} placeholder="blur" alt=""></Image>
+          <Image
+            src={eigenraeume_standard_cover}
+            placeholder="blur"
+            alt=""
+          ></Image>
         </div>
         <div className="col-span-2 w-full">
           <ol className="list-decimal">
             {tracks.map((track) => {
               return (
-                <li
+                <Track
                   key={track.title}
-                  className="py-2 list-none md:flex items-center"
-                >
-                  <div className="flex items-center md:justify-end flex-grow">
-                    <span className="text-neutral-200 text-opacity-80 pr-2 text-xs md:text-normal">
-                      {track.artist}
-                    </span>
-                    <span className="font-bold md:text-right pr-4 text-sm md:text-lg">
-                      {track.title}
-                    </span>
-                  </div>
-                  <Image
-                    className="w-full max-w-xl py-2 invert"
-                    src={track.waveform}
-                    alt=""
-                  ></Image>
-                </li>
+                  textColor={"text-neutral-200"}
+                  waveformEffect="invert"
+                  track={track}
+                ></Track>
               );
             })}
           </ol>

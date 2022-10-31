@@ -1,3 +1,4 @@
+import Track from "components/interactive/Track";
 import Image from "next/future/image";
 import shades_of_yellow_cover from "public/img/covers/shades_of_yellow.jpeg";
 import malheureux_en_amour from "public/waveforms/shades-of-yellow/malheureux_en_amour.svg";
@@ -62,24 +63,11 @@ export default function Sehnsucht(props) {
           <ol className="list-decimal">
             {tracks.map((track) => {
               return (
-                <li
+                <Track
                   key={track.title}
-                  className="py-2 list-none md:flex items-center"
-                >
-                  <div className="flex items-center md:justify-end flex-grow">
-                    <span className="text-neutral-800 text-opacity-80 pr-2 text-xs md:text-normal">
-                      {track.artist}
-                    </span>
-                    <span className="text-sm md:text-lg font-bold md:text-right pr-4">
-                      {track.title}
-                    </span>
-                  </div>
-                  <Image
-                    className="w-full max-w-xl py-2"
-                    src={track.waveform}
-                    alt=""
-                  ></Image>
-                </li>
+                  textColor={"text-neutral-800"}
+                  track={track}
+                ></Track>
               );
             })}
           </ol>

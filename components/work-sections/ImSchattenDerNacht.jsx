@@ -1,3 +1,4 @@
+import Track from "components/interactive/Track";
 import Image from "next/future/image";
 import im_schatten_der_nacht_cover from "public/img/covers/im_schatten_der_nacht.jpeg";
 import im_schatten_der_nacht from "public/waveforms/im-schatten-der-nacht/im-schatten-der-nacht.svg";
@@ -55,24 +56,12 @@ export default function ImSchattenDerNacht() {
           <ol className="list-decimal">
             {tracks.map((track) => {
               return (
-                <li
+                <Track
                   key={track.title}
-                  className="py-2 list-none md:flex items-center"
-                >
-                  <div className="flex items-center md:justify-end flex-grow">
-                    <span className="text-neutral-200 text-opacity-80 pr-2 text-xs md:text-normal">
-                      {track.artist}
-                    </span>
-                    <span className="text-sm md:text-lg font-bold md:text-right pr-4">
-                      {track.title}
-                    </span>
-                  </div>
-                  <Image
-                    className="w-full max-w-xl py-2 invert"
-                    src={track.waveform}
-                    alt=""
-                  ></Image>
-                </li>
+                  textColor={"text-neutral-200"}
+                  waveformEffect="invert"
+                  track={track}
+                ></Track>
               );
             })}
           </ol>

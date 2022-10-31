@@ -1,3 +1,4 @@
+import Track from "components/interactive/Track";
 import Image from "next/future/image";
 import eigenraeume_extended_cover from "public/img/covers/eigenräume.jpeg";
 import adieu from "public/waveforms/eigenraeume-extended-edition/adieu (outro).svg";
@@ -12,12 +13,15 @@ import stockholm from "public/waveforms/eigenraeume-extended-edition/stockholm (
 import symphonic_dreams from "public/waveforms/eigenraeume-extended-edition/symphonic dreams (intro).svg";
 import valletta from "public/waveforms/eigenraeume-extended-edition/valletta (bonus).svg";
 import useIntersection from "./intersections";
+import cn from "classnames"
 
 export default function EigenraeumeExtended(props) {
-  const navigationThemeUpdate = props.onScrollOver ?? ((_) => ({}));
+  const navigationThemeUpdate = props.onScrollOver ?? (() => ({}));
+
+  const textColor = "text-neutral-900"
 
   const [box, effect] = useIntersection(navigationThemeUpdate, {
-    text: "text-neutral-900",
+    text: textColor,
     bg: "bg-black",
   });
 
@@ -84,7 +88,7 @@ export default function EigenraeumeExtended(props) {
   return (
     <section
       id="eigenraeume-extended-edition"
-      className="bg-[#c80a0a] text-neutral-900 py-8 md:py-32 overflow-hidden relative"
+      className={cn(textColor, "bg-[#c80a0a] py-8 md:py-32 overflow-hidden relative")}
     >
       {box}
       <div className="absolute top-0 left-0 bottom-0 right-0 w-full h-full z-0 isolate"></div>
@@ -109,24 +113,7 @@ export default function EigenraeumeExtended(props) {
           <ol className="list-decimal">
             {tracks.map((track) => {
               return (
-                <li
-                  key={track.title}
-                  className="py-2 list-none md:flex items-center"
-                >
-                  <div className="flex items-center md:justify-end flex-grow">
-                    <span className="text-neutral-900 text-opacity-80 pr-2 text-xs md:text-normal">
-                      {track.artist}
-                    </span>
-                    <span className="text-sm md:text-lg font-bold md:text-right pr-4">
-                      {track.title}
-                    </span>
-                  </div>
-                  <Image
-                    className={"w-full max-w-xl py-2"}
-                    src={track.waveform}
-                    alt=""
-                  ></Image>
-                </li>
+                <Track textColor={textColor} track={track} key={track.title}></Track>
               );
             })}
           </ol>

@@ -22,11 +22,7 @@ import sehnsucht_cover from "public/img/covers/sehnsucht.jpeg";
 import shades_of_yellow_cover from "public/img/covers/shades_of_yellow.jpeg";
 import voyager_cover from "public/img/covers/voyager.jpeg";
 
-
 import { useRef, useState } from "react";
-import useSWR from "swr";
-
-const fetcher = (url) => fetch(url).then((res) => res.json());
 
 function Covers() {
   const data = [
@@ -38,8 +34,8 @@ function Covers() {
     shades_of_yellow_cover,
     voyager_cover,
     sehnsucht_cover,
-    im_schatten_der_nacht_cover
-  ]
+    im_schatten_der_nacht_cover,
+  ];
 
   return (
     <div className="hero overflow-hidden absolute h-full w-full">
@@ -81,7 +77,10 @@ function Covers() {
           .map((_, i) => {
             const url = data[i % data.length];
             return (
-              <div key={"hero-image-" + i} className="cover-image w-[50%] md:w-[20%] ">
+              <div
+                key={"hero-image-" + i}
+                className="cover-image w-[50%] md:w-[20%] "
+              >
                 <Image
                   className="cover-image--inner"
                   src={url}
@@ -112,10 +111,17 @@ function Hero() {
         <div className="flex-grow flex flex-col justify-end relative z-[45]">
           <div className="flex items-center justify-center flex-col h-full">
             <div className="md:py-24 md:px-48 py-8 px-16 backdrop-blur-lg border border-neutral-500 border-opacity-10">
-              <Image alt="" src={banner} placeholder="blur" className="md:w-64 w-32"></Image>
+              <Image
+                alt=""
+                src={banner}
+                placeholder="blur"
+                className="md:w-64 w-32"
+              ></Image>
             </div>
           </div>
-          <h1 className="text-white text-3xl font-bold md:font-normal md:text-5xl mb-8">Music with a heartbeat.</h1>
+          <h1 className="text-white text-3xl font-bold md:font-normal md:text-5xl mb-8">
+            Music with a heartbeat.
+          </h1>
           <div className="px-4 py-2 md:mb-24 font-sans text-xl flex-grow text-white">
             {[
               ["#im-schatten-der-nacht", "Releases of 2021"],
@@ -140,42 +146,36 @@ export default function Work() {
   const defaultTheme = { text: "text-white", bg: "bg-black" };
   const [theme, setTheme] = useState(defaultTheme);
 
-  let navigationRef = useRef(null)
+  let navigationRef = useRef(null);
 
   const setNavigationRef = (ref) => {
-    if (ref) navigationRef = ref
-  }
+    if (ref) navigationRef = ref;
+  };
 
   const handleNavigationThemeChange = (theme) => {
     if (!theme) setTheme(defaultTheme);
     else setTheme(theme);
   };
 
+  const sections = [
+    ImSchattenDerNacht,
+    Sehnsucht,
+    Voyager,
+    ShadesOfYellow,
+    MovedPermanently,
+    PublicTransportation,
+    EigenraeumeExtended,
+    Eigenraeume,
+    LifeIsAboutMakingMemories,
+  ].map((Component) => {
+    return <Component onScrollOver={handleNavigationThemeChange}></Component>;
+  });
+
   return (
     <>
       <Layout theme={theme} setNavigationRef={setNavigationRef}>
         <Hero onScrollOver={handleNavigationThemeChange}></Hero>
-        <ImSchattenDerNacht
-          onScrollOver={handleNavigationThemeChange}
-        ></ImSchattenDerNacht>
-        <Sehnsucht onScrollOver={handleNavigationThemeChange}></Sehnsucht>
-        <Voyager onScrollOver={handleNavigationThemeChange}></Voyager>
-        <ShadesOfYellow
-          onScrollOver={handleNavigationThemeChange}
-        ></ShadesOfYellow>
-        <MovedPermanently
-          onScrollOver={handleNavigationThemeChange}
-        ></MovedPermanently>
-        <PublicTransportation
-          onScrollOver={handleNavigationThemeChange}
-        ></PublicTransportation>
-        <EigenraeumeExtended
-          onScrollOver={handleNavigationThemeChange}
-        ></EigenraeumeExtended>
-        <Eigenraeume onScrollOver={handleNavigationThemeChange}></Eigenraeume>
-        <LifeIsAboutMakingMemories
-          onScrollOver={handleNavigationThemeChange}
-        ></LifeIsAboutMakingMemories>
+        {sections}
       </Layout>
     </>
   );

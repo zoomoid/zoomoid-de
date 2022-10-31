@@ -6,6 +6,7 @@ import was_ist from "public/waveforms/sehnsucht/Was Ist.svg";
 import malheureux_en_amour from "public/waveforms/sehnsucht/Malheureux en Amour (Acoustic Version).svg";
 import was_bleibt from "public/waveforms/sehnsucht/Was Bleibt.svg";
 import useIntersection from "./intersections";
+import Track from "components/interactive/Track";
 
 export default function Sehnsucht(props) {
   const navigationThemeUpdate = props.onScrollOver ?? ((_) => ({}));
@@ -69,8 +70,8 @@ export default function Sehnsucht(props) {
             “Sehnsucht” is a a 5-track acoustic instrumental album, featuring
             intimate instruments and a huge load of emotions. I wrote those
             tracks with the emotion of missing out and wishing for old times and
-            new times at the same time, trying to express what I&apos;ve been feeling
-            for the last months. I love them all very dearly.
+            new times at the same time, trying to express what I&apos;ve been
+            feeling for the last months. I love them all very dearly.
           </p>
         </div>
         <div className="">
@@ -80,24 +81,11 @@ export default function Sehnsucht(props) {
           <ol className="list-decimal">
             {tracks.map((track) => {
               return (
-                <li
+                <Track
                   key={track.title}
-                  className="py-2 list-none md:flex items-center"
-                >
-                  <div className="flex items-center md:justify-end flex-grow">
-                    <span className="text-stone-800 text-opacity-80 pr-2 text-xs md:text-normal">
-                      {track.artist}
-                    </span>
-                    <span className="text-sm md:text-lg font-bold md:text-right pr-4">
-                      {track.title}
-                    </span>
-                  </div>
-                  <Image
-                    className="w-full max-w-xl py-2"
-                    src={track.waveform}
-                    alt=""
-                  ></Image>
-                </li>
+                  textColor={"text-stone-800"}
+                  track={track}
+                ></Track>
               );
             })}
           </ol>

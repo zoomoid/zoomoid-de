@@ -14,6 +14,7 @@ import utopia from "public/waveforms/life-is-about-making-memories/utopia.svg";
 import ww from "public/waveforms/life-is-about-making-memories/wild world (vip mix).svg";
 import winter from "public/waveforms/life-is-about-making-memories/winter.svg";
 import Tracklist from "./Tracklist";
+import Track from "components/interactive/Track";
 
 export default function LifeIsAboutMakingMemories() {
   const tracks = [
@@ -106,24 +107,12 @@ export default function LifeIsAboutMakingMemories() {
           <ol className="list-decimal">
             {tracks.map((track) => {
               return (
-                <li
+                <Track
                   key={track.title}
-                  className="py-2 list-none md:flex items-center"
-                >
-                  <div className="flex items-center md:justify-end flex-grow">
-                    <span className="text-neutral-200 text-opacity-80 pr-2 text-xs md:text-normal">
-                      {track.artist}
-                    </span>
-                    <span className="text-sm md:text-lg font-bold md:text-right pr-4">
-                      {track.title}
-                    </span>
-                  </div>
-                  <Image
-                    className="w-full max-w-xl py-2 invert"
-                    src={track.waveform}
-                    alt=""
-                  ></Image>
-                </li>
+                  textColor={"text-neutral-200"}
+                  waveformEffect="invert"
+                  track={track}
+                ></Track>
               );
             })}
           </ol>

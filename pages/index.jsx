@@ -1,5 +1,5 @@
 import Layout from "components/layout/Layout";
-import Image from "next/future/image";
+import Image from "next/image";
 import Link from "next/link";
 import banner_root from "public/img/banner_root.jpeg";
 

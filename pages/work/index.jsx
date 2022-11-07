@@ -8,7 +8,7 @@ import PublicTransportation from "components/work-sections/PublicTransportation"
 import Sehnsucht from "components/work-sections/Sehnsucht";
 import ShadesOfYellow from "components/work-sections/ShadesOfYellow";
 import Voyager from "components/work-sections/Voyager";
-import Image from "next/future/image";
+import Image from "next/image";
 import Link from "next/link";
 import banner from "public/img/white.png";
 
@@ -129,10 +129,13 @@ function Hero() {
               ["#eigenraeume", "Releases of 2019"],
               ["#life-is-about-making-memories", "Releases of 2018"],
             ].map(([ref, text]) => (
-              <Link key={ref} href={ref} scroll={true}>
-                <a className="block py-2 pl-6 mt-1 mb-1 border-l-4 border-white uppercase tracking-wide font-semibold text-sm md:text-normal">
-                  {text}
-                </a>
+              <Link
+                key={ref}
+                href={ref}
+                scroll={true}
+                className="block py-2 pl-6 mt-1 mb-1 border-l-4 border-white uppercase tracking-wide font-semibold text-sm md:text-normal"
+              >
+                {text}
               </Link>
             ))}
           </div>
@@ -167,8 +170,13 @@ export default function Work() {
     EigenraeumeExtended,
     Eigenraeume,
     LifeIsAboutMakingMemories,
-  ].map((Component) => {
-    return <Component onScrollOver={handleNavigationThemeChange}></Component>;
+  ].map((Component, i) => {
+    return (
+      <Component
+        key={"work-sections-" + i}
+        onScrollOver={handleNavigationThemeChange}
+      ></Component>
+    );
   });
 
   return (

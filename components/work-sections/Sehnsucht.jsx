@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import Image from "next/image";
 import sehnsucht_cover from "public/img/covers/sehnsucht.jpeg";
 import was_war from "public/waveforms/sehnsucht/Was War.svg";
 import tueren from "public/waveforms/sehnsucht/Türen.svg";

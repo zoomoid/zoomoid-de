@@ -1,15 +1,15 @@
 import Link from "next/link";
 import { useState } from "react";
+import cn from "classnames";
 
 function DesktopNavigation(props) {
   const nav = props.navigation;
   return (
     <div
-      className={
-        props.className +
-        " " +
+      className={cn(
+        props.className,
         "fixed top-0 left-0 right-0 z-50 backdrop-filter backdrop-blur-md border-b border-white border-opacity-10 transition-colors"
-      }
+      )}
     >
       <div className="max-w-screen-2xl container py-2 hidden md:flex flex-grow items-center px-4 md:px-0">
         <div className="font-semibold text-2xl tracking font-sans">
@@ -22,8 +22,8 @@ function DesktopNavigation(props) {
               key={action.title}
               className="font-sans font-semibold text-sm uppercase"
             >
-              <Link href={action.url} passHref={true}>
-                <a rel="noreferrer">{action.title}</a>
+              <Link href={action.url} passHref={true} rel="noreferrer">
+                {action.title}
               </Link>
             </div>
           ))}
@@ -37,8 +37,8 @@ function MobileNavigation(props) {
   const nav = props.navigation;
   const mobileNav = nav.map((action) => (
     <div key={action.title} className="font-sans mb-2">
-      <Link href={action.url} passHref={true}>
-        <a rel="noreferrer">{action.title}</a>
+      <Link href={action.url} passHref={true} rel="noreferrer">
+        {action.title}
       </Link>
     </div>
   ));
@@ -47,11 +47,10 @@ function MobileNavigation(props) {
 
   return (
     <div
-      className={
-        props.className +
-        " " +
+      className={cn(
+        props.className,
         "container max-w-screen-2xl py-2 md:hidden absolute top-0 left-0 right-0 z-50 transition-colors"
-      }
+      )}
     >
       <div className="flex items-center">
         <div className="font-semibold text-2xl tracking font-sans">
@@ -65,11 +64,10 @@ function MobileNavigation(props) {
       </div>
       {showNav && (
         <div
-          className={
-            props.background +
-            " " +
+          className={cn(
+            props.background,
             "fixed backdrop-blur-3xl top-0 left-0 bottom-0 right-0 z-50 h-screen w-screen"
-          }
+          )}
         >
           <div className="container h-full py-2">
             <div className="flex">
@@ -97,16 +95,6 @@ function MobileNavigation(props) {
 }
 
 export default function Navigation(props) {
-  // const { data, error } = useSWR("/api/navigation", fetcher);
-
-  // if (error)
-  //   return (
-  //     <header>
-  //       <></>
-  //     </header>
-  //   );
-  // if (!data) return <header></header>;
-
   const data = [
     {
       title: "Work",
@@ -123,7 +111,7 @@ export default function Navigation(props) {
       url: "/about",
       external: false,
     },
-  ]
+  ];
 
   return (
     <header className="">

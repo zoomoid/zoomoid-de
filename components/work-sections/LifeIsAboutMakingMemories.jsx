@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import Image from "next/image";
 import liamm from "public/img/covers/liamm.jpeg";
 import liamm_banner_vectorized from "public/img/assets/liamm-banner-vectorized.svg";
 

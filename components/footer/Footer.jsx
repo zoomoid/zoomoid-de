@@ -1,10 +1,9 @@
-import Image from "next/future/image";
+import Image from "next/image";
 import Link from "next/link";
 import FooterColumn from "./FooterColumn";
 import img from "public/img/white.png";
 
 export default function Footer() {
-
   const data = {
     sections: [
       {
@@ -67,9 +66,7 @@ export default function Footer() {
       <div className="max-w-screen-2xl container">
         <div className="uppercase font-sans font-semibold text-2xl mb-8 cursor-pointer">
           <Link href="/" passHref={true}>
-            <a>
-              <Image src={img} className="w-40" alt=""></Image>
-            </a>
+            <Image src={img} className="w-40" alt=""></Image>
           </Link>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-4 font-sans mb-8">

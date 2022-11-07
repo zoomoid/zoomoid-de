@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import Image from "next/image";
 import eigenraeume_standard_cover from "public/img/covers/eigenräume_pre.jpeg";
 import stockholm from "public/waveforms/eigenraeume/stockholm.svg";
 import grossstadt from "public/waveforms/eigenraeume/grossstadt.svg";

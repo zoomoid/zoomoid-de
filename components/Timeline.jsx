@@ -128,14 +128,10 @@ export default function Timeline() {
         <TimelineElements></TimelineElements>
         <div className="text-black hover:text-opacity-60 text-xs sm:text-sm py-2 inline-block mt-4 font-sans font-medium tracking-wide uppercase cursor-pointer">
           <Link href="/work" passHref={true}>
-            <a>
-              <div className="flex items-center">
-                <span>View all Releases</span>
-                <i className="material-icons-sharp">
-                  keyboard_arrow_right
-                </i>
-              </div>
-            </a>
+            <div className="flex items-center">
+              <span>View all Releases</span>
+              <i className="material-icons-sharp">keyboard_arrow_right</i>
+            </div>
           </Link>
         </div>
       </div>

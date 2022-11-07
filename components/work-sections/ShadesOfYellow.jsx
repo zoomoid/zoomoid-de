@@ -1,5 +1,5 @@
 import Track from "components/interactive/Track";
-import Image from "next/future/image";
+import Image from "next/image";
 import shades_of_yellow_cover from "public/img/covers/shades_of_yellow.jpeg";
 import malheureux_en_amour from "public/waveforms/shades-of-yellow/malheureux_en_amour.svg";
 import shades_of_yellow from "public/waveforms/shades-of-yellow/shades_of_yellow.svg";

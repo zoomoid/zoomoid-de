@@ -1,5 +1,5 @@
 import Track from "components/interactive/Track";
-import Image from "next/future/image";
+import Image from "next/image";
 import voyager_cover from "public/img/covers/voyager.jpeg";
 import andromeda from "public/waveforms/voyager/Andromeda.svg";
 import blindflug from "public/waveforms/voyager/Blindflug.svg";

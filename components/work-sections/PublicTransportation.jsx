@@ -1,5 +1,5 @@
 import Track from "components/interactive/Track";
-import Image from "next/future/image";
+import Image from "next/image";
 import public_transportation_cover from "public/img/covers/public_transportation.jpeg";
 import stargazing from "public/waveforms/public-transportation/01_stargazing.svg";
 import downhill from "public/waveforms/public-transportation/02_downhill.svg";

@@ -14,9 +14,14 @@ export default function FooterColumn(props) {
           className="cursor-pointer hover:text-neutral-300"
         >
           <Link href={url} passHref={true}>
-            <a>
-              <span className="">{title}{external ? <i className="material-icons-sharp text-sm pl-1">north_east</i>: ''}</span>
-            </a>
+            <span className="">
+              {title}
+              {external ? (
+                <i className="material-icons-sharp text-sm pl-1">north_east</i>
+              ) : (
+                ""
+              )}
+            </span>
           </Link>
         </div>
       ))}

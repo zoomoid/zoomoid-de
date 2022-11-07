@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import Image from "next/image";
 import moved_permanently_cover from "public/img/covers/301.jpeg";
 import monarch from "public/waveforms/301/monarch.svg";
 import doppler from "public/waveforms/301/doppler.svg";

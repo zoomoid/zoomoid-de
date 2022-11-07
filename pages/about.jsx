@@ -1,6 +1,6 @@
 import Layout from "components/layout/Layout";
 import Timeline from "components/Timeline";
-import Image from "next/future/image";
+import Image from "next/image";
 import Link from "next/link";
 import zoomoid from "public/img/zoomoid.jpeg";
 

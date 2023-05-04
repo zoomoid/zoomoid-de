@@ -1,7 +1,7 @@
 "use client";
 import { useAppDispatch } from "@/app/hooks";
 import { setTheme } from "@/components/layout/layoutSlice";
-import PublicTransportation from "@/components/work-sections/PublicTransportation";
+import PublicTransportation from "@/components/work-sections/public-transportation";
 
 export default function PublicTransportationPage() {
   const dispatch = useAppDispatch()

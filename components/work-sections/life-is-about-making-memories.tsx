@@ -13,7 +13,7 @@ import summer from "public/waveforms/life-is-about-making-memories/summer.svg";
 import utopia from "public/waveforms/life-is-about-making-memories/utopia.svg";
 import ww from "public/waveforms/life-is-about-making-memories/wild world (vip mix).svg";
 import winter from "public/waveforms/life-is-about-making-memories/winter.svg";
-import Tracklist from "./Tracklist";
+import Tracklist from "./tracklist";
 import Track from "@/components/interactive/Track";
 
 export default function LifeIsAboutMakingMemories() {

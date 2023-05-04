@@ -1,7 +1,7 @@
 "use client";
 import { useAppDispatch } from "@/app/hooks";
 import { setTheme } from "@/components/layout/layoutSlice";
-import Eigenraeume from "@/components/work-sections/EigenraeumeStandard";
+import Eigenraeume from "@/components/work-sections/eigenraeume-standard";
 
 export default function EigenraeumeStandardEditionPage() {
   const dispatch = useAppDispatch()

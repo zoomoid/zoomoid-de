@@ -1,12 +1,11 @@
 import Image from "next/image";
 
-function Track({ track, style }: {
+function Track({ track }: {
   track: {
     artist: string,
     title: string,
     waveform: string,
-  },
-  style: string,
+  }
 }) {
   return (
     <li className="py-2 list-none flex items-center">
@@ -18,7 +17,6 @@ function Track({ track, style }: {
       </div>
       <Image
         className={"w-full max-w-xl py-2"}
-        style={style}
         src={track.waveform}
         alt=""
       />
@@ -26,17 +24,18 @@ function Track({ track, style }: {
   );
 }
 
-export default function Tracklist({ tracks, className, style }: {
+export default function Tracklist({ tracks, className }: {
   className: string,
-  style: string,
   tracks: {
     title: string,
+    artist: string,
+    waveform: string
   }[]
 }) {
   return (
     <ol className={`list-decimal ${className}`}>
       {tracks.map((t) => {
-        return <Track key={t.title} style={style} track={t} alt="" />;
+        return <Track key={t.title} track={t} />;
       })}
     </ol>
   );

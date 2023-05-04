@@ -1,7 +1,7 @@
 "use client";
 import { useAppDispatch } from "@/app/hooks";
 import { setTheme } from "@/components/layout/layoutSlice";
-import Sehnsucht from "@/components/work-sections/Sehnsucht";
+import Sehnsucht from "@/components/work-sections/sehnsucht";
 
 export default function SehnsuchtPage() {
   const dispatch = useAppDispatch()

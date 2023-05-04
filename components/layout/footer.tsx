@@ -58,7 +58,7 @@ export default function Footer() {
       },
     ],
     subtitle: "Zoomoid © 2015–2023",
-    subsubtitle: "Made with NextJS, TailwindCSS, and coffee on a cold day",
+    subsubtitle: "Made with ♥️",
   };
 
   return (

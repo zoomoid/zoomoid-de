@@ -1,0 +1,89 @@
+@import url("../styles/fonts/basier/stylesheet.css");
+@import url("../styles/fonts/material-icons/stylesheet.css");
+@import url("../styles/fonts/novela/stylesheet.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-neutral-100 text-black;
+  }
+  a {
+    color: inherit;
+    /* @apply hover:underline; */
+  }
+}
+
+@layer utilities {
+  .container {
+    width: 93.33333%;
+    margin: 0 auto;
+  }
+}
+
+.slide-enter-active,
+.slide-exit-active {
+  transition: transform 200s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide-enter-active,
+  .slide-exit-active {
+    transition-property: none;
+  }
+}
+
+.slide-enter {
+  transform: translateX(120%);
+}
+
+.slide-enter-active {
+  transform: translateX(0%);
+}
+
+.slide-enter-done {
+  transform: translateX(0%);
+}
+
+.slide-exit {
+  transform: translateX(0%);
+}
+
+.slide-exit-active {
+  transform: translateX(120%);
+}
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */

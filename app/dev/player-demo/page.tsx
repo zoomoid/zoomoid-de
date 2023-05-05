@@ -1,4 +1,4 @@
-import Player from "components/interactive/Player";
+import Player from "@/components/interactive/player";
 
 export default function PlayerDemoPage() {
   const voyager_tracks = [

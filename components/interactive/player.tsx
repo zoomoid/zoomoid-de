@@ -15,7 +15,7 @@ import {
 } from "./playerSlice";
 import cn from "classnames";
 
-export default function Player(props) {
+export default function Player() {
   // const dispatch = useDispatch();
 
   // const track = useSelector((state) => state.player.currentTrack);

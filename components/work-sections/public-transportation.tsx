@@ -1,4 +1,4 @@
-import Track from "@/components/interactive/Track";
+import Track from "@/components/interactive/track";
 import Image from "next/image";
 import public_transportation_cover from "public/img/covers/public_transportation.jpeg";
 import stargazing from "public/waveforms/public-transportation/01_stargazing.svg";

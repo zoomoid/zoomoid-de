@@ -6,7 +6,7 @@ import schoeneberg_at_night from "public/waveforms/eigenraeume/schoeneberg at ni
 import hoellental from "public/waveforms/eigenraeume/hoellental.svg";
 import heimat from "public/waveforms/eigenraeume/heimat.svg";
 import blaues_land from "public/waveforms/eigenraeume/blaues land.svg";
-import Track from "@/components/interactive/Track";
+import Track from "@/components/interactive/track";
 
 export default function Eigenraeume() {
   const tracks = [

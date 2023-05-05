@@ -1,4 +1,4 @@
-import Track from "@/components/interactive/Track";
+import Track from "@/components/interactive/track";
 import Image from "next/image";
 import im_schatten_der_nacht_cover from "public/img/covers/im_schatten_der_nacht.jpeg";
 import im_schatten_der_nacht from "public/waveforms/im-schatten-der-nacht/im-schatten-der-nacht.svg";

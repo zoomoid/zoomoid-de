@@ -6,7 +6,7 @@ import was_ist from "public/waveforms/sehnsucht/Was Ist.svg";
 import malheureux_en_amour from "public/waveforms/sehnsucht/Malheureux en Amour (Acoustic Version).svg";
 import was_bleibt from "public/waveforms/sehnsucht/Was Bleibt.svg";
 import useIntersection from "./intersections";
-import Track from "@/components/interactive/Track";
+import Track from "@/components/interactive/track";
 import { Theme } from "../layout/layout";
 
 export default function Sehnsucht({ 

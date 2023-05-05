@@ -4,7 +4,7 @@ import monarch from "public/waveforms/301/monarch.svg";
 import doppler from "public/waveforms/301/doppler.svg";
 import elektron from "public/waveforms/301/elektron.svg";
 import outer_space_rework from "public/waveforms/301/outer_space_rework.svg";
-import Track from "@/components/interactive/Track";
+import Track from "@/components/interactive/track";
 
 export default function PermanentlyMoving() {
   const tracks = [

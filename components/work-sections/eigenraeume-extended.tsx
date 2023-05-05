@@ -1,4 +1,4 @@
-import Track from "@/components/interactive/Track";
+import Track from "@/components/interactive/track";
 import Image from "next/image";
 import eigenraeume_extended_cover from "public/img/covers/eigenräume.jpeg";
 import adieu from "public/waveforms/eigenraeume-extended-edition/adieu (outro).svg";

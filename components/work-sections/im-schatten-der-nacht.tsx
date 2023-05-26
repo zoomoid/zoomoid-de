@@ -5,7 +5,7 @@ import im_schatten_der_nacht from "public/waveforms/im-schatten-der-nacht/im-sch
 import morgendaemmerung from "public/waveforms/im-schatten-der-nacht/morgendaemmerung.svg";
 import schemen from "public/waveforms/im-schatten-der-nacht/schemen.svg";
 
-export default function ImSchattenDerNacht() {
+export default function wImSchattenDerNacht() {
   const tracks = [
     {
       title: "Im Schatten Der Nacht",

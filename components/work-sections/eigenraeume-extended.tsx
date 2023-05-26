@@ -22,10 +22,9 @@ export default function EigenraeumeExtended({
 }) {
   const navigationThemeUpdate = onScrollOver ?? (() => ({}));
 
-  const textColor = "text-neutral-900"
 
   const [box, effect] = useIntersection(navigationThemeUpdate, {
-    textColor,
+    textColor: "text-neutral-900",
     backgroundColor: "bg-black",
   });
 
@@ -92,7 +91,7 @@ export default function EigenraeumeExtended({
   return (
     <section
       id="eigenraeume-extended-edition"
-      className={`${textColor} bg-[#c80a0a] py-8 md:py-32 overflow-hidden relative`}
+      className={`text-neutral-900 bg-[#c80a0a] py-8 md:py-32 overflow-hidden relative`}
     >
       {box}
       <div className="absolute top-0 left-0 bottom-0 right-0 w-full h-full z-0 isolate" />
@@ -117,7 +116,7 @@ export default function EigenraeumeExtended({
           <ol className="list-decimal">
             {tracks.map((track) => {
               return (
-                <Track textColor={textColor} track={track} key={track.title} />
+                <Track textColor="text-neutral-900" track={track} key={track.title} />
               );
             })}
           </ol>

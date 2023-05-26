@@ -58,58 +58,20 @@ function TimelineElements() {
     },
   ];
 
-  // const skeletonElement = (variant) => {
-  //   const widthVariants = ["w-24", "w-32", "w-36", "w-44", "w-48", "w-56"];
-
-  //   const i = Math.floor(7 * variant * widthVariants.length);
-  //   const width = (index) =>
-  //     widthVariants[
-  //       Math.pow(Math.max(i - 1, 1), variant + index) % widthVariants.length
-  //     ];
-
-  //   const staticClasses = {
-  //     headline: " h-6 mb-2 rounded-full bg-neutral-500 bg-opacity-20",
-  //     subtitle: " h-4 inline-block rounded-full bg-neutral-500 bg-opacity-20",
-  //   };
-
-  //   return (
-  //     <div key={"skeleton-" + variant} className="mb-8">
-  //       <h5 className={width(0) + staticClasses.headline}></h5>
-  //       <div className="flex items-center gap-1">
-  //         <time className={width(1) + staticClasses.subtitle}></time>
-  //         <span className={width(2) + staticClasses.subtitle}></span>
-  //       </div>
-  //     </div>
-  //   );
-  // };
-
-  // if (!data) {
-  //   return <>{[1, 2, 3].map((_, i) => skeletonElement(i + 1))}</>;
-  // }
-
-  // if (error) {
-  //   console.error(error);
-  //   return <></>;
-  // }
-
   const highlights = data.map(({ title, url, topics, date }) => {
     return (
       <div key={title} className="mb-8 font-sans">
-        <Link  href={url}><h5 className="cursor-pointer">{title}</h5></Link>
+        <Link href={url}><h5 className="cursor-pointer">{title}</h5></Link>
         <div className="flex items-center gap-1 text-xs md:text-normal">
           <time className="cursor-pointer text-opacity-50 text-black">
             {date}
           </time>
           <span className="text-opacity-50 text-black">&mdash;</span>
-          <div className="flex gap-x-2">
+          <div className="flex gap-x-1">
             {topics.map((t) => (
-              <Link key={t} href={`/work?filter=${encodeURIComponent(t)}`}>
-
-                <span className="cursor-pointer text-opacity-50 text-black hover:text-opacity-100 after:content-[',_'] last:after:content-[]">
-                  {t}
-                </span>
-
-              </Link>
+              <span key={t} className="inline-block cursor-pointer text-opacity-50 text-black hover:text-opacity-100 after:content-[',_'] last:after:content-[]">
+                {t}
+              </span>
             ))}
           </div>
         </div>

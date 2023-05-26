@@ -1,21 +1,26 @@
 "use client";
+import { useAppSelector } from "@/app/hooks";
 import Link from "next/link";
+import React from "react";
+import { NavigationElement } from "./navigation";
 
-export default function DesktopNavigation({
-  navigation,
-  textColor
-}: {
-  navigation: {
-    title: string,
-    url: string,
-  }[],
-  textColor: string
-}) {
+
+type DesktopNavigationProps = React.PropsWithChildren<{
+  navigation: NavigationElement[]
+}>
+
+export default function DesktopNavigation({ navigation }: DesktopNavigationProps) {
+  const theme = useAppSelector((state) => state.layout)
+
+  const {
+    textColor,
+  } = theme
+
   return (
     <div
       className={`${textColor} fixed top-0 left-0 right-0 z-50 backdrop-filter backdrop-blur-md border-b border-white border-opacity-10 transition-colors`}
     >
-      <div className="max-w-screen-2xl container py-6 hidden md:flex flex-grow items-center px-4 md:px-0">
+      <div className="max-w-screen-2xl container py-2 hidden md:flex flex-grow items-center px-4 md:px-0">
         <div className="font-semibold text-2xl tracking font-sans">
           <Link href="/">Zoomoid</Link>
         </div>

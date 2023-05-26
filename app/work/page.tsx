@@ -27,6 +27,8 @@ import { Theme } from "@/components/layout/layout";
 import { useAppDispatch } from "../hooks";
 import { setTheme } from "@/components/layout/layoutSlice";
 
+import styles from './styles.module.css'
+
 function Covers() {
   const data = [
     liamm_cover,
@@ -41,71 +43,66 @@ function Covers() {
   ];
 
   return (
-    <div className="hero overflow-hidden absolute h-full w-full">
-      <style jsx global>{`
-        .cover-image {
-          position: relative;
-          transition: opacity 1000ms;
-          /* box-shadow: 0 0 25px rgba(0, 0, 0, 30%); */
-        }
-        .cover-image.is-animated {
-          opacity: 1;
-          transition: opacity 500ms;
-        }
-        .cover-image--inner {
-          z-index: 2;
-          position: relative;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          width: 100%;
-          height: 100%;
-        }
-        .cover-image--blurred {
-          z-index: 1;
-          filter: blur(100px);
-          opacity: 0.25;
-          width: 150%;
-          position: absolute;
-          height: 150%;
-          // transform: translate3d(-17.5%, -17.5%, 0);
-          max-width: none;
-        }
-        @keyframes pulse {
-          50% {
-            opacity: .8;
-          }
-        }
-        .animate-pulse {
-          animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-      `}</style>
-      <div className="absolute top-0 left-0 right-0 bottom-0 bg-neutral-900 bg-opacity-80 z-40 animate-pulse" />
+    <div className="hero overflow-hidden absolute h-full w-full isolate">
+      <svg style={{
+        height: "0px",
+        width: "0px"
+      }}>
+        <filter id="noiseFilter">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.8"
+            numOctaves="5"
+          // stitchTiles="stitch"
+          />
+          <feColorMatrix
+            in="colorNoise"
+            // type="matrix"
+            // values="1 0 0 0 0
+            //         0 1 0 0 0
+            //         0 0 1 0 0
+            //         0 0 0 1 0"
+            type="saturate"
+            values="0"
+          />
+          <feComposite operator="in" in2="SourceGraphic" result="monoNoise" />
+          <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+        </filter>
+      </svg>
+      
+      {/* <div className="absolute top-0 left-0 right-0 bottom-0 bg-slate-900 bg-opacity-80 z-40 animate-pulse" /> */}
+      <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-t from-zinc-950 z-30" />
+      <div className="absolute z-50 top-0 left-0 right-0 bottom-0 bg-zinc-900 bg-opacity-10" style={{
+        filter: "url(#noiseFilter)",
+        mixBlendMode: "screen",
+      }}></div>
       <div className="relative w-full flex flex-wrap">
         {Array(32)
           .fill(null)
           .map((_, i) => {
             const url = data[i % data.length];
+            const delay = Math.max(3, Math.random() * 6)
+            const duration = Math.max(4, Math.random() * 8)
             return (
               <div
                 key={`hero-image-${i}`}
-                className="cover-image w-[50%] md:w-[20%] "
+                className={`${styles.coverImage} w-[50%] md:w-[20%] p-4`}
+                style={{
+                  animationDelay: `${i * 50}ms`
+                }}
               >
                 <Image
-                  className="cover-image--inner"
+                  className={`${styles.coverImageInner} "rounded-3xl`}
                   src={url}
                   width={360}
                   height={360}
                   alt=""
                   placeholder="blur"
+                  style={{
+                    animationDelay: `${delay}s`,
+                    animationDuration: `${duration}s`,
+                  }}
                 />
-                {/* <Image
-                className="cover-image--blurred"
-                src={url}
-                width={360}
-                height={360}
-              ></Image> */}
               </div>
             );
           })}
@@ -153,7 +150,7 @@ export default function Page() {
         <div className="container max-w-screen-2xl pt-24 pb-8 flex">
           <div className="flex-grow flex flex-col justify-end relative z-[45]">
             <div className="flex items-center justify-center flex-col h-full">
-              <div className="md:py-24 md:px-48 py-8 px-16 backdrop-blur-lg border border-neutral-500 border-opacity-10">
+              <div className="md:py-24 md:px-48 py-8 px-16 backdrop-blur-lg border rounded-xl border-neutral-500 border-opacity-10">
                 <Image
                   alt=""
                   src={banner}
@@ -162,9 +159,9 @@ export default function Page() {
                 />
               </div>
             </div>
-            <h1 className="text-white text-3xl font-bold md:font-normal md:text-5xl mb-8">
+            {/* <h1 className="text-white text-3xl font-bold md:font-normal md:text-5xl mb-8">
               Music with a heartbeat.
-            </h1>
+            </h1> */}
             <div className="px-4 py-2 md:mb-24 font-sans text-xl flex-grow text-white">
               {[
                 ["#im-schatten-der-nacht", "Releases of 2021"],

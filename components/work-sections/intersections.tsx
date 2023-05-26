@@ -34,7 +34,7 @@ export default function useIntersection(callback: (theme?: Theme) => void, withT
   const box = (
     <div
       ref={containerRef}
-      className="absolute invisible w-full left-0 right-0 bottom-0 top-[calc(100vh_-_50px)]"
+      className="absolute invisible w-full left-0 right-0 bottom-0 top-[calc(100vh)]"
     />
   );
 

@@ -7,24 +7,18 @@ export type NavigationElement = {
   external: boolean,
 }
 
-export function Navigation({
-  textColor,
-  backgroundColor,
-}: {
-  textColor: string,
-  backgroundColor: string
-}) {
+export function Navigation() {
   const data: NavigationElement[] = [
     {
       title: "Work",
       url: "/work",
       external: false,
     },
-    {
-      title: "Blog",
-      url: "https://zoomoid.dev/blog",
-      external: true,
-    },
+    // {
+    //   title: "Blog",
+    //   url: "https://zoomoid.dev/blog",
+    //   external: true,
+    // },
     {
       title: "About",
       url: "/about",
@@ -34,11 +28,8 @@ export function Navigation({
 
   return (
     <header className="">
-      <DesktopNavigation textColor={textColor} navigation={data} />
-      <MobileNavigation
-        textColor={textColor} backgroundColor={backgroundColor}
-        navigation={data}
-      />
+      <DesktopNavigation navigation={data} />
+      <MobileNavigation navigation={data} />
     </header>
   );
 }

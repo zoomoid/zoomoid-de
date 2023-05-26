@@ -47,8 +47,16 @@ export default function About() {
           <p className="text-2xl mb-8 font-serif">Work</p>
           <div className="text-lg md:text-xl leading-normal font-serif">
             <p className="mb-4">
-              The first large release of Zoomoid landed in September 2018, with
-              more quickly succeeding the album “Life Is About Making Memories”.
+              Zoomoid has been making electronic music since early 2014, but mostly
+              experimenting with DAWs and software instruments, without ever finishing
+              any started projects. This changed when he began publishing singles
+              featuring styles of Progressive House, Trance, and Techno on his
+              SoundCloud page.
+            </p>
+            <p className="mb-4">
+              The first large release of Zoomoid landed in September 2018, with “Life Is 
+              About Making Memories” being a full-length album of mixed styles and
+              inspiration.
             </p>
             <p className="mb-4">
               In 2019, Zoomoid released his concept album “Eigenräume”, which,

@@ -2,7 +2,6 @@ import "./globals.css"
 
 import React from "react";
 import Layout from "@/components/layout/layout";
-import { store } from "./store";
 import Provider from "./provider";
 
 export const metadata = {
@@ -13,11 +12,9 @@ export const metadata = {
   }
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+type RootLayoutProps = React.PropsWithChildren<{}>
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body>

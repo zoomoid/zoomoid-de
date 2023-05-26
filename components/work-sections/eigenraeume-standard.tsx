@@ -57,7 +57,7 @@ export default function Eigenraeume() {
             “Eigenräume” is the first (and incomplete) version of the concept
             album, which featured the main tracks of the full album in their
             standalone versions. To get the full listening experience, listen to
-            the full version below!
+            the full extended version!
           </p>
         </div>
         <div className="">

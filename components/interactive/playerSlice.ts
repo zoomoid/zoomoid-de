@@ -2,76 +2,79 @@
 import { PayloadAction, current } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
 
+export type Track = {
+  name: string;
+  artist: string;
+  cover?: string;
+  waveformSrc?: string; 
+  album: {
+    name: string;
+    url: string;
+  } | string;
+  duration?: number;
+  src: string;
+  played?: number;
+};
+
+type State = {
+  state: "stopped" | "paused" | "playing" | "error";
+  repeat: "off" | "on" | "single";
+  shuffle: boolean;
+  currentQueueIndex: number;
+  playingFrom: "main" | "spot";
+  /**
+   * currentTrack is a copy of the currently playing track either from the main
+   * queue or the most recently shifted element from the spot queue.
+   */
+  played: number;
+  currentTrack?: Track;
+  /**
+   * Queue behaviour is kind of special in combination with repeat state:
+   *
+   * 1. When using Repeat on an album (or more general, playlist) in Spotify
+   *  Spotify enqueues the remainder of the album from that track and then also
+   *  enqueues the *entire* album once more. I'm not entirely sure why this is
+   *  the case but removing tracks from the queue will "refill" the queue under
+   *  a certain threshold of tracks.
+   * 2. YouTube Music does *not* enqueue more than the album, i.e., it does not
+   *  double the queue length in the worst case. This comes at the "complexity"
+   *  of adding more bounds checks, but asymptotically, should be equal to the Spotify
+   *  model.
+   * 3. Soundcloud, in album view, constructs a queue on load from the album, and
+   *  maintains an index of where it currently "is" in the queue, meaning that the
+   *  queue wraps around on finish of the last track in the queue.
+   */
+  queue: Track[];
+  /**
+   * The spot queue maintains tracks enqueued by manual actions, like
+   * a user clicking on an "Add to Queue" button. Elements in the spot
+   * queue have priority over tracks in the main queue, and are tracked
+   * using their own queue pointer. Notably, calling "next" on an element
+   * in the spot queue consumes the element and proceeds to the next
+   * element in the spot queue, if there is any, otherwise falls back to
+   * the main queue.
+   *
+   * This gives us the ability to "insert" tracks into the main flow of
+   * tracks.
+   */
+  spotQueue: Track[];
+};
+
+const initialState: State = {
+  state: "stopped",
+  repeat: "off",
+  shuffle: false,
+  currentQueueIndex: -1,
+  played: 0,
+  playingFrom: "main",
+  currentTrack: undefined,
+  queue: [],
+  spotQueue: [],
+};
+
 export const playerSlice = createSlice({
   name: "player",
-  initialState: {
-    state: "stopped", // "resume", "playing", "error",
-    // track: {},
-    repeat: "off", // "on", "single"
-    shuffle: false,
-    currentQueueIndex: -1,
-    playingFrom: "main", // "spot"
-    /**
-     * currentTrack is a copy of the currently playing track either from the main
-     * queue or the most recently shifted element from the spot queue.
-     */
-    played: 0,
-    // currentTrack: {
-    //   name: "",
-    //   artist: "",
-    //   cover: "",
-    //   album: {
-    //     name: "",
-    //     url: "",
-    //   },
-    //   duration: 0,
-    //   src: ""
-    // },
-    currentTrack: {},
-    /**
-     * Queue behaviour is kind of special in combination with repeat state:
-     *
-     * 1. When using Repeat on an album (or more general, playlist) in Spotify
-     *  Spotify enqueues the remainder of the album from that track and then also
-     *  enqueues the *entire* album once more. I'm not entirely sure why this is
-     *  the case but removing tracks from the queue will "refill" the queue under
-     *  a certain threshold of tracks.
-     * 2. YouTube Music does *not* enqueue more than the album, i.e., it does not
-     *  double the queue length in the worst case. This comes at the "complexity"
-     *  of adding more bounds checks, but asymptotically, should be equal to the Spotify
-     *  model.
-     * 3. Soundcloud, in album view, constructs a queue on load from the album, and
-     *  maintains an index of where it currently "is" in the queue, meaning that the
-     *  queue wraps around on finish of the last track in the queue.
-     */
-    queue: [
-      // {
-      //   mp3: "",
-      //   title: "",
-      //   cover: "",
-      //   artist: "",
-      //   album: {
-      //     name: "",
-      //     url: "",
-      //   },
-      //   duration: 0,
-      //   played: 0,
-      // },
-    ],
-    /**
-     * The spot queue maintains tracks enqueued by manual actions, like
-     * a user clicking on an "Add to Queue" button. Elements in the spot
-     * queue have priority over tracks in the main queue, and are tracked
-     * using their own queue pointer. Notably, calling "next" on an element
-     * in the spot queue consumes the element and proceeds to the next
-     * element in the spot queue, if there is any, otherwise falls back to
-     * the main queue.
-     *
-     * This gives us the ability to "insert" tracks into the main flow of
-     * tracks.
-     */
-    spotQueue: [],
-  },
+  initialState: initialState as State,
   reducers: {
     setPlaybackTime: (state, { payload }: PayloadAction<{ time: number }>) => {
       const { time } = payload;
@@ -117,7 +120,7 @@ export const playerSlice = createSlice({
           state.repeat = "off";
           break;
       }
-      console.log(current(state))
+      console.log(current(state));
     },
     /**
      * trackFinished just resets the played seconds state to 0
@@ -180,8 +183,6 @@ export const playerSlice = createSlice({
      * meaning that played tracks are not "removed" from the queue, but instead
      * the queue index shifts over all indices in the queue. This way, we can ensure
      * the state stays the same for wrap-arounds.
-     *
-     *
      */
     next: (state) => {
       // additionally, if in single repeat state, triggering next will reset to normal repeat mode
@@ -196,7 +197,9 @@ export const playerSlice = createSlice({
         // TODO(zoomoid): we might need to inform the subscribers about this change, for
         //                them to change the currently playing track without changes to the index
         const newTrack = state.spotQueue.shift();
-
+        if (!newTrack) {
+          return;
+        }
         // update currently playing track with the foremost track from the spot queue
         state.currentTrack = newTrack;
       } else {
@@ -219,7 +222,7 @@ export const playerSlice = createSlice({
         state.currentTrack = newTrack;
       }
     },
-    playFromSpotQueue: (state, payload) => {
+    playFromSpotQueue: (state, { payload }) => {
       // idx is the n-th element in the spot queue:
       // [0, 1, 2, 3, 4, ...]
       // so if
@@ -236,7 +239,7 @@ export const playerSlice = createSlice({
     flushSpotQueue: (state) => {
       state.spotQueue = [];
     },
-    playFromQueue: (state, payload) => {
+    playFromQueue: (state, { payload }: PayloadAction<{ idx: number }>) => {
       const { idx } = payload;
 
       // just a simple bounds check
@@ -248,7 +251,7 @@ export const playerSlice = createSlice({
       const newTrack = state.queue[idx];
       state.currentTrack = newTrack;
     },
-    resetPlayStateFor: (state, payload) => {
+    resetPlayStateFor: (state, { payload }: PayloadAction<{ idx: number }>) => {
       const { idx } = payload;
       if (state.queue[idx]) {
         state.queue[idx].played = 0;
@@ -260,6 +263,16 @@ export const playerSlice = createSlice({
     queueFinished: (state) => {
       state.played = 0;
     },
+    addToQueue: (state, { payload }: PayloadAction<{ track: Track }>) => {
+      const { track } = payload
+
+      state.queue = [...state.queue, track]
+    },
+    addToSpotQueue: (state, { payload }: PayloadAction<{track:Track}>) => {
+      const { track } = payload
+
+      state.spotQueue = [...state.spotQueue, track]
+    }
   },
 });
 
@@ -278,6 +291,8 @@ export const {
   resetQueue,
   queueFinished,
   setPlaybackTime,
+  addToQueue,
+  addToSpotQueue
 } = playerSlice.actions;
 
 export default playerSlice.reducer;

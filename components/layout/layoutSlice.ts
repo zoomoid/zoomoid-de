@@ -1,4 +1,3 @@
-import { current } from "@reduxjs/toolkit";
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
 const initialState: Theme =  {

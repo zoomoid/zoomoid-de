@@ -15,13 +15,8 @@ export default function Footer() {
             external: false,
           },
           {
-            title: "Blog",
-            url: "https://zoomoid.dev/blog",
-            external: true,
-          },
-          {
-            title: "Privacy Policy",
-            url: "/privacy",
+            title: "Work",
+            url: "/work",
             external: false,
           },
         ],

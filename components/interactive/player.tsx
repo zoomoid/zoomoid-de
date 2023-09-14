@@ -14,10 +14,10 @@ import {
   resetPlayStateFor,
 } from "./playerSlice";
 import cn from "classnames";
-import { useAppSelector } from "@/app/hooks";
+import { useAppDispatch, useAppSelector } from "@/app/hooks";
 
 export default function Player() {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const [track, currentQueueIndex, repeatType, shuffle, playState] = [
     useAppSelector((state) => state.player.currentTrack),
@@ -52,7 +52,7 @@ export default function Player() {
 
   return (
     <>
-      <div className="p-4 flex">
+      <div className="flex p-4">
         <div className="flex gap-x-4">
           <button type="button" onClick={() => dispatch(previous())}>
             <i className="material-icons-sharp">skip_previous</i>
@@ -97,12 +97,12 @@ export default function Player() {
           )}
           {repeatType === "on" && (
             <button type="button" onClick={() => dispatch(toggleRepeat())}>
-              <i className="material-icons-sharp text-orange-500">repeat</i>
+              <i className="text-orange-500 material-icons-sharp">repeat</i>
             </button>
           )}
           {repeatType === "single" && (
             <button type="button" onClick={() => dispatch(toggleRepeat())}>
-              <i className="material-icons-sharp text-orange-500">repeat_one</i>
+              <i className="text-orange-500 material-icons-sharp">repeat_one</i>
             </button>
           )}
         </div>

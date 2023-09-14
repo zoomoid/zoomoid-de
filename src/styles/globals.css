@@ -14,7 +14,7 @@
     box-sizing: border-box;
   }
   body {
-    @apply bg-orange-600 font-serif;
+    @apply font-serif bg-neutral-950;
   }
   a {
     color: inherit;
@@ -52,4 +52,12 @@
 
 .slide-exit-active {
   transform: translateX(120%);
+}
+
+.release i {
+  @apply font-serif;
+}
+
+.release b {
+  @apply font-sans;
 }

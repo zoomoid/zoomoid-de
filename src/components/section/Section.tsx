@@ -1,6 +1,6 @@
-import Image from "next/legacy/image";
-import { type Release } from ".";
+import Image from "next/image";
 import { type PropsWithChildren } from "react";
+import { type Release } from ".";
 
 type SectionProps = PropsWithChildren<{
   section: Release

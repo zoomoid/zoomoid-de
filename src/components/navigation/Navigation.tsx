@@ -1,9 +1,7 @@
-import Link from "next/link"
-import useSWR from "swr"
-import MobileNavigation from "./MobileNavigation"
-import DesktopNavigation from "./DesktopNavigation"
-import { type Navigation } from "."
 import { type PropsWithChildren } from "react"
+import { type Navigation } from "."
+import DesktopNavigation from "./DesktopNavigation"
+import MobileNavigation from "./MobileNavigation"
 
 export type NavigationProps = PropsWithChildren<{
   navigation: Navigation

@@ -1,22 +1,25 @@
-import React from "react";
+import { Viewport, type Metadata } from "next";
 import Image from "next/legacy/image";
-import Section from "../components/section/Section";
-import Footer from "../components/footer/Footer";
-import Navigation from "../components/navigation/Navigation";
-import { type Metadata } from "next";
-import { releases } from "./api/releases/releases.mock";
-import { navigation } from "./api/navigation/navigation.mock";
-import { type Navigation as INavigation } from "../components/navigation";
 import { type Socials as ISocials } from "../components/footer";
+import Footer from "../components/footer/Footer";
+import { type Navigation as INavigation } from "../components/navigation";
+import Navigation from "../components/navigation/Navigation";
 import { type Release as IRelease } from "../components/section";
+import Section from "../components/section/Section";
+import { navigation } from "./api/navigation/navigation.mock";
+import { releases } from "./api/releases/releases.mock";
 import { socials } from "./api/socials/socials.mock";
 
 export const metadata: Metadata = {
   title: "Zoomoid",
   description: "Zoomoid",
-  viewport: "width=device-width, initial-scale=1",
   icons: "/favicon.ico"
 };
+
+export const viewport: Viewport = {
+  initialScale: 1,
+  width: "device-width"
+}
 
 async function getNavigation() {
   // const res = await fetch(`/api/navigation`)

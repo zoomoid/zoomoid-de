@@ -1,7 +1,7 @@
-import "../styles/globals.css";
 import "../styles/fonts/basier/stylesheet.css";
 import "../styles/fonts/material-icons/stylesheet.css";
 import "../styles/fonts/novela/stylesheet.css";
+import "../styles/globals.css";
 
 import React from "react";
 

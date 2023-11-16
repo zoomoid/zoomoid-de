@@ -1,0 +1,7 @@
+.page b {
+  @apply font-sans;
+}
+
+.page i {
+  @apply font-serif;
+}

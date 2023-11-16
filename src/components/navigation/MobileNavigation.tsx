@@ -1,9 +1,9 @@
 "use client";
-import { type PropsWithChildren, useState } from "react";
-import { type WithClassName, type Navigation } from ".";
+import Image from "next/image";
 import Link from "next/link";
-import Image from "next/legacy/image";
-import Logo from "../../../public/img/logo_bar.png"
+import { useState, type PropsWithChildren } from "react";
+import { type Navigation, type WithClassName } from ".";
+import Logo from "../../../public/img/logo_bar.png";
 
 type MobileNavigationProps = WithClassName<
   PropsWithChildren<{

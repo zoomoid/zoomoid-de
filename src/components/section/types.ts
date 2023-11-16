@@ -1,5 +1,3 @@
-import { PropsWithChildren } from "react";
-
 type ThemeTextColor = string
 type ThemeBackgroundColor = string
 

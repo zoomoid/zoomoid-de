@@ -2,7 +2,7 @@
 import { type PropsWithChildren, useState } from "react";
 import { type WithClassName, type Navigation } from ".";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Logo from "../../../public/img/logo_bar.png"
 
 type MobileNavigationProps = WithClassName<

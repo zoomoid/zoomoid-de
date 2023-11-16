@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { type Release } from ".";
 import { type PropsWithChildren } from "react";
 

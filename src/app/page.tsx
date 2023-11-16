@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Section from "../components/section/Section";
 import Footer from "../components/footer/Footer";
 import Navigation from "../components/navigation/Navigation";
@@ -65,9 +65,9 @@ export default async function Root() {
             </div>
             <h1 className="md:pl-[4vw] text-3xl font-semibold sm:text-5xl md:text-5xl lg:text-6xl">
               <span className="font-sans">Zoomoid</span>{" "}
-              <span>is a young, aspiring artist and producer, based in </span>{" "}
+              <span>is a an artist and producer based in </span>{" "}
               <span className="font-sans">Aachen, Germany.</span>{" "}
-              He&apos;s making electronic music with a concept and a {" "}
+              I make electronic music with an idea and a {" "}
               <span className="font-sans">heartbeat</span>.
             </h1>
           </div>

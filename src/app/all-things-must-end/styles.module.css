@@ -5,3 +5,72 @@
 .page i {
   @apply font-serif;
 }
+
+.page small {
+  @apply text-sm;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page {
+  /* animation-name: fade-in; */
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-reft {
+  0% {
+    transform: translateX(2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.page h1 span {
+  display: inline-block;
+  animation-name: slide-up;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+
+.page h1 span::after {
+  content: " ";
+  white-space: pre;
+}

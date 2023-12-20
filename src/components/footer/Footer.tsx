@@ -1,13 +1,16 @@
 import { PropsWithChildren } from "react";
 import { type Socials } from ".";
+import Link from "next/link";
+import Image from "next/image";
+import Logo from "/public/img/logo_bar.png";
 
 type FooterProps = PropsWithChildren<{
-  socials: Socials
-}>
+  socials: Socials;
+}>;
 
 export default function Footer({ socials }: FooterProps) {
   const socialElements = socials.map((s, i) => (
-    <div key={s.title} className={`${i % 2 === 1 && 'font-sans'}`}>
+    <div key={s.title} className={`${i % 2 === 1 && "font-sans"}`}>
       <a href={s.url} target="_blank" rel="noreferrer">
         {s.title}
       </a>
@@ -18,19 +21,16 @@ export default function Footer({ socials }: FooterProps) {
     <footer className="py-[6.6vmax] px-[4vw] text-white">
       <div className="flex justify-end mx-auto">
         <div className="w-full grid-cols-12 px-4 font-medium tracking-wide md:grid md:px-0">
-          <div className="grid-cols-9 col-span-9 md:grid">
-            <div className="col-span-3 mb-4 font-sans md:mb-0">Zoomoid</div>
-            <div className="col-span-6">
-              <a className="block" href="https://zoomoid.de">
-                https://zoomoid.de
-              </a>
-              <a className="block font-sans" href="mailto:hello@zoomoid.de">
-                hello@zoomoid.de
-              </a>
-              <p>&nbsp;</p>
-            </div>
+          <div className="col-span-3">
+            <Link href="/" className="h-8 relative">
+              <Image
+                alt="Zoomoid Logo"
+                src={Logo}
+                className="h-8 w-auto"
+              ></Image>
+            </Link>
           </div>
-          <div className="col-span-3 mt-4 md:mt-0">{socialElements}</div>
+          <div className="col-span-9 mt-4 md:mt-0">{socialElements}</div>
         </div>
       </div>
     </footer>

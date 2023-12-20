@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { type PropsWithChildren } from "react";
 import { type Navigation, type WithClassName } from ".";
-import Logo from "../../../public/img/logo_bar.png";
+import Logo from "/public/img/logo_bar.png";
 
 type DesktopNavigationProps = WithClassName<
   PropsWithChildren<{

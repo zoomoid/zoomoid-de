@@ -52,7 +52,7 @@ export default async function Root() {
   ));
 
   return (
-    <div>
+    <>
       <Navigation navigation={navigation}></Navigation>
       <main className="text-neutral-300">
         <section className="flex justify-end py-[6.6vmax] lg:py-[1.6vmax] w-full mx-auto">
@@ -148,6 +148,6 @@ export default async function Root() {
         </section>
       </main>
       <Footer socials={socials}></Footer>
-    </div>
+    </>
   );
 }

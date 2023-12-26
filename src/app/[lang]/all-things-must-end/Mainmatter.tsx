@@ -1,16 +1,15 @@
 "use client";
 
 import { useRef } from "react"
-import Preamble from "./Preamble";
+import Biography from "./Biography";
 import Album from "./Album";
 
-export default function Container() {
-
+export default function Mainmatter() {
   const albumSkipRef = useRef<HTMLDivElement>(null)
 
   return (
     <>
-      <Preamble skipRef={albumSkipRef}></Preamble>
+      <Biography skipRef={albumSkipRef}></Biography>
       <Album skipRef={albumSkipRef}></Album>
     </>
   )

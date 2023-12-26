@@ -20,7 +20,7 @@
 }
 
 .page {
-  /* animation-name: fade-in; */
+  animation-name: fade-in;
   animation-duration: 1s;
   animation-delay: 0s;
   animation-fill-mode: both;
@@ -58,16 +58,6 @@
     transform: translateY(0);
     opacity: 1;
   }
-}
-
-.page h1 span {
-  display: inline-block;
-  animation-name: slide-up;
-  animation-duration: 2s;
-  animation-delay: 3s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: both;
 }
 
 .page h1 span::after {

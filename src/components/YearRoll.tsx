@@ -51,7 +51,7 @@ export function YearRoll({
 
     // Cleanup observer on component unmount
     return () => observer.disconnect();
-  }, [animationClass]);
+  }, [animationClass, once, root, rootMargin, threshold]);
 
 
   type transformer = (inject: string) => string

@@ -1,6 +1,4 @@
-export type Navigation = {
+export type NavigationItem = {
   title: string,
   url: string
-}[]
-
-export type WithClassName<T> = { className?: string } & T
+}

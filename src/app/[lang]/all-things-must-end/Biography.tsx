@@ -1,26 +1,24 @@
 "use client";
 
-import Image from "next/image";
-import { YearRoll } from "./YearRoll";
 import {
-  AnimationContainer as C,
-  StaggeringAnimationContainer as SC,
-} from "./AnimationContainer";
-import Link from "next/link";
+  StaggeringGroup as SG
+} from "@/components/AnimationContainer";
+import { YearRoll } from "@/components/YearRoll";
+import Image from "next/image";
 import { RefObject } from "react";
 
-export default function Preamble({
+export default function Biography({
   skipRef,
 }: {
   skipRef: RefObject<HTMLDivElement>;
 }) {
   return (
-    <article id="preamble">
-      <section>
+    <article id="preamble" className="relative">
+      <section className="z-0 relative">
         <div
-          className="h-[50vh] bg-neutral-950 overflow-hidden"
+          className="h-[100vh] absolute w-full transform -translate-y-96 bg-neutral-950 overflow-hidden"
           style={{
-            maskImage: `linear-gradient(transparent 0%, black 10%, black 90%, transparent 100%)`,
+            maskImage: `linear-gradient(transparent 0%, black 40%, black 70%, transparent 100%)`,
           }}
         >
           <Image
@@ -32,7 +30,7 @@ export default function Preamble({
           ></Image>
         </div>
       </section>
-      <section className="max-w-screen-md mx-auto my-16">
+      <section className="max-w-screen-md mx-auto my-16 z-10">
         <h2 className="text-6xl mb-8">A Brief Biography of Me, Zoomoid</h2>
         <p className="text-lg">
           I promise, it&apos;s not thaaaaat long, and it might help you
@@ -63,7 +61,7 @@ export default function Preamble({
             ></YearRoll>
           </span>
         </h3>
-        <SC animationName="slide-up" className="my-16 text-lg space-y-2">
+        <SG animationName="slide-up" className="my-16 text-lg space-y-2">
           <p>
             In <b>2013</b> someone hit my reset button. After a terrifying
             accident, and the subsequent long recovery, I got into music making.
@@ -112,11 +110,11 @@ export default function Preamble({
             was primarily listening to; that&apos;s what I consider to be the{" "}
             <b>Hardcore range</b>, and I&apos;d rather not talk about...{" "}
             <small>
-              (which is sort of where the today's Techno lives in &ndash;
+              (which is sort of where the today&apos;s Techno lives in &ndash;
               don&apos;t wanna go there)
             </small>
           </p>
-        </SC>
+        </SG>
       </section>
       <section id="2018" className="max-w-screen-md mx-auto my-16">
         <h3 className="text-8xl text-center">
@@ -132,7 +130,7 @@ export default function Preamble({
             ></YearRoll>
           </span>
         </h3>
-        <SC
+        <SG
           animationName="slide-up"
           className="my-16 text-lg space-y-2 relative"
         >
@@ -148,7 +146,7 @@ export default function Preamble({
             together in Ableton Live.
           </p>
           <div>
-            <SC
+            <SG
               animationName="slide-up"
               className="grid md:grid-cols-1 gap-x-4"
             >
@@ -163,7 +161,7 @@ export default function Preamble({
                 ></Image>
               </div>
               <div></div>
-            </SC>
+            </SG>
           </div>
           <p>
             It got me going onto more elaborate sound design and composition{" "}
@@ -177,7 +175,7 @@ export default function Preamble({
             Science full-time gave me enough evenings without plans to waste
             hours on end staring into the ever so grey user interface of Live.
           </p>
-          <SC
+          <SG
             animationName="slide-up"
             className="grid md:grid-cols-2 gap-x-4 relative"
           >
@@ -199,7 +197,7 @@ export default function Preamble({
                 className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto transform scale-110 -translate-x-10 relative z-20"
               ></Image>
             </div>
-          </SC>
+          </SG>
           <p>
             In 2019, I made an album that was released in two
             &ldquo;waves&rdquo;, called &ldquo;<b>Eigenräume</b>&rdquo;. It took
@@ -223,7 +221,7 @@ export default function Preamble({
             <b>301 Moved Permanently</b>&rdquo;.
           </p>
           <div className="">
-            <SC
+            <SG
               animationName="slide-up"
               className="grid md:grid-cols-2 gap-x-4"
             >
@@ -245,7 +243,7 @@ export default function Preamble({
                   className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
                 ></Image>
               </div>
-            </SC>
+            </SG>
           </div>
           <p>
             I made &ldquo;<b>Public Transportation</b>&rdquo; from an idea on a
@@ -260,7 +258,7 @@ export default function Preamble({
             haven&apos;t yet, it&apos;s also really short, then come back to
             this.
           </p>
-        </SC>
+        </SG>
       </section>
       <section className="max-w-screen-md mx-auto my-16">
         <h3 className="text-8xl text-center">
@@ -276,7 +274,7 @@ export default function Preamble({
             ></YearRoll>
           </span>
         </h3>
-        <SC animationName="slide-up" className="my-16 text-lg space-y-2">
+        <SG animationName="slide-up" className="my-16 text-lg space-y-2">
           <p>
             In 2020 I hit a brick wall. And not the good one. As the world went
             into lockdown, I (as the artist) struggled to find inspiration,
@@ -374,7 +372,7 @@ export default function Preamble({
             <b>singing</b> for the first time ever &mdash; and I&apos;m not a
             singer. I&apos;m not even sure if I know how to work with vocals...
           </p>
-        </SC>
+        </SG>
       </section>
       <section className="max-w-screen-md mx-auto my-16">
         <h3 className="text-8xl text-center">
@@ -389,7 +387,7 @@ export default function Preamble({
             ></YearRoll>
           </span>
         </h3>
-        <SC animationName="slide-up" className="text-lg my-16 space-y-2">
+        <SG animationName="slide-up" className="text-lg my-16 space-y-2">
           <p>
             The escapism that &ldquo;Voyager&rdquo; provided, artistically, did
             not last for long though. I went down into that dark hole that is
@@ -467,7 +465,7 @@ export default function Preamble({
             ></Image>
           </div>
           <p>
-            In that moment, valuing my own creation over the past years,
+            In that moment, evaluating my own creation over the past years,
             something sparked the idea that culminated in this album. The idea
             of endings. I saw myself burning out, fading away, silently quitting
             making music. That was a path I did not want to go down on. When I
@@ -476,7 +474,7 @@ export default function Preamble({
             up again.
           </p>
           <p>But here we are.</p>
-        </SC>
+        </SG>
       </section>
     </article>
   );

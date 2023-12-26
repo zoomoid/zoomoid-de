@@ -1,4 +1,4 @@
-export type Socials = {
+export type FooterItem = {
   title: string;
   url: string;
-}[]
+}

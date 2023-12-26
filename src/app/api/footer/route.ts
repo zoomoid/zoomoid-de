@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { socials } from "./socials.mock";
+import footer from "./footer.mock";
 
 export async function GET(request: Request){
-  return NextResponse.json(socials)
+  return NextResponse.json(footer)
 }

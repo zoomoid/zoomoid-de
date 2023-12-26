@@ -1,4 +1,4 @@
-export const socials = [
+const socials = [
   {
     title: "Instagram",
     url: "https://instagram.com/zoomoid",
@@ -19,4 +19,10 @@ export const socials = [
     title: "Apple Music",
     url: "https://music.apple.com/de/artist/zoomoid/1390354057",
   },
-]
+];
+
+const footer = {
+  socials: socials,
+};
+
+export default footer;

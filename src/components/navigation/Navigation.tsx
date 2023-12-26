@@ -1,21 +1,33 @@
-import { type PropsWithChildren } from "react"
-import { type Navigation } from "."
-import DesktopNavigation from "./DesktopNavigation"
-import MobileNavigation from "./MobileNavigation"
-
+import { type PropsWithChildren } from "react";
+import { type NavigationItem } from ".";
+import Image from "next/image";
+import Link from "next/link";
+import Logo from "/public/img/logo_bar.png";
 export type NavigationProps = PropsWithChildren<{
-  navigation: Navigation
-}>
+  elements?: NavigationItem[];
+}>;
 
-export default function Navigation({ navigation }: NavigationProps) {
+export default function Navigation({
+  elements = [],
+  children,
+}: NavigationProps) {
   return (
-    <header className="text-white px-[4vw] py-[3vw]">
-      <div className="flex items-center">
-        <div className="flex-grow">
-          <DesktopNavigation className="hidden md:flex" navigation={navigation}></DesktopNavigation>
-          <MobileNavigation className="md:hidden" navigation={navigation}></MobileNavigation>
+    <header className="text-white px-[4vw] py-[3vw] flex items-center">
+      <nav className="flex-wrap flex-grow gap-4 tracking-wide flex justify-between">
+        <div className="font-sans text-xl font-semibold">
+          <Link href="/" className="h-8 relative">
+            <Image
+              alt="Zoomoid Logo"
+              // src="/img/logo_bar.png"
+              // width={5000}
+              // height={1319}
+              src={Logo}
+              className="h-8 w-auto"
+            ></Image>
+          </Link>
         </div>
-      </div>
+        {children}
+      </nav>
     </header>
   );
 }

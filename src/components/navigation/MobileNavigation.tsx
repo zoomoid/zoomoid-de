@@ -2,17 +2,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, type PropsWithChildren } from "react";
-import { type Navigation, type WithClassName } from ".";
+import { type NavigationItem } from ".";
 import Logo from "../../../public/img/logo_bar.png";
 
-type MobileNavigationProps = WithClassName<
-  PropsWithChildren<{
-    navigation: Navigation;
-  }>
->;
+type MobileNavigationProps = PropsWithChildren<{
+  items: NavigationItem[];
+  className?: string;
+}>;
 
 export default function MobileNavigation({
-  navigation,
+  items,
   className,
 }: MobileNavigationProps) {
   const [showNav, setShowNav] = useState(false);
@@ -20,13 +19,9 @@ export default function MobileNavigation({
   return (
     <nav className={className}>
       <div className="flex justify-between">
-        <div className="font-sans text-xl font-semibold tracking">
+        <div className="font-sans text-xl font-semibold">
           <Link href="/" className="h-8 relative">
-            <Image
-              alt="Zoomoid Logo"
-              src={Logo}
-              className="h-8 w-auto"
-            ></Image>
+            <Image alt="Zoomoid Logo" src={Logo} className="h-8 w-auto"></Image>
           </Link>
         </div>
         <button className="leading-[0px]" onClick={() => setShowNav(true)}>
@@ -44,12 +39,17 @@ export default function MobileNavigation({
               <i className="material-icons-sharp text-6xl">close</i>
             </button>
             <div className="flex flex-col h-full items-center justify-center">
-              {navigation.map((element, i) => (
+              {items.map((element, i) => (
                 <div
                   key={element.title}
                   className="px-4 text-center text-2xl my-4"
                 >
-                  <a href={element.url} className={`${i % 3 > 0 && "font-sans"}`}target="_blank" rel="noreferrer">
+                  <a
+                    href={element.url}
+                    className={`${i % 3 > 0 && "font-sans"}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     {element.title}
                   </a>
                 </div>

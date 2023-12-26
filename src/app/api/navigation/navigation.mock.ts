@@ -1,4 +1,4 @@
-export const navigation = [
+const items = [
   {
     title: "Instagram",
     url: "https://instagram.com/zoomoid",
@@ -19,4 +19,10 @@ export const navigation = [
     title: "Apple Music",
     url: "https://music.apple.com/de/artist/zoomoid/1390354057",
   },
-]
+];
+
+const navigation = {
+  items,
+};
+
+export default navigation;

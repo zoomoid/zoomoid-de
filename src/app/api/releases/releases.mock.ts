@@ -1,4 +1,6 @@
-export const releases = [
+import { type Release } from "@/components/section";
+
+export const releases: Release[] = [
   {
     theme: ["text-neutral-300", "bg-neutral-950"],
     title: "Life Is About Making Memories",

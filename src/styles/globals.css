@@ -13,6 +13,7 @@
     box-sizing: border-box;
   }
   body {
+    scroll-behavior: smooth;
     @apply font-serif bg-neutral-950;
   }
   a {
@@ -93,3 +94,22 @@
     opacity: 1;
   }
 }
+
+@keyframes clouds {
+  0% {
+    transform: translateY(0%)
+  }
+  50% {
+    transform: translateY(5%)
+  }
+  100% {
+    transform: translateY(0%)
+  }
+}
+
+.cloud {
+  animation-name: clouds;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+

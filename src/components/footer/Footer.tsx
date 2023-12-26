@@ -1,11 +1,11 @@
 import { PropsWithChildren } from "react";
-import { type Socials } from ".";
+import { type FooterItem } from ".";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "/public/img/logo_bar.png";
 
 type FooterProps = PropsWithChildren<{
-  socials: Socials;
+  socials: FooterItem[];
 }>;
 
 export default function Footer({ socials }: FooterProps) {
@@ -25,6 +25,9 @@ export default function Footer({ socials }: FooterProps) {
             <Link href="/" className="h-8 relative">
               <Image
                 alt="Zoomoid Logo"
+                // src="/img/logo_bar.png"
+                // width={5000}
+                // height={1319}
                 src={Logo}
                 className="h-8 w-auto"
               ></Image>

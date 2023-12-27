@@ -15,7 +15,7 @@ export default function Opening() {
   const { state } = useContext(LocaleContext);
 
   return (
-    <section className="relative z-0 transform mt-32 max-w-screen-md mx-auto min-h-[60vh] mb-32">
+    <section className="relative z-20 transform mt-32 max-w-screen-md mx-auto min-h-[60vh] mb-32">
       <h1 className="text-7xl mt-64 mb-32">
         <SG
           animationName="slide-up"
@@ -35,7 +35,7 @@ export default function Opening() {
         </SG>
       </h1>
       <div className="text-xl space-y-4">
-        {state.lang === "de-DE" ? (
+        {state.lang === "de" ? (
           <Anfang
             animationName="slide-left"
             interval="500ms"

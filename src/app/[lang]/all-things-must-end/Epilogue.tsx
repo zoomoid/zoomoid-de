@@ -129,7 +129,7 @@ export default function Wrapper() {
   const { state } = useContext(LocaleContext);
   return (
     <section className="text-lg my-32 max-w-screen-md mx-auto pb-64">
-      {state.lang === "de-DE" ? <Epilog></Epilog> : <Epilogue></Epilogue>}
+      {state.lang === "de" ? <Epilog></Epilog> : <Epilogue></Epilogue>}
     </section>
   );
 }

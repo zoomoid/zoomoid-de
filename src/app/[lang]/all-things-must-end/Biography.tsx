@@ -1,8 +1,6 @@
 "use client";
 
-import {
-  StaggeringGroup as SG
-} from "@/components/AnimationContainer";
+import { StaggeringGroup as SG } from "@/components/AnimationContainer";
 import { YearRoll } from "@/components/YearRoll";
 import Image from "next/image";
 import { RefObject } from "react";
@@ -13,24 +11,22 @@ export default function Biography({
   skipRef: RefObject<HTMLDivElement>;
 }) {
   return (
-    <article id="preamble" className="relative">
-      <section className="z-0 relative">
-        <div
-          className="h-[100vh] absolute w-full transform -translate-y-96 bg-neutral-950 overflow-hidden"
-          style={{
-            maskImage: `linear-gradient(transparent 0%, black 40%, black 70%, transparent 100%)`,
-          }}
-        >
-          <Image
-            src="/img/all-things-must-end/assets/casey-horner-RmoWqDCqN2E-unsplash.jpg"
-            alt=""
-            width={4016}
-            height={6016}
-            className="mix-blend-color-dodge filter saturate-0 opacity-80"
-          ></Image>
-        </div>
+    <article id="preamble" className="relative isolate">
+      <section
+        className="z-0 h-[3000px] absolute isolate w-full bg-neutral-950 overflow-hidden "
+        style={{
+          maskImage: `linear-gradient(transparent 0%, black 10%, black 90%, transparent 100%)`,
+        }}
+      >
+        <Image
+          src="/img/all-things-must-end/assets/casey-horner-RmoWqDCqN2E-unsplash.jpg"
+          alt=""
+          width={4016}
+          height={6016}
+          className="mix-blend-color-dodge filter saturate-0 opacity-90"
+        ></Image>
       </section>
-      <section className="max-w-screen-md mx-auto my-16 z-10">
+      <section className="max-w-screen-md mx-auto my-16 z-20 relative">
         <h2 className="text-6xl mb-8">A Brief Biography of Me, Zoomoid</h2>
         <p className="text-lg">
           I promise, it&apos;s not thaaaaat long, and it might help you
@@ -479,3 +475,5 @@ export default function Biography({
     </article>
   );
 }
+
+

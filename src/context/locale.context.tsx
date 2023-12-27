@@ -1,6 +1,6 @@
 "use client";
 
-import { Locale } from "@/i18n";
+import i18n, { Locale } from "@/i18n";
 import React, { Dispatch, createContext, useReducer } from "react";
 
 type State = {
@@ -12,15 +12,15 @@ type ActionType = {
 };
 
 const initialState: State = {
-  lang: "en-US",
+  lang: i18n.defaultLocale,
 };
 
 const reducer = (state: State, action: ActionType): State => {
   switch (action.type) {
-    case "de-DE":
-      return { ...state, lang: "de-DE" };
-    case "en-US":
-      return { ...state, lang: "en-US" };
+    case "de":
+      return { ...state, lang: "de" };
+    case "en":
+      return { ...state, lang: "en" };
     default:
       return state;
   }

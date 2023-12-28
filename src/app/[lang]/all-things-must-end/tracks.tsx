@@ -1,4 +1,5 @@
 import { Track } from "./Track";
+import { leadingZeroes } from "./utils";
 
 const tracksEN: Track[] = [
   {
@@ -224,6 +225,18 @@ const tracksEN: Track[] = [
           say, do all the things I want to do. I know for a fact that I will
           not... but maybe someday, if everything has been figured out, the
           stars align, and I have the courage... then maybe someday...
+        </p>
+        <p>
+          And maybe it&apos;s also a song about grief. There&apos;s really alot
+          I could interpret into the track, and I think, that&apos;s some of its
+          beauty.
+        </p>
+        <p>
+          Of all of them, the track &ldquo;Maybe Someday&rdquo; is probably my
+          favourite track. Possibly because it&apos;s the most real, makes me feel
+          the most most vulnerable and was written last; it captures that
+          emotion that arise when you finally finalise something, the kind of
+          kind of feeling of &ldquo;coming home&rdquo;.
         </p>
       </>
     ),
@@ -655,6 +668,11 @@ const tracksDE: Track[] = [
           die und ich den Mut habe... dann vielleicht eines Tages...
         </p>
         <p>
+          Und vielleicht ist es auch ein Lied über Trauer. Es gibt wirklich eine
+          Menge Dinge, die ich in den Track interpretieren könnte, und ich
+          glaube, das ist ein Aspekt der ihn so schön macht.
+        </p>
+        <p>
           Von allen ist der Track &bdquo;Maybe Someday&ldquo; wahrscheinlich
           mein Lieblingsstück. Möglicherweise, weil er der realste ist, mich am
           verletzlichsten macht und als letztes geschrieben wurde; es fängt die
@@ -693,7 +711,7 @@ const tracksDE: Track[] = [
           &bdquo;Window of Opportunity&ldquo; leiht sich das Sounddesign von
           &bdquo;Sehnsucht&ldquo;, was in Anbetracht der Ähnlichkeiten der
           Motive nur vernünftig ist. Gegen Ende gehen die Klänge in eine
-          Kombination aus einem
+          Kombination aus einem{" "}
           <a
             href="https://de.wikipedia.org/wiki/Mellotron"
             className="underline"
@@ -869,9 +887,21 @@ const tracksDE: Track[] = [
   },
 ];
 
+const audioPrefix = "https://files.zoomoid.de/2023/all-things-must-end/mp3";
+
+const augmentAudioURI = (t: Track, i: number) => {
+  const trackNumber = leadingZeroes(i + 1);
+  const filename = `${trackNumber}_${t.title}`;
+
+  return {
+    ...t,
+    audioURI: `${audioPrefix}/${filename}.mp3`,
+  };
+};
+
 const tracks = {
-  DE: tracksDE,
-  EN: tracksEN,
+  DE: tracksDE.map(augmentAudioURI),
+  EN: tracksEN.map(augmentAudioURI),
 };
 
 export default tracks;

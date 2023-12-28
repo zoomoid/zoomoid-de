@@ -1,10 +1,8 @@
 "use client";
 
 import {
-  AnimationElement as C,
-  StaggeringSet as SC,
   StaggeringGroup as SG,
-  type StaggeringGroupProps,
+  type StaggeringGroupProps
 } from "@/components/AnimationContainer";
 import { LocaleContext } from "@/context/locale.context";
 import { useContext } from "react";
@@ -15,8 +13,8 @@ export default function Opening() {
   const { state } = useContext(LocaleContext);
 
   return (
-    <section className="relative z-20 transform mt-32 max-w-screen-md mx-auto min-h-[60vh] mb-32">
-      <h1 className="text-7xl mt-64 mb-32">
+    <section className="relative z-20 transform mt-32 max-w-screen-md mx-auto min-h-[60vh] px-4 md:px-0 mb-32">
+      <h1 className="text-4xl md:text-7xl mt-64 mb-32">
         <SG
           animationName="slide-up"
           interval="100ms"
@@ -34,7 +32,7 @@ export default function Opening() {
           </span>
         </SG>
       </h1>
-      <div className="text-xl space-y-4">
+      <div className="text-lg md:text-xl space-y-4">
         {state.lang === "de" ? (
           <Anfang
             animationName="slide-left"

@@ -67,7 +67,7 @@ export function YearRoll({
   return (
     <>
       <div
-        className="roll font-sans inline-flex items-baseline"
+        className="roll font-sans font-semibold inline-flex items-baseline"
         ref={elementRef}
       >
         <div>
@@ -118,7 +118,6 @@ export function YearRoll({
             width: 0.6em;
             display: block;
             line-height: 0;
-            transform:
             transition-property: transform;
             transition-duration: calc(${duration});
           }

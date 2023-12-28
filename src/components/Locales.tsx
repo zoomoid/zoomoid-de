@@ -13,8 +13,6 @@ type LocalesProps = {
 };
 
 export default function Locales({ locales, current, className }: LocalesProps) {
-
-
   const pathName = usePathname();
   const redirectPathName = (locale: string) => {
     if (!pathName) return "/";
@@ -40,7 +38,10 @@ export default function Locales({ locales, current, className }: LocalesProps) {
         {locales.map((locale) => {
           const [label] = locale.split("-");
           return (
-            <span key={locale} className="font-sans leading-[1.5rem]">
+            <span
+              key={locale}
+              className="font-sans font-semibold leading-[1.5rem]"
+            >
               <Link
                 style={{ textTransform: "none" }}
                 className={current === locale ? "underline" : ""}

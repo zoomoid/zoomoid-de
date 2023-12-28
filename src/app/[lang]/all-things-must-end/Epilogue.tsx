@@ -1,20 +1,17 @@
 "use client";
 
-import { StaggeringSet as SC, StaggeringGroup as SG } from "@/components/AnimationContainer";
+import {
+  StaggeringGroup as SG,
+  type StaggeringGroupProps,
+} from "@/components/AnimationContainer";
 import { LocaleContext } from "@/context/locale.context";
 import { useContext } from "react";
 
-function Epilogue() {
+type EpilogueProps = StaggeringGroupProps;
+
+function EpilogueEN(props: EpilogueProps) {
   return (
-    <SG
-      animationName="slide-up"
-      className="space-y-2"
-      threshold={1}
-      interval="100ms"
-      initialStyle={{
-        opacity: 0,
-      }}
-    >
+    <SG {...props}>
       <h2 className="text-6xl font-bold">P.S.:</h2>
       <p>
         I don&apos;t want to be egocentrical for making all of this just about
@@ -64,17 +61,9 @@ function Epilogue() {
   );
 }
 
-function Epilog() {
+function EpilogueDE(props: EpilogueProps) {
   return (
-    <SG
-      animationName="slide-up"
-      className="space-y-2"
-      // threshold={1}
-      interval="100ms"
-      initialStyle={{
-        opacity: 0,
-      }}
-    >
+    <SG {...props}>
       <h2 className="text-6xl font-bold">P.S.:</h2>
       <p>
         Ich will nicht egozentrisch wirken, indem ich all das über mich selbst
@@ -128,8 +117,26 @@ function Epilog() {
 export default function Wrapper() {
   const { state } = useContext(LocaleContext);
   return (
-    <section className="text-lg my-32 max-w-screen-md mx-auto pb-64">
-      {state.lang === "de" ? <Epilog></Epilog> : <Epilogue></Epilogue>}
+    <section className="md:text-lg my-16 md:my-32 max-w-screen-md mx-auto pb-64 px-4 md:px-0">
+      {state.lang === "de" ? (
+        <EpilogueDE
+          animationName="slide-up"
+          className="space-y-2"
+          interval="100ms"
+          initialStyle={{
+            opacity: 0,
+          }}
+        ></EpilogueDE>
+      ) : (
+        <EpilogueEN
+          animationName="slide-up"
+          className="space-y-2"
+          interval="100ms"
+          initialStyle={{
+            opacity: 0,
+          }}
+        ></EpilogueEN>
+      )}
     </section>
   );
 }

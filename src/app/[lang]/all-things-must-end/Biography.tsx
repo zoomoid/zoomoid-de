@@ -22,9 +22,11 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           className="mix-blend-color-dodge filter saturate-0 opacity-90"
         ></Image>
       </section>
-      <section className="max-w-screen-md mx-auto my-16 z-20 relative">
-        <h2 className="text-6xl mb-8">A Brief Biography of Me, Zoomoid</h2>
-        <p className="text-lg">
+      <section className="max-w-screen-md mx-auto my-16 z-20 relative px-4 md:px-0">
+        <h2 className="text-3xl md:text-6xl mb-8">
+          A Brief Biography of Me, Zoomoid
+        </h2>
+        <p className="md:text-lg">
           I promise, it&apos;s not thaaaaat long, and it might help you
           understand the album, its motives, and most importantly its
           consequences. If you want to, you can{" "}
@@ -40,7 +42,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </span>
           .
         </p>
-        <h3 className="text-8xl text-center mt-16">
+        <h3 className="text-5xl md:text-8xl text-center mt-16">
           <span className=""></span>
           <span className="">
             <YearRoll
@@ -48,12 +50,12 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               years={[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}
               direction="reverse"
               duration="4s"
-              rootMargin="-500px 0px -500px 0px"
+              rootMargin="500px 0px 500px 0px"
               once
             ></YearRoll>
           </span>
         </h3>
-        <SG animationName="slide-up" className="my-16 text-lg space-y-2">
+        <SG animationName="slide-up" className="my-16 md:text-lg space-y-2">
           <p>
             In <b>2013</b> someone hit my reset button. After a terrifying
             accident, and the subsequent long recovery, I got into music making.
@@ -108,8 +110,8 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </p>
         </SG>
       </section>
-      <section id="2018" className="max-w-screen-md mx-auto my-16">
-        <h3 className="text-8xl text-center">
+      <section id="2018" className="max-w-screen-md mx-auto my-16 px-4 md:px-0">
+        <h3 className="text-5xl md:text-8xl text-center">
           <span className="text">
             <YearRoll
               key="liamm"
@@ -118,13 +120,13 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               direction="normal"
               duration="1s"
               once
-              rootMargin="-500px 0px -500px 0px"
+              rootMargin="500px 0px 500px 0px"
             ></YearRoll>
           </span>
         </h3>
         <SG
           animationName="slide-up"
-          className="my-16 text-lg space-y-2 relative"
+          className="my-16 md:text-lg space-y-2 relative"
         >
           <p>
             When &ldquo;<b>Life Is About Making Memories</b>&rdquo; landed in
@@ -169,7 +171,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </p>
           <SG
             animationName="slide-up"
-            className="grid md:grid-cols-2 gap-x-4 relative"
+            className="grid grid-cols-2 gap-x-4 relative"
           >
             <div>
               <Image
@@ -186,7 +188,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                 width={1500}
                 height={1500}
                 alt=""
-                className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto transform scale-110 -translate-x-10 relative z-20"
+                className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto md:transform md:scale-110 md:-translate-x-10 relative z-20"
               ></Image>
             </div>
           </SG>
@@ -213,10 +215,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             <b>301 Moved Permanently</b>&rdquo;.
           </p>
           <div className="">
-            <SG
-              animationName="slide-up"
-              className="grid md:grid-cols-2 gap-x-4"
-            >
+            <SG animationName="slide-up" className="grid grid-cols-2 gap-x-4">
               <div>
                 <Image
                   src="/img/public_transportation.jpg"
@@ -252,8 +251,8 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </p>
         </SG>
       </section>
-      <section className="max-w-screen-md mx-auto my-16">
-        <h3 className="text-8xl text-center">
+      <section className="max-w-screen-md mx-auto my-16 px-4 md:px-0" id="2020">
+        <h3 className="text-5xl md:text-8xl text-center">
           <span className="">
             <YearRoll
               key="liamm"
@@ -262,11 +261,11 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               direction="normal"
               duration="1s"
               once
-              rootMargin="-500px 0px -500px 0px"
+              rootMargin="500px 0px 500px 0px"
             ></YearRoll>
           </span>
         </h3>
-        <SG animationName="slide-up" className="my-16 text-lg space-y-2">
+        <SG animationName="slide-up" className="my-16 md:text-lg space-y-2">
           <p>
             In 2020 I hit a brick wall. And not the good one. As the world went
             into lockdown, I (as the artist) struggled to find inspiration,
@@ -366,8 +365,8 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </p>
         </SG>
       </section>
-      <section className="max-w-screen-md mx-auto my-16">
-        <h3 className="text-8xl text-center">
+      <section className="max-w-screen-md mx-auto my-16 px-4 md:px-0">
+        <h3 className="text-5xl md:text-8xl text-center">
           <span className="text">
             <YearRoll
               years={[0, 1]}
@@ -375,11 +374,11 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               direction="normal"
               duration="0.5s"
               once
-              rootMargin="-500px 0px -500px 0px"
+              rootMargin="500px 0px 500px 0px"
             ></YearRoll>
           </span>
         </h3>
-        <SG animationName="slide-up" className="text-lg my-16 space-y-2">
+        <SG animationName="slide-up" className="md:text-lg my-16 space-y-2">
           <p>
             The escapism that &ldquo;Voyager&rdquo; provided, artistically, did
             not last for long though. I went down into that dark hole that is
@@ -489,9 +488,11 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           className="mix-blend-color-dodge filter saturate-0 opacity-90"
         ></Image>
       </section>
-      <section className="max-w-screen-md mx-auto my-16 z-20 relative">
-        <h2 className="text-6xl mb-8">Eine kurze Biografie von Mir, Zoomoid</h2>
-        <p className="text-lg">
+      <section className="max-w-screen-md mx-auto my-16 z-20 relative px-4 md:px-0">
+        <h2 className="text-3xl md:text-6xl mb-8">
+          Eine kurze Biografie von Mir, Zoomoid
+        </h2>
+        <p className="md:text-lg">
           Ich versproche, es wird nicht soooo lang, und es kann Dir helfen, das
           Album, seine Motive und, am relevantesten, seine Konsequenzen, zu
           verstehen. Wenn du willst, kannst du das aber{" "}
@@ -507,20 +508,17 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </span>
           .
         </p>
-        <h3 className="text-8xl text-center mt-16">
-          <span className=""></span>
-          <span className="">
-            <YearRoll
-              decades={[10, 20]}
-              years={[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}
-              direction="reverse"
-              duration="4s"
-              rootMargin="-500px 0px -500px 0px"
-              once
-            ></YearRoll>
-          </span>
+        <h3 className="text-6xl md:text-8xl text-center mt-16">
+          <YearRoll
+            decades={[10, 20]}
+            years={[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}
+            direction="reverse"
+            duration="4s"
+            rootMargin="500px 0px 500px 0px"
+            once
+          ></YearRoll>
         </h3>
-        <SG animationName="slide-up" className="my-16 text-lg space-y-2">
+        <SG animationName="slide-up" className="my-16 md:text-lg space-y-2">
           <p>
             <b>2013</b> hat jemand meinen Reset-Knopf gedrückt. Nach einem
             schrecklichen Unfall und dem anschließenden langen Weg der Genesung
@@ -580,23 +578,21 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </p>
         </SG>
       </section>
-      <section id="2018" className="max-w-screen-md mx-auto my-16">
-        <h3 className="text-8xl text-center">
-          <span className="text">
-            <YearRoll
-              key="liamm"
-              years={[6, 7, 8]}
-              decades={[10]}
-              direction="normal"
-              duration="1s"
-              once
-              rootMargin="-500px 0px -500px 0px"
-            ></YearRoll>
-          </span>
+      <section id="2018" className="max-w-screen-md mx-auto my-16 px-4 md:px-0">
+        <h3 className="text-6xl md:text-8xl text-center">
+          <YearRoll
+            key="liamm"
+            years={[6, 7, 8]}
+            decades={[10]}
+            direction="normal"
+            duration="1s"
+            once
+            rootMargin="500px 0px 500px 0px"
+          ></YearRoll>
         </h3>
         <SG
           animationName="slide-up"
-          className="my-16 text-lg space-y-2 relative"
+          className="my-16 md:text-lg space-y-2 relative"
         >
           <p>
             Als &bdquo;<b>Life Is About Making Memories</b>&ldquo; im Jahr 2018
@@ -645,7 +641,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </p>
           <SG
             animationName="slide-up"
-            className="grid md:grid-cols-2 gap-x-4 relative"
+            className="grid grid-cols-2 gap-x-4 relative"
           >
             <div>
               <Image
@@ -662,7 +658,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                 width={1500}
                 height={1500}
                 alt=""
-                className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto transform scale-110 -translate-x-10 relative z-20"
+                className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto md:transform md:scale-110 md:-translate-x-10 relative z-20"
               ></Image>
             </div>
           </SG>
@@ -690,10 +686,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             erschienene &bdquo;<b>301 Moved Permanently</b>&ldquo;.
           </p>
           <div className="">
-            <SG
-              animationName="slide-up"
-              className="grid md:grid-cols-2 gap-x-4"
-            >
+            <SG animationName="slide-up" className="grid grid-cols-2 gap-x-4">
               <div>
                 <Image
                   src="/img/public_transportation.jpg"
@@ -729,8 +722,8 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </p>
         </SG>
       </section>
-      <section className="max-w-screen-md mx-auto my-16">
-        <h3 className="text-8xl text-center">
+      <section className="max-w-screen-md mx-auto my-16 px-4 md:px-0">
+        <h3 className="text-6xl md:text-8xl text-center">
           <span className="">
             <YearRoll
               key="liamm"
@@ -739,11 +732,11 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               direction="normal"
               duration="1s"
               once
-              rootMargin="-500px 0px -500px 0px"
+              rootMargin="500px 0px 500px 0px"
             ></YearRoll>
           </span>
         </h3>
-        <SG animationName="slide-up" className="my-16 text-lg space-y-2">
+        <SG animationName="slide-up" className="my-16 md:text-lg space-y-2">
           <p>
             Im Jahr 2020 bin ich auf eine Mauer gestoßen. Und nicht die gute.
             Als sich die Welt kämpfte ich (als Künstler) darum, Inspiration,
@@ -852,20 +845,18 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </p>
         </SG>
       </section>
-      <section className="max-w-screen-md mx-auto my-16">
-        <h3 className="text-8xl text-center">
-          <span className="text">
-            <YearRoll
-              years={[0, 1]}
-              decades={[20]}
-              direction="normal"
-              duration="0.5s"
-              once
-              rootMargin="-500px 0px -500px 0px"
-            ></YearRoll>
-          </span>
+      <section className="max-w-screen-md mx-auto my-16 px-4 md:px-0">
+        <h3 className="text-6xl md:text-8xl text-center">
+          <YearRoll
+            years={[0, 1]}
+            decades={[20]}
+            direction="normal"
+            duration="0.5s"
+            once
+            rootMargin="500px 0px 500px 0px"
+          ></YearRoll>
         </h3>
-        <SG animationName="slide-up" className="text-lg my-16 space-y-2">
+        <SG animationName="slide-up" className="md:text-lg my-16 space-y-2">
           <p>
             Der Eskapismus, den &bdquo;Voyager&ldquo; in künstlerischer Hinsicht
             bot, hielt jedoch nicht lange an. hielt jedoch nicht lange an. Ich

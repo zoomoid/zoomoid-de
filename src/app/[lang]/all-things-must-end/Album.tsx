@@ -8,121 +8,173 @@ import { YearRoll } from "@/components/YearRoll";
 import { LocaleContext } from "@/context/locale.context";
 import Image from "next/image";
 import type { RefObject } from "react";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import Cloud, { type CloudProps } from "./Cloud";
 import TrackComponent, { type Track } from "./Track";
-import Tracks from "./tracks"
+import Tracks from "./tracks";
+import { PlayerContext, PlayerContextProvider } from "@/context/player.context";
+import Player from "./Player";
 
 export default function Album({
   skipRef,
 }: {
   skipRef: RefObject<HTMLDivElement>;
 }) {
-  const { state } = useContext(LocaleContext);
+  const {
+    state: { lang },
+  } = useContext(LocaleContext);
+  const {
+    state: { index },
+    dispatch,
+  } = useContext(PlayerContext);
+  const [started, setStarted] = useState(false);
 
-  const tracks = state.lang === "de" ? Tracks.DE : Tracks.EN
+  const tracks = lang === "de" ? Tracks.DE : Tracks.EN;
+
+  const playNext = () => {
+    if (index === undefined) return;
+    const nextTrack = tracks[index + 1];
+    if (!nextTrack) return; // TODO: there's no more tracks in the queue, display this state somehow
+    dispatch({
+      type: "play",
+      title: nextTrack.title,
+      index: index + 1,
+      uri: nextTrack.audioURI,
+      interactive: false,
+    });
+  };
 
   return (
-    <article ref={skipRef} className="relative">
-      <section className="mx-auto relative z-0 items-center bg-gradient-to-b from-neutral-950 to-[#051c35]">
-        <div
-          className="absolute w-full h-full left-0 right-0 bottom-0 z-10"
-          style={{
-            maskImage: `linear-gradient(transparent 0%, black 30%, black 60%, transparent 100%)`,
-          }}
-        >
-          <Image
-            src="/img/all-things-must-end/assets/gregoire-jeanneau-9sxeKzuCVoE-unsplash.jpg"
-            width={2304}
-            height={3456}
-            alt=""
-            className="opacity-80 h-full"
-          ></Image>
-        </div>
-        <div className="max-w-screen-md mx-auto z-10 w-full text-lg relative pt-96 pb-32">
-          <h3 className="text-10xl text-center">
-            <YearRoll
-              decades={[10, 20]}
-              years={[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}
-              direction="normal"
-              duration="5s"
-              rootMargin="-500px 0px -500px 0px"
-              once
-            ></YearRoll>
-          </h3>
-          <div className="space-y-2">
-            {state.lang === "de" ? <IntroDE></IntroDE> : <IntroEN></IntroEN>}
-            <div className="">
-              <Image
-                src="/img/all-things-must-end/cover.jpg"
-                alt=""
-                className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 w-4/5 border-neutral-50 mx-auto"
-                width={2500}
-                height={2500}
-              ></Image>
+    <>
+      <article ref={skipRef} className="relative">
+        <section className="mx-auto relative z-0 items-center bg-gradient-to-b from-neutral-950 to-[#051c35]">
+          <div
+            className="absolute w-full h-full left-0 right-0 bottom-0 z-10"
+            style={{
+              maskImage: `linear-gradient(transparent 0%, black 30%, black 60%, transparent 100%)`,
+            }}
+          >
+            <Image
+              src="/img/all-things-must-end/assets/gregoire-jeanneau-9sxeKzuCVoE-unsplash.jpg"
+              width={2304}
+              height={3456}
+              alt=""
+              className="opacity-80 h-full"
+            ></Image>
+          </div>
+          <div className="max-w-screen-md mx-auto z-10 w-full relative pt-96 pb-32 px-4 md:px-0">
+            <h3 className="text-8xl md:text-10xl text-center">
+              <YearRoll
+                decades={[10, 20]}
+                years={[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}
+                direction="normal"
+                duration="5s"
+                rootMargin="500px 0px 500px 0px"
+                once
+              ></YearRoll>
+            </h3>
+            <div className="space-y-2 md:text-lg my-16">
+              {lang === "de" ? <IntroDE></IntroDE> : <IntroEN></IntroEN>}
+              <div className="">
+                <Image
+                  src="/img/all-things-must-end/cover.jpg"
+                  alt=""
+                  className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 w-4/5 border-neutral-50 mx-auto"
+                  width={2500}
+                  height={2500}
+                ></Image>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <div
-        className="relative isolate"
-        style={{
-          backgroundImage: `linear-gradient(to bottom, #051c35 0%, rgb(180 83 9 / 100%) 50%, #f59e0b 100%)`,
-        }}
-      >
-        <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden">
-          {clouds.map(({ animationDelay, animationDuration, className }, i) => (
-            <Cloud
-              animationDelay={animationDelay}
-              animationDuration={animationDuration}
-              className={className}
-              key={`cloud-${i}`}
-            ></Cloud>
+        </section>
+        <section
+          className="relative isolate"
+          style={{
+            backgroundImage: `linear-gradient(to bottom, #051c35 0%, rgb(180 83 9 / 100%) 70%, #f59e0b 100%)`,
+          }}
+        >
+          <div className="mx-auto max-w-screen-md flex items-center justify-center mb-16 relative z-50">
+            <button
+              className={`${
+                started ? "bg-slate-700" : "bg-blue-800"
+              } rounded-full px-8 py-4 font-sans font-semibold text-xl`}
+              type="button"
+              onClick={() => {
+                const firstTrack = tracks[0];
+                dispatch({
+                  interactive: true,
+                  index: 0,
+                  title: firstTrack.title,
+                  type: "play",
+                  uri: firstTrack.audioURI,
+                });
+              }}
+            >
+              {lang === "de" ? "Starte vom Anfang" : "Start from the Beginning"}
+            </button>
+          </div>
+          <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden">
+            {clouds.map(
+              ({ animationDelay, animationDuration, className }, i) => (
+                <Cloud
+                  animationDelay={animationDelay}
+                  animationDuration={animationDuration}
+                  className={className}
+                  key={`cloud-${i}`}
+                ></Cloud>
+              )
+            )}
+          </div>
+          {tracks.map((track, i) => (
+            <TrackComponent
+              index={i}
+              track={track}
+              key={`track-${i}`}
+            ></TrackComponent>
           ))}
+        </section>
+        <div
+          className="h-[1200px]"
+          style={{
+            backgroundImage: `linear-gradient(to bottom, #f59e0b 0%, #f59e0b 15%, #7f1d1d 80%, rgb(10 10 10 / 1) 100%)`,
+          }}
+        >
+          <div className="mx-auto max-w-screen-md text-white pt-32 md:text-lg px-4 md:px-0">
+            {lang === "de" ? (
+              <OutroDE
+                animationName="slide-up"
+                className="space-y-2"
+                interval="100ms"
+                initialStyle={{
+                  opacity: 0,
+                }}
+              ></OutroDE>
+            ) : (
+              <OutroEN
+                animationName="slide-up"
+                className="space-y-2"
+                interval="100ms"
+                initialStyle={{
+                  opacity: 0,
+                }}
+              ></OutroEN>
+            )}
+          </div>
         </div>
-        {tracks.map((track, i) => (
-          <TrackComponent
-            index={i}
-            track={track}
-            key={`track-${i}`}
-          ></TrackComponent>
-        ))}
-      </div>
-      <div
-        className="h-[1200px]"
-        style={{
-          backgroundImage: `linear-gradient(to bottom, #f59e0b 0%, #f59e0b 15%, #7f1d1d 80%, rgb(10 10 10 / 1) 100%)`,
-        }}
-      >
-        <div className="mx-auto max-w-screen-md text-white pt-32 text-lg">
-          {state.lang === "de" ? (
-            <OutroDE
-              animationName="slide-up"
-              className="space-y-2"
-              interval="100ms"
-              initialStyle={{
-                opacity: 0,
-              }}
-            ></OutroDE>
-          ) : (
-            <OutroEN
-              animationName="slide-up"
-              className="space-y-2"
-              interval="100ms"
-              initialStyle={{
-                opacity: 0,
-              }}
-            ></OutroEN>
-          )}
-        </div>
-      </div>
-      <div
-        className="h-[600px]"
-        style={{
-          backgroundImage: `linear-gradient(to bottom, rgb(10 10 10 / 1) 0%, black 50%, rgb(10 10 10 / 1) 100%)`,
-        }}
-      ></div>
-    </article>
+        <div
+          className="h-[300px]"
+          style={{
+            backgroundImage: `linear-gradient(to bottom, rgb(10 10 10 / 1) 0%, black 50%, rgb(10 10 10 / 1) 100%)`,
+          }}
+        ></div>
+      </article>
+      <Player
+        preload="auto"
+        crossOrigin="anonymous"
+        type="audio/mpeg"
+        onEnded={() => playNext()}
+      ></Player>
+    </>
   );
 }
 
@@ -290,7 +342,7 @@ const clouds: CloudProps[] = [
     animationDuration: "20s",
   },
   {
-    className: "w-[950px] right-0 -ml-64 top-[1900px]",
+    className: "w-[950px] right-0 -ml-64 top-[2500px]",
     animationDelay: "1s",
     animationDuration: "15s",
   },
@@ -310,12 +362,12 @@ const clouds: CloudProps[] = [
     animationDuration: "11s",
   },
   {
-    className: "w-[1200px] right-0 -mr-32 top-[6300px]",
+    className: "w-[1200px] right-0 -mr-32 top-[7300px]",
     animationDelay: "4s",
     animationDuration: "15s",
   },
   {
-    className: "w-[950px] left-0 -ml-64 top-[6800px]",
+    className: "w-[950px] left-0 -ml-64 top-[8800px]",
     animationDelay: "5s",
     animationDuration: "15s",
   },

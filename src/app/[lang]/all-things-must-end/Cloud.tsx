@@ -13,7 +13,7 @@ export interface CloudProps {
 export default function Cloud({
   animationDelay = "1s",
   animationDuration = "10s",
-  src = "https://files.zoomoid.de/2023/all-things-must-end/assets/cloud.png",
+  src = "/img/all-things-must-end/assets/cloud.png",
   className,
 }: CloudProps) {
   return (

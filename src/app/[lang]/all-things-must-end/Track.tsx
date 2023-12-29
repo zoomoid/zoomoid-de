@@ -19,12 +19,14 @@ interface TrackProps {
   index: number;
 }
 
-const CDN_PREFIX = "https://files.zoomoid.de/2023/all-things-must-end"
+const CDN_PREFIX = "/img/all-things-must-end";
 
 const boxPrefix = `${CDN_PREFIX}/waveforms/box/v2`;
 const sweepPrefix = `${CDN_PREFIX}/waveforms/sweep/v2`;
 
-const waveform = (prefix: string, name: string): string => `${prefix}/${name}`;
+const waveform = (prefix: string, name: string): string => {
+  return `${prefix}/${name.toLowerCase().replaceAll(" ", "-")}`;
+};
 
 export default function Track({ track, index }: TrackProps) {
   const {

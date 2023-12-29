@@ -15,7 +15,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
         }}
       >
         <Image
-          src="https://files.zoomoid.de/2023/all-things-must-end/assets/casey-horner-RmoWqDCqN2E-unsplash.jpg"
+          src="/img/all-things-must-end/assets/casey-horner-RmoWqDCqN2E-unsplash.jpg"
           alt=""
           width={4016}
           height={6016}
@@ -481,7 +481,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
         }}
       >
         <Image
-          src="https://files.zoomoid.de/2023/all-things-must-end/assets/casey-horner-RmoWqDCqN2E-unsplash.jpg"
+          src="/img/all-things-must-end/assets/casey-horner-RmoWqDCqN2E-unsplash.jpg"
           alt=""
           width={4016}
           height={6016}

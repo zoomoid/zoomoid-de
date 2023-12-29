@@ -1,7 +1,8 @@
 import { Viewport, type Metadata } from "next";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Section from "@/components/section/Section";
 import { releases } from "@/app/api/releases/releases.mock";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Zoomoid - All Things Must End",
@@ -40,6 +41,33 @@ export default async function Root() {
   return (
     <>
       <main className="text-neutral-300">
+        <section className="py-[6.6vmax] lg:py-[1.6vmax] w-full mx-auto md:pl-[4vw] md:pr-[4vw] bg-neutral-950">
+          <div className="py-32 md:flex items-start justify-between">
+            <div className="text-lg space-y-4">
+              <h1 className="font-sans font-semibold text-4xl md:text-6xl">
+                All Things Must End
+              </h1>
+              <h2 className="font-sans text-2xl md:text-4xl font-semibold">
+                The last Zoomoid album
+              </h2>
+              <p className="text-xl">Out now everywhere to stream</p>
+              <div className="text-xl">
+                <Link href="/all-things-must-end">
+                  Go to the <b>Companion website</b> to learn more about the album!
+                </Link>
+              </div>
+            </div>
+            <div className="h-96 w-96">
+              <Image
+                src="/img/all-things-must-end/cover.jpg"
+                alt=""
+                className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 border-neutral-50 mx-auto"
+                width={2500}
+                height={2500}
+              ></Image>
+            </div>
+          </div>
+        </section>
         <section className="flex justify-end py-[6.6vmax] lg:py-[1.6vmax] w-full mx-auto">
           <div className="relative grid-cols-2 px-4 2xl:grid md:px-0">
             <div className="relative mb-8 2xl:order-last">

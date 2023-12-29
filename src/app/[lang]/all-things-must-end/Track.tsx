@@ -111,7 +111,7 @@ export default function Track({ track, index }: TrackProps) {
                 <span>{trackNumber}</span> &mdash; <span>{track.title}</span>
               </h3>
             </div>
-            <div className="text-sm xs:text-base md:text-lg pr-4 md:pr-0">
+            <div className="text-base xs:text-base md:text-lg pr-4 md:pr-0">
               <div className="space-y-2">{track.description}</div>
               <div>{track.children}</div>
               <div className="mt-4 flex items-center gap-x-2 justify-around xs:justify-start">

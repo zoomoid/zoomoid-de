@@ -564,15 +564,15 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             dauerte weitere 2 Jahre dauern, um näher dorthin zu gelangen.
           </p>
           <p>
-            Inzwischen <b>bin ich auch auf Techno gekommen</b>. The Techno I was
-            listening to back then was very contemporary, and does not have
-            anything to do with today&apos;s Techno, which has quickly become
-            extremely popular. To some extent, I&apos;m all here for that, but
-            maybe you already see the huge valley in tempo range between the two
-            genres I was primarily listening to; that&apos;s what I consider to
-            be the
-            <b>Hardcore-Bereich</b>, und darüber möchte ich lieber nicht
-            reden...
+            Inzwischen <b>bin ich auch auf Techno gekommen</b>. Der Techno, den
+            ich damals damals hörte, war sehr zeitgenössisch und hat nichts mit
+            dem nichts mit dem heutigen Techno zu tun, der sehr schnell sehr
+            populär geworden ist. extrem populär geworden ist. Bis zu einem
+            gewissen Grad bin ich ganz dafür, aber aber vielleicht sehen Sie
+            schon das große Tal im Tempobereich zwischen den beiden Genres, die
+            ich hauptsächlich gehört habe; das ist was ich als den{" "}
+            <b>Hardcore-Bereich</b> bezeichne, und darüber möchte ich lieber
+            nicht reden...
             <small>
               (Das ist sozusagen der Ort, an dem der heutige Techno lebt &ndash;
               don&apos;t wanna go there...)

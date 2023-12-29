@@ -14,8 +14,7 @@
   font-family: "Novela";
   font-display: swap;
   src: url("novela-regularitalic-webfont.eot");
-  src: url("novela-regularitalic-webfont.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("novela-regularitalic-webfont.eot?#iefix") format("embedded-opentype"),
     url("novela-regularitalic-webfont.woff2") format("woff2"),
     url("novela-regularitalic-webfont.woff") format("woff"),
     url("novela-regularitalic-webfont.ttf") format("truetype");

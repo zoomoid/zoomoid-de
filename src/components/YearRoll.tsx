@@ -118,6 +118,10 @@ export function YearRoll({
             width: 0.6em;
             display: block;
             line-height: 0;
+<<<<<<< HEAD
+=======
+            transform:
+>>>>>>> main
             transition-property: transform;
             transition-duration: calc(${duration});
           }

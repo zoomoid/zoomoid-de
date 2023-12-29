@@ -50,5 +50,5 @@ export default async function Page({ params: { lang } }: PageProps) {
         <Epilogue></Epilogue>
       </div>
     </main>
-assN  );
+  );
 }

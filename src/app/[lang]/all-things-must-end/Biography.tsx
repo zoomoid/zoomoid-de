@@ -17,6 +17,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
         <Image
           src="/img/all-things-must-end/assets/casey-horner-RmoWqDCqN2E-unsplash.jpg"
           alt=""
+          priority
           width={4016}
           height={6016}
           className="mix-blend-color-dodge filter saturate-0 opacity-90 w-full"
@@ -483,6 +484,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
         <Image
           src="/img/all-things-must-end/assets/casey-horner-RmoWqDCqN2E-unsplash.jpg"
           alt=""
+          priority
           width={4016}
           height={6016}
           className="mix-blend-color-dodge filter saturate-0 w-full"

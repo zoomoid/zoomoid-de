@@ -58,6 +58,7 @@ export default function Album({
               width={2304}
               height={3456}
               alt=""
+              priority
               className="opacity-80 h-full w-full"
             ></Image>
           </div>

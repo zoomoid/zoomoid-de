@@ -78,6 +78,7 @@ function Player({ ...props }: PlayerProps) {
       style={{
         display: !uri && !title ? "none" : "block",
         backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
       }}
     >
       <div className="absolute top-0 left-0 bottom-0 right-0 bg-black/20 mix-blend-luminosity"></div>

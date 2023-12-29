@@ -1,38 +1,33 @@
 "use client";
 
-import {
-  StaggeringGroup as SG
-} from "@/components/AnimationContainer";
+import { StaggeringGroup as SG } from "@/components/AnimationContainer";
 import { YearRoll } from "@/components/YearRoll";
 import Image from "next/image";
 import { RefObject } from "react";
 
-export default function Biography({
-  skipRef,
-}: {
-  skipRef: RefObject<HTMLDivElement>;
-}) {
+function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
   return (
-    <article id="preamble" className="relative">
-      <section className="z-0 relative">
-        <div
-          className="h-[100vh] absolute w-full transform -translate-y-96 bg-neutral-950 overflow-hidden"
-          style={{
-            maskImage: `linear-gradient(transparent 0%, black 40%, black 70%, transparent 100%)`,
-          }}
-        >
-          <Image
-            src="/img/all-things-must-end/assets/casey-horner-RmoWqDCqN2E-unsplash.jpg"
-            alt=""
-            width={4016}
-            height={6016}
-            className="mix-blend-color-dodge filter saturate-0 opacity-80"
-          ></Image>
-        </div>
+    <article id="preamble" className="relative isolate">
+      <section
+        className="z-0 h-[3000px] absolute isolate w-full bg-neutral-950 overflow-hidden "
+        style={{
+          maskImage: `linear-gradient(transparent 0%, black 10%, black 90%, transparent 100%)`,
+        }}
+      >
+        <Image
+          src="/img/all-things-must-end/assets/casey-horner-RmoWqDCqN2E-unsplash.jpg"
+          alt=""
+          priority
+          width={4016}
+          height={6016}
+          className="mix-blend-color-dodge filter saturate-0 opacity-90 w-full"
+        ></Image>
       </section>
-      <section className="max-w-screen-md mx-auto my-16 z-10">
-        <h2 className="text-6xl mb-8">A Brief Biography of Me, Zoomoid</h2>
-        <p className="text-lg">
+      <section className="max-w-screen-md mx-auto my-16 z-20 relative px-4 md:px-0">
+        <h2 className="text-3xl md:text-6xl mb-8">
+          A Brief Biography of Me, Zoomoid
+        </h2>
+        <p className="md:text-lg">
           I promise, it&apos;s not thaaaaat long, and it might help you
           understand the album, its motives, and most importantly its
           consequences. If you want to, you can{" "}
@@ -48,7 +43,7 @@ export default function Biography({
           </span>
           .
         </p>
-        <h3 className="text-8xl text-center mt-16">
+        <h3 className="text-5xl md:text-8xl text-center mt-16">
           <span className=""></span>
           <span className="">
             <YearRoll
@@ -56,12 +51,12 @@ export default function Biography({
               years={[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}
               direction="reverse"
               duration="4s"
-              rootMargin="-500px 0px -500px 0px"
+              rootMargin="-20% 0% -20% 0%"
               once
             ></YearRoll>
           </span>
         </h3>
-        <SG animationName="slide-up" className="my-16 text-lg space-y-2">
+        <SG animationName="slide-up" className="my-16 md:text-lg space-y-2">
           <p>
             In <b>2013</b> someone hit my reset button. After a terrifying
             accident, and the subsequent long recovery, I got into music making.
@@ -116,8 +111,8 @@ export default function Biography({
           </p>
         </SG>
       </section>
-      <section id="2018" className="max-w-screen-md mx-auto my-16">
-        <h3 className="text-8xl text-center">
+      <section id="2018" className="max-w-screen-md mx-auto my-16 px-4 md:px-0">
+        <h3 className="text-5xl md:text-8xl text-center">
           <span className="text">
             <YearRoll
               key="liamm"
@@ -126,13 +121,13 @@ export default function Biography({
               direction="normal"
               duration="1s"
               once
-              rootMargin="-500px 0px -500px 0px"
+              rootMargin="-20% 0% -20% 0%"
             ></YearRoll>
           </span>
         </h3>
         <SG
           animationName="slide-up"
-          className="my-16 text-lg space-y-2 relative"
+          className="my-16 md:text-lg space-y-2 relative"
         >
           <p>
             When &ldquo;<b>Life Is About Making Memories</b>&rdquo; landed in
@@ -177,7 +172,7 @@ export default function Biography({
           </p>
           <SG
             animationName="slide-up"
-            className="grid md:grid-cols-2 gap-x-4 relative"
+            className="grid grid-cols-2 gap-x-4 relative"
           >
             <div>
               <Image
@@ -194,20 +189,20 @@ export default function Biography({
                 width={1500}
                 height={1500}
                 alt=""
-                className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto transform scale-110 -translate-x-10 relative z-20"
+                className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto md:transform md:scale-110 md:-translate-x-10 relative z-20"
               ></Image>
             </div>
           </SG>
           <p>
             In 2019, I made an album that was released in two
             &ldquo;waves&rdquo;, called &ldquo;<b>Eigenräume</b>&rdquo;. It took
-            some inspiration from place I held very dear to my heart, and places
-            I wanted (and some still want to visit). That album had concept down
-            to it&apos;s core fibers, and it defined the &ldquo;Zoomoid
-            sound&rdquo; in terms of electronic, techno-y sound design and
-            composition. While I failed with the original idea of producing an
-            album where all tracks would blend seamlessly into each other on the
-            first try{" "}
+            some inspiration from places I held very dear to my heart, and
+            places I wanted (and some still want to visit). That album had
+            concept down to it&apos;s core fibers, and it defined the
+            &ldquo;Zoomoid sound&rdquo; in terms of electronic, techno-y sound
+            design and composition. While I failed with the original idea of
+            producing an album where all tracks would blend seamlessly into each
+            other on the first try{" "}
             <small>(which is why there are two versions of the album)</small>,
             the second try{" "}
             <small>
@@ -221,10 +216,7 @@ export default function Biography({
             <b>301 Moved Permanently</b>&rdquo;.
           </p>
           <div className="">
-            <SG
-              animationName="slide-up"
-              className="grid md:grid-cols-2 gap-x-4"
-            >
+            <SG animationName="slide-up" className="grid grid-cols-2 gap-x-4">
               <div>
                 <Image
                   src="/img/public_transportation.jpg"
@@ -260,8 +252,8 @@ export default function Biography({
           </p>
         </SG>
       </section>
-      <section className="max-w-screen-md mx-auto my-16">
-        <h3 className="text-8xl text-center">
+      <section className="max-w-screen-md mx-auto my-16 px-4 md:px-0" id="2020">
+        <h3 className="text-5xl md:text-8xl text-center">
           <span className="">
             <YearRoll
               key="liamm"
@@ -270,11 +262,11 @@ export default function Biography({
               direction="normal"
               duration="1s"
               once
-              rootMargin="-500px 0px -500px 0px"
+              rootMargin="-20% 0% -20% 0%"
             ></YearRoll>
           </span>
         </h3>
-        <SG animationName="slide-up" className="my-16 text-lg space-y-2">
+        <SG animationName="slide-up" className="my-16 md:text-lg space-y-2">
           <p>
             In 2020 I hit a brick wall. And not the good one. As the world went
             into lockdown, I (as the artist) struggled to find inspiration,
@@ -374,8 +366,8 @@ export default function Biography({
           </p>
         </SG>
       </section>
-      <section className="max-w-screen-md mx-auto my-16">
-        <h3 className="text-8xl text-center">
+      <section className="max-w-screen-md mx-auto my-16 px-4 md:px-0">
+        <h3 className="text-5xl md:text-8xl text-center">
           <span className="text">
             <YearRoll
               years={[0, 1]}
@@ -383,11 +375,11 @@ export default function Biography({
               direction="normal"
               duration="0.5s"
               once
-              rootMargin="-500px 0px -500px 0px"
+              rootMargin="-20% 0% -20% 0%"
             ></YearRoll>
           </span>
         </h3>
-        <SG animationName="slide-up" className="text-lg my-16 space-y-2">
+        <SG animationName="slide-up" className="md:text-lg my-16 space-y-2">
           <p>
             The escapism that &ldquo;Voyager&rdquo; provided, artistically, did
             not last for long though. I went down into that dark hole that is
@@ -479,3 +471,493 @@ export default function Biography({
     </article>
   );
 }
+
+function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
+  return (
+    <article id="preamble" className="relative isolate">
+      <section
+        className="z-0 h-[1500px] absolute isolate w-full bg-neutral-950 overflow-hidden opacity-50"
+        style={{
+          maskImage: `linear-gradient(transparent 0%, black 10%, black 80%, transparent 100%)`,
+        }}
+      >
+        <Image
+          src="/img/all-things-must-end/assets/casey-horner-RmoWqDCqN2E-unsplash.jpg"
+          alt=""
+          priority
+          width={4016}
+          height={6016}
+          className="mix-blend-color-dodge filter saturate-0 w-full"
+        ></Image>
+      </section>
+      <section className="max-w-screen-md mx-auto my-16 z-20 relative px-4 md:px-0">
+        <h2 className="text-3xl md:text-6xl mb-8">
+          Eine kurze Biografie von Mir, Zoomoid
+        </h2>
+        <p className="md:text-lg">
+          Ich versproche, es wird nicht soooo lang, und es kann Dir helfen, das
+          Album, seine Motive und, am relevantesten, seine Konsequenzen, zu
+          verstehen. Wenn du willst, kannst du das aber{" "}
+          <span
+            onClick={() => {
+              if (skipRef) {
+                skipRef.current?.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="underline cursor-pointer"
+          >
+            überspringen
+          </span>
+          .
+        </p>
+        <h3 className="text-6xl md:text-8xl text-center mt-16">
+          <YearRoll
+            decades={[10, 20]}
+            years={[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}
+            direction="reverse"
+            duration="4s"
+            rootMargin="-20% 0% -20% 0%"
+            once
+          ></YearRoll>
+        </h3>
+        <SG animationName="slide-up" className="my-16 md:text-lg space-y-2">
+          <p>
+            <b>2013</b> hat jemand meinen Reset-Knopf gedrückt. Nach einem
+            schrecklichen Unfall und dem anschließenden langen Weg der Genesung
+            begann ich mit dem Musikmachen. YouTube bot mir alle Ressourcen, die
+            ich brauchte, um anzufangen, und ich stürzte mich kopfüber in Trance
+            und Progressive House, beides Genres, die ich damals häufig hörte.
+          </p>
+          <p>
+            Lernen war <b>(und ist es immer noch)</b> eine wundervolle Sache,
+            und manchmal <b>vermisse ich dies Tage </b>
+            aus dem einfachen Grund, dass diese Tage <b>(und Nächte)</b>{" "}
+            wirklich geschätzte Erinnerungen sind. Ich brauchte <b>bis 2016</b>{" "}
+            um etwas zu produzieren, dass ich als würdig für die
+            &bdquo;Veröffentlichung&ldquo; betrachten konnte, was auch immer das
+            damals gemeint haben kann.
+          </p>
+          <p>
+            Natürlich war dieser Track nichts anderes als ein Versuch, das, was
+            ich in was mir all diese YouTube-Tutorials beigebracht haben, und es
+            nicht wert, hier weiter ins Detail zu gehen.{" "}
+            <small>
+              Die Lesenden können sich jedoch auf die Suche nach den Spuren
+              dieser Track zu finden. Irgendwann hat mal war der Track auf
+              Soundcloud und YouTube...
+            </small>
+          </p>
+          <p>
+            Ich bin bei der House-Musik geblieben und habe auch einen Remix von
+            David Guetta&apos;s &bdquo;Memories&ldquo;! Ironischerweise hat
+            Guetta einen Remix von{" "}
+            <b>
+              4 Jahre später seinen eigenen Track, der deutlich schwächer ist
+              als das Original von 2009!
+            </b>
+          </p>
+          <p>
+            Ursprünglich wollte ich aber <b>Drum &amp; Bass</b> machen, das ein
+            Genre, das ich (damals) erst kürzlich entdeckt hatte, war. Ich
+            konnte es damals allerdings nie ganz verstehen... Der Versuch, das
+            nachzumachen, was ich hörte, brachte mich nicht weiter, und es
+            dauerte weitere 2 Jahre dauern, um näher dorthin zu gelangen.
+          </p>
+          <p>
+            Inzwischen <b>bin ich auch auf Techno gekommen</b>. The Techno I was
+            listening to back then was very contemporary, and does not have
+            anything to do with today&apos;s Techno, which has quickly become
+            extremely popular. To some extent, I&apos;m all here for that, but
+            maybe you already see the huge valley in tempo range between the two
+            genres I was primarily listening to; that&apos;s what I consider to
+            be the
+            <b>Hardcore-Bereich</b>, und darüber möchte ich lieber nicht
+            reden...
+            <small>
+              (Das ist sozusagen der Ort, an dem der heutige Techno lebt &ndash;
+              don&apos;t wanna go there...)
+            </small>
+          </p>
+        </SG>
+      </section>
+      <section id="2018" className="max-w-screen-md mx-auto my-16 px-4 md:px-0">
+        <h3 className="text-6xl md:text-8xl text-center">
+          <YearRoll
+            key="liamm"
+            years={[6, 7, 8]}
+            decades={[10]}
+            direction="normal"
+            duration="1s"
+            once
+            rootMargin="-20% 0% -20% 0%"
+          ></YearRoll>
+        </h3>
+        <SG
+          animationName="slide-up"
+          className="my-16 md:text-lg space-y-2 relative"
+        >
+          <p>
+            Als &bdquo;<b>Life Is About Making Memories</b>&ldquo; im Jahr 2018
+            erschien, hatte ich bereits mehrere Versuche mit richtigen Tracks in
+            Form von Singles veröffentlicht. Aber mit der Veröffentlichung der
+            <b>ersten richtigen Sammlung</b> von Tracks in <b>Albumgröße</b>,
+            die auch <b>ein Konzept</b> enthielt, begann die nächste Episode von{" "}
+            <b>Zoomoid</b> als
+            <b>Producer</b>. Die Ideen wuchsen über einzelne Tracks hinaus und
+            reichten weiter als nur fünf Minuten mit ein paar sich
+            wiederholenden Loops und Samples, die in Ableton Live
+            zusammengeklickt wurden.
+          </p>
+          <div>
+            <SG
+              animationName="slide-up"
+              className="grid md:grid-cols-1 gap-x-4"
+            >
+              <div></div>
+              <div>
+                <Image
+                  src="/img/liamm.jpg"
+                  width={1500}
+                  height={1500}
+                  alt=""
+                  className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 w-1/2 border-neutral-50 mx-auto"
+                ></Image>
+              </div>
+              <div></div>
+            </SG>
+          </div>
+          <p>
+            Das hat mich dazu gebracht, mich mit komplexerem Sounddesign und
+            Komposition zu beschäftigen.{" "}
+            <small>
+              (obwohl es immer noch ein bisschen improvisiert und keineswegs
+              professionell ist, eher &bdquo;wenn es gut klingt, ist es
+              gut&ldquo;).
+            </small>
+          </p>
+          <p>
+            Damit wurden die Veröffentlichungen zu einer regelmäßigeren
+            Angelegenheit. Das Studium der Informatik hatte ich genug Abende, an
+            denen ich keine anderen Pläne als stundenlang auf die graue
+            Benutzeroberfläche von Live zu starren, hatte.
+          </p>
+          <SG
+            animationName="slide-up"
+            className="grid grid-cols-2 gap-x-4 relative"
+          >
+            <div>
+              <Image
+                src="/img/eigenräume_pre.jpg"
+                width={1500}
+                height={1500}
+                alt=""
+                className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto relative z-10"
+              ></Image>
+            </div>
+            <div>
+              <Image
+                src="/img/eigenräume.jpg"
+                width={1500}
+                height={1500}
+                alt=""
+                className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto md:transform md:scale-110 md:-translate-x-10 relative z-20"
+              ></Image>
+            </div>
+          </SG>
+          <p>
+            2019 habe ich ein Album gemacht, das in zwei &bdquo;Wellen&ldquo;
+            veröffentlich wurde, &bdquo;<b>Eigenräume</b>&ldquo;. Es nahm einige
+            Inspiration von Orten, die mir sehr am Herzen liegen, und von Orten,
+            die ich besuchen wollte (und teilweise immer noch möchte). Dieses
+            Album hatte Konzept bis in die Kernfasern, und es definierte den
+            &bdquo;Zoomoid Sound&ldquo; in Bezug auf elektronisches,
+            &bdquo;technoides&ldquo; Sounddesign und Komposition. Während ich
+            mit der ursprünglichen Idee im ersten Versuch scheiterte, ein Album
+            zu produzieren, bei dem alle Tracks auf Anhieb nahtlos ineinander
+            übergingen{" "}
+            <small>(Deshalb gibt es auch zwei Versionen des Albums)</small>,
+            bekam der zweite Versuch{" "}
+            <small>
+              (die <b>Extended Version</b>)
+            </small>{" "}
+            es richtig hin, zumindest für die ersten sechs Tracks, danach
+            entgleisen Dinge ein wenig. Vor allem einer dieser anderen Titel,
+            &bdquo;<b>Outer Space</b>&ldquo; war ein Stück, das ich zu gut fand,
+            um es einfach am Ende des Albums zu verstauen, deshalb habe ich es
+            länger gemacht und &bdquo;remastered&ldquo; es für das Ende 2019
+            erschienene &bdquo;<b>301 Moved Permanently</b>&ldquo;.
+          </p>
+          <div className="">
+            <SG animationName="slide-up" className="grid grid-cols-2 gap-x-4">
+              <div>
+                <Image
+                  src="/img/public_transportation.jpg"
+                  width={1500}
+                  height={1500}
+                  alt=""
+                  className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+                ></Image>
+              </div>
+              <div>
+                <Image
+                  src="/img/301.jpg"
+                  width={1500}
+                  height={1500}
+                  alt=""
+                  className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+                ></Image>
+              </div>
+            </SG>
+          </div>
+          <p>
+            Ich habe &ldquo;<b>Public Transportation</b>&rdquo; aus einer Idee
+            auf einer Zugfahrt nach Hause erschaffen,
+            <small>(Siehst du das hier? Backreferencing?)</small> und das blieb
+            bei mir hängen. Ich mag Züge sehr &mdash; was Du vielleicht schon
+            weißt &mdash; vor allem, wenn man die Welt aus dem Inneren eines
+            Zuges im Vorbeifahren sieht. Ich finde das sehr friedlich, und es
+            ist eine der wenigen Dinge, bei denen mein Gehirn komplett
+            abschaltet. Also habe ich ein Album über eine (hypothetische)
+            Zugfahrt gemacht, das ankündigt wo der Zug als nächstes halten wird.
+            Hör es Dir an, wenn Du es noch nicht gehört hast, es ist auch sehr
+            kurz, und dann kommst Du wieder zurück.
+          </p>
+        </SG>
+      </section>
+      <section className="max-w-screen-md mx-auto my-16 px-4 md:px-0">
+        <h3 className="text-6xl md:text-8xl text-center">
+          <span className="">
+            <YearRoll
+              key="liamm"
+              years={[8, 9, 10]}
+              decades={[10, 20]}
+              direction="normal"
+              duration="1s"
+              once
+              rootMargin="-20% 0% -20% 0%"
+            ></YearRoll>
+          </span>
+        </h3>
+        <SG animationName="slide-up" className="my-16 md:text-lg space-y-2">
+          <p>
+            Im Jahr 2020 bin ich auf eine Mauer gestoßen. Und nicht die gute.
+            Als sich die Welt kämpfte ich (als Künstler) darum, Inspiration,
+            Energie und all das zu finden Energie und all das zu finden, was mir
+            vorher leicht fiel. Im Nachhinein betrachtet, wäre dies wäre dies
+            wahrscheinlich ein guter Zeitpunkt gewesen, eine Therapie zu
+            beginnen &mdash; aber die Idee hatten wohl auch eine Menge andere
+            Leute...
+          </p>
+          <p>
+            Ich war auch verliebt. Aber die Art, die nicht auf Gegenseitigkeit
+            beruhte. Mit einem zerbrochenen Herzen wollte ich ein Liebeslied
+            schreiben. Die dummen Dinge, die man die man tut, wenn man verliebt
+            ist, denke ich. Ich dachte, ich könnte es.
+          </p>
+          <div>
+            <Image
+              src="/img/shades_of_yellow.jpg"
+              width={1500}
+              height={1500}
+              alt=""
+              className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+            ></Image>
+          </div>
+          <p>
+            &bdquo;<b>Shades of Yellow</b>&ldquo; war die Zwei-Track-EP die aus
+            dieser Episode entsprungen ist. Mein Versuch, ein Liebeslied zu
+            schreiben, blieb nicht mehr als der Titel eines Stücks, das (um
+            vollkommen ehrlich zu sein) wie eine verfeinerte Kopie eines
+            früheren Tracks wirkt, &bdquo;Utopia&ldquo; aus &bdquo;
+            <b>Life Is About Making Memories</b>&ldquo;. Abseits des Namens,
+            &rbquo;Malheureux en Amour&ldquo;{" "}
+            <small>
+              (den ich auch in der ersten Version der EP falsch geschrieben
+              habe; als ich versuchte, das Problem zu beheben, habe ich eine
+              unfertige Version des Coverbildes hochgeladen, weshalb der Pfad
+              auf der der oberen blauen Welle auf der rechten Seite nicht
+              richtig verbindet &mdash; schau mal nach...)
+            </small>
+            , bleibt nicht viel von der Bedeutung des Titels übrig. Das Lied ist
+            ziemlich beschwingt für so ein Thema, um ehrlich zu sein...
+          </p>
+          <p>
+            Wie auch immer, diese EP hatte einen Titeltrack, &bdquo;Shades of
+            Yellow&ldquo;, der im krassen Gegensatz zu dem zuvor besprochenen
+            Track steht: Es ist ein Tech-House-Track, ziemlich lang und erzählt
+            eine viel bessere Geschichte als &bdquo;Malheureux en Amour&ldquo;.
+            Er wurde wahrscheinlich sehr von &bdquo;Wild World&ldquo;, einem
+            anderen Zoomoid-Song, inspiriert, der als eine der Singles
+            veröffentlicht wurde, die inzwischen aus der Diskographie
+            verschwunden sind aus der Diskographie verschwunden sind, aber als
+            VIP Mix auf &bdquo;Life Is About Making Memories&ldquo;.
+          </p>
+          <p>
+            Der Titeltrack sampelte die deutsche TV-Serie &bdquo;Dark&ldquo;,
+            insbesondere einen insbesondere einen Dialog, in dem zwei
+            Protagonisten über Zeit und ihr Verständnis von Zeit sprechen. Das
+            hat mich sehr beeindruckt. Ziemlich viel sogar...
+          </p>
+          <div>
+            <Image
+              src="/img/voyager.jpg"
+              width={1500}
+              height={1500}
+              alt=""
+              className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+            ></Image>
+          </div>
+          <p>
+            In der zweiten Hälfte von 2020 wollte ich etwas neues machen.
+            Während die Welt von einer globalen Pandemie gefangen gehalten
+            wurde, hatte ich genug davon, in meinem kleinen Schlafzimmer in
+            meiner etwas größeren Wohnung zu sitzen. Parallel zum Start eines
+            neuen Jobs begann ich, Ideen zu sammeln, die sich zu Tracks
+            entwickelten, die zu &bdquo;<b>Voyager</b>&ldquo; wurden.
+          </p>
+          <div>
+            <Image
+              src="/img/all-things-must-end/2046.jpg"
+              width={3000}
+              height={1500}
+              alt=""
+              className="shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+            ></Image>
+          </div>
+          <p>
+            Sicherlich bin ich nicht der erste, der diesen Titel verwendet, er
+            ist keineswegs keineswegs einzigartig. Aber er passt sehr gut zum
+            Konzept. Ein Arbeitstitel Titel des Albums war &bdquo;Artemis&ldquo;
+            (der Name der NASA Mission zum Mond in den 2020er Jahren). Sie
+            verstehen das Bild.
+          </p>
+          <p>
+            Seine Tracks führen Dich auf eine Art Reise durch den Weltraum, weg
+            weg von unserem blassblauen Punkt am Nachthimmel. Seine zehn Tracks
+            sind alle in einem ähnlichen Stil gehalten, sie passen wirklich gut
+            zusammen, und ich bin ziemlich stolz auf das gesamte Album. Es ist
+            eine schöne Erfahrung, es von Anfang bis Ende zu hören &mdash; wie
+            ein Konzeptalbum wäre.
+          </p>
+          <p>
+            Im Titeltrack des Albums, &bdquo;Voyager&ldquo; habe ich auch zum
+            ersten Mal überhaupt <b>gesungen</b> &mdash; und ich bin kein
+            Sänger. Ich bin nicht einmal sicher, ob ich weiß, wie man mit Gesang
+            arbeitet...
+          </p>
+        </SG>
+      </section>
+      <section className="max-w-screen-md mx-auto my-16 px-4 md:px-0">
+        <h3 className="text-6xl md:text-8xl text-center">
+          <YearRoll
+            years={[0, 1]}
+            decades={[20]}
+            direction="normal"
+            duration="0.5s"
+            once
+            rootMargin="-20% 0% -20% 0%"
+          ></YearRoll>
+        </h3>
+        <SG animationName="slide-up" className="md:text-lg my-16 space-y-2">
+          <p>
+            Der Eskapismus, den &bdquo;Voyager&ldquo; in künstlerischer Hinsicht
+            bot, hielt jedoch nicht lange an. hielt jedoch nicht lange an. Ich
+            fiel in das dunkle Loch, das man Depression. Kombiniert mit einem
+            langsam schleichenden Burn-out von dem Job, landete ich in einem
+            wirklich traurigen Zustand.
+          </p>
+          <p>
+            Pink Floyd&apos;s &bdquo;Comfortably Numb&ldquo; fängt es
+            wahrscheinlich es am besten ein. Ich beschreibe meinen geistigen
+            Zustand gerne mit Musik. Ich habe eine ziemlich tiefe emotionale
+            Reaktion auf Musik, es ist als würde ich einen Soundtrack für mein
+            eigenes Leben kreieren, indem ich Tracks auswähle, die meinen
+            emotionalen Zustand wiedergeben. Es ist erstaunlich und ich möchte
+            es nicht missen, aber es macht schwierige Situationen noch noch
+            schwieriger.
+          </p>
+          <div>
+            <Image
+              src="/img/sehnsucht.jpg"
+              width={1500}
+              height={1500}
+              alt=""
+              className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl  w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+            ></Image>
+          </div>
+          <p>
+            &bdquo;<b>Sehnsucht</b>&ldquo; hat diese schweren, traurigen Töne
+            eingefangen. Das Albumcover ist ein Bild, das mein Großvater gemalt
+            hat und das mir sehr am Herzen liegt sehr am Herzen liegt (besonders
+            seit er 2023 verstorben ist).
+          </p>
+          <p>
+            Es ist ein rein instrumentales Musikstück, kein Schlagzeug, nur
+            Instrumente, getragen von{" "}
+            <a
+              className="underline"
+              target="_blank"
+              href="https://www.feltinstruments.com/"
+            >
+              Felt Instrument&apos;s
+            </a>{" "}
+            brilliantem <b>Lekko</b>, Harmonien, Melodien, Melancholie, dem
+            Wunsch, mehr zu sein, mehr zu tun, mehr zu erleben, ein Leben zu
+            leben... Es manifestiert auch die Idee von Zeitfenstern und
+            Gelegenheiten und greift auf diese Weise die Tatsache auf, dass die
+            Zeit als Mensch begrenzt ist. begrenzt ist. Das ist ein Gedanke, den
+            man nicht hat, solange man &bdquo;jung&ldquo; ist, was auch immer
+            das bedeuten mag, aber in dieser dunklen Zeit fing ich an, mich mit
+            meinem eigenen Älterwerden, mich meiner eigenen Sterblichkeit zu
+            stellen; etwas, das man was man von einem damals 22-Jährigen
+            wahrscheinlich nicht erwarten würde.
+          </p>
+          <small>
+            Ich war auch manchmal wirklich allein, und dann macht mein Gehirn
+            wilde &rbquo;was wäre wenn&ldquo;-Reisen...
+          </small>
+          <p>
+            &ldquo;Sehnsucht&apos;s&rdquo; central motive (and I&apos;m sorry
+            this is getting a bit heavy, and also relys on understanding some
+            German, but you&apos;ll have to anyways for understanding
+            what&apos;s to come), is the phrase, or rather set of questions
+            &ldquo;Was war? Was ist? Was bleibt?&rdquo; which broadly translates
+            to &ldquo;What has been? What is (now)? What remains?&rdquo;.
+            It&apos;s somewhat indicative of the questions I asked myself:
+            &ldquo;What remains?&rdquo; asks the question I wanted to answer
+            when starting out with making music in 2013. Eight years later, I
+            started reviewing my work. Had i succeeded in making something
+            that&apos;s worth lasting? I honestly can&apos;t tell. But I want it
+            to last.
+          </p>
+          <div>
+            <Image
+              src="/img/all-things-must-end/2047.jpg"
+              width={3024}
+              height={1512}
+              alt=""
+              className="shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+            ></Image>
+          </div>
+          <p>
+            In diesem Moment, als ich mein eigenes Schaffen der letzten Jahre
+            bewertete, kam mir eine Idee, die in diesem Album gipfelte. Die Idee
+            des Beendens. Ich sah mich selbst ausbrennen, verblassen,
+            stillschweigend aufhören Musik zu machen. Das war ein Weg, den ich
+            nicht einschlagen wollte. Als ich Ende 2021 ankündigte, dass Zoomoid
+            eine unbestimmte Pause einlegen würde, war ich nicht sicher, ob ich
+            in der Lage sein würde, zurückzukommen, um wieder aufzuwachen.
+          </p>
+          <p>Aber hier sind wir jetzt.</p>
+        </SG>
+      </section>
+    </article>
+  );
+}
+
+const Biography = {
+  EN: BiographyEN,
+  DE: BiographyDE,
+};
+
+export default Biography;

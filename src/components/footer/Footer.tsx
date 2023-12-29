@@ -25,10 +25,10 @@ export default function Footer({ socials }: FooterProps) {
             <Link href="/" className="h-8 relative">
               <Image
                 alt="Zoomoid Logo"
-                // src="/img/logo_bar.png"
-                // width={5000}
-                // height={1319}
-                src={Logo}
+                src="/img/logo_bar.png"
+                width={5000}
+                height={1319}
+                // src={Logo}
                 className="h-8 w-auto"
               ></Image>
             </Link>

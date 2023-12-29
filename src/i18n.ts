@@ -1,5 +1,5 @@
-const locales = ['en-US', 'de-DE'] as const
-const defaultLocale = 'en-US' as const
+const locales = ['en', 'de'] as const
+const defaultLocale = 'en' as const
 
 const i18n = {
   locales: locales,

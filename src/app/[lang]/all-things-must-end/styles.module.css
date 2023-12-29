@@ -1,10 +1,10 @@
 .page b {
-  @apply font-sans;
+  @apply font-sans font-semibold;
 }
 
-.page i {
+/* .page i {
   @apply font-serif;
-}
+} */
 
 .page small {
   @apply text-sm;
@@ -22,7 +22,7 @@
 .page {
   animation-name: fade-in;
   animation-duration: 1s;
-  animation-delay: 0s;
+  animation-delay: 1s;
   animation-fill-mode: both;
   animation-iteration-count: 1;
 }

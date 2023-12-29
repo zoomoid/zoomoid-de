@@ -35,17 +35,20 @@ export const viewport: Viewport = {
   width: "device-width",
 };
 
-export default async function Page({ params: { lang }}: PageProps) {
+export default async function Page({ params: { lang } }: PageProps) {
   return (
-    <>
-      <main className={styles.page}>
-        {/* <ScrollHook></ScrollHook> */}
-        <div className="text-neutral-300 py-[6.6vmax] lg:py-[1.6vmax]">
-          <Opening></Opening>
-          <Mainmatter></Mainmatter>
-          <Epilogue></Epilogue>
-        </div>
-      </main>
-    </>
-  );
+    <main
+      className={styles.page}
+      style={{
+        opacity: 0,
+      }}
+    >
+      {/* <ScrollHook></ScrollHook> */}
+      <div className="text-neutral-300 py-[6.6vmax] lg:py-[1.6vmax]">
+        <Opening></Opening>
+        <Mainmatter></Mainmatter>
+        <Epilogue></Epilogue>
+      </div>
+    </main>
+assN  );
 }

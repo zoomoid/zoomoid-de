@@ -519,7 +519,7 @@ const tracksDE: Track[] = [
     description: (
       <>
         <p>
-          &ldquo;Angst vor der Zukunft&rdquo; ist einer der Protagonisten des
+          &bdquo;Angst vor der Zukunft&ldquo; ist einer der Protagonisten des
           Albums. Der Titel charakterisiert was ich das Jahr über gefühlt habe,
           Sowohl kurzfristig als auch langfristig. Ich weiß nicht genau wo es
           hingeht. Vielleicht ist das ja keine schlechte Sache. Vielleicht doch.
@@ -556,9 +556,9 @@ const tracksDE: Track[] = [
           überarbeiteten Zoomoid-Track, &bdquo;Outer Space&ldquo;. &bdquo;Outer
           Space&ldquo; wurde ursprünglich auf der Extended Edition von
           &bdquo;Eigenräume&ldquo;. Es war ein Techno-Track, aber ein
-          melodischer, der auch perfekt auf &ldquo;Voyager&ldquo; gepasst hätte.
+          melodischer, der auch perfekt auf &bdquo;Voyager&ldquo; gepasst hätte.
           Er wurde später neu gemastert und in einer längeren Mix-Version auf
-          dem Album &ldquo;301 Permanently Moving&ldquo; EP.
+          dem Album &bdquo;301 Permanently Moving&ldquo; EP.
         </p>
         <p>
           Im Jahr 2021 veröffentlichte ich &bdquo;Sehnsucht&ldquo;, das

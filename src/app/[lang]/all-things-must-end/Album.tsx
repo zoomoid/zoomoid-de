@@ -95,7 +95,7 @@ export default function Album({
         >
           <div className="mx-auto max-w-screen-md flex items-center justify-center mb-16 relative z-50">
             <button
-              className={`bg-blue-800 rounded-full px-8 py-4 font-sans font-semibold text-xl`}
+              className={`bg-blue-800 rounded-full px-6 py-2 md:px-8 md:py-4 font-sans font-semibold text-lg md:text-xl`}
               type="button"
               onClick={() => {
                 dispatch({

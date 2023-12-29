@@ -602,10 +602,9 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             Form von Singles veröffentlicht. Aber mit der Veröffentlichung der
             <b>ersten richtigen Sammlung</b> von Tracks in <b>Albumgröße</b>,
             die auch <b>ein Konzept</b> enthielt, begann die nächste Episode von{" "}
-            <b>Zoomoid</b> als
-            <b>Producer</b>. Die Ideen wuchsen über einzelne Tracks hinaus und
-            reichten weiter als nur fünf Minuten mit ein paar sich
-            wiederholenden Loops und Samples, die in Ableton Live
+            <b>Zoomoid</b> als <b>Producer</b>. Die Ideen wuchsen über einzelne
+            Tracks hinaus und reichten weiter als nur fünf Minuten mit ein paar
+            sich wiederholenden Loops und Samples, die in Ableton Live
             zusammengeklickt wurden.
           </p>
           <div>

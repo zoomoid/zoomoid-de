@@ -22,7 +22,7 @@ interface TrackProps {
 const CDN_PREFIX = "/img/all-things-must-end";
 
 const boxPrefix = `${CDN_PREFIX}/waveforms/box/v2`;
-const sweepPrefix = `${CDN_PREFIX}/waveforms/sweep/v2`;
+const sweepPrefix = `${CDN_PREFIX}/waveforms/sweep/v3`;
 
 const waveform = (prefix: string, name: string): string => {
   return `${prefix}/${name.toLowerCase().replaceAll(" ", "-")}`;
@@ -144,16 +144,17 @@ export default function Track({ track, index }: TrackProps) {
                 </a>
                 {shareChip}
               </div>
-              <div className="block xs:hidden relative">
-                <Image
-                  src={waveform(sweepPrefix, filename + ".png")}
-                  width={2015}
-                  height={810}
-                  alt=""
-                ></Image>
-              </div>
             </div>
           </div>
+        </div>
+        <div className="block xs:hidden absolute top-0 left-0 bottom-0 right-0">
+          <Image
+            src={waveform(sweepPrefix, filename + ".png")}
+            height={5030}
+            width={1010}
+            alt=""
+            className="relative h-full opacity-20 scale-105 mix-blend-overlay"
+          ></Image>
         </div>
       </div>
     </section>

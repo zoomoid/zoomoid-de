@@ -14,17 +14,13 @@ const formatSeconds = (duration: number): string => {
 };
 
 function Player({ ...props }: PlayerProps) {
-  const [started, setStarted] = useState(false);
-
   const [paused, setPaused] = useState(true);
 
   const [duration, setDuration] = useState(0);
   const [playTime, setPlayTime] = useState(0);
 
-  const [loading, setLoading] = useState(false);
-
   const {
-    state: { title, uri, playing, reset },
+    state: { title, uri, playing, reset, index },
     dispatch,
   } = useContext(PlayerContext);
 
@@ -34,8 +30,10 @@ function Player({ ...props }: PlayerProps) {
     if (!ref) return;
     if (!ref.current) return;
     if (!uri) return;
+    ref.current.pause();
     ref.current.src = uri;
-    ref.current.play();
+    ref.current.load();
+    ref.current.play().catch(() => {});
   }, [uri]);
 
   useEffect(() => {
@@ -49,8 +47,10 @@ function Player({ ...props }: PlayerProps) {
     if (!ref.current) return;
     if (playing) {
       ref.current.play();
+      setPaused(false);
     } else {
       ref.current.pause();
+      setPaused(true);
     }
   }, [playing]);
 
@@ -79,12 +79,8 @@ function Player({ ...props }: PlayerProps) {
         display: !uri && !title ? "none" : "block",
         backdropFilter: "blur(10px)",
       }}
-      onMouseUp={() => {
-        setIsDragging(false);
-        resume();
-      }}
     >
-      <div className="absolute top-0 left-0 bottom-0 right-0 bg-black/60 mix-blend-luminosity"></div>
+      <div className="absolute top-0 left-0 bottom-0 right-0 bg-black/20 mix-blend-luminosity"></div>
       <div className="hidden">
         <audio
           {...props}
@@ -98,16 +94,16 @@ function Player({ ...props }: PlayerProps) {
           onDurationChange={({ currentTarget }) => {
             setDuration(currentTarget.duration);
           }}
-          onLoadedData={() => setLoading(false)}
-          onLoadStart={() => setLoading(true)}
         ></audio>
       </div>
-      <div className="text-neutral-300 relative z-10 font-sans mx-auto max-w-screen-lg text-sm font-normal grid grid-cols-1 grid-rows-2">
-        <div className="font-semibold">
+      <div className="text-neutral-300 relative z-10 font-sans mx-auto max-w-screen-lg font-normal grid grid-cols-1 grid-rows-2">
+        <div className="font-semibold text-center text-lg">
           {/* Track metadata */}
+          <span>{leadingZeroes(index !== undefined ? index + 1 : 0)}</span>
+          <span> &ndash; </span>
           <span>{title || "No track selected"}</span>
         </div>
-        <div className="flex items-center gap-x-2">
+        <div className="flex items-center gap-x-2 text-sm">
           <div className="overflow-visible">
             {/* Controls */}
             <button
@@ -126,7 +122,7 @@ function Player({ ...props }: PlayerProps) {
             </button>
           </div>
           <div
-            className="flex-grow relative h-2 overflow-visible isolate"
+            className="flex-grow relative h-4 overflow-visible isolate"
             // onClick={(e) => {
             //   const bar = e.currentTarget!.getBoundingClientRect();
             //   const x = e.clientX - bar.left;
@@ -153,9 +149,9 @@ function Player({ ...props }: PlayerProps) {
             }}
           >
             {/* Seek area */}
-            <div className="absolute h-2 left-0 right-0 rounded-full bg-neutral-300/20"></div>
+            <div className="absolute top-1 h-2 left-0 right-0 rounded-full bg-neutral-300/20"></div>
             <div
-              className="absolute h-2 left-0 right-0 rounded-full bg-neutral-200"
+              className="absolute top-1 h-2 left-0 right-0 rounded-full bg-neutral-200"
               style={{
                 width: 100 * barWidth + "%",
                 transition: "width 0.1s linear",
@@ -168,6 +164,23 @@ function Player({ ...props }: PlayerProps) {
             <span> &ndash; </span>
             <span>{formatSeconds(duration)}</span>
           </div>
+        </div>
+        <div className="absolute top-0 right-0">
+          <button
+            className="leading-none"
+            onClick={() => {
+              dispatch({ type: "stop" });
+            }}
+          >
+            <i
+              className="material-symbols-outlined"
+              style={{
+                fontSize: "1rem",
+              }}
+            >
+              close
+            </i>
+          </button>
         </div>
       </div>
     </div>

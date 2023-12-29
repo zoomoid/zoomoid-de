@@ -22,7 +22,7 @@ const config: Config = {
         "10xl": "10rem",
       },
       screens: {
-        xs: "375px",
+        xs: "400px",
       },
     },
     variants: {

@@ -46,7 +46,14 @@ const reducer = (state: State, action: Action): State => {
         reset: action.interactive,
       };
     case "stop":
-      return { ...state, playing: undefined, title: undefined, uri: undefined };
+      return {
+        ...state,
+        playing: undefined,
+        title: undefined,
+        uri: undefined,
+        index: undefined,
+        reset: true,
+      };
     case "pause":
       return { ...state, playing: false };
     case "resume":

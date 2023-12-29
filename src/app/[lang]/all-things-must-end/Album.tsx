@@ -27,7 +27,6 @@ export default function Album({
     state: { index },
     dispatch,
   } = useContext(PlayerContext);
-  const [started, setStarted] = useState(false);
 
   const tracks = lang === "de" ? Tracks.DE : Tracks.EN;
 
@@ -59,7 +58,7 @@ export default function Album({
               width={2304}
               height={3456}
               alt=""
-              className="opacity-80 h-full"
+              className="opacity-80 h-full w-full"
             ></Image>
           </div>
           <div className="max-w-screen-md mx-auto z-10 w-full relative pt-96 pb-32 px-4 md:px-0">
@@ -69,7 +68,7 @@ export default function Album({
                 years={[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}
                 direction="normal"
                 duration="5s"
-                rootMargin="500px 0px 500px 0px"
+                rootMargin="-20% 0% -20% 0%"
                 once
               ></YearRoll>
             </h3>
@@ -95,11 +94,12 @@ export default function Album({
         >
           <div className="mx-auto max-w-screen-md flex items-center justify-center mb-16 relative z-50">
             <button
-              className={`${
-                started ? "bg-slate-700" : "bg-blue-800"
-              } rounded-full px-8 py-4 font-sans font-semibold text-xl`}
+              className={`bg-blue-800 rounded-full px-8 py-4 font-sans font-semibold text-xl`}
               type="button"
               onClick={() => {
+                dispatch({
+                  type: "stop",
+                });
                 const firstTrack = tracks[0];
                 dispatch({
                   interactive: true,
@@ -168,12 +168,14 @@ export default function Album({
           }}
         ></div>
       </article>
-      <Player
-        preload="auto"
-        crossOrigin="anonymous"
-        type="audio/mpeg"
-        onEnded={() => playNext()}
-      ></Player>
+      {index !== undefined && (
+        <Player
+          preload="auto"
+          crossOrigin="anonymous"
+          type="audio/mpeg"
+          onEnded={() => playNext()}
+        ></Player>
+      )}
     </>
   );
 }
@@ -254,18 +256,22 @@ function OutroDE(props: OutroProps) {
         irgendetwas zu sagen oder zu tun habe.
       </p>
       <p>
-        Das ist dann also Lebewohl. Danke Dir &mdash; Dir, die Person die gerade
-        diese Zeilen ließt &mdash; für die Zeit die wir hatten. Danke, dass Du
-        da warst. Vielleicht kannst Du diese Zeit auf die gleiche Art
-        wertschätzen wie ich. Vielleicht, nachdem Du all das gelesen hast und
-        meine Geschichte gehört hast, kannst du es sogar ein bisschen verstehen.
+        Das ist dann also Lebewohl. Danke{" "}
+        <b>
+          Dir &mdash; Dir, die Person die gerade diese Zeilen ließt &mdash;{" "}
+        </b>
+        für die Zeit die wir hatten. Danke, dass Du da warst. Vielleicht kannst
+        Du diese Zeit auf die gleiche Art wertschätzen wie ich. Vielleicht,
+        nachdem Du all das gelesen hast und meine Geschichte gehört hast,{" "}
+        <b>kannst du es sogar ein bisschen verstehen.</b>
       </p>
       <p>
-        Ich würde mich geehrt fühlen, wenn Du ein Stückchen von mir, Zoomoid,
-        raus in die Welt tragen würdest. Keine Sorge, ich verschwinde schon
-        nicht so bald... Ich... werfe nur meine alte Haut ab, strecke die
-        neugeformten Flügel der Freiheit, löse mich selbst von der Person, die
-        ich erschaffen und getragen und aufgezogen habe über die letzte Dekade.
+        Ich würde mich geehrt fühlen, wenn Du ein{" "}
+        <b>Stückchen von mir, Zoomoid, raus in die Welt</b> tragen würdest.
+        Keine Sorge, ich verschwinde schon nicht so bald... Ich... werfe nur
+        meine alte Haut ab, strecke die neugeformten Flügel der Freiheit, löse
+        mich selbst von der Person, die ich erschaffen und getragen und
+        aufgezogen habe über die letzte Dekade.
       </p>
       <p>
         Es tut mir leid, wenn das nicht das Ende ist, das Du wolltest. Es tut
@@ -274,10 +280,12 @@ function OutroDE(props: OutroProps) {
         es die richtige Sache ist.
       </p>
       <p>
-        Und vielleicht, nur vielleicht, an einem anderen Ort, zu einer anderen
-        Zeit, sehen wir uns wieder.
+        Und <b>vielleicht, nur vielleicht,</b> an einem anderen Ort, zu einer
+        anderen Zeit, sehen wir uns wieder.
       </p>
-      <p>Danke! Hab Dich lieb!</p>
+      <p>
+        <b>Danke! Hab Dich lieb!</b>
+      </p>
     </SG>
   );
 }
@@ -299,17 +307,19 @@ function OutroEN(props: OutroProps) {
         to say or do.
       </p>
       <p>
-        This is farewell then. Thank you &mdash; you reading those lines right
-        now &mdash; for the time we had. Thank you for being there. Maybe you
-        can cherish those moments the same way I do. Maybe, after reading all
-        this and hearing my story, you can even understand.
+        This is farewell then. Thank{" "}
+        <b>you &mdash; you reading those lines right now &mdash; </b>for the
+        time we had. Thank you for being there. Maybe you can cherish those
+        moments the same way I do. Maybe, after reading all this and hearing my
+        story, <b>you can even understand.</b>
       </p>
       <p>
-        I would be honored if you carry a piece of me, Zoomoid, out into the
-        world. Don&apos;t worry, I&apos;m not disappearing anytime soon...
-        I&apos;m just... shedding my old skin, stretching out the newly formed
-        wings of freedom, detaching myself from the persona that I grew and
-        carried and nurtured over the last decade.
+        I would be honored if you carry a{" "}
+        <b>piece of me, Zoomoid, out into the world</b>. Don&apos;t worry,
+        I&apos;m not disappearing anytime soon... I&apos;m just... shedding my
+        old skin, stretching out the newly formed wings of freedom, detaching
+        myself from the persona that I grew and carried and nurtured over the
+        last decade.
       </p>
       <p>
         I&apos;m sorry if this is not the ending that you wanted. I&apos;m sorry
@@ -317,10 +327,12 @@ function OutroEN(props: OutroProps) {
         decision lightly. But I firmly believe it&apos;s the right thing.
       </p>
       <p>
-        Any maybe, just maybe, in a different space and time, we will meet
-        again.
+        Any <b>maybe, just maybe,</b> in a different space and time, we will
+        meet again.
       </p>
-      <p>Thank you! I love you!</p>
+      <p>
+        <b>Thank you! I love you!</b>
+      </p>
     </SG>
   );
 }

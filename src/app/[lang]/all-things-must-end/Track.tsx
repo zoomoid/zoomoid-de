@@ -38,7 +38,7 @@ export default function Track({ track, index }: TrackProps) {
   const [showCopiedToClipboard, setShowCopiedToClipboard] = useState(false);
 
   const shareChip = (
-    <div className="fixed md:relative left-0 bottom-0 right-0 h-64 md:h-auto flex items-center justify-center z-2000 isolate">
+    <div className="fixed md:relative pointer-events-none left-0 bottom-0 right-0 h-64 md:h-auto flex items-center justify-center z-2000 isolate">
       <div
         className="rounded-full font-sans bg-neutral-200 text-neutral-800 px-4 py-2 md:py-0 md:px-2 md:text-sm"
         style={{
@@ -101,7 +101,7 @@ export default function Track({ track, index }: TrackProps) {
               alt=""
             ></Image>
           </div>
-          <div className="flex-grow flex flex-col justify-center z-10 text-white">
+          <div className="flex-grow flex flex-col justify-center z-10 text-white relative">
             <div className="flex">
               <h3 className="font-sans font-semibold flex-grow h-full text-3xl md:text-4xl mb-4 pr-4 md:pr-0">
                 <span>{trackNumber}</span> &mdash; <span>{track.title}</span>

@@ -56,7 +56,7 @@ export default function Opening() {
 function Anfang(props: OpeningProps) {
   return (
     <SG {...props}>
-      <p className="">Es war eine schwere Zeit...</p>
+      {/* <p className="">Es war eine schwere Zeit...</p> */}
       <p className="">
         Wir haben <b>einen langen Weg</b> hinter uns. Jetzt ist es an der Zeit,
         <b>die letzten Schritte</b> zu machen.
@@ -79,7 +79,7 @@ function Anfang(props: OpeningProps) {
 function Start(props: OpeningProps) {
   return (
     <SG {...props}>
-      <p className="">It&apos;s been some rough times...</p>
+      {/* <p className="">It&apos;s been some rough times...</p> */}
       <p className="">
         We&apos;ve come <b>a long way</b>. Now it&apos;s time to do{" "}
         <b>the final steps.</b>

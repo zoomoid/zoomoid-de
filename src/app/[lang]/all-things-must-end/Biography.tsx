@@ -19,7 +19,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           alt=""
           width={4016}
           height={6016}
-          className="mix-blend-color-dodge filter saturate-0 opacity-90"
+          className="mix-blend-color-dodge filter saturate-0 opacity-90 w-full"
         ></Image>
       </section>
       <section className="max-w-screen-md mx-auto my-16 z-20 relative px-4 md:px-0">
@@ -50,7 +50,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               years={[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}
               direction="reverse"
               duration="4s"
-              rootMargin="500px 0px 500px 0px"
+              rootMargin="-20% 0% -20% 0%"
               once
             ></YearRoll>
           </span>
@@ -120,7 +120,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               direction="normal"
               duration="1s"
               once
-              rootMargin="500px 0px 500px 0px"
+              rootMargin="-20% 0% -20% 0%"
             ></YearRoll>
           </span>
         </h3>
@@ -261,7 +261,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               direction="normal"
               duration="1s"
               once
-              rootMargin="500px 0px 500px 0px"
+              rootMargin="-20% 0% -20% 0%"
             ></YearRoll>
           </span>
         </h3>
@@ -374,7 +374,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               direction="normal"
               duration="0.5s"
               once
-              rootMargin="500px 0px 500px 0px"
+              rootMargin="-20% 0% -20% 0%"
             ></YearRoll>
           </span>
         </h3>
@@ -475,9 +475,9 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
   return (
     <article id="preamble" className="relative isolate">
       <section
-        className="z-0 h-[3000px] absolute isolate w-full bg-neutral-950 overflow-hidden "
+        className="z-0 h-[1500px] absolute isolate w-full bg-neutral-950 overflow-hidden opacity-50"
         style={{
-          maskImage: `linear-gradient(transparent 0%, black 10%, black 90%, transparent 100%)`,
+          maskImage: `linear-gradient(transparent 0%, black 10%, black 80%, transparent 100%)`,
         }}
       >
         <Image
@@ -485,7 +485,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           alt=""
           width={4016}
           height={6016}
-          className="mix-blend-color-dodge filter saturate-0 opacity-90"
+          className="mix-blend-color-dodge filter saturate-0 w-full"
         ></Image>
       </section>
       <section className="max-w-screen-md mx-auto my-16 z-20 relative px-4 md:px-0">
@@ -514,7 +514,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             years={[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}
             direction="reverse"
             duration="4s"
-            rootMargin="500px 0px 500px 0px"
+            rootMargin="-20% 0% -20% 0%"
             once
           ></YearRoll>
         </h3>
@@ -587,7 +587,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             direction="normal"
             duration="1s"
             once
-            rootMargin="500px 0px 500px 0px"
+            rootMargin="-20% 0% -20% 0%"
           ></YearRoll>
         </h3>
         <SG
@@ -732,7 +732,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               direction="normal"
               duration="1s"
               once
-              rootMargin="500px 0px 500px 0px"
+              rootMargin="-20% 0% -20% 0%"
             ></YearRoll>
           </span>
         </h3>
@@ -853,7 +853,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             direction="normal"
             duration="0.5s"
             once
-            rootMargin="500px 0px 500px 0px"
+            rootMargin="-20% 0% -20% 0%"
           ></YearRoll>
         </h3>
         <SG animationName="slide-up" className="md:text-lg my-16 space-y-2">

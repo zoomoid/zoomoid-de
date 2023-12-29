@@ -54,7 +54,7 @@ export default function Album({
             }}
           >
             <Image
-              src="/img/all-things-must-end/assets/gregoire-jeanneau-9sxeKzuCVoE-unsplash.jpg"
+              src="https://files.zoomoid.de/2023/all-things-must-end/assets/gregoire-jeanneau-9sxeKzuCVoE-unsplash.jpg"
               width={2304}
               height={3456}
               alt=""

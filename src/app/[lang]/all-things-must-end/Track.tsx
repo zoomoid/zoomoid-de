@@ -19,8 +19,10 @@ interface TrackProps {
   index: number;
 }
 
-const boxPrefix = "/img/all-things-must-end/waveforms/box/v2";
-const sweepPrefix = "/img/all-things-must-end/waveforms/sweep/v2";
+const CDN_PREFIX = "https://files.zoomoid.de/2023/all-things-must-end"
+
+const boxPrefix = `${CDN_PREFIX}/waveforms/box/v2`;
+const sweepPrefix = `${CDN_PREFIX}/waveforms/sweep/v2`;
 
 const waveform = (prefix: string, name: string): string => `${prefix}/${name}`;
 

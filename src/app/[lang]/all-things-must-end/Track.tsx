@@ -17,6 +17,7 @@ export interface Track {
 interface TrackProps {
   track: Track;
   index: number;
+  className?: string;
 }
 
 const CDN_PREFIX = "/img/all-things-must-end";
@@ -147,7 +148,7 @@ export default function Track({ track, index }: TrackProps) {
             </div>
           </div>
         </div>
-        <div className="block xs:hidden absolute top-0 left-0 bottom-0 right-0">
+        <div className="block xs:hidden absolute top-0 left-0 bottom-0 right-0 overflow-x-hidden">
           <Image
             src={waveform(sweepPrefix, filename + ".png")}
             height={5030}

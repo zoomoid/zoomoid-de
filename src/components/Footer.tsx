@@ -1,7 +1,11 @@
 import { PropsWithChildren } from "react";
-import { type FooterItem } from ".";
 import Link from "next/link";
 import Image from "next/image";
+
+type FooterItem = {
+  title: string;
+  url: string;
+}
 
 type FooterProps = PropsWithChildren<{
   socials: FooterItem[];

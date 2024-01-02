@@ -15,7 +15,7 @@ import Tracks from "./tracks";
 import { PlayerContext, PlayerContextProvider } from "@/context/player.context";
 import Player from "./Player";
 import Link from "next/link";
-import { ListenTo } from "@/components/release/ReleaseScaffolding";
+import { ListenTo } from "@/components/ReleaseScaffolding";
 
 export default function Album({
   skipRef,

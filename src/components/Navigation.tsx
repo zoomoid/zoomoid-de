@@ -1,13 +1,10 @@
 "use client";
 
 import { useContext, type PropsWithChildren } from "react";
-import { type NavigationItem } from ".";
 import Image from "next/image";
 import Link from "next/link";
 import { ThemeContext } from "@/context/theme.context";
-export type NavigationProps = PropsWithChildren<{
-  elements?: NavigationItem[];
-}>;
+export type NavigationProps = PropsWithChildren<{}>;
 
 export default function Navigation({ children }: NavigationProps) {
   const {

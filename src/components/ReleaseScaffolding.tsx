@@ -3,7 +3,7 @@
 import { type Locale } from "@/i18n";
 import Image from "next/image";
 import { type PropsWithChildren, type ReactElement } from "react";
-import { ThemeChanger, ThemeChangerProps } from "../ThemeableScaffolding";
+import { ThemeChanger, ThemeChangerProps } from "./ThemeableScaffolding";
 import Link from "next/link";
 
 type Cover = {

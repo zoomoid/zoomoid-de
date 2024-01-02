@@ -1,5 +1,5 @@
-import ReleaseScaffolding from "@/components/release/ReleaseScaffolding";
-import { type Release } from "@/components/release/ReleaseScaffolding";
+import ReleaseScaffolding from "@/components/ReleaseScaffolding";
+import { type Release } from "@/components/ReleaseScaffolding";
 import { type Locale } from "@/i18n";
 
 type PageProps = {

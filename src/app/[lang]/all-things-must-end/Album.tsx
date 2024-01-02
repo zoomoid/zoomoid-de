@@ -79,6 +79,7 @@ export default function Album({
               width={2304}
               height={3456}
               alt=""
+              aria-hidden
               priority
               className="opacity-80 h-full w-full"
             ></Image>
@@ -99,7 +100,7 @@ export default function Album({
               <div className="">
                 <Image
                   src="/img/all-things-must-end/cover.jpg"
-                  alt=""
+                  alt="All Things Must End Cover"
                   className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 w-4/5 border-neutral-50 mx-auto"
                   width={2500}
                   height={2500}

@@ -17,6 +17,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
         <Image
           src="/img/all-things-must-end/assets/casey-horner-RmoWqDCqN2E-unsplash.jpg"
           alt=""
+          aria-hidden
           priority
           width={4016}
           height={6016}
@@ -151,7 +152,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                   src="/img/liamm.jpg"
                   width={1500}
                   height={1500}
-                  alt=""
+                  alt="Album cover of Life Is About Making Memories"
                   className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 w-1/2 border-neutral-50 mx-auto"
                 ></Image>
               </div>
@@ -179,7 +180,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                 src="/img/eigenräume_pre.jpg"
                 width={1500}
                 height={1500}
-                alt=""
+                alt="Album cover of Eigenräume (Standard Edition)"
                 className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto relative z-10"
               ></Image>
             </div>
@@ -188,7 +189,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                 src="/img/eigenräume.jpg"
                 width={1500}
                 height={1500}
-                alt=""
+                alt="Album cover of Eigenräume (Extended Edition)"
                 className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto md:transform md:scale-110 md:-translate-x-10 relative z-20"
               ></Image>
             </div>
@@ -222,7 +223,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                   src="/img/public_transportation.jpg"
                   width={1500}
                   height={1500}
-                  alt=""
+                  alt="Album cover of Public Transportation EP"
                   className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
                 ></Image>
               </div>
@@ -231,7 +232,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                   src="/img/301.jpg"
                   width={1500}
                   height={1500}
-                  alt=""
+                  alt="Album cover of 301 Permanently Moving"
                   className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
                 ></Image>
               </div>
@@ -283,7 +284,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               src="/img/shades_of_yellow.jpg"
               width={1500}
               height={1500}
-              alt=""
+              alt="Album cover of Shades of Yellow"
               className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
             ></Image>
           </div>
@@ -325,7 +326,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               src="/img/voyager.jpg"
               width={1500}
               height={1500}
-              alt=""
+              alt="Album cover of Voyager"
               className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
             ></Image>
           </div>
@@ -341,7 +342,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               src="/img/all-things-must-end/2046.jpg"
               width={3000}
               height={1500}
-              alt=""
+              alt="Early sketches for Voyager, still being calle Artemis here"
               className="shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
             ></Image>
           </div>
@@ -400,7 +401,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               src="/img/sehnsucht.jpg"
               width={1500}
               height={1500}
-              alt=""
+              alt="Album cover of Sehnsucht"
               className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl  w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
             ></Image>
           </div>
@@ -452,7 +453,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               src="/img/all-things-must-end/2047.jpg"
               width={3024}
               height={1512}
-              alt=""
+              alt="Photo of an image of my grandfather, depicting the Chiemsee in southern Germany"
               className="shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
             ></Image>
           </div>
@@ -618,7 +619,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                   src="/img/liamm.jpg"
                   width={1500}
                   height={1500}
-                  alt=""
+                  alt="Album cover of Life Is About Making Memories"
                   className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 w-1/2 border-neutral-50 mx-auto"
                 ></Image>
               </div>
@@ -649,7 +650,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                 src="/img/eigenräume_pre.jpg"
                 width={1500}
                 height={1500}
-                alt=""
+                alt="Album cover of Eigenräume (Standard Edition)"
                 className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto relative z-10"
               ></Image>
             </div>
@@ -658,7 +659,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                 src="/img/eigenräume.jpg"
                 width={1500}
                 height={1500}
-                alt=""
+                alt="Album cover of Eigenräume (Extended Edition)"
                 className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto md:transform md:scale-110 md:-translate-x-10 relative z-20"
               ></Image>
             </div>
@@ -693,7 +694,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                   src="/img/public_transportation.jpg"
                   width={1500}
                   height={1500}
-                  alt=""
+                  alt="Album cover of Public Transportation EP"
                   className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
                 ></Image>
               </div>
@@ -702,7 +703,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                   src="/img/301.jpg"
                   width={1500}
                   height={1500}
-                  alt=""
+                  alt="Album cover of 301 Permanently Moving"
                   className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
                 ></Image>
               </div>
@@ -758,7 +759,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               src="/img/shades_of_yellow.jpg"
               width={1500}
               height={1500}
-              alt=""
+              alt="Album cover of Shades of Yellow"
               className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
             ></Image>
           </div>
@@ -802,7 +803,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               src="/img/voyager.jpg"
               width={1500}
               height={1500}
-              alt=""
+              alt="Album cover of Voyager"
               className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
             ></Image>
           </div>
@@ -819,7 +820,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               src="/img/all-things-must-end/2046.jpg"
               width={3000}
               height={1500}
-              alt=""
+              alt="Early sketches for Voyager, still being calle Artemis here"
               className="shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
             ></Image>
           </div>
@@ -880,7 +881,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               src="/img/sehnsucht.jpg"
               width={1500}
               height={1500}
-              alt=""
+              alt="Album cover of Sehnsucht"
               className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl  w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
             ></Image>
           </div>
@@ -934,7 +935,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               src="/img/all-things-must-end/2047.jpg"
               width={3024}
               height={1512}
-              alt=""
+              alt="Photo of an image of my grandfather, depicting the Chiemsee in southern Germany"
               className="shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
             ></Image>
           </div>

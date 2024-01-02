@@ -27,7 +27,7 @@ export default function ThemeableScaffolding({
       className={`${backgroundColor} ${textColor} flex flex-col min-h-screen relative transition-colors duration-1000`}
     >
       {navigation}
-      <div className="flex-grow pt-32">{children}</div>
+      <div className="flex-grow">{children}</div>
       {footer}
     </div>
   );
@@ -51,7 +51,7 @@ export function ThemeChanger({
       navigationImageFilter:
         navigationImageFilter ?? initialState.navigationImageFilter,
     });
-  });
+  }, [backgroundColorClass, textColorClass, navigationImageFilter, initialState]);
 
   return <></>;
 }

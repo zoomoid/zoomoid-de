@@ -28,6 +28,7 @@ export default function Cloud({
     >
       <Image
         src={src}
+        aria-hidden
         alt=""
         width={2000}
         height={1339}

@@ -104,6 +104,7 @@ export default function Track({ track, index }: TrackProps) {
               width={400}
               height={2000}
               alt=""
+              aria-hidden
             ></Image>
           </div>
           <div className="flex-grow flex flex-col justify-center z-10 text-white relative">
@@ -154,6 +155,7 @@ export default function Track({ track, index }: TrackProps) {
             height={5030}
             width={1010}
             alt=""
+            aria-hidden
             className="relative h-full opacity-20 scale-105 mix-blend-overlay"
           ></Image>
         </div>

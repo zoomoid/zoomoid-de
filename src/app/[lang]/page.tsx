@@ -96,7 +96,7 @@ export default async function Root({
         ></ThemeChanger>
         <Banner></Banner>
         <section className="flex justify-end py-[6.6vmax] lg:py-[1.6vmax] w-full mx-auto overflow-x-visible md:pl-[4vw]">
-          <div className="xl:grid grid-cols-2 gap-x-32 md:px-0 justify-center overflow-visible pt-64">
+          <div className="xl:grid grid-cols-2 gap-x-32 md:px-0 justify-center overflow-visible md:pt-64">
             <div className="mb-8 2xl:order-last overflow-x-visible">
               <Image
                 src="/img/banner.jpg"
@@ -106,12 +106,8 @@ export default async function Root({
                 height={1095}
               ></Image>
             </div>
-            <h1 className="text-3xl font-semibold sm:text-5xl md:text-5xl lg:text-6xl xl:text-right">
-              <span className="font-sans">Zoomoid</span>{" "}
-              <span>was a an artist and producer based in </span>{" "}
-              <span className="font-sans">Aachen, Germany,</span> who made
-              electronic music with an idea and a{" "}
-              <span className="font-sans">heartbeat</span>.
+            <h1 className="text-3xl md:px-0 px-4 md:pl-[4vw] md:pr-[4vw] font-semibold sm:text-5xl md:text-5xl lg:text-6xl xl:text-right">
+              {lang === "de" ? <HeroDE></HeroDE> : <HeroEN></HeroEN>}
             </h1>
           </div>
         </section>
@@ -122,7 +118,7 @@ export default async function Root({
           <h2 className="text-5xl font-sans font-semibold mb-16">
             {lang === "de" ? "Diskografie" : "Discography"}
           </h2>
-          <div className="grid-cols-3 grid-rows-3 md:grid gap-8 pb-32">
+          <div className="grid-cols-1 xs:grid-cols-2 md:grid-cols-3 grid md:gap-8 gap-4 pb-32">
             {releases.map((r) => {
               return (
                 <Link
@@ -137,7 +133,7 @@ export default async function Root({
                       height={1500}
                       src={r.coverUrl}
                       alt={`${r.title} cover`}
-                      className="relative z-50 hover:scale-[1.02] transition-transform duration-1000 border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 xl:my-0 border-neutral-50 mx-auto"
+                      className="relative z-50 hover:scale-[1.02] transition-transform duration-1000 border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 border-neutral-50 mx-auto"
                     ></Image>
                   </div>
                 </Link>
@@ -146,6 +142,29 @@ export default async function Root({
           </div>
         </section>
       </main>
+    </>
+  );
+}
+
+function HeroEN() {
+  return (
+    <>
+      <span className="font-sans">Zoomoid</span>{" "}
+      <span>was an artist and producer based in </span>{" "}
+      <span className="font-sans">Aachen, Germany,</span> who made electronic
+      music with an idea and a <span className="font-sans">heartbeat</span>.
+    </>
+  );
+}
+
+function HeroDE() {
+  return (
+    <>
+      <span className="font-sans">Zoomoid</span>{" "}
+      <span>war ein Künstler und Producer aus </span>{" "}
+      <span className="font-sans">Aachen,</span> der elektronische Musik mit
+      einer Idee und einem <span className="font-sans">Herzschlag</span> gemacht
+      hat.
     </>
   );
 }

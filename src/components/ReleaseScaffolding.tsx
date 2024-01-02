@@ -60,7 +60,7 @@ export default function ReleaseScaffolding({
   }
 
   return (
-    <main className="release pb-32">
+    <main className="release pb-32 md:pt-64 pt-16">
       <ThemeChanger {...theme}></ThemeChanger>
       <div className="py-[6.6vmax] lg:py-[1.6vmax]">
         <section className="max-w-screen-md xl:max-w-none xl:px-[4vw] mx-auto px-4 md:px-0 relative xl:grid grid-cols-2 gap-x-16">
@@ -69,7 +69,7 @@ export default function ReleaseScaffolding({
               <Image
                 src={cover.url}
                 key={cover.url}
-                alt=""
+                alt={`Cover image of ${textTitle}`}
                 className={`border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 xl:my-0 border-neutral-50 mx-auto ${cover.className}`}
                 width={cover.width}
                 height={cover.height}

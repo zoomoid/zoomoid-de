@@ -20,20 +20,43 @@ export default function Banner() {
             All Things Must End
           </h1>
           <h2 className="font-sans text-xl md:text-2xl font-semibold mb-4">
-            The last Zoomoid album
+            {lang === "de"
+              ? "Das letzte Zoomoid-Album"
+              : "The last Zoomoid album"}
           </h2>
-          <p className="text-lg mb-4">Out now everywhere to stream!</p>
+          <p className="text-lg mb-4">
+            {lang === "de"
+              ? "Jetzt überall zum Streamen!"
+              : "Out now everywhere to stream!"}
+          </p>
           <div className="text-lg font-sans">
-            <Link href={`/${lang}/all-things-must-end`} className="group hover:no-underline block leading-none">
-              <span className="group-hover:underline">Check out the <b>companion website</b> to learn more about the album (and me)</span>
-              <span className="material-symbols-outlined align-middle ml-1 pb-1">arrow_forward</span>
+            <Link
+              href={`/${lang}/all-things-must-end`}
+              className="group hover:no-underline block leading-none"
+            >
+              <span className="group-hover:underline">
+                {lang === "de" ? (
+                  <>
+                    Auf der <b>Begleitseite</b> lernst Du mehr über das Album
+                    (und mich)!
+                  </>
+                ) : (
+                  <>
+                    Check out the <b>companion website</b> to learn more about
+                    the album (and me)
+                  </>
+                )}
+              </span>
+              <span className="material-symbols-outlined align-middle ml-1 pb-1">
+                arrow_forward
+              </span>
             </Link>
           </div>
         </div>
         <div className="h-full relative md:w-[250px] hidden md:block">
           <Image
             src="/img/all-things-must-end/cover.jpg"
-            alt=""
+            alt="All Things Must End Cover"
             className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 border-neutral-50 mx-auto"
             width={2500}
             height={2500}

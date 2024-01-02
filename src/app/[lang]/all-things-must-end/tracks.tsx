@@ -887,7 +887,7 @@ const tracksDE: Track[] = [
   },
 ];
 
-const audioPrefix = "https://files.zoomoid.de/2023/all-things-must-end/mp3";
+const audioPrefix = "https://files.zoomoid.de/all-things-must-end/mp3";
 
 const augmentAudioURI = (t: Track, i: number) => {
   const trackNumber = leadingZeroes(i + 1);

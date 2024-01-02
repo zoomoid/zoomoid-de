@@ -51,7 +51,12 @@ export function ThemeChanger({
       navigationImageFilter:
         navigationImageFilter ?? initialState.navigationImageFilter,
     });
-  }, [backgroundColorClass, textColorClass, navigationImageFilter, initialState]);
+  }, [
+    backgroundColorClass,
+    textColorClass,
+    navigationImageFilter,
+    dispatch,
+  ]);
 
   return <></>;
 }

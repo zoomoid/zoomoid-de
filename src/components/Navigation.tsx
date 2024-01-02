@@ -12,8 +12,8 @@ export default function Navigation({ children }: NavigationProps) {
   } = useContext(ThemeContext);
 
   return (
-    <header className="absolute top-0 left-0 right-0">
-      <div className="px-[4vw] py-[3vw] flex items-center ">
+    <header className="absolute top-0 left-0 right-0 z-50">
+      <div className="px-[4vw] py-[3vw] flex items-center">
         <nav className="flex-wrap flex-grow gap-4 tracking-wide flex justify-between relative">
           <div className="font-sans text-xl font-semibold">
             <Link href="/" className="h-8 relative">

@@ -60,7 +60,7 @@ function DescriptionEN() {
     <p className="md:text-lg">
       <b>&ldquo;Shades Of Yellow&rdquo;</b> is an emotional ode to the
       relationship I have with the color <b>yellow</b> and the closest thing
-      I've come to writing a <b>love song</b>. Both tracks move me in a very
+      I&apos;ve come to writing a <b>love song</b>. Both tracks move me in a very
       special way, and there are many many memories attached to them. I know
       some other people do as well and <b>I hope, you can, too.</b>
     </p>

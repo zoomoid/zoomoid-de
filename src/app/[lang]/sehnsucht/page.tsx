@@ -65,7 +65,7 @@ function DescriptionEN() {
       <b>acoustic instrumental album</b>, featuring intimate instruments and a
       huge load of emotions. I wrote those tracks with the emotion of missing
       out and wishing for old times and new times at the same time, trying to
-      express what I've been feeling for the last months. I{" "}
+      express what I&apos;ve been feeling for the last months. I{" "}
       <b>love them all very dearly.</b>
     </p>
   );

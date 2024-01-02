@@ -51,7 +51,7 @@ export function ThemeChanger({
       navigationImageFilter:
         navigationImageFilter ?? initialState.navigationImageFilter,
     });
-  }, []);
+  });
 
   return <></>;
 }

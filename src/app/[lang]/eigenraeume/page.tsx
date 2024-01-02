@@ -92,7 +92,7 @@ function DescriptionEN() {
         that frame the album&apos; pinnacle position as the Zoomoid style.
       </p>
       <p>
-        <b>&ldquo;Eigenräume (Extended Edition)&rdquo;</b> is my 2019's main
+        <b>&ldquo;Eigenräume (Extended Edition)&rdquo;</b> is my 2019&apos;s main
         release, with 11 tracks (again), intro and outro, and seamless blending
         of tracks (at least on the first 7 tracks)! It also features 3 tracks
         that were written after the original concept album was created, but

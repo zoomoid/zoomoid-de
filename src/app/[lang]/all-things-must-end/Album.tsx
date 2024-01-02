@@ -113,7 +113,7 @@ export default function Album({
               <div className="grid grid-cols-2 md:grid-cols-4 mx-auto justify-center items-center place-items-center gap-y-4">
                 {externalLinks.map(({ title, url }) => {
                   return (
-                    <Link href={url} className="font-sans font-semibold text-lg">
+                    <Link href={url} className="font-sans font-semibold text-lg" key={title}>
                       <span>{title}</span>
                       <span className="material-symbols-outlined ml-1">
                         arrow_outward

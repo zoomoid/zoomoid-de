@@ -74,9 +74,9 @@ function DescriptionEN() {
       <p className="md:text-lg">
         {" "}
         The idea got burried in a notebook for a year until I picked it up and
-        sketched a trip on my usual train route through some cities in NRW. It's
-        real, it's honest, <b>it's got sharp edges</b> and it's certainly
-        different to my other work in that year. Yet, it's a favourite of{" "}
+        sketched a trip on my usual train route through some cities in NRW. It&apos;s
+        real, it&apos;s honest, <b>it&apos;s got sharp edges</b> and it&apos;s certainly
+        different to my other work in that year. Yet, it&apos;s a favourite of{" "}
         <b>a lot of people for exactly that reason.</b>
       </p>
     </>

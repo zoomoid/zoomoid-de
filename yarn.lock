@@ -79,12 +79,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/intl-localematcher@npm:^0.4.2":
-  version: 0.4.2
-  resolution: "@formatjs/intl-localematcher@npm:0.4.2"
+"@formatjs/intl-localematcher@npm:^0.5.2":
+  version: 0.5.2
+  resolution: "@formatjs/intl-localematcher@npm:0.5.2"
   dependencies:
     tslib: "npm:^2.4.0"
-  checksum: 2521fa48a95a80e3bedc0d444fb2ef67e1215e0bf9e6d16020c4a22af6973849a71c7a29a10cb74fc67b818967e9f8672062760e808e70873132277830e0ec67
+  checksum: 4b3ae75470e3e53ffa39b2d46e65a2a4c9c4becbc0aac989b0694370e10c6687643660a045512d676509bc29b257fe5726fbb028de12f889be02c2d20b6527e6
   languageName: node
   linkType: hard
 
@@ -4351,7 +4351,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "zoomoid-de@workspace:."
   dependencies:
-    "@formatjs/intl-localematcher": "npm:^0.4.2"
+    "@formatjs/intl-localematcher": "npm:^0.5.2"
     "@types/negotiator": "npm:^0.6.3"
     "@types/node": "npm:^20.10.0"
     "@types/react": "npm:^18.2.38"

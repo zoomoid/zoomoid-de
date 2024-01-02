@@ -1,33 +1,37 @@
-import { type PropsWithChildren } from "react";
+"use client";
+
+import { useContext, type PropsWithChildren } from "react";
 import { type NavigationItem } from ".";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "/public/img/logo_bar.png";
+import { ThemeContext } from "@/context/theme.context";
 export type NavigationProps = PropsWithChildren<{
   elements?: NavigationItem[];
 }>;
 
-export default function Navigation({
-  elements = [],
-  children,
-}: NavigationProps) {
+export default function Navigation({ children }: NavigationProps) {
+  const {
+    state: { navigationImageFilter },
+  } = useContext(ThemeContext);
+
   return (
-    <header className="text-white px-[4vw] py-[3vw] flex items-center">
-      <nav className="flex-wrap flex-grow gap-4 tracking-wide flex justify-between">
-        <div className="font-sans text-xl font-semibold">
-          <Link href="/" className="h-8 relative">
-            <Image
-              alt="Zoomoid Logo"
-              src="/img/logo_bar.png"
-              width={5000}
-              height={1319}
-              // src={Logo}
-              className="h-8 w-auto"
-            ></Image>
-          </Link>
-        </div>
-        {children}
-      </nav>
+    <header className="absolute top-0 left-0 right-0">
+      <div className="px-[4vw] py-[3vw] flex items-center ">
+        <nav className="flex-wrap flex-grow gap-4 tracking-wide flex justify-between relative">
+          <div className="font-sans text-xl font-semibold">
+            <Link href="/" className="h-8 relative">
+              <Image
+                alt="Zoomoid Logo"
+                src="/img/logo_bar.png"
+                width={5000}
+                height={1319}
+                className={`h-8 w-auto transition-all ${navigationImageFilter}`}
+              ></Image>
+            </Link>
+          </div>
+          {children}
+        </nav>
+      </div>
     </header>
   );
 }

@@ -108,7 +108,7 @@ function Player({ ...props }: PlayerProps) {
           <div className="overflow-visible">
             {/* Controls */}
             <button
-              className="w-8 h-8 flex items-center justify-center"
+              className="w-8 h-8 flex items-center justify-center text-2xl"
               onClick={() => {
                 if (paused) {
                   resume();
@@ -173,14 +173,7 @@ function Player({ ...props }: PlayerProps) {
               dispatch({ type: "stop" });
             }}
           >
-            <i
-              className="material-symbols-outlined"
-              style={{
-                fontSize: "1rem",
-              }}
-            >
-              close
-            </i>
+            <i className="material-symbols-outlined">close</i>
           </button>
         </div>
       </div>

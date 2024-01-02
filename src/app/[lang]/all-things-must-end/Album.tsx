@@ -14,6 +14,8 @@ import TrackComponent, { type Track } from "./Track";
 import Tracks from "./tracks";
 import { PlayerContext, PlayerContextProvider } from "@/context/player.context";
 import Player from "./Player";
+import Link from "next/link";
+import { ListenTo } from "@/components/release/ReleaseScaffolding";
 
 export default function Album({
   skipRef,
@@ -42,6 +44,25 @@ export default function Album({
       interactive: false,
     });
   };
+
+  const externalLinks = [
+    {
+      title: "Spotify",
+      url: "https://open.spotify.com/intl-de/album/7ymmo9SBJik0ZCj0Dz9Vjy",
+    },
+    {
+      title: "Apple Music",
+      url: "https://music.apple.com/de/album/all-things-must-end/1722120415",
+    },
+    {
+      title: "YouTube Music",
+      url: "https://music.youtube.com/playlist?list=OLAK5uy_n_1VauDKSnDe-XGzw2R_-bbhpDQ7AlK5I&si=Ovbg7E3Ij54jflQz",
+    },
+    {
+      title: "Bandcamp",
+      url: "https://zoomoid.bandcamp.com/album/all-things-must-end",
+    },
+  ];
 
   return (
     <>
@@ -73,7 +94,7 @@ export default function Album({
                 once
               ></YearRoll>
             </h3>
-            <div className="space-y-2 md:text-lg my-16">
+            <div className="space-y-2 md:text-lg mt-16 mb-8">
               {lang === "de" ? <IntroDE></IntroDE> : <IntroEN></IntroEN>}
               <div className="">
                 <Image
@@ -84,6 +105,26 @@ export default function Album({
                   height={2500}
                 ></Image>
               </div>
+            </div>
+            <div>
+              <label className="text-center block mb-4 text-lg">
+                <ListenTo lang={lang} title="All Things Must End"></ListenTo>
+              </label>
+              <div className="grid grid-cols-2 md:grid-cols-4 mx-auto justify-center items-center place-items-center">
+                {externalLinks.map(({ title, url }) => {
+                  return (
+                    <Link href={url} className="font-sans font-semibold text-lg">
+                      <span>{title}</span>
+                      <span className="material-symbols-outlined ml-1">
+                        arrow_outward
+                      </span>
+                    </Link>
+                  );
+                })}
+              </div>
+              <p className="text-center mt-4 font-semibold font-sans text-lg">
+                {lang === "de" ? "oder hör Dir das ganze Album von vorne bis hinten hier an, Kontext eingeschlossen!" : "or listen to the entire album from beginning to end here, context included!"}
+              </p>
             </div>
           </div>
         </section>

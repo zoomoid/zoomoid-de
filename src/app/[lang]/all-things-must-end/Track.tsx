@@ -121,23 +121,23 @@ export default function Track({ track, index }: TrackProps) {
                   onClick={() =>
                     currentlyPlaying ? togglePlayback() : startPlayback()
                   }
-                  className="py-2 px-6 rounded-lg border-2 border-white flex items-center hover:bg-white/20 transition-colors"
+                  className="py-2 px-6 rounded-lg border-2 border-white flex items-center hover:bg-white/20 transition-colors text-xl"
                 >
-                  <i className="material-symbols-outlined leading-none">
+                  <i className="material-symbols-outlined leading-none ">
                     {currentlyPlaying && playing ? "pause" : "play_arrow"}
                   </i>
                 </button>
                 <a
                   href={track.audioURI}
-                  className="py-2 px-6 rounded-lg border-2 border-white flex items-center hover:bg-white/20 transition-colors hover:no-underline"
+                  className="py-2 px-6 rounded-lg border-2 border-white flex items-center hover:bg-white/20 transition-colors hover:no-underline text-xl"
                 >
-                  <i className="material-symbols-outlined leading-none">
+                  <i className="material-symbols-outlined leading-none ">
                     download
                   </i>
                 </a>
                 <a
                   onClick={handleShare}
-                  className="py-2 px-6 rounded-lg border-2 border-white flex items-center hover:bg-white/20 transition-colors hover:no-underline cursor-pointer"
+                  className="py-2 px-6 rounded-lg border-2 border-white flex items-center hover:bg-white/20 transition-colors hover:no-underline cursor-pointer text-xl"
                 >
                   <i className="material-symbols-outlined leading-none">
                     share

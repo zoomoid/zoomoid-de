@@ -2,7 +2,6 @@ import { PropsWithChildren } from "react";
 import { type FooterItem } from ".";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "/public/img/logo_bar.png";
 
 type FooterProps = PropsWithChildren<{
   socials: FooterItem[];
@@ -18,8 +17,10 @@ export default function Footer({ socials }: FooterProps) {
   ));
 
   return (
-    <footer className="py-[6.6vmax] px-[4vw] text-white">
-      <div className="flex justify-end mx-auto">
+    <footer className="py-[6.6vmax] px-[4vw] text-white bg-black relative z-10" style={{
+      maskImage: "linear-gradient(to bottom, transparent 0%, black 60%, black 100%)"
+    }}>
+      <div className="flex justify-end mx-auto pt-32">
         <div className="w-full grid-cols-12 px-4 font-medium tracking-wide md:grid md:px-0">
           <div className="col-span-3">
             <Link href="/" className="h-8 relative">
@@ -28,7 +29,6 @@ export default function Footer({ socials }: FooterProps) {
                 src="/img/logo_bar.png"
                 width={5000}
                 height={1319}
-                // src={Logo}
                 className="h-8 w-auto"
               ></Image>
             </Link>

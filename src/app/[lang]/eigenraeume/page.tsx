@@ -109,7 +109,7 @@ function DescriptionDE() {
       <p>
         <b>&bdquo;Eigenräume&ldquo;</b> ist ein Konzeptalbum aus 2019 mit
         Zwillings-Release. Die erste Version mit 6 Tracks heißt{" "}
-        <b>Standar Edition</b> (mit dem schwarzen Cover) und wurde am 19. Mai
+        <b>Standard Edition</b> (mit dem schwarzen Cover) und wurde am 19. Mai
         2019 veröffentlicht. Sie enthält die Kernstücke des vollen Albums in
         ihrer Einzelfassung. The längere 11-Titel-Version heißt{" "}
         <b>Extended Edition</b> (mit dem roten Cover) und beinhaltet the

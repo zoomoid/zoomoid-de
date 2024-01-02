@@ -110,7 +110,7 @@ export default function Album({
               <label className="text-center block mb-4 text-lg">
                 <ListenTo lang={lang} title="All Things Must End"></ListenTo>
               </label>
-              <div className="grid grid-cols-2 md:grid-cols-4 mx-auto justify-center items-center place-items-center">
+              <div className="grid grid-cols-2 md:grid-cols-4 mx-auto justify-center items-center place-items-center gap-y-4">
                 {externalLinks.map(({ title, url }) => {
                   return (
                     <Link href={url} className="font-sans font-semibold text-lg">

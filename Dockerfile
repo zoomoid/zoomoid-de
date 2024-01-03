@@ -3,9 +3,12 @@ FROM node:alpine as builder
 WORKDIR /app
 
 COPY package.json .
-COPY yarn.lock .
+COPY .yarnrc.yml .
+COPY .yarn/ .yarn/
 
-RUN yarn
+RUN yarn set version berry
+
+RUN yarn install
 
 COPY . .
 
@@ -15,15 +18,19 @@ FROM node:alpine as deps
 
 WORKDIR /app
 
-COPY package.json yarn.lock ./
+COPY package.json .yarnrc.yml ./
+COPY .yarn/ .yarn/
 
-RUN yarn install --production
+RUN yarn set version berry
+
+RUN yarn install 
 
 FROM node:20-alpine as server
 
 WORKDIR /app
 
-COPY package.json yarn.lock ./
+COPY package.json .yarnrc.yml ./
+COPY .yarn/ .yarn/
 
 COPY --from=builder /app/.next/ /app/.next/
 

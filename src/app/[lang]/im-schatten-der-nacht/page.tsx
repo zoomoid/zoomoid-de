@@ -71,12 +71,10 @@ function DescriptionEN() {
 function DescriptionDE() {
   return (
     <p className="md:text-lg">
-      <b>&bdquo;Im Schatten Der Nacht&ldquo;</b> ist ein nerdy Witz und ein
-      Tribut an das HyperText Transfer Protocol, was das Internet antreibt, wo
-      der Status 301 anzeigt, dass eine Webseite permanent verschoben wurde. Die
-      Tracks dieser EP haben das Potential, dich zum Bewegen zu bringen mit{" "}
-      <b>treibendem Techno</b> und einer überarbeiteten Version von &bdquo;Outer
-      Space&ldquo;!
+      <b>&bdquo;Im Schatten Der Nacht&ldquo;</b> ist eine kleine, treibende
+      Techno-EP die zum Leben erwacht, wenn Du den Club in den frühen
+      Morgenstunden verlässt und nach Hause gehst, während das Gefühl der Nacht
+      davor noch weiterbrummt.
     </p>
   );
 }

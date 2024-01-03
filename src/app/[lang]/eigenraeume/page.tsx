@@ -89,7 +89,7 @@ function DescriptionEN() {
         standalone versions. The longer 11-track version is called{" "}
         <b>Extended Edition</b> (with the red cover), features concept edits of
         the 6 tracks of the <b>Standard Edition</b>, as well as 5 other tracks
-        that frame the album&apos; pinnacle position as the Zoomoid style.
+        that frame the album&apos;s pinnacle position as the Zoomoid style.
       </p>
       <p>
         <b>&ldquo;Eigenräume (Extended Edition)&rdquo;</b> is my 2019&apos;s main

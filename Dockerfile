@@ -19,7 +19,7 @@ COPY package.json yarn.lock ./
 
 RUN yarn install --production
 
-FROM node:16-alpine as server
+FROM node:20-alpine as server
 
 WORKDIR /app
 

@@ -3,7 +3,6 @@ import "@/styles/fonts/basier/stylesheet.css";
 import "@/styles/fonts/novela/stylesheet.css";
 import "@/styles/fonts/material-icons/stylesheet.css";
 import i18n, { type Locale } from "@/i18n";
-import footer from "@/app/api/footer/footer.mock";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Locales from "@/components/Locales";
@@ -26,8 +25,6 @@ export default async function LocalizedPageLayout({
   children,
   params,
 }: PropsWithChildren<LocalizedPageProps>) {
-  const { socials } = await Promise.resolve(footer);
-
   // this is a hack to get around the read-only property of the locales
   const locales = i18n.locales.map((l) => l);
 
@@ -36,7 +33,7 @@ export default async function LocalizedPageLayout({
   );
 
   const navigationElement = <Navigation>{LocaleSwitcher}</Navigation>;
-  const footerElement = <Footer socials={socials}>{LocaleSwitcher}</Footer>;
+  const footerElement = <Footer>{LocaleSwitcher}</Footer>;
 
   return (
     <html lang={params.lang}>

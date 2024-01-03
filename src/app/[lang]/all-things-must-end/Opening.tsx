@@ -14,7 +14,7 @@ export default function Opening() {
 
   return (
     <section className="relative z-20 transform mt-32 max-w-screen-md mx-auto min-h-[60vh] px-4 md:px-0 mb-32">
-      <h1 className="text-4xl md:text-7xl mt-64 mb-32">
+      <h1 className="text-4xl md:text-7xl mt-64 md:mt-96 mb-32">
         <SG
           animationName="slide-up"
           interval="100ms"

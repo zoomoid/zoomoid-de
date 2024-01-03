@@ -488,7 +488,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           priority
           width={4016}
           height={6016}
-          className="mix-blend-color-dodge filter saturate-0 w-full"
+          className="mix-blend-color-dodge filter saturate-0 w-full opacity-70"
         ></Image>
       </section>
       <section className="max-w-screen-md mx-auto my-16 z-20 relative px-4 md:px-0">

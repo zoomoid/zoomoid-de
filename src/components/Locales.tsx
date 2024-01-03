@@ -32,7 +32,7 @@ export default function Locales({ locales, current, className }: LocalesProps) {
   }
 
   return (
-    <div className={`${className}`}>
+    <div className={`${className ?? ""}`}>
       <div className="flex gap-x-2 items-center">
         <i className="material-icons-sharp">language</i>
         {locales.map((locale) => {

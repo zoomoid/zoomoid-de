@@ -21,7 +21,7 @@ type LocalizedPageProps = {
   } & object;
 };
 
-export default async function LocalizedPageLayout({
+export default function LocalizedPageLayout({
   children,
   params,
 }: PropsWithChildren<LocalizedPageProps>) {

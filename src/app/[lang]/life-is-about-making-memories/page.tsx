@@ -14,7 +14,7 @@ export default function Page({ params: { lang } }: PageProps) {
     date: new Date(2018, 8, 22),
     theme: {
       backgroundColorClass: "bg-neutral-950",
-      textColorClass: "text-neutral-300",
+      textColorClass: "text-neutral-200",
     },
     covers: [
       {

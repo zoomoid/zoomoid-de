@@ -88,10 +88,10 @@ export default function Root({
 
   return (
     <>
-      <main className="text-neutral-300 overflow-hidden">
+      <main className="text-white overflow-hidden">
         <ThemeChanger
           backgroundColorClass="bg-black"
-          textColorClass="text-neutral-300"
+          textColorClass="text-white"
           navigationImageFilter=""
         ></ThemeChanger>
         <Banner></Banner>

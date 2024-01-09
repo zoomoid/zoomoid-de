@@ -33,7 +33,7 @@ export const viewport: Viewport = {
   width: "device-width",
 };
 
-export default function Root({
+export default async function Root({
   params: { lang },
 }: {
   params: { lang: Locale };

@@ -8,7 +8,7 @@ type PageProps = {
   };
 };
 
-export default function Page({ params: { lang } }: PageProps) {
+export default async function Page({ params: { lang } }: PageProps) {
   const release: Release = {
     title: "Sehnsucht",
     date: new Date(2021, 4, 19),

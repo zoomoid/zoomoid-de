@@ -8,7 +8,7 @@ type PageProps = {
   };
 };
 
-export default function Page({ params: { lang } }: PageProps) {
+export default async function Page({ params: { lang } }: PageProps) {
   const release: Release = {
     title: "Life Is About Making Memories",
     date: new Date(2018, 8, 22),

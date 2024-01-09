@@ -8,7 +8,7 @@ type PageProps = {
   };
 };
 
-export default function Page({ params: { lang } }: PageProps) {
+export default async function Page({ params: { lang } }: PageProps) {
   const release: Release = {
     title: <span>Public Transportation&nbsp;EP</span>,
     titleText: "Public Transportation EP",

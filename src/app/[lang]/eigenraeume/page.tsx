@@ -8,7 +8,7 @@ type PageProps = {
   };
 };
 
-export default function Page({ params: { lang } }: PageProps) {
+export default async function Page({ params: { lang } }: PageProps) {
   const release: Release = {
     title: "Eigenräume",
     date: new Date(2019, 8, 9),

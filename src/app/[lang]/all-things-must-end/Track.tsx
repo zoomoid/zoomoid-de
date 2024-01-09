@@ -1,3 +1,5 @@
+"use client";
+
 import { hostname } from "@/app/constants";
 import { PlayerContext } from "@/context/player.context";
 import Image from "next/image";

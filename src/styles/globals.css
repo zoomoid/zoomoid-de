@@ -20,6 +20,12 @@
     color: inherit;
     @apply hover:underline;
   }
+  :lang("de") {
+    quotes: "„" "“";
+  }
+  :lang("en") {
+    quotes: "“" "”";
+  }
 }
 
 .slide-enter-active,

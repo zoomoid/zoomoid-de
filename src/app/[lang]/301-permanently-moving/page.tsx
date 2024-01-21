@@ -57,11 +57,11 @@ export default async function Page({ params: { lang } }: PageProps) {
 function DescriptionEN() {
   return (
     <p className="md:text-lg">
-      <b>&ldquo;301 Permanently Moving&rdquo;</b> is a nerdy joke and tribute to
+      <b><q>301 Permanently Moving</q></b> is a nerdy joke and tribute to
       the HTTP protocol, which drives the internet, where the status 301
       indicates that a web page has moved permanently. The tracks on this EP
       have the potential to get you moving, with <b>hard-driving Techno</b> and
-      a reworked version of &ldquo;Outer Space&rdquo;!
+      a reworked version of <q>Outer Space</q>!
     </p>
   );
 }

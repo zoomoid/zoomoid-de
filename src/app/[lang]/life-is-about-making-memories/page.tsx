@@ -57,7 +57,7 @@ export default async function Page({ params: { lang } }: PageProps) {
 function DescriptionEN() {
   return (
     <p className="md:text-lg">
-      <b>&ldquo;Life Is About Making Memories&rdquo;</b> is my first proper
+      <b><q>Life Is About Making Memories</q></b> is my first proper
       album release. It features 11 tracks, a proper intro and outro, and tries
       to hit those nostalgia notes, with tracks thematically and sonically
       covering video games, movies, tv series, and moments from childhood in the
@@ -69,7 +69,7 @@ function DescriptionEN() {
 function DescriptionDE() {
   return (
     <p className="md:text-lg">
-      <b>&bdquo;Life Is About Making Memories&ldquo;</b> ist meine erste
+      <b><q>Life Is About Making Memories</q></b> ist meine erste
       richtige Albumveröffentlichung. Es enthält 11 Tracks, ein richtiges Intro
       und Outro, und versucht, diese Nostalgie-Töne zu treffen, mit Tracks, die
       thematisch und klanglich Videospiele Videospiele, Filme, Fernsehserien und

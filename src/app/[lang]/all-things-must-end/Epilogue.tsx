@@ -47,9 +47,9 @@ function EpilogueEN(props: EpilogueProps) {
         I think, for once, at least in some parts, <b>I succeeded.</b>
       </p>
       <p>
-        &ldquo;<b>All Things Must End</b>&rdquo; is my last album. What comes
+        <q><b>All Things Must End</b></q> is my last album. What comes
         afterwards is pretty much left to time. It has become time for me to
-        become just &ldquo;Alex&rdquo; again.
+        become just <q>Alex</q> again.
       </p>
       <p>
         That doesn&apos;t mean that I&apos;m never going to make music again. It
@@ -102,9 +102,9 @@ function EpilogueDE(props: EpilogueProps) {
         Ich glaube, diesmal, zumindest in Teilen, <b>habe ich es geschafft.</b>
       </p>
       <p>
-        &bdquo;<b>All Things Must End</b>&ldquo; ist mein letztes Album. Was
+        <q><b>All Things Must End</b></q> ist mein letztes Album. Was
         danach kommt ist so ziemlich der Zeit überlassen. Es ist Zeit für mich
-        geworden, wieder nur &bdquo;Alex&ldquo; zu sein.
+        geworden, wieder nur <q>Alex</q> zu sein.
       </p>
       <p>
         Das bedeutet nicht, dass ich nie wieder Musik mache. Es markiert nur{" "}

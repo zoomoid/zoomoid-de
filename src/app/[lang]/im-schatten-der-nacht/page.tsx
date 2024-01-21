@@ -61,7 +61,7 @@ export default async function Page({ params: { lang } }: PageProps) {
 function DescriptionEN() {
   return (
     <p className="md:text-lg">
-      <b>&ldquo;Im Schatten Der Nacht&rdquo;</b> is a small driving Techno EP
+      <b><q>Im Schatten Der Nacht</q></b> is a small driving Techno EP
       that comes to live when leaving the club <b>early in the morning</b> and
       heading home while still buzzing from the night before.
     </p>
@@ -71,7 +71,7 @@ function DescriptionEN() {
 function DescriptionDE() {
   return (
     <p className="md:text-lg">
-      <b>&bdquo;Im Schatten Der Nacht&ldquo;</b> ist eine kleine, treibende
+      <b><q>Im Schatten Der Nacht</q></b> ist eine kleine, treibende
       Techno-EP die zum Leben erwacht, wenn Du den Club in den frühen
       Morgenstunden verlässt und nach Hause gehst, während das Gefühl der Nacht
       davor noch weiterbrummt.

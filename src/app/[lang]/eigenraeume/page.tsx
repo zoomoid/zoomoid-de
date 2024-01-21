@@ -82,7 +82,7 @@ function DescriptionEN() {
   return (
     <div className="space-y-2 text-lg">
       <p>
-        <b>&ldquo;Eigenräume&rdquo;</b> is a twin-release concept album released
+        <b><q>Eigenräume</q></b> is a twin-release concept album released
         in 2019. The first 6-track version of the album is called{" "}
         <b>Standard Edition</b> (with the black cover) was released on May 14th,
         2019, which featured the core tracks of the full album in their
@@ -92,12 +92,12 @@ function DescriptionEN() {
         that frame the album&apos;s pinnacle position as the Zoomoid style.
       </p>
       <p>
-        <b>&ldquo;Eigenräume (Extended Edition)&rdquo;</b> is my 2019&apos;s main
+        <b><q>Eigenräume (Extended Edition)</q></b> is my 2019&apos;s main
         release, with 11 tracks (again), intro and outro, and seamless blending
         of tracks (at least on the first 7 tracks)! It also features 3 tracks
         that were written after the original concept album was created, but
         seemed to fit the overall context. In particular, I&apos;m proud of{" "}
-        <b>&ldquo;Outer Space&rdquo;</b>
+        <b><q>Outer Space</q></b>
       </p>
     </div>
   );
@@ -107,7 +107,7 @@ function DescriptionDE() {
   return (
     <div className="space-y-2 text-lg">
       <p>
-        <b>&bdquo;Eigenräume&ldquo;</b> ist ein Konzeptalbum aus 2019 mit
+        <b><q>Eigenräume</q></b> ist ein Konzeptalbum aus 2019 mit
         Zwillings-Release. Die erste Version mit 6 Tracks heißt{" "}
         <b>Standard Edition</b> (mit dem schwarzen Cover) und wurde am 19. Mai
         2019 veröffentlicht. Sie enthält die Kernstücke des vollen Albums in
@@ -118,13 +118,13 @@ function DescriptionDE() {
         hervorheben.
       </p>
       <p>
-        <b>&bdquo;Eigenräume (Extended Edition)&ldquo;</b> ist meine
+        <b><q>Eigenräume (Extended Edition)</q></b> ist meine
         Hauptveröffentlichung für 2019, mit (erneut) elf Tracks, Intro, Outro,
         und dem nahtlosen Überblenden (zumindest für die ersten sieben Tracks)!
         Sie beinhaltet außerdem drei Tracks, die erst nach der Veröffentlichung
         der <b>Standard Edition</b> geschrieben wurden, aber trotzdem in das
         Konzept passten. Ich bin besonders stolz auf{" "}
-        <b>&bdquo;Outer Space&ldquo;</b>
+        <b><q>Outer Space</q></b>
       </p>
     </div>
   );

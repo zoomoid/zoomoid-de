@@ -61,7 +61,7 @@ export default async function Page({ params: { lang } }: PageProps) {
 function DescriptionEN() {
   return (
     <p className="md:text-lg">
-      <b>&ldquo;Voyager&rdquo;</b> is a journey away from earth into the
+      <b><q>Voyager</q></b> is a journey away from earth into the
       darkness of space to discover the beauty of emptiness both inside and
       around me. Let yourself be taken away by an hour of listening experience
       of <b>many-faced techno and trance sounds</b>. Voyager is the most
@@ -73,7 +73,7 @@ function DescriptionEN() {
 function DescriptionDE() {
   return (
     <p className="md:text-lg">
-      <b>&bdquo;Voyager&ldquo;</b> ist eine Reise weg von der Erde in die
+      <b><q>Voyager</q></b> ist eine Reise weg von der Erde in die
       Dunkelheit des Weltalls, um die Schönheit der Leere sowohl in mir als auch
       um mich herum zu entdecken. Lass dich mitnehmen auf eine Stunde
       Hörerlebnis mit <b>vielgesichtigen Techno- und Trance-Sounds</b>. Voyager

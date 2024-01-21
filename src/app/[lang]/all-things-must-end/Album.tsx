@@ -241,7 +241,7 @@ function IntroDE(props: IntroProps) {
       <p>
         Was bedeutet, dass ich etwas Altes zurücklassen muss. Um einen Film zu
         zitieren, der monumentalen Einfluss auf mich und meine Musik hatte:
-        &bdquo;Newtons Drittes Gesetz: Man muss immer was zurücklassen.&ldquo;
+        <q>Newtons Drittes Gesetz: Man muss immer was zurücklassen.</q>
       </p>
       <p>Was bedeutet... das war&apos;s</p>
       <p>

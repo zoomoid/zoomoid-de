@@ -61,7 +61,7 @@ export default async function Page({ params: { lang } }: PageProps) {
 function DescriptionEN() {
   return (
     <p className="md:text-lg">
-      <b>&ldquo;Sehnsucht&rdquo;</b> is a a 5-track{" "}
+      <b><q>Sehnsucht</q></b> is a a 5-track{" "}
       <b>acoustic instrumental album</b>, featuring intimate instruments and a
       huge load of emotions. I wrote those tracks with the emotion of missing
       out and wishing for old times and new times at the same time, trying to
@@ -74,7 +74,7 @@ function DescriptionEN() {
 function DescriptionDE() {
   return (
     <p className="md:text-lg">
-      <b>&bdquo;Sehnsucht&ldquo;</b> ist ein 5-Track{" "}
+      <b><q>Sehnsucht</q></b> ist ein 5-Track{" "}
       <b>instrumentales Akustik-Album</b> mit intimen Instrument und einer
       riesigen Menge Emotionen. Ich habe all diese Tracks mit dem Gefühl, etwas
       zu verpassen und dem Wunsch nach sowohl alten Zeiten und neuen Zeiten

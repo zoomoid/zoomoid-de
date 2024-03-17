@@ -24,11 +24,6 @@ export default function Banner() {
               ? "Das letzte Zoomoid-Album"
               : "The last Zoomoid album"}
           </h2>
-          <p className="text-lg mb-4">
-            {lang === "de"
-              ? "Jetzt überall zum Streamen!"
-              : "Out now everywhere to stream!"}
-          </p>
           <div className="text-lg font-sans">
             <Link
               href={`/${lang}/all-things-must-end`}
@@ -37,13 +32,12 @@ export default function Banner() {
               <span className="group-hover:underline">
                 {lang === "de" ? (
                   <>
-                    Auf der <b>Begleitseite</b> lernst Du mehr über das Album
-                    (und mich)!
+                    Hier lernst Du mehr über das Album <small>(und mich)</small>
                   </>
                 ) : (
                   <>
                     Check out the <b>companion website</b> to learn more about
-                    the album (and me)
+                    the album <small>(and me)</small>
                   </>
                 )}
               </span>
@@ -57,7 +51,7 @@ export default function Banner() {
           <Image
             src="/img/all-things-must-end/cover.jpg"
             alt="All Things Must End Cover"
-            className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 border-neutral-50 mx-auto"
+            className="border-t border-l rounded-xl  shadow-2xl shadow-neutral-300/10 border-neutral-50/15 mx-auto"
             width={2500}
             height={2500}
           ></Image>

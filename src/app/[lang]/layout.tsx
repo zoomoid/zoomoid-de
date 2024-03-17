@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import "@/styles/fonts/basier/stylesheet.css";
 import "@/styles/fonts/novela/stylesheet.css";
+import "@/styles/fonts/hanken-grotesk/stylesheet.css";
 import "@/styles/fonts/material-icons/stylesheet.css";
 import i18n, { type Locale } from "@/i18n";
 import Navigation from "@/components/Navigation";

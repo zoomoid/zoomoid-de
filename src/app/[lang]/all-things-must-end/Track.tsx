@@ -98,9 +98,9 @@ export default function Track({ track, index }: TrackProps) {
 
   return (
     <section className={track.className} id={trackAnchor}>
-      <div className="mx-auto relative max-w-screen-md px-4 xs:px-0 py-24 xs:py-0">
+      <div className="mx-auto relative px-4 xs:px-0 py-24 xs:py-0 max-w-screen-md">
         <div className="xs:flex items-start md:items-stretch relative">
-          <div className="hidden xs:block relative w-48 flex-shrink-0 -ml-36 translate-x-12 md:-ml-48 md:translate-x-12 z-0">
+          <div className="hidden xs:block relative w-48 shrink-0 -ml-36 transform translate-x-12 md:-ml-48 md:translate-x-12 z-0">
             <Image
               src={waveform(boxPrefix, filename + ".png")}
               width={400}
@@ -109,9 +109,9 @@ export default function Track({ track, index }: TrackProps) {
               aria-hidden
             ></Image>
           </div>
-          <div className="flex-grow flex flex-col justify-center z-10 text-white relative">
+          <div className="grow flex flex-col justify-center z-10 text-white relative">
             <div className="flex">
-              <h3 className="font-sans font-semibold flex-grow h-full text-3xl md:text-4xl mb-4 pr-4 md:pr-0">
+              <h3 className="font-sans font-semibold grow h-full text-3xl md:text-4xl mb-4 pr-4 md:pr-0">
                 <span>{trackNumber}</span> &mdash; <span>{track.title}</span>
               </h3>
             </div>

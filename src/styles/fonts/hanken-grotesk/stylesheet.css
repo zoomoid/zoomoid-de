@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-display: swap;
+  src: url("HankenGrotesk-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-display: swap;
+  src: url("HankenGrotesk-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-display: swap;
+  src: url("HankenGrotesk-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-display: swap;
+  src: url("HankenGrotesk-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-display: swap;
+  src: url("HankenGrotesk-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-display: swap;
+  src: url("HankenGrotesk-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-display: swap;
+  src: url("HankenGrotesk-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-display: swap;
+  src: url("HankenGrotesk-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-display: swap;
+  src: url("HankenGrotesk-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-display: swap;
+  src: url("HankenGrotesk-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-display: swap;
+  src: url("HankenGrotesk-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-display: swap;
+  src: url("HankenGrotesk-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-display: swap;
+  src: url("HankenGrotesk-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-display: swap;
+  src: url("HankenGrotesk-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-display: swap;
+  src: url("HankenGrotesk-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-display: swap;
+  src: url("HankenGrotesk-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-display: swap;
+  src: url("HankenGrotesk-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-display: swap;
+  src: url("HankenGrotesk-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}

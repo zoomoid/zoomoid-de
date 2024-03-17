@@ -66,8 +66,8 @@ export default function Album({
 
   return (
     <>
-      <article ref={skipRef} className="relative">
-        <section className="mx-auto relative z-0 items-center bg-gradient-to-b from-neutral-950 to-[#051c35]">
+      <article ref={skipRef} className="relative w-full">
+        <section className="mx-auto relative z-0 items-center bg-gradient-to-b from-neutral-950 to-['#051c35']">
           <div
             className="absolute w-full h-full left-0 right-0 bottom-0 z-10"
             style={{
@@ -101,7 +101,7 @@ export default function Album({
                 <Image
                   src="/img/all-things-must-end/cover.jpg"
                   alt="All Things Must End Cover"
-                  className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 w-4/5 border-neutral-50 mx-auto"
+                  className="border-t border-l rounded-xl shadow-2xl shadow-neutral-300/10 my-8 w-4/5 border-neutral-50/15 mx-auto"
                   width={2500}
                   height={2500}
                 ></Image>
@@ -135,6 +135,12 @@ export default function Album({
             backgroundImage: `linear-gradient(to bottom, #051c35 0%, rgb(180 83 9 / 100%) 70%, #f59e0b 100%)`,
           }}
         >
+          <div
+            className="absolute w-full left-0 right-0 top-0 z-10 h-64 z-10"
+            style={{
+              backgroundImage: `linear-gradient(black 0%, transparent 100%)`,
+            }}
+          ></div>
           <div className="mx-auto max-w-screen-md flex items-center justify-center mb-16 relative z-50">
             <button
               className={`bg-blue-800 rounded-full px-6 py-2 md:px-8 md:py-4 font-sans font-semibold text-lg md:text-xl`}
@@ -176,7 +182,7 @@ export default function Album({
             ></TrackComponent>
           ))}
         </section>
-        <div
+        <section
           className="h-[1200px]"
           style={{
             backgroundImage: `linear-gradient(to bottom, #f59e0b 0%, #f59e0b 15%, #7f1d1d 80%, rgb(10 10 10 / 1) 100%)`,
@@ -203,7 +209,7 @@ export default function Album({
               ></OutroEN>
             )}
           </div>
-        </div>
+        </section>
         <div
           className="h-[300px]"
           style={{

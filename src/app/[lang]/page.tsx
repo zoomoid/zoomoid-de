@@ -3,7 +3,7 @@ import { Locale } from "@/i18n";
 import { Viewport, type Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Banner from "./all-things-must-end/Banner";
+import Banner from "../../components/Banner";
 
 export const metadata: Metadata = {
   title: "Zoomoid",
@@ -133,7 +133,7 @@ export default async function Root({
                       height={1500}
                       src={r.coverUrl}
                       alt={`${r.title} cover`}
-                      className="relative z-50 hover:scale-[1.02] transition-transform duration-1000 border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 border-neutral-50 mx-auto"
+                      className="relative z-50 hover:scale-[1.02] transition-transform duration-1000 border-t border-l rounded-xl shadow-2xl shadow-neutral-300/10 border-neutral-50/15 mx-auto"
                     ></Image>
                   </div>
                 </Link>

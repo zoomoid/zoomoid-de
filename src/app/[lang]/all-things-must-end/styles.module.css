@@ -1,15 +1,3 @@
-.page b {
-  @apply font-sans font-semibold;
-}
-
-/* .page i {
-  @apply font-serif;
-} */
-
-.page small {
-  @apply text-sm;
-}
-
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -17,14 +5,6 @@
   to {
     opacity: 1;
   }
-}
-
-.page {
-  animation-name: fade-in;
-  animation-duration: 1s;
-  animation-delay: 1s;
-  animation-fill-mode: both;
-  animation-iteration-count: 1;
 }
 
 @keyframes slide-up {
@@ -49,7 +29,7 @@
   }
 }
 
-@keyframes slide-reft {
+@keyframes slide-right {
   0% {
     transform: translateX(2rem);
     opacity: 0;
@@ -58,6 +38,28 @@
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.page {
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+
+.page b {
+  font-family: var(--font-family-sans);
+  font-weight: 600;
+}
+
+/* .page i {
+  @apply font-serif;
+} */
+
+.page small {
+  font-size: var(--font-size-sm);
+  line-height: var(--font-size-sm--line-height);
 }
 
 .page h1 span::after {

@@ -27,7 +27,7 @@ export default function ThemeableScaffolding({
       className={`${backgroundColor} ${textColor} flex flex-col min-h-screen relative transition-colors duration-1000`}
     >
       {navigation}
-      <div className="flex-grow">{children}</div>
+      <div className="grow">{children}</div>
       {footer}
     </div>
   );

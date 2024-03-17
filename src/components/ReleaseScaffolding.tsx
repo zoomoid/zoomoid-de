@@ -70,7 +70,7 @@ export default function ReleaseScaffolding({
                 src={cover.url}
                 key={cover.url}
                 alt={`Cover image of ${textTitle}`}
-                className={`border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 xl:my-0 border-neutral-50 mx-auto ${cover.className}`}
+                className={`border-t border-l rounded-xl shadow-2xl shadow-neutral-300/10 my-8 xl:my-0 border-neutral-50/15 mx-auto ${cover.className}`}
                 width={cover.width}
                 height={cover.height}
               ></Image>

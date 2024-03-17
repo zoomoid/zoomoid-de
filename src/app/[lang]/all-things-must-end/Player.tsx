@@ -123,7 +123,7 @@ function Player({ ...props }: PlayerProps) {
             </button>
           </div>
           <div
-            className="flex-grow relative h-4 overflow-visible isolate"
+            className="grow relative h-4 overflow-visible isolate"
             // onClick={(e) => {
             //   const bar = e.currentTarget!.getBoundingClientRect();
             //   const x = e.clientX - bar.left;

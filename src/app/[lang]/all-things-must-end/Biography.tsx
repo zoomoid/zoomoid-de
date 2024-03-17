@@ -153,7 +153,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                   width={1500}
                   height={1500}
                   alt="Album cover of Life Is About Making Memories"
-                  className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 w-1/2 border-neutral-50 mx-auto"
+                  className="border-t border-l rounded-xl shadow-2xl shadow-neutral-300/10 my-8 w-1/2 border-neutral-50/15 mx-auto"
                 ></Image>
               </div>
               <div></div>
@@ -181,7 +181,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                 width={1500}
                 height={1500}
                 alt="Album cover of Eigenräume (Standard Edition)"
-                className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto relative z-10"
+                className="border-t border-l rounded-xl shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50/15 mx-auto relative z-10"
               ></Image>
             </div>
             <div>
@@ -190,7 +190,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                 width={1500}
                 height={1500}
                 alt="Album cover of Eigenräume (Extended Edition)"
-                className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto md:transform md:scale-110 md:-translate-x-10 relative z-20"
+                className="border-t border-l rounded-xl shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50/15 mx-auto md:transform md:scale-110 md:-translate-x-10 relative z-20"
               ></Image>
             </div>
           </SG>
@@ -224,7 +224,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                   width={1500}
                   height={1500}
                   alt="Album cover of Public Transportation EP"
-                  className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+                  className="border-t border-l rounded-xl shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50/15 mx-auto"
                 ></Image>
               </div>
               <div>
@@ -233,7 +233,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                   width={1500}
                   height={1500}
                   alt="Album cover of 301 Permanently Moving"
-                  className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+                  className="border-t border-l rounded-xl shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50/15 mx-auto"
                 ></Image>
               </div>
             </SG>
@@ -285,7 +285,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               width={1500}
               height={1500}
               alt="Album cover of Shades of Yellow"
-              className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+              className="border-t border-l rounded-xl shadow-2xl w-1/2 shadow-neutral-300/10 my-8 border-neutral-50/15 mx-auto"
             ></Image>
           </div>
           <p>
@@ -327,7 +327,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               width={1500}
               height={1500}
               alt="Album cover of Voyager"
-              className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+              className="border-t border-l rounded-xl shadow-2xl w-1/2 shadow-neutral-300/10 my-8 border-neutral-50/15 mx-auto"
             ></Image>
           </div>
           <p>
@@ -402,7 +402,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               width={1500}
               height={1500}
               alt="Album cover of Sehnsucht"
-              className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl  w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+              className="border-t border-l rounded-xl shadow-2xl  w-1/2 shadow-neutral-300/10 my-8 border-neutral-50/15 mx-auto"
             ></Image>
           </div>
           <p>
@@ -620,7 +620,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                   width={1500}
                   height={1500}
                   alt="Album cover of Life Is About Making Memories"
-                  className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 w-1/2 border-neutral-50 mx-auto"
+                  className="border-t border-l rounded-xl shadow-2xl shadow-neutral-300/10 my-8 w-1/2 border-neutral-50/15 mx-auto"
                 ></Image>
               </div>
               <div></div>
@@ -651,7 +651,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                 width={1500}
                 height={1500}
                 alt="Album cover of Eigenräume (Standard Edition)"
-                className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto relative z-10"
+                className="border-t border-l rounded-xl shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50/15 mx-auto relative z-10"
               ></Image>
             </div>
             <div>
@@ -660,7 +660,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                 width={1500}
                 height={1500}
                 alt="Album cover of Eigenräume (Extended Edition)"
-                className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto md:transform md:scale-110 md:-translate-x-10 relative z-20"
+                className="border-t border-l rounded-xl shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50/15 mx-auto md:transform md:scale-110 md:-translate-x-10 relative z-20"
               ></Image>
             </div>
           </SG>
@@ -695,7 +695,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                   width={1500}
                   height={1500}
                   alt="Album cover of Public Transportation EP"
-                  className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+                  className="border-t border-l rounded-xl shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50/15 mx-auto"
                 ></Image>
               </div>
               <div>
@@ -704,7 +704,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                   width={1500}
                   height={1500}
                   alt="Album cover of 301 Permanently Moving"
-                  className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+                  className="border-t border-l rounded-xl shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50/15 mx-auto"
                 ></Image>
               </div>
             </SG>
@@ -760,7 +760,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               width={1500}
               height={1500}
               alt="Album cover of Shades of Yellow"
-              className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+              className="border-t border-l rounded-xl shadow-2xl w-1/2 shadow-neutral-300/10 my-8 border-neutral-50/15 mx-auto"
             ></Image>
           </div>
           <p>
@@ -804,7 +804,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               width={1500}
               height={1500}
               alt="Album cover of Voyager"
-              className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+              className="border-t border-l rounded-xl shadow-2xl w-1/2 shadow-neutral-300/10 my-8 border-neutral-50/15 mx-auto"
             ></Image>
           </div>
           <p>
@@ -882,7 +882,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               width={1500}
               height={1500}
               alt="Album cover of Sehnsucht"
-              className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl  w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+              className="border-t border-l rounded-xl shadow-2xl  w-1/2 shadow-neutral-300/10 my-8 border-neutral-50/15 mx-auto"
             ></Image>
           </div>
           <p>

@@ -888,7 +888,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           <p>
             <q><b>Sehnsucht</b></q> hat diese schweren, traurigen Töne
             eingefangen. Das Albumcover ist ein Bild, das mein Großvater gemalt
-            hat und das mir sehr am Herzen liegt sehr am Herzen liegt (besonders
+            hat und das mir sehr am Herzen liegt (besonders
             seit er 2023 verstorben ist).
           </p>
           <p>

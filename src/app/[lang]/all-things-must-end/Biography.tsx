@@ -496,7 +496,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           Eine kurze Biografie von Mir, Zoomoid
         </h2>
         <p className="md:text-lg">
-          Ich versproche, es wird nicht soooo lang, und es kann Dir helfen, das
+          Ich verspreche, es wird nicht soooo lang, und es kann Dir helfen, das
           Album, seine Motive und, am relevantesten, seine Konsequenzen, zu
           verstehen. Wenn du willst, kannst du das aber{" "}
           <span

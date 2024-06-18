@@ -493,7 +493,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
       </section>
       <section className="max-w-screen-md mx-auto my-16 z-20 relative px-4 md:px-0">
         <h2 className="text-3xl md:text-6xl mb-8">
-          Eine kurze Biografie von Mir, Zoomoid
+          Eine kurze Biografie von Miqr, Zoomoid
         </h2>
         <p className="md:text-lg">
           Ich verspreche, es wird nicht soooo lang, und es kann Dir helfen, das

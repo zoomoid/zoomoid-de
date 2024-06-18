@@ -83,7 +83,7 @@ function EpilogueDE(props: EpilogueProps) {
         wurde <b>schwerer und schwerer für mich, neue Musik zu schreiben</b> und
         zu komponieren wurde eine unendlich schwere Aufgabe die ich
         verabscheute. Ich habe immer längerwerdende Pausen davon genommen, und
-        habe überlegt, einfach stumm aufzuhörer, und das mehr als einmal.
+        habe überlegt, einfach stumm aufzuhören, und das mehr als einmal.
       </p>
       <p>
         Seit die Idee, das Projekt abzuschließen, Dinge zu beenden, zu einem
@@ -96,7 +96,7 @@ function EpilogueDE(props: EpilogueProps) {
         Und so habe ich <b>mein letztes Album geschrieben</b>. Ich habe
         versucht, alles einzufangen, so viele Emotionen, so viele Gemütszustände
         in Stücken, habe versucht, ein vollumfängliches Erlebnis zu erschaffen,
-        etwas das bedeutend beliben würde über die Existenz von Zoomoid hinweg.
+        etwas das bedeutend bleiben würde über die Existenz von Zoomoid hinweg.
       </p>
       <p className="font-sans">
         Ich glaube, diesmal, zumindest in Teilen, <b>habe ich es geschafft.</b>

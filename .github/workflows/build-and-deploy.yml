@@ -110,7 +110,7 @@ jobs:
 
       - name: Setup cluster in kubeconfig
         run: |
-          echo ${{ secrets.CLUSTER_CERTIFICATE_AUTHORITY }} > ca.crt
+          echo ${{ secrets.CLUSTER_CERTIFICATE_AUTHORITY }} | base64 --decode > ca.crt
           kubectl config set-cluster ${{ secrets.CLUSTER_NAME }} \
             --server=${{ secrets.CLUSTER_ENDPOINT }} \
             --certificate-authority="./ca.crt" \

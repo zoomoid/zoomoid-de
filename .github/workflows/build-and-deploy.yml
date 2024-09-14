@@ -141,18 +141,24 @@ jobs:
 
       - if: ${{ github.event_name == 'push' && github.ref_type == 'branch' }}
         name: Set image in deployment to ${{ env.IMAGE_NAME}}:${{ github.sha }}
+        env:
+          CONTAINER_IMAGE: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
         run: >-
           kubectl set image deployment ${{ env.DEPLOYMENT_NAME }}
-          ${{ env.CONTAINER_NAME }}=${{ env.IMAGE_NAME }}:${{ github.sha }}
+          ${{ env.CONTAINER_NAME }}=${{ env.CONTAINER_IMAGE }}:${{ github.sha }}
 
       - if: ${{ github.event_name == 'push' && github.ref_type == 'tag' }}
-        name: Set image in deployment to ${{ env.IMAGE_NAME }}:${{ github.ref_name }}
+        name: Set image in deployment to ${{ env.CONTAINER_IMAGE }}:${{ github.ref_name }}
+        env:
+          CONTAINER_IMAGE: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
         run: >-
           kubectl set image deployment ${{ env.DEPLOYMENT_NAME }}
-          ${{ env.CONTAINER_NAME }}=${{ env.IMAGE_NAME }}:${{ github.ref_name }}
+          ${{ env.CONTAINER_NAME }}=${{ env.CONTAINER_IMAGE }}:${{ github.ref_name }}
 
       - if: ${{ github.event_name == 'workflow_dispatch' }}
         name: Set image in deployment to ${{ env.IMAGE_NAME }}:${{ inputs.image_tag }}
+        env:
+          CONTAINER_IMAGE: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
         run: >-
           kubectl set image deployment ${{ env.DEPLOYMENT_NAME }}
           ${{ env.CONTAINER_NAME }}=${{ env.IMAGE_NAME }}:${{ inputs.image_tag }}

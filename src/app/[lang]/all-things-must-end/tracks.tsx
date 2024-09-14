@@ -12,9 +12,9 @@ const tracksEN: Track[] = [
           here. All those possible outcomes...
         </p>
         <p>
-          <q>All That Could Have Been</q> is an homage to all those
-          intros to albums I&apos;ve written &mdash; something that I always
-          thought I was rather good at.
+          <q>All That Could Have Been</q> is an homage to all those intros to
+          albums I&apos;ve written &mdash; something that I always thought I was
+          rather good at.
         </p>
         <p>
           For just a moment in the beginning of 2023, I felt so amazing.
@@ -40,9 +40,9 @@ const tracksEN: Track[] = [
           <q>Nur Für Einen Augenblick</q> is older than these experiences
           though. It was originally written back in 2022, on a rare evening of
           inspiration and creativity. It had many different working titles
-          throughout its design period: <q>What&apos;s Next</q> was one
-          of them, and I think it already captures the spirit of the entire
-          album in some sense.
+          throughout its design period: <q>What&apos;s Next</q> was one of them,
+          and I think it already captures the spirit of the entire album in some
+          sense.
         </p>
         <p>
           It&apos;s an uplifting kind of track, in its core a Drum &amp; Bass
@@ -58,16 +58,16 @@ const tracksEN: Track[] = [
     description: (
       <>
         <p>
-          <q>Ein Tag Im April</q>, or <q>a day in April</q> spans
-          a bridge between <q>Nur Für Einen Augenblick</q> and
-          <q>Angst vor der Zukunft</q>. It&apos;s a wild ride, an
-          experience, like a day in my life in that particular month.
+          <q>Ein Tag Im April</q>, or <q>a day in April</q> spans a bridge
+          between <q>Nur Für Einen Augenblick</q> and{" "}
+          <q>Angst vor der Zukunft</q>. It&apos;s a wild ride, an experience,
+          like a day in my life in that particular month.
         </p>
         <p>
           Between ups and downs, between running 21 kilometers on a random
           saturday in pouring rain for the sheer reason of feeling the
           runner&apos;s high, feeling weightless, feeling so much, and crashing
-          down completely while in Amsterdam.
+          down completely while in Amsterdam at a conference.
         </p>
         <p>
           It&apos;s also more than just a single day. A day became the
@@ -87,29 +87,29 @@ const tracksEN: Track[] = [
     description: (
       <>
         <p>
-          <q>Angst vor der Zukunft</q> is one of the protagonists of the
-          album. <q>Afraid of the future</q> characterizes what I felt
-          over the last year. Both in the short term and in the long term
-          I&apos;m not sure where things are going. Maybe that&apos;s not a bad
-          thing. Maybe it is. I don&apos;t know.
+          <q>Angst vor der Zukunft</q> is one of the protagonists of the album.{" "}
+          <q>Afraid of the future</q> characterizes what I felt over the last
+          year. Both in the short term and in the long term I&apos;m not sure
+          where things are going. Maybe that&apos;s not a bad thing. Maybe it
+          is. I don&apos;t know.
         </p>
         <p>
           <q>Angst vor der Zukunft</q> also digs into the grasp and
           understanding of time, albeit, entirely subjective. I feel like time
           is running out. Not for one particular thing. Just in general. Time is
           running out... &ldquo;Wie kann man Zeit haben wenn sie eindeutig dich
-          hat&rdquo;.
+          hat&rdquo.
         </p>
         <p>
-          <q>Angst vor der Zukunft</q> is referential to some other
-          important Zoomoid releases. Its roots go back to tracks like
-          <q>Wild World</q>, the softer side of <q>Voyager</q>,
-          but most importantly <q>Shades of Yellow</q>. The motive of
-          both tracks is the same, both circle around the central quote from
-          <q>Dark</q>, but this time, it&apos;s me saying the words, as
-          if this would give them more gravity. The break even uses the same
-          instruments as the original, <q>Shades of Yellow</q>, even
-          though slightly adapted to fit the rest of the track.
+          <q>Angst vor der Zukunft</q> is referential to some other important
+          Zoomoid releases. Its roots go back to tracks like <q>Wild World</q>,
+          the softer side of <q>Voyager</q>, but most importantly{" "}
+          <q>Shades of Yellow</q>. The motive of both tracks is the same, both
+          circle around the central quote from <q>Dark</q>, but this time,
+          it&apos;s me saying the words, as if this would give them more
+          gravity. The break even uses the same instruments as the original,{" "}
+          <q>Shades of Yellow</q>, even though slightly adapted to fit the rest
+          of the track.
         </p>
       </>
     ),
@@ -120,22 +120,22 @@ const tracksEN: Track[] = [
       <>
         <p>
           <q>Angst vor der Zukunft</q> bridges over into another reworked
-          Zoomoid track, <q>Outer Space</q>. <q>Outer Space</q>
-          was originally released on the Extended Edition of
-          <q>Eigenräume</q>. It was a Techno track, but a melodic one,
-          that would have also perfectly fitted onto <q>Voyager</q>. It
-          was later remastered and made into a longer mix version on the
+          Zoomoid track, <q>Outer Space</q>. <q>Outer Space</q> was originally
+          released on the Extended Edition of
+          <q>Eigenräume</q>. It was a Techno track, but a melodic one, that
+          would have also perfectly fitted onto <q>Voyager</q>. It was later
+          remastered and made into a longer mix version on the{" "}
           <q>301 Permanently Moving</q> EP.
         </p>
         <p>
-          In 2021 I released <q>Sehnsucht</q>, which was entirely
-          acoustic, heavily relying on the softness of Felt Instrument&apos;s{" "}
-          <b>Lekko</b> piano. Its sound has a level of intimacy that inspired me
-          to remixing other Zoomoid tracks with those softer instruments into
-          warm, ambient, and cozy versions. I&apos;ve been sitting on this remix
-          for a while now, the project file almost got lost between different
-          devices and setups. Now it get&apos;s to see the world, as a reprise
-          of all the great Zoomoid tracks that lay in the past.
+          In 2021 I released <q>Sehnsucht</q>, which was entirely acoustic,
+          heavily relying on the softness of Felt Instrument&apos;s <b>Lekko</b>{" "}
+          piano. Its sound has a level of intimacy that inspired me to remixing
+          other Zoomoid tracks with those softer instruments into warm, ambient,
+          and cozy versions. I&apos;ve been sitting on this remix for a while
+          now, the project file almost got lost between different devices and
+          setups. Now it get&apos;s to see the world, as a reprise of all the
+          great Zoomoid tracks that lay in the past.
         </p>
       </>
     ),
@@ -145,11 +145,11 @@ const tracksEN: Track[] = [
     description: (
       <>
         <p>
-          <q>Illusions</q> is a track I wrote over the course of a
-          weekend. I started out on a friday evening with an idea for something
-          that got inspired by previous track such as the &ldquo;Im Schatten der
-          Nacht&rdquo; EP, <q>Voyager</q> tracks and more. By sunday
-          afternoon, I had a fully-arranged and mixed track.
+          <q>Illusions</q> is a track I wrote over the course of a weekend. I
+          started out on a friday evening with an idea for something that got
+          inspired by previous track such as the &ldquo;Im Schatten der
+          Nacht&rdquo; EP, <q>Voyager</q> tracks and more. By sunday afternoon,
+          I had a fully-arranged and mixed track.
         </p>
         <p>
           When the drums fade away in the middle part of the track to reveal the
@@ -176,26 +176,25 @@ const tracksEN: Track[] = [
       <>
         <p>
           Talking about reworking, remixing, remastering older Zoomoid releases,
-          <q>Delay</q> from <q>Public Transportation</q> always
-          seemed a bit short to me. Its length on the original EP is fine, all
-          other tracks fit together, but there was more for <q>Delay</q>.
+          <q>Delay</q> from <q>Public Transportation</q> always seemed a bit
+          short to me. Its length on the original EP is fine, all other tracks
+          fit together, but there was more for <q>Delay</q>.
         </p>
         <p>
-          In the same way that <q>Outer Space</q> in this album&apos;s
-          form existed way before the album, the <q>Long Version</q> of
-          <q>Delay</q> existed in a prototype form for more than two
-          years before I started work on this album. I considered releasing it
-          as a single, but that never seemed right to do. And so, when time came
-          to find tracks that captured my spirit, skill, and sound, the
-          characteristics of Zoomoid, <q>Delay</q> filled that spot
-          perfectly.
+          In the same way that <q>Outer Space</q> in this album&apos;s form
+          existed way before the album, the <q>Long Version</q> of <q>Delay</q>{" "}
+          existed in a prototype form for more than two years before I started
+          working on this album. I considered releasing it as a single, but that
+          never seemed right to do. And so, when time came to find tracks that
+          captured my spirit, skill, and sound, the characteristics of Zoomoid,{" "}
+          <q>Delay</q> filled that spot perfectly.
         </p>
         <p>
           It&apos;s not just an longer version of the original though. I
           recorded some new elements, like a lot of guitars, for both lead
           elements, and ambience, and it gives the track a special atmosphere of
-          almost being <q>real instruments</q>. Also, the drums got a
-          complete make-over, which for Drum &amp; Bass track, is pretty much an
+          almost being <q>real instruments</q>. Also, the drums got a complete
+          make-over, which for a Drum &amp; Bass track, is pretty much an
           entirely new track...
         </p>
         <p>
@@ -210,12 +209,12 @@ const tracksEN: Track[] = [
     description: (
       <>
         <p>
-          How can I even describe <q>Maybe Someday</q>? Maybe you
-          remember my attempt at writing a love song from the biography above
-          &mdash; If you didn&apos;t read that, no worries! &mdash; well this is
-          it. This is my final attempt at it, I guess. Is it though? I&apos;m
-          not sure. Could be. Could also not be. Who knows. While I try to
-          figure that out, listen to it, maybe you can figure it out!
+          How can I even describe <q>Maybe Someday</q>? Maybe you remember my
+          attempt at writing a love song from the biography above &mdash; If you
+          didn&apos;t read that, no worries! &mdash; well this is it. This is my
+          final attempt at it, I guess. Is it though? I&apos;m not sure. Could
+          be. Could also not be. Who knows. While I try to figure that out,
+          listen to it, maybe you can figure it out!
         </p>
         <p>
           It is, in essence, again an attempt to figure out how my perception of
@@ -233,10 +232,10 @@ const tracksEN: Track[] = [
         </p>
         <p>
           Of all of them, the track <q>Maybe Someday</q> is probably my
-          favourite track. Possibly because it&apos;s the most real, makes me feel
-          the most most vulnerable and was written last; it captures that
+          favourite track. Possibly because it&apos;s the most real, makes me
+          feel the most most vulnerable and was written last; it captures that
           emotion that arise when you finally finalise something, the kind of
-          kind of feeling of <q>coming home</q>.
+          feeling of <q>coming home</q>.
         </p>
       </>
     ),
@@ -256,13 +255,12 @@ const tracksEN: Track[] = [
           I will always miss it, that I&apos;m doomed to...
         </p>
         <p>
-          I wanted to make a track about this for at least as long as
-          <q>Sehnsucht</q>, and in a sense, I already did:
-          <q>Türen</q> stems from a similar idea, that doors close before
-          I have the opportunity to enter them. The idea comes from Kafka&apos;s
-          <q>Before the Law</q>, albeit, much transferred, and the
-          title&apos;s interpretation can be more optimistic, when considering
-          that new doors also may open...
+          I wanted to make a track about this for at least as long as{" "}
+          <q>Sehnsucht</q>, and in a sense, I already did: <q>Türen</q> stems
+          from a similar idea, that doors close before I have the opportunity to
+          enter them. The idea comes from Kafka&apos;s <q>Before the Law</q>,
+          albeit, much transferred, and the title&apos;s interpretation can be
+          more optimistic, when considering that new doors also may open...
         </p>
         <p>
           <q>Window of Opportunity</q> borrows its sound design from
@@ -278,8 +276,8 @@ const tracksEN: Track[] = [
           and the pluck sound of Porter Robinson&apos;s &ldquo;Sad
           Machine&rdquo;, also picking up its melody on the last few notes. I
           still think that <q>Worlds</q>, which included &ldquo;Sad
-          Machine&rdquo; is one of, if not the, best album ever made, and having
-          passed on the opportunity to see him perform it live is one of those{" "}
+          Machine&rdquo; is one of best album ever made, and having passed on
+          the opportunity to see him perform it live is one of those{" "}
           <b>Windows of Opportunity</b> that I&apos;ve missed in life.
         </p>
       </>
@@ -290,16 +288,15 @@ const tracksEN: Track[] = [
     description: (
       <>
         <p>
-          With <q>Lazarus</q> starts the transition away from what
-          Zoomoid was into what Zoomoid has become. The vibe shfits away from
-          referencing and deriving music from existing work, into new, uncharted
-          terrories.
+          With <q>Lazarus</q> starts the transition away from what Zoomoid was
+          into what Zoomoid has become. The vibe shifts away from referencing
+          and deriving music from existing work, into new, uncharted terrories.
         </p>
         <p>
-          <q>Lazarus</q> starts with tragic strings and, one last time,
-          using that tune-in sample of the orchestra that already was in
-          <q>Shades of Yellow</q> and <q>Ein Tag im April</q>. The
-          almost wailing piano melody brings down the track into looming, scary
+          <q>Lazarus</q> starts with tragic strings and, one last time, using
+          that tune-in sample of the orchestra that already was in{" "}
+          <q>Shades of Yellow</q> and <q>Ein Tag im April</q>. The almost
+          wailing piano melody brings down the track into looming, scary
           space...
         </p>
         <p>
@@ -314,19 +311,18 @@ const tracksEN: Track[] = [
     description: (
       <>
         <p>
-          <q>Rebirth</q> is the logical consequence of
-          <q>Lazarus</q>. For the longest time during the creation of the
-          album, the tracks were just one, named <q>Lazarus/Rebirth</q>.
-          They were only split up towards the end of mastering, to bring the
-          number of tracks up to 15 (and also for me to write about each part
-          individually here).
+          <q>Rebirth</q> is the logical consequence of <q>Lazarus</q>. For the
+          longest time during the creation of the album, the tracks were just
+          one, named <q>Lazarus/Rebirth</q>. They were only split up towards the
+          end of mastering, to bring the number of tracks up to 15 (and also for
+          me to write about each part individually here).
         </p>
         <p>
-          <q>Rebirth</q> is what&apos;s on the other side of that
-          accident, that horrifying moment, that life-changing experience.
+          <q>Rebirth</q> is what&apos;s on the other side of that accident, that
+          horrifying moment, that life-changing experience.
         </p>
         <p>
-          It resolves into sonic space of synthesizers and arppegios that
+          It resolves into a sonic space of synthesizers and arppegios that
           evolves into a crushing, distorted mood, where only a heartbeat is
           left.
         </p>
@@ -340,12 +336,12 @@ const tracksEN: Track[] = [
         <p>
           That heartbeat continues into &ldquo;Anywhere Else At Any Other
           Time&rdquo;. This track had many names throughout its way to release.
-          It was called <q>Leaving</q>, <q>Departure</q>, all
-          things related to the central motive, a slow, but driving melody that
-          envelopes the announcement sample from a train journey. This was the
-          motive of <q>Public Transportation</q> and this track,
-          <q>Anywhere Else At Any Other Time</q>, waves this EP goodbye
-          at the train&apos;s platform.
+          It was called <q>Leaving</q>, <q>Departure</q>, all things related to
+          the central motive, a slow, but driving melody that envelopes the
+          announcement sample from a train journey. This was the motive of{" "}
+          <q>Public Transportation</q> and this track,{" "}
+          <q>Anywhere Else At Any Other Time</q>, waves this EP goodbye at the
+          train&apos;s platform.
         </p>
         <p>
           I like to imagine that the train takes me somewhere far away, maybe to
@@ -359,18 +355,19 @@ const tracksEN: Track[] = [
     description: (
       <>
         <p>
-          <q>Echoes of You</q> starts exactly there, in a cottage at the
-          beach. The soundscape at the start sets up a journey into deep
-          atmospheric sounds with lots of echo and reverb.
+          <q>Echoes of You</q> starts exactly there, in a cottage at the beach.
+          The soundscape at the start sets up a journey into deep atmospheric
+          sounds with lots of echo and reverb.
         </p>
         <p>
           I wrote the song the week my grandfather died. He probably had the
-          most artistical influence on my own work than anyone else. Due to his
-          deteriorating hearing, he was unable to experience my music. It hurts
-          knowing I never had the opportunity to show him.
+          most artistical influence on my own work than anyone else combined.
+          Due to his deteriorating hearing, he was unable to experience my
+          music. It hurts knowing I never had the opportunity to show him.
         </p>
         <p>
-          I&apos;d like to think that some day I can show him. Maybe someday.
+          I&apos;d like to think that some day I can show it to him. Maybe
+          someday.
         </p>
         <p>
           As the song ends, a door opens, and the listener is greeted by sounds
@@ -385,10 +382,10 @@ const tracksEN: Track[] = [
     description: (
       <>
         <p>
-          <q>The Last Chapter</q> is exactly that: the last chapter. The
-          tragedy of all the previous tracks, all those memories, experiences,
-          emotions, they culminate in a final, soft, gloomy track about what has
-          been, what is, and what will be.
+          <q>The Last Chapter</q> is exactly that: the last chapter. The tragedy
+          of all the previous tracks, all those memories, experiences, emotions,
+          they culminate in a final, soft, gloomy track about what has been,
+          what is, and what will be.
         </p>
         <p>
           The song brings everything down, into just a few, slow moving chamber
@@ -407,9 +404,9 @@ const tracksEN: Track[] = [
     description: (
       <>
         <p>
-          And with that, we rise one last time, for old time&apos;s sake, into
-          <q>All Things Must End</q>, the album&apos;s title track and
-          also the final Zoomoid track.
+          And with that, we rise one last time, for old time&apos;s sake, into{" "}
+          <q>All Things Must End</q>, the album&apos;s title track and also the
+          final Zoomoid track.
         </p>
         <p>
           I was long unsure of where to place this track. I had it written
@@ -443,9 +440,9 @@ const tracksDE: Track[] = [
           Möglichkeiten...
         </p>
         <p>
-          <q>All That Could Have Been</q> ist eine Homage an all die
-          Intros für Alben die ich geschrieben habe, etwas von dem ich immer
-          dachte, dass ich ziemlich gut drin bin.
+          <q>All That Could Have Been</q> ist eine Homage an all die Intros für
+          Alben die ich geschrieben habe, etwas von dem ich immer dachte, dass
+          ich ziemlich gut drin bin.
         </p>
         <p>
           Nur für einen Moment am Anfang von 2023 habe ich mich großartig
@@ -469,12 +466,12 @@ const tracksDE: Track[] = [
           Gewohnheiten.
         </p>
         <p>
-          <q>Nur Für Einen Augenblick</q> ist aber älter als diese
-          Erfahrungen. Es wurde ursprünglich 2022 geschrieben, an einem der
-          seltenen Abende mit Inspiration und Kreativität. Es hatte viele
-          verschiedene Arbeitstitel durch seine Entwurfsperiode:
-          <q>What&apos;s Next</q> war einer davon, und ich denke, das
-          fängt bereit den Geist des Albums in einem gewissen Sinne ein.
+          <q>Nur Für Einen Augenblick</q> ist aber älter als diese Erfahrungen.
+          Es wurde ursprünglich 2022 geschrieben, an einem der seltenen Abende
+          mit Inspiration und Kreativität. Es hatte viele verschiedene
+          Arbeitstitel durch seine Entwurfsperiode: <q>What&apos;s Next</q> war
+          einer davon, und ich denke, das fängt bereit den Geist des Albums in
+          einem gewissen Sinne ein.
         </p>
         <p>
           Es ist eine Art erhebendes Stück, in seinem Kern ein Drum &amp; Bass
@@ -489,16 +486,16 @@ const tracksDE: Track[] = [
     description: (
       <>
         <p>
-          <q>Ein Tag Im April</q> spannt eine Brücke zwischen &bdquo;Nur
-          Für Einen Augenblick&ldquo; und <q>Angst vor der Zukunft</q>.
-          Es ist eine wilde Reise, eine Erfahrung, eben wie ein Tag in meinem
-          Leben in diesem spezifischen Monat.
+          <q>Ein Tag Im April</q> spannt eine Brücke zwischen &bdquo;Nur Für
+          Einen Augenblick&ldquo; und <q>Angst vor der Zukunft</q>. Es ist eine
+          wilde Reise, eine Erfahrung, eben wie ein Tag in meinem Leben in
+          diesem spezifischen Monat.
         </p>
         <p>
-          Zwischen Höhen und Tiefen, zwischen &bdquo;einen Halbmarathon an einem
+          Zwischen Höhen und Tiefen, zwischen einen Halbmarathon an einem
           beliebigen Samstag im strömenden Regen für den einfachen Grund, etwas
           zu fühlen, sich federleicht zu fühlen, so vieles zu fühlen, zu dem
-          totalen Kollaps während der Zeit in Amsterdam...
+          totalen Kollaps während der Zeit in Amsterdam auf einer Konferenz...
         </p>
         <p>
           Es ist mehr als nur ein einzelner Tag. Ein Tag wurde beschreibend für
@@ -519,30 +516,29 @@ const tracksDE: Track[] = [
     description: (
       <>
         <p>
-          <q>Angst vor der Zukunft</q> ist einer der Protagonisten des
-          Albums. Der Titel charakterisiert was ich das Jahr über gefühlt habe,
-          Sowohl kurzfristig als auch langfristig. Ich weiß nicht genau wo es
-          hingeht. Vielleicht ist das ja keine schlechte Sache. Vielleicht doch.
-          Ich weiß es nicht.
+          <q>Angst vor der Zukunft</q> ist einer der Protagonisten des Albums.
+          Der Titel charakterisiert was ich das Jahr über gefühlt habe, Sowohl
+          kurzfristig als auch langfristig. Ich weiß nicht genau wo es hingeht.
+          Vielleicht ist das ja keine schlechte Sache. Vielleicht doch. Ich weiß
+          es nicht.
         </p>
         <p>
-          <q>Angst vor der Zukunft</q> befasst sich auch mit dem
-          Verständnis von Zeit, wenn auch vollständig subjektiv. Ich habe das
-          Gefühl, dass mir die Zeit davonläuft. Nicht für eine bestimmte Sache.
-          Nur ganz allgemein... &bdquo;Wie kann man Zeit haben, wenn sie dich
-          eindeutig hat&ldquo;.
+          <q>Angst vor der Zukunft</q> befasst sich auch mit dem Verständnis von
+          Zeit, wenn auch vollständig subjektiv. Ich habe das Gefühl, dass mir
+          die Zeit davonläuft. Nicht für eine bestimmte Sache. Nur ganz
+          allgemein... &bdquo;Wie kann man Zeit haben, wenn sie dich eindeutig
+          hat&ldquo;.
         </p>
         <p>
           <q>Angst vor der Zukunft</q> ist ein Verweis auf einige andere
           wichtige Zoomoid-Veröffentlichungen. Seine Wurzeln gehen zurück auf
-          Tracks wie <q>Wild World</q>, die sanftere Seite von
-          <q>Voyager</q>, vor allem aber auf &bdquo;Shades of
-          Yellow&ldquo;. Das Motiv von beiden Tracks ist das gleiche, beide
-          kreisen um das zentrale Zitat aus <q>Dark</q>, aber dieses Mal
-          bin ich es, der die Worte sagt, als ob sie dadurch mehr Gewicht
-          bekämen. Der Teil verwendet sogar die gleichen Instrumente wie im
-          Original, <q>Shades of Yellow</q>, auch wenn wenn auch leicht
-          angepasst, um zum Rest des Tracks zu passen.
+          Tracks wie <q>Wild World</q>, die sanftere Seite von <q>Voyager</q>,
+          vor allem aber auf &bdquo;Shades of Yellow&ldquo;. Das Motiv von
+          beiden Tracks ist das gleiche, beide kreisen um das zentrale Zitat aus{" "}
+          <q>Dark</q>, aber dieses Mal bin ich es, der die Worte sagt, als ob
+          sie dadurch mehr Gewicht bekämen. Der Teil verwendet sogar die
+          gleichen Instrumente wie im Original, <q>Shades of Yellow</q>, auch
+          wenn wenn auch leicht angepasst, um zum Rest des Tracks zu passen.
         </p>
       </>
     ),
@@ -555,14 +551,14 @@ const tracksDE: Track[] = [
           <q>Angst vor der Zukunft</q> geht über in einen weiteren
           überarbeiteten Zoomoid-Track, <q>Outer Space</q>. &bdquo;Outer
           Space&ldquo; wurde ursprünglich auf der Extended Edition von
-          <q>Eigenräume</q>. Es war ein Techno-Track, aber ein
-          melodischer, der auch perfekt auf <q>Voyager</q> gepasst hätte.
-          Er wurde später neu gemastert und in einer längeren Mix-Version auf
-          dem Album <q>301 Permanently Moving</q> EP.
+          <q>Eigenräume</q>. Es war ein Techno-Track, aber ein melodischer, der
+          auch perfekt auf <q>Voyager</q> gepasst hätte. Er wurde später neu
+          gemastert und in einer längeren Mix-Version auf dem Album{" "}
+          <q>301 Permanently Moving</q> EP.
         </p>
         <p>
-          Im Jahr 2021 veröffentlichte ich <q>Sehnsucht</q>, das
-          vollständig akustisch war und sich stark auf die Sanftheit von Felt
+          Im Jahr 2021 veröffentlichte ich <q>Sehnsucht</q>, das vollständig
+          akustisch war und sich stark auf die Sanftheit von Felt
           Instrument&apos;s <b>Lekko</b> stützte. Sein Klang hat eine Intimität,
           die mich dazu inspiriert hat, andere Zoomoid-Tracks mit diesen
           weicheren Instrumenten zu warmen und gemütlichen Versionen zu remixen.
@@ -579,12 +575,12 @@ const tracksDE: Track[] = [
     description: (
       <>
         <p>
-          <q>Illusions</q> ist ein Stück, das ich im Laufe eines
-          Wochenendes geschrieben habe. Ich begann an einem Freitagabend mit
-          einer Idee für etwas die von früheren Tracks inspiriert wurde, wie zum
-          Beispiel der <q>Im Schatten der Nacht</q> EP,
-          <q>Voyager</q> Tracks und mehr. Am Sonntag Nachmittag hatte ich
-          einen fertig arrangierten und abgemischten Track.
+          <q>Illusions</q> ist ein Stück, das ich im Laufe eines Wochenendes
+          geschrieben habe. Ich begann an einem Freitagabend mit einer Idee für
+          etwas die von früheren Tracks inspiriert wurde, wie zum Beispiel der{" "}
+          <q>Im Schatten der Nacht</q> EP,
+          <q>Voyager</q> Tracks und mehr. Am Sonntag Nachmittag hatte ich einen
+          fertig arrangierten und abgemischten Track.
         </p>
         <p>
           Wenn das Schlagzeug im Mittelteil des Tracks verklingt und den
@@ -598,10 +594,10 @@ const tracksDE: Track[] = [
           hinunter in ein Tal der Lautstärke und Eindrücke und Emotionen.
         </p>
         <p>
-          <q>Illusions</q> wäre für sich allein genommen völlig in
-          Ordnung, aber im Kontext dieses Albums blüht es auf, es bietet eine
-          fünfminütige Flucht in die Zeit und den Raum von &bdquo;Im Schatten
-          der Nacht&ldquo;.
+          <q>Illusions</q> wäre für sich allein genommen völlig in Ordnung, aber
+          im Kontext dieses Albums blüht es auf, es bietet eine fünfminütige
+          Flucht in die Zeit und den Raum von &bdquo;Im Schatten der
+          Nacht&ldquo;.
         </p>
       </>
     ),
@@ -612,21 +608,20 @@ const tracksDE: Track[] = [
       <>
         <p>
           Wenn wir schon über die Überarbeitung, den Remix und das Remastering
-          älterer Zoomoid-Veröffentlichungen sprechen: <q>Delay</q> von
-          <q>Public Transportation</q> kam mir immer etwas kurz vor.
-          Seine Länge auf der Original-EP ist in Ordnung, alle anderen Tracks
-          passen zusammen, aber für <q>Delay</q> wäre mehr drin gewesen.
+          älterer Zoomoid-Veröffentlichungen sprechen: <q>Delay</q> von{" "}
+          <q>Public Transportation</q> kam mir immer etwas kurz vor. Seine Länge
+          auf der Original-EP ist in Ordnung, alle anderen Tracks passen
+          zusammen, aber für <q>Delay</q> wäre mehr drin gewesen.
         </p>
         <p>
-          Genauso wie <q>Outer Space</q> in der Form dieses Albums lange
-          vor dem Album existierte, existierte die <q>Long Version</q>
-          von <q>Delay</q> existierte in einer prototypischen Form für
-          mehr als zwei Jahre, bevor ich mit der Arbeit an diesem Album begann.
-          Ich habe überlegt, es als Single zu veröffentlichen, aber das schien
-          mir nie das Richtige zu sein. Als dann die Zeit kam Tracks zu finden,
-          die meinen Geist, mein Können und meinen Sound einfangen, die
-          Eigenschaften von Zoomoid, füllte <q>Delay</q> diesen Platz
-          perfekt aus.
+          Genauso wie <q>Outer Space</q> in der Form dieses Albums lange vor dem
+          Album existierte, existierte die <q>Long Version</q> von <q>Delay</q>{" "}
+          existierte in einer prototypischen Form für mehr als zwei Jahre, bevor
+          ich mit der Arbeit an diesem Album begann. Ich habe überlegt, es als
+          Single zu veröffentlichen, aber das schien mir nie das Richtige zu
+          sein. Als dann die Zeit kam Tracks zu finden, die meinen Geist, mein
+          Können und meinen Sound einfangen, die Eigenschaften von Zoomoid,
+          füllte <q>Delay</q> diesen Platz perfekt aus.
         </p>
         <p>
           Es ist aber nicht nur eine längere Version des Originals. Ich habe
@@ -648,14 +643,14 @@ const tracksDE: Track[] = [
     description: (
       <>
         <p>
-          Wie kann ich <q>Maybe Someday</q> überhaupt beschreiben?
-          Vielleicht erinnerst Du dich an meinen Versuch, ein Liebeslied zu
-          schreiben, aus der obigen Biographie erinnern &mdash; Wenn Du das
-          nicht gelesen hast, keine Sorge! &mdash; nun, dies ist es. Dies ist
-          mein letzter Versuch, denke ich. Ist es wirklich ein Liebeslied? Ich
-          bin nicht sicher. Könnte sein. Könnte aber auch nicht sein. Wer weiß.
-          Während ich versuche herauszufinden, hör es Dir an, vielleicht kannst
-          Du es herausfinden!
+          Wie kann ich <q>Maybe Someday</q> überhaupt beschreiben? Vielleicht
+          erinnerst Du dich an meinen Versuch, ein Liebeslied zu schreiben, aus
+          der obigen Biographie erinnern &mdash; Wenn Du das nicht gelesen hast,
+          keine Sorge! &mdash; nun, dies ist es. Dies ist mein letzter Versuch,
+          denke ich. Ist es wirklich ein Liebeslied? Ich bin nicht sicher.
+          Könnte sein. Könnte aber auch nicht sein. Wer weiß. Während ich
+          versuche herauszufinden, hör es Dir an, vielleicht kannst Du es
+          herausfinden!
         </p>
         <p>
           Im Grunde ist es wieder ein Versuch, herauszufinden, wie meine
@@ -673,8 +668,8 @@ const tracksDE: Track[] = [
           glaube, das ist ein Aspekt der ihn so schön macht.
         </p>
         <p>
-          Von allen ist der Track <q>Maybe Someday</q> wahrscheinlich
-          mein Lieblingsstück. Möglicherweise, weil er der realste ist, mich am
+          Von allen ist der Track <q>Maybe Someday</q> wahrscheinlich mein
+          Lieblingsstück. Möglicherweise, weil er der realste ist, mich am
           verletzlichsten macht und als letztes geschrieben wurde; es fängt die
           Emotionen ein, die entstehen, wenn man etwas endlich abschließt, das
           Art von Gefühl des <q>Heimkommens</q>.
@@ -698,20 +693,19 @@ const tracksDE: Track[] = [
           ich dazu verdammt bin...
         </p>
         <p>
-          Darüber wollte ich schon mindestens so lange einen Track machen wie
-          <q>Sehnsucht</q>, und in gewisser Weise habe ich das auch schon
-          getan: <q>Türen</q> entspringt einer ähnlichen Idee, dass sich
-          Türen schließen, bevor ich die Gelegenheit habe, sie zu betreten. Der
-          Gedanke stammt aus Kafka&apos;s <q>Vor dem Gesetz</q>, wenn
-          auch stark übertragen, und die Interpretation des Titels kann
-          optimistischer sein, wenn man bedenkt dass sich auch neue Türen öffnen
-          können...
+          Darüber wollte ich schon mindestens so lange einen Track machen wie{" "}
+          <q>Sehnsucht</q>, und in gewisser Weise habe ich das auch schon getan:{" "}
+          <q>Türen</q> entspringt einer ähnlichen Idee, dass sich Türen
+          schließen, bevor ich die Gelegenheit habe, sie zu betreten. Der
+          Gedanke stammt aus Kafka&apos;s <q>Vor dem Gesetz</q>, wenn auch stark
+          übertragen, und die Interpretation des Titels kann optimistischer
+          sein, wenn man bedenkt dass sich auch neue Türen öffnen können...
         </p>
         <p>
-          <q>Window of Opportunity</q> leiht sich das Sounddesign von
-          <q>Sehnsucht</q>, was in Anbetracht der Ähnlichkeiten der
-          Motive nur vernünftig ist. Gegen Ende gehen die Klänge in eine
-          Kombination aus einem{" "}
+          <q>Window of Opportunity</q> leiht sich das Sounddesign von{" "}
+          <q>Sehnsucht</q>, was in Anbetracht der Ähnlichkeiten der Motive nur
+          vernünftig ist. Gegen Ende gehen die Klänge in eine Kombination aus
+          einem{" "}
           <a
             href="https://de.wikipedia.org/wiki/Mellotron"
             className="underline"
@@ -720,11 +714,10 @@ const tracksDE: Track[] = [
           </a>{" "}
           und der Plastik-Harfe aus Porter Robinsons <q>Sad Machine</q>
           über, auch seine Melodie auf den letzten Tönen. Ich bin immer noch der
-          Überzeugung, dass <q>Worlds</q>, das auch &bdquo;Sad
-          Machine&ldquo; enthielt, eines der, wenn nicht das beste Album ist,
-          das je gemacht wurde, und dass ich die Gelegenheit verpasst habe, ihn
-          live zu sehen, ist eine dieser Gelegenheiten, die ich im Leben
-          verpasst habe.
+          Überzeugung, dass <q>Worlds</q>, das auch <q>Sad Machine</q>
+          enthielt, eines der besten Album ist, das je gemacht wurde, und dass
+          ich die Gelegenheit verpasst habe, ihn live zu sehen, ist eine dieser
+          Gelegenheiten, die ich im Leben verpasst habe.
         </p>
       </>
     ),
@@ -734,17 +727,17 @@ const tracksDE: Track[] = [
     description: (
       <>
         <p>
-          Mit <q>Lazarus</q> beginnt der Übergang weg von dem, was
-          Zoomoid war, zu dem, was Zoomoid geworden ist. Der Vibe bewegt sich
-          weg von Referenzierung und Ableitung von Musik aus bereits
-          existierenden Werken, in neue, unerforschte Terrore.
+          Mit <q>Lazarus</q> beginnt der Übergang weg von dem, was Zoomoid war,
+          zu dem, was Zoomoid geworden ist. Der Vibe bewegt sich weg von
+          Referenzierung und Ableitung von Musik aus bereits existierenden
+          Werken, in neue, unerforschte Terrore.
         </p>
         <p>
-          <q>Lazarus</q> beginnt mit tragischen Streichern und, ein
-          letztes Mal, mit dem Orchester-Sample, das schon in &ldquo;Shades of
-          Yellow&rdquo; und <q>Ein Tag im April</q> aufgetaucht ist. Die
-          fast wimmernde Klaviermelodie bringt den Track in einen bedrohlichen,
-          unheimlichen Raum...
+          <q>Lazarus</q> beginnt mit tragischen Streichern und, ein letztes Mal,
+          mit dem Orchester-Sample, das schon in <q>Shades of Yellow</q>
+          und <q>Ein Tag im April</q> aufgetaucht ist. Die fast wimmernde
+          Klaviermelodie bringt den Track in einen bedrohlichen, unheimlichen
+          Raum...
         </p>
         <p>
           Der Unfall im Jahr 2013, bei dem ich zwei Wochen lang auf der
@@ -760,17 +753,16 @@ const tracksDE: Track[] = [
       <>
         <p>
           <q>Rebirth</q> ist die logische Folge von
-          <q>Lazarus</q>. Für die längste Zeit während der Entstehung des
-          Album waren die beiden Tracks ein einziger, der den Namen
-          <q>Lazarus/Rebirth</q> trug. Erst gegen Ende des Masterings
-          wurden sie aufgeteilt, um die Anzahl der Tracks auf 15 zu erhöhen (und
-          auch, damit ich hier über jeden Teil einzeln schreiben einzeln zu
+          <q>Lazarus</q>. Für die längste Zeit während der Entstehung des Album
+          waren die beiden Tracks ein einziger, der den Namen{" "}
+          <q>Lazarus/Rebirth</q> trug. Erst gegen Ende des Masterings wurden sie
+          aufgeteilt, um die Anzahl der Tracks auf 15 zu erhöhen (und auch,
+          damit ich hier über jeden Teil einzeln schreiben einzeln zu
           schreiben).
         </p>
         <p>
-          <q>Rebirth</q> ist das, was auf der anderen Seite dieses
-          Unfall, diesem schrecklichen Moment, dieser lebensverändernden
-          Erfahrung ist.
+          <q>Rebirth</q> ist das, was auf der anderen Seite dieses Unfall,
+          diesem schrecklichen Moment, dieser lebensverändernden Erfahrung ist.
         </p>
         <p>
           Es löst sich auf in einen Klangraum aus Synthesizern und Arppegios,
@@ -785,14 +777,14 @@ const tracksDE: Track[] = [
     description: (
       <>
         <p>
-          Dieser Herzschlag setzt sich in &ldquo;Anywhere Else At Any Other
-          Time&rdquo;. Dieses Stück hatte auf seinem Weg zur Veröffentlichung
-          viele Namen. Er wurde <q>Leaving</q>, <q>Departure</q>
+          Dieser Herzschlag setzt sich in <q>Anywhere Else At Any Other Time</q>
+          . Dieses Stück hatte auf seinem Weg zur Veröffentlichung viele Namen.
+          Er wurde <q>Leaving</q>, <q>Departure</q>
           genannt, alles Dinge, die sich auf das zentrale Motiv beziehen, eine
           langsame, aber treibende Melodie, die die Ansage einer Zugfahrt
           umhüllt. Dies ist das Motiv von <q>Public Transportation</q>
-          und dieser Track, <q>Anywhere Else At Any Other Time</q>, winkt
-          diese EP zum Abschied am Bahnsteig des Zuges.
+          und dieser Track, <q>Anywhere Else At Any Other Time</q>, winkt diese
+          EP zum Abschied am Bahnsteig des Zuges.
         </p>
         <p>
           Ich stelle mir gerne vor, dass der Zug mich irgendwo weit weg bringt,
@@ -807,9 +799,9 @@ const tracksDE: Track[] = [
     description: (
       <>
         <p>
-          <q>Echoes of You</q> beginnt genau dort, in einer Hütte am
-          Strand. Die Geräuschkulisse zu Beginn ist der Auftakt zu einer Reise
-          in tiefe atmosphärischen Klängen mit viel Echo und Nachhall.
+          <q>Echoes of You</q> beginnt genau dort, in einer Hütte am Strand. Die
+          Geräuschkulisse zu Beginn ist der Auftakt zu einer Reise in tiefe
+          atmosphärischen Klängen mit viel Echo und Nachhall.
         </p>
         <p>
           Ich habe das Lied in der Woche geschrieben, in der mein Großvater
@@ -861,8 +853,8 @@ const tracksDE: Track[] = [
       <>
         <p>
           Und damit erheben wir uns ein letztes Mal, um der alten Zeiten willen,
-          in <q>All Things Must End</q>, dem Titeltrack des
-          Albums&apos;und auch der letzte Zoomoid-Track.
+          in <q>All Things Must End</q>, dem Titeltrack des Albums&apos;und auch
+          der letzte Zoomoid-Track.
         </p>
         <p>
           Ich war lange unsicher, wo ich dieses Stück platzieren sollte. Ich

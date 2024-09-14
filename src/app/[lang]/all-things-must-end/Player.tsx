@@ -152,7 +152,7 @@ function Player({ ...props }: PlayerProps) {
             {/* Seek area */}
             <div className="absolute top-1 h-2 left-0 right-0 rounded-full bg-neutral-300/20"></div>
             <div
-              className="absolute top-1 h-2 left-0 right-0 rounded-full bg-neutral-200"
+              className="absolute top-1 h-2 min-w-2 left-0 right-0 rounded-full bg-neutral-200"
               style={{
                 width: 100 * barWidth + "%",
                 transition: "width 0.1s linear",

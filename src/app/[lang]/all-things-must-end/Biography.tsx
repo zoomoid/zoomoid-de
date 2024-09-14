@@ -70,8 +70,8 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             <b>I miss those days </b>
             for the simple fact that those days <b>(and nights)</b> are truly
             cherished memories. It took me <b>until 2016</b>, however, to
-            produce anything that I considered worth <q>releasing</q>,
-            whatever that may have meant <b>back then</b>.
+            produce anything that I considered worth <q>releasing</q>, whatever
+            that may have meant <b>back then</b>.
           </p>
           <p>
             Naturally, this track was little but an attempt to recreate and fuse
@@ -87,7 +87,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             <q>Memories</q>! Ironically enough, Guetta would remix{" "}
             <b>
               his own track 4 years later, which is even weaker than the
-              original from 2009!
+              original from 2009! &mdash; just my oppinion.
             </b>
           </p>
           <p>
@@ -131,9 +131,12 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           className="my-16 md:text-lg space-y-2 relative"
         >
           <p>
-            When <q><b>Life Is About Making Memories</b></q> landed in
-            2018, I had already released several attempts at proper tracks in
-            the form of Singles. But releasing the
+            When{" "}
+            <q>
+              <b>Life Is About Making Memories</b>
+            </q>{" "}
+            landed in 2018, I had already released several attempts at proper
+            tracks in the form of Singles. But releasing the
             <b> first proper album-sized collection</b> of tracks, that also had
             a <b>concept built-in </b>
             started the next episode of <b>Zoomoid</b> as a <b>producer</b>.
@@ -162,8 +165,9 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           <p>
             It got me going onto more elaborate sound design and composition{" "}
             <small>
-              (though it is still a bit improvised and by no means professional,
-              rather &ldquo;if it sounds good, it&apos;s good&rdquo;).
+              (though it is still mostly improvised and by no means
+              professional, rather &ldquo;if it sounds good, it&apos;s
+              good&rdquo;).
             </small>
           </p>
           <p>
@@ -196,14 +200,17 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </SG>
           <p>
             In 2019, I made an album that was released in two
-            <q>waves</q>, called <q><b>Eigenräume</b></q>. It took
-            some inspiration from places I held very dear to my heart, and
-            places I wanted (and some still want to visit). That album had
+            <q>waves</q>, called{" "}
+            <q>
+              <b>Eigenräume</b>
+            </q>
+            . It took some inspiration from places I held very dear to my heart,
+            and places I wanted (and some still want to visit). That album had
             concept down to it&apos;s core fibers, and it defined the
-            <q>Zoomoid sound</q> in terms of electronic, techno-y sound
-            design and composition. While I failed with the original idea of
-            producing an album where all tracks would blend seamlessly into each
-            other on the first try{" "}
+            <q>Zoomoid sound</q> in terms of electronic, techno-y sound design
+            and composition. While I failed with the original idea of producing
+            an album where all tracks would blend seamlessly into each other on
+            the first try{" "}
             <small>(which is why there are two versions of the album)</small>,
             the second try{" "}
             <small>
@@ -239,8 +246,11 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             </SG>
           </div>
           <p>
-            I made <q><b>Public Transportation</b></q> from an idea on a
-            train ride back home{" "}
+            I made{" "}
+            <q>
+              <b>Public Transportation</b>
+            </q>{" "}
+            from an idea on a train ride back home{" "}
             <small>(see what I did there? Backreferencing?)</small> and that
             stuck with me. I really like trains &mdash; which you might alreay
             know &mdash; particularly seeing the world from inside a train,
@@ -289,10 +299,13 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             ></Image>
           </div>
           <p>
-            <q><b>Shades of Yellow</b></q> was the two-track EP that came
-            out of that episode. My attempt at a love song remained nothing more
-            than the title of a track that (to be brutally honest) seems like a
-            more refined copy of a previous track I made, called
+            <q>
+              <b>Shades of Yellow</b>
+            </q>{" "}
+            was the two-track EP that came out of that episode. My attempt at a
+            love song remained nothing more than the title of a track that (to
+            be brutally honest) seems like a more refined copy of a previous
+            track I made, called
             <q>Utopia</q> from &ldquo;
             <b>Life Is About Making Memories</b>&rdquo;. Other than being called
             <q>Malheureux en Amour</q>{" "}
@@ -307,14 +320,13 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             upbeat for such a topic, to be honest...
           </p>
           <p>
-            Anyways, that EP had a title track, <q>Shades of Yellow</q>,
-            which stands in stark contrast to the previously discussed track:
+            Anyways, that EP had a title track, <q>Shades of Yellow</q>, which
+            stands in stark contrast to the previously discussed track:
             it&apos;s a Tech-House track, rather long and tells a way better
-            story than <q>Malheureux en Amour</q>. It was probably
-            inspired a lot by <q>Wild World</q>, another Zoomoid song,
-            released as one of those Singles that have since disappeared from
-            the discography, but remains as a VIP Mix on &ldquo;Life Is About
-            Making Memories&rdquo;.
+            story than <q>Malheureux en Amour</q>. It was probably inspired a
+            lot by <q>Wild World</q>, another Zoomoid song, released as one of
+            those Singles that have since disappeared from the discography, but
+            remains as a VIP Mix on &ldquo;Life Is About Making Memories&rdquo;.
           </p>
           <p>
             That title track sampled the German TV series <q>Dark</q>, in
@@ -335,7 +347,10 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             world was held captive by a global pandemic, I had enough of sitting
             in my small bedroom in my slightly bigger appartment. Parallel to
             starting a new job, I started collecting ideas that turned into
-            tracks that turned into <q><b>Voyager</b></q>
+            tracks that turned into{" "}
+            <q>
+              <b>Voyager</b>
+            </q>
           </p>
           <div>
             <Image
@@ -349,8 +364,8 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           <p>
             Surely, I&apos;m not the first one to use that title, it&apos;s by
             no means unique. But it fits the concept really well. A working
-            title of the album was <q>Artemis</q> (the name of the NASA
-            mission to the moon on the 2020s). You get the picture.
+            title of the album was <q>Artemis</q> (the name of the NASA mission
+            to the moon on the 2020s). You get the picture.
           </p>
           <p>
             It&apos;s tracks sort of guide you on a journey through space, away
@@ -382,19 +397,19 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
         </h3>
         <SG animationName="slide-up" className="md:text-lg my-16 space-y-2">
           <p>
-            The escapism that <q>Voyager</q> provided, artistically, did
-            not last for long though. I went down into that dark hole that is
-            depression. Combining it with a slowly creeping burn-out from that
-            aforementioned job, I ended up in a really sad state of mind.
+            The escapism that <q>Voyager</q> provided, artistically, did not
+            last for long though. I went down into that dark hole that is
+            depression. Combining it with a slowly creeping burn-out from
+            studying and having a job in a start-up, I ended up in a really sad
+            state of mind.
           </p>
           <p>
-            Pink Floyd&apos;s <q>Comfortably Numb</q> probably captures
-            it best. I have a hang of describing my mental state with music.
-            I&apos;ve an incredibly deep emotional response to music, it&apos;s
-            like I&apos;m creating a soundtrack to my own life by choosing
-            tracks that display my emotional state. It&apos;s amazing and I
-            wouldn&apos;t want to miss it, but it makes tough situations even
-            more tough.
+            Pink Floyd&apos;s <q>Comfortably Numb</q> probably captures it best.
+            I have a hang of describing my mental state with music. I&apos;ve an
+            incredibly deep emotional response to music, it&apos;s like I&apos;m
+            creating a soundtrack to my own life by choosing tracks that display
+            my emotional state. It&apos;s amazing and I wouldn&apos;t want to
+            miss it, but it makes tough situations even more tough.
           </p>
           <div>
             <Image
@@ -406,9 +421,12 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             ></Image>
           </div>
           <p>
-            <q><b>Sehnsucht</b></q> captured those heavy, sad tones. The
-            album cover is a picture my grandfather drew that I hold very dear
-            to my heart (especially since he passed away in 2023).
+            <q>
+              <b>Sehnsucht</b>
+            </q>{" "}
+            captured those heavy, sad tones. The album cover is a picture my
+            grandfather drew that I hold very dear to my heart (especially since
+            he passed away in 2023).
           </p>
           <p>
             It&apos;s an entirely instrumental piece of music, no drums, just
@@ -425,8 +443,8 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             manifests the idea of windows of opportunity and time and, in this
             way, started picking up the fact that time as a human being is
             limited. That&apos;s a thought you don&apos;t have for as long as
-            you&apos;re <q>young</q>, whatever that may mean, but in that
-            dark period of time, I was starting to face my own &ldquo;getting
+            you&apos;re <q>young</q>, whatever that may mean, but in that dark
+            period of time, I was starting to face my own &ldquo;getting
             older&rdquo;, facing my own mortality in a way &mdash; something you
             would probably not expect from a 22-year old at the time.
           </p>
@@ -435,18 +453,17 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             rides of <q>what if&apos;s</q>...
           </small>
           <p>
-            <q>Sehnsucht&apos;s</q> central motive (and I&apos;m sorry
-            this is getting a bit heavy, and also relys on understanding some
-            German, but you&apos;ll have to anyways for understanding
-            what&apos;s to come), is the phrase, or rather set of questions
-            <q>Was war? Was ist? Was bleibt?</q> which broadly translates
-            to <q>What has been? What is (now)? What remains?</q>.
-            It&apos;s somewhat indicative of the questions I asked myself:
-            <q>What remains?</q> asks the question I wanted to answer
-            when starting out with making music in 2013. Eight years later, I
-            started reviewing my work. Had i succeeded in making something
-            that&apos;s worth lasting? I honestly can&apos;t tell. But I want it
-            to last.
+            <q>Sehnsucht&apos;s</q> central motive (and I&apos;m sorry this is
+            getting a bit heavy, and also relys on understanding some German,
+            but you&apos;ll have to anyways for understanding what&apos;s to
+            come), is the phrase, or rather set of questions
+            <q>Was war? Was ist? Was bleibt?</q> which broadly translates to{" "}
+            <q>What has been? What is (now)? What remains?</q>. It&apos;s
+            somewhat indicative of the questions I asked myself:
+            <q>What remains?</q> asks the question I wanted to answer when
+            starting out with making music in 2013. Eight years later, I started
+            reviewing my work. Had i succeeded in making something that&apos;s
+            worth lasting? I honestly can&apos;t tell. But I want it to last.
           </p>
           <div>
             <Image
@@ -493,11 +510,11 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
       </section>
       <section className="max-w-screen-md mx-auto my-16 z-20 relative px-4 md:px-0">
         <h2 className="text-3xl md:text-6xl mb-8">
-          Eine kurze Biografie von Miqr, Zoomoid
+          Eine kurze Biografie von Mir, Zoomoid
         </h2>
         <p className="md:text-lg">
           Ich verspreche, es wird nicht soooo lang, und es kann Dir helfen, das
-          Album, seine Motive und, am relevantesten, seine Konsequenzen, zu
+          Album, seine Motive und, am wichtigsten, seine Konsequenzen, zu
           verstehen. Wenn du willst, kannst du das aber{" "}
           <span
             onClick={() => {
@@ -531,12 +548,12 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </p>
           <p>
             Lernen war <b>(und ist es immer noch)</b> eine wundervolle Sache,
-            und manchmal <b>vermisse ich dies Tage </b>
+            und manchmal <b>vermisse ich diese Tage </b>
             aus dem einfachen Grund, dass diese Tage <b>(und Nächte)</b>{" "}
             wirklich geschätzte Erinnerungen sind. Ich brauchte <b>bis 2016</b>{" "}
             um etwas zu produzieren, dass ich als würdig für die
-            <q>Veröffentlichung</q> betrachten konnte, was auch immer das
-            damals gemeint haben kann.
+            <q>Veröffentlichung</q> betrachten konnte, was auch immer das damals
+            gemeint haben kann.
           </p>
           <p>
             Natürlich war dieser Track nichts anderes als ein Versuch, das, was
@@ -544,34 +561,33 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             nicht wert, hier weiter ins Detail zu gehen.{" "}
             <small>
               Die Lesenden können sich jedoch auf die Suche nach den Spuren
-              dieser Track zu finden. Irgendwann hat mal war der Track auf
+              dieser Track zu finden. Irgendwann mal war der Track auf
               Soundcloud und YouTube...
             </small>
           </p>
           <p>
             Ich bin bei der House-Musik geblieben und habe auch einen Remix von
-            David Guetta&apos;s <q>Memories</q>! Ironischerweise hat
-            Guetta einen Remix von{" "}
+            David Guetta&apos;s <q>Memories</q>! Ironischerweise hat Guetta
+            einen Remix von{" "}
             <b>
               4 Jahre später seinen eigenen Track, der deutlich schwächer ist
-              als das Original von 2009!
+              als das Original von 2009! &mdash; meine Meinung!
             </b>
           </p>
           <p>
             Ursprünglich wollte ich aber <b>Drum &amp; Bass</b> machen, das ein
             Genre, das ich (damals) erst kürzlich entdeckt hatte, war. Ich
-            konnte es damals allerdings nie ganz verstehen... Der Versuch, das
-            nachzumachen, was ich hörte, brachte mich nicht weiter, und es
-            dauerte weitere 2 Jahre dauern, um näher dorthin zu gelangen.
+            konnte es damals allerdings nie ganz herausbekommen... Der Versuch,
+            das nachzumachen, was ich hörte, brachte mich nicht weiter, und es
+            dauerte weitere 2 Jahre, um näher dorthin zu gelangen.
           </p>
           <p>
             Inzwischen <b>bin ich auch auf Techno gekommen</b>. Der Techno, den
-            ich damals damals hörte, war sehr zeitgenössisch und hat nichts mit
-            dem nichts mit dem heutigen Techno zu tun, der sehr schnell sehr
-            populär geworden ist. extrem populär geworden ist. Bis zu einem
-            gewissen Grad bin ich ganz dafür, aber aber vielleicht sehen Sie
-            schon das große Tal im Tempobereich zwischen den beiden Genres, die
-            ich hauptsächlich gehört habe; das ist was ich als den{" "}
+            ich damals hörte, war sehr zeitgenössisch und hat nichts mit dem
+            heutigen Techno zu tun, der sehr schnell sehr populär geworden ist.
+            Bis zu einem gewissen Grad bin ich ganz dafür, aber aber vielleicht
+            siehst Du schon das große Tal im Tempobereich zwischen den beiden
+            Genres, die ich hauptsächlich gehört habe; das ist was ich als den{" "}
             <b>Hardcore-Bereich</b> bezeichne, und darüber möchte ich lieber
             nicht reden...
             <small>
@@ -598,12 +614,16 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           className="my-16 md:text-lg space-y-2 relative"
         >
           <p>
-            Als <q><b>Life Is About Making Memories</b></q> im Jahr 2018
-            erschien, hatte ich bereits mehrere Versuche mit richtigen Tracks in
-            Form von Singles veröffentlicht. Aber mit der Veröffentlichung der
+            Als{" "}
+            <q>
+              <b>Life Is About Making Memories</b>
+            </q>{" "}
+            im Jahr 2018 erschien, hatte ich bereits mehrere Versuche mit
+            richtigen Tracks in Form von Singles veröffentlicht. Aber mit der
+            Veröffentlichung der
             <b>ersten richtigen Sammlung</b> von Tracks in <b>Albumgröße</b>,
             die auch <b>ein Konzept</b> enthielt, begann die nächste Episode von{" "}
-            <b>Zoomoid</b> als <b>Producer</b>. Die Ideen wuchsen über einzelne
+            <b>Zoomoid</b> als <b>Produzent</b>. Die Ideen wuchsen über einzelne
             Tracks hinaus und reichten weiter als nur fünf Minuten mit ein paar
             sich wiederholenden Loops und Samples, die in Ableton Live
             zusammengeklickt wurden.
@@ -630,15 +650,15 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             Das hat mich dazu gebracht, mich mit komplexerem Sounddesign und
             Komposition zu beschäftigen.{" "}
             <small>
-              (obwohl es immer noch ein bisschen improvisiert und keineswegs
+              (obwohl es noch immer meistens improvisiert und keineswegs
               professionell ist, eher &bdquo;wenn es gut klingt, ist es
               gut&ldquo;).
             </small>
           </p>
           <p>
             Damit wurden die Veröffentlichungen zu einer regelmäßigeren
-            Angelegenheit. Das Studium der Informatik hatte ich genug Abende, an
-            denen ich keine anderen Pläne als stundenlang auf die graue
+            Angelegenheit. Durch das Studium hatte ich genug Abende, an denen
+            ich keine anderen Pläne als stundenlang auf die graue
             Benutzeroberfläche von Live zu starren, hatte.
           </p>
           <SG
@@ -666,14 +686,18 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </SG>
           <p>
             2019 habe ich ein Album gemacht, das in zwei <q>Wellen</q>
-            veröffentlich wurde, <q><b>Eigenräume</b></q>. Es nahm einige
-            Inspiration von Orten, die mir sehr am Herzen liegen, und von Orten,
-            die ich besuchen wollte (und teilweise immer noch möchte). Dieses
-            Album hatte Konzept bis in die Kernfasern, und es definierte den
+            veröffentlich wurde,{" "}
+            <q>
+              <b>Eigenräume</b>
+            </q>
+            . Es nahm einige Inspiration von Orten, die mir sehr am Herzen
+            liegen, und von Orten, die ich besuchen wollte (und teilweise immer
+            noch möchte). Dieses Album hatte Konzept bis in die Kernfasern, und
+            es definierte den
             <q>Zoomoid Sound</q> in Bezug auf elektronisches,
-            <q>technoides</q> Sounddesign und Komposition. Während ich
-            mit der ursprünglichen Idee im ersten Versuch scheiterte, ein Album
-            zu produzieren, bei dem alle Tracks auf Anhieb nahtlos ineinander
+            <q>techno-ides</q> Sounddesign und Komposition. Während ich mit der
+            ursprünglichen Idee im ersten Versuch scheiterte, ein Album zu
+            produzieren, bei dem alle Tracks auf Anhieb nahtlos ineinander
             übergingen{" "}
             <small>(Deshalb gibt es auch zwei Versionen des Albums)</small>,
             bekam der zweite Versuch{" "}
@@ -682,10 +706,16 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             </small>{" "}
             es richtig hin, zumindest für die ersten sechs Tracks, danach
             entgleisen Dinge ein wenig. Vor allem einer dieser anderen Titel,
-            <q><b>Outer Space</b></q> war ein Stück, das ich zu gut fand,
-            um es einfach am Ende des Albums zu verstauen, deshalb habe ich es
-            länger gemacht und <q>remastered</q> es für das Ende 2019
-            erschienene <q><b>301 Moved Permanently</b></q>.
+            <q>
+              <b>Outer Space</b>
+            </q>{" "}
+            war ein Stück, das ich zu gut fand, um es einfach am Ende des Albums
+            zu verstauen, deshalb habe ich es länger gemacht und{" "}
+            <q>remastered</q> für das Ende 2019 erschienene{" "}
+            <q>
+              <b>301 Moved Permanently</b>
+            </q>
+            .
           </p>
           <div className="">
             <SG animationName="slide-up" className="grid grid-cols-2 gap-x-4">
@@ -710,17 +740,20 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             </SG>
           </div>
           <p>
-            Ich habe <q><b>Public Transportation</b></q> aus einer Idee
-            auf einer Zugfahrt nach Hause erschaffen,
+            Ich habe{" "}
+            <q>
+              <b>Public Transportation</b>
+            </q>{" "}
+            aus einer Idee auf einer Zugfahrt nach Hause erschaffen,
             <small>(Siehst du das hier? Backreferencing?)</small> und das blieb
-            bei mir hängen. Ich mag Züge sehr &mdash; was Du vielleicht schon
-            weißt &mdash; vor allem, wenn man die Welt aus dem Inneren eines
-            Zuges im Vorbeifahren sieht. Ich finde das sehr friedlich, und es
-            ist eine der wenigen Dinge, bei denen mein Gehirn komplett
-            abschaltet. Also habe ich ein Album über eine (hypothetische)
-            Zugfahrt gemacht, das ankündigt wo der Zug als nächstes halten wird.
-            Hör es Dir an, wenn Du es noch nicht gehört hast, es ist auch sehr
-            kurz, und dann kommst Du wieder zurück.
+            bei mir hängen. Ich mag Züge &mdash; was Du vielleicht schon weißt
+            &mdash; vor allem, wenn man die Welt aus dem Inneren eines Zuges im
+            Vorbeifahren sieht. Ich finde das sehr friedlich, und es ist eine
+            der wenigen Dinge, bei denen mein Gehirn komplett abschaltet. Also
+            habe ich ein Album über eine (hypothetische) Zugfahrt gemacht, das
+            ankündigt wo der Zug als nächstes halten wird. Hör es Dir an, wenn
+            Du es noch nicht gehört hast, es ist auch sehr kurz, und dann kommst
+            Du wieder zurück.
           </p>
         </SG>
       </section>
@@ -740,19 +773,18 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
         </h3>
         <SG animationName="slide-up" className="my-16 md:text-lg space-y-2">
           <p>
-            Im Jahr 2020 bin ich auf eine Mauer gestoßen. Und nicht die gute.
-            Als sich die Welt kämpfte ich (als Künstler) darum, Inspiration,
-            Energie und all das zu finden Energie und all das zu finden, was mir
-            vorher leicht fiel. Im Nachhinein betrachtet, wäre dies wäre dies
-            wahrscheinlich ein guter Zeitpunkt gewesen, eine Therapie zu
-            beginnen &mdash; aber die Idee hatten wohl auch eine Menge andere
-            Leute...
+            In 2020 bin ich auf eine Mauer gestoßen. Und nicht die gute Art. Als
+            die Welt in den Lockdown ging, kämpfte ich (als Künstler) darum,
+            Inspiration, Energie und all das zu finden, was mir vorher leicht
+            fiel. Im Nachhinein betrachtet, wäre dies wahrscheinlich ein guter
+            Zeitpunkt gewesen, eine Therapie zu beginnen &mdash; aber die Idee
+            hatten wohl auch eine Menge andere Leute...
           </p>
           <p>
             Ich war auch verliebt. Aber die Art, die nicht auf Gegenseitigkeit
             beruhte. Mit einem zerbrochenen Herzen wollte ich ein Liebeslied
-            schreiben. Die dummen Dinge, die man die man tut, wenn man verliebt
-            ist, denke ich. Ich dachte, ich könnte es.
+            schreiben. Die dummen, aber irgendwie süßen Dinge, die man die man
+            tut, wenn man verliebt ist, denke ich. Ich dachte, ich könnte es.
           </p>
           <div>
             <Image
@@ -764,11 +796,14 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             ></Image>
           </div>
           <p>
-            <q><b>Shades of Yellow</b></q> war die Zwei-Track-EP die aus
-            dieser Episode entsprungen ist. Mein Versuch, ein Liebeslied zu
-            schreiben, blieb nicht mehr als der Titel eines Stücks, das (um
-            vollkommen ehrlich zu sein) wie eine verfeinerte Kopie eines
-            früheren Tracks wirkt, <q>Utopia</q> aus &bdquo;
+            <q>
+              <b>Shades of Yellow</b>
+            </q>{" "}
+            war die Zwei-Track-EP die aus dieser Episode entsprungen ist. Mein
+            Versuch, ein Liebeslied zu schreiben, blieb nicht mehr als der Titel
+            eines Stücks, das (um vollkommen ehrlich zu sein) wie eine
+            verfeinerte Kopie eines früheren Tracks wirkt, <q>Utopia</q> aus
+            &bdquo;
             <b>Life Is About Making Memories</b>&ldquo;. Abseits des Namens,
             &rbquo;Malheureux en Amour&ldquo;{" "}
             <small>
@@ -778,16 +813,16 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               auf der der oberen blauen Welle auf der rechten Seite nicht
               richtig verbindet &mdash; schau mal nach...)
             </small>
-            , bleibt nicht viel von der Bedeutung des Titels übrig. Das Lied ist
+            , blieb nicht viel von der Bedeutung des Titels übrig. Das Lied ist
             ziemlich beschwingt für so ein Thema, um ehrlich zu sein...
           </p>
           <p>
             Wie auch immer, diese EP hatte einen Titeltrack, &bdquo;Shades of
             Yellow&ldquo;, der im krassen Gegensatz zu dem zuvor besprochenen
             Track steht: Es ist ein Tech-House-Track, ziemlich lang und erzählt
-            eine viel bessere Geschichte als <q>Malheureux en Amour</q>.
-            Er wurde wahrscheinlich sehr von <q>Wild World</q>, einem
-            anderen Zoomoid-Song, inspiriert, der als eine der Singles
+            eine viel bessere Geschichte als <q>Malheureux en Amour</q>. Er
+            wurde wahrscheinlich sehr von <q>Wild World</q>, einem anderen
+            frühen Zoomoid-Song, inspiriert, der als eine der Singles
             veröffentlicht wurde, die inzwischen aus der Diskographie
             verschwunden sind aus der Diskographie verschwunden sind, aber als
             VIP Mix auf <q>Life Is About Making Memories</q>.
@@ -813,7 +848,11 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             wurde, hatte ich genug davon, in meinem kleinen Schlafzimmer in
             meiner etwas größeren Wohnung zu sitzen. Parallel zum Start eines
             neuen Jobs begann ich, Ideen zu sammeln, die sich zu Tracks
-            entwickelten, die zu <q><b>Voyager</b></q> wurden.
+            entwickelten, die zu{" "}
+            <q>
+              <b>Voyager</b>
+            </q>{" "}
+            wurden.
           </p>
           <div>
             <Image
@@ -833,17 +872,16 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </p>
           <p>
             Seine Tracks führen Dich auf eine Art Reise durch den Weltraum, weg
-            weg von unserem blassblauen Punkt am Nachthimmel. Seine zehn Tracks
-            sind alle in einem ähnlichen Stil gehalten, sie passen wirklich gut
+            von unserem blassblauen Punkt am Nachthimmel. Seine zehn Tracks sind
+            alle in einem ähnlichen Stil gehalten, sie passen wirklich gut
             zusammen, und ich bin ziemlich stolz auf das gesamte Album. Es ist
             eine schöne Erfahrung, es von Anfang bis Ende zu hören &mdash; wie
             ein Konzeptalbum wäre.
           </p>
           <p>
-            Im Titeltrack des Albums, <q>Voyager</q> habe ich auch zum
-            ersten Mal überhaupt <b>gesungen</b> &mdash; und ich bin kein
-            Sänger. Ich bin nicht einmal sicher, ob ich weiß, wie man mit Gesang
-            arbeitet...
+            Im Titeltrack des Albums, <q>Voyager</q> habe ich auch zum ersten
+            Mal überhaupt <b>gesungen</b> &mdash; und ich bin kein Sänger. Ich
+            bin nicht einmal sicher, ob ich weiß, wie man mit Gesang arbeitet...
           </p>
         </SG>
       </section>
@@ -860,21 +898,20 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
         </h3>
         <SG animationName="slide-up" className="md:text-lg my-16 space-y-2">
           <p>
-            Der Eskapismus, den <q>Voyager</q> in künstlerischer Hinsicht
-            bot, hielt jedoch nicht lange an. hielt jedoch nicht lange an. Ich
-            fiel in das dunkle Loch, das man Depression. Kombiniert mit einem
-            langsam schleichenden Burn-out von dem Job, landete ich in einem
-            wirklich traurigen Zustand.
+            Der Eskapismus, den <q>Voyager</q> in künstlerischer Hinsicht bot,
+            hielt jedoch nicht lange an. Ich fiel in das dunkle Loch, das man
+            Depression nennt. Kombiniert mit einem langsam schleichenden
+            Burn-out von Studium und Start-up-Job, landete ich in einem wirklich
+            traurigen Zustand.
           </p>
           <p>
-            Pink Floyd&apos;s <q>Comfortably Numb</q> fängt es
-            wahrscheinlich es am besten ein. Ich beschreibe meinen geistigen
-            Zustand gerne mit Musik. Ich habe eine ziemlich tiefe emotionale
-            Reaktion auf Musik, es ist als würde ich einen Soundtrack für mein
-            eigenes Leben kreieren, indem ich Tracks auswähle, die meinen
-            emotionalen Zustand wiedergeben. Es ist erstaunlich und ich möchte
-            es nicht missen, aber es macht schwierige Situationen noch noch
-            schwieriger.
+            Pink Floyd&apos;s <q>Comfortably Numb</q> fängt es wahrscheinlich es
+            am besten ein. Ich beschreibe meinen geistigen Zustand gerne mit
+            Musik. Ich habe eine ziemlich tiefe emotionale Reaktion auf Musik,
+            es ist als würde ich einen Soundtrack für mein eigenes Leben
+            kreieren, indem ich Tracks auswähle, die meinen emotionalen Zustand
+            wiedergeben. Es ist erstaunlich und ich möchte es nicht missen, aber
+            es macht schwierige Situationen noch noch schwieriger.
           </p>
           <div>
             <Image
@@ -886,10 +923,12 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             ></Image>
           </div>
           <p>
-            <q><b>Sehnsucht</b></q> hat diese schweren, traurigen Töne
-            eingefangen. Das Albumcover ist ein Bild, das mein Großvater gemalt
-            hat und das mir sehr am Herzen liegt (besonders
-            seit er 2023 verstorben ist).
+            <q>
+              <b>Sehnsucht</b>
+            </q>{" "}
+            hat diese schweren, traurigen Töne eingefangen. Das Albumcover ist
+            ein Bild, das mein Großvater gemalt hat und das mir sehr am Herzen
+            liegt (besonders seit er 2023 verstorben ist).
           </p>
           <p>
             Es ist ein rein instrumentales Musikstück, kein Schlagzeug, nur
@@ -903,32 +942,30 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             </a>{" "}
             brilliantem <b>Lekko</b>, Harmonien, Melodien, Melancholie, dem
             Wunsch, mehr zu sein, mehr zu tun, mehr zu erleben, ein Leben zu
-            leben... Es manifestiert auch die Idee von Zeitfenstern und
+            leben... Es manifestiert auch die Idee von Fensters der Zeit und
             Gelegenheiten und greift auf diese Weise die Tatsache auf, dass die
-            Zeit als Mensch begrenzt ist. begrenzt ist. Das ist ein Gedanke, den
-            man nicht hat, solange man <q>jung</q> ist, was auch immer
-            das bedeuten mag, aber in dieser dunklen Zeit fing ich an, mich mit
-            meinem eigenen Älterwerden, mich meiner eigenen Sterblichkeit zu
-            stellen; etwas, das man was man von einem damals 22-Jährigen
-            wahrscheinlich nicht erwarten würde.
+            Zeit als Mensch begrenzt ist. Das ist ein Gedanke, den man nicht
+            hat, solange man <q>jung</q> ist, was auch immer das bedeuten mag,
+            aber in dieser dunklen Zeit fing ich an, mich mit meinem eigenen
+            Älterwerden, meiner eigenen Sterblichkeit zu stellen; etwas, das man
+            was man von einem damals 22-Jährigen wahrscheinlich nicht erwarten
+            würde.
           </p>
           <small>
             Ich war auch manchmal wirklich allein, und dann macht mein Gehirn
             wilde &rbquo;was wäre wenn&ldquo;-Reisen...
           </small>
           <p>
-            <q>Sehnsucht&apos;s</q> central motive (and I&apos;m sorry
-            this is getting a bit heavy, and also relys on understanding some
-            German, but you&apos;ll have to anyways for understanding
-            what&apos;s to come), is the phrase, or rather set of questions
-            <q>Was war? Was ist? Was bleibt?</q> which broadly translates
-            to <q>What has been? What is (now)? What remains?</q>.
-            It&apos;s somewhat indicative of the questions I asked myself:
-            <q>What remains?</q> asks the question I wanted to answer
-            when starting out with making music in 2013. Eight years later, I
-            started reviewing my work. Had i succeeded in making something
-            that&apos;s worth lasting? I honestly can&apos;t tell. But I want it
-            to last.
+            <q>Sehnsucht&apos;s</q> zentrales Motiv (Und es tut mir leid, es
+            wird noch ein bisschen schwerer, und funktioniert auch nur auf
+            Deutsch so richtig), ist die Phrase, oder besser die Fragen
+            <q>Was war? Was ist? Was bleibt?</q>. Es ist irgendwie andeutend für
+            die Fragen, mit denen ich mich selbst beschäftigt habe:
+            <q>Was bleibt?</q> stellt die Frage, die ich beantworten wollte als
+            ich 2013 angefangen habe, Musik zu machen. Acht Jahre später habe
+            ich meine Arbeit hinterfragt: War ich erfolgreich im etwas Schaffen
+            das es wert ist, zu bestehen? Ich weiß es ehrlich gesagt nicht. Aber
+            ich wünsche es mir.
           </p>
           <div>
             <Image

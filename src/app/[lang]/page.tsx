@@ -94,7 +94,7 @@ export default async function Root({
           textColorClass="text-white"
           navigationImageFilter=""
         ></ThemeChanger>
-        <Banner></Banner>
+        {/* <Banner></Banner> */}
         <section className="flex justify-end py-[6.6vmax] lg:py-[1.6vmax] w-full mx-auto overflow-x-visible md:pl-[4vw]">
           <div className="xl:grid grid-cols-2 gap-x-32 md:px-0 justify-center overflow-visible md:pt-64">
             <div className="mb-8 2xl:order-last overflow-x-visible">

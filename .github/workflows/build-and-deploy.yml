@@ -14,7 +14,7 @@ on:
       - v*.*.*
   workflow_dispatch:
     inputs:
-      image tag:
+      image_tag:
         default: latest
         description: Image tag to build and deploy when triggering manually
         type: string
@@ -121,24 +121,30 @@ jobs:
 
       - name: Setup context for kubectl
         run: |
-          kubectl config set-context ${{ secrets.CLUSTER_NAME }} \
+          kubectl config set-context deployer \
             --cluster=${{ secrets.CLUSTER_NAME }} \
             --namespace=${{ secrets.NAMESPACE }} \
-            --user=deployer \
-            --current=true
+            --user=deployer
+          kubectl config use-context deployer
 
-      - if: ${{ github.event }} == "push" ${{ github.ref_type }} == "branch"
+      - if: ${{ github.event_name }} == "push" ${{ github.ref_type }} == "branch"
         name: Set image in deployment to ${{ env.IMAGE_NAME}}:${{ github.sha }}
         run: >-
           kubectl set image deployment ${{ env.DEPLOYMENT_NAME }}
           ${{ env.CONTAINER_NAME }}=${{ env.IMAGE_NAME }}:${{ github.sha }}
 
-      - if: ${{ github.event }} == "push" && ${{ github.ref_type }} == "tag"
-        name: Set image in deployment to ${{ env.IMAGE_NAME}}:${{ github.ref_name }}
+      - if: ${{ github.event_name }} == "push" && ${{ github.ref_type }} == "tag"
+        name: Set image in deployment to ${{ env.IMAGE_NAME }}:${{ github.ref_name }}
         run: >-
           kubectl set image deployment ${{ env.DEPLOYMENT_NAME }}
           ${{ env.CONTAINER_NAME }}=${{ env.IMAGE_NAME }}:${{ github.ref_name }}
 
+      - if: ${{ github.event_name }} == "workflow_dispatch"
+        name: Set image in deployment to ${{ env.IMAGE_NAME }}:${{ inputs.image_tag }}
+        run: >-
+          kubectl set image deployment ${{ env.DEPLOYMENT_NAME }}
+          ${{ env.CONTAINER_NAME }}=${{ env.IMAGE_NAME }}:${{ inputs.image_tag }}
+  
       - name: Wait for deployment progression
         run: kubectl rollout status deployment/${{ env.DEPLOYMENT_NAME }} --timeout=2m
 

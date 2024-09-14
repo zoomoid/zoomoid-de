@@ -56,9 +56,8 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=sha,value=latest
+            type=sha,value=latest,prefix=sha/
             type=semver,pattern={{version}}
-            type=edge,
           flavor: |
 
 

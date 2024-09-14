@@ -154,7 +154,7 @@ jobs:
         run: kubectl rollout status deployment/${{ env.DEPLOYMENT_NAME }} --timeout=2m
 
       - name: Show namespace status
-        run: kubectl get deployments,pods,services,ingresses -l app.kubernetes.io/name=${{ env.DEPLOYMENT_NAME }}
+        run: kubectl get deployments,pods,endpoints,services,ingresses -l app.kubernetes.io/name=${{ env.DEPLOYMENT_NAME }}
 
-      - name: Show events in namespace
+      - name: Show events for deployment
         run: kubectl events --for=deployment/${{ env.DEPLOYMENT_NAME }}

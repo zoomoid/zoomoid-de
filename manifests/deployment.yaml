@@ -4,6 +4,9 @@ metadata:
   name: zoomoid-de
 spec:
   selector: {}
+  revisionHistoryLimit: 3
+  minReadySeconds: 15
+  progressDeadlineSeconds: 300
   template:
     spec:
       securityContext:
@@ -21,8 +24,11 @@ spec:
             runAsNonRoot: true
           resources:
             limits:
-              memory: "1Gi"
-              cpu: "1000m"
+              memory: 1Gi
+              cpu: 1000m
+            requests:
+              memory: 200Mi
+              cpu: 100m
           ports:
             - containerPort: 3000
               name: http

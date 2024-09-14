@@ -42,8 +42,6 @@ RUN corepack enable && yarn set version berry
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
-COPY --from=builder /app/public ./public
-
 # Set the correct permission for prerender cache
 RUN mkdir .next
 RUN chown nextjs:nodejs .next
@@ -51,11 +49,11 @@ RUN chown nextjs:nodejs .next
 # Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=deps --chown=nextjs:nodejs /app/.pnp.* /app/.yarnrc.yml /app/package.json /app/yarn.lock* ./
-COPY --from=deps --chown=nextjs:nodejs /app/.yarn ./.yarn
-COPY --from=deps --chown=nextjs:nodejs /app/.yarnrc.yml ./.yarnrc.yml
+COPY --from=deps --chown=nextjs:nodejs /app/.yarn ./.yarn/
 
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./.next/standalone
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/standalone/.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/public ./.next/standalone/public
 
 USER nextjs
 
@@ -67,4 +65,4 @@ ENV HOSTNAME="0.0.0.0"
 
 # server.js is created by next build from the standalone output
 # https://nextjs.org/docs/pages/api-reference/next-config-js/output
-CMD ["yarn", "node", "server.js"]
+CMD ["yarn", "node", ".next/standalone/server.js"]

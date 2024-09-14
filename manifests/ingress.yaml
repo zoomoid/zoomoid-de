@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: zoomoid-de
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-production-dns01"
+    kubernetes.io/tls-acme: "true"
+spec:
+  rules:
+    - host: zoomoid-de
+      http: &http
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: zoomoid-de
+                port:
+                  number: 80
+    - host: www.zoomoid.de
+      http: *http
+  tls:
+    - hosts:
+        - zoomoid.de
+        - www.zoomoid.de
+      secretName: zoomoid-de-tls

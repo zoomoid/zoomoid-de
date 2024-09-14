@@ -7,7 +7,7 @@ metadata:
     kubernetes.io/tls-acme: "true"
 spec:
   rules:
-    - host: zoomoid-de
+    - host: zoomoid.de
       http: &http
         paths:
           - pathType: Prefix

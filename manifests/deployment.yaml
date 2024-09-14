@@ -21,8 +21,8 @@ spec:
             runAsNonRoot: true
           resources:
             limits:
-              memory: "128Mi"
-              cpu: "500m"
+              memory: "1Gi"
+              cpu: "1000m"
           ports:
             - containerPort: 3000
               name: http

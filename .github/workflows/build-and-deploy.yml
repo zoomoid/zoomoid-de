@@ -125,7 +125,7 @@ jobs:
         run: |
           kubectl config set-context deployer \
             --cluster=${{ secrets.CLUSTER_NAME }} \
-            --namespace=${{ env.NAMESPACE }} \
+            --namespace=${{ vars.NAMESPACE }} \
             --user=deployer
           kubectl config use-context deployer
 

@@ -7,8 +7,8 @@ name: Build container image
 
 on:
   push:
-    branches:
-      - main
+    # branches:
+    #   - main
     # Publish semver tags as releases.
     tags:
       - v*.*.*

@@ -7,15 +7,18 @@ spec:
   template:
     spec:
       securityContext:
+        runAsGroup: 1000
+        runAsUser: 1001
         runAsNonRoot: true
       containers:
         - name: zoomoid-de
           image: ghcr.io/zoomoid/zoomoid-de:latest
           securityContext:
+            runAsGroup: 1000
+            runAsUser: 1001
             privileged: false
             allowPrivilegeEscalation: false
             runAsNonRoot: true
-            readOnlyRootFilesystem: true
           resources:
             limits:
               memory: "128Mi"

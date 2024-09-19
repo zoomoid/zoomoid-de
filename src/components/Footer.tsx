@@ -39,7 +39,7 @@ const streaming: FooterItem[] = [
 
 type FooterProps = PropsWithChildren<{}>;
 
-export default function Footer({ children }: FooterProps) {
+export default function Footer({ children, lang }: FooterProps & { lang: string }) {
   return (
     <footer className=" text-white relative z-10">
       <div
@@ -51,7 +51,7 @@ export default function Footer({ children }: FooterProps) {
       <div className="flex justify-end mx-auto pt-16 pb-16 bg-black px-[4vw]">
         <div className="w-full md:grid-cols-12 font-medium tracking-wide grid gap-y-8">
           <div className="col-span-3">
-            <Link href="/" className="h-8 relative">
+            <Link href={`/${lang}/`} className="h-8 relative">
               <Image
                 alt="Zoomoid Logo"
                 src="/img/logo_bar.png"

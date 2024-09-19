@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ThemeContext } from "@/context/theme.context";
 export type NavigationProps = PropsWithChildren<{}>;
 
-export default function Navigation({ children }: NavigationProps) {
+export default function Navigation({ children, lang }: NavigationProps & { lang: string }) {
   const {
     state: { navigationImageFilter },
   } = useContext(ThemeContext);
@@ -16,7 +16,7 @@ export default function Navigation({ children }: NavigationProps) {
       <div className="px-[4vw] py-[3vw] flex items-center">
         <nav className="flex-wrap flex-grow gap-4 tracking-wide flex justify-between relative">
           <div className="font-sans text-xl font-semibold">
-            <Link href="/" className="h-8 relative">
+            <Link href={`/${lang}/`} className="h-8 relative">
               <Image
                 alt="Zoomoid Logo"
                 src="/img/logo_bar.png"

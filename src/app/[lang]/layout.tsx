@@ -32,8 +32,10 @@ export default async function LocalizedPageLayout({
     <Locales current={params.lang} locales={locales}></Locales>
   );
 
-  const navigationElement = <Navigation>{LocaleSwitcher}</Navigation>;
-  const footerElement = <Footer>{LocaleSwitcher}</Footer>;
+  const navigationElement = (
+    <Navigation lang={params.lang}>{LocaleSwitcher}</Navigation>
+  );
+  const footerElement = <Footer lang={params.lang}>{LocaleSwitcher}</Footer>;
 
   return (
     <html lang={params.lang}>

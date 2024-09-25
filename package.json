@@ -1,6 +1,6 @@
 {
   "name": "zoomoid-de",
-  "version": "2024.09.19",
+  "version": "2024.09.25",
   "private": true,
   "scripts": {
     "dev": "next dev",

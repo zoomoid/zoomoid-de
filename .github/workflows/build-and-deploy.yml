@@ -45,6 +45,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
       # Set up BuildKit Docker container builder to be able to build
       # multi-platform images and export cache
       # https://github.com/docker/setup-buildx-action
@@ -72,7 +75,6 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=semver,pattern={{raw}}
-            type=sha,prefix=,format=long
             type=raw,value=latest,enable={{is_default_branch}}
 
       # Build and push Docker image with Buildx (don't push on PR)
@@ -139,13 +141,13 @@ jobs:
       - name: Check authentication
         run: kubectl auth whoami
 
-      - if: ${{ github.event_name == 'push' && github.ref_type == 'branch' }}
-        name: Set image in deployment to ${{ env.IMAGE_NAME}}:${{ github.sha }}
-        env:
-          CONTAINER_IMAGE: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-        run: >-
-          kubectl set image deployment ${{ env.DEPLOYMENT_NAME }}
-          ${{ env.CONTAINER_NAME }}=${{ env.CONTAINER_IMAGE }}:${{ github.sha }}
+      # - if: ${{ github.event_name == 'push' && github.ref_type == 'branch' }}
+      #   name: Set image in deployment to ${{ env.IMAGE_NAME}}:${{ github.sha }}
+      #   env:
+      #     CONTAINER_IMAGE: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+      #   run: >-
+      #     kubectl set image deployment ${{ env.DEPLOYMENT_NAME }}
+      #     ${{ env.CONTAINER_NAME }}=${{ env.CONTAINER_IMAGE }}:${{ github.sha }}
 
       - if: ${{ github.event_name == 'push' && github.ref_type == 'tag' }}
         name: Set image in deployment to ${{ env.CONTAINER_IMAGE }}:${{ github.ref_name }}
@@ -155,13 +157,13 @@ jobs:
           kubectl set image deployment ${{ env.DEPLOYMENT_NAME }}
           ${{ env.CONTAINER_NAME }}=${{ env.CONTAINER_IMAGE }}:${{ github.ref_name }}
 
-      - if: ${{ github.event_name == 'workflow_dispatch' }}
-        name: Set image in deployment to ${{ env.IMAGE_NAME }}:${{ inputs.image_tag }}
-        env:
-          CONTAINER_IMAGE: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-        run: >-
-          kubectl set image deployment ${{ env.DEPLOYMENT_NAME }}
-          ${{ env.CONTAINER_NAME }}=${{ env.IMAGE_NAME }}:${{ inputs.image_tag }}
+      # - if: ${{ github.event_name == 'workflow_dispatch' }}
+      #   name: Set image in deployment to ${{ env.IMAGE_NAME }}:${{ inputs.image_tag }}
+      #   env:
+      #     CONTAINER_IMAGE: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+      #   run: >-
+      #     kubectl set image deployment ${{ env.DEPLOYMENT_NAME }}
+      #     ${{ env.CONTAINER_NAME }}=${{ env.IMAGE_NAME }}:${{ inputs.image_tag }}
 
       - name: Wait for deployment progression
         run: kubectl rollout status deployment/${{ env.DEPLOYMENT_NAME }} --timeout=2m

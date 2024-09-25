@@ -3,7 +3,6 @@ import { Locale } from "@/i18n";
 import { Viewport, type Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Banner from "./all-things-must-end/Banner";
 
 export const metadata: Metadata = {
   title: "Zoomoid",

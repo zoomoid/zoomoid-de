@@ -147,9 +147,9 @@ const tracksEN: Track[] = [
         <p>
           <q>Illusions</q> is a track I wrote over the course of a weekend. I
           started out on a friday evening with an idea for something that got
-          inspired by previous track such as the &ldquo;Im Schatten der
-          Nacht&rdquo; EP, <q>Voyager</q> tracks and more. By sunday afternoon,
-          I had a fully-arranged and mixed track.
+          inspired by previous track such as the <q>Im Schatten der Nacht</q>{" "}
+          EP, <q>Voyager</q> tracks and more. By sunday afternoon, I had a
+          fully-arranged and mixed track.
         </p>
         <p>
           When the drums fade away in the middle part of the track to reveal the
@@ -273,12 +273,12 @@ const tracksEN: Track[] = [
           >
             Mellotron
           </a>{" "}
-          and the pluck sound of Porter Robinson&apos;s &ldquo;Sad
-          Machine&rdquo;, also picking up its melody on the last few notes. I
-          still think that <q>Worlds</q>, which included &ldquo;Sad
-          Machine&rdquo; is one of best album ever made, and having passed on
-          the opportunity to see him perform it live is one of those{" "}
-          <b>Windows of Opportunity</b> that I&apos;ve missed in life.
+          and the pluck sound of Porter Robinson&apos;s <q>Sad Machine</q>, also
+          picking up its melody on the last few notes. I still think that{" "}
+          <q>Worlds</q>, which included <q>Sad Machine</q> is one of best album
+          ever made, and having passed on the opportunity to see him perform it
+          live is one of those <b>Windows of Opportunity</b> that I&apos;ve
+          missed in life.
         </p>
       </>
     ),
@@ -505,7 +505,7 @@ const tracksDE: Track[] = [
         <p>
           Die klangliche Atmosphäre dieses Tracks besteht aus ausgedehntem Hall,
           bekannten Sounds von früheren Zoomoid-Veröffentlichungen, stark
-          verzerrt und moduliert, um in <q>Angst vor der Zukunft</q>
+          verzerrt und moduliert, um in <q>Angst vor der Zukunft</q>{" "}
           überzugehen.
         </p>
       </>
@@ -526,15 +526,15 @@ const tracksDE: Track[] = [
           <q>Angst vor der Zukunft</q> befasst sich auch mit dem Verständnis von
           Zeit, wenn auch vollständig subjektiv. Ich habe das Gefühl, dass mir
           die Zeit davonläuft. Nicht für eine bestimmte Sache. Nur ganz
-          allgemein... &bdquo;Wie kann man Zeit haben, wenn sie dich eindeutig
-          hat&ldquo;.
+          allgemein...{" "}
+          <q>Wie kann man Zeit haben, wenn sie dich eindeutig hat</q>.
         </p>
         <p>
           <q>Angst vor der Zukunft</q> ist ein Verweis auf einige andere
           wichtige Zoomoid-Veröffentlichungen. Seine Wurzeln gehen zurück auf
           Tracks wie <q>Wild World</q>, die sanftere Seite von <q>Voyager</q>,
-          vor allem aber auf &bdquo;Shades of Yellow&ldquo;. Das Motiv von
-          beiden Tracks ist das gleiche, beide kreisen um das zentrale Zitat aus{" "}
+          vor allem aber auf <q>Shades of Yellow</q>. Das Motiv von beiden
+          Tracks ist das gleiche, beide kreisen um das zentrale Zitat aus{" "}
           <q>Dark</q>, aber dieses Mal bin ich es, der die Worte sagt, als ob
           sie dadurch mehr Gewicht bekämen. Der Teil verwendet sogar die
           gleichen Instrumente wie im Original, <q>Shades of Yellow</q>, auch
@@ -549,12 +549,12 @@ const tracksDE: Track[] = [
       <>
         <p>
           <q>Angst vor der Zukunft</q> geht über in einen weiteren
-          überarbeiteten Zoomoid-Track, <q>Outer Space</q>. &bdquo;Outer
-          Space&ldquo; wurde ursprünglich auf der Extended Edition von
-          <q>Eigenräume</q>. Es war ein Techno-Track, aber ein melodischer, der
-          auch perfekt auf <q>Voyager</q> gepasst hätte. Er wurde später neu
-          gemastert und in einer längeren Mix-Version auf dem Album{" "}
-          <q>301 Permanently Moving</q> EP.
+          überarbeiteten Zoomoid-Track, <q>Outer Space</q>. <q>Outer Space</q>{" "}
+          wurde ursprünglich auf der Extended Edition von <q>Eigenräume</q>. Es
+          war ein Techno-Track, aber ein melodischer, der auch perfekt auf{" "}
+          <q>Voyager</q> gepasst hätte. Er wurde später neu gemastert und in
+          einer längeren Mix-Version auf dem Album <q>301 Permanently Moving</q>{" "}
+          EP.
         </p>
         <p>
           Im Jahr 2021 veröffentlichte ich <q>Sehnsucht</q>, das vollständig

@@ -27,7 +27,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@formatjs/intl-localematcher", "npm:0.5.4"],\
+          ["@formatjs/intl-localematcher", "npm:0.5.5"],\
           ["@types/negotiator", "npm:0.6.3"],\
           ["@types/node", "npm:22.7.4"],\
           ["@types/react", "npm:18.3.11"],\
@@ -181,11 +181,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@formatjs/intl-localematcher", [\
-      ["npm:0.5.4", {\
-        "packageLocation": "./.yarn/cache/@formatjs-intl-localematcher-npm-0.5.4-e30cfcd8fd-780cb29b42.zip/node_modules/@formatjs/intl-localematcher/",\
+      ["npm:0.5.5", {\
+        "packageLocation": "./.yarn/cache/@formatjs-intl-localematcher-npm-0.5.5-a392a08f1d-179069eb3a.zip/node_modules/@formatjs/intl-localematcher/",\
         "packageDependencies": [\
-          ["@formatjs/intl-localematcher", "npm:0.5.4"],\
-          ["tslib", "npm:2.6.3"]\
+          ["@formatjs/intl-localematcher", "npm:0.5.5"],\
+          ["tslib", "npm:2.7.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5139,6 +5139,13 @@ const RAW_RUNTIME_STATE =
           ["tslib", "npm:2.6.3"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:2.7.0", {\
+        "packageLocation": "./.yarn/cache/tslib-npm-2.7.0-21668f5c21-9a5b47ddac.zip/node_modules/tslib/",\
+        "packageDependencies": [\
+          ["tslib", "npm:2.7.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["type-check", [\
@@ -5444,7 +5451,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["zoomoid-de", "workspace:."],\
-          ["@formatjs/intl-localematcher", "npm:0.5.4"],\
+          ["@formatjs/intl-localematcher", "npm:0.5.5"],\
           ["@types/negotiator", "npm:0.6.3"],\
           ["@types/node", "npm:22.7.4"],\
           ["@types/react", "npm:18.3.11"],\

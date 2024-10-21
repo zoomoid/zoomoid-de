@@ -31,7 +31,7 @@ const RAW_RUNTIME_STATE =
           ["@types/negotiator", "npm:0.6.3"],\
           ["@types/node", "npm:22.7.5"],\
           ["@types/react", "npm:18.3.11"],\
-          ["@types/react-dom", "npm:18.3.0"],\
+          ["@types/react-dom", "npm:18.3.1"],\
           ["autoprefixer", "virtual:b71f7cf95ce8194aa12b3212aaad4f06a1d34f174bacbe2f960179121bf9035ec863ec861b3f9378b57b85e4969d04e74ebcfb4755e6ae3ee2be7e5de2995ab8#npm:10.4.20"],\
           ["eslint", "virtual:b71f7cf95ce8194aa12b3212aaad4f06a1d34f174bacbe2f960179121bf9035ec863ec861b3f9378b57b85e4969d04e74ebcfb4755e6ae3ee2be7e5de2995ab8#npm:9.12.0"],\
           ["eslint-config-next", "virtual:b71f7cf95ce8194aa12b3212aaad4f06a1d34f174bacbe2f960179121bf9035ec863ec861b3f9378b57b85e4969d04e74ebcfb4755e6ae3ee2be7e5de2995ab8#npm:14.2.15"],\
@@ -758,10 +758,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/react-dom", [\
-      ["npm:18.3.0", {\
-        "packageLocation": "./.yarn/cache/@types-react-dom-npm-18.3.0-111444d3eb-6ff53f5a7b.zip/node_modules/@types/react-dom/",\
+      ["npm:18.3.1", {\
+        "packageLocation": "./.yarn/cache/@types-react-dom-npm-18.3.1-15935b4e84-33f9ba79b2.zip/node_modules/@types/react-dom/",\
         "packageDependencies": [\
-          ["@types/react-dom", "npm:18.3.0"],\
+          ["@types/react-dom", "npm:18.3.1"],\
           ["@types/react", "npm:18.3.3"]\
         ],\
         "linkType": "HARD"\
@@ -3796,7 +3796,7 @@ const RAW_RUNTIME_STATE =
           ["@types/opentelemetry__api", null],\
           ["@types/playwright__test", null],\
           ["@types/react", "npm:18.3.11"],\
-          ["@types/react-dom", "npm:18.3.0"],\
+          ["@types/react-dom", "npm:18.3.1"],\
           ["@types/sass", null],\
           ["busboy", "npm:1.6.0"],\
           ["caniuse-lite", "npm:1.0.30001640"],\
@@ -5496,7 +5496,7 @@ const RAW_RUNTIME_STATE =
           ["@types/negotiator", "npm:0.6.3"],\
           ["@types/node", "npm:22.7.5"],\
           ["@types/react", "npm:18.3.11"],\
-          ["@types/react-dom", "npm:18.3.0"],\
+          ["@types/react-dom", "npm:18.3.1"],\
           ["autoprefixer", "virtual:b71f7cf95ce8194aa12b3212aaad4f06a1d34f174bacbe2f960179121bf9035ec863ec861b3f9378b57b85e4969d04e74ebcfb4755e6ae3ee2be7e5de2995ab8#npm:10.4.20"],\
           ["eslint", "virtual:b71f7cf95ce8194aa12b3212aaad4f06a1d34f174bacbe2f960179121bf9035ec863ec861b3f9378b57b85e4969d04e74ebcfb4755e6ae3ee2be7e5de2995ab8#npm:9.12.0"],\
           ["eslint-config-next", "virtual:b71f7cf95ce8194aa12b3212aaad4f06a1d34f174bacbe2f960179121bf9035ec863ec861b3f9378b57b85e4969d04e74ebcfb4755e6ae3ee2be7e5de2995ab8#npm:14.2.15"],\

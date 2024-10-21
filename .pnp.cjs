@@ -29,7 +29,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@formatjs/intl-localematcher", "npm:0.5.5"],\
           ["@types/negotiator", "npm:0.6.3"],\
-          ["@types/node", "npm:22.7.5"],\
+          ["@types/node", "npm:22.7.7"],\
           ["@types/react", "npm:18.3.11"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["autoprefixer", "virtual:b71f7cf95ce8194aa12b3212aaad4f06a1d34f174bacbe2f960179121bf9035ec863ec861b3f9378b57b85e4969d04e74ebcfb4755e6ae3ee2be7e5de2995ab8#npm:10.4.20"],\
@@ -719,10 +719,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/node", [\
-      ["npm:22.7.5", {\
-        "packageLocation": "./.yarn/cache/@types-node-npm-22.7.5-0428b60a8c-e8ba102f8c.zip/node_modules/@types/node/",\
+      ["npm:22.7.7", {\
+        "packageLocation": "./.yarn/cache/@types-node-npm-22.7.7-4485163f4e-ada6c5f850.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:22.7.5"],\
+          ["@types/node", "npm:22.7.7"],\
           ["undici-types", "npm:6.19.8"]\
         ],\
         "linkType": "HARD"\
@@ -5494,7 +5494,7 @@ const RAW_RUNTIME_STATE =
           ["zoomoid-de", "workspace:."],\
           ["@formatjs/intl-localematcher", "npm:0.5.5"],\
           ["@types/negotiator", "npm:0.6.3"],\
-          ["@types/node", "npm:22.7.5"],\
+          ["@types/node", "npm:22.7.7"],\
           ["@types/react", "npm:18.3.11"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["autoprefixer", "virtual:b71f7cf95ce8194aa12b3212aaad4f06a1d34f174bacbe2f960179121bf9035ec863ec861b3f9378b57b85e4969d04e74ebcfb4755e6ae3ee2be7e5de2995ab8#npm:10.4.20"],\

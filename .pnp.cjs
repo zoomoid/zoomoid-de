@@ -27,7 +27,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@formatjs/intl-localematcher", "npm:0.5.5"],\
+          ["@formatjs/intl-localematcher", "npm:0.5.6"],\
           ["@types/negotiator", "npm:0.6.3"],\
           ["@types/node", "npm:22.8.1"],\
           ["@types/react", "npm:18.3.12"],\
@@ -181,11 +181,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@formatjs/intl-localematcher", [\
-      ["npm:0.5.5", {\
-        "packageLocation": "./.yarn/cache/@formatjs-intl-localematcher-npm-0.5.5-a392a08f1d-179069eb3a.zip/node_modules/@formatjs/intl-localematcher/",\
+      ["npm:0.5.6", {\
+        "packageLocation": "./.yarn/cache/@formatjs-intl-localematcher-npm-0.5.6-24aa98c5b4-14eac6bb25.zip/node_modules/@formatjs/intl-localematcher/",\
         "packageDependencies": [\
-          ["@formatjs/intl-localematcher", "npm:0.5.5"],\
-          ["tslib", "npm:2.7.0"]\
+          ["@formatjs/intl-localematcher", "npm:0.5.6"],\
+          ["tslib", "npm:2.8.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5105,10 +5105,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:2.7.0", {\
-        "packageLocation": "./.yarn/cache/tslib-npm-2.7.0-21668f5c21-9a5b47ddac.zip/node_modules/tslib/",\
+      ["npm:2.8.0", {\
+        "packageLocation": "./.yarn/cache/tslib-npm-2.8.0-6ce3ffdd05-1bc7c43937.zip/node_modules/tslib/",\
         "packageDependencies": [\
-          ["tslib", "npm:2.7.0"]\
+          ["tslib", "npm:2.8.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5423,7 +5423,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["zoomoid-de", "workspace:."],\
-          ["@formatjs/intl-localematcher", "npm:0.5.5"],\
+          ["@formatjs/intl-localematcher", "npm:0.5.6"],\
           ["@types/negotiator", "npm:0.6.3"],\
           ["@types/node", "npm:22.8.1"],\
           ["@types/react", "npm:18.3.12"],\

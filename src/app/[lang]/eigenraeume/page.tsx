@@ -3,12 +3,16 @@ import { type Release } from "@/components/ReleaseScaffolding";
 import { type Locale } from "@/i18n";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 };
 
-export default async function Page({ params: { lang } }: PageProps) {
+export default async function Page(props: PageProps) {
+  const params = await props.params;
+
+  const { lang } = params;
+
   const release: Release = {
     title: "Eigenräume",
     date: new Date(2019, 8, 9),
@@ -28,7 +32,7 @@ export default async function Page({ params: { lang } }: PageProps) {
         url: "/img/eigenräume_pre.jpg",
         height: 1500,
         width: 1500,
-        className: "scale-90 shadow-neutral-800/50"
+        className: "scale-90 shadow-neutral-800/50",
       },
     ],
     links: [
@@ -82,22 +86,30 @@ function DescriptionEN() {
   return (
     <div className="space-y-2 text-lg">
       <p>
-        <b><q>Eigenräume</q></b> is a twin-release concept album released
-        in 2019. The first 6-track version of the album is called{" "}
-        <b>Standard Edition</b> (with the black cover) was released on May 14th,
-        2019, which featured the core tracks of the full album in their
-        standalone versions. The longer 11-track version is called{" "}
-        <b>Extended Edition</b> (with the red cover), features concept edits of
-        the 6 tracks of the <b>Standard Edition</b>, as well as 5 other tracks
-        that frame the album&apos;s pinnacle position as the Zoomoid style.
+        <b>
+          <q>Eigenräume</q>
+        </b>{" "}
+        is a twin-release concept album released in 2019. The first 6-track
+        version of the album is called <b>Standard Edition</b> (with the black
+        cover) was released on May 14th, 2019, which featured the core tracks of
+        the full album in their standalone versions. The longer 11-track version
+        is called <b>Extended Edition</b> (with the red cover), features concept
+        edits of the 6 tracks of the <b>Standard Edition</b>, as well as 5 other
+        tracks that frame the album&apos;s pinnacle position as the Zoomoid
+        style.
       </p>
       <p>
-        <b><q>Eigenräume (Extended Edition)</q></b> is my 2019&apos;s main
-        release, with 11 tracks (again), intro and outro, and seamless blending
-        of tracks (at least on the first 7 tracks)! It also features 3 tracks
-        that were written after the original concept album was created, but
-        seemed to fit the overall context. In particular, I&apos;m proud of{" "}
-        <b><q>Outer Space</q></b>
+        <b>
+          <q>Eigenräume (Extended Edition)</q>
+        </b>{" "}
+        is my 2019&apos;s main release, with 11 tracks (again), intro and outro,
+        and seamless blending of tracks (at least on the first 7 tracks)! It
+        also features 3 tracks that were written after the original concept
+        album was created, but seemed to fit the overall context. In particular,
+        I&apos;m proud of{" "}
+        <b>
+          <q>Outer Space</q>
+        </b>
       </p>
     </div>
   );
@@ -107,24 +119,30 @@ function DescriptionDE() {
   return (
     <div className="space-y-2 text-lg">
       <p>
-        <b><q>Eigenräume</q></b> ist ein Konzeptalbum aus 2019 mit
-        Zwillings-Release. Die erste Version mit 6 Tracks heißt{" "}
-        <b>Standard Edition</b> (mit dem schwarzen Cover) und wurde am 19. Mai
-        2019 veröffentlicht. Sie enthält die Kernstücke des vollen Albums in
-        ihrer Einzelfassung. The längere 11-Titel-Version heißt{" "}
+        <b>
+          <q>Eigenräume</q>
+        </b>{" "}
+        ist ein Konzeptalbum aus 2019 mit Zwillings-Release. Die erste Version
+        mit 6 Tracks heißt <b>Standard Edition</b> (mit dem schwarzen Cover) und
+        wurde am 19. Mai 2019 veröffentlicht. Sie enthält die Kernstücke des
+        vollen Albums in ihrer Einzelfassung. The längere 11-Titel-Version heißt{" "}
         <b>Extended Edition</b> (mit dem roten Cover) und beinhaltet the
         Konzeptversionen der sechs Kerntitel der <b>Standard Edition</b>, sowie
         fünf weitere Tracks, die die Wichtigkeit des Albums auf den Zoomoid-Stil
         hervorheben.
       </p>
       <p>
-        <b><q>Eigenräume (Extended Edition)</q></b> ist meine
-        Hauptveröffentlichung für 2019, mit (erneut) elf Tracks, Intro, Outro,
-        und dem nahtlosen Überblenden (zumindest für die ersten sieben Tracks)!
-        Sie beinhaltet außerdem drei Tracks, die erst nach der Veröffentlichung
-        der <b>Standard Edition</b> geschrieben wurden, aber trotzdem in das
-        Konzept passten. Ich bin besonders stolz auf{" "}
-        <b><q>Outer Space</q></b>
+        <b>
+          <q>Eigenräume (Extended Edition)</q>
+        </b>{" "}
+        ist meine Hauptveröffentlichung für 2019, mit (erneut) elf Tracks,
+        Intro, Outro, und dem nahtlosen Überblenden (zumindest für die ersten
+        sieben Tracks)! Sie beinhaltet außerdem drei Tracks, die erst nach der
+        Veröffentlichung der <b>Standard Edition</b> geschrieben wurden, aber
+        trotzdem in das Konzept passten. Ich bin besonders stolz auf{" "}
+        <b>
+          <q>Outer Space</q>
+        </b>
       </p>
     </div>
   );

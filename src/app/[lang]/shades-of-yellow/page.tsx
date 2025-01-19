@@ -3,12 +3,16 @@ import { type Release } from "@/components/ReleaseScaffolding";
 import { type Locale } from "@/i18n";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 };
 
-export default async function Page({ params: { lang } }: PageProps) {
+export default async function Page(props: PageProps) {
+  const params = await props.params;
+
+  const { lang } = params;
+
   const release: Release = {
     title: "Shades Of Yellow",
     date: new Date(2020, 4, 1),
@@ -58,11 +62,14 @@ export default async function Page({ params: { lang } }: PageProps) {
 function DescriptionEN() {
   return (
     <p className="md:text-lg">
-      <b><q>Shades Of Yellow</q></b> is an emotional ode to the
-      relationship I have with the color <b>yellow</b> and the closest thing
-      I&apos;ve come to writing a <b>love song</b>. Both tracks move me in a very
-      special way, and there are many many memories attached to them. I know
-      some other people do as well and <b>I hope, you can, too.</b>
+      <b>
+        <q>Shades Of Yellow</q>
+      </b>{" "}
+      is an emotional ode to the relationship I have with the color{" "}
+      <b>yellow</b> and the closest thing I&apos;ve come to writing a{" "}
+      <b>love song</b>. Both tracks move me in a very special way, and there are
+      many many memories attached to them. I know some other people do as well
+      and <b>I hope, you can, too.</b>
     </p>
   );
 }
@@ -70,12 +77,15 @@ function DescriptionEN() {
 function DescriptionDE() {
   return (
     <p className="md:text-lg">
-      <b><q>Shades Of Yellow</q></b> ist eine emotionale Ode an die
-      Beziehung die ich zu der Farbe <b>gelb</b> habe, und das nächste, was ich
-      bisher dem Schreiben eines <b>Liebeslied</b> gekommen bin. Beide Tracks
-      bewegen mich auf eine besondere Art und Weise, und es sind so viele
-      Erinnerungen in sie eingebettet. Ich weiß, dass ein paar andere Leute das
-      auch tun und <b>ich hoffe, du kannst das auch.</b>
+      <b>
+        <q>Shades Of Yellow</q>
+      </b>{" "}
+      ist eine emotionale Ode an die Beziehung die ich zu der Farbe <b>gelb</b>{" "}
+      habe, und das nächste, was ich bisher dem Schreiben eines{" "}
+      <b>Liebeslied</b> gekommen bin. Beide Tracks bewegen mich auf eine
+      besondere Art und Weise, und es sind so viele Erinnerungen in sie
+      eingebettet. Ich weiß, dass ein paar andere Leute das auch tun und{" "}
+      <b>ich hoffe, du kannst das auch.</b>
     </p>
   );
 }

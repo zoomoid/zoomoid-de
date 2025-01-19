@@ -3,12 +3,16 @@ import { type Release } from "@/components/ReleaseScaffolding";
 import { type Locale } from "@/i18n";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 };
 
-export default async function Page({ params: { lang } }: PageProps) {
+export default async function Page(props: PageProps) {
+  const params = await props.params;
+
+  const { lang } = params;
+
   const release: Release = {
     title: "Voyager",
     date: new Date(2020, 9, 30),
@@ -61,11 +65,14 @@ export default async function Page({ params: { lang } }: PageProps) {
 function DescriptionEN() {
   return (
     <p className="md:text-lg">
-      <b><q>Voyager</q></b> is a journey away from earth into the
-      darkness of space to discover the beauty of emptiness both inside and
-      around me. Let yourself be taken away by an hour of listening experience
-      of <b>many-faced techno and trance sounds</b>. Voyager is the most
-      holistic Zoomoid release yet, and I&apos;m very proud of it!
+      <b>
+        <q>Voyager</q>
+      </b>{" "}
+      is a journey away from earth into the darkness of space to discover the
+      beauty of emptiness both inside and around me. Let yourself be taken away
+      by an hour of listening experience of{" "}
+      <b>many-faced techno and trance sounds</b>. Voyager is the most holistic
+      Zoomoid release yet, and I&apos;m very proud of it!
     </p>
   );
 }
@@ -73,12 +80,15 @@ function DescriptionEN() {
 function DescriptionDE() {
   return (
     <p className="md:text-lg">
-      <b><q>Voyager</q></b> ist eine Reise weg von der Erde in die
-      Dunkelheit des Weltalls, um die Schönheit der Leere sowohl in mir als auch
-      um mich herum zu entdecken. Lass dich mitnehmen auf eine Stunde
-      Hörerlebnis mit <b>vielgesichtigen Techno- und Trance-Sounds</b>. Voyager
-      ist die bisher ganzheitlichste Zoomoid-Veröffentlichung bisher, und ich
-      bin sehr stolz darauf!
+      <b>
+        <q>Voyager</q>
+      </b>{" "}
+      ist eine Reise weg von der Erde in die Dunkelheit des Weltalls, um die
+      Schönheit der Leere sowohl in mir als auch um mich herum zu entdecken.
+      Lass dich mitnehmen auf eine Stunde Hörerlebnis mit{" "}
+      <b>vielgesichtigen Techno- und Trance-Sounds</b>. Voyager ist die bisher
+      ganzheitlichste Zoomoid-Veröffentlichung bisher, und ich bin sehr stolz
+      darauf!
     </p>
   );
 }

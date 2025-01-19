@@ -6,9 +6,9 @@ import Opening from "./Opening";
 import styles from "./styles.module.css";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 };
 
 export const metadata: Metadata = {
@@ -35,7 +35,7 @@ export const viewport: Viewport = {
   width: "device-width",
 };
 
-export default async function Page({ params: { lang } }: PageProps) {
+export default async function Page() {
   return (
     <main
       className={styles.page}

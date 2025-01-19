@@ -16,15 +16,20 @@ export async function generateStaticParams() {
 }
 
 type LocalizedPageProps = {
-  params: {
-    lang: Locale;
-  } & object;
+  params: Promise<
+    {
+      lang: Locale;
+    } & object
+  >;
 };
 
-export default async function LocalizedPageLayout({
-  children,
-  params,
-}: PropsWithChildren<LocalizedPageProps>) {
+export default async function LocalizedPageLayout(
+  props: PropsWithChildren<LocalizedPageProps>
+) {
+  const params = await props.params;
+
+  const { children } = props;
+
   // this is a hack to get around the read-only property of the locales
   const locales = i18n.locales.map((l) => l);
 

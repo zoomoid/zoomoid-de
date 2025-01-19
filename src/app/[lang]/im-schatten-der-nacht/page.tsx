@@ -3,12 +3,16 @@ import { type Release } from "@/components/ReleaseScaffolding";
 import { type Locale } from "@/i18n";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 };
 
-export default async function Page({ params: { lang } }: PageProps) {
+export default async function Page(props: PageProps) {
+  const params = await props.params;
+
+  const { lang } = params;
+
   const release: Release = {
     title: "Im Schatten Der Nacht",
     date: new Date(2021, 11, 17),
@@ -61,9 +65,12 @@ export default async function Page({ params: { lang } }: PageProps) {
 function DescriptionEN() {
   return (
     <p className="md:text-lg">
-      <b><q>Im Schatten Der Nacht</q></b> is a small driving Techno EP
-      that comes to live when leaving the club <b>early in the morning</b> and
-      heading home while still buzzing from the night before.
+      <b>
+        <q>Im Schatten Der Nacht</q>
+      </b>{" "}
+      is a small driving Techno EP that comes to live when leaving the club{" "}
+      <b>early in the morning</b> and heading home while still buzzing from the
+      night before.
     </p>
   );
 }
@@ -71,10 +78,12 @@ function DescriptionEN() {
 function DescriptionDE() {
   return (
     <p className="md:text-lg">
-      <b><q>Im Schatten Der Nacht</q></b> ist eine kleine, treibende
-      Techno-EP die zum Leben erwacht, wenn Du den Club in den frühen
-      Morgenstunden verlässt und nach Hause gehst, während das Gefühl der Nacht
-      davor noch weiterbrummt.
+      <b>
+        <q>Im Schatten Der Nacht</q>
+      </b>{" "}
+      ist eine kleine, treibende Techno-EP die zum Leben erwacht, wenn Du den
+      Club in den frühen Morgenstunden verlässt und nach Hause gehst, während
+      das Gefühl der Nacht davor noch weiterbrummt.
     </p>
   );
 }

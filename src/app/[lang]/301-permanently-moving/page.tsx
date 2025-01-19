@@ -3,12 +3,16 @@ import { type Release } from "@/components/ReleaseScaffolding";
 import { type Locale } from "@/i18n";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 };
 
-export default async function Page({ params: { lang } }: PageProps) {
+export default async function Page(props: PageProps) {
+  const params = await props.params;
+
+  const { lang } = params;
+
   const release: Release = {
     title: "301 Permanently Moving",
     date: new Date(2019, 11, 13),
@@ -57,11 +61,14 @@ export default async function Page({ params: { lang } }: PageProps) {
 function DescriptionEN() {
   return (
     <p className="md:text-lg">
-      <b><q>301 Permanently Moving</q></b> is a nerdy joke and tribute to
-      the HTTP protocol, which drives the internet, where the status 301
-      indicates that a web page has moved permanently. The tracks on this EP
-      have the potential to get you moving, with <b>hard-driving Techno</b> and
-      a reworked version of <q>Outer Space</q>!
+      <b>
+        <q>301 Permanently Moving</q>
+      </b>{" "}
+      is a nerdy joke and tribute to the HTTP protocol, which drives the
+      internet, where the status 301 indicates that a web page has moved
+      permanently. The tracks on this EP have the potential to get you moving,
+      with <b>hard-driving Techno</b> and a reworked version of{" "}
+      <q>Outer Space</q>!
     </p>
   );
 }

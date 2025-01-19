@@ -32,11 +32,13 @@ export const viewport: Viewport = {
   width: "device-width",
 };
 
-export default async function Root({
-  params: { lang },
-}: {
-  params: { lang: Locale };
+export default async function Root(props: {
+  params: Promise<{ lang: Locale }>;
 }) {
+  const params = await props.params;
+
+  const { lang } = params;
+
   const releases: Release[] = [
     {
       coverUrl: "/img/all_things_must_end.jpg",

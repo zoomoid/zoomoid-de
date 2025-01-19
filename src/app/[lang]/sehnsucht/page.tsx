@@ -3,12 +3,16 @@ import { type Release } from "@/components/ReleaseScaffolding";
 import { type Locale } from "@/i18n";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 };
 
-export default async function Page({ params: { lang } }: PageProps) {
+export default async function Page(props: PageProps) {
+  const params = await props.params;
+
+  const { lang } = params;
+
   const release: Release = {
     title: "Sehnsucht",
     date: new Date(2021, 4, 19),
@@ -61,11 +65,13 @@ export default async function Page({ params: { lang } }: PageProps) {
 function DescriptionEN() {
   return (
     <p className="md:text-lg">
-      <b><q>Sehnsucht</q></b> is a a 5-track{" "}
-      <b>acoustic instrumental album</b>, featuring intimate instruments and a
-      huge load of emotions. I wrote those tracks with the emotion of missing
-      out and wishing for old times and new times at the same time, trying to
-      express what I&apos;ve been feeling for the last months. I{" "}
+      <b>
+        <q>Sehnsucht</q>
+      </b>{" "}
+      is a a 5-track <b>acoustic instrumental album</b>, featuring intimate
+      instruments and a huge load of emotions. I wrote those tracks with the
+      emotion of missing out and wishing for old times and new times at the same
+      time, trying to express what I&apos;ve been feeling for the last months. I{" "}
       <b>love them all very dearly.</b>
     </p>
   );
@@ -74,12 +80,15 @@ function DescriptionEN() {
 function DescriptionDE() {
   return (
     <p className="md:text-lg">
-      <b><q>Sehnsucht</q></b> ist ein 5-Track{" "}
-      <b>instrumentales Akustik-Album</b> mit intimen Instrument und einer
-      riesigen Menge Emotionen. Ich habe all diese Tracks mit dem Gefühl, etwas
-      zu verpassen und dem Wunsch nach sowohl alten Zeiten und neuen Zeiten
-      gleichzeitig, geschrieben, und habe versucht, auszudrücken, was ich die
-      letzten Monate gefühlt habe. Ich <b>liebe sie alle von ganzem Herzen.</b>
+      <b>
+        <q>Sehnsucht</q>
+      </b>{" "}
+      ist ein 5-Track <b>instrumentales Akustik-Album</b> mit intimen Instrument
+      und einer riesigen Menge Emotionen. Ich habe all diese Tracks mit dem
+      Gefühl, etwas zu verpassen und dem Wunsch nach sowohl alten Zeiten und
+      neuen Zeiten gleichzeitig, geschrieben, und habe versucht, auszudrücken,
+      was ich die letzten Monate gefühlt habe. Ich{" "}
+      <b>liebe sie alle von ganzem Herzen.</b>
     </p>
   );
 }

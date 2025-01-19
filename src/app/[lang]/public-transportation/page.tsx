@@ -3,12 +3,16 @@ import { type Release } from "@/components/ReleaseScaffolding";
 import { type Locale } from "@/i18n";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 };
 
-export default async function Page({ params: { lang } }: PageProps) {
+export default async function Page(props: PageProps) {
+  const params = await props.params;
+
+  const { lang } = params;
+
   const release: Release = {
     title: <span>Public Transportation&nbsp;EP</span>,
     titleText: "Public Transportation EP",
@@ -74,10 +78,10 @@ function DescriptionEN() {
       <p className="md:text-lg">
         {" "}
         The idea got burried in a notebook for a year until I picked it up and
-        sketched a trip on my usual train route through some cities in NRW. It&apos;s
-        real, it&apos;s honest, <b>it&apos;s got sharp edges</b> and it&apos;s certainly
-        different to my other work in that year. Yet, it&apos;s a favourite of{" "}
-        <b>a lot of people for exactly that reason.</b>
+        sketched a trip on my usual train route through some cities in NRW.
+        It&apos;s real, it&apos;s honest, <b>it&apos;s got sharp edges</b> and
+        it&apos;s certainly different to my other work in that year. Yet,
+        it&apos;s a favourite of <b>a lot of people for exactly that reason.</b>
       </p>
     </>
   );

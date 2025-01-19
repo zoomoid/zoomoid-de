@@ -135,27 +135,6 @@ export default function Album({
             backgroundImage: `linear-gradient(to bottom, #051c35 0%, rgb(180 83 9 / 100%) 70%, #f59e0b 100%)`,
           }}
         >
-          <div className="mx-auto max-w-screen-md flex items-center justify-center mb-16 relative z-50">
-            <button
-              className={`bg-blue-800 rounded-full px-6 py-2 md:px-8 md:py-4 font-sans font-semibold text-lg md:text-xl`}
-              type="button"
-              onClick={() => {
-                dispatch({
-                  type: "stop",
-                });
-                const firstTrack = tracks[0];
-                dispatch({
-                  interactive: true,
-                  index: 0,
-                  title: firstTrack.title,
-                  type: "play",
-                  uri: firstTrack.audioURI,
-                });
-              }}
-            >
-              {lang === "de" ? "Starte vom Anfang" : "Start from the Beginning"}
-            </button>
-          </div>
           <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden">
             {clouds.map(
               ({ animationDelay, animationDuration, className }, i) => (

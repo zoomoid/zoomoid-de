@@ -118,36 +118,6 @@ export default function Track({ track, index }: TrackProps) {
             <div className="text-base xs:text-base md:text-lg pr-4 md:pr-0">
               <div className="space-y-2">{track.description}</div>
               <div>{track.children}</div>
-              <div className="mt-4 flex items-center gap-x-2 justify-around xs:justify-start">
-                <button
-                  type="button"
-                  onClick={() =>
-                    currentlyPlaying ? togglePlayback() : startPlayback()
-                  }
-                  className="py-2 px-6 rounded-lg border-2 border-white flex items-center hover:bg-white/20 transition-colors text-xl"
-                >
-                  <i className="material-symbols-outlined leading-none ">
-                    {currentlyPlaying && playing ? "pause" : "play_arrow"}
-                  </i>
-                </button>
-                <a
-                  href={track.audioURI}
-                  className="py-2 px-6 rounded-lg border-2 border-white flex items-center hover:bg-white/20 transition-colors hover:no-underline text-xl"
-                >
-                  <i className="material-symbols-outlined leading-none ">
-                    download
-                  </i>
-                </a>
-                <a
-                  onClick={handleShare}
-                  className="py-2 px-6 rounded-lg border-2 border-white flex items-center hover:bg-white/20 transition-colors hover:no-underline cursor-pointer text-xl"
-                >
-                  <i className="material-symbols-outlined leading-none">
-                    share
-                  </i>
-                </a>
-                {shareChip}
-              </div>
             </div>
           </div>
         </div>

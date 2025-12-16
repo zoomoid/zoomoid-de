@@ -1,10 +1,9 @@
+@reference "../../../styles/globals.css";
+
 .page b {
   @apply font-sans font-semibold;
 }
 
-/* .page i {
-  @apply font-serif;
-} */
 
 .page small {
   @apply text-sm;

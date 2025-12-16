@@ -4216,7 +4216,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^4":
+"tailwindcss@npm:^4.1.18":
   version: 4.1.18
   resolution: "tailwindcss@npm:4.1.18"
   checksum: 10/16a51bf972dce3871fec66aba7bffa02cd6fccc5a330180be3dcf297e48aae2d64d965df48fda851f65924ef61d7d2c6c8e6d7a05a09f454244475b7dab93464
@@ -4661,7 +4661,7 @@ __metadata:
     react-dom: "npm:^19.2.3"
     sharp: "npm:^0.34.5"
     styled-jsx: "npm:^5"
-    tailwindcss: "npm:^4"
+    tailwindcss: "npm:^4.1.18"
     typescript: "npm:^5.9.3"
   languageName: unknown
   linkType: soft

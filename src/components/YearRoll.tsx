@@ -9,7 +9,7 @@ type YearRollProps = {
   years?: number[];
   duration?: string;
   direction?: "normal" | "reverse";
-  once?: boolean,
+  once?: boolean;
 } & IntersectionObserverInit;
 
 export function YearRoll({
@@ -33,8 +33,7 @@ export function YearRoll({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             elementRef.current?.classList.add(animationClass);
-          }
-          else if(!once) {
+          } else if (!once) {
             elementRef.current?.classList.remove(animationClass);
           }
         });
@@ -42,8 +41,8 @@ export function YearRoll({
       {
         threshold,
         root,
-        rootMargin
-      }
+        rootMargin,
+      },
     );
 
     // Start observing the target element
@@ -53,21 +52,20 @@ export function YearRoll({
     return () => observer.disconnect();
   }, [animationClass, once, root, rootMargin, threshold]);
 
-
-  type transformer = (inject: string) => string
-  let transformFrom: transformer, transformTo: transformer
+  type transformer = (inject: string) => string;
+  let transformFrom: transformer, transformTo: transformer;
   if (direction === "reverse") {
-    transformFrom = (i) => `translateY(calc(-1 * var(--${i}) * 1em))`
-    transformTo = () => `translateY(0%)`
+    transformFrom = (i) => `translateY(calc(-1 * var(--${i}) * 1em))`;
+    transformTo = () => `translateY(0%)`;
   } else {
-    transformFrom = () => `translateY(0%)`
-    transformTo = (i) => `translateY(calc(-1 * var(--${i}) * 1em))`
+    transformFrom = () => `translateY(0%)`;
+    transformTo = (i) => `translateY(calc(-1 * var(--${i}) * 1em))`;
   }
 
   return (
     <>
       <div
-        className="roll font-sans font-semibold inline-flex items-baseline"
+        className="roll inline-flex items-baseline font-sans font-semibold"
         ref={elementRef}
       >
         <div>
@@ -96,32 +94,33 @@ export function YearRoll({
             --decades: ${decades.length - 1};
           }
           .roll > .decades {
-            transform: ${transformFrom("decades")}
+            transform: ${transformFrom("decades")};
           }
           .roll > .years {
-            transform: ${transformFrom("years")}
+            transform: ${transformFrom("years")};
           }
           .roll.${animationClass} > .decades {
-            transform: ${transformTo("decades")}
+            transform: ${transformTo("decades")};
           }
           .roll.${animationClass} > .years {
-            transform: ${transformTo("years")}
+            transform: ${transformTo("years")};
           }
         `}</style>
         <style jsx>{`
           .roll {
             font-size: 1em;
             height: 1em;
-            mask-image: linear-gradient(transparent 0%, black 10%, black 90%, transparent 100%);
+            mask-image: linear-gradient(
+              transparent 0%,
+              black 10%,
+              black 90%,
+              transparent 100%
+            );
           }
           .roll div {
             width: 0.6em;
             display: block;
             line-height: 0;
-<<<<<<< HEAD
-=======
-            transform:
->>>>>>> main
             transition-property: transform;
             transition-duration: calc(${duration});
           }

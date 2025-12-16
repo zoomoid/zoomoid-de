@@ -1,1 +1,1 @@
-export const hostname = "https://zoomoid.de"
+export const hostname = "https://zoomoid.de";

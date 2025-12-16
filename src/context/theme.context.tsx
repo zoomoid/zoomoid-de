@@ -19,7 +19,7 @@ export type ResetAction = {
   type: "reset";
 };
 
-type ActionType = SetAction | ResetAction
+type ActionType = SetAction | ResetAction;
 
 export const initialState: State = {
   backgroundColorClass: "bg-black",

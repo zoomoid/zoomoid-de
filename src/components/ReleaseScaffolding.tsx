@@ -60,17 +60,17 @@ export default function ReleaseScaffolding({
   }
 
   return (
-    <main className="release pb-32 md:pt-64 pt-16">
+    <main className="release pt-16 pb-32 md:pt-64">
       <ThemeChanger {...theme}></ThemeChanger>
       <div className="py-[6.6vmax] lg:py-[1.6vmax]">
-        <section className="max-w-screen-md xl:max-w-none xl:px-[4vw] mx-auto px-4 md:px-0 relative xl:grid grid-cols-2 gap-x-16">
-          <div className="md:w-4/5 xl:w-full xl:max-w-screen-md justify-self-end flex flex-col relative z-10">
+        <section className="relative mx-auto max-w-screen-md grid-cols-2 gap-x-16 px-4 md:px-0 xl:grid xl:max-w-none xl:px-[4vw]">
+          <div className="relative z-10 flex flex-col justify-self-end md:w-4/5 xl:w-full xl:max-w-screen-md">
             {covers?.map((cover) => (
               <Image
                 src={cover.url}
                 key={cover.url}
                 alt={`Cover image of ${textTitle}`}
-                className={`border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 xl:my-0 border-neutral-50 mx-auto ${cover.className}`}
+                className={`mx-auto my-8 rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10 xl:my-0 ${cover.className}`}
                 width={cover.width}
                 height={cover.height}
               ></Image>
@@ -79,7 +79,7 @@ export default function ReleaseScaffolding({
           <div className="space-y-4 xl:mt-16">
             <Link
               href={`/${lang}/#overview`}
-              className="text-xl flex items-center gap-x-1 group hover:no-underline"
+              className="group flex items-center gap-x-1 text-xl hover:no-underline"
             >
               <span className="material-symbols-outlined">arrow_back</span>
               <span className="font-sans text-base group-hover:underline">
@@ -87,12 +87,12 @@ export default function ReleaseScaffolding({
               </span>
             </Link>
             {title && (
-              <h1 className="font-sans font-semibold text-3xl xs:text-5xl md:text-7xl">
+              <h1 className="xs:text-5xl font-sans text-3xl font-semibold md:text-7xl">
                 {title}
               </h1>
             )}
             {date && (
-              <h2 className="font-sans text-xl xs:text-2xl md:text-3xl">
+              <h2 className="xs:text-2xl font-sans text-xl md:text-3xl">
                 {new Intl.DateTimeFormat(lang, {
                   dateStyle: "long",
                 }).format(date)}
@@ -100,7 +100,7 @@ export default function ReleaseScaffolding({
             )}
             <div className="xl:max-w-screen-md">{children}</div>
             {title && (
-              <div className="xs:text-lg md:text-xl space-y-2">
+              <div className="xs:text-lg space-y-2 md:text-xl">
                 <ListenTo lang={lang} title={textTitle}></ListenTo>
                 <div className="">{listenLinks}</div>
               </div>
@@ -125,7 +125,7 @@ function ListenLink({ title, url, className }: ListenLinkProps) {
       href={url}
       target="_blank"
       rel="noreferrer"
-      className={`flex items-center font-semibold group hover:no-underline py-2 ${className}`}
+      className={`group flex items-center py-2 font-semibold hover:no-underline ${className}`}
     >
       <span className="group-hover:underline">{title}</span>
       <span className="material-symbols-outlined pb-2 pl-1">arrow_outward</span>

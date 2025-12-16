@@ -82,7 +82,7 @@ export function AnimationElement({
       },
       {
         threshold,
-      }
+      },
     );
 
     // Start observing the target element
@@ -152,7 +152,7 @@ export function StaggeringGroup({
       },
       {
         threshold,
-      }
+      },
     );
 
     // Start observing the target element

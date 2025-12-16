@@ -89,16 +89,16 @@ export default async function Root(props: {
 
   return (
     <>
-      <main className="text-white overflow-hidden">
+      <main className="overflow-hidden text-white">
         <ThemeChanger
           backgroundColorClass="bg-black"
           textColorClass="text-white"
           navigationImageFilter=""
         ></ThemeChanger>
         {/* <Banner></Banner> */}
-        <section className="flex justify-end py-[6.6vmax] lg:py-[1.6vmax] w-full mx-auto overflow-x-visible md:pl-[4vw]">
-          <div className="xl:grid grid-cols-2 gap-x-32 md:px-0 justify-center overflow-visible md:pt-64">
-            <div className="mb-8 2xl:order-last overflow-x-visible">
+        <section className="mx-auto flex w-full justify-end overflow-x-visible py-[6.6vmax] md:pl-[4vw] lg:py-[1.6vmax]">
+          <div className="grid-cols-2 justify-center gap-x-32 overflow-visible md:px-0 md:pt-64 xl:grid">
+            <div className="mb-8 overflow-x-visible 2xl:order-last">
               <Image
                 src="/img/banner.jpg"
                 alt="Zoomoid at a busstop gazing into the night"
@@ -107,19 +107,19 @@ export default async function Root(props: {
                 height={1095}
               ></Image>
             </div>
-            <h1 className="text-3xl md:px-0 px-4 md:pl-[4vw] md:pr-[4vw] font-semibold sm:text-5xl md:text-5xl lg:text-6xl xl:text-right">
+            <h1 className="px-4 text-3xl font-semibold sm:text-5xl md:px-0 md:pr-[4vw] md:pl-[4vw] md:text-5xl lg:text-6xl xl:text-right">
               {lang === "de" ? <HeroDE></HeroDE> : <HeroEN></HeroEN>}
             </h1>
           </div>
         </section>
         <section
-          className="py-32 lg:py-[1.6vmax] w-full mx-auto px-4 md:pl-[4vw] md:pr-[4vw] max-w-screen-xl relative z-20"
+          className="relative z-20 mx-auto w-full max-w-screen-xl px-4 py-32 md:pr-[4vw] md:pl-[4vw] lg:py-[1.6vmax]"
           id="overview"
         >
-          <h2 className="text-5xl font-sans font-semibold mb-16">
+          <h2 className="mb-16 font-sans text-5xl font-semibold">
             {lang === "de" ? "Diskografie" : "Discography"}
           </h2>
-          <div className="grid-cols-1 xs:grid-cols-2 md:grid-cols-3 grid md:gap-8 gap-4 pb-32">
+          <div className="xs:grid-cols-2 grid grid-cols-1 gap-4 pb-32 md:grid-cols-3 md:gap-8">
             {releases.map((r) => {
               return (
                 <Link
@@ -134,7 +134,7 @@ export default async function Root(props: {
                       height={1500}
                       src={r.coverUrl}
                       alt={`${r.title} cover`}
-                      className="relative z-50 hover:scale-[1.02] transition-transform duration-1000 border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 border-neutral-50 mx-auto"
+                      className="relative z-50 mx-auto rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10 transition-transform duration-1000 hover:scale-[1.02]"
                     ></Image>
                   </div>
                 </Link>

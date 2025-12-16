@@ -1,12 +1,13 @@
 @reference "../../../styles/globals.css";
 
 .page b {
-  @apply font-sans font-semibold;
+  font-family: var(--font-sans);
+  font-weight: 600;
 }
 
-
 .page small {
-  @apply text-sm;
+  font-size: var(--text-sm);
+  line-height: var(--text-sm--line-height);
 }
 
 @keyframes fade-in {

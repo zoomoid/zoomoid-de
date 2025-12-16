@@ -38,25 +38,27 @@ function EpilogueEN(props: EpilogueProps) {
         life.
       </p>
       <p>
-        And so I wrote <b>my last album</b>. I tried to capture so many things, so many
-        emotions, so many states of mind in tracks, tried to create a holistic
-        experience, something that would remain relevant beyond the lifetime of
-        Zoomoid.
+        And so I wrote <b>my last album</b>. I tried to capture so many things,
+        so many emotions, so many states of mind in tracks, tried to create a
+        holistic experience, something that would remain relevant beyond the
+        lifetime of Zoomoid.
       </p>
       <p className="font-sans">
         I think, for once, at least in some parts, <b>I succeeded.</b>
       </p>
       <p>
-        <q><b>All Things Must End</b></q> is my last album. What comes
-        afterwards is pretty much left to time. It has become time for me to
-        become just <q>Alex</q> again.
+        <q>
+          <b>All Things Must End</b>
+        </q>{" "}
+        is my last album. What comes afterwards is pretty much left to time. It
+        has become time for me to become just <q>Alex</q> again.
       </p>
       <p>
         That doesn&apos;t mean that I&apos;m never going to make music again. It
         just marks the <b>ending for Zoomoid</b>. <b>The final chapter.</b> Such
         that a new book can begin.
       </p>
-      <p className="text-3xl mt-4">&mdash; Alex</p>
+      <p className="mt-4 text-3xl">&mdash; Alex</p>
     </SG>
   );
 }
@@ -102,16 +104,19 @@ function EpilogueDE(props: EpilogueProps) {
         Ich glaube, diesmal, zumindest in Teilen, <b>habe ich es geschafft.</b>
       </p>
       <p>
-        <q><b>All Things Must End</b></q> ist mein letztes Album. Was
-        danach kommt ist so ziemlich der Zeit überlassen. Es ist Zeit für mich
-        geworden, wieder nur <q>Alex</q> zu sein.
+        <q>
+          <b>All Things Must End</b>
+        </q>{" "}
+        ist mein letztes Album. Was danach kommt ist so ziemlich der Zeit
+        überlassen. Es ist Zeit für mich geworden, wieder nur <q>Alex</q> zu
+        sein.
       </p>
       <p>
         Das bedeutet nicht, dass ich nie wieder Musik mache. Es markiert nur{" "}
         <b>das Ende für Zoomoid</b>. <b>Das letzte Kapitel</b>. Sodass ein neues
         Buch beginnen kann.
       </p>
-      <p className="text-3xl mt-4">&mdash; Alex</p>
+      <p className="mt-4 text-3xl">&mdash; Alex</p>
     </SG>
   );
 }
@@ -119,7 +124,7 @@ function EpilogueDE(props: EpilogueProps) {
 export default function Wrapper() {
   const { state } = useContext(LocaleContext);
   return (
-    <section className="md:text-lg my-16 md:my-32 max-w-screen-md mx-auto pb-64 px-4 md:px-0">
+    <section className="mx-auto my-16 max-w-screen-md px-4 pb-64 md:my-32 md:px-0 md:text-lg">
       {state.lang === "de" ? (
         <EpilogueDE
           animationName="slide-up"

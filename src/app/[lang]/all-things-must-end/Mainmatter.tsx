@@ -4,7 +4,6 @@ import { useContext, useRef } from "react";
 import Biography from "./Biography";
 import Album from "./Album";
 import { LocaleContext } from "@/context/locale.context";
-import { PlayerContextProvider } from "@/context/player.context";
 
 export default function Mainmatter() {
   const albumSkipRef = useRef<HTMLDivElement>(null);
@@ -17,9 +16,7 @@ export default function Mainmatter() {
       ) : (
         <Biography.EN skipRef={albumSkipRef}></Biography.EN>
       )}
-      <PlayerContextProvider>
-        <Album skipRef={albumSkipRef}></Album>
-      </PlayerContextProvider>
+      <Album skipRef={albumSkipRef}></Album>
     </>
   );
 }

@@ -1,5 +1,5 @@
-const locales = ['en', 'de'] as const
-const defaultLocale = 'en' as const
+const locales = ["en", "de"] as const;
+const defaultLocale = "en" as const;
 
 const i18n = {
   locales: locales,
@@ -8,4 +8,4 @@ const i18n = {
 
 export type Locale = (typeof i18n)["locales"][number];
 
-export default i18n
+export default i18n;

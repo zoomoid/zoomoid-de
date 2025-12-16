@@ -18,7 +18,7 @@ export default function Cloud({
 }: CloudProps) {
   return (
     <div
-      className={`${className} absolute mix-blend-hard-light cloud`}
+      className={`${className} cloud absolute mix-blend-hard-light`}
       style={{
         animationDuration: animationDuration,
         animationDelay: animationDelay,

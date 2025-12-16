@@ -39,19 +39,22 @@ const streaming: FooterItem[] = [
 
 type FooterProps = PropsWithChildren<{}>;
 
-export default function Footer({ children, lang }: FooterProps & { lang: string }) {
+export default function Footer({
+  children,
+  lang,
+}: FooterProps & { lang: string }) {
   return (
-    <footer className=" text-white relative z-10">
+    <footer className="relative z-10 text-white">
       <div
         className="h-48 bg-black"
         style={{
           maskImage: "linear-gradient(to bottom, transparent 0%, black 100%)",
         }}
       ></div>
-      <div className="flex justify-end mx-auto pt-16 pb-16 bg-black px-[4vw]">
-        <div className="w-full md:grid-cols-12 font-medium tracking-wide grid gap-y-8">
+      <div className="mx-auto flex justify-end bg-black px-[4vw] pt-16 pb-16">
+        <div className="grid w-full gap-y-8 font-medium tracking-wide md:grid-cols-12">
           <div className="col-span-3">
-            <Link href={`/${lang}/`} className="h-8 relative">
+            <Link href={`/${lang}/`} className="relative h-8">
               <Image
                 alt="Zoomoid Logo"
                 src="/img/logo_bar.png"
@@ -61,9 +64,9 @@ export default function Footer({ children, lang }: FooterProps & { lang: string 
               ></Image>
             </Link>
           </div>
-          <div className="col-span-8 mt-4 md:mt-0 grid md:grid-cols-3 gap-y-8">
+          <div className="col-span-8 mt-4 grid gap-y-8 md:mt-0 md:grid-cols-3">
             <div>
-              <span className="font-sans font-semibold mb-1 block uppercase tracking-widest">
+              <span className="mb-1 block font-sans font-semibold tracking-widest uppercase">
                 Streaming
               </span>
               {streaming.map((s, i) => (
@@ -78,7 +81,7 @@ export default function Footer({ children, lang }: FooterProps & { lang: string 
               ))}
             </div>
             <div>
-              <span className="font-sans font-semibold mb-1 block uppercase tracking-widest">
+              <span className="mb-1 block font-sans font-semibold tracking-widest uppercase">
                 Social Media
               </span>
               {socials.map((s, i) => (

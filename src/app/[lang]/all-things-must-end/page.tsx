@@ -44,7 +44,7 @@ export default async function Page() {
       }}
     >
       {/* <ScrollHook></ScrollHook> */}
-      <div className="text-neutral-300 py-[6.6vmax] lg:py-[1.6vmax]">
+      <div className="py-[6.6vmax] text-neutral-300 lg:py-[1.6vmax]">
         <Opening></Opening>
         <Mainmatter></Mainmatter>
         <Epilogue></Epilogue>

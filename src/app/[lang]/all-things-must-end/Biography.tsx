@@ -5,11 +5,11 @@ import { YearRoll } from "@/components/YearRoll";
 import Image from "next/image";
 import { RefObject } from "react";
 
-function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
+function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement | null> }) {
   return (
     <article id="preamble" className="relative isolate">
       <section
-        className="z-0 h-[3000px] absolute isolate w-full bg-neutral-950 overflow-hidden "
+        className="absolute isolate z-0 h-[3000px] w-full overflow-hidden bg-neutral-950"
         style={{
           maskImage: `linear-gradient(transparent 0%, black 10%, black 90%, transparent 100%)`,
         }}
@@ -21,11 +21,11 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           priority
           width={4016}
           height={6016}
-          className="mix-blend-color-dodge filter saturate-0 opacity-90 w-full"
+          className="w-full opacity-90 mix-blend-color-dodge saturate-0 filter"
         ></Image>
       </section>
-      <section className="max-w-screen-md mx-auto my-16 z-20 relative px-4 md:px-0">
-        <h2 className="text-3xl md:text-6xl mb-8">
+      <section className="relative z-20 mx-auto my-16 max-w-screen-md px-4 md:px-0">
+        <h2 className="mb-8 text-3xl md:text-6xl">
           A Brief Biography of Me, Zoomoid
         </h2>
         <p className="md:text-lg">
@@ -38,13 +38,13 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                 skipRef.current?.scrollIntoView({ behavior: "smooth" });
               }
             }}
-            className="underline cursor-pointer"
+            className="cursor-pointer underline"
           >
             skip it
           </span>
           .
         </p>
-        <h3 className="text-5xl md:text-8xl text-center mt-16">
+        <h3 className="mt-16 text-center text-5xl md:text-8xl">
           <span className=""></span>
           <span className="">
             <YearRoll
@@ -57,7 +57,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             ></YearRoll>
           </span>
         </h3>
-        <SG animationName="slide-up" className="my-16 md:text-lg space-y-2">
+        <SG animationName="slide-up" className="my-16 space-y-2 md:text-lg">
           <p>
             In <b>2013</b> someone hit my reset button. After a terrifying
             accident, and the subsequent long recovery, I got into music making.
@@ -112,8 +112,8 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </p>
         </SG>
       </section>
-      <section id="2018" className="max-w-screen-md mx-auto my-16 px-4 md:px-0">
-        <h3 className="text-5xl md:text-8xl text-center">
+      <section id="2018" className="mx-auto my-16 max-w-screen-md px-4 md:px-0">
+        <h3 className="text-center text-5xl md:text-8xl">
           <span className="text">
             <YearRoll
               key="liamm"
@@ -128,7 +128,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
         </h3>
         <SG
           animationName="slide-up"
-          className="my-16 md:text-lg space-y-2 relative"
+          className="relative my-16 space-y-2 md:text-lg"
         >
           <p>
             When{" "}
@@ -147,7 +147,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           <div>
             <SG
               animationName="slide-up"
-              className="grid md:grid-cols-1 gap-x-4"
+              className="grid gap-x-4 md:grid-cols-1"
             >
               <div></div>
               <div>
@@ -156,7 +156,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                   width={1500}
                   height={1500}
                   alt="Album cover of Life Is About Making Memories"
-                  className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 w-1/2 border-neutral-50 mx-auto"
+                  className="mx-auto my-8 w-1/2 rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10"
                 ></Image>
               </div>
               <div></div>
@@ -177,7 +177,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </p>
           <SG
             animationName="slide-up"
-            className="grid grid-cols-2 gap-x-4 relative"
+            className="relative grid grid-cols-2 gap-x-4"
           >
             <div>
               <Image
@@ -185,7 +185,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                 width={1500}
                 height={1500}
                 alt="Album cover of Eigenräume (Standard Edition)"
-                className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto relative z-10"
+                className="relative z-10 mx-auto my-8 rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10"
               ></Image>
             </div>
             <div>
@@ -194,7 +194,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                 width={1500}
                 height={1500}
                 alt="Album cover of Eigenräume (Extended Edition)"
-                className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto md:transform md:scale-110 md:-translate-x-10 relative z-20"
+                className="relative z-20 mx-auto my-8 rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10 md:-translate-x-10 md:scale-110 md:transform"
               ></Image>
             </div>
           </SG>
@@ -231,7 +231,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                   width={1500}
                   height={1500}
                   alt="Album cover of Public Transportation EP"
-                  className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+                  className="mx-auto my-8 rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10"
                 ></Image>
               </div>
               <div>
@@ -240,7 +240,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                   width={1500}
                   height={1500}
                   alt="Album cover of 301 Permanently Moving"
-                  className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+                  className="mx-auto my-8 rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10"
                 ></Image>
               </div>
             </SG>
@@ -263,8 +263,8 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </p>
         </SG>
       </section>
-      <section className="max-w-screen-md mx-auto my-16 px-4 md:px-0" id="2020">
-        <h3 className="text-5xl md:text-8xl text-center">
+      <section className="mx-auto my-16 max-w-screen-md px-4 md:px-0" id="2020">
+        <h3 className="text-center text-5xl md:text-8xl">
           <span className="">
             <YearRoll
               key="liamm"
@@ -277,7 +277,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             ></YearRoll>
           </span>
         </h3>
-        <SG animationName="slide-up" className="my-16 md:text-lg space-y-2">
+        <SG animationName="slide-up" className="my-16 space-y-2 md:text-lg">
           <p>
             In 2020 I hit a brick wall. And not the good one. As the world went
             into lockdown, I (as the artist) struggled to find inspiration,
@@ -295,7 +295,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               width={1500}
               height={1500}
               alt="Album cover of Shades of Yellow"
-              className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+              className="mx-auto my-8 w-1/2 rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10"
             ></Image>
           </div>
           <p>
@@ -339,7 +339,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               width={1500}
               height={1500}
               alt="Album cover of Voyager"
-              className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+              className="mx-auto my-8 w-1/2 rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10"
             ></Image>
           </div>
           <p>
@@ -358,7 +358,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               width={3000}
               height={1500}
               alt="Early sketches for Voyager, still being calle Artemis here"
-              className="shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+              className="mx-auto my-8 border-neutral-50 shadow-2xl shadow-neutral-300/10"
             ></Image>
           </div>
           <p>
@@ -382,8 +382,8 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </p>
         </SG>
       </section>
-      <section className="max-w-screen-md mx-auto my-16 px-4 md:px-0">
-        <h3 className="text-5xl md:text-8xl text-center">
+      <section className="mx-auto my-16 max-w-screen-md px-4 md:px-0">
+        <h3 className="text-center text-5xl md:text-8xl">
           <span className="text">
             <YearRoll
               years={[0, 1]}
@@ -395,7 +395,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             ></YearRoll>
           </span>
         </h3>
-        <SG animationName="slide-up" className="md:text-lg my-16 space-y-2">
+        <SG animationName="slide-up" className="my-16 space-y-2 md:text-lg">
           <p>
             The escapism that <q>Voyager</q> provided, artistically, did not
             last for long though. I went down into that dark hole that is
@@ -417,7 +417,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               width={1500}
               height={1500}
               alt="Album cover of Sehnsucht"
-              className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl  w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+              className="mx-auto my-8 w-1/2 rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10"
             ></Image>
           </div>
           <p>
@@ -471,7 +471,7 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               width={3024}
               height={1512}
               alt="Photo of an image of my grandfather, depicting the Chiemsee in southern Germany"
-              className="shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+              className="mx-auto my-8 border-neutral-50 shadow-2xl shadow-neutral-300/10"
             ></Image>
           </div>
           <p>
@@ -490,11 +490,11 @@ function BiographyEN({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
   );
 }
 
-function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
+function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement | null> }) {
   return (
     <article id="preamble" className="relative isolate">
       <section
-        className="z-0 h-[1500px] absolute isolate w-full bg-neutral-950 overflow-hidden opacity-50"
+        className="absolute isolate z-0 h-[1500px] w-full overflow-hidden bg-neutral-950 opacity-50"
         style={{
           maskImage: `linear-gradient(transparent 0%, black 10%, black 80%, transparent 100%)`,
         }}
@@ -505,11 +505,11 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           priority
           width={4016}
           height={6016}
-          className="mix-blend-color-dodge filter saturate-0 w-full opacity-70"
+          className="w-full opacity-70 mix-blend-color-dodge saturate-0 filter"
         ></Image>
       </section>
-      <section className="max-w-screen-md mx-auto my-16 z-20 relative px-4 md:px-0">
-        <h2 className="text-3xl md:text-6xl mb-8">
+      <section className="relative z-20 mx-auto my-16 max-w-screen-md px-4 md:px-0">
+        <h2 className="mb-8 text-3xl md:text-6xl">
           Eine kurze Biografie von Mir, Zoomoid
         </h2>
         <p className="md:text-lg">
@@ -522,13 +522,13 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                 skipRef.current?.scrollIntoView({ behavior: "smooth" });
               }
             }}
-            className="underline cursor-pointer"
+            className="cursor-pointer underline"
           >
             überspringen
           </span>
           .
         </p>
-        <h3 className="text-6xl md:text-8xl text-center mt-16">
+        <h3 className="mt-16 text-center text-6xl md:text-8xl">
           <YearRoll
             decades={[10, 20]}
             years={[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}
@@ -538,7 +538,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             once
           ></YearRoll>
         </h3>
-        <SG animationName="slide-up" className="my-16 md:text-lg space-y-2">
+        <SG animationName="slide-up" className="my-16 space-y-2 md:text-lg">
           <p>
             <b>2013</b> hat jemand meinen Reset-Knopf gedrückt. Nach einem
             schrecklichen Unfall und dem anschließenden langen Weg der Genesung
@@ -597,8 +597,8 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </p>
         </SG>
       </section>
-      <section id="2018" className="max-w-screen-md mx-auto my-16 px-4 md:px-0">
-        <h3 className="text-6xl md:text-8xl text-center">
+      <section id="2018" className="mx-auto my-16 max-w-screen-md px-4 md:px-0">
+        <h3 className="text-center text-6xl md:text-8xl">
           <YearRoll
             key="liamm"
             years={[6, 7, 8]}
@@ -611,7 +611,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
         </h3>
         <SG
           animationName="slide-up"
-          className="my-16 md:text-lg space-y-2 relative"
+          className="relative my-16 space-y-2 md:text-lg"
         >
           <p>
             Als{" "}
@@ -631,7 +631,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           <div>
             <SG
               animationName="slide-up"
-              className="grid md:grid-cols-1 gap-x-4"
+              className="grid gap-x-4 md:grid-cols-1"
             >
               <div></div>
               <div>
@@ -640,7 +640,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                   width={1500}
                   height={1500}
                   alt="Album cover of Life Is About Making Memories"
-                  className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 w-1/2 border-neutral-50 mx-auto"
+                  className="mx-auto my-8 w-1/2 rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10"
                 ></Image>
               </div>
               <div></div>
@@ -663,7 +663,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </p>
           <SG
             animationName="slide-up"
-            className="grid grid-cols-2 gap-x-4 relative"
+            className="relative grid grid-cols-2 gap-x-4"
           >
             <div>
               <Image
@@ -671,7 +671,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                 width={1500}
                 height={1500}
                 alt="Album cover of Eigenräume (Standard Edition)"
-                className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto relative z-10"
+                className="relative z-10 mx-auto my-8 rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10"
               ></Image>
             </div>
             <div>
@@ -680,7 +680,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                 width={1500}
                 height={1500}
                 alt="Album cover of Eigenräume (Extended Edition)"
-                className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto md:transform md:scale-110 md:-translate-x-10 relative z-20"
+                className="relative z-20 mx-auto my-8 rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10 md:-translate-x-10 md:scale-110 md:transform"
               ></Image>
             </div>
           </SG>
@@ -725,7 +725,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                   width={1500}
                   height={1500}
                   alt="Album cover of Public Transportation EP"
-                  className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+                  className="mx-auto my-8 rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10"
                 ></Image>
               </div>
               <div>
@@ -734,7 +734,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
                   width={1500}
                   height={1500}
                   alt="Album cover of 301 Permanently Moving"
-                  className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+                  className="mx-auto my-8 rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10"
                 ></Image>
               </div>
             </SG>
@@ -757,8 +757,8 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </p>
         </SG>
       </section>
-      <section className="max-w-screen-md mx-auto my-16 px-4 md:px-0">
-        <h3 className="text-6xl md:text-8xl text-center">
+      <section className="mx-auto my-16 max-w-screen-md px-4 md:px-0">
+        <h3 className="text-center text-6xl md:text-8xl">
           <span className="">
             <YearRoll
               key="liamm"
@@ -771,7 +771,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             ></YearRoll>
           </span>
         </h3>
-        <SG animationName="slide-up" className="my-16 md:text-lg space-y-2">
+        <SG animationName="slide-up" className="my-16 space-y-2 md:text-lg">
           <p>
             In 2020 bin ich auf eine Mauer gestoßen. Und nicht die gute Art. Als
             die Welt in den Lockdown ging, kämpfte ich (als Künstler) darum,
@@ -792,7 +792,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               width={1500}
               height={1500}
               alt="Album cover of Shades of Yellow"
-              className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+              className="mx-auto my-8 w-1/2 rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10"
             ></Image>
           </div>
           <p>
@@ -839,7 +839,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               width={1500}
               height={1500}
               alt="Album cover of Voyager"
-              className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+              className="mx-auto my-8 w-1/2 rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10"
             ></Image>
           </div>
           <p>
@@ -860,7 +860,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               width={3000}
               height={1500}
               alt="Early sketches for Voyager, still being calle Artemis here"
-              className="shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+              className="mx-auto my-8 border-neutral-50 shadow-2xl shadow-neutral-300/10"
             ></Image>
           </div>
           <p>
@@ -885,8 +885,8 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
           </p>
         </SG>
       </section>
-      <section className="max-w-screen-md mx-auto my-16 px-4 md:px-0">
-        <h3 className="text-6xl md:text-8xl text-center">
+      <section className="mx-auto my-16 max-w-screen-md px-4 md:px-0">
+        <h3 className="text-center text-6xl md:text-8xl">
           <YearRoll
             years={[0, 1]}
             decades={[20]}
@@ -896,7 +896,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
             rootMargin="-20% 0% -20% 0%"
           ></YearRoll>
         </h3>
-        <SG animationName="slide-up" className="md:text-lg my-16 space-y-2">
+        <SG animationName="slide-up" className="my-16 space-y-2 md:text-lg">
           <p>
             Der Eskapismus, den <q>Voyager</q> in künstlerischer Hinsicht bot,
             hielt jedoch nicht lange an. Ich fiel in das dunkle Loch, das man
@@ -919,7 +919,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               width={1500}
               height={1500}
               alt="Album cover of Sehnsucht"
-              className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl  w-1/2 shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+              className="mx-auto my-8 w-1/2 rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10"
             ></Image>
           </div>
           <p>
@@ -973,7 +973,7 @@ function BiographyDE({ skipRef }: { skipRef: RefObject<HTMLDivElement> }) {
               width={3024}
               height={1512}
               alt="Photo of an image of my grandfather, depicting the Chiemsee in southern Germany"
-              className="shadow-2xl shadow-neutral-300/10 my-8 border-neutral-50 mx-auto"
+              className="mx-auto my-8 border-neutral-50 shadow-2xl shadow-neutral-300/10"
             ></Image>
           </div>
           <p>

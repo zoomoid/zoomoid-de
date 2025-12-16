@@ -33,14 +33,14 @@ export default function Locales({ locales, current, className }: LocalesProps) {
 
   return (
     <div className={`${className ?? ""}`}>
-      <div className="flex gap-x-2 items-center">
+      <div className="flex items-center gap-x-2">
         <i className="material-icons-sharp">language</i>
         {locales.map((locale) => {
           const [label] = locale.split("-");
           return (
             <span
               key={locale}
-              className="font-sans font-semibold leading-[1.5rem]"
+              className="font-sans leading-[1.5rem] font-semibold"
             >
               <Link
                 style={{ textTransform: "none" }}

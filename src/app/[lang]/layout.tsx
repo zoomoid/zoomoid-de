@@ -24,7 +24,7 @@ type LocalizedPageProps = {
 };
 
 export default async function LocalizedPageLayout(
-  props: PropsWithChildren<LocalizedPageProps>
+  props: PropsWithChildren<LocalizedPageProps>,
 ) {
   const params = await props.params;
 

@@ -13,26 +13,26 @@ export default function Banner() {
   const [isHidden, setIsHidden] = useState(false);
 
   return (
-    <section className="pt-24 pb-8 md:py-[6.6vmax] lg:py-[1.6vmax] mx-auto bg-blue-500 px-4 md:pl-[4vw] md:pr-[4vw]">
-      <div className="md:pb-8 md:pt-32 md:grid grid-cols-2 items-center justify-center gap-x-32 mx-auto">
+    <section className="mx-auto bg-blue-500 px-4 pt-24 pb-8 md:py-[6.6vmax] md:pr-[4vw] md:pl-[4vw] lg:py-[1.6vmax]">
+      <div className="mx-auto grid-cols-2 items-center justify-center gap-x-32 md:grid md:pt-32 md:pb-8">
         <div className="text-lg xl:text-right">
-          <h1 className="font-sans font-semibold text-3xl md:text-4xl">
+          <h1 className="font-sans text-3xl font-semibold md:text-4xl">
             All Things Must End
           </h1>
-          <h2 className="font-sans text-xl md:text-2xl font-semibold mb-4">
+          <h2 className="mb-4 font-sans text-xl font-semibold md:text-2xl">
             {lang === "de"
               ? "Das letzte Zoomoid-Album"
               : "The last Zoomoid album"}
           </h2>
-          <p className="text-lg mb-4">
+          <p className="mb-4 text-lg">
             {lang === "de"
               ? "Jetzt überall zum Streamen!"
               : "Out now everywhere to stream!"}
           </p>
-          <div className="text-lg font-sans">
+          <div className="font-sans text-lg">
             <Link
               href={`/${lang}/all-things-must-end`}
-              className="group hover:no-underline block leading-none"
+              className="group block leading-none hover:no-underline"
             >
               <span className="group-hover:underline">
                 {lang === "de" ? (
@@ -47,17 +47,17 @@ export default function Banner() {
                   </>
                 )}
               </span>
-              <span className="material-symbols-outlined align-middle ml-1 pb-1">
+              <span className="material-symbols-outlined ml-1 pb-1 align-middle">
                 arrow_forward
               </span>
             </Link>
           </div>
         </div>
-        <div className="h-full relative md:w-[250px] hidden md:block">
+        <div className="relative hidden h-full md:block md:w-[250px]">
           <Image
             src="/img/all-things-must-end/cover.jpg"
             alt="All Things Must End Cover"
-            className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 border-neutral-50 mx-auto"
+            className="mx-auto rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10"
             width={2500}
             height={2500}
           ></Image>

@@ -1,6 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-xs: 400px;
+  --font-sans: "basiersquare", sans-serif;
+  --font-serif: "Novela", serif;
+  --text-10xl: 10rem;
+}
+
 @layer base {
   html,
   body {
@@ -13,7 +19,8 @@
   }
   body {
     scroll-behavior: smooth;
-    @apply font-serif bg-neutral-950;
+    font-family: var(--font-serif);
+    background-color: var(--color-neutral-950);
   }
   a {
     color: inherit;
@@ -60,11 +67,12 @@
 }
 
 .release i {
-  @apply font-serif;
+  font-family: var(--font-serif);
 }
 
 .release b {
-  @apply font-sans font-semibold;
+  font-family: var(--font-sans);
+  font-weight: 600;
 }
 
 @keyframes slide-up {
@@ -102,13 +110,13 @@
 
 @keyframes clouds {
   0% {
-    transform: translateY(0%)
+    transform: translateY(0%);
   }
   50% {
-    transform: translateY(5%)
+    transform: translateY(5%);
   }
   100% {
-    transform: translateY(0%)
+    transform: translateY(0%);
   }
 }
 
@@ -117,4 +125,3 @@
   animation-timing-function: ease;
   animation-iteration-count: infinite;
 }
-

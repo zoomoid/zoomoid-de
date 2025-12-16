@@ -2,8 +2,8 @@
   font-family: "basiersquare";
   font-display: swap;
   src: url("basiersquare-semibold-webfont.eot");
-  src: url("basiersquare-semibold-webfont.eot?#iefix")
-      format("embedded-opentype"),
+  src:
+    url("basiersquare-semibold-webfont.eot?#iefix") format("embedded-opentype"),
     url("basiersquare-semibold-webfont.woff2") format("woff2"),
     url("basiersquare-semibold-webfont.woff") format("woff"),
     url("basiersquare-semibold-webfont.ttf") format("truetype");
@@ -15,7 +15,8 @@
   font-family: "basiersquare";
   font-display: swap;
   src: url("basiersquare-medium-webfont.eot");
-  src: url("basiersquare-medium-webfont.eot?#iefix") format("embedded-opentype"),
+  src:
+    url("basiersquare-medium-webfont.eot?#iefix") format("embedded-opentype"),
     url("basiersquare-medium-webfont.woff2") format("woff2"),
     url("basiersquare-medium-webfont.woff") format("woff"),
     url("basiersquare-medium-webfont.ttf") format("truetype");
@@ -27,8 +28,8 @@
   font-family: "basiersquare";
   font-display: swap;
   src: url("basiersquare-regular-webfont.eot");
-  src: url("basiersquare-regular-webfont.eot?#iefix")
-      format("embedded-opentype"),
+  src:
+    url("basiersquare-regular-webfont.eot?#iefix") format("embedded-opentype"),
     url("basiersquare-regular-webfont.woff2") format("woff2"),
     url("basiersquare-regular-webfont.woff") format("woff"),
     url("basiersquare-regular-webfont.ttf") format("truetype");

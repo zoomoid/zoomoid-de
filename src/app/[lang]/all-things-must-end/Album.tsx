@@ -12,38 +12,20 @@ import { useContext, useEffect, useState } from "react";
 import Cloud, { type CloudProps } from "./Cloud";
 import TrackComponent, { type Track } from "./Track";
 import Tracks from "./tracks";
-import { PlayerContext, PlayerContextProvider } from "@/context/player.context";
-import Player from "./Player";
+
 import Link from "next/link";
 import { ListenTo } from "@/components/ReleaseScaffolding";
 
 export default function Album({
   skipRef,
 }: {
-  skipRef: RefObject<HTMLDivElement>;
+  skipRef: RefObject<HTMLDivElement | null>;
 }) {
   const {
     state: { lang },
   } = useContext(LocaleContext);
-  const {
-    state: { index },
-    dispatch,
-  } = useContext(PlayerContext);
 
   const tracks = lang === "de" ? Tracks.DE : Tracks.EN;
-
-  const playNext = () => {
-    if (index === undefined) return;
-    const nextTrack = tracks[index + 1];
-    if (!nextTrack) return; // TODO: there's no more tracks in the queue, display this state somehow
-    dispatch({
-      type: "play",
-      title: nextTrack.title,
-      index: index + 1,
-      uri: nextTrack.audioURI,
-      interactive: false,
-    });
-  };
 
   const externalLinks = [
     {
@@ -67,9 +49,9 @@ export default function Album({
   return (
     <>
       <article ref={skipRef} className="relative">
-        <section className="mx-auto relative z-0 items-center bg-gradient-to-b from-neutral-950 to-[#051c35]">
+        <section className="relative z-0 mx-auto items-center bg-linear-to-b from-neutral-950 to-[#051c35]">
           <div
-            className="absolute w-full h-full left-0 right-0 bottom-0 z-10"
+            className="absolute right-0 bottom-0 left-0 z-10 h-full w-full"
             style={{
               maskImage: `linear-gradient(transparent 0%, black 30%, black 60%, transparent 100%)`,
             }}
@@ -81,11 +63,11 @@ export default function Album({
               alt=""
               aria-hidden
               priority
-              className="opacity-80 h-full w-full"
+              className="h-full w-full opacity-80"
             ></Image>
           </div>
-          <div className="max-w-screen-md mx-auto z-10 w-full relative pt-96 pb-32 px-4 md:px-0">
-            <h3 className="text-8xl md:text-10xl text-center">
+          <div className="relative z-10 mx-auto w-full max-w-screen-md px-4 pt-96 pb-32 md:px-0">
+            <h3 className="md:text-10xl text-center text-8xl">
               <YearRoll
                 decades={[10, 20]}
                 years={[3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]}
@@ -95,26 +77,30 @@ export default function Album({
                 once
               ></YearRoll>
             </h3>
-            <div className="space-y-2 md:text-lg mt-16 mb-8">
+            <div className="mt-16 mb-8 space-y-2 md:text-lg">
               {lang === "de" ? <IntroDE></IntroDE> : <IntroEN></IntroEN>}
               <div className="">
                 <Image
                   src="/img/all-things-must-end/cover.jpg"
                   alt="All Things Must End Cover"
-                  className="border-t border-l rounded-xl border-opacity-[0.15] shadow-2xl shadow-neutral-300/10 my-8 w-4/5 border-neutral-50 mx-auto"
+                  className="mx-auto my-8 w-4/5 rounded-xl border-t border-l border-neutral-50/15 shadow-2xl shadow-neutral-300/10"
                   width={2500}
                   height={2500}
                 ></Image>
               </div>
             </div>
             <div>
-              <label className="text-center block mb-4 text-lg">
+              <label className="mb-4 block text-center text-lg">
                 <ListenTo lang={lang} title="All Things Must End"></ListenTo>
               </label>
-              <div className="grid grid-cols-2 md:grid-cols-4 mx-auto justify-center items-center place-items-center gap-y-4">
+              <div className="mx-auto grid grid-cols-2 place-items-center items-center justify-center gap-y-4 md:grid-cols-4">
                 {externalLinks.map(({ title, url }) => {
                   return (
-                    <Link href={url} className="font-sans font-semibold text-lg" key={title}>
+                    <Link
+                      href={url}
+                      className="font-sans text-lg font-semibold"
+                      key={title}
+                    >
                       <span>{title}</span>
                       <span className="material-symbols-outlined ml-1">
                         arrow_outward
@@ -123,8 +109,10 @@ export default function Album({
                   );
                 })}
               </div>
-              <p className="text-center mt-4 font-semibold font-sans text-lg">
-                {lang === "de" ? "oder hör Dir das ganze Album von vorne bis hinten hier an, Kontext eingeschlossen!" : "or listen to the entire album from beginning to end here, context included!"}
+              <p className="mt-4 text-center font-sans text-lg font-semibold">
+                {lang === "de"
+                  ? "und lies hier die Hintergründe zu jedem Track!"
+                  : "and read the background to each track here!"}
               </p>
             </div>
           </div>
@@ -135,7 +123,7 @@ export default function Album({
             backgroundImage: `linear-gradient(to bottom, #051c35 0%, rgb(180 83 9 / 100%) 70%, #f59e0b 100%)`,
           }}
         >
-          <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden">
+          <div className="absolute top-0 right-0 bottom-0 left-0 overflow-hidden">
             {clouds.map(
               ({ animationDelay, animationDuration, className }, i) => (
                 <Cloud
@@ -144,7 +132,7 @@ export default function Album({
                   className={className}
                   key={`cloud-${i}`}
                 ></Cloud>
-              )
+              ),
             )}
           </div>
           {tracks.map((track, i) => (
@@ -161,7 +149,7 @@ export default function Album({
             backgroundImage: `linear-gradient(to bottom, #f59e0b 0%, #f59e0b 15%, #7f1d1d 80%, rgb(10 10 10 / 1) 100%)`,
           }}
         >
-          <div className="mx-auto max-w-screen-md text-white pt-32 md:text-lg px-4 md:px-0">
+          <div className="mx-auto max-w-screen-md px-4 pt-32 text-white md:px-0 md:text-lg">
             {lang === "de" ? (
               <OutroDE
                 animationName="slide-up"
@@ -190,14 +178,6 @@ export default function Album({
           }}
         ></div>
       </article>
-      {index !== undefined && (
-        <Player
-          preload="auto"
-          crossOrigin="anonymous"
-          type="audio/mpeg"
-          onEnded={() => playNext()}
-        ></Player>
-      )}
     </>
   );
 }

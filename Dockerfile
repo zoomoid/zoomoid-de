@@ -9,7 +9,7 @@ WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 COPY .yarn ./.yarn
-COPY .pnp.cjs .yarnrc.yml package.json yarn.lock* ./
+COPY .yarnrc.yml package.json yarn.lock* ./
 RUN corepack enable yarn && yarn set version berry && yarn install --immutable
 
 # Rebuild the source code only when needed
@@ -19,7 +19,7 @@ WORKDIR /app
 RUN corepack enable && yarn set version berry
 
 COPY --from=deps /app/.yarn ./.yarn
-COPY --from=deps /app/.pnp.cjs ./pnp.cjs
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # Next.js collects completely anonymous telemetry data about general usage.
@@ -46,7 +46,7 @@ RUN chown nextjs:nodejs .next
 
 # Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing
-COPY --from=deps --chown=nextjs:nodejs /app/.pnp.* /app/.yarnrc.yml /app/package.json /app/yarn.lock* ./
+COPY --from=deps --chown=nextjs:nodejs /app/.yarnrc.yml /app/package.json /app/yarn.lock* ./
 COPY --from=deps --chown=nextjs:nodejs /app/.yarn ./.yarn/
 
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./.next/standalone
@@ -63,4 +63,4 @@ ENV HOSTNAME="0.0.0.0"
 
 # server.js is created by next build from the standalone output
 # https://nextjs.org/docs/pages/api-reference/next-config-js/output
-CMD ["node", "-r", "./.pnp.cjs", ".next/standalone/server.js"]
+CMD ["node", ".next/standalone/server.js"]

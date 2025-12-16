@@ -18,7 +18,7 @@ export async function generateStaticParams() {
 type LocalizedPageProps = {
   params: Promise<
     {
-      lang: Locale;
+      lang: string;
     } & object
   >;
 };
@@ -34,7 +34,7 @@ export default async function LocalizedPageLayout(
   const locales = i18n.locales.map((l) => l);
 
   const LocaleSwitcher = (
-    <Locales current={params.lang} locales={locales}></Locales>
+    <Locales current={params.lang as Locale} locales={locales}></Locales>
   );
 
   const navigationElement = (

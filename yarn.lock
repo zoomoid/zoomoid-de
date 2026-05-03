@@ -305,19 +305,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/fast-memoize@npm:3.1.2":
-  version: 3.1.2
-  resolution: "@formatjs/fast-memoize@npm:3.1.2"
-  checksum: 10/cfe5a5974f3567d9b7f27b93d99d1bd755918c286e385b7f2354f7db69ec7408c5d7df77369745fb9e16816003f1b55da72bad1d5c53c7d11db16392f24f042c
+"@formatjs/fast-memoize@npm:3.1.3":
+  version: 3.1.3
+  resolution: "@formatjs/fast-memoize@npm:3.1.3"
+  checksum: 10/c482dc5e5b68fcbd2deb40bd2f114c6d7ba1c643a4f1bde6faf36b3991db9e613e4e8bab8cd770b214fb7d727ea72078e39aae9b2a8ccc49f49c0748f1421327
   languageName: node
   linkType: hard
 
-"@formatjs/intl-localematcher@npm:^0.8.4":
-  version: 0.8.4
-  resolution: "@formatjs/intl-localematcher@npm:0.8.4"
+"@formatjs/intl-localematcher@npm:^0.8.5":
+  version: 0.8.5
+  resolution: "@formatjs/intl-localematcher@npm:0.8.5"
   dependencies:
-    "@formatjs/fast-memoize": "npm:3.1.2"
-  checksum: 10/df856c5c4746ee2b618eb8961f7fcc6d6d20733278d02079d47c20556ff543306f115a3fa55594da9adb770c3c463e35e9dbda1d1a50d851eb25e1075ded429d
+    "@formatjs/fast-memoize": "npm:3.1.3"
+  checksum: 10/f90b8791d8436fe0970fb1b8c08e0065635b22d31d23b4007015137587cd87a024deae7bdd71d499f96bcc1f9794d58490ec441d3ece95eebdf40b2d5a75ab94
   languageName: node
   linkType: hard
 
@@ -2293,8 +2293,8 @@ __metadata:
   linkType: hard
 
 "eslint@npm:^10":
-  version: 10.2.1
-  resolution: "eslint@npm:10.2.1"
+  version: 10.3.0
+  resolution: "eslint@npm:10.3.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.8.0"
     "@eslint-community/regexpp": "npm:^4.12.2"
@@ -2333,7 +2333,7 @@ __metadata:
       optional: true
   bin:
     eslint: bin/eslint.js
-  checksum: 10/954658c846696dc501a2b8e5fb268713e231dd81375dc25d76cd2fb4a1c73094ea73c64197634ece6fca8a54536e89eb44548a11be672544522e7a50eb8aae95
+  checksum: 10/7d8131e5ef65754f61afd807d875377403f1c89b5f5529f23506776c2df504ba0d53d378b8aeec1996c66c6d428ea3e2ea5c04b226474ce89b6e28443fd3b7b6
   languageName: node
   linkType: hard
 
@@ -3880,13 +3880,13 @@ __metadata:
   linkType: hard
 
 "postcss@npm:^8, postcss@npm:^8.5.6":
-  version: 8.5.12
-  resolution: "postcss@npm:8.5.12"
+  version: 8.5.13
+  resolution: "postcss@npm:8.5.13"
   dependencies:
     nanoid: "npm:^3.3.11"
     picocolors: "npm:^1.1.1"
     source-map-js: "npm:^1.2.1"
-  checksum: 10/ec6b79b68c363eca3c8ffceb134a4ab637274aee6ac0857614bf7c18d40ce4ce5f9036edec57b7e0be99895724d2599d0ec7328dbd7f407204e7548697b322f1
+  checksum: 10/4763873c0a39a6f71fc552d0046fedb80dca889ed0b85e36217285f754a3bd003a906f6088feb266b1f53b0ad20483a475dce4cc1c756f05e27940c51e40ebd8
   languageName: node
   linkType: hard
 
@@ -3897,9 +3897,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwindcss@npm:^0.7.3":
-  version: 0.7.3
-  resolution: "prettier-plugin-tailwindcss@npm:0.7.3"
+"prettier-plugin-tailwindcss@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "prettier-plugin-tailwindcss@npm:0.8.0"
   peerDependencies:
     "@ianvs/prettier-plugin-sort-imports": "*"
     "@prettier/plugin-hermes": "*"
@@ -3951,7 +3951,7 @@ __metadata:
       optional: true
     prettier-plugin-svelte:
       optional: true
-  checksum: 10/cad84a4cdb18dccd2d1e82ca58ecb1b32012d7da402451f6b2c7c6488bd9865c39482cff61e898648a4c9453131688cf2ade2a85e967f7698dacfe89ff43393a
+  checksum: 10/438ee95cf8b93d52e388800586d5969a939803c38c56661465db1e5871cff55e94d92ea25b92f5a83f0c35064572734c30baa43a2306046e8b4def51abf47ffc
   languageName: node
   linkType: hard
 
@@ -5029,7 +5029,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "zoomoid-de@workspace:."
   dependencies:
-    "@formatjs/intl-localematcher": "npm:^0.8.4"
+    "@formatjs/intl-localematcher": "npm:^0.8.5"
     "@tailwindcss/postcss": "npm:^4.2.4"
     "@types/negotiator": "npm:^0.6.4"
     "@types/node": "npm:^25"
@@ -5042,7 +5042,7 @@ __metadata:
     next: "npm:^16.2.3"
     postcss: "npm:^8"
     prettier: "npm:^3.8.3"
-    prettier-plugin-tailwindcss: "npm:^0.7.3"
+    prettier-plugin-tailwindcss: "npm:^0.8.0"
     react: "npm:^19.2.5"
     react-dom: "npm:^19.2.5"
     sharp: "npm:^0.34.5"

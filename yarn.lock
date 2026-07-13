@@ -330,19 +330,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/fast-memoize@npm:3.1.6":
-  version: 3.1.6
-  resolution: "@formatjs/fast-memoize@npm:3.1.6"
-  checksum: 10/7dec3e82586d4c4889671c6081d7b0d87b2c229ba551d8328f96ae8ab58b2cd6056fc5d360c0b0c9688b7164f12ef517428016fbce15b950987a77005e481824
+"@formatjs/fast-memoize@npm:3.1.7":
+  version: 3.1.7
+  resolution: "@formatjs/fast-memoize@npm:3.1.7"
+  checksum: 10/2d7ead48684539764ecb8a52178719169186595e830d9d6941eff12bec1ae31e20642a9cfd197007c48a8cc7e965bf61445ffcccc0fd77281341271d00e7b8fb
   languageName: node
   linkType: hard
 
-"@formatjs/intl-localematcher@npm:^0.8.10":
-  version: 0.8.10
-  resolution: "@formatjs/intl-localematcher@npm:0.8.10"
+"@formatjs/intl-localematcher@npm:^0.8.12":
+  version: 0.8.12
+  resolution: "@formatjs/intl-localematcher@npm:0.8.12"
   dependencies:
-    "@formatjs/fast-memoize": "npm:3.1.6"
-  checksum: 10/d9d3f408363091bf35950a842f58c662d88d9f54d9a53b1238cb673a73d1345412d78e01a2d56ec58cef81b9c66a8ce0ee78ed9c31976bd56dc68a38ef3cbc0f
+    "@formatjs/fast-memoize": "npm:3.1.7"
+  checksum: 10/4f9ecb936ac76cb978460edacbb2704e9760f65203e2c17f96b8db605a3c344ecc7da2ac78c897316f519b033c623b39062ba720e23fe0c2162af7c761f765e6
   languageName: node
   linkType: hard
 
@@ -1262,11 +1262,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:^26":
-  version: 26.1.0
-  resolution: "@types/node@npm:26.1.0"
+  version: 26.1.1
+  resolution: "@types/node@npm:26.1.1"
   dependencies:
     undici-types: "npm:~8.3.0"
-  checksum: 10/fee720e8ddf8aa66a22bc5cf3209347f8dcc07cbf7475f966761684f04fb34b819739a311edbf87271d6c7f9f50b1f015d3ff9e36d67d04264aafe18ac9a3796
+  checksum: 10/df6555a94c6b4cf74e6238373e2881e72dc91058cf2ba173be77ea3974aaa8f459c2f10fbb7eb644fb1e5189dd8407097f5d39506fad39c89bde18acb3b90316
   languageName: node
   linkType: hard
 
@@ -2573,8 +2573,8 @@ __metadata:
   linkType: hard
 
 "eslint@npm:^10":
-  version: 10.6.0
-  resolution: "eslint@npm:10.6.0"
+  version: 10.7.0
+  resolution: "eslint@npm:10.7.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.8.0"
     "@eslint-community/regexpp": "npm:^4.12.2"
@@ -2613,7 +2613,7 @@ __metadata:
       optional: true
   bin:
     eslint: bin/eslint.js
-  checksum: 10/36d02cdbe37668e601f255917c605d10a5d06d278648dc72cec21fe23b7b60a53453241b32c382ba8107533cacba70aeec97581cc4f4bb591544b1ada2516335
+  checksum: 10/51cb70fbdd0de6586f0cb12625388faab18eb679cbdb523ecb631cae9f47fd9171d9ff02f570dc4d2e5700017908a81477511025ccb2a6603c5928fbfddcaebf
   languageName: node
   linkType: hard
 
@@ -4160,13 +4160,13 @@ __metadata:
   linkType: hard
 
 "postcss@npm:^8, postcss@npm:^8.5.15":
-  version: 8.5.16
-  resolution: "postcss@npm:8.5.16"
+  version: 8.5.17
+  resolution: "postcss@npm:8.5.17"
   dependencies:
     nanoid: "npm:^3.3.12"
     picocolors: "npm:^1.1.1"
     source-map-js: "npm:^1.2.1"
-  checksum: 10/b39408900aa394bce6f567d539b7361e71c07f361313e5b01e40481c5120309a570e7a54c6a0c6ea5f0c0c06ff8c12b560beeebcc29ea173ad42ec74bae86069
+  checksum: 10/da4ecded9a8c7ba56c8068e25242dc988fb9987ef964e97757ff1b1650b1e7e4d29ffc0e4d700f294acb09f65e6972a200504db9e7cef0a945bc463f0497fe61
   languageName: node
   linkType: hard
 
@@ -4235,12 +4235,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.9.4":
-  version: 3.9.4
-  resolution: "prettier@npm:3.9.4"
+"prettier@npm:^3.9.5":
+  version: 3.9.5
+  resolution: "prettier@npm:3.9.5"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 10/4a0dc4389d442f5aca0beb12778c90b6ceb9831940b01a1df5eba9150b5ce96fa52eda9074a10a370e732adc03e2f645597dfd8b7e3f1e94dee28df01004a0fd
+  checksum: 10/b6587f1582ba653ce5207ee227aff646500e5098646931088f176d1ab090b1f47d5a333f1facd634e9aa7dcb15c45940e2cec13a5962534cf0200617517b67b6
   languageName: node
   linkType: hard
 
@@ -5408,7 +5408,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "zoomoid-de@workspace:."
   dependencies:
-    "@formatjs/intl-localematcher": "npm:^0.8.10"
+    "@formatjs/intl-localematcher": "npm:^0.8.12"
     "@tailwindcss/postcss": "npm:^4.3.2"
     "@types/negotiator": "npm:^0.6.4"
     "@types/node": "npm:^26"
@@ -5420,7 +5420,7 @@ __metadata:
     negotiator: "npm:^1.0.0"
     next: "npm:^16.2.10"
     postcss: "npm:^8"
-    prettier: "npm:^3.9.4"
+    prettier: "npm:^3.9.5"
     prettier-plugin-tailwindcss: "npm:^0.8.0"
     react: "npm:^19.2.7"
     react-dom: "npm:^19.2.7"

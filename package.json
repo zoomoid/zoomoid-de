@@ -20,7 +20,7 @@
     "styled-jsx": "^5"
   },
   "devDependencies": {
-    "@types/negotiator": "^0.6.4",
+    "@types/negotiator": "^0.6.5",
     "@types/node": "^26",
     "@types/react": "^19",
     "@types/react-dom": "^19",

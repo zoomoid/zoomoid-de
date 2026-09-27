@@ -13,7 +13,7 @@
     "@formatjs/intl-localematcher": "^0.9.0",
     "@tailwindcss/postcss": "^4.3.3",
     "negotiator": "^1.1.0",
-    "next": "^16.3.5",
+    "next": "^16.3.6",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "sharp": "^0.35.4",
@@ -28,7 +28,7 @@
     "eslint": "^10",
     "eslint-config-next": "^16",
     "postcss": "^8",
-    "prettier": "^3.9.7",
+    "prettier": "^3.9.9",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3"

@@ -761,75 +761,75 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:16.4.1":
-  version: 16.4.1
-  resolution: "@next/env@npm:16.4.1"
-  checksum: 10/fd77eafdf4e431a0fa2347968e706f2f8f41d801372d69f920aa67e39b582c8f1f3c879826b80cbf436b5196b40b18905da8b8cfec2cba5bcd9202c0c6848032
+"@next/env@npm:16.4.2":
+  version: 16.4.2
+  resolution: "@next/env@npm:16.4.2"
+  checksum: 10/6ac734ca99aa1fb31d1130fd6cffdec711ef460cb2b87fa880fa00201c06f61de62bc5d5b7835aa2861087e9587aa1a535ba85dbf37a40979075bc50dac3588f
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:16.4.1":
-  version: 16.4.1
-  resolution: "@next/eslint-plugin-next@npm:16.4.1"
+"@next/eslint-plugin-next@npm:16.4.2":
+  version: 16.4.2
+  resolution: "@next/eslint-plugin-next@npm:16.4.2"
   dependencies:
     "@eslint-community/eslint-utils": "npm:4.9.1"
     fast-glob: "npm:3.3.1"
-  checksum: 10/98b9e42be6fdee23dc7fc5522778cddf3ef5c20d3793315a4c2181d410f495c99457563685b2d3ae58aebb6c16dceca886d41b95683d81b6d75bc9fe8d40e265
+  checksum: 10/961ba902b831ddae05a3519862fc43e969be2cd47e0bdc75a070ddfe7136d22c0b7428bfe1fc7863e44c0af913a43317060e318329bb47907d9fd1a1fbc02420
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:16.4.1":
-  version: 16.4.1
-  resolution: "@next/swc-darwin-arm64@npm:16.4.1"
+"@next/swc-darwin-arm64@npm:16.4.2":
+  version: 16.4.2
+  resolution: "@next/swc-darwin-arm64@npm:16.4.2"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:16.4.1":
-  version: 16.4.1
-  resolution: "@next/swc-darwin-x64@npm:16.4.1"
+"@next/swc-darwin-x64@npm:16.4.2":
+  version: 16.4.2
+  resolution: "@next/swc-darwin-x64@npm:16.4.2"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:16.4.1":
-  version: 16.4.1
-  resolution: "@next/swc-linux-arm64-gnu@npm:16.4.1"
+"@next/swc-linux-arm64-gnu@npm:16.4.2":
+  version: 16.4.2
+  resolution: "@next/swc-linux-arm64-gnu@npm:16.4.2"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:16.4.1":
-  version: 16.4.1
-  resolution: "@next/swc-linux-arm64-musl@npm:16.4.1"
+"@next/swc-linux-arm64-musl@npm:16.4.2":
+  version: 16.4.2
+  resolution: "@next/swc-linux-arm64-musl@npm:16.4.2"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:16.4.1":
-  version: 16.4.1
-  resolution: "@next/swc-linux-x64-gnu@npm:16.4.1"
+"@next/swc-linux-x64-gnu@npm:16.4.2":
+  version: 16.4.2
+  resolution: "@next/swc-linux-x64-gnu@npm:16.4.2"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:16.4.1":
-  version: 16.4.1
-  resolution: "@next/swc-linux-x64-musl@npm:16.4.1"
+"@next/swc-linux-x64-musl@npm:16.4.2":
+  version: 16.4.2
+  resolution: "@next/swc-linux-x64-musl@npm:16.4.2"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:16.4.1":
-  version: 16.4.1
-  resolution: "@next/swc-win32-arm64-msvc@npm:16.4.1"
+"@next/swc-win32-arm64-msvc@npm:16.4.2":
+  version: 16.4.2
+  resolution: "@next/swc-win32-arm64-msvc@npm:16.4.2"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:16.4.1":
-  version: 16.4.1
-  resolution: "@next/swc-win32-x64-msvc@npm:16.4.1"
+"@next/swc-win32-x64-msvc@npm:16.4.2":
+  version: 16.4.2
+  resolution: "@next/swc-win32-x64-msvc@npm:16.4.2"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -1260,6 +1260,146 @@ __metadata:
     "@typescript-eslint/types": "npm:8.71.1"
     eslint-visitor-keys: "npm:^5.0.0"
   checksum: 10/9abc7b1a266eb65b16ac16d99e334d06e0539241e5ae9b6721a11a6a1d2736a9f564dc5e5dc37e7d0bfce5e260da6495bab9d594a1317d01624d239286bd12c2
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-aix-ppc64@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-aix-ppc64@npm:7.0.2"
+  conditions: os=aix & cpu=ppc64
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-darwin-arm64@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-darwin-arm64@npm:7.0.2"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-darwin-x64@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-darwin-x64@npm:7.0.2"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-freebsd-arm64@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-freebsd-arm64@npm:7.0.2"
+  conditions: os=freebsd & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-freebsd-x64@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-freebsd-x64@npm:7.0.2"
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-linux-arm64@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-linux-arm64@npm:7.0.2"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-linux-arm@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-linux-arm@npm:7.0.2"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-linux-loong64@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-linux-loong64@npm:7.0.2"
+  conditions: os=linux & cpu=loong64
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-linux-mips64el@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-linux-mips64el@npm:7.0.2"
+  conditions: os=linux & cpu=mips64el
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-linux-ppc64@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-linux-ppc64@npm:7.0.2"
+  conditions: os=linux & cpu=ppc64
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-linux-riscv64@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-linux-riscv64@npm:7.0.2"
+  conditions: os=linux & cpu=riscv64
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-linux-s390x@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-linux-s390x@npm:7.0.2"
+  conditions: os=linux & cpu=s390x
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-linux-x64@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-linux-x64@npm:7.0.2"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-netbsd-arm64@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-netbsd-arm64@npm:7.0.2"
+  conditions: os=netbsd & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-netbsd-x64@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-netbsd-x64@npm:7.0.2"
+  conditions: os=netbsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-openbsd-arm64@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-openbsd-arm64@npm:7.0.2"
+  conditions: os=openbsd & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-openbsd-x64@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-openbsd-x64@npm:7.0.2"
+  conditions: os=openbsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-sunos-x64@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-sunos-x64@npm:7.0.2"
+  conditions: os=sunos & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-win32-arm64@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-win32-arm64@npm:7.0.2"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@typescript/typescript-win32-x64@npm:7.0.2":
+  version: 7.0.2
+  resolution: "@typescript/typescript-win32-x64@npm:7.0.2"
+  conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
@@ -2211,10 +2351,10 @@ __metadata:
   linkType: hard
 
 "eslint-config-next@npm:^16":
-  version: 16.4.1
-  resolution: "eslint-config-next@npm:16.4.1"
+  version: 16.4.2
+  resolution: "eslint-config-next@npm:16.4.2"
   dependencies:
-    "@next/eslint-plugin-next": "npm:16.4.1"
+    "@next/eslint-plugin-next": "npm:16.4.2"
     eslint-import-resolver-node: "npm:^0.3.6"
     eslint-import-resolver-typescript: "npm:^3.5.2"
     eslint-plugin-import: "npm:^2.32.0"
@@ -2229,7 +2369,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10/28acd75cd6671e03a1344204e3071195d5e4505ade074f4949129f6cf160fc7d571f13c134bbbe917f0104a5bdb2c0990fb43f79d2e5dd56a44b63aa0348ef4c
+  checksum: 10/283689732ef094b159fff2994493ab5fc80aaffc7ed1616288e2e48979dfab96c7450e4ae8279fc1a89e86830e7d0a5d3a83f18645c46176b4ff8e5f52bdcf97
   languageName: node
   linkType: hard
 
@@ -2410,8 +2550,8 @@ __metadata:
   linkType: hard
 
 "eslint@npm:^10":
-  version: 10.12.0
-  resolution: "eslint@npm:10.12.0"
+  version: 10.13.0
+  resolution: "eslint@npm:10.13.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.8.0"
     "@eslint-community/regexpp": "npm:^4.12.2"
@@ -2450,7 +2590,7 @@ __metadata:
       optional: true
   bin:
     eslint: bin/eslint.js
-  checksum: 10/1cff87e4db79d4c9b6bd0af4c2aa483d88936a16f70e73af192a2aeee5ec597ad1de5d42ba1242336c27b25be6f0e503e4ea41ca036ab134eb5f4b4c24af15b9
+  checksum: 10/04b7140a6fb4614d3cd5feb35041cd3b2b92f80d7fd015d8d320c76e015577863dc530c1bcf228eb3b58b06151e45b6452dd349a6863d21eeefa02ceaee1377f
   languageName: node
   linkType: hard
 
@@ -3721,19 +3861,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:^16.4.1":
-  version: 16.4.1
-  resolution: "next@npm:16.4.1"
+"next@npm:^16.4.2":
+  version: 16.4.2
+  resolution: "next@npm:16.4.2"
   dependencies:
-    "@next/env": "npm:16.4.1"
-    "@next/swc-darwin-arm64": "npm:16.4.1"
-    "@next/swc-darwin-x64": "npm:16.4.1"
-    "@next/swc-linux-arm64-gnu": "npm:16.4.1"
-    "@next/swc-linux-arm64-musl": "npm:16.4.1"
-    "@next/swc-linux-x64-gnu": "npm:16.4.1"
-    "@next/swc-linux-x64-musl": "npm:16.4.1"
-    "@next/swc-win32-arm64-msvc": "npm:16.4.1"
-    "@next/swc-win32-x64-msvc": "npm:16.4.1"
+    "@next/env": "npm:16.4.2"
+    "@next/swc-darwin-arm64": "npm:16.4.2"
+    "@next/swc-darwin-x64": "npm:16.4.2"
+    "@next/swc-linux-arm64-gnu": "npm:16.4.2"
+    "@next/swc-linux-arm64-musl": "npm:16.4.2"
+    "@next/swc-linux-x64-gnu": "npm:16.4.2"
+    "@next/swc-linux-x64-musl": "npm:16.4.2"
+    "@next/swc-win32-arm64-msvc": "npm:16.4.2"
+    "@next/swc-win32-x64-msvc": "npm:16.4.2"
     "@swc/helpers": "npm:0.5.23"
     baseline-browser-mapping: "npm:^2.9.19"
     caniuse-lite: "npm:^1.0.30001579"
@@ -3777,7 +3917,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 10/85c3f0e09c66b0386849fb0d0c9aad5e1f759e2ae1060da9f6989cf5bc9410270559cd36ea5af8ff93124682527e84080aed5c8eeb91497d2f48b1c5e0900668
+  checksum: 10/f72af6bfb2d469d3ee29551c221a8fc48f5b4f4a7b685b6e1897458657607186fac34867f42ec66a67e9d5dc72e7e97abf08db875ba0ce921876b19c63617dc4
   languageName: node
   linkType: hard
 
@@ -4018,13 +4158,13 @@ __metadata:
   linkType: hard
 
 "postcss@npm:^8, postcss@npm:^8.5.16":
-  version: 8.5.30
-  resolution: "postcss@npm:8.5.30"
+  version: 8.5.31
+  resolution: "postcss@npm:8.5.31"
   dependencies:
     nanoid: "npm:^3.3.20"
     picocolors: "npm:^1.1.1"
     source-map-js: "npm:^1.2.2"
-  checksum: 10/f7c7fdb1fc69d73d88522da220ecf99ef8de9b2eb7df2d0ceb1e8c42d7a7cc44864c98cb89dc145a79a59187a63f986af466ec6fd642c8365ad276f71c052efe
+  checksum: 10/d2a3415681570c4687cbb34d7a9cdb570619da73b764229260f7c7337d2359cffa1045f4081a4599bd0b9320bd23b05f9915057f7b13ad9534b0121c2e9de564
   languageName: node
   linkType: hard
 
@@ -4943,13 +5083,74 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^6.0.3":
-  version: 6.0.3
-  resolution: "typescript@npm:6.0.3"
+"typescript@npm:^7.0.2":
+  version: 7.0.2
+  resolution: "typescript@npm:7.0.2"
+  dependencies:
+    "@typescript/typescript-aix-ppc64": "npm:7.0.2"
+    "@typescript/typescript-darwin-arm64": "npm:7.0.2"
+    "@typescript/typescript-darwin-x64": "npm:7.0.2"
+    "@typescript/typescript-freebsd-arm64": "npm:7.0.2"
+    "@typescript/typescript-freebsd-x64": "npm:7.0.2"
+    "@typescript/typescript-linux-arm": "npm:7.0.2"
+    "@typescript/typescript-linux-arm64": "npm:7.0.2"
+    "@typescript/typescript-linux-loong64": "npm:7.0.2"
+    "@typescript/typescript-linux-mips64el": "npm:7.0.2"
+    "@typescript/typescript-linux-ppc64": "npm:7.0.2"
+    "@typescript/typescript-linux-riscv64": "npm:7.0.2"
+    "@typescript/typescript-linux-s390x": "npm:7.0.2"
+    "@typescript/typescript-linux-x64": "npm:7.0.2"
+    "@typescript/typescript-netbsd-arm64": "npm:7.0.2"
+    "@typescript/typescript-netbsd-x64": "npm:7.0.2"
+    "@typescript/typescript-openbsd-arm64": "npm:7.0.2"
+    "@typescript/typescript-openbsd-x64": "npm:7.0.2"
+    "@typescript/typescript-sunos-x64": "npm:7.0.2"
+    "@typescript/typescript-win32-arm64": "npm:7.0.2"
+    "@typescript/typescript-win32-x64": "npm:7.0.2"
+  dependenciesMeta:
+    "@typescript/typescript-aix-ppc64":
+      optional: true
+    "@typescript/typescript-darwin-arm64":
+      optional: true
+    "@typescript/typescript-darwin-x64":
+      optional: true
+    "@typescript/typescript-freebsd-arm64":
+      optional: true
+    "@typescript/typescript-freebsd-x64":
+      optional: true
+    "@typescript/typescript-linux-arm":
+      optional: true
+    "@typescript/typescript-linux-arm64":
+      optional: true
+    "@typescript/typescript-linux-loong64":
+      optional: true
+    "@typescript/typescript-linux-mips64el":
+      optional: true
+    "@typescript/typescript-linux-ppc64":
+      optional: true
+    "@typescript/typescript-linux-riscv64":
+      optional: true
+    "@typescript/typescript-linux-s390x":
+      optional: true
+    "@typescript/typescript-linux-x64":
+      optional: true
+    "@typescript/typescript-netbsd-arm64":
+      optional: true
+    "@typescript/typescript-netbsd-x64":
+      optional: true
+    "@typescript/typescript-openbsd-arm64":
+      optional: true
+    "@typescript/typescript-openbsd-x64":
+      optional: true
+    "@typescript/typescript-sunos-x64":
+      optional: true
+    "@typescript/typescript-win32-arm64":
+      optional: true
+    "@typescript/typescript-win32-x64":
+      optional: true
   bin:
     tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 10/0ef2357a4cffd916b52b683a021cdab0f81eea4e9aa35f2d254581c9a5106da02224e3392e1b0ed42b7a48f80c966e5f52b8e1a27941fa0523c1705a9c2e0330
+  checksum: 10/b0179005349b43dc1febb35c4e79162cdf89b84eae60f6deac142429109041e07582e69a6aacf5a897e085869686d4512ea444a10acf5b5aa2b60910f82a19ca
   languageName: node
   linkType: hard
 
@@ -4963,13 +5164,74 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^6.0.3#optional!builtin<compat/typescript>":
-  version: 6.0.3
-  resolution: "typescript@patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"
+"typescript@patch:typescript@npm%3A^7.0.2#optional!builtin<compat/typescript>":
+  version: 7.0.2
+  resolution: "typescript@patch:typescript@npm%3A7.0.2#optional!builtin<compat/typescript>::version=7.0.2&hash=3bafbf"
+  dependencies:
+    "@typescript/typescript-aix-ppc64": "npm:7.0.2"
+    "@typescript/typescript-darwin-arm64": "npm:7.0.2"
+    "@typescript/typescript-darwin-x64": "npm:7.0.2"
+    "@typescript/typescript-freebsd-arm64": "npm:7.0.2"
+    "@typescript/typescript-freebsd-x64": "npm:7.0.2"
+    "@typescript/typescript-linux-arm": "npm:7.0.2"
+    "@typescript/typescript-linux-arm64": "npm:7.0.2"
+    "@typescript/typescript-linux-loong64": "npm:7.0.2"
+    "@typescript/typescript-linux-mips64el": "npm:7.0.2"
+    "@typescript/typescript-linux-ppc64": "npm:7.0.2"
+    "@typescript/typescript-linux-riscv64": "npm:7.0.2"
+    "@typescript/typescript-linux-s390x": "npm:7.0.2"
+    "@typescript/typescript-linux-x64": "npm:7.0.2"
+    "@typescript/typescript-netbsd-arm64": "npm:7.0.2"
+    "@typescript/typescript-netbsd-x64": "npm:7.0.2"
+    "@typescript/typescript-openbsd-arm64": "npm:7.0.2"
+    "@typescript/typescript-openbsd-x64": "npm:7.0.2"
+    "@typescript/typescript-sunos-x64": "npm:7.0.2"
+    "@typescript/typescript-win32-arm64": "npm:7.0.2"
+    "@typescript/typescript-win32-x64": "npm:7.0.2"
+  dependenciesMeta:
+    "@typescript/typescript-aix-ppc64":
+      optional: true
+    "@typescript/typescript-darwin-arm64":
+      optional: true
+    "@typescript/typescript-darwin-x64":
+      optional: true
+    "@typescript/typescript-freebsd-arm64":
+      optional: true
+    "@typescript/typescript-freebsd-x64":
+      optional: true
+    "@typescript/typescript-linux-arm":
+      optional: true
+    "@typescript/typescript-linux-arm64":
+      optional: true
+    "@typescript/typescript-linux-loong64":
+      optional: true
+    "@typescript/typescript-linux-mips64el":
+      optional: true
+    "@typescript/typescript-linux-ppc64":
+      optional: true
+    "@typescript/typescript-linux-riscv64":
+      optional: true
+    "@typescript/typescript-linux-s390x":
+      optional: true
+    "@typescript/typescript-linux-x64":
+      optional: true
+    "@typescript/typescript-netbsd-arm64":
+      optional: true
+    "@typescript/typescript-netbsd-x64":
+      optional: true
+    "@typescript/typescript-openbsd-arm64":
+      optional: true
+    "@typescript/typescript-openbsd-x64":
+      optional: true
+    "@typescript/typescript-sunos-x64":
+      optional: true
+    "@typescript/typescript-win32-arm64":
+      optional: true
+    "@typescript/typescript-win32-x64":
+      optional: true
   bin:
     tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 10/22b67a18dafedf9b1468b64ca20d9aa02ea61d449b65413d8aa6552aeb63f52ef369e86beb25b6b4c91a803d9726ee5c196f391a9b64201263263410a4223ee6
+  checksum: 10/6d7f3d34ca7fbd3eb4999f06db29340d3dcedd7d40ed71654ea53ecd0f28a330edf0f55a0acf541bf294a2f024f11242075c1a83aed4bd99776fe99af45b994b
   languageName: node
   linkType: hard
 
@@ -5190,7 +5452,7 @@ __metadata:
     eslint: "npm:^10"
     eslint-config-next: "npm:^16"
     negotiator: "npm:^1.1.0"
-    next: "npm:^16.4.1"
+    next: "npm:^16.4.2"
     postcss: "npm:^8"
     prettier: "npm:^3.9.10"
     prettier-plugin-tailwindcss: "npm:^0.8.1"
@@ -5199,6 +5461,6 @@ __metadata:
     sharp: "npm:^0.35.5"
     styled-jsx: "npm:^5"
     tailwindcss: "npm:^4.3.3"
-    typescript: "npm:^6.0.3"
+    typescript: "npm:^7.0.2"
   languageName: unknown
   linkType: soft

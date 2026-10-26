@@ -4,11 +4,18 @@ import type { NextRequest } from "next/server";
 import i18n from "./i18n";
 
 function getLocale({ headers }: NextRequest): string {
-  let languages = new Negotiator({
+  const languages = new Negotiator({
     headers: {
       "accept-language": headers.get("accept-language") ?? i18n.defaultLocale,
     },
-  }).languages();
+  }).languages().filter((language) => {
+    try {
+      Intl.getCanonicalLocales(language);
+      return true;
+    } catch {
+      return false;
+    }
+  });
 
   return match(languages, i18n.locales, i18n.defaultLocale);
 }
